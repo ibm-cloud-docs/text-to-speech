@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-08-09"
+lastupdated: "2017-08-11"
 
 ---
 
@@ -72,7 +72,7 @@ The service now supports the MP3 or Motion Picture Experts Group (MPEG) audio fo
 {: #September2016}
 
 -   The customization interface, which includes the `customization` and `pronunciation` methods, is now available for all languages that are supported by the service. The interface remains a beta release at this time. For more information, see [Understanding customization](/docs/services/text-to-speech/custom-intro.html) and [Using customization](/docs/services/text-to-speech/custom-using.html).
--   The service now supports the Speech Synthesis Markup Language (SSML) for Japanese. For general information about SSML support, see [Using SSML](/docs/services/text-to-speech/SSML.html); for information about Japanese SPR and IPA symbols, see [Japanese symbols](/docs/services/text-to-speech/SPRs.html#jaSymbols). When you use the customization interface, additional considerations and an additional `part_of_speech` field apply when creating entries for words in a Japanese custom voice model; see [Working with Japanese entries](/docs/services/text-to-speech/custom-using.html#jaNotes).
+-   The service now supports the Speech Synthesis Markup Language (SSML) for Japanese. For general information about SSML support, see [Using SSML](/docs/services/text-to-speech/SSML.html); for information about Japanese SPR and IPA symbols, see [Japanese symbols](/docs/services/text-to-speech/ja-JP-SPRs.html). When you use the customization interface, additional considerations and an additional `part_of_speech` field apply when creating entries for words in a Japanese custom voice model; see [Working with Japanese entries](/docs/services/text-to-speech/custom-using.html#jaNotes).
 -   The service now offers SSML voice transformation via the new `<voice-transformation>` element. You can expand the range of possible voices by creating custom voice transformations that modify the pitch, pitch range, glottal tension, breathiness, rate, and timbre of a voice. The service also offers two built-in virtual voices, *Young* and *Soft*. The service currently supports voice transformation only for the US English Allison voice. For more information, see [Using voice transformation SSML](/docs/services/text-to-speech/http.html#transformation).
 -   The service now allows you to request word timing information for all strings of the input text that you pass to the WebSocket interface. To receive the start and end time of every string in the input, specify an array that includes the string `words` for the optional `timings` parameter of the JSON object that you pass to the service with a request. The feature is not currently available for Japanese input text. For more information, see [Requesting word timings](/docs/services/text-to-speech/websockets.html#timing).
 -   The service now validates all SSML elements that you submit in any context. If it finds an invalid tag, the service reports an HTTP 400 response code with a descriptive message, and the method fails. In previous releases, the service handled errors inconsistently; specifying an invalid word pronunciation, for example, could lead to unpredictable or inconsistent behavior. For more information, see [SSML validation](/docs/services/text-to-speech/SSML.html#errors).
