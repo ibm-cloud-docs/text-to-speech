@@ -1,0 +1,66 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="text-to-speech" audience="service" href="/docs/services/text-to-speech/index.html"}
+Text to Speech
+
+    {: .navgroup id="learn"}
+    getting-started.md
+    index.md
+    developer-overview.md
+
+    {: .topicgroup}
+    Demos
+        [Quick demo](https://text-to-speech-demo.mybluemix.net/)
+
+    {: .topicgroup}
+    Additional resources
+        [Blog](https://developer.ibm.com/watson/blog/)
+        [Webinars](https://www.ibm.com/watson/webinars/)
+        [Watson videos](https://www.youtube.com/user/IBMWatsonSolutions)
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    [API reference](https://www.ibm.com/watson/developercloud/text-to-speech/api)
+
+    {: .topicgroup}
+    Watson SDKs
+        [Android SDK](https://github.com/watson-developer-cloud/android-sdk)
+        [Apple iOS SDK](https://github.com/watson-developer-cloud/ios-sdk)
+        [Java SDK](https://github.com/watson-developer-cloud/java-sdk)
+        [Node.js SDK](https://github.com/watson-developer-cloud/node-sdk)
+        [Python SDK](https://github.com/watson-developer-cloud/python-sdk)
+        [Unity SDK](https://github.com/watson-developer-cloud/unity-sdk)
+
+    [Watson GitHub repos](https://github.com/watson-developer-cloud/)
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    http.md
+    websockets.md
+
+    {: topicgroup}
+    Customization
+        custom-intro.md
+        custom-using.md
+
+    {: topicgroup}
+    SSML
+        SSML.md
+        SPRs.md
+
+    {: topicgroup}
+    Service background
+        science.md
+        references.md
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    release-notes.md
+
+    {: .topicgroup}
+    Developer community
+        [StackOverflow ](http://stackoverflow.com/questions/tagged/ibm-watson-cognitive+text-to-speech)
+        [developerWorks Answers](https://developer.ibm.com/answers/topics/text-to-speech/)
+        [WDC Slack channel](http://wdc-slack-inviter.mybluemix.net/)
+    {: .navgroup-end}
