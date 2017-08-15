@@ -84,6 +84,6 @@ The following command uses the `GET /v1/synthesize` method to synthesize Spanish
 
 ## Next steps
 
--   For more information about using the service's interface, see [Using the HTTP interface](/docs/services/text-to-speech/http.html).
+-   For more information about using the service's interface, see [Using the HTTP REST interface](/docs/services/text-to-speech/http.html).
 -   For detailed information about the methods of the service's interface, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/text-to-speech/api/v1/){: new_window}.
 -   Interact with the API in the [API explorer ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-api-explorer.mybluemix.net/apis/text-to-speech-v1){: new_window}.
