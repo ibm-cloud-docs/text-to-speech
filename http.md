@@ -17,7 +17,7 @@ lastupdated: "2017-08-11"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# Using the HTTP interface
+# Using the HTTP REST interface
 {: #using}
 
 To synthesize text to speech with the service's HTTP REST API, you call the `GET` or `POST` version of the service's `synthesize` method. You specify the text to be synthesized and the voice for the spoken audio. You can also specify a custom voice model to be used, and you can pass text that is marked up with SSML. For detailed information about the HTTP interface, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/text-to-speech/api/v1/){: new_window}.

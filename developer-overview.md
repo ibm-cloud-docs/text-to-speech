@@ -41,7 +41,7 @@ To synthesize text with the HTTP REST API, you call the `GET` or `POST` version 
 
     When you synthesize text into audio, the service synthesizes the text into the language of the specified voice. If you pass text that is not written in the language of the voice (for example, English text for the French voice), the service can produce inferior results. Be sure to match the input text to the voice.
 
-For more information, see [Using the HTTP interface](/docs/services/text-to-speech/http.html).
+For more information, see [Using the HTTP REST interface](/docs/services/text-to-speech/http.html).
 
 ### WebSocket interface
 {: #websocket}
