@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-08-13"
+lastupdated: "2017-08-16"
 
 ---
 
@@ -37,7 +37,7 @@ If you already know the credentials for your {{site.data.keyword.texttospeechsho
     1.  Click **View credentials** under **Actions**.
     1.  Copy the `username` and `password` values.
 
-## Step 2. Synthesize text in US English
+## Step 2: Synthesize text in US English
 {: #synthesizeEnglish}
 
 The following commands use the `POST /v1/synthesize` method to synthesize US English input to audio files in two different formats. Both requests use the default US English voice, `en-US-MichaelVoice`.
@@ -67,7 +67,7 @@ The following commands use the `POST /v1/synthesize` method to synthesize US Eng
     ```
     {: pre}
 
-## Step 3. Synthesize text in Spanish
+## Step 3: Synthesize text in Spanish
 {: #synthesizeSpanish}
 
 The following command uses the `GET /v1/synthesize` method to synthesize Spanish input to an audio file.
