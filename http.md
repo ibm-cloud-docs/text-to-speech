@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-08-13"
+lastupdated: "2017-09-09"
 
 ---
 
@@ -83,7 +83,7 @@ For more information, see [Specifying input text](#input). The two versions of t
   </tr>
 </table>
 
-You can also use the `X-Watson-Learning-Opt-Out` header parameter available for all {{site.data.keyword.watson}} services to control the logging of requests to the service; see [Controlling request logging for {{site.data.keyword.watson}} services ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/doc/common/getting-started-logging.html){: new_window}.
+You can also use the `X-Watson-Learning-Opt-Out` header parameter available for all {{site.data.keyword.watson}} services to control the logging of requests to the service; see [Controlling request logging for {{site.data.keyword.watson}} services](/docs/services/watson/getting-started-logging.html).
 
 > **Note:** If you specify an invalid query parameter or JSON field as part of the input to the `synthesize` method, the service returns a `Warnings` response header that describes and lists each invalid argument. The request succeeds despite the warnings.
 
