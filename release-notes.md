@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-08-11"
+lastupdated: "2017-09-09"
 
 ---
 
@@ -148,7 +148,7 @@ The {{site.data.keyword.texttospeechshort}} service moved from beta to general a
 
 -   A new programming model supports direct interaction between a client and the service. This model allows a client to obtain an authentication token for communicating directly with the service, bypassing the need for a server-side proxy application in {{site.data.keyword.Bluemix_notm}} to call the service on the client's behalf. This is the preferred means for clients to interact with the service.
 
-    The service continues to support the old programming model that relied on a server-side proxy to relay communications and data between the client and the service. But the new model is more efficient and provides higher throughput. For more information about the new programming model, see [Programming models for {{site.data.keyword.watson}} services ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/doc/common/getting-started-develop.html){: new_window}.
+    The service continues to support the old programming model that relied on a server-side proxy to relay communications and data between the client and the service. But the new model is more efficient and provides higher throughput. For more information about the new programming model, see [Programming models for {{site.data.keyword.watson}} services](/docs/services/watson/getting-started-develop.html).
 -   You can now pass Speech Synthesis Markup Language (SSML) to the HTTP `GET` and `POST` versions of the `synthesize` method. SSML is an XML-based markup language that is designed to provide annotations of text for speech synthesis applications such as the {{site.data.keyword.texttospeechshort}} service. For more information about passing SSML input to the service, see [Specifying input text](/docs/services/text-to-speech/http.html#input).
 
     The service initially supports the use of SSML only for the British and US English, French, and German languages. The service does not support SSML for use with Italian and Spanish. When you use SSML, make sure that you do not not select a voice for the audio in one of the unsupported languages; the results will not be meaningful.
@@ -162,7 +162,7 @@ The {{site.data.keyword.texttospeechshort}} service moved from beta to general a
     The previous names of the voices will continue to work with the beta version of the service (via `-beta` API endpoints) while that version remains available. However, you must use the new names with the GA version of the service.
 -   You can now request that the service return audio in the Free Lossless Audio Codec (FLAC) format. The service can also still return audio in the Ogg format with the Opus codec (the default) and in the Waveform Audio File Format (WAV). For more information about using audio formats with the `synthesize` methods, see [Specifying an audio format](/docs/services/text-to-speech/http.html#format).
 -   The text that you send to the `synthesize` method in the URL of an HTTP `GET` request or in the body of an HTTP `POST` request is now limited to a maximum of 5 KB in size. The text had a maximum size of 4 MB for the beta version.
--   The `synthesize` methods now include the header `X-WDC-PL-OPT-OUT` to control whether the service uses the text and audio results from an operation to improve future results. Specify a value of `1` for the header to prevent the service from using text and audio results. The parameter applies only to the current request. The new header replaces the `X-logging` header from the beta methods. See [Controlling request logging for {{site.data.keyword.watson}} services ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/doc/common/getting-started-logging.html){: new_window}.
+-   The `synthesize` methods now include the header `X-WDC-PL-OPT-OUT` to control whether the service uses the text and audio results from an operation to improve future results. Specify a value of `1` for the header to prevent the service from using text and audio results. The parameter applies only to the current request. The new header replaces the `X-logging` header from the beta methods. See [Controlling request logging for {{site.data.keyword.watson}} services](/docs/services/watson/getting-started-logging.html).
 -   For the `synthesize` methods, the following error codes have changed:
     -   Error code 406 ("Not acceptable. Unsupported MIME type.") has been removed.
     -   Error code 415 ("Unsupported Media Type") has been added.
