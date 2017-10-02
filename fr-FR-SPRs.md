@@ -25,7 +25,7 @@ The following sections describe the inventory of valid symbols for French.
 ## Vowels
 
 <table style="width:90%">
-  <caption>Table 10. Vowels (French)</caption>
+  <caption>Table 1. Vowels (French)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       French<br/>SPR symbol
@@ -286,7 +286,7 @@ The following sections describe the inventory of valid symbols for French.
 ## Consonants
 
 <table style="width:90%">
-  <caption>Table 11. Consonants (French)</caption>
+  <caption>Table 2. Consonants (French)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       French<br/>SPR symbol
@@ -616,7 +616,7 @@ The following sections describe the inventory of valid symbols for French.
 In French, the `_` (underscore) can be used following a word-final consonant (but within the double-quotes that enclose the SPR) to indicate that it is a liaison consonant. A liaison consonant is pronounced only if the following word begins with a vowel.
 
 <table style="width:54%">
-  <caption>Table 12. Liaison (French)</caption>
+  <caption>Table 3. Liaison (French)</caption>
   <tr>
     <th style="width:33%; text-align:center; vertical-align:bottom">
       French<br/>SPR symbol

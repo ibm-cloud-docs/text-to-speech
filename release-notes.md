@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-09-09"
+lastupdated: "2017-10-02"
 
 ---
 
@@ -23,6 +23,11 @@ lastupdated: "2017-09-09"
 The following sections document the new features and changes that were included for each release and update of the {{site.data.keyword.texttospeechshort}} service. Unless otherwise noted, all changes were backward-compatible and were automatically and transparently available to all new and existing applications.
 {: shortdesc}
 
+## 2 October 2017
+{: #October2017}
+
+For the `audio/l16` format, you can now optionally specify the endianness of the audio that is returned. (You must already specify the sampling rate.) Examples are `audio/l16;rate=22050;endianness=big-endian` and `audio/l16;rate=22050;endianness=little-endian`; the default is big endian. For more information, see [Specifying an audio format](/docs/services/text-to-speech/http.html#format).
+
 ## 14 July 2017
 {: #July2017}
 
@@ -41,7 +46,19 @@ The service now supports the MP3 or Motion Picture Experts Group (MPEG) audio fo
 -   The `POST /v1/customizations/{custom_id}/words` and `PUT /v1/customizations/{customization_id}/words/{word}` methods now return HTTP response code 400 with the error message `Part of speech is supported for ja-JP language only` if you attempt to specify a `part_of_speech` for a language other than Japanese.
 -   The `POST /v1/customizations/{custom_id}/words` method now returns an empty response body (`{}`).
 
-## 1 December 2016
+## Older releases
+{: #older}
+
+- [1 December 2016](#December2016)
+- [22 September 2016](/docs/services/text-to-speech/release-notes.html#September2016)
+- [23 June 2016](/docs/services/text-to-speech/release-notes.html#June2016)
+- [10 March 2016](/docs/services/text-to-speech/release-notes.html#March2016)
+- [22 February 2016](/docs/services/text-to-speech/release-notes.html#February2016)
+- [17 December 2015](/docs/services/text-to-speech/release-notes.html#December2015)
+- [21 September 2015](/docs/services/text-to-speech/release-notes.html#September2015)
+- [1 July 2015](/docs/services/text-to-speech/release-notes.html#July2015)
+
+### 1 December 2016
 {: #December2016}
 
 -   The service includes a new voice, `es-LA_SofiaVoice`, which is the Latin American equivalent of the `es-US_SofiaVoice` voice. The most significant difference between the two voices concerns how they interpret a `$` (dollar sign): The Latin American version uses the term *pesos*, while the North American version uses the term *dolares*. Other minor differences may also exist between the two voices.
@@ -57,17 +74,6 @@ The service now supports the MP3 or Motion Picture Experts Group (MPEG) audio fo
 
     If the service finds the string <code>&#65326;&#65337;&#65315;</code> in the input text, it matches that word because it is a longer match than <code>&#65326;&#65337;</code>. Previously, the service would have matched the string <code>&#65326;&#65337;</code>. For more information about working with Japanese entries for a custom voice model, see [Working with Japanese entries](/docs/services/text-to-speech/custom-using.html#jaNotes).
 
-## Older releases
-{: #older}
-
-- [22 September 2016](/docs/services/text-to-speech/release-notes.html#September2016)
-- [23 June 2016](/docs/services/text-to-speech/release-notes.html#June2016)
-- [10 March 2016](/docs/services/text-to-speech/release-notes.html#March2016)
-- [22 February 2016](/docs/services/text-to-speech/release-notes.html#February2016)
-- [17 December 2015](/docs/services/text-to-speech/release-notes.html#December2015)
-- [21 September 2015](/docs/services/text-to-speech/release-notes.html#September2015)
-- [1 July 2015](/docs/services/text-to-speech/release-notes.html#July2015)
-
 ### 22 September 2016
 {: #September2016}
 
@@ -77,13 +83,13 @@ The service now supports the MP3 or Motion Picture Experts Group (MPEG) audio fo
 -   The service now allows you to request word timing information for all strings of the input text that you pass to the WebSocket interface. To receive the start and end time of every string in the input, specify an array that includes the string `words` for the optional `timings` parameter of the JSON object that you pass to the service with a request. The feature is not currently available for Japanese input text. For more information, see [Requesting word timings](/docs/services/text-to-speech/websockets.html#timing).
 -   The service now validates all SSML elements that you submit in any context. If it finds an invalid tag, the service reports an HTTP 400 response code with a descriptive message, and the method fails. In previous releases, the service handled errors inconsistently; specifying an invalid word pronunciation, for example, could lead to unpredictable or inconsistent behavior. For more information, see [SSML validation](/docs/services/text-to-speech/SSML.html#errors).
 -   The use of `spr` is deprecated as an argument to the `format` option of the `GET pronunciation` method and for use with the `alphabet` attribute of an SSML `<phoneme>` element. To use {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR) notation, use the `ibm` argument instead of `spr` in all cases.
--   The list of supported audio formats now includes `audio/mulaw;rate=8000`. Like `audio/basic`, this format provides single-channel audio encoded using 8-bit u-law (or mu-law) data sampled at 8 KHz. For more information, see [Specifying an audio format](/docs/services/text-to-speech/http.html#format).
+-   The list of supported audio formats now includes `audio/mulaw;rate=8000`. Like `audio/basic`, this format provides single-channel audio encoded using 8-bit u-law (or mu-law) data sampled at 8 kHz. For more information, see [Specifying an audio format](/docs/services/text-to-speech/http.html#format).
 -   The `GET voices` and `GET voices/{voice}` methods now return an additional `supported_features` object as part of their output for each voice. The additional information describes whether the voice supports customization and the additional SSML `<voice_transformation>` element. For more information, see [Specifying a voice](/docs/services/text-to-speech/http.html#voices).
 
 ### 23 June 2016
 {: #June2016}
 
--   The service now offers a WebSocket interface for synthesizing text to speech. The interface offers the same features as the `synthesize` method of the HTTP interface. It accepts plain text or text that is marked up with SSML. In addition, it also supports use of the SSML `<mark>` element to identify the time in the audio at which it finishes synthesizing all text that precedes the mark. For more information, see [Using the WebSocket interface](/docs/services/text-to-speech/websockets.html).
+-   The service now offers a WebSocket interface for synthesizing text to speech. The interface offers the same features as the `synthesize` method of the HTTP interface. It accepts plain text or text that is marked up with SSML. In addition, it also supports use of the SSML `<mark>` element to identify the time in the audio at which it finishes synthesizing all text that precedes the mark. For more information, see [The WebSocket interface](/docs/services/text-to-speech/websockets.html).
 -   The service now offers support for text annotated with SSML for the languages Castilian and North American Spanish, Italian, and Brazilian Portuquese. The service already supported the use of SSML for US and British English, French, and German. As of this update, the service supports SSML for all languages but Japanese. Moreover, you can use both {{site.data.keyword.IBM_notm}} SPR and IPA notations to define word pronunciations with the SSML `<phoneme>` element. For more information, see [Using SSML](/docs/services/text-to-speech/SSML.html) and [Using SPRs](/docs/services/text-to-speech/SPRs.html).
 
     For US English, you can also use the SSML `<phoneme>` element to create word entries in a custom voice model; customization is supported only for US English. For more information, see [Understanding customization](/docs/services/text-to-speech/custom-intro.html) and [Using customization](/docs/services/text-to-speech/custom-using.html).
@@ -97,7 +103,7 @@ The service now supports the MP3 or Motion Picture Experts Group (MPEG) audio fo
 -   The `GET pronunciation` method now accepts an optional `customization_id` query parameter. The parameter lets you obtain a word translation from a specified custom voice model. If the voice model does not contain the word, the method returns the word's default pronunciation. For more information, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/text-to-speech/api/v1/){: new_window}.
 
     > **Note:** When using the `GET pronunciation` method without a customization ID and for a language other than US English, you can request a word's pronunciation only in {{site.data.keyword.IBM_notm}} SPR notation. For a language other than US English, you must specify `spr` with the method's `format` option.
--   The list of supported audio formats now includes `audio/basic`, which provides single-channel audio encoded using 8-bit u-law (or mu-law) data sampled at 8 KHz. For more information, see [Specifying an audio format](/docs/services/text-to-speech/http.html#format).
+-   The list of supported audio formats now includes `audio/basic`, which provides single-channel audio encoded using 8-bit u-law (or mu-law) data sampled at 8 kHz. For more information, see [Specifying an audio format](/docs/services/text-to-speech/http.html#format).
 -   The HTTP and WebSocket `synthesize` methods can return a `warnings` response that includes messages about invalid query parameters or JSON fields included with a request. The format of the warnings has changed. For example, the following warning:
 
     `"warnings": "Unknown arguments: [u'invalid_arg_1', u'invalid_arg_2']."`

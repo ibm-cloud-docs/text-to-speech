@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-09-09"
+lastupdated: "2017-10-02"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2017-09-09"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# Using the HTTP REST interface
+# The HTTP REST interface
 {: #using}
 
 To synthesize text to speech with the service's HTTP REST API, you call the `GET` or `POST` version of the service's `synthesize` method. You specify the text to be synthesized and the voice for the spoken audio. You can also specify a custom voice model to be used, and you can pass text that is marked up with SSML. For detailed information about the HTTP interface, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/text-to-speech/api/v1/){: new_window}.
@@ -47,8 +47,8 @@ For more information, see [Specifying input text](#input). The two versions of t
     <td style="text-align:center">Query</td>
     <td style="text-align:center">String</td>
     <td>
-      Specifies the requested MIME type, or audio format, in which the
-      service is to return the audio. You can also specify this value via
+      Specifies the requested audio format, or MIME type, in which the
+      service is to return the audio. You can also specify this value with
       the HTTP <code>Accept</code> request header. For complete information
       about the supported formats, see <a href="#format">Specifying an audio
         format</a>.
@@ -78,7 +78,8 @@ For more information, see [Specifying input text](#input). The two versions of t
       call the method with the service credentials of the model's owner.
       Omit the parameter to use the specified voice with no customization.
       For more information, see
-      <a href="custom-intro.shtml">Understanding customization</a>.
+      <a href="/docs/services/text-to-speech/custom-intro.html">Understanding
+        customization</a>.
     </td>
   </tr>
 </table>
@@ -93,7 +94,7 @@ You can also use the `X-Watson-Learning-Opt-Out` header parameter available for 
 The two versions of the `synthesize` method differ primarily in how you specify the text to be synthesized. Both versions accept a maximum of 5 KB of input text, but you specify the text for each in different ways:
 
 -   The HTTP `GET` version of the method accepts input text specified by the `text` query parameter. You specify the input as plain text or as SSML, both of which must be URL-encoded.
--   The HTTP `POST` version of the method expects the text to be specified in the body of the request. You specify the input via the following simple JSON construct that encapsulates plain text or SSML:
+-   The HTTP `POST` version of the method expects the text to be specified in the body of the request. You specify the input with the following simple JSON construct that encapsulates plain text or SSML:
 
     ```javascript
     {
@@ -104,9 +105,9 @@ The two versions of the `synthesize` method differ primarily in how you specify 
 
     You must specify a value of `application/json` for the HTTP `content-type` header.
 
-Although the `GET` and `POST` methods are equivalent and offer identical functionality, it is always more secure to pass input text to the service via the `POST` method. A `POST` request passes input in the body of the request, while a `GET` request exposes the data in the URL.
+Although the `GET` and `POST` methods are equivalent and offer identical functionality, it is always more secure to pass input text to the service with the `POST` method. A `POST` request passes input in the body of the request, while a `GET` request exposes the data in the URL.
 
-The following examples show equivalent text passed to each version of the `synthesize` method via different means. The text sent via the query parameter uses HTML URL-encoding to convert the characters into a format suitable for delivery over the Internet. The SSML markup includes various elements to control the synthesize operation; for more information, see [Specifying SSML input](#ssml).
+The following examples show equivalent text passed to each version of the `synthesize` method with different means. The text sent with the query parameter uses HTML URL-encoding to convert the characters into a format suitable for delivery over the Internet. The SSML markup includes various elements to control the synthesize operation; for more information, see [Specifying SSML input](#ssml).
 
 -   As plain text with the `text` parameter of the `GET` version of the method:
 
@@ -114,7 +115,7 @@ The following examples show equivalent text passed to each version of the `synth
     text=This&20is&20the&20first&20sentence&20of&20the&20paragraph.&20Here&20is&20another&20sentence.
     &20Finally,&20this&20is&20the&20last&20sentence.
     ```
-    {: screen}
+    {: codeblock}
 
 -   As SSML input with the `text` parameter of the `GET` version of the method:
 
@@ -123,7 +124,7 @@ The following examples show equivalent text passed to each version of the `synth
     %3E%20paragraph.%3C/s%3E%3Cs%3EHere%20is%20another%20sentence.%3C/s%3E%3Cs%3E
     Finally,%20this%20is%20the%20last%20sentence.%3C/s%3E%3C/p%3E%22
     ```
-    {: screen}
+    {: codeblock}
 
 -   As plain text with the JSON construct in the body of the `POST` version of the method:
 
@@ -191,7 +192,7 @@ For example, to enter the following input with the `text` parameter of the `synt
 ```
 "What have I learned?" he asked. "Everything!"
 ```
-{: screen}
+{: codeblock}
 
 specify the following plain text:
 
@@ -213,13 +214,81 @@ For more information about how the service validates input text, see [SSML valid
 ## Specifying an audio format
 {: #format}
 
-Both versions of the `synthesize` method take an optional query parameter named `accept` to specify the requested MIME type of the audio. (You can specify the value with the `Accept` request header instead.) The parameter accepts the following audio formats.
+Both versions of the `synthesize` method take an optional query parameter named `accept` to specify the requested audio format (MIME type) of the audio. (You can also specify the value with the `Accept` request header.) The parameter accepts the following audio formats.
 
 <table>
   <caption>Table 3. Supported audio formats</caption>
   <tr>
     <th style="text-align:left; width:25%">Audio format</th>
     <th style="text-align:left">Description</th>
+  </tr>
+  <tr>
+    <td>
+      <code>audio/basic</code>
+    </td>
+    <td>
+      <em>Basic audio</em>, a single-channel audio format encoded using
+      8-bit u-law (or mu-law) data sampled at 8 kHz. This format
+      provides a lowest-common denominator media type. For more
+      information, see the IETF
+      <a target="_blank" href="https://tools.ietf.org/html/rfc2046">Request
+        for Comment (RFC) 2046 ![External link icon](../../icons/launch-glyph.svg "External link icon")</a> and
+      <a target="_blank" href="http://www.iana.org/assignments/media-types/audio/basic">iana.org/assignments/media-types/audio/basic ![External link icon](../../icons/launch-glyph.svg "External link icon")</a>.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <code>audio/flac</code>
+    </td>
+    <td>
+      <em>Free Lossless Audio Codec (FLAC)</em> (<code>.flac</code>),
+      a lossless compressed audio coding format. For more information
+      about FLAC, see
+      <a target="_blank" href="https://en.wikipedia.org/wiki/FLAC">en.wikipedia.org/wiki/FLAC ![External link icon](../../icons/launch-glyph.svg "External link icon")</a>.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <code>audio/l16;rate={rate}</code>
+    </td>
+    <td>
+      <em>Linear 16-bit Pulse-Code Modulation (PCM)</em>, an uncompressed
+      audio data format (often <code>.raw</code> or <code>.pcm</code>). For
+      more information, see the Internet Engineering Task Force (IETF)
+      <a target="_blank" href="https://tools.ietf.org/html/rfc2586">Request
+        for Comment (RFC) 2586 ![External link icon](../../icons/launch-glyph.svg "External link icon")</a> and
+      <a target="_blank" href="https://en.wikipedia.org/wiki/Pulse-code_modulation">en.wikipedia.org/wiki/Pulse-code_modulation ![External link icon](../../icons/launch-glyph.svg "External link icon")</a>.<br/><br/>
+      You must specify the sampling rate with this audio format; for example,
+      <code>audio/l16;rate=16000</code> for audio sampled at 16 kHz. You can
+      also optionally specify the endianness as either
+      <code>audio/l16;rate={rate};endianness=big-endian</code> or
+      <code>audio/l16;rate={rate};endianness=little-endian</code>; the
+      default is little endian.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <code>audio/mp3</code><br/>
+      <code>audio/mpeg</code>
+    </td>
+    <td>
+      <em>MP3</em> or <em>Motion Picture Experts Group (MPEG)</em>, a lossy
+      data compression format (MP3 and MPEG refer to the same format).
+      For more information, see
+      <a target="_blank" href="https://en.wikipedia.org/wiki/MP3">en.wikipedia.org/wiki/MP3 ![External link icon](../../icons/launch-glyph.svg "External link icon")</a>.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <code>audio/mulaw;rate={rate}</code>
+    </td>
+    <td>
+      <em>8-bit mu-law (or u-law) audio</em>, a single-channel audio
+      format encoded using 8-bit u-law (or mu-law) data. You must
+      specify the sampling rate with this audio format. For more
+      information, see
+      <a target="_blank" href="https://en.wikipedia.org/wiki/M-law_algorithm">en.wikipedia.org/wiki/M-law_algorithm ![External link icon](../../icons/launch-glyph.svg "External link icon")</a>.
+    </td>
   </tr>
   <tr>
     <td>
@@ -233,13 +302,14 @@ Both versions of the `synthesize` method take an optional query parameter named 
       <a target="_blank" href="https://www.xiph.org/ogg/">xiph.org/ogg/ ![External link icon](../../icons/launch-glyph.svg "External link icon")</a>.
       You can request audio streams compressed with the following codecs:
       <ul style="margin-left:20px; padding:0px;">
-        <li style="margin:10px 0px; color:#404040; line-height:120%;">
+        <li style="margin:10px 0px; line-height:120%;">
           <em>Opus</em>. For more information, see
           <a target="_blank" href="https://www.opus-codec.org/">opus-codec.org ![External link icon](../../icons/launch-glyph.svg "External link icon")</a> and
-          <a target="_blank" href="https://en.wikipedia.org/wiki/Opus_%28audio_format%29">en.wikipedia.org/wiki/Opus_(audio_format) ![External link icon](../../icons/launch-glyph.svg "External link icon")</a>, especially the
+          <a target="_blank" href="https://en.wikipedia.org/wiki/Opus">en.wikipedia.org/wiki/Opus (audio format) ![External link icon](../../icons/launch-glyph.svg "External link icon")</a>.
+          On the <em>Opus (audio format)</em> page, look especially at the
           <em>Containers</em> section.
         </li>
-        <li style="margin:10px 0px; color:#404040; line-height:120%;">
+        <li style="margin:10px 0px; line-height:120%;">
           <em>Vorbis</em>. For more information, see
           <a target="_blank" href="https://xiph.org/vorbis/">xiph.org/vorbis ![External link icon](../../icons/launch-glyph.svg "External link icon")</a> and
           <a target="_blank" href="https://en.wikipedia.org/wiki/Vorbis">en.wikipedia.org/wiki/Vorbis ![External link icon](../../icons/launch-glyph.svg "External link icon")</a>.
@@ -271,29 +341,6 @@ Both versions of the `synthesize` method take an optional query parameter named 
   </tr>
   <tr>
     <td>
-      <code>audio/flac</code>
-    </td>
-    <td>
-      <em>Free Lossless Audio Codec (FLAC)</em> (<code>.flac</code>),
-      a lossless compressed audio coding format. For more information
-      about FLAC, see
-      <a target="_blank" href="https://en.wikipedia.org/wiki/FLAC">en.wikipedia.org/wiki/FLAC ![External link icon](../../icons/launch-glyph.svg "External link icon")</a>.
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <code>audio/mp3</code><br/>
-      <code>audio/mpeg</code>
-    </td>
-    <td>
-      <em>MP3</em> or <em>Motion Picture Experts Group (MPEG)</em>, a lossy
-      data compression format (MP3 and MPEG refer to the same format).
-      For more information, see
-      <a target="_blank" href="https://en.wikipedia.org/wiki/MP3">en.wikipedia.org/wiki/MP3 ![External link icon](../../icons/launch-glyph.svg "External link icon")</a>.
-    </td>
-  </tr>
-  <tr>
-    <td>
       <code>audio/webm</code><br/>
       <code>audio/webm;codecs=opus</code><br/>
       <code>audio/webm;codecs=vorbis</code>
@@ -307,46 +354,6 @@ Both versions of the `synthesize` method take an optional query parameter named 
       <a target="_blank" href="https://www.webmproject.org/">webmproject.org ![External link icon](../../icons/launch-glyph.svg "External link icon")</a>.
     </td>
   </tr>
-  <tr>
-    <td>
-      <code>audio/l16;rate={rate}</code>
-    </td>
-    <td>
-      <em>Linear 16-bit Pulse-Code Modulation (PCM)</em>, an uncompressed
-      audio data format (often <code>.raw</code> or <code>.pcm</code>).
-      You must specify the sampling rate with this audio format. For
-      more information, see the Internet Engineering Task Force (IETF)
-      <a target="_blank" href="https://tools.ietf.org/html/rfc2586">Request
-        for Comment (RFC) 2586 ![External link icon](../../icons/launch-glyph.svg "External link icon")</a> and
-      <a target="_blank" href="https://en.wikipedia.org/wiki/Pulse-code_modulation">en.wikipedia.org/wiki/Pulse-code_modulation ![External link icon](../../icons/launch-glyph.svg "External link icon")</a>.
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <code>audio/mulaw;rate={rate}</code>
-    </td>
-    <td>
-      <em>8-bit mu-law (or u-law) audio</em>, a single-channel audio
-      format encoded using 8-bit u-law (or mu-law) data. You must
-      specify the sampling rate with this audio format. For more
-      information, see
-      <a target="_blank" href="https://en.wikipedia.org/wiki/M-law_algorithm">en.wikipedia.org/wiki/M-law_algorithm ![External link icon](../../icons/launch-glyph.svg "External link icon")</a>.
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <code>audio/basic</code>
-    </td>
-    <td>
-      <em>Basic audio</em>, a single-channel audio format encoded using
-      8-bit u-law (or mu-law) data sampled at 8 KHz. This format
-      provides a lowest-common denominator media type. For more
-      information, see the IETF
-      <a target="_blank" href="https://tools.ietf.org/html/rfc2046">Request
-        for Comment (RFC) 2046 ![External link icon](../../icons/launch-glyph.svg "External link icon")</a> and
-      <a target="_blank" href="http://www.iana.org/assignments/media-types/audio/basic">iana.org/assignments/media-types/audio/basic ![External link icon](../../icons/launch-glyph.svg "External link icon")</a>.
-    </td>
-  </tr>
 </table>
 
 The audio files can be played in a web browser by an audio player such as Audacity&reg; ([audacityteam.org ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.audacityteam.org/){: new_window}) or FFmpeg ([ffmpeg.org ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ffmpeg.org){: new_window}).
@@ -354,7 +361,7 @@ The audio files can be played in a web browser by an audio player such as Audaci
 ### Specifying a sampling rate
 {: #sampling}
 
-The service always synthesizes audio with a sampling rate of 22,050 Hz. For most audio formats, the service returns audio with this default sampling rate. For some formats, you can specify a different sampling rate by including the `rate={rate}` parameter; for `audio/l16` and `audio/mulaw`, you *must* specify a sampling rate. The service resamples the audio and returns it at the specified rate. A specified sampling rate must lie in the range of 8 KHz to 192 KHz.
+The service always synthesizes audio with a sampling rate of 22,050 Hz. For most audio formats, the service returns audio with this default sampling rate. For some formats, you can specify a different sampling rate by including the `rate={rate}` parameter; for `audio/l16` and `audio/mulaw`, you *must* specify a sampling rate. The service resamples the audio and returns it at the specified rate. A specified sampling rate must lie in the range of 8 kHz to 192 kHz.
 
 The following table shows the default sampling rate of the audio that is returned for each format and indicates those formats for which the `rate` parameter can or must be specified.
 
@@ -486,13 +493,102 @@ The most reliable way to identify the sampling rate for any audio stream that th
 ## Specifying a voice
 {: #voices}
 
-Both versions of the `synthesize` method accept an optional `voice` query parameter to specify the voice for the audio. The service offers two versions of the `GET voices` method that you can use to learn more about the available voices. The first provides information about all available voices; the second provides information about a single voice, including information about a specified custom model if requested.
+Both versions of the `synthesize` method accept an optional `voice` query parameter to specify the voice for the audio. When you synthesize text to audio, be sure to specify a voice that matches the language of the input text.
 
-When you synthesize text to audio, the service bases its understanding of the language for the input text on the specified voice. For example, if you specify the voice `fr-FR_ReneeVoice`, the service assumes that the input text is written in French. If you pass text that is not written in the language of the voice (for example, English text for the French voice), the service might not produce meaningful results. Be sure to select a voice that matches the language of the input text.
+The service bases its understanding of the language for the input text on the specified voice. For example, if you specify the voice `fr-FR_ReneeVoice`, the service assumes that the input text is written in French. If you pass text that is not written in the language of the voice (for example, English text for the French voice), the service might not produce meaningful results.
 
-### Retrieving all available voices
+The service offers two methods to [List all available voices](#listVoices) and to [List a specific voice](#listVoice).
 
-The first version of the `voices` method takes no arguments. It returns a JSON array named `voices` that includes a separate element for each available voice:
+### Languages and voices
+{: #languageVoices}
+
+The following table lists the voices that are available for each language and dialect, including their gender. Each voice uses appropriate cadence and intonation for its dialect. If you omit the voice from any request, the service uses the `en-US_MichaelVoice` voice by default.
+
+<table style="width:90%">
+  <caption>Table 5. Supported languages and voices</caption>
+  <tr>
+    <th style="text-align:left">Languages</th>
+    <th style="text-align:center">Voice</th>
+    <th style="text-align:center">Gender</th>
+  </tr>
+  <tr>
+    <td style="text-align:left">Brazilian Portuguese</td>
+    <td style="text-align:center"><code>pt-BR_IsabelaVoice</code></td>
+    <td style="text-align:center">Female</td>
+  </tr>
+  <tr>
+    <td style="text-align:left">Castilian Spanish</td>
+    <td style="text-align:center"><code>es-ES_EnriqueVoice</code></td>
+    <td style="text-align:center">Male</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td style="text-align:center"><code>es-ES_LauraVoice</code></td>
+    <td style="text-align:center">Female</td>
+  </tr>
+  <tr>
+    <td style="text-align:left">French</td>
+    <td style="text-align:center"><code>fr-FR_ReneeVoice</code></td>
+    <td style="text-align:center">Female</td>
+  </tr>
+  <tr>
+    <td style="text-align:left">German</td>
+    <td style="text-align:center"><code>de-DE_BirgitVoice</code></td>
+    <td style="text-align:center">Female</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td style="text-align:center"><code>de-DE_DieterVoice</code></td>
+    <td style="text-align:center">Male</td>
+  </tr>
+  <tr>
+    <td style="text-align:left">Italian</td>
+    <td style="text-align:center"><code>it-IT_FrancescaVoice</code></td>
+    <td style="text-align:center">Female</td>
+  </tr>
+  <tr>
+    <td style="text-align:left">Japanese</td>
+    <td style="text-align:center"><code>ja-JP_EmiVoice</code></td>
+    <td style="text-align:center">Female</td>
+  </tr>
+  <tr>
+    <td style="text-align:left">Latin American Spanish</td>
+    <td style="text-align:center"><code>es-LA_SofiaVoice</code></td>
+    <td style="text-align:center">Female</td>
+  </tr>
+  <tr>
+    <td style="text-align:left">North American Spanish</td>
+    <td style="text-align:center"><code>es-US_SofiaVoice</code></td>
+    <td style="text-align:center">Female</td>
+  </tr>
+  <tr>
+    <td style="text-align:left">UK English</td>
+    <td style="text-align:center"><code>en-GB_KateVoice</code></td>
+    <td style="text-align:center">Female</td>
+  </tr>
+  <tr>
+    <td style="text-align:left">US English</td>
+    <td style="text-align:center"><code>en-US_AllisonVoice</code></td>
+    <td style="text-align:center">Female</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td style="text-align:center"><code>en-US_LisaVoice</code></td>
+    <td style="text-align:center">Female</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td style="text-align:center"><code>en-US_MichaelVoice</code></td>
+    <td style="text-align:center">Male</td>
+  </tr>
+</table>
+
+> **Note:** The voices `es-LA_SofiaVoice` and `es-US_SofiaVoice` are essentially the same voice. The most significant difference concerns how the two voices interpret a `$` (dollar sign): The Latin American version uses the term *pesos*, while the North American version uses the term *dolares*. Other minor differences may also exist between the two voices.
+
+### Listing all available voices
+{: #listVoices}
+
+The `GET /v1/voices` method takes no arguments. It returns a JSON array named `voices` that includes a separate element for each available voice:
 
 ```javascript
 {
@@ -527,92 +623,10 @@ The fields for each voice provide the following information:
     -   `custom_pronunciation` is a Boolean value that indicates whether the voice can be customized with the service's customization interface. (Same as `customizable`.)
     -   `voice_transformation` is a Boolean value that indicates whether the voice can be transformed by using the SSML `<voice-transformation>` element.
 
-The following table lists the voices that are available with the service.
+### List a specific voice
+{: #listVoice}
 
-<table style="width:90%">
-  <caption>Table 5. Supported voices</caption>
-  <tr>
-    <th style="text-align:left">Voice</th>
-    <th style="text-align:center">Language</th>
-    <th style="text-align:center">Gender</th>
-  </tr>
-  <tr>
-    <td style="text-align:left"><code>de-DE_BirgitVoice</code></td>
-    <td style="text-align:center">German</td>
-    <td style="text-align:center">Female</td>
-  </tr>
-  <tr>
-    <td style="text-align:left"><code>de-DE_DieterVoice</code></td>
-    <td style="text-align:center">German</td>
-    <td style="text-align:center">Male</td>
-  </tr>
-  <tr>
-    <td style="text-align:left"><code>en-GB_KateVoice</code></td>
-    <td style="text-align:center">English (British dialect)</td>
-    <td style="text-align:center">Female</td>
-  </tr>
-  <tr>
-    <td style="text-align:left"><code>en-US_AllisonVoice</code></td>
-    <td style="text-align:center">English (US dialect)</td>
-    <td style="text-align:center">Female</td>
-  </tr>
-  <tr>
-    <td style="text-align:left"><code>en-US_LisaVoice</code></td>
-    <td style="text-align:center">English (US dialect)</td>
-    <td style="text-align:center">Female</td>
-  </tr>
-  <tr>
-    <td style="text-align:left"><code>en-US_MichaelVoice</code></td>
-    <td style="text-align:center">English (US dialect) (<em>Default</em>)</td>
-    <td style="text-align:center">Male</td>
-  </tr>
-  <tr>
-    <td style="text-align:left"><code>es-ES_EnriqueVoice</code></td>
-    <td style="text-align:center">Spanish (Castilian dialect)</td>
-    <td style="text-align:center">Male</td>
-  </tr>
-  <tr>
-    <td style="text-align:left"><code>es-ES_LauraVoice</code></td>
-    <td style="text-align:center">Spanish (Castilian dialect)</td>
-    <td style="text-align:center">Female</td>
-  </tr>
-  <tr>
-    <td style="text-align:left"><code>es-LA_SofiaVoice</code></td>
-    <td style="text-align:center">Spanish (Latin American dialect)</td>
-    <td style="text-align:center">Female</td>
-  </tr>
-  <tr>
-    <td style="text-align:left"><code>es-US_SofiaVoice</code></td>
-    <td style="text-align:center">Spanish (North American dialect)</td>
-    <td style="text-align:center">Female</td>
-  </tr>
-  <tr>
-    <td style="text-align:left"><code>fr-FR_ReneeVoice</code></td>
-    <td style="text-align:center">French</td>
-    <td style="text-align:center">Female</td>
-  </tr>
-  <tr>
-    <td style="text-align:left"><code>it-IT_FrancescaVoice</code></td>
-    <td style="text-align:center">Italian</td>
-    <td style="text-align:center">Female</td>
-  </tr>
-  <tr>
-    <td style="text-align:left"><code>ja-JP_EmiVoice</code></td>
-    <td style="text-align:center">Japanese</td>
-    <td style="text-align:center">Female</td>
-  </tr>
-  <tr>
-    <td style="text-align:left"><code>pt-BR_IsabelaVoice</code></td>
-    <td style="text-align:center">Brazilian Portuguese</td>
-    <td style="text-align:center">Female</td>
-  </tr>
-</table>
-
-> **Note:** The voices `es-LA_SofiaVoice` and `es-US_SofiaVoice` are essentially the same voice. The most significant difference concerns how the two voices interpret a `$` (dollar sign): The Latin American version uses the term *pesos*, while the North American version uses the term *dolares*. Other minor differences may also exist between the two voices.
-
-### Retrieving a specific voice
-
-The second version of the `voices` method accepts two parameters:
+The `GET /v1/voices/{voice}` method accepts two parameters:
 
 <table>
   <caption>Table 6. Parameters of the <code>voices</code> method</caption>
@@ -751,7 +765,7 @@ The `<express-as>` element accepts one required attribute, `type`, which describ
     </express-as>
 
     <express-as type="Uncertainty">
-      Can you please explain it again? Im not sure I understand.
+      Can you please explain it again? I&apos;m not sure I understand.
     </express-as>
 
     <express-as type="Uncertainty">
@@ -777,7 +791,7 @@ The following example shows the use of all three forms of expressiveness in the 
       but we are not sure at this time.
     </express-as>
     <express-as type=\"GoodNews\">
-      But because we want you to be a satisified customer, we are giving you
+      But because we want you to be a satisfied customer, we are giving you
       a 50% discount on your order!
     </express-as>
   </speak>"

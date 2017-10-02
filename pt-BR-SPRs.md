@@ -25,7 +25,7 @@ The following sections describe the inventory of valid symbols for Brazilian Por
 ## Regular vowels
 
 <table style="width:90%">
-  <caption>Table 25. Regular vowels (Brazilian Portuguese)</caption>
+  <caption>Table 1. Regular vowels (Brazilian Portuguese)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Brazilian Portuguese<br/>SPR symbol
@@ -224,7 +224,7 @@ The following sections describe the inventory of valid symbols for Brazilian Por
 ## Semi-vowels
 
 <table style="width:90%">
-  <caption>Table 26. Semi-vowels (Brazilian Portuguese)</caption>
+  <caption>Table 2. Semi-vowels (Brazilian Portuguese)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Brazilian Portuguese<br/>SPR symbol
@@ -300,7 +300,7 @@ The following sections describe the inventory of valid symbols for Brazilian Por
 ## Consonants
 
 <table style="width:90%">
-  <caption>Table 27. Consonants (Brazilian Portuguese)</caption>
+  <caption>Table 3. Consonants (Brazilian Portuguese)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Brazilian Portuguese<br/>SPR symbol

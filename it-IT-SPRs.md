@@ -25,7 +25,7 @@ The following sections describe the inventory of valid symbols for Italian.
 ## Regular vowels
 
 <table style="width:90%">
-  <caption>Table 21. Regular vowels (Italian)</caption>
+  <caption>Table 1. Regular vowels (Italian)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Italian<br/>SPR symbol
@@ -143,7 +143,7 @@ The following sections describe the inventory of valid symbols for Italian.
 ## Consonants
 
 <table style="width:90%">
-  <caption>Table 22. Consonants (Italian)</caption>
+  <caption>Table 2. Consonants (Italian)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Italian<br/>SPR symbol
@@ -512,7 +512,7 @@ The following sections describe the inventory of valid symbols for Italian.
 ## Geminates
 
 <table style="width:90%">
-  <caption>Table 23. Geminates (Italian)</caption>
+  <caption>Table 3. Geminates (Italian)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Italian<br/>SPR symbol
@@ -598,7 +598,7 @@ The following sections describe the inventory of valid symbols for Italian.
 If an allophone is not used in an SPR, the {{site.data.keyword.texttospeechshort}} service automatically generates the appropriate variant for the given context.
 
 <table style="width:90%">
-  <caption>Table 24. Allophones (Italian)</caption>
+  <caption>Table 4. Allophones (Italian)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Italian allophone<br/>SPR symbol

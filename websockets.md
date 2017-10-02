@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-09-09"
+lastupdated: "2017-10-02"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2017-09-09"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# Using the WebSocket interface
+# The WebSocket interface
 {: #using}
 
 To synthesize text to speech with the service's WebSocket interface, you first establish a connection with the service by calling its `synthesize` method. You then send the text to be synthesized to the service as a JSON text message over the connection.
@@ -42,7 +42,7 @@ The service makes the `synthesize` method for the WebSocket Secure (WSS) protoco
 ```
 wss://stream.watsonplatform.net/text-to-speech/api/v1/synthesize
 ```
-{: screen}
+{: codeblock}
 
 A WebSocket client calls this method with the following query parameters to establish an authenticated connection with the service.
 
@@ -73,7 +73,8 @@ A WebSocket client calls this method with the following query parameters to esta
     <td>
       Specifies the voice in which the text is to be spoken in the audio.
       Omit the parameter to use the default voice. For more information,
-      see <a href="http.html#voices">Specifying a voice</a>.
+      see <a href="/docs/services/text-to-speech/http.html#voices">Specifying
+        a voice</a>.
     </td>
   </tr>
   <tr>
@@ -86,8 +87,9 @@ A WebSocket client calls this method with the following query parameters to esta
       for the synthesis. If you include a customization ID, you must call
       the method with the service credentials of the model's owner. Omit
       the parameter to use the specified voice with no customization. For
-      more information, see <a herf="custom-intro.shtml">Understanding
-        customization</a>.
+      more information, see
+      <a href="/docs/services/text-to-speech/custom-intro.html">Understanding
+         customization</a>.
     </td>
   </tr>
   <tr>
@@ -143,11 +145,12 @@ To synthesize text, the client passes a simple JSON text message to the service 
       Markup Language (SSML), including the service-specific
       <code>&lt;express-as&gt;</code> and
       <code>&lt;voice-transformation&gt;</code> elements; for more
-      information, see <a href="http.html#input">Specifying input
-        text</a>. SSML input can also include the <code>&lt;mark&gt;</code>
-      element; for more information, see <a href="#mark">Specifying
-        an SSML mark</a>. The client can pass a maximum of 5 KB of
-      data with the request.
+      information, see
+        <a href="/docs/services/text-to-speech/http.html#input">Specifying
+        input text</a>. SSML input can also include the
+        <code>&lt;mark&gt;</code> element; for more information, see
+        <a href="#mark">Specifying an SSML mark</a>. The client can
+        pass a maximum of 5 KB of data with the request.
     </td>
   </tr>
   <tr>
@@ -156,10 +159,10 @@ To synthesize text, the client passes a simple JSON text message to the service 
     <td>
       Specifies the requested format (MIME type) of the audio. For
       detailed information about the available audio formats, see
-      <a href="http.shtml">Specifying an audio format</a>. In addition
-      to the supported specifications, the WebSocket interface lets you
-      specify <code>*/*</code> to use the default audio format,
-      <code>audio/ogg;codecs=opus</code>.
+      <a href="/docs/services/text-to-speech/http.html">Specifying
+      an audio format</a>. In addition to the supported specifications,
+      the WebSocket interface lets you specify <code>*/*</code> to use
+      the default audio format, <code>audio/ogg;codecs=opus</code>.
     </td>
   </tr>
   <tr>
@@ -313,7 +316,7 @@ For example, consider the following input text:
 ```
 The coldest recorded temperature is -89.2 degrees Celsius in Antarctica on July 21, 1983!
 ```
-{: screen}
+{: codeblock}
 
 The service returns audio timings for the following strings: "*The*", "*coldest*", "*recorded*", "*temperature*", "*is*", "*-89.2*", "*degrees*", "*Celsius*", "*in*", "*Antarctica*", "*on*", "*July*", "*21,*", "*1983!*" Although "*-89.2*" is spoken in the audio as five separate words (*minus*, *eighty*, *nine*, *point*, *two*), the text message provides timing information for the string as a single unit with the start time of *minus* and the end time of *two*.
 
@@ -324,7 +327,7 @@ For example, consider the following conditional statement as input text:
 ```
 If it is sunny, I will go to the beach.
 ```
-{: screen}
+{: codeblock}
 
 The service returns timing information for "*sunny,*" and for "*beach.*", both of which end in punctuation that produces silence. But the word timing information for "*sunny,*" does not include the silence that is produced by the comma, and the word timings for "*beach.*" do not include the silence for the period. The information reflects only the timing of the spoken strings.
 
@@ -345,7 +348,7 @@ When the service synthesizes plain text, it returns all input characters except 
     The following example indicates that the word `Hello` is to be spelled out:
 
     ```xml
-    <say-as intepret-as="letters">Hello</say-as>.
+    <say-as interpret-as="letters">Hello</say-as>.
     ```
     {: codeblock}
 
@@ -491,7 +494,7 @@ Server<< { "marks": [ ["example", 1.0034702987337102] ] }
 Server<< <one or more chunks of binary audio>
          <audio can precede and follow the example mark>
 ```
-{: screen}
+{: codeblock}
 
 In the second example, the text messages arrive before any of the audio.
 
@@ -503,4 +506,4 @@ Server<< { "marks": [ ["simple", 0.7848991042702103] ] }
 Server<< { "marks": [ ["example", 1.0034702987337102] ] }
 Server<< <one or more chunks of binary audio>
 ```
-{: screen}
+{: codeblock}

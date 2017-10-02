@@ -25,7 +25,7 @@ The following sections describe the inventory of valid symbols for Japanese.
 ## Vowels and marks
 
 <table style="width:90%">
-  <caption>Table 28. Vowels and marks (Japanese)</caption>
+  <caption>Table 1. Vowels and marks (Japanese)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Japanese<br/>SPR symbol
@@ -179,7 +179,7 @@ The following sections describe the inventory of valid symbols for Japanese.
 ## Consonants
 
 <table style="width:90%">
-  <caption>Table 29. Consonants (Japanese)</caption>
+  <caption>Table 2. Consonants (Japanese)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Japanese<br/>SPR symbol

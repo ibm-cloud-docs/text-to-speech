@@ -25,7 +25,7 @@ The following sections describe the inventory of valid symbols for US English.
 ## Regular vowels
 
 <table style="width:90%">
-  <caption>Table 2. Regular vowels (US English)</caption>
+  <caption>Table 1. Regular vowels (US English)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       US English<br/>SPR symbol
@@ -240,7 +240,7 @@ The following sections describe the inventory of valid symbols for US English.
 ## Diphthongs
 
 <table style="width:90%">
-  <caption>Table 3. Diphthongs (US English)</caption>
+  <caption>Table 2. Diphthongs (US English)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       US English<br/>SPR symbol
@@ -302,7 +302,7 @@ The following sections describe the inventory of valid symbols for US English.
 ## Reduced vowels
 
 <table style="width:90%">
-  <caption>Table 4. Reduced vowels (US English)</caption>
+  <caption>Table 3. Reduced vowels (US English)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       US English<br/>SPR symbol
@@ -354,7 +354,7 @@ The following sections describe the inventory of valid symbols for US English.
 ## Consonants
 
 <table style="width:90%">
-  <caption>Table 5. Consonants (US English)</caption>
+  <caption>Table 4. Consonants (US English)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       US English<br/>SPR symbol

@@ -25,7 +25,7 @@ The following sections describe the inventory of valid symbols for German.
 ## Regular vowels
 
 <table style="width:90%">
-  <caption>Table 13. Regular vowels (German)</caption>
+  <caption>Table 1. Regular vowels (German)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       German<br/>SPR symbol
@@ -272,7 +272,7 @@ The following sections describe the inventory of valid symbols for German.
 ## Reduced vowels
 
 <table style="width:90%">
-  <caption>Table 14. Reduced vowels (German)</caption>
+  <caption>Table 2. Reduced vowels (German)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       German<br/>SPR symbol
@@ -310,7 +310,7 @@ The following sections describe the inventory of valid symbols for German.
 ## Diphthongs
 
 <table style="width:90%">
-  <caption>Table 15. Diphthongs (German)</caption>
+  <caption>Table 3. Diphthongs (German)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       German<br/>SPR symbol
@@ -384,7 +384,7 @@ The following sections describe the inventory of valid symbols for German.
 Nasalized vowels in French occur mostly in foreign loan words.
 
 <table style="width:90%">
-  <caption>Table 16. Nasalized vowels (German)</caption>
+  <caption>Table 4. Nasalized vowels (German)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       German<br/>SPR symbol
@@ -468,7 +468,7 @@ Nasalized vowels in French occur mostly in foreign loan words.
 ## Consonants
 
 <table style="width:90%">
-  <caption>Table 17. Consonants (German)</caption>
+  <caption>Table 5. Consonants (German)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       German<br/>SPR symbol
