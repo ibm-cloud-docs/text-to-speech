@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-09-09"
+lastupdated: "2017-10-02"
 
 ---
 
@@ -41,7 +41,7 @@ Keep the following in mind when working with the customization interface.
 
 A custom voice model is owned by the instance of the {{site.data.keyword.texttospeechshort}} service whose credentials are used to create it. You must use service credentials created for that service instance with methods of the customization interface to work with the custom model in any way.
 
-All service credentials obtained for the same instance of the {{site.data.keyword.texttospeechshort}} service share access to all custom models created for that service instance. If you want to restrict access to a custom model, create a separate instance of the service and use only the credentials for that service instance to create and work with the model. Credentials for other service instances cannot affect the custom model.
+All service credentials obtained for the same instance of the {{site.data.keyword.texttospeechshort}} service share access to all custom models created for that service instance. To restrict access to a custom model, create a separate instance of the service and use only the credentials for that service instance to create and work with the model. Credentials for other service instances cannot affect the custom model.
 
 An advantage of sharing ownership across service credentials is that you can cancel a set of credentials, for example, if they become compromised. You can then create new credentials for the same service instance and still maintain ownership of and access to custom models created with the original credentials.
 
@@ -51,7 +51,7 @@ An advantage of sharing ownership across service credentials is that you can can
 How the service handles request logging for calls to the customization interface depends on the request:
 
 -   The service *does not* log data (words and translations) that are used to build custom voice models. You do not need to set the `X-Watson-Learning-Opt-Out` request header when using the customization interface to manage the words and translations in a custom model. Your training data is never used to improve the service's base models.
--   The service *does* log data when a custom model is used with a synthesize request. You must set the `X-Watson-Learning-Opt-Out` request header to prevent logging for synthesize requests.
+-   The service *does* log data when a custom model is used with a synthesize request. You must set the `X-Watson-Learning-Opt-Out` request header to `true` to prevent logging for synthesize requests.
 
 For more information about request logging, see [Controlling request logging for {{site.data.keyword.watson}} services](/docs/services/watson/getting-started-logging.html).
 

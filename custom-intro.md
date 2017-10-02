@@ -147,21 +147,21 @@ The pronunciation of some words is context-sensitive. For example, consider the 
 ```
 St. Anthony lives on Henry St.
 ```
-{: screen}
+{: codeblock}
 
 The service's default pronunciation rules correctly synthesize this text as
 
 ```
 Saint Anthony lives on Henry street
 ```
-{: screen}
+{: codeblock}
 
 However, if you override the default pronunciation rules for the word *St.* to translate it as *saint*, the service loses the ability to pronounce the word based on context. Applying a custom voice model that includes such a translation causes the service to pronounce the previous input sentence as
 
 ```
 Saint Anthony lives on Henry saint
 ```
-{: screen}
+{: codeblock}
 
 Exercise caution and consider such corner cases when developing word/translation pairs.
 

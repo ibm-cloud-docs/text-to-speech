@@ -25,7 +25,7 @@ The following sections describe the inventory of valid symbols for British Engli
 ## Regular vowels
 
 <table style="width:90%">
-  <caption>Table 6. Regular vowels (British English)</caption>
+  <caption>Table 1. Regular vowels (British English)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       British English<br/>SPR symbol
@@ -250,7 +250,7 @@ The following sections describe the inventory of valid symbols for British Engli
 ## Diphthongs
 
 <table style="width:90%">
-  <caption>Table 7. Diphthongs (British English)</caption>
+  <caption>Table 2. Diphthongs (British English)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       British English<br/>SPR symbol
@@ -312,7 +312,7 @@ The following sections describe the inventory of valid symbols for British Engli
 ## Reduced vowels
 
 <table style="width:90%">
-  <caption>Table 8. Reduced vowels (British English)</caption>
+  <caption>Table 3. Reduced vowels (British English)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       British English<br/>SPR symbol
@@ -362,7 +362,7 @@ The following sections describe the inventory of valid symbols for British Engli
 ## Consonants
 
 <table style="width:90%">
-  <caption>Table 9. Consonants (British English)</caption>
+  <caption>Table 4. Consonants (British English)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       British English<br/>SPR symbol

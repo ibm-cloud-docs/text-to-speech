@@ -40,7 +40,7 @@ Text to Speech
     websockets.md
 
     {: topicgroup}
-    Customization
+    The customization interface
         custom-intro.md
         custom-using.md
 

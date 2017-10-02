@@ -25,7 +25,7 @@ The following sections describe the inventory of valid symbols for Castilian and
 ## Regular vowels
 
 <table style="width:90%">
-  <caption>Table 18. Regular vowels (Spanish)</caption>
+  <caption>Table 1. Regular vowels (Spanish)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Spanish<br/>SPR symbol
@@ -115,7 +115,7 @@ The following sections describe the inventory of valid symbols for Castilian and
 ## Consonants
 
 <table style="width:90%">
-  <caption>Table 19. Consonants (Spanish)</caption>
+  <caption>Table 2. Consonants (Spanish)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Spanish<br/>SPR symbol
@@ -448,7 +448,7 @@ The following sections describe the inventory of valid symbols for Castilian and
 Each allophone is a variation of the phoneme indicated in parentheses. If an allophone is not used in an SPR, the {{site.data.keyword.texttospeechshort}} service automatically generates the appropriate variant for the given context.
 
 <table style="width:90%">
-  <caption>Table 20. Allophones (Spanish)</caption>
+  <caption>Table 3. Allophones (Spanish)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Spanish allophone<br/>SPR symbol
