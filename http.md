@@ -20,21 +20,21 @@ lastupdated: "2017-10-02"
 # The HTTP REST interface
 {: #using}
 
-To synthesize text to speech with the service's HTTP REST API, you call the `GET` or `POST` version of the service's `synthesize` method. You specify the text to be synthesized and the voice for the spoken audio. You can also specify a custom voice model to be used, and you can pass text that is marked up with SSML. For detailed information about the HTTP interface, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/text-to-speech/api/v1/){: new_window}.
+To synthesize text to speech with the service's HTTP REST API, you call the `GET` or `POST` version of the service's `/v1/synthesize` method. You specify the text to be synthesized and the voice for the spoken audio. You can also specify a custom voice model to be used, and you can pass text that is marked up with SSML. For detailed information about the HTTP interface, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/text-to-speech/api/v1/){: new_window}.
 {: shortdesc}
 
 ## Synthesizing text to audio
 {: #synthesize}
 
-To synthesize text to audio, you call one of the two versions of the service's `synthesize` method:
+To synthesize text to audio, you call one of the two versions of the service's `/v1/synthesize` method:
 
--   The `GET synthesize` method accepts the text to be synthesized via its required `text` query parameter. Use this version of the method for simple text that is easily accommodated on the URL.
--   The `POST synthesize` method accepts the text to be synthesized via a JSON construct in the required body of the request. Use this version of the method for longer text or for text that you do not want to expose on the URL.
+-   The `GET /v1/synthesize` method accepts the text to be synthesized via its required `text` query parameter. Use this version of the method for simple text that is easily accommodated on the URL.
+-   The `POST /v1/synthesize` method accepts the text to be synthesized via a JSON construct in the required body of the request. Use this version of the method for longer text or for text that you do not want to expose on the URL.
 
-For more information, see [Specifying input text](#input). The two versions of the `synthesize` method have the following parameters in common:
+For more information, see [Specifying input text](#input). The two versions of the `/v1/synthesize` method have the following parameters in common:
 
 <table>
-  <caption>Table 1. Parameters of the <code>synthesize</code>
+  <caption>Table 1. Parameters of the <code>/v1/synthesize</code>
     methods</caption>
   <tr>
     <th style="text-align:left; width:18%">Parameter</th>
@@ -86,12 +86,12 @@ For more information, see [Specifying input text](#input). The two versions of t
 
 You can also use the `X-Watson-Learning-Opt-Out` header parameter available for all {{site.data.keyword.watson}} services to control the logging of requests to the service; see [Controlling request logging for {{site.data.keyword.watson}} services](/docs/services/watson/getting-started-logging.html).
 
-> **Note:** If you specify an invalid query parameter or JSON field as part of the input to the `synthesize` method, the service returns a `Warnings` response header that describes and lists each invalid argument. The request succeeds despite the warnings.
+> **Note:** If you specify an invalid query parameter or JSON field as part of the input to the `/v1/synthesize` method, the service returns a `Warnings` response header that describes and lists each invalid argument. The request succeeds despite the warnings.
 
 ## Specifying input text
 {: #input}
 
-The two versions of the `synthesize` method differ primarily in how you specify the text to be synthesized. Both versions accept a maximum of 5 KB of input text, but you specify the text for each in different ways:
+The two versions of the `/v1/synthesize` method differ primarily in how you specify the text to be synthesized. Both versions accept a maximum of 5 KB of input text, but you specify the text for each in different ways:
 
 -   The HTTP `GET` version of the method accepts input text specified by the `text` query parameter. You specify the input as plain text or as SSML, both of which must be URL-encoded.
 -   The HTTP `POST` version of the method expects the text to be specified in the body of the request. You specify the input with the following simple JSON construct that encapsulates plain text or SSML:
@@ -107,7 +107,7 @@ The two versions of the `synthesize` method differ primarily in how you specify 
 
 Although the `GET` and `POST` methods are equivalent and offer identical functionality, it is always more secure to pass input text to the service with the `POST` method. A `POST` request passes input in the body of the request, while a `GET` request exposes the data in the URL.
 
-The following examples show equivalent text passed to each version of the `synthesize` method with different means. The text sent with the query parameter uses HTML URL-encoding to convert the characters into a format suitable for delivery over the Internet. The SSML markup includes various elements to control the synthesize operation; for more information, see [Specifying SSML input](#ssml).
+The following examples show equivalent text passed to each version of the `/v1/synthesize` method with different means. The text sent with the query parameter uses HTML URL-encoding to convert the characters into a format suitable for delivery over the Internet. The SSML markup includes various elements to control the synthesize operation; for more information, see [Specifying SSML input](#ssml).
 
 -   As plain text with the `text` parameter of the `GET` version of the method:
 
@@ -187,7 +187,7 @@ Because you can submit input text that includes XML-based SSML annotations, the 
   </tr>
 </table>
 
-For example, to enter the following input with the `text` parameter of the `synthesize` method:
+For example, to enter the following input with the `text` parameter of the `/v1/synthesize` method:
 
 ```
 "What have I learned?" he asked. "Everything!"
@@ -214,7 +214,7 @@ For more information about how the service validates input text, see [SSML valid
 ## Specifying an audio format
 {: #format}
 
-Both versions of the `synthesize` method take an optional query parameter named `accept` to specify the requested audio format (MIME type) of the audio. (You can also specify the value with the `Accept` request header.) The parameter accepts the following audio formats.
+Both versions of the `/v1/synthesize` method take an optional query parameter named `accept` to specify the requested audio format (MIME type) of the audio. (You can also specify the value with the `Accept` request header.) The parameter accepts the following audio formats.
 
 <table>
   <caption>Table 3. Supported audio formats</caption>
@@ -486,14 +486,14 @@ The following table shows the default sampling rate of the audio that is returne
   </tr>
 </table>
 
-The most reliable way to identify the sampling rate for any audio stream that the service returns is to extract the information from the stream itself. You can determine the rate by calling the `synthesize` method with some simple text (for example, "hello world") and specifying the format and codec that you plan to use. You can then obtain the codec and sampling rate by saving the audio stream to a file and opening it in an audio player.
+The most reliable way to identify the sampling rate for any audio stream that the service returns is to extract the information from the stream itself. You can determine the rate by calling the `/v1/synthesize` method with some simple text (for example, "hello world") and specifying the format and codec that you plan to use. You can then obtain the codec and sampling rate by saving the audio stream to a file and opening it in an audio player.
 
 > **Note:** The Opus standard requires the output sampling rate to match the capabilities of the audio player as described in Section 5.1 of the Internet Engineering Task Force (IETF) [Request for Comments (RFC) 7845 ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://tools.ietf.org/html/rfc6455){: new_window}. For software audio players, the table indicates the typical output sampling rate, but the actual sampling rate of the audio varies with time within the stream. As mentioned, the service synthesizes the source audio at 22,050 Hz.
 
 ## Specifying a voice
 {: #voices}
 
-Both versions of the `synthesize` method accept an optional `voice` query parameter to specify the voice for the audio. When you synthesize text to audio, be sure to specify a voice that matches the language of the input text.
+Both versions of the `/v1/synthesize` method accept an optional `voice` query parameter to specify the voice for the audio. When you synthesize text to audio, be sure to specify a voice that matches the language of the input text.
 
 The service bases its understanding of the language for the input text on the specified voice. For example, if you specify the voice `fr-FR_ReneeVoice`, the service assumes that the input text is written in French. If you pass text that is not written in the language of the voice (for example, English text for the French voice), the service might not produce meaningful results.
 
@@ -615,7 +615,7 @@ The fields for each voice provide the following information:
 
 -   `url` identifies the URL for the voice.
 -   `gender` identifies the voice as `male` or `female`.
--   `name` is an identifier for the voice (for example, `en-US_LisaVoice`). This is the value you specify for the `voice` parameter of the `synthesize` method.
+-   `name` is an identifier for the voice (for example, `en-US_LisaVoice`). This is the value you specify for the `voice` parameter of the `/v1/synthesize` method.
 -   `language` specifies the language and region of the voice (for example, `en-US`).
 -   `description` provides a brief description of the interface.
 -   `customizable` is a Boolean value that indicates whether the voice can be customized with the service's customization interface. (Same as `custom_pronunciation`; maintained for backward compatibility.)
@@ -686,14 +686,14 @@ If you omit the `customization_id` parameter, the method returns JSON output for
 ```
 {: codeblock}
 
-For information about the meaning of the attributes of the `customization` field, see [Managing custom voice models](/docs/services/text-to-speech/custom-using.html#cuModels).
+For information about the meaning of the attributes of the `customization` field, see [Creating and managing custom voice models](/docs/services/text-to-speech/custom-models.html).
 
 ## Specifying SSML input
 {: #ssml}
 
 The Speech Synthesis Markup Language (SSML) is an XML-based markup language that is designed to provide annotations of text for speech synthesis applications such as the {{site.data.keyword.texttospeechshort}} service. SSML lets you specify the language, voice, and text to be synthesized, as well as many of other features that control the speech that is generated, such as pronunciation, pitch, and speaking rate.
 
-The `synthesize` methods accept input annotated with a subset of SSML. You can use SSML elements and their attributes to gain greater control over the synthesis and resulting audio output. For more information about using SSML, see the following links:
+The `/v1/synthesize` methods accept input annotated with a subset of SSML. You can use SSML elements and their attributes to gain greater control over the synthesis and resulting audio output. For more information about using SSML, see the following links:
 
 -   For general information about the W3C SSML recommendation, see [W3C Speech Synthesis Markup Language (SSML) Version 1.0 ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.w3.org/TR/speech-synthesis/){: new_window}.
 -   For detailed information about SSML support for the {{site.data.keyword.texttospeechshort}} service, see [Using SSML](/docs/services/text-to-speech/SSML.html). The documentation introduces the inventory of SSML elements and attributes supported by the service.
@@ -776,7 +776,7 @@ The `<express-as>` element accepts one required attribute, `type`, which describ
 
 #### Expressive examples
 
-The following example shows the use of all three forms of expressiveness in the body of the `text` attribute of the `synthesize` method. The text to be synthesized resides within the span of the SSML root element `<speak>`.
+The following example shows the use of all three forms of expressiveness in the body of the `text` attribute of the `/v1/synthesize` method. The text to be synthesized resides within the span of the SSML root element `<speak>`.
 
 ```xml
 {

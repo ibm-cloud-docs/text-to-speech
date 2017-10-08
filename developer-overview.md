@@ -46,14 +46,14 @@ For more information, see [The HTTP REST interface](/docs/services/text-to-speec
 ### WebSocket interface
 {: #websocket}
 
-The service offers a WebSocket interface that you can use to synthesize text. The interface provides a single version of the `synthesize` method. You specify the text to be synthesized and the voice to be used. You can provide plain text or text that is annotated with SSML. The WebSocket interface also supports use of the SSML `<mark>` element to identify specific locations in the audio, and it allows you to request word timing information for all words of the input text. For more information, see [The WebSocket interface](/docs/services/text-to-speech/websockets.html).
+The service offers a WebSocket interface that you can use to synthesize text. The interface provides a single version of the `/v1/synthesize` method. You specify the text to be synthesized and the voice to be used. You can provide plain text or text that is annotated with SSML. The WebSocket interface also supports use of the SSML `<mark>` element to identify specific locations in the audio, and it allows you to request word timing information for all words of the input text. For more information, see [The WebSocket interface](/docs/services/text-to-speech/websockets.html).
 
 ### Customization interface
 {: #customization}
 
 The service includes a customization interface that you can use to create custom voice models for use during speech synthesis. A custom voice model is a dictionary of words and their translations for a specific language. Each word/translation pair in a model tells the service how to pronounce the word when it occurs in input text. Custom voice models let you provide application-specific translations for unusual words for which the service's regular pronunciation rules may yield imperfect pronunciations.
 
-For example, your application may routinely encounter special terms with foreign origins, personal or geographic names, or abbreviations and acronyms. Customization lets you define translations to tell the service how you want such terms to be pronounced. For more information, see [Understanding customization](/docs/services/text-to-speech/custom-intro.html) and [Using customization](/docs/services/text-to-speech/custom-using.html).
+For example, your application may routinely encounter special terms with foreign origins, personal or geographic names, or abbreviations and acronyms. Customization lets you define translations to tell the service how you want such terms to be pronounced. For more information, see [Understanding customization](/docs/services/text-to-speech/custom-intro.html).
 
 > **Note:** The customization interface is currently a beta release.
 

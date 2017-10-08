@@ -20,10 +20,10 @@ lastupdated: "2017-10-02"
 # The WebSocket interface
 {: #using}
 
-To synthesize text to speech with the service's WebSocket interface, you first establish a connection with the service by calling its `synthesize` method. You then send the text to be synthesized to the service as a JSON text message over the connection.
+To synthesize text to speech with the service's WebSocket interface, you first establish a connection with the service by calling its `/v1/synthesize` method. You then send the text to be synthesized to the service as a JSON text message over the connection.
 {: shortdesc}
 
-The WebSocket interface accepts identical input and produces identical results as the `synthesize` method of the HTTP interface. However, the WebSocket interface supports use of the SSML `<mark>` element to identify the location of user-specified markers in the audio, and it allows you to obtain word timing information in the audio for all strings in the input text.
+The WebSocket interface accepts identical input and produces identical results as the `GET` and `POST /v1/synthesize` methods of the HTTP interface. However, the WebSocket interface supports use of the SSML `<mark>` element to identify the location of user-specified markers in the audio, and it allows you to obtain word timing information in the audio for all strings in the input text.
 
 ## Synthesizing text to audio
 {: #synthesize}
@@ -37,7 +37,7 @@ The synthesize request and response cycle includes the following steps:
 ### Opening a connection
 {: #WSopen}
 
-The service makes the `synthesize` method for the WebSocket Secure (WSS) protocol available at the following endpoint:
+The service makes the `/v1/synthesize` method for the WebSocket Secure (WSS) protocol available at the following endpoint:
 
 ```
 wss://stream.watsonplatform.net/text-to-speech/api/v1/synthesize
@@ -47,7 +47,7 @@ wss://stream.watsonplatform.net/text-to-speech/api/v1/synthesize
 A WebSocket client calls this method with the following query parameters to establish an authenticated connection with the service.
 
 <table>
-  <caption>Table 1. Parameters of the <code>synthesize</code>
+  <caption>Table 1. Parameters of the <code>/v1/synthesize</code>
     method</caption>
   <tr>
     <th style="text-align:left; width:23%">Parameter</th>
@@ -109,7 +109,7 @@ A WebSocket client calls this method with the following query parameters to esta
   </tr>
 </table>
 
-The following snippet of JavaScript code opens a connection with the service. The call to the `synthesize` method passes the `voice` and `watson-token` query parameters, the former to direct the service to use the US English Allison voice. Once the connection is established, the event listeners (`onOpen`, `onClose`, and so on) are defined to respond to events from the service.
+The following snippet of JavaScript code opens a connection with the service. The call to the `/v1/synthesize` method passes the `voice` and `watson-token` query parameters, the former to direct the service to use the US English Allison voice. Once the connection is established, the event listeners (`onOpen`, `onClose`, and so on) are defined to respond to events from the service.
 
 ```javascript
 var voice = 'en-US_AllisonVoice';
