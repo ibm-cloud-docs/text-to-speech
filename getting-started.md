@@ -30,7 +30,7 @@ The {{site.data.keyword.texttospeechfull}} service converts written text to natu
 If you already know the credentials for your {{site.data.keyword.texttospeechshort}} service instance, skip this step.
 {: tip}
 
-1.  Go to the [{{site.data.keyword.texttospeechshort}} service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/text-to-speech/){: new_window} and either sign up for a free Bluemix account or log in.
+1.  Go to the [{{site.data.keyword.texttospeechshort}} service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/text-to-speech/){: new_window} and either sign up for a free {{site.data.keyword.Bluemix_notm}} account or log in.
 1.  After you log in, enter `text-to-speech-tutorial` in the **Service name field** of the {{site.data.keyword.texttospeechshort}} page. Click **Create**.
 1.  Copy your credentials:
     1.  Click **Service credentials**.

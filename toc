@@ -42,6 +42,9 @@ Text to Speech
     {: topicgroup}
     The customization interface
         custom-intro.md
+        custom-rules.md
+        custom-models.md
+        custom-entries.md
         custom-using.md
 
     {: topicgroup}
