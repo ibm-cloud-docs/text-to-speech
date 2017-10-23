@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-10-08"
+lastupdated: "2017-10-20"
 ---
 
 {:shortdesc: .shortdesc}
@@ -38,9 +38,9 @@ You specify the translation for a word in a custom voice model as a *sounds-like
 ## Sounds-like translation
 {: #soundsLike}
 
-*Sounds-like translation* leverages the service's regular pronunciation rules to represent the desired pronunciation of a target word indirectly. A translation is formed from the regular pronunciations of one or more other words. The service first substitutes the specified translation for any occurrence of the word that appears in the input text. It then applies its regular pronunciation rules to the translation, converting the translation to its phonetic representation to obtain the desired pronunciation.
+*Sounds-like translation* leverages the service's regular pronunciation rules to represent the desired pronunciation of a target word indirectly. A sounds-like translation is formed from the regular pronunciations of one or more other words. The service first substitutes the specified translation for any occurrence of the word that appears in the input text. It then applies its regular pronunciation rules to the translation, converting the translation to its phonetic representation to obtain the desired pronunciation.
 
-For example, the service's regular pronunciation rules properly translate many common abbreviations and acronyms. For instance, the service pronounces the abbreviation *cm* as *centimeter*. It pronounces less common abbreviations letter by letter. For instance, the service pronounces the word *Str* (an abbreviation for *street*) as *S T R*, with each letter pronounced individually. You can use the sounds-like method to specify the translation *street* for the word *Str*.
+For example, the service's regular pronunciation rules properly translate many common abbreviations and acronyms. For instance, the service pronounces the abbreviation *cm* as *centimeter*. It pronounces less common abbreviations letter by letter. For instance, the service pronounces the string *Str* (an abbreviation for *street*) as *S T R*, with each letter pronounced individually. You can use the sounds-like method to specify the translation *street* for the string *Str*.
 
 Another example of an acronym is the word *IEEE*, which stands for Institute of Electrical and Electronic Engineers. By default, the service pronounces this acronym as *I E E E*. But the acronym is commonly pronounced *I triple E*, which you can easily define by using the simple sounds-like translation *I triple E*. If the word *IEEE* appears in your custom model with this translation, the service substitutes each occurrence of the word with the translation and applies its regular pronunciation rules to the individual words *I*, *triple*, and *E* to yield the desired pronunciation.
 
@@ -80,7 +80,7 @@ In either case, you specify a translation by using a specific phoneme format tha
 
 The `alphabet` attribute specifies the phonetic representation type, `ipa` or `ibm`. The `ph` attribute specifies the phonetic translation string.
 
-For example, consider the word `trinitroglycerin`. The service's regular pronunciation rules produce a pronunciation that differs from the one commonly used by chemists and physicians. The correct pronunciation can be achieved with a phonetic translation:
+For example, consider the word `trinitroglycerin`. The service's regular pronunciation rules produce a pronunciation that differs from the one commonly used by chemists and physicians. The correct pronunciation can be achieved with a phonetic translation.
 
 <table style="width:35%">
   <caption>Table 2. Example phonetic translations</caption>
@@ -98,7 +98,9 @@ For example, consider the word `trinitroglycerin`. The service's regular pronunc
   </tr>
 </table>
 
-In these examples, the phonetic translation string is composed of phoneme symbols and a single primary stress mark. The primary stress mark is represented by <code>&#712;</code> in IPA and by `1` in SPR; it is placed just before the phoneme that corresponds to the stressed vowel in both cases. Although the examples do not show this, it is also possible to specify syllable boundaries and secondary stress positions in a phonetic translation, but these elements are not required and normally are not needed to achieve a desired pronunciation. As with sounds-like translations, you can compose a phonetic translation from multiple words delimited by spaces.
+In these examples, the phonetic translation string is composed of phoneme symbols and a single primary stress mark. The primary stress mark is represented by <code>&#712;</code> in IPA and by `1` in SPR; it is placed just before the symbol for the stressed vowel in both cases. Although the examples do not show this, it is also possible to specify syllable boundaries and secondary stress positions in a phonetic translation, but these elements are not required and normally are not needed to achieve a desired pronunciation. As with sounds-like translations, you can compose a phonetic translation from multiple strings delimited by spaces.
+
+> **Note:** You can also specify IPA translations as IPA Unicode values. For more information, see [Using IBM SPR](/docs/services/text-to-speech/SPRs.html) and the language-specific tables on the pages referred to in [Supported languages](/docs/services/text-to-speech/SPRs.html#supportedLanguages). For an example translation that uses IPA Unicode values, see [The phoneme element](/docs/services/text-to-speech/SSML-elements.html#phoneme_element).
 
 ### Working with an existing phonetic translation
 {: #phoneticMethod}
@@ -107,13 +109,15 @@ Unless you are an expert in phonology, composing phonetic translations is not an
 
 You can use the `/GET v/1/pronunciation` method to obtain an initial phonetic translation for a word and then modify the translation to achieve the desired pronunciation. As with the sounds-like method, you follow a trial-and-error process of submitting your candidate translation to the service, synthesizing the word as input text, listening to the resulting audio, and editing the candidate translation. You can repeat the process until you are satisfied with the pronunciation.
 
+For more information, see [Querying a word from a language](/docs/services/text-to-speech/custom-entries.html#cuWordsQueryLanguage).
+
 ### More information about phonetic translation
 {: #phoneticInfo}
 
 The following resources provide more information about phonetic translation:
 
 -   For information about using SSML and its `<phoneme>` element, see [Using SSML](/docs/services/text-to-speech/SSML.html).
--   For information about specifying SPR translations and their equivalent IPA symbols, see [Using SPRs](/docs/services/text-to-speech/SPRs.html).
+-   For information about specifying SPR translations and their equivalent IPA symbols, see [Using IBM SPR](/docs/services/text-to-speech/SPRs.html).
 -   For more information about using IPA symbols, including audio samples, consult sources on the Web, including a detailed introductory discussion at [en.wikipedia.org/wiki/International_Phonetic_Alphabet ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://en.wikipedia.org/wiki/International_Phonetic_Alphabet){: new_window}.
 
 ## Mixed sounds-like and phonetic translation

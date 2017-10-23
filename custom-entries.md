@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-10-08"
+lastupdated: "2017-10-20"
 
 ---
 
@@ -40,14 +40,14 @@ You can provide a translation by using the sounds-like or the phonetic method (o
     ```
     {: pre}
 
--   **Phonetic IPA:** IPA requires use of the `<phoneme>` tag with the `alphabet` attribute set to `ipa` and the `ph` attribute defined in IPA format:
+-   **Phonetic IPA:** IPA requires use of the `<phoneme>` element with the `alphabet` attribute set to `ipa` and the `ph` attribute defined in IPA format:
 
     <pre><code class="language-bash">  curl -X PUT -u {username}:{password}
     --header "Content-Type: application/json"
     --data "{\"translation\":\"&lt;phoneme alphabet=\\\"ipa\\\" ph=\\\"&#712;a&#618;.t&#633;&#712;&#616;p&#601;l.&#712;i\\\"&gt;&lt;/phoneme&gt;\"}"
     "https://stream.watsonplatform.net/text-to-speech/api/v1/customizations/{customization_id}/words/IEEE"</code></pre>
 
--   **Phonetic {{site.data.keyword.IBM_notm}} SPR:** SPR uses the `<phoneme>` tag with the `alphabet` attribute set to `ibm` and the `ph` attribute defined in SPR format:
+-   **Phonetic {{site.data.keyword.IBM_notm}} SPR:** SPR uses the `<phoneme>` element with the `alphabet` attribute set to `ibm` and the `ph` attribute defined in SPR format:
 
     ```bash
     curl -X PUT -u {username}:{password}
@@ -238,7 +238,7 @@ The method returns JSON output of the following form. Because this and the previ
 ```
 {: codeblock}
 
-## Querying words from a language
+## Querying a word from a language
 {: #cuWordsQueryLanguage}
 
 To query the pronunciation of a word, use the `GET /v1/pronunciation` method. Specify a voice to get the pronunciation in the language of that voice. By default, the method returns the pronunciation based on the service's regular pronunciation rules, but you can also request the pronunciation for a specified custom voice model. The method includes four query parameters that let you specify the information that is to be returned:

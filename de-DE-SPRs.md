@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-08-11"
+lastupdated: "2017-10-19"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2017-08-11"
 # German symbols
 {: #deSymbols}
 
-The following sections describe the inventory of valid symbols for German.
+The following sections describe the valid symbols for German.
 
 ## Regular vowels
 

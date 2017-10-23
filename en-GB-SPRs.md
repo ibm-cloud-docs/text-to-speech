@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-08-11"
+lastupdated: "2017-10-19"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2017-08-11"
 # British English symbols
 {: #gbSymbols}
 
-The following sections describe the inventory of valid symbols for British English.
+The following sections describe the valid symbols for British English.
 
 ## Regular vowels
 

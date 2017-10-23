@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-10-02"
+lastupdated: "2017-10-20"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2017-10-02"
 # The HTTP REST interface
 {: #using}
 
-To synthesize text to speech with the service's HTTP REST API, you call the `GET` or `POST` version of the service's `/v1/synthesize` method. You specify the text to be synthesized and the voice for the spoken audio. You can also specify a custom voice model to be used, and you can pass text that is marked up with SSML. For detailed information about the HTTP interface, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/text-to-speech/api/v1/){: new_window}.
+To synthesize text to speech with the service's HTTP REST API, you call the `GET` or `POST` version of the service's `/v1/synthesize` method. You specify the text to be synthesized, the voice for the spoken audio, and the format for the audio. You can also specify a custom voice model to be used with the request. For detailed information about the HTTP interface, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/text-to-speech/api/v1/){: new_window}.
 {: shortdesc}
 
 ## Synthesizing text to audio
@@ -49,9 +49,8 @@ For more information, see [Specifying input text](#input). The two versions of t
     <td>
       Specifies the requested audio format, or MIME type, in which the
       service is to return the audio. You can also specify this value with
-      the HTTP <code>Accept</code> request header. For complete information
-      about the supported formats, see <a href="#format">Specifying an audio
-        format</a>.
+      the HTTP <code>Accept</code> request header. For more information,
+      see <a href="#format">Specifying an audio format</a>.
     </td>
   </tr>
   <tr>
@@ -84,140 +83,17 @@ For more information, see [Specifying input text](#input). The two versions of t
   </tr>
 </table>
 
-You can also use the `X-Watson-Learning-Opt-Out` header parameter available for all {{site.data.keyword.watson}} services to control the logging of requests to the service; see [Controlling request logging for {{site.data.keyword.watson}} services](/docs/services/watson/getting-started-logging.html).
+You can also use the `X-Watson-Learning-Opt-Out` header parameter that is available for all {{site.data.keyword.watson}} services to control the logging of requests to the service; see [Controlling request logging for {{site.data.keyword.watson}} services](/docs/services/watson/getting-started-logging.html).
 
 > **Note:** If you specify an invalid query parameter or JSON field as part of the input to the `/v1/synthesize` method, the service returns a `Warnings` response header that describes and lists each invalid argument. The request succeeds despite the warnings.
-
-## Specifying input text
-{: #input}
-
-The two versions of the `/v1/synthesize` method differ primarily in how you specify the text to be synthesized. Both versions accept a maximum of 5 KB of input text, but you specify the text for each in different ways:
-
--   The HTTP `GET` version of the method accepts input text specified by the `text` query parameter. You specify the input as plain text or as SSML, both of which must be URL-encoded.
--   The HTTP `POST` version of the method expects the text to be specified in the body of the request. You specify the input with the following simple JSON construct that encapsulates plain text or SSML:
-
-    ```javascript
-    {
-      "text": ""
-    }
-    ```
-    {: codeblock}
-
-    You must specify a value of `application/json` for the HTTP `content-type` header.
-
-Although the `GET` and `POST` methods are equivalent and offer identical functionality, it is always more secure to pass input text to the service with the `POST` method. A `POST` request passes input in the body of the request, while a `GET` request exposes the data in the URL.
-
-The following examples show equivalent text passed to each version of the `/v1/synthesize` method with different means. The text sent with the query parameter uses HTML URL-encoding to convert the characters into a format suitable for delivery over the Internet. The SSML markup includes various elements to control the synthesize operation; for more information, see [Specifying SSML input](#ssml).
-
--   As plain text with the `text` parameter of the `GET` version of the method:
-
-    ```
-    text=This&20is&20the&20first&20sentence&20of&20the&20paragraph.&20Here&20is&20another&20sentence.
-    &20Finally,&20this&20is&20the&20last&20sentence.
-    ```
-    {: codeblock}
-
--   As SSML input with the `text` parameter of the `GET` version of the method:
-
-    ```
-    text=%22%3Cp%3E%3Cs%3EThis%20is%20the%20first%20sentence%20of%20the%20%3Cbreak%20time=%225s%22/
-    %3E%20paragraph.%3C/s%3E%3Cs%3EHere%20is%20another%20sentence.%3C/s%3E%3Cs%3E
-    Finally,%20this%20is%20the%20last%20sentence.%3C/s%3E%3C/p%3E%22
-    ```
-    {: codeblock}
-
--   As plain text with the JSON construct in the body of the `POST` version of the method:
-
-    ```xml
-    {
-      "text": "This is the first sentence of the paragraph. Here is another sentence.
-        Finally, this is the last sentence."
-    }
-    ```
-    {: codeblock}
-
--   As SSML input with the JSON construct in the body of the `POST` version of the method:
-
-    ```xml
-    {
-      "text": "<p><s>This is the first sentence of the <break time=\"5s\"/> paragraph.</s><s>
-        Here is another sentence.</s><s>Finally, this is the last sentence.</s></p>"
-    }
-    ```
-    {: codeblock}
-
-> **Note:** Line breaks are embedded in the examples for readability. Do not include them in actual input.
-
-### Escaping XML control characters
-{: #escape}
-
-Because you can submit input text that includes XML-based SSML annotations, the service validates all input to ensure that any SSML is correct and well formed. Therefore, you must escape any XML control characters that are present in the input text, regardless of whether the input includes SSML. Use the equivalent escape strings or character encodings described in the following table instead of the indicated characters.
-
-<table style="width:80%">
-  <caption>Table 2. Escaping XML control characters</caption>
-  <tr>
-    <th style="text-align:center; vertical-align:bottom; width:40%">Character</th>
-    <th style="text-align:center; vertical-align:bottom; width:30%">Escape strings</th>
-    <th style="text-align:center; vertical-align:bottom; width:30%">Character encoding</th>
-  </tr>
-  <tr>
-    <td style="text-align:center"><code>&quot;</code><br/>(double quotes)</td>
-    <td style="text-align:center"><code>&amp;quot;</code></td>
-    <td style="text-align:center"><code>&amp;#34;</code></td>
-  </tr>
-  <tr>
-    <td style="text-align:center"><code>'</code><br/>(apostrophe or single quote)</td>
-    <td style="text-align:center"><code>&amp;apos;</code></td>
-    <td style="text-align:center"><code>&amp;#39;</code></td>
-  </tr>
-  <tr>
-    <td style="text-align:center"><code>&amp;</code><br/>(ampersand)</td>
-    <td style="text-align:center"><code>&amp;amp;</code></td>
-    <td style="text-align:center"><code>&amp;#38;</code></td>
-  </tr>
-  <tr>
-    <td style="text-align:center"><code>&lt;</code><br/>(left angle bracket)</td>
-    <td style="text-align:center"><code>&amp;lt;</code></td>
-    <td style="text-align:center"><code>&amp;#60;</code></td>
-  </tr>
-  <tr>
-    <td style="text-align:center"><code>&gt;</code><br/>(right angle bracket)</td>
-    <td style="text-align:center"><code>&amp;gt;</code></td>
-    <td style="text-align:center"><code>&amp;#62;</code></td>
-  </tr>
-</table>
-
-For example, to enter the following input with the `text` parameter of the `/v1/synthesize` method:
-
-```
-"What have I learned?" he asked. "Everything!"
-```
-{: codeblock}
-
-specify the following plain text:
-
-```xml
-"text": "&quot;What have I learned?&quot; he asked. &quot;Everything!&quot;"
-```
-{: codeblock}
-
-or the following SSML input:
-
-```xml
-"text": "<s>&quot;What have I learned?&quot; he asked. &quot;<express-as type=\"GoodNews\">
-Everything!</express-as>&quot;</s>"
-```
-{: codeblock}
-
-For more information about how the service validates input text, see [SSML validation](/docs/services/text-to-speech/SSML.html#errors).
 
 ## Specifying an audio format
 {: #format}
 
-Both versions of the `/v1/synthesize` method take an optional query parameter named `accept` to specify the requested audio format (MIME type) of the audio. (You can also specify the value with the `Accept` request header.) The parameter accepts the following audio formats.
+Both versions of the `/v1/synthesize` method take an optional query parameter named `accept` to specify the requested audio format (MIME type) of the audio. (You can also specify the value with the `Accept` request header.) The parameter accepts the following audio formats. If you omit the parameter, the service returns the audio in Ogg format with the Opus codec (`audio/ogg;codecs=opus`) by default.
 
 <table>
-  <caption>Table 3. Supported audio formats</caption>
+  <caption>Table 2. Supported audio formats</caption>
   <tr>
     <th style="text-align:left; width:25%">Audio format</th>
     <th style="text-align:left">Description</th>
@@ -242,8 +118,7 @@ Both versions of the `/v1/synthesize` method take an optional query parameter na
     </td>
     <td>
       <em>Free Lossless Audio Codec (FLAC)</em> (<code>.flac</code>),
-      a lossless compressed audio coding format. For more information
-      about FLAC, see
+      a lossless compressed audio coding format. For more information, see
       <a target="_blank" href="https://en.wikipedia.org/wiki/FLAC">en.wikipedia.org/wiki/FLAC ![External link icon](../../icons/launch-glyph.svg "External link icon")</a>.
     </td>
   </tr>
@@ -335,7 +210,7 @@ Both versions of the `/v1/synthesize` method take an optional query parameter na
       may not work in all audio players. Specifically, the attribute
       <code>numSamples</code> in the header of the file is set to
       <code>0</code> regardless of the length of the audio. For more
-      information about WAV, see
+      information, see
       <a target="_blank" href="https://en.wikipedia.org/wiki/WAV">en.wikipedia.org/wiki/WAV ![External link icon](../../icons/launch-glyph.svg "External link icon")</a>.
     </td>
   </tr>
@@ -349,8 +224,7 @@ Both versions of the `/v1/synthesize` method take an optional query parameter na
       <em>Web Media (WebM)</em> (<code>.webm</code>), an open media-file
       format that provides support for audio streams compressed with the
       Opus and Vorbis audio codecs. If you omit the codec, the service
-      uses <code>audio/webm;codecs=opus</code>. For more information about
-      WebM, see
+      returns the audio in Opus format. For more information, see
       <a target="_blank" href="https://www.webmproject.org/">webmproject.org ![External link icon](../../icons/launch-glyph.svg "External link icon")</a>.
     </td>
   </tr>
@@ -366,7 +240,7 @@ The service always synthesizes audio with a sampling rate of 22,050 Hz. For most
 The following table shows the default sampling rate of the audio that is returned for each format and indicates those formats for which the `rate` parameter can or must be specified.
 
 <table style="width:90%">
-  <caption>Table 4. Sampling rates for audio formats</caption>
+  <caption>Table 3. Sampling rates for audio formats</caption>
   <tr>
     <th style="text-align:left">Audio format</th>
     <th style="text-align:center">Default sampling rate</th>
@@ -374,65 +248,10 @@ The following table shows the default sampling rate of the audio that is returne
   </tr>
   <tr>
     <td>
-      <code>audio/ogg;codecs=opus</code>
+      <code>audio/basic</code>
     </td>
     <td style="text-align:center">
-      22,050 Hz [see <strong>Note</strong>]
-    </td>
-    <td style="text-align:center">
-      Optional
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <code>audio/ogg;codecs=vorbis</code>
-    </td>
-    <td style="text-align:center">
-      22,050 Hz
-    </td>
-    <td style="text-align:center">
-      Optional
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <code>audio/wav</code>
-    </td>
-    <td style="text-align:center">
-      22,050 Hz
-    </td>
-    <td style="text-align:center">
-      Optional
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <code>audio/flac</code>
-    </td>
-    <td style="text-align:center">
-      22,050 Hz
-    </td>
-    <td style="text-align:center">
-      Optional
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <code>audio/mp3</code>
-    </td>
-    <td style="text-align:center">
-      22,050 Hz
-    </td>
-    <td style="text-align:center">
-      Optional
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <code>audio/webm;codecs=opus</code>
-    </td>
-    <td style="text-align:center">
-      48,000 Hz [see <strong>Note</strong>]
+      8000 Hz
     </td>
     <td style="text-align:center">
       Not allowed
@@ -440,7 +259,7 @@ The following table shows the default sampling rate of the audio that is returne
   </tr>
   <tr>
     <td>
-      <code>audio/webm;codecs=vorbis</code>
+      <code>audio/flac</code>
     </td>
     <td style="text-align:center">
       22,050 Hz
@@ -463,6 +282,18 @@ The following table shows the default sampling rate of the audio that is returne
   </tr>
   <tr>
     <td>
+      <code>audio/mp3</code><br/>
+      <code>audio/mpeg</code>
+    </td>
+    <td style="text-align:center">
+      22,050 Hz
+    </td>
+    <td style="text-align:center">
+      Optional
+    </td>
+  </tr>
+  <tr>
+    <td>
       <code>audio/mulaw;rate={rate}</code>
     </td>
     <td style="text-align:center">
@@ -475,13 +306,59 @@ The following table shows the default sampling rate of the audio that is returne
   </tr>
   <tr>
     <td>
-      <code>audio/basic</code>
+      <code>audio/ogg</code><br/>
+      <code>audio/ogg;codecs=vorbis</code>
     </td>
     <td style="text-align:center">
-      8000 Hz
+      22,050 Hz
+    </td>
+    <td style="text-align:center">
+      Optional
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <code>audio/ogg;codecs=opus</code>
+    </td>
+    <td style="text-align:center">
+      22,050 Hz [see <strong>Note</strong>]
+    </td>
+    <td style="text-align:center">
+      Optional
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <code>audio/wav</code>
+    </td>
+    <td style="text-align:center">
+      22,050 Hz
+    </td>
+    <td style="text-align:center">
+      Optional
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <code>audio/webm</code><br/>
+      <code>audio/webm;codecs=opus</code>
+    </td>
+    <td style="text-align:center">
+      48,000 Hz [see <strong>Note</strong>]
     </td>
     <td style="text-align:center">
       Not allowed
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <code>audio/webm;codecs=vorbis</code>
+    </td>
+    <td style="text-align:center">
+      22,050 Hz
+    </td>
+    <td style="text-align:center">
+      Optional
     </td>
   </tr>
 </table>
@@ -493,11 +370,11 @@ The most reliable way to identify the sampling rate for any audio stream that th
 ## Specifying a voice
 {: #voices}
 
-Both versions of the `/v1/synthesize` method accept an optional `voice` query parameter to specify the voice for the audio. When you synthesize text to audio, be sure to specify a voice that matches the language of the input text.
+Both versions of the `/v1/synthesize` method accept an optional `voice` query parameter to specify the voice for the audio. The service bases its understanding of the language for the input text on the specified voice. Be sure to specify a voice that matches the language of the input text.
 
-The service bases its understanding of the language for the input text on the specified voice. For example, if you specify the voice `fr-FR_ReneeVoice`, the service assumes that the input text is written in French. If you pass text that is not written in the language of the voice (for example, English text for the French voice), the service might not produce meaningful results.
+For example, if you specify the voice `fr-FR_ReneeVoice`, the service assumes that the input text is written in French. If you pass text that is not written in the language of the voice (for example, English text for the French voice), the service might not produce meaningful results.
 
-The service offers two methods to [List all available voices](#listVoices) and to [List a specific voice](#listVoice).
+The service offers methods for [Listing all available voices](#listVoices) and for [Listing a specific voice](#listVoice).
 
 ### Languages and voices
 {: #languageVoices}
@@ -505,7 +382,7 @@ The service offers two methods to [List all available voices](#listVoices) and t
 The following table lists the voices that are available for each language and dialect, including their gender. Each voice uses appropriate cadence and intonation for its dialect. If you omit the voice from any request, the service uses the `en-US_MichaelVoice` voice by default.
 
 <table style="width:90%">
-  <caption>Table 5. Supported languages and voices</caption>
+  <caption>Table 4. Supported languages and voices</caption>
   <tr>
     <th style="text-align:left">Languages</th>
     <th style="text-align:center">Voice</th>
@@ -588,7 +465,7 @@ The following table lists the voices that are available for each language and di
 ### Listing all available voices
 {: #listVoices}
 
-The `GET /v1/voices` method takes no arguments. It returns a JSON array named `voices` that includes a separate element for each available voice:
+The `GET /v1/voices` method lists information about all available voices. It takes no arguments and returns a JSON array named `voices` that includes a separate element for each voice:
 
 ```javascript
 {
@@ -617,19 +494,19 @@ The fields for each voice provide the following information:
 -   `gender` identifies the voice as `male` or `female`.
 -   `name` is an identifier for the voice (for example, `en-US_LisaVoice`). This is the value you specify for the `voice` parameter of the `/v1/synthesize` method.
 -   `language` specifies the language and region of the voice (for example, `en-US`).
--   `description` provides a brief description of the interface.
--   `customizable` is a Boolean value that indicates whether the voice can be customized with the service's customization interface. (Same as `custom_pronunciation`; maintained for backward compatibility.)
+-   `description` provides a brief description of the voice.
+-   `customizable` is a boolean value that indicates whether the voice can be customized with the service's customization interface. (Same as `custom_pronunciation`; maintained for backward compatibility.)
 -   `supported_features` describes the additional service features supported with the voice:
-    -   `custom_pronunciation` is a Boolean value that indicates whether the voice can be customized with the service's customization interface. (Same as `customizable`.)
-    -   `voice_transformation` is a Boolean value that indicates whether the voice can be transformed by using the SSML `<voice-transformation>` element.
+    -   `custom_pronunciation` is a boolean value that indicates whether the voice can be customized with the service's customization interface. (Same as `customizable`.)
+    -   `voice_transformation` is a boolean value that indicates whether the voice can be transformed by using the SSML `<voice-transformation>` element.
 
-### List a specific voice
+### Listing a specific voice
 {: #listVoice}
 
-The `GET /v1/voices/{voice}` method accepts two parameters:
+The `GET /v1/voices/{voice}` method lists information about a specific voice. It accepts two parameters:
 
 <table>
-  <caption>Table 6. Parameters of the <code>voices</code> method</caption>
+  <caption>Table 5. Parameters of the <code>voices</code> method</caption>
   <tr>
     <th style="text-align:left; width:18%">Parameter</th>
     <th style="text-align:center; width:12%">Type</th>
@@ -651,15 +528,15 @@ The `GET /v1/voices/{voice}` method accepts two parameters:
     <td style="text-align:center">Query</td>
     <td style="text-align:center">String</td>
     <td>
-      Provides the globally unique identifier (GUID) of a custom model
-      defined for the voice about which information is to be returned.
-      If you include a customization ID, you must call the method with
-      the service credentials of the model's owner.
+      Provides the globally unique identifier (GUID) of a custom voice
+      model that is defined for the specified voice. If you include a
+      customization ID, you must call the method with the service
+      credentials of the custom model's owner.
     </td>
   </tr>
 </table>
 
-If you omit the `customization_id` parameter, the method returns JSON output for the specified voice that is identical to the information returned for a voice by the other version of the method. If you specify a `customization_id`, the output includes an additional `customization` field:
+If you omit the `customization_id` parameter, the method returns JSON output for the specified voice that is identical to the information returned for a voice by the `GET /v1/voices` method. If you specify a `customization_id`, the output includes an additional `customization` field:
 
 ```javascript
 {
@@ -688,324 +565,147 @@ If you omit the `customization_id` parameter, the method returns JSON output for
 
 For information about the meaning of the attributes of the `customization` field, see [Creating and managing custom voice models](/docs/services/text-to-speech/custom-models.html).
 
-## Specifying SSML input
+## Specifying input text
+{: #input}
+
+Both the `GET` and `POST` versions of the `/v1/synthesize` method accept a maximum of 5 KB of input text, and both accept input that is annotated with SSML. The two versions differ primarily in how you specify the text to be synthesized:
+
+-   The `GET /v1/synthesize` method accepts input text that is specified by the `text` query parameter. You specify the input as plain text or as SSML, both of which must be URL-encoded.
+-   The `POST /v1/synthesize` method accepts input text in the body of the request. You specify the input with the following simple JSON construct that encapsulates plain text or SSML. You must also specify a value of `application/json` for the `Content-Type` header.
+
+    ```javascript
+    {
+      "text": ""
+    }
+    ```
+    {: codeblock}
+
+Although the `GET` and `POST` methods offer equivalent functionality, it is always more secure to pass input text to the service with the `POST` method. A `POST` request passes input in the body of the request, while a `GET` request exposes the data in the URL.
+
+> **Note:** The examples that follow include line breaks for readability; do *not* include them in actual input.
+
+### Specifying SSML input
 {: #ssml}
 
-The Speech Synthesis Markup Language (SSML) is an XML-based markup language that is designed to provide annotations of text for speech synthesis applications such as the {{site.data.keyword.texttospeechshort}} service. SSML lets you specify the language, voice, and text to be synthesized, as well as many of other features that control the speech that is generated, such as pronunciation, pitch, and speaking rate.
+The Speech Synthesis Markup Language (SSML) is an XML-based markup language that is designed to provide annotations of text for speech synthesis applications such as the {{site.data.keyword.texttospeechshort}} service. SSML lets you specify many features to control the speech that is generated. You can use SSML elements and their attributes to gain greater control over the synthesis and resulting audio output.
 
-The `/v1/synthesize` methods accept input annotated with a subset of SSML. You can use SSML elements and their attributes to gain greater control over the synthesis and resulting audio output. For more information about using SSML, see the following links:
+For information about using SSML to annotate input text, see [Using SSML](/docs/services/text-to-speech/SSML.html). The documentation introduces the inventory of SSML elements and attributes supported by the service, and it documents the service's expressive and voice-transformation extensions.
 
--   For general information about the W3C SSML recommendation, see [W3C Speech Synthesis Markup Language (SSML) Version 1.0 ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.w3.org/TR/speech-synthesis/){: new_window}.
--   For detailed information about SSML support for the {{site.data.keyword.texttospeechshort}} service, see [Using SSML](/docs/services/text-to-speech/SSML.html). The documentation introduces the inventory of SSML elements and attributes supported by the service.
--   For information about the service's expressive SSML extension, see [Using expressive SSML](#expressive).
--   For information about the service's voice transformation SSML extension, see [Using voice transformation SSML](#transformation).
+### Escaping XML control characters
+{: #escape}
 
-### Using expressive SSML
-{: #expressive}
+Because you can submit input text that includes XML-based SSML annotations, the service validates all input to ensure that any SSML is correct and well formed. Therefore, you must escape any XML control characters that are present in the input text, regardless of whether the input includes SSML. Use the equivalent escape strings or character encodings described in the following table instead of the indicated characters.
 
-By default, the {{site.data.keyword.texttospeechshort}} service synthesizes text in a neutral declarative style. The service extends SSML with an `<express-as>` element that lets you indicate expressiveness by converting text to synthesized speech in a variety of speaking styles. The element is analogous to the SSML element `<say-as>`, which specifies text normalization for formatted text such as dates, times, and numbers.
-
-You can apply the `<express-as>` tag to the entire body of the text, a sentence, or a fragment such as a phrase or word. Currently, the service supports expressiveness only for the US English Allison voice (`en-US_AllisonVoice`); using the tag with any other voice returns an error.
-
-#### The express-as tag
-
-The `<express-as>` element accepts one required attribute, `type`, which describes the type of expression to use for the specified text. The attribute accepts one of three values, as shown in the following examples:
-
--   `GoodNews` expresses a positive, upbeat message.
-
-    ```xml
-    <express-as type="GoodNews">
-      I am pleased to inform you that your mortgage loan application was approved.
-    </express-as>
-
-    <express-as type="GoodNews">
-      I have good news: I was able to reduce the payments on your monthly bill!
-    </express-as>
-
-    <express-as type="GoodNews">
-      Congratulations on your engagement! You two are perfect for each other!
-    </express-as>
-
-    <express-as type="GoodNews">
-      Wow, good job on your promotion! That&apos;s a really prestigious position!
-    </express-as>
-    ```
-    {: codeblock}
-
--   `Apology` expresses a message of regret.
-
-    ```xml
-    <express-as type="Apology">
-      Unfortunately, the next flight doesn&apos;t leave for another five hours.
-    </express-as>
-
-    <express-as type="Apology">
-      I am terribly sorry for the quality of service you have received.
-    </express-as>
-
-    <express-as type="Apology">
-      Please forgive me for deleting your files. It was an accident.
-    </express-as>
-
-    <express-as type="Apology">
-      Is there any way I can make this up to you?
-    </express-as>
-    ```
-    {: codeblock}
-
--   `Uncertainty` conveys an uncertain, interrogative message.
-
-    ```xml
-    <express-as type="Uncertainty">
-      Could she still be in the office? She told me that she might leave early.
-    </express-as>
-
-    <express-as type="Uncertainty">
-      Sorry, I think I misheard. Was that Friday or Saturday?
-    </express-as>
-
-    <express-as type="Uncertainty">
-      Can you please explain it again? I&apos;m not sure I understand.
-    </express-as>
-
-    <express-as type="Uncertainty">
-      I&apos;m sorry, but I didn&apos;t catch your name. Could you please repeat it?
-    </express-as>
-    ```
-    {: codeblock}
-
-#### Expressive examples
-
-The following example shows the use of all three forms of expressiveness in the body of the `text` attribute of the `/v1/synthesize` method. The text to be synthesized resides within the span of the SSML root element `<speak>`.
-
-```xml
-{
-  "text": "<speak>
-    I have been assigned to handle your order status request.
-    <express-as type=\"Apology\">
-      I am sorry to inform you that the items you requested are backordered.
-      We apologize for the inconvenience.
-    </express-as>
-    <express-as type=\"Uncertainty\">
-      We don&apos;t know when the items will become available. Maybe next week,
-      but we are not sure at this time.
-    </express-as>
-    <express-as type=\"GoodNews\">
-      But because we want you to be a satisfied customer, we are giving you
-      a 50% discount on your order!
-    </express-as>
-  </speak>"
-}
-```
-{: codeblock}
-
-### Using voice transformation SSML
-{: #transformation}
-
-The {{site.data.keyword.texttospeechshort}} service, like most speech synthesis systems, can speak in only a limited number of voices. Moreover, some languages offer only one or two voices. To expand the range of possible voices, the service extends SSML with a `<voice-transformation>` element that lets you realize different virtual voices by controlling aspects of a default voice. Applications of the feature include
-
--   Giving another flavor to a voice. You want a voice to sound a bit different in general or for a specific application.
--   Voice branding. You want to use a unique voice to differentiate your applications.
--   Multi-role applications. You need multiple voices to represent different personae.
-
-You can apply the `<voice-transformation>` element to the entire body of the text, a sentence, or a word or fragment. The element accepts one required attribute, `type`, which describes the type of voice transformation to be applied to the specified text. You can apply a built-in transformation or create a custom transformation based on different aspects of the voice.
-
-The service currently supports voice transformation for the following US English voices only:
-
--   `en-US_AllisonVoice`
--   `en-US_LisaVoice`
--   `en-US_MichaelVoice`
-
-Using the tag with any other voice returns an error.
-
-#### Built-in transformations
-
-Built-in transformations apply pre-configured changes to the attributes of a voice. Think of them as virtual voices that are made available by the service. The service offers two built-in transformations. To use them, you specify the case-sensitive name of the built-in transformation with the `type` attribute:
-
--   `Young` gives the voice a more youthful sound.
--   `Soft` makes the voice sound softer.
-
-You can apply the optional `strength` attribute to either built-in voice to control the extent to which the service applies the transformation. Think of the value as a blending factor that the service applies to the original voice. The attribute accepts a value in the range of 0% (the voice remains unaltered) to 100% (the full extent of transformation); if you omit the attribute, the default strength is `100%`.
-
-> **Note:** The service ignores attributes for custom transformations when you use a built-in transformation.
-
-#### Built-in transformation examples
-
-The following examples apply the two built-in transformations to the same sentence with different strengths:
-
-```xml
-<voice-transformation type="Young" strength="80%">
-  Could you provide us with new information?
-</voice-transformation>
-
-<voice-transformation type="Soft" strength="60%">
-  Could you provide us with new information?
-</voice-transformation>
-```
-{: codeblock}
-
-#### Custom transformations
-
-Custom transformations give you more fine-grained control over different aspects of the voice transformation. To use a custom transformation, you specify `Custom` for the `type` attribute. You can then use one or more of the following optional attributes to control the transformation.
-
-<table>
-  <caption>Table 7. Custom transformation attributes</caption>
+<table style="width:80%">
+  <caption>Table 6. Escaping XML control characters</caption>
   <tr>
-    <th style="width:15%; text-align:left">Attribute</th>
-    <th style="width:25%; text-align:center">Range</th>
-    <th style="text-align:left">Description</th>
+    <th style="text-align:center; vertical-align:bottom; width:40%">Character</th>
+    <th style="text-align:center; vertical-align:bottom; width:30%">Escape strings</th>
+    <th style="text-align:center; vertical-align:bottom; width:30%">Character encoding</th>
   </tr>
   <tr>
-    <td><code>pitch</code></td>
-    <td style="text-align:center">[-100%, 100%],<br/>
-      [<code>x-low</code>, <code>low</code>, <code>default</code>,
-      <code>high</code>, <code>x-high</code>]</td>
-    <td>
-      Normalized relative change of the average pitch contour
-      level within safe limits. The attribute controls the perceived
-      average tone level. It is borrowed from the <code>pitch</code>
-      attribute of the SSML <code>&lt;prosody&gt;</code> tag. It
-      contributes to changing perceived speaker identity.
-    </td>
+    <td style="text-align:center"><code>&quot;</code><br/>(double quotes)</td>
+    <td style="text-align:center"><code>&amp;quot;</code></td>
+    <td style="text-align:center"><code>&amp;#34;</code></td>
   </tr>
   <tr>
-    <td><code>pitch_range</code></td>
-    <td style="text-align:center">[-100%, 100%],<br/>
-      [<code>x-narrow</code>, <code>narrow</code>, <code>default</code>,
-      <code>wide</code>, <code>x-wide</code>]</td>
-    <td>
-      Normalized relative change of the pitch contour dynamic range
-      within safe limits. Increasing or decreasing the pitch range
-      makes the speech style more or less expressive. The attribute
-      is borrowed from the <code>range</code> attribute of the SSML
-      <code>&lt;prosody&gt;</code> tag.</td>
+    <td style="text-align:center"><code>'</code><br/>(apostrophe or single quote)</td>
+    <td style="text-align:center"><code>&amp;apos;</code></td>
+    <td style="text-align:center"><code>&amp;#39;</code></td>
   </tr>
   <tr>
-    <td><code>glottal_tension</code></td>
-    <td style="text-align:center">[-100%, 100%],<br/>
-      [<code>x-low</code>, <code>low</code>, <code>default</code>,
-      <code>high</code>, <code>x-high</code>]</td>
-    <td>
-      Normalized relative change of the glottal tension within safe
-      limits. Increasing or decreasing the glottal tension is perceived
-      as a more tense or lax speech quality. A positive value might
-      produce buzzing sounds, which you can alleviate by increasing
-      the value of the <code>breathiness</code> attribute. A negative
-      value is perceived as more breathy and generally more pleasant.
-    </td>
+    <td style="text-align:center"><code>&amp;</code><br/>(ampersand)</td>
+    <td style="text-align:center"><code>&amp;amp;</code></td>
+    <td style="text-align:center"><code>&amp;#38;</code></td>
   </tr>
   <tr>
-    <td><code>breathiness</code></td>
-    <td style="text-align:center">[-100%, 100%],<br/>
-      [<code>x-low</code>, <code>low</code>, <code>default</code>,
-      <code>high</code>, <code>x-high</code>]</td>
-    <td>
-      Normalized relative change of the perceived level of the aspiration
-      noise within safe limits. Extreme values might produce either noisy
-      speech (for positive breathiness) or a buzzing sound (for negative
-      breathiness). Use this attribute to compensate for buzz or extra
-      noise produced as side effects of other attributes.
-    </td>
+    <td style="text-align:center"><code>&lt;</code><br/>(left angle bracket)</td>
+    <td style="text-align:center"><code>&amp;lt;</code></td>
+    <td style="text-align:center"><code>&amp;#60;</code></td>
   </tr>
   <tr>
-    <td><code>rate</code></td>
-    <td style="text-align:center">[-100%, 100%],<br/>
-      [<code>x-slow</code>, <code>slow</code>, <code>default</code>,
-      <code>fast</code>, <code>x-fast</code>]</td>
-    <td>
-      Normalized relative change of the speech rate within safe limits.
-      Increasing or decreasing the rate makes speech faster or slower.
-      A positive (faster) rate makes the perceived pitch range wider,
-      and a negative (slower) rate perceptually narrows the pitch range.
-      The attribute is borrowed from the <code>rate</code> attribute of
-      the SSML <code>&lt;prosody&gt;</code> tag.</td>
-  </tr>
-  <tr>
-    <td><code>timbre</code></td>
-    <td style="text-align:center">[<code>Sunrise</code>,
-      <code>Breeze</code>]</td>
-    <td>
-      The case-sensitive name of one of the built-in vocal-tract
-      transformations: <code>Sunrise</code> or <code>Breeze</code>.
-      The names are symbolic; experiment with the timbres to learn
-      how they impact voice transformation. The attribute contributes
-      to changing perceived speaker identity.
-    </td>
-  </tr>
-  <tr>
-    <td><code>timbre_extent</code></td>
-    <td style="text-align:center">[0%, 100%]</td>
-    <td>
-      The extent of the <code>timbre</code> vocal-tract transformation:
-      <code>0%</code> cancels the transformation; <code>100%</code>
-      represents full application of the transformation. The attribute
-      quantifies the difference between the transformed and original
-      voices, enabling blending of the selected timbre with that of
-      the original voice. Even at moderate timbre extent values, the
-      <code>timbre</code> attribute contributes to changing perceived
-      speaker identity.
-    </td>
+    <td style="text-align:center"><code>&gt;</code><br/>(right angle bracket)</td>
+    <td style="text-align:center"><code>&amp;gt;</code></td>
+    <td style="text-align:center"><code>&amp;#62;</code></td>
   </tr>
 </table>
 
-The numeric ranges of the different attributes indicate the extent to which the attribute affects the voice. The `rate` attribute, for instance, has a range of -100% to 100%. A value of `100%` does not mean that the voice becomes 100% faster; rather, it means that the service increases the rate of the voice to the maximum that it allows for that voice. Similarly, a value of `-100%` means that the service uses the minimum rate that it allows for the voice. A value of `0%` represents the inherent level of the attribute for the voice; the voice remains unchanged.
+For more information about how the service validates input text, see [SSML validation](/docs/services/text-to-speech/SSML.html#errors).
 
-As a convenience, many of the attributes also define literal values that you can use instead of percentages. The meanings of these values differ from those used with the SSML `<prosody>` tag; the `<voice-transformation>` tag uses a scale that is consistent across its attributes.
+### Example input with a GET request
+{: #getExamples}
 
--   `x-low`, `x-slow`, and `x-narrow` equal a value of `-100%`.
--   `low`, `slow`, and `narrow` equal a value of `-50%`.
--   `default` equals a value of `0%`, the default value for that attribute and voice.
--   `high`, `fast`, and `wide` equal a value of `+50%`.
--   `x-high`, `x-fast`, and `x-wide` equal a value of `+100%`.
+The following examples pass URL-encoded input with the `text` query parameter of the `GET /v1/synthesize` method:
 
-To effect voice branding or multi-role applications, use the timbre, pitch, and glottal tension attributes to change perceived speaker identity. You can use combinations of these three attributes to create virtual voices. Consider a virtual voice as a point in the multi-dimensional space realized by the two timbres, pitch, and glottal tension, with different combinations yielding different virtual voices. You can use the pitch range, breathiness, and rate attributes to add flavor to a virtual voice. (Note that other users can choose the same or very similar attribute values, so the service cannot guarantee the uniqueness of your virtual voice.)
+-   Plain text input:
 
-You need to be aware of the following potential side effects of applying the attributes:
+    ```
+    text=This&20is&20the&20first&20sentence&20of&20the&20paragraph.&20Here
+    &20is&20another&20sentence.&20Finally,&20this&20is&20the&20last&20sentence.
+    ```
+    {: codeblock}
 
--   High glottal tension, high pitch, and low rate can each cause buzzing sounds to occur. Increase the breathiness to mitigate the effect.
--   Extremely low glottal tension can produce noisy speech. Decrease the breathiness to reduce the noise.
--   Raising or lowering pitch range and rate to extreme degrees simultaneously can make speech sound unnatural.
+-   SSML input:
 
-> **Note:** As noted, some of the attributes are borrowed from the SSML `<prosody>` element. To enable fine prosody control of a virtual voice, you can nest inner `<prosody>` tags within `<voice-transformation>` tags and vice versa; for more information about the `<prosody>` element, see [Using SSML](/docs/services/text-to-speech/SSML.html). Note that you *cannot* nest `<voice-transformation>` tags.
+    ```
+    text=%22%3Cp%3E%3Cs%3EThis%20is%20the%20first%20sentence%20of%20the%20%3C
+    break%20time=%225s%22/%3E%20paragraph.%3C/s%3E%3Cs%3EHere%20is%20another
+    %20sentence.%3C/s%3E%3Cs%3EFinally,%20this%20is%20the%20last%20sentence.
+    %3C/s%3E%3C/p%3E%22
+    ```
+    {: codeblock}
 
-#### Custom transformation examples
+### Example input with a POST request
+{: #postExamples}
 
-The following examples apply different attributes to demonstrate possible applications of custom transformation. The first example lowers the glottal tension to make the voice softer and increases the pitch range and rate moderately to introduce a more dynamic speaking style.
+The following examples pass input in the body of the `POST /v1/synthesize` method:
 
-```xml
-<voice-transformation type="Custom" glottal_tension="-50%" pitch_range="30%" rate="10%">
-  Do you have more information?
-</voice-transformation>
+-   Plain text input:
+
+    ```javascript
+    {
+      "text": "This is the first sentence of the paragraph. Here is another
+        sentence. Finally, this is the last sentence."
+    }
+    ```
+    {: codeblock}
+
+-   SSML input:
+
+    ```javascript
+    {
+      "text": "<p><s>This is the first sentence of the <break time=\"5s\"/>
+        paragraph.</s><s>Here is another sentence.</s><s>Finally, this is
+        the last sentence.</s></p>"
+    }
+    ```
+    {: codeblock}
+
+### Example input with XML control characters
+{: #xmlExamples}
+
+The following examples send two sentences to the `POST /v1/synthesize` method. The examples properly escape the embedded XML characters.
+
+```
+"What have I learned?" he asked. "Everything!"
 ```
 {: codeblock}
 
-The second example uses maximum glottal tension and pitch and minimum rate. Such combinations are generally not favorable and can produce a buzzing sound. The example mitigates this effect by increasing breathiness.
+-   Plain text input:
 
-```xml
-<voice-transformation type="Custom" glottal_tension="100%" pitch="100%" rate="-100%" breathiness="60%">
-  Do you have more information?
-</voice-transformation>
-```
-{: codeblock}
+    ```javascript
+    {
+      "text": "&quot;What have I learned?&quot; he asked. &quot;Everything!&quot;"
+    }
+    ```
+    {: codeblock}
 
-The next two examples change perceived speaker identity by applying timbre. The voice is altered by controlling the extent of the blending and by changing the pitch level. The first example uses the default timbre extent, 100%.
+-   SSML input:
 
-```xml
-<voice-transformation type="Custom" timbre="Sunrise" pitch="40%">
-  Do you have more information?
-</voice-transformation>
-
-<voice-transformation type="Custom" timbre="Breeze" timbre_extent="30%" pitch="-30%">
-  Do you have more information?
-</voice-transformation>
-```
-{: codeblock}
-
-The final example uses multiple attributes to transform the voice. The example uses the default timbre extent, and it omits breathiness.
-
-```xml
-<voice-transformation type="Custom" timbre="Sunrise" pitch="-30%" pitch_range="80%" rate="60%" glottal_tension="-80%">
-  Do you have more information?
-</voice-transformation>
-```
-{: codeblock}
+    ```javascript
+    {
+      "text": "<s>&quot;What have I learned?&quot; he asked.
+        &quot;<express-as type=\"GoodNews\">Everything!</express-as>&quot;</s>"
+    }
+    ```
+    {: codeblock}

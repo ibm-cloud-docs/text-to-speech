@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-08-11"
+lastupdated: "2017-10-19"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2017-08-11"
 # Spanish symbols
 {: #esSymbols}
 
-The following sections describe the inventory of valid symbols for Castilian and North American Spanish. Except where noted, the two dialects are identical.
+The following sections describe the valid symbols for Spanish. The Latin American and North American dialects are identical in terms of SPR support. Except where noted, the two dialects are the same as Castilian Spanish.
 
 ## Regular vowels
 
@@ -436,16 +436,16 @@ The following sections describe the inventory of valid symbols for Castilian and
 
 **Notes:**
 
-1.  The SPR symbol `T` is realized only in Castilian Spanish. It is replaced internally with the phonetic symbol `s` in North American Spanish, even when present in the SPR input.
-1.  The IPA symbol `h` applies to North American Spanish only.
+1.  The SPR symbol `T` is realized only in Castilian Spanish. It is replaced internally with the phonetic symbol `s` in North American and Latin American Spanish, even when present in the SPR input.
+1.  The IPA symbol `h` applies to North American and Latin American Spanish only.
 1.  The IPA symbol `x` applies to Castilian Spanish only.
-1.  The SPR symbol `L` maps to two different IPA symbols with different pronunciations in North American Spanish: <code>&#654;</code> and <code>&#669;</code>. Specifying this SPR symbol might yield either of the two variants, but the difference between the pronunciations is often indistinguishable to native speakers.
-1.  The IPA symbol <code>&#669;</code> maps to the SPR symbol `L` in North American Spanish.
+1.  The SPR symbol `L` maps to two different IPA symbols with different pronunciations for both North American and Latin American Spanish: <code>&#654;</code> and <code>&#669;</code>. Specifying this SPR symbol with these dialects might yield either of the two variants. The difference between the pronunciations is often indistinguishable to native speakers.
+1.  The IPA symbol <code>&#669;</code> maps to the SPR symbol `L` in North American and Latin American Spanish.
 1.  The IPA symbol <code>&#669;</code> maps to the SPR symbol `Y` in Castilian Spanish.
 
 ## Allophones
 
-Each allophone is a variation of the phoneme indicated in parentheses. If an allophone is not used in an SPR, the {{site.data.keyword.texttospeechshort}} service automatically generates the appropriate variant for the given context.
+Each allophone is a variation of the phoneme indicated in parentheses. If an allophone is not used in SPR, the {{site.data.keyword.texttospeechshort}} service automatically generates the appropriate variant for the given context.
 
 <table style="width:90%">
   <caption>Table 3. Allophones (Spanish)</caption>
@@ -551,4 +551,4 @@ Each allophone is a variation of the phoneme indicated in parentheses. If an all
 
 **Note:**
 
-1.  The `ng` and `nk` allophones are supported in the IPA specification but cannot be used in an SPR.
+1.  The `ng` and `nk` allophones are supported in the IPA specification but cannot be used in SPR.
