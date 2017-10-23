@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-10-02"
+lastupdated: "2017-10-20"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2017-10-02"
 # Release notes
 {: #release-notes}
 
-The following sections document the new features and changes that were included for each release and update of the {{site.data.keyword.texttospeechshort}} service. Unless otherwise noted, all changes were backward-compatible and were automatically and transparently available to all new and existing applications.
+The following sections document the new features and changes that were included for each release and update of the {{site.data.keyword.texttospeechshort}} service. Unless otherwise noted, all changes are backward-compatible and are automatically and transparently available to all new and existing applications.
 {: shortdesc}
 
 ## 2 October 2017
@@ -62,7 +62,7 @@ The service now supports the MP3 or Motion Picture Experts Group (MPEG) audio fo
 {: #December2016}
 
 -   The service includes a new voice, `es-LA_SofiaVoice`, which is the Latin American equivalent of the `es-US_SofiaVoice` voice. The most significant difference between the two voices concerns how they interpret a `$` (dollar sign): The Latin American version uses the term *pesos*, while the North American version uses the term *dolares*. Other minor differences may also exist between the two voices.
--   In addition to the `en-US_AllisonVoice`, two more voices are now transformable with SSML voice transformation: `en-US_LisaVoice` and `en-US_MichaelVoice`. For more information about voice transformation, see [Using voice transformation SSML](/docs/services/text-to-speech/http.html#transformation).
+-   In addition to the `en-US_AllisonVoice`, two more voices are now transformable with SSML voice transformation: `en-US_LisaVoice` and `en-US_MichaelVoice`. For more information about voice transformation, see [Voice transformation SSML](/docs/services/text-to-speech/SSML-transformation.html).
 - When using the customization interface with Japanese, the service now matches the longest word from the word/translation pairs that are defined for a custom voice model. For example, consider the following two entries for a custom voice:
 
     <pre><code data-copy="false" class="language-javascript">  {
@@ -79,8 +79,8 @@ The service now supports the MP3 or Motion Picture Experts Group (MPEG) audio fo
 
 -   The customization interface, which includes the customization and `GET /v1/pronunciation` methods, is now available for all languages that are supported by the service. The interface remains a beta release at this time. For more information, see [Understanding customization](/docs/services/text-to-speech/custom-intro.html).
 -   The service now supports the Speech Synthesis Markup Language (SSML) for Japanese. For general information about SSML support, see [Using SSML](/docs/services/text-to-speech/SSML.html); for information about Japanese SPR and IPA symbols, see [Japanese symbols](/docs/services/text-to-speech/ja-JP-SPRs.html). Additional considerations and an additional `part_of_speech` field apply when creating entries for words in a Japanese custom voice model; see [Working with Japanese entries](/docs/services/text-to-speech/custom-rules.html#jaNotes).
--   The service now offers SSML voice transformation via the new `<voice-transformation>` element. You can expand the range of possible voices by creating custom voice transformations that modify the pitch, pitch range, glottal tension, breathiness, rate, and timbre of a voice. The service also offers two built-in virtual voices, *Young* and *Soft*. The service currently supports voice transformation only for the US English Allison voice. For more information, see [Using voice transformation SSML](/docs/services/text-to-speech/http.html#transformation).
--   The service now allows you to request word timing information for all strings of the input text that you pass to the WebSocket interface. To receive the start and end time of every string in the input, specify an array that includes the string `words` for the optional `timings` parameter of the JSON object that you pass to the service with a request. The feature is not currently available for Japanese input text. For more information, see [Requesting word timings](/docs/services/text-to-speech/websockets.html#timing).
+-   The service now offers SSML voice transformation via the new `<voice-transformation>` element. You can expand the range of possible voices by creating custom voice transformations that modify the pitch, pitch range, glottal tension, breathiness, rate, and timbre of a voice. The service also offers two built-in virtual voices, *Young* and *Soft*. The service currently supports voice transformation only for the US English Allison voice. For more information, see [Voice transformation SSML](/docs/services/text-to-speech/SSML-transformation.html).
+-   The service now allows you to request word timing information for all strings of the input text that you pass to the WebSocket interface. To receive the start and end time of every string in the input, specify an array that includes the string `words` for the optional `timings` parameter of the JSON object that you pass to the service with a request. The feature is not currently available for Japanese input text. For more information, see [Obtaining word timings](/docs/services/text-to-speech/word-timing.html).
 -   The service now validates all SSML elements that you submit in any context. If it finds an invalid tag, the service reports an HTTP 400 response code with a descriptive message, and the method fails. In previous releases, the service handled errors inconsistently; specifying an invalid word pronunciation, for example, could lead to unpredictable or inconsistent behavior. For more information, see [SSML validation](/docs/services/text-to-speech/SSML.html#errors).
 -   The use of `spr` is deprecated as an argument to the `format` option of the `GET /v1/pronunciation` method and for use with the `alphabet` attribute of an SSML `<phoneme>` element. To use {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR) notation, use the `ibm` argument instead of `spr` in all cases.
 -   The list of supported audio formats now includes `audio/mulaw;rate=8000`. Like `audio/basic`, this format provides single-channel audio encoded using 8-bit u-law (or mu-law) data sampled at 8 kHz. For more information, see [Specifying an audio format](/docs/services/text-to-speech/http.html#format).
@@ -90,7 +90,7 @@ The service now supports the MP3 or Motion Picture Experts Group (MPEG) audio fo
 {: #June2016}
 
 -   The service now offers a WebSocket interface for synthesizing text to speech. The interface offers the same features as the `/v1/synthesize` method of the HTTP interface. It accepts plain text or text that is marked up with SSML. In addition, it also supports use of the SSML `<mark>` element to identify the time in the audio at which it finishes synthesizing all text that precedes the mark. For more information, see [The WebSocket interface](/docs/services/text-to-speech/websockets.html).
--   The service now offers support for text annotated with SSML for the languages Castilian and North American Spanish, Italian, and Brazilian Portuquese. The service already supported the use of SSML for US and British English, French, and German. As of this update, the service supports SSML for all languages but Japanese. Moreover, you can use both {{site.data.keyword.IBM_notm}} SPR and IPA notations to define word pronunciations with the SSML `<phoneme>` element. For more information, see [Using SSML](/docs/services/text-to-speech/SSML.html) and [Using SPRs](/docs/services/text-to-speech/SPRs.html).
+-   The service now offers support for text annotated with SSML for the languages Castilian and North American Spanish, Italian, and Brazilian Portuquese. The service already supported the use of SSML for US and British English, French, and German. As of this update, the service supports SSML for all languages but Japanese. Moreover, you can use both {{site.data.keyword.IBM_notm}} SPR and IPA notations to define word pronunciations with the SSML `<phoneme>` element. For more information, see [Using SSML](/docs/services/text-to-speech/SSML.html) and [Using IBM SPR](/docs/services/text-to-speech/SPRs.html).
 
     For US English, you can also use the SSML `<phoneme>` element to create word entries in a custom voice model; customization is supported only for US English. For more information, see [Understanding customization](/docs/services/text-to-speech/custom-intro.html).
 -   The service features improved expressiveness and naturalness for the most frequently used voices. The improvements are based on Recursive Neural Network (RNN)-based prosody prediction from input text. They are made available as a new service engine and voice-model updates for the following languages:
@@ -116,12 +116,12 @@ The service now supports the MP3 or Motion Picture Experts Group (MPEG) audio fo
 {: #March2016}
 
 -   The `GET` and `POST /v1/synthesize` methods can now return a `Warnings` response header that includes a list of warning messages about invalid query parameters or JSON fields included with the request. Each element of the list includes a string that describes the nature of the warning followed by an array of invalid argument strings; for example, `Unknown arguments: [u'invalid_arg_1', u'invalid_arg_2'].` For more information, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/text-to-speech/api/v1/){: new_window}.
--   The beta *{{site.data.keyword.watson}} Speech Software Development Kit (SDK) for the Apple&reg; iOS operating system* has been deprecated and replaced by the *{{site.data.keyword.watson}} Developer Cloud SDK for the Apple&reg; iOS operating system*. The new SDK is available from the [ios-sdk repository ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/watson-developer-cloud/ios-sdk){: new_window} in the `watson-developer-cloud` namespace on GitHub.
+-   The beta *{{site.data.keyword.watson}} Speech Software Development Kit (SDK) for the Apple&reg; iOS operating system* has been deprecated and replaced by the *{{site.data.keyword.watson}} Developer Cloud Swift SDK*. The new SDK is available from the [swift-sdk repository ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/watson-developer-cloud/swift-sdk){: new_window} in the `watson-developer-cloud` namespace on GitHub.
 
 ### 22 February 2016
 {: #February2016}
 
-The {{site.data.keyword.texttospeechshort}} service was updated with a new expressive SSML feature. The service extends the Speech Synthesis Markup Language (SSML) with an `<express-as>` element that lets you indicate expressiveness in one of three speaking styles: `GoodNews`, `Apology`, or `Uncertainty`. You can apply the element to the entire body of the text, a sentence, a phrase, or a word. The service currently supports expressiveness only for the US English Allison voice (`en-US_AllisonVoice`). For more information, see [Using expressive SSML](/docs/services/text-to-speech/http.html#expressive).
+The {{site.data.keyword.texttospeechshort}} service was updated with a new expressive SSML feature. The service extends the Speech Synthesis Markup Language (SSML) with an `<express-as>` element that lets you indicate expressiveness in one of three speaking styles: `GoodNews`, `Apology`, or `Uncertainty`. You can apply the element to the entire body of the text, a sentence, a phrase, or a word. The service currently supports expressiveness only for the US English Allison voice (`en-US_AllisonVoice`). For more information, see [Expressive SSML](/docs/services/text-to-speech/SSML-expressive.html).
 
 ### 17 December 2015
 {: #December2015}
@@ -139,8 +139,8 @@ The {{site.data.keyword.texttospeechshort}} service was updated with a new expre
 {: #September2015}
 
 -   Two new beta mobile Software Development Kits (SDKs) are available for the speech services. The SDKs enable mobile applications to interact with both the {{site.data.keyword.texttospeechshort}} and {{site.data.keyword.speechtotextshort}} services. The SDKs provide support for sending text to the {{site.data.keyword.texttospeechshort}} service and receiving audio in response.
-    -   The *{{site.data.keyword.watson}} Speech SDK for the Google Android&trade; platform* is available from the [speech-android-sdk repository ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/watson-developer-cloud/speech-android-sdk){: new_window} in the `watson-developer-cloud` namespace on GitHub. The project includes an example application that showcases interaction with both of the speech services.
-    -   The *{{site.data.keyword.watson}} Speech SDK for the Apple&reg; iOS operating system* is available from the [speech-ios-sdk repository ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/watson-developer-cloud/speech-ios-sdk){: new_window} in the `watson-developer-cloud` namespace on GitHub.
+    -   The *{{site.data.keyword.watson}} Developer Cloud Swift SDK* is available from the [swift-sdk repository ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/watson-developer-cloud/swift-sdk){: new_window} in the `watson-developer-cloud` namespace on GitHub.
+    -   The *{{site.data.keyword.watson}} Speech Android SDK* is available from the [speech-android-sdk repository ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/watson-developer-cloud/speech-android-sdk){: new_window} in the `watson-developer-cloud` namespace on GitHub.
 
     Both SDKs provide support for authenticating with the speech services by using either your {{site.data.keyword.Bluemix_short}} service credentials or an authentication token.
 

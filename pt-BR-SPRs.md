@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-08-11"
+lastupdated: "2017-10-19"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2017-08-11"
 # Brazilian Portuguese symbols
 {: #ptSymbols}
 
-The following sections describe the inventory of valid symbols for Brazilian Portuguese.
+The following sections describe the valid symbols for Brazilian Portuguese.
 
 ## Regular vowels
 

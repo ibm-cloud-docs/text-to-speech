@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-10-08"
+lastupdated: "2017-10-20"
 
 ---
 
@@ -28,7 +28,7 @@ A single custom model can include no more than 20,000 custom entries.
 
 ## Character encoding
 
-The service accepts ASCII and UTF-8 character encoding for *word* and *translation* entries. For translations, use ASCII encoding for SPR notations and UTF-8 for IPA notations.
+The service accepts ASCII and UTF-8 character encoding for *word* and *translation* entries. For translations, use ASCII encoding for SPR notations and UTF-8 encoding for IPA notations.
 
 ## Whitespace
 
@@ -55,7 +55,7 @@ Saint Anthony lives on Henry Street
 ```
 {: codeblock}
 
-However, if you override the default pronunciation rules for the word `St.` to translate it as `saint`, the service loses the ability to pronounce the word based on context. Applying a custom voice model that includes such a translation causes the service to pronounce the previous input sentence as
+However, if you override the default pronunciation rules for the string `St.` to translate it as `saint`, the service loses the ability to pronounce the word based on context. Applying a custom voice model that includes such a translation causes the service to pronounce the previous input sentence as
 
 ```
 Saint Anthony lives on Henry saint
@@ -69,7 +69,7 @@ Consider such corner cases when developing word/translation pairs.
 The service applies a word from a custom model only to those strings in the input text that match the word exactly. A trailing `.` (period) in a word entry changes how the word is synthesized:
 
 -   *A word that does not have a trailing period* can contain practically any character, including letters, digits, punctuation (other than a trailing period), non-letter symbols (such as %, &amp;, and @), quotation marks, parentheses, brackets, and so on. Its *translation* can include any legal input to the service, including whitespace and a phonetic representation in SSML format.
--   *A word that has a trailing period* can contain only letters, periods, and internal apostrophes (though not as the first or last character). The word's *translation* can contain only normal words in ordinary spelling separated by whitespace or hyphens. It cannot include a phonetic representation.
+-   *A word that has a trailing period* can contain only letters, periods, and internal apostrophes (not as the first or last character). The word's *translation* can contain only normal words in ordinary spelling separated by whitespace or hyphens. It cannot include a phonetic representation.
 
 An example of a word with a trailing period is "`div.`". Assume a custom model includes the entry `{word='div.', translation='division'}`. The service does not apply the translation to the string "`div`" because it does not include a trailing period and therefore does not match the entry.
 
@@ -89,7 +89,7 @@ Symbolic Phonetic Representation (SPR) is a proprietary, language-dependent form
 -   You can use a period to indicate the beginning of a syllable in a translation, but periods are optional and do not influence the word's pronunciation. They appear in the pronunciation for a word only if you include them in the word's translation. Do not use spaces to indicate syllable boundaries.
 -   You must precede the vowel that has the primary stress for a word with a `1` symbol. You can also use a `2` symbol to indicate each secondary stress position, but the use of `2` symbols is optional; they appear in the pronunciation for a word only if you include them in the word's translation.
 
-For more information about working with SPRs, see [Using SPRs](/docs/services/text-to-speech/SPRs.html).
+For more information about working with SPR, see [Using IBM SPR](/docs/services/text-to-speech/SPRs.html).
 
 ## Working with Japanese entries
 {: #jaNotes}

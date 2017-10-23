@@ -38,6 +38,7 @@ Text to Speech
     {: .navgroup id="howto"}
     http.md
     websockets.md
+    word-timing.md
 
     {: topicgroup}
     The customization interface
@@ -50,6 +51,12 @@ Text to Speech
     {: topicgroup}
     SSML
         SSML.md
+        SSML-elements.md
+        SSML-expressive.md
+        SSML-transformation.md
+
+    {: topicgroup}
+    IBM SPR
         SPRs.md
         pt-BR-SPRs.md
         en-GB-SPRs.md

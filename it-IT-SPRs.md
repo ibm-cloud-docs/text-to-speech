@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-08-11"
+lastupdated: "2017-10-19"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2017-08-11"
 # Italian symbols
 {: #itSymbols}
 
-The following sections describe the inventory of valid symbols for Italian.
+The following sections describe the valid symbols for Italian.
 
 ## Regular vowels
 
@@ -595,7 +595,7 @@ The following sections describe the inventory of valid symbols for Italian.
 
 ## Allophones
 
-If an allophone is not used in an SPR, the {{site.data.keyword.texttospeechshort}} service automatically generates the appropriate variant for the given context.
+If an allophone is not used in SPR, the {{site.data.keyword.texttospeechshort}} service automatically generates the appropriate variant for the given context.
 
 <table style="width:90%">
   <caption>Table 4. Allophones (Italian)</caption>
@@ -646,4 +646,4 @@ If an allophone is not used in an SPR, the {{site.data.keyword.texttospeechshort
 
 **Note:**
 
-1.  The `ng` and `nk` allophones are supported in the IPA specification but cannot be used in an SPR.
+1.  The `ng` and `nk` allophones are supported in the IPA specification but cannot be used in SPR.
