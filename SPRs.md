@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-10-20"
+lastupdated: "2017-11-10"
 
 ---
 
@@ -44,7 +44,7 @@ You can use a `.` (period) to mark the beginning of each syllable. However, to p
 
 ## Syllable stress
 
-You can use the symbols in the following table to mark syllable stress. However, you do not need to indicate syllable stress in SPR or IPA; the service determines where stress occurs if you do not indicate it.
+You can use the symbols in the following table to mark syllable stress for a pronunciation. {{site.data.keyword.IBM_notm}} recommends that you indicate primary stress for pronunciations in either SPR or IPA. However, indicating syllable stress is optional for both formats; the service determines where stress occurs if you do not indicate it.
 
 <table style="width:80%">
   <caption>Table 1. Syllable stress</caption>
@@ -108,7 +108,7 @@ You can use the symbols in the following table to mark syllable stress. However,
 -   In SPR for Spanish and Italian, you can specify only `1` (primary stress). An error occurs if you specify secondary or no stress.
 -   In SPR for Japanese, only `1` (primary stress) and `0` (no stress) are supported. An error occurs if you specify secondary stress.
 
-You must place the numeric syllable stress markers within a syllable boundary but always to the left of the vowel of the syllable. You can place the marker anywhere to the left of the stressed vowel. For example, each of the following SPR examples places the primary stress on the correct vowel of the word *construction*:
+You must place a syllable stress marker within a syllable boundary but always to the left of the syllable's vowel. You can place a marker anywhere to the left of the stressed vowel. For example, each of the following SPR examples places the primary stress on the correct vowel of the word *construction*:
 
 ```xml
 <phoneme alphabet="ibm" ph="kXn1strHkSXn">construction</phoneme>
