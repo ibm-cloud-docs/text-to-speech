@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-10-20"
+lastupdated: "2017-11-10"
 
 ---
 
@@ -36,7 +36,7 @@ A *word* cannot include whitespace. The service uses whitespace to delineate ind
 
 ## Case-sensitivity
 
-A *word* is case-sentitive. For example, assume a custom model contains the entry `{word='Sun', translation='Sunday'}`. In this case, the service applies its default pronunciation to the word `sun` but the custom translation to the word `Sun`, since only the latter has an initial capital letter.
+A *word* is case-sensitive. For example, assume a custom model contains the entry `{word='Sun', translation='Sunday'}`. In this case, the service applies its default pronunciation to the word `sun` but the custom translation to the word `Sun`, since only the latter has an initial capital letter.
 
 
 ## Context sensitivity
@@ -87,7 +87,7 @@ Symbolic Phonetic Representation (SPR) is a proprietary, language-dependent form
 
     Omit the backquote and square brackets when you specify a word's translation with methods of the customization interface.
 -   You can use a period to indicate the beginning of a syllable in a translation, but periods are optional and do not influence the word's pronunciation. They appear in the pronunciation for a word only if you include them in the word's translation. Do not use spaces to indicate syllable boundaries.
--   You must precede the vowel that has the primary stress for a word with a `1` symbol. You can also use a `2` symbol to indicate each secondary stress position, but the use of `2` symbols is optional; they appear in the pronunciation for a word only if you include them in the word's translation.
+-   {{site.data.keyword.IBM_notm}} recommends that you precede the vowel that has the primary stress for a word with a `1` symbol, though it is not strictly necessary; the service determines where stress occurs if you do not indicate it. You can also use a `2` symbol to indicate each secondary stress position, but the use of `2` symbols is also optional; they appear in the pronunciation for a word only if you include them in the word's translation.
 
 For more information about working with SPR, see [Using IBM SPR](/docs/services/text-to-speech/SPRs.html).
 
