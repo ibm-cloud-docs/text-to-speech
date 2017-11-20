@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-10-20"
+lastupdated: "2017-11-20"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2017-10-20"
 {:swift: .ph data-hd-programlang='swift'}
 
 # The HTTP REST interface
-{: #using}
+{: #usingHTTP}
 
 To synthesize text to speech with the service's HTTP REST API, you call the `GET` or `POST` version of the service's `/v1/synthesize` method. You specify the text to be synthesized, the voice for the spoken audio, and the format for the audio. You can also specify a custom voice model to be used with the request. For detailed information about the HTTP interface, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/text-to-speech/api/v1/){: new_window}.
 {: shortdesc}
@@ -465,21 +465,21 @@ The following table lists the voices that are available for each language and di
 ### Listing all available voices
 {: #listVoices}
 
-The `GET /v1/voices` method lists information about all available voices. It takes no arguments and returns a JSON array named `voices` that includes a separate element for each voice:
+The `GET /v1/voices` method lists information about all available voices. It takes no arguments and returns a `VoiceCollection` object. This object includes a JSON array named `voices` that includes a separate `Voice` object for each voice.
 
 ```javascript
 {
   "voices": [
     {
-      "url": ""
-      "gender": "",
-      "name": "",
-      "language": "",
-      "description": "",
-      "customizable": "",
+      "name": "en-US_LisaVoice",
+      "language": "en-US",
+      "gender": "female",
+      "url": "https://stream.watsonplatform.net/text-to-speech/api/v1/voices/en-US_LisaVoice",
+      "description": "Lisa: American English female voice.",
+      "customizable": true,
       "supported_features": {
-        "custom_pronunciation": "",
-        "voice_transformation": ""
+        "voice_transformation": true,
+        "custom_pronunciation": true
       }
     },
     . . .
@@ -488,17 +488,17 @@ The `GET /v1/voices` method lists information about all available voices. It tak
 ```
 {: codeblock}
 
-The fields for each voice provide the following information:
+The fields of the `Voice` object provide the following information:
 
--   `url` identifies the URL for the voice.
--   `gender` identifies the voice as `male` or `female`.
--   `name` is an identifier for the voice (for example, `en-US_LisaVoice`). This is the value you specify for the `voice` parameter of the `/v1/synthesize` method.
+-   `name` is an identifier for the voice (for example, `en-US_LisaVoice`). This is the value that you specify for the `voice` parameter of the `/v1/synthesize` method.
 -   `language` specifies the language and region of the voice (for example, `en-US`).
+-   `gender` identifies the voice as `male` or `female`.
+-   `url` identifies the URL for the voice.
 -   `description` provides a brief description of the voice.
 -   `customizable` is a boolean value that indicates whether the voice can be customized with the service's customization interface. (Same as `custom_pronunciation`; maintained for backward compatibility.)
--   `supported_features` describes the additional service features supported with the voice:
-    -   `custom_pronunciation` is a boolean value that indicates whether the voice can be customized with the service's customization interface. (Same as `customizable`.)
+-   `supported_features` describes the additional service features that are supported with the voice:
     -   `voice_transformation` is a boolean value that indicates whether the voice can be transformed by using the SSML `<voice-transformation>` element.
+    -   `custom_pronunciation` is a boolean value that indicates whether the voice can be customized with the service's customization interface. (Same as `customizable`.)
 
 ### Listing a specific voice
 {: #listVoice}
@@ -536,34 +536,34 @@ The `GET /v1/voices/{voice}` method lists information about a specific voice. It
   </tr>
 </table>
 
-If you omit the `customization_id` parameter, the method returns JSON output for the specified voice that is identical to the information returned for a voice by the `GET /v1/voices` method. If you specify a `customization_id`, the output includes an additional `customization` field:
+If you omit the `customization_id` parameter, the method returns JSON output for the specified voice that is identical to the information returned for a voice by the `GET /v1/voices` method. If you specify a `customization_id`, the output includes an additional `customization` field. This field shows a `Customization` object that provides information about the specified custom voice model.
 
 ```javascript
 {
-  "url": ""
-  "gender": "",
-  "name": "",
-  "language": "",
-  "description": "",
-  "customizable": "",
+  "name": "en-US_LisaVoice",
+  "language": "en-US",
+  "gender": "female",
+  "url": "https://stream.watsonplatform.net/text-to-speech/api/v1/voices/en-US_LisaVoice",
+  "description": "Lisa: American English female voice.",
+  "customizable": true,
   "supported_features": {
-    "custom_pronunciation": "",
-    "voice_transformation": ""
+    "voice_transformation": true,
+    "custom_pronunciation": true
   },
   "customization": {
-    "customization_id": "",
-    "owner": "",
-    "created": "",
-    "name": "",
-    "language": "",
-    "description": "",
-    "last_modified": ""
+    "customization_id": "64f4807f-a5f1-5867-924f-7bba1a84fe97",
+    "owner": "297cfd08-330a-22ba-93ce-1a73f454dd98",
+    "created": "2017-09-16T17:12:31.743Z",
+    "name": "cURL Test",
+    "language": "en-US",
+    "description": "Customization test via cURL",
+    "last_modified": "2017-09-16T17:12:31.743Z"
   }
 }
 ```
 {: codeblock}
 
-For information about the meaning of the attributes of the `customization` field, see [Creating and managing custom voice models](/docs/services/text-to-speech/custom-models.html).
+The `Customization` object provides information such as the GUID, name, language, and description of the custom voice model. It also shows the service credentials of the model's owner, the date and time at which the model was created, and the date and time of its last modification.
 
 ## Specifying input text
 {: #input}

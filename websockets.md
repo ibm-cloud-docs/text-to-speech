@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-10-20"
+lastupdated: "2017-11-20"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2017-10-20"
 {:swift: .ph data-hd-programlang='swift'}
 
 # The WebSocket interface
-{: #using}
+{: #usingWebSocket}
 
 To synthesize text to speech with the service's WebSocket interface, you first establish a connection with the service by calling its `/v1/synthesize` method. You then send the text to be synthesized to the service as a JSON text message over the connection. The service automatically closes the WebSocket connection when it finishes processing the request.
 {: shortdesc}
@@ -156,7 +156,7 @@ To synthesize text, the client passes a simple JSON text message to the service 
     <td>
       Specifies the requested format (MIME type) of the audio. For
       more information, see
-      <a href="/docs/services/text-to-speech/http.html">Specifying
+      <a href="/docs/services/text-to-speech/http.html#format">Specifying
       an audio format</a>. In addition to the supported specifications,
       the WebSocket interface lets you specify `*/*` to use the default
       audio format, <code>audio/ogg;codecs=opus</code>.
