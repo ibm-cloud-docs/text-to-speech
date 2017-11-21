@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-11-20"
+lastupdated: "2017-11-21"
 
 ---
 
@@ -202,15 +202,14 @@ Both versions of the `/v1/synthesize` method take an optional query parameter na
       <code>audio/wav</code>
     </td>
     <td>
-      <em>Waveform Audio File Format (WAV)</em> (<code>.wav</code>),
-      a standard created by Microsoft&reg; and IBM. A WAV file is a
-      container that is often used for uncompressed audio bitstreams
-      but can contain compressed audio, as well. Note that due to the
-      streaming nature of the returned audio, the WAV file generated
-      may not work in all audio players. Specifically, the attribute
-      <code>numSamples</code> in the header of the file is set to
-      <code>0</code> regardless of the length of the audio. For more
-      information, see
+      <em>Waveform Audio File Format (WAV)</em> (<code>.wav</code>) is
+      a standard container format that is often used for uncompressed
+      audio bitstreams but can contain compressed audio, as well. Note
+      that due to the streaming nature of the returned audio, the WAV
+      file generated may not work in all audio players. Specifically,
+      the attribute <code>numSamples</code> in the header of the file
+      is set to <code>0</code> regardless of the length of the audio.
+      For more information, see
       <a target="_blank" href="https://en.wikipedia.org/wiki/WAV">en.wikipedia.org/wiki/WAV ![External link icon](../../icons/launch-glyph.svg "External link icon")</a>.
     </td>
   </tr>
@@ -465,7 +464,7 @@ The following table lists the voices that are available for each language and di
 ### Listing all available voices
 {: #listVoices}
 
-The `GET /v1/voices` method lists information about all available voices. It takes no arguments and returns a `VoiceCollection` object. This object includes a JSON array named `voices` that includes a separate `Voice` object for each voice.
+The `GET /v1/voices` method lists information about all available voices. It takes no arguments and returns a JSON array named `voices` that includes a separate object for each voice.
 
 ```javascript
 {
@@ -488,7 +487,7 @@ The `GET /v1/voices` method lists information about all available voices. It tak
 ```
 {: codeblock}
 
-The fields of the `Voice` object provide the following information:
+The fields of the voice objects provide the following information:
 
 -   `name` is an identifier for the voice (for example, `en-US_LisaVoice`). This is the value that you specify for the `voice` parameter of the `/v1/synthesize` method.
 -   `language` specifies the language and region of the voice (for example, `en-US`).
@@ -536,7 +535,7 @@ The `GET /v1/voices/{voice}` method lists information about a specific voice. It
   </tr>
 </table>
 
-If you omit the `customization_id` parameter, the method returns JSON output for the specified voice that is identical to the information returned for a voice by the `GET /v1/voices` method. If you specify a `customization_id`, the output includes an additional `customization` field. This field shows a `Customization` object that provides information about the specified custom voice model.
+If you omit the `customization_id` parameter, the method returns JSON output for the specified voice that is identical to the information returned for a voice by the `GET /v1/voices` method. If you specify a `customization_id`, the output includes an additional `customization` field that provides information about the specified custom voice model.
 
 ```javascript
 {
@@ -563,7 +562,7 @@ If you omit the `customization_id` parameter, the method returns JSON output for
 ```
 {: codeblock}
 
-The `Customization` object provides information such as the GUID, name, language, and description of the custom voice model. It also shows the service credentials of the model's owner, the date and time at which the model was created, and the date and time of its last modification.
+The attributes of the additional `customization` field provide information such as the GUID, name, language, and description of the custom voice model. They also show the service credentials of the model's owner, the date and time at which the model was created, and the date and time of its last modification.
 
 ## Specifying input text
 {: #input}
