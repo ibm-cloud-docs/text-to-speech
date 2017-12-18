@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-10-20"
+lastupdated: "2017-12-18"
 
 ---
 
@@ -52,5 +52,5 @@ You can use the service in voice-driven and screenless interfaces, as well as in
 
 For examples of the service in action, see
 
--   A [quick demo ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://text-to-speech-demo.mybluemix.net/){: new_window} of the {{site.data.keyword.texttospeechshort}} service that lets you enter text from which you can generate speech with different voices, including expressiveness and transformation where supported.
+-   A [quick demo ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://text-to-speech-demo.ng.bluemix.net/){: new_window} of the {{site.data.keyword.texttospeechshort}} service that lets you enter text from which you can generate speech with different voices, including expressiveness and transformation where supported.
 -   Applications in {{site.data.keyword.watson}} Developer Cloud [Starter Kits ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/watson/developercloud/starter-kits.html){: new_window} that demonstrate the {{site.data.keyword.texttospeechshort}} service.
