@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-10-20"
+lastupdated: "2017-12-18"
 
 ---
 
@@ -18,6 +18,7 @@ lastupdated: "2017-10-20"
 {:swift: .ph data-hd-programlang='swift'}
 
 # About
+{: #about}
 
 > **Service update:** *The {{site.data.keyword.texttospeechshort}} service was updated on October 2, 2017. The service now lets you specify the endianness of audio that is returned in `audio/l16` format. For information about all recent changes to the service, see the [Release notes](/docs/services/text-to-speech/release-notes.html).*
 
@@ -52,5 +53,5 @@ You can use the service in voice-driven and screenless interfaces, as well as in
 
 For examples of the service in action, see
 
--   A [quick demo ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://text-to-speech-demo.mybluemix.net/){: new_window} of the {{site.data.keyword.texttospeechshort}} service that lets you enter text from which you can generate speech with different voices, including expressiveness and transformation where supported.
+-   A [quick demo ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://text-to-speech-demo.ng.bluemix.net/){: new_window} of the {{site.data.keyword.texttospeechshort}} service that lets you enter text from which you can generate speech with different voices, including expressiveness and transformation where supported.
 -   Applications in {{site.data.keyword.watson}} Developer Cloud [Starter Kits ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/watson/developercloud/starter-kits.html){: new_window} that demonstrate the {{site.data.keyword.texttospeechshort}} service.
