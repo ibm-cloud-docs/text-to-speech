@@ -11,7 +11,7 @@ Text to Speech
 
     {: .topicgroup}
     Demos
-        [Quick demo](https://text-to-speech-demo.mybluemix.net/)
+        [Quick demo](https://text-to-speech-demo.ng.bluemix.net/)
 
     {: .topicgroup}
     Additional resources
@@ -26,10 +26,14 @@ Text to Speech
     {: .topicgroup}
     Watson SDKs
         [Android SDK](https://github.com/watson-developer-cloud/android-sdk)
-        [Apple iOS SDK](https://github.com/watson-developer-cloud/ios-sdk)
         [Java SDK](https://github.com/watson-developer-cloud/java-sdk)
+        [Javascript library](https://github.com/watson-developer-cloud/speech-javascript-sdk)
         [Node.js SDK](https://github.com/watson-developer-cloud/node-sdk)
         [Python SDK](https://github.com/watson-developer-cloud/python-sdk)
+        [.NET SDK](https://github.com/watson-developer-cloud/dotnet-standard-sdk)
+        [OpenWhisk SDK](https://github.com/watson-developer-cloud/openwhisk-sdk)
+        [Salesforce SDK](https://github.com/watson-developer-cloud/salesforce-sdk)
+        [Swift SDK](https://github.com/watson-developer-cloud/swift-sdk)
         [Unity SDK](https://github.com/watson-developer-cloud/unity-sdk)
 
     [Watson GitHub repos](https://github.com/watson-developer-cloud/)
