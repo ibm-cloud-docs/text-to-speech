@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-11-20"
+  years: 2015, 2018
+lastupdated: "2018-04-15"
 
 ---
 
@@ -146,8 +146,8 @@ To synthesize text, the client passes a simple JSON text message to the service 
       input text</a>. SSML input can also include the
       <code>&lt;mark&gt;</code> element; see
       <a href="/docs/services/text-to-speech/word-timing.html#mark">Specifying
-      an SSML mark</a>. The client can pass a maximum of 5 KB of data
-      with the request.
+      an SSML mark</a>. The client can pass a maximum of 5 KB of text with
+      the request.
     </td>
   </tr>
   <tr>
