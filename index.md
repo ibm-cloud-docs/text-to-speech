@@ -18,6 +18,7 @@ lastupdated: "2017-12-18"
 {:swift: .ph data-hd-programlang='swift'}
 
 # About
+{: #about}
 
 > **Service update:** *The {{site.data.keyword.texttospeechshort}} service was updated on October 2, 2017. The service now lets you specify the endianness of audio that is returned in `audio/l16` format. For information about all recent changes to the service, see the [Release notes](/docs/services/text-to-speech/release-notes.html).*
 

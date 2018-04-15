@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-20"
+  years: 2015, 2018
+lastupdated: "2018-04-15"
 
 ---
 
@@ -39,7 +39,7 @@ For more information, see [The HTTP REST interface](/docs/services/text-to-speec
 ## WebSocket interface
 {: #websocket}
 
-The service offers a WebSocket interface that you can use to synthesize text. The interface provides a single version of the `/v1/synthesize` method. You specify the text to be synthesized, the voice to be used, and the format for the audio. You can provide plain text or text that is annotated with SSML. For more information, see [The WebSocket interface](/docs/services/text-to-speech/websockets.html).
+The service offers a WebSocket interface that you can use to synthesize text. The interface provides a single version of the `/v1/synthesize` method that accepts a maximum of 5 KB of text. You specify the text to be synthesized, the voice to be used, and the format for the audio. You can provide plain text or text that is annotated with SSML. For more information, see [The WebSocket interface](/docs/services/text-to-speech/websockets.html).
 
 The WebSocket interface also supports use of the SSML `<mark>` element to identify specific locations in the audio, and it allows you to request word timing information for all words of the input text. For more information, see [Obtaining word timings](/docs/services/text-to-speech/word-timing.html).
 

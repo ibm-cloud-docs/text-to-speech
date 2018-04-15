@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-11-21"
+  years: 2015, 2018
+lastupdated: "2018-04-15"
 
 ---
 
@@ -28,10 +28,10 @@ To synthesize text to speech with the service's HTTP REST API, you call the `GET
 
 To synthesize text to audio, you call one of the two versions of the service's `/v1/synthesize` method:
 
--   The `GET /v1/synthesize` method accepts the text to be synthesized via its required `text` query parameter. Use this version of the method for simple text that is easily accommodated on the URL.
--   The `POST /v1/synthesize` method accepts the text to be synthesized via a JSON construct in the required body of the request. Use this version of the method for longer text or for text that you do not want to expose on the URL.
+-   The `GET /v1/synthesize` method accepts the text to be synthesized via its required `text` query parameter.
+-   The `POST /v1/synthesize` method accepts the text to be synthesized via a JSON construct in the required body of the request.
 
-For more information, see [Specifying input text](#input). The two versions of the `/v1/synthesize` method have the following parameters in common:
+Both versions of the method accept a maximum of 5 KB of input text; for more information, see [Specifying input text](#input). The two versions of the `/v1/synthesize` method have the following parameters in common:
 
 <table>
   <caption>Table 1. Parameters of the <code>/v1/synthesize</code>
