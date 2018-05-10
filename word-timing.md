@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-20"
+  years: 2015, 2018
+lastupdated: "2018-04-28"
 
 ---
 
@@ -78,7 +78,7 @@ When it has synthesized the text that precedes the mark, the service sends a tex
 The text message that contains the timing information always arrives before the audio chunk that contains the mark's location.
 
 ## Requesting word timings for all words
-{: #timing}
+{: #timingRequest}
 
 The optional `timings` parameter of the JSON object that you pass to the service for a request returns timing information for all strings of the input text. This convenience eliminates the need to specify the SSML `<mark>` element for each word of the input. Pass an array that includes the string `words` to request word timings; pass an empty array or omit the parameter to receive no timing information.
 
