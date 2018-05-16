@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-15"
+lastupdated: "2018-05-15"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2018-04-15"
 To synthesize text to speech with the service's WebSocket interface, you first establish a connection with the service by calling its `/v1/synthesize` method. You then send the text to be synthesized to the service as a JSON text message over the connection. The service automatically closes the WebSocket connection when it finishes processing the request.
 {: shortdesc}
 
-The synthesize request and response cycle includes the following steps;
+The synthesize request and response cycle includes the following steps:
 
 1.  [Open a connection](#WSopen).
 1.  [Send input text](#WSsend).
@@ -81,9 +81,9 @@ A WebSocket client calls this method with the following query parameters to esta
     <td>
       Specifies the globally unique identifier (GUID) for a custom voice
       model that is to be used for the synthesis. A custom voice model is
-      guaranteed to work only if it matches the language of the voice used
-      for the synthesis. If you include a customization ID, you must call
-      the method with the service credentials of the custom model's owner.
+      guaranteed to work only if it matches the language of the voice that
+      is used for the synthesis. If you include a customization ID, you must
+      call the method with the service credentials of the custom model's owner.
       Omit the parameter to use the specified voice with no customization.
       For more information, see
       <a href="/docs/services/text-to-speech/custom-intro.html">Understanding
@@ -94,15 +94,28 @@ A WebSocket client calls this method with the following query parameters to esta
     <td><code>x-watson-learning-opt-out</code><br/><em>Optional</em></td>
     <td style="text-align:center">Boolean</td>
     <td>
-      Specifies whether the service logs the request and results sent over
-      the connection, which it does by default to improve the service for
-      future users. Specify <code>true</code> to prevent the service from
-      logging the data. You can also opt out of request logging by passing
-      a value of <code>true</code> with the
-      <code>X-Watson-Learning-Opt-Out</code> request header; for more
-      information, see
+      Specifies whether the service logs requests and results that are sent
+      over the connection. Logging is done only to improve the service for
+      future users. The logged data is not shared or made public. To prevent
+      IBM from accessing your data for general service improvements, specify
+      <code>true</code> for the parameter. See
       <a href="/docs/services/watson/getting-started-logging.html">Controlling
         request logging for Watson services</a>.
+    </td>
+  <tr>
+    <td style="text-align:left"><code>x-watson-metadata</code>
+      <br/><em>Optional</em></td>
+    <td style="text-align:center">String</td>
+    <td style="text-align:left">
+      Associates a customer ID with data that is passed over the
+      connection. The parameter accepts the argument
+      <code>customer_id={id}</code>, where <code>id</code> is a random
+      or generic string that is to be associated with the data. You must
+      URL-encode the argument to the parameter, for example,
+      `customer_id%3dmy_ID`. By default, no customer ID is associated
+      with the data. See
+      <a href="/docs/services/text-to-speech/information-security.html">Information
+      security</a>.
     </td>
   </tr>
 </table>
@@ -209,7 +222,7 @@ The service responds to this message by sending a text message that confirms the
 
 After it confirms the audio format, the service sends the synthesized audio as a binary stream of data in the indicated format. If the input text includes one or more SSML `<mark>` elements or if you specified the `timings` parameter with the request, the service sends timing information as one or more text messages. The service can also send text messages with warnings or errors. When it finishes synthesizing the input text, the service automatically closes the WebSocket connection.
 
-The client needs to append binary responses from the service to the audio results received over the connection. It can handle text messages by responding to them, displaying them, or capturing them for use by the application (for example, if they contain mark locations). The following simple example of an `onMessage` function appends text and binary messages received from the service to the appropriate variable depending on their type. When the `onClose()` function executes, the entire audio stream has been received.
+The client needs to append binary responses from the service to the audio results received over the connection. It can handle text messages by responding to them, displaying them, or capturing them for use by the application (for example, if they contain mark locations). The following simple example of an `onMessage` function appends text and binary messages that are received from the service to the appropriate variable depending on their type. When the `onClose()` function executes, the entire audio stream has been received.
 
 ```javascript
 var messages;
@@ -239,7 +252,7 @@ The service can send the following return codes to the client over the WebSocket
 -   `1002` indicates that the service is closing the connection due to a protocol error.
 -   `1006` indicates that the connection closed abnormally.
 -   `1009` indicates that the frame size exceeded the 4 MB limit.
--   `1011` indicates that the service is terminating the connection because it encountered an unexpected condition that prevents it from fulfilling the request, such as an invalid argument. The return code can also indicate that the input text was too large; the text cannot exceed 5 KB in size.
+-   `1011` indicates that the service is terminating the connection because it encountered an unexpected condition that prevents it from fulfilling the request, such as an invalid argument. The return code can also indicate that the input text was too large; the text cannot exceed 5 KB.
 
 If the socket closes with an error, the service sends the client an informative message of the form `{"error": "Specific error message"}` before closing. The service can also send warning messages for unknown parameters.
 
@@ -288,8 +301,8 @@ The code defines callback methods to handle state changes and responses in the c
 
 -   The `onConnect` method fires when the service accepts the connection but before the handshake is completed.
 -   The `onOpen` method fires when the handshake between the client and service is complete and the connection is fully established. The method sends a JSON text message that specifies the text to be synthesized and the requested format of the audio.
--   The `onMessage` method fires when the service sends a response. The method appends a binary response to the audio received from the service and a text message to the list of messages received from the service.
--   The `onClose` method fires when the connection is closed. The `wasClean` argument is a boolean that indicates whether the connection was closed as a result of the service sending a close frame, as opposed to a network or protocol error. The `code` and `reason` arguments provide the WebSocket return code and its accompanying message.
+-   The `onMessage` method fires when the service sends a response. The method appends a binary response to the audio that is received from the service and a text message to the list of messages that are received from the service.
+-   The `onClose` method fires when the connection is closed. The `wasClean` argument is a boolean that indicates whether the connection was closed as a result of the service's sending a close frame, as opposed to a network or protocol error. The `code` and `reason` arguments provide the WebSocket return code and its accompanying message.
 
 ```python
 class TTSWSClientProtocol(WebSocketClientProtocol):

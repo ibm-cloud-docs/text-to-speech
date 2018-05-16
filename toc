@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="text-to-speech" audience="service" href="/docs/services/text-to-speech/index.html"}
+{: .toc subcollection="text-to-speech" audience="service" href="/docs/services/text-to-speech/getting-started.html"}
 Text to Speech
 
     {: .navgroup id="learn"}
@@ -22,6 +22,7 @@ Text to Speech
 
     {: .navgroup id="reference"}
     [API reference](https://www.ibm.com/watson/developercloud/text-to-speech/api)
+    information-security.md
 
     {: .topicgroup}
     Watson SDKs

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-20"
+  years: 2015, 2018
+lastupdated: "2018-05-09"
 
 ---
 
@@ -46,6 +46,17 @@ How the service handles request logging for calls to the customization interface
 -   The service *does* log data when a custom model is used with a synthesize request. You must set the `X-Watson-Learning-Opt-Out` request header to `true` to prevent logging for synthesize requests.
 
 For more information, see [Controlling request logging for {{site.data.keyword.watson}} services](/docs/services/watson/getting-started-logging.html).
+
+### Information security
+{: #customSecurity}
+
+The service allows you to associate a customer ID with data that is added or updated for custom voice models. You can associate a customer ID with custom words by passing the `X-Watson-Metadata` header with the following methods:
+
+-   `POST /v1/customizations/{customization_id}`
+-   `POST /v1/customizations/{customization_id}/words`
+-   `PUT /v1/customizations/{customization_id}/words/{word}`
+
+If necessary, you can then delete the data associated with the customer ID by using the `DELETE /v1/user_data` method. For more information, see [Information security](/docs/services/text-to-speech/information-security.html).
 
 ### Using the examples
 {: #customCurl}

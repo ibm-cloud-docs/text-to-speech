@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-20"
+  years: 2015, 2018
+lastupdated: "2018-05-13"
 
 ---
 
@@ -22,11 +22,11 @@ lastupdated: "2017-10-20"
 
 With the {{site.data.keyword.texttospeechshort}} service, you can use most Speech Synthesis Markup Language (SSML) elements to control the synthesis of your text with all supported languages. The following table summarizes the service's support for SSML elements and attributes.
 
--   *Full* means the service fully supports the element or attribute with its HTTP and WebSocket interfaces.
--   *Partial* means the service does not support all aspects of the element or attribute or it supports the element or attribute with only one of its interfaces.
--   *None* means the service does not support the element or attribute.
+-   *Full* means that the service fully supports the element or attribute with its HTTP and WebSocket interfaces.
+-   *Partial* means that the service does not support all aspects of the element or attribute or it supports the element or attribute with only one of its interfaces.
+-   *None* means that the service does not support the element or attribute.
 
-For more information about an element or attribute, refer to its section on this page. Where noted, support for some attributes and values differs slightly from the SSML specification. For more information, see [W3C Speech Synthesis Markup Language (SSML) Version 1.0 ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.w3.org/TR/speech-synthesis/){: new_window}.
+For more information about an element or attribute, refer to its description. Where noted, support for some attributes and values differs slightly from the SSML specification. For more information, see [W3C Speech Synthesis Markup Language (SSML) Version 1.0 ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.w3.org/TR/speech-synthesis/){: new_window}.
 
 <table>
   <caption>Table 1. SSML elements</caption>
@@ -195,14 +195,14 @@ The `<desc>` element can occur only within an `<audio>` element. Because the `<a
 ## The emphasis element
 {: #emphasis_element}
 
-The `<emphasis>` element requests that the enclosed text be spoken with emphasis. It is not currently supported.
+The `<emphasis>` element requests that the enclosed text is spoken with emphasis. It is not currently supported.
 
 ## The lexicon element
 {: #lexicon_element}
 
 This `<lexicon>` element introduces pronunciation dictionaries for the given SSML document. It is not currently supported.
 
-The service's customization interface lets you define a dictionary of custom entries (word/translation pairs) for use during speech synthesis. For more information, see [Understanding customization](/docs/services/text-to-speech/custom-intro.html).
+You can use the service's customization interface to define a dictionary of custom entries (word/translation pairs) for use during speech synthesis. For more information, see [Understanding customization](/docs/services/text-to-speech/custom-intro.html).
 
 ## The mark element
 {: #mark_element}
@@ -226,7 +226,7 @@ The `<meta>` and `<metadata>` elements are containers in which you can place inf
 ## The paragraph and sentence elements
 {: #ps_element}
 
-The `<paragraph>` (or `<p>`) and `<sentence>` (or `<s>`) elements are optional elements that can be used to give hints about textual structure. If the text enclosed in a `<paragraph>` or `<sentence>` element does not end with an end-of-sentence punctuation character (like a period), a longer than normal pause is added to the synthesized audio for the text.
+The `<paragraph>` (or `<p>`) and `<sentence>` (or `<s>`) elements are optional elements that can be used to give hints about textual structure. If the text that is enclosed in a `<paragraph>` or `<sentence>` element does not end with an end-of-sentence punctuation character (like a period), the service adds a longer than normal pause to the synthesized audio.
 
 The only valid attribute for either element is `xml:lang`, which allows for language switching. The attribute is not currently supported.
 
@@ -243,7 +243,7 @@ The only valid attribute for either element is `xml:lang`, which allows for lang
 ## The phoneme element
 {: #phoneme_element}
 
-The `<phoneme>` element lets you provide a phonetic pronunciation for the enclosed text. The phonetic spelling represents the sounds of a word, how the sounds are divided into syllables, and which syllables receive stress. The element has two attributes:
+The `<phoneme>` element provides a phonetic pronunciation for the enclosed text. The phonetic spelling represents the sounds of a word, how the sounds are divided into syllables, and which syllables receive stress. The element has two attributes:
 
 -   `alphabet` is an optional attribute that specifies the phonology to be used. The supported alphabets are
     -   The standard International Phonetic Alphabet (IPA): `alphabet="ipa"`
@@ -282,15 +282,15 @@ The `<prosody>` element controls the pitch, speaking rate, and volume of the tex
 
 The `pitch` attribute modifies the baseline pitch for the text within the element. Accepted values are
 
--   A number followed by the `Hz` (Hertz) designation: the baseline pitch is transposed (up or down) to the specified value.
--   A relative change value (in semitones): a number, preceded by `+` (an increase) or `-` (a decrease) and followed by `st` (semitones), that causes an absolute shift with respect to the current baseline (for example, `+5st`).
--   A relative change in percent: a number, preceded by `+` (an increase) or `-` (a decrease) and followed by `%` (percent sign), that causes a relative shift with respect to the current baseline (for example, `-10%`).
+-   A number followed by the `Hz` (Hertz) designation: The baseline pitch is transposed (up or down) to the specified value.
+-   A relative change value (in semitones): A number that causes an absolute shift from the current baseline. The number is preceded by `+` (an increase) or `-` (a decrease) and followed by `st` (semitones), for example, `+5st`.
+-   A relative change in percent: A number that causes a relative shift from the current baseline. The number is preceded by `+` (an increase) or `-` (a decrease) and followed by `%` (percent sign), for example, `-10%`.
 -   One of the following six keywords, which modify the pitch to the corresponding predefined values:
     -   `default` uses the service's default baseline pitch.
     -   `x-low` shifts the pitch baseline down by 12 semitones.
-    -   `low` shifts the pitch baseline down by 6 semitones.
+    -   `low` shifts the pitch baseline down by six semitones.
     -   `medium` produces the same behavior as `default`.
-    -   `high` shifts the pitch baseline up by 6 semitones.
+    -   `high` shifts the pitch baseline up by six semitones.
     -   `x-high` shifts the pitch baseline up by 12 semitones.
 
     ```xml
@@ -308,7 +308,7 @@ The `pitch` attribute modifies the baseline pitch for the text within the elemen
 ### The rate attribute
 {: #prosody-rate}
 
-The `rate` attribute indicates a change in the speaking rate for the text within the element. The rate is specified in terms of words per minute; if the speaking rate is 50 words per minute, then `rate` equals `50`. Note that when `rate` is set to a positive number, the implementation does not comply with the current W3C prosody rate attribute specification. Also, the service supports relative percent changes (for example, `+15%`) but not relative value changes (for example, `+15`). Accepted values are
+The `rate` attribute indicates a change in the speaking rate for the text within the element. The rate is specified in terms of words per minute; if the speaking rate is 50 words per minute, then `rate` equals `50`. When `rate` is set to a positive number, the implementation does not comply with the current W3C prosody rate attribute specification. Also, the service supports relative percent changes (for example, `+15%`) but not relative value changes (for example, `+15`). Accepted values are
 
 -   A relative percentage increase or decrease: `+10%`.
 -   A number of words per minute as a positive number: `75`.
@@ -331,7 +331,7 @@ The `rate` attribute indicates a change in the speaking rate for the text within
 ### The volume attribute
 {: #prosody-volume}
 
-The `volume` attribute modifies the volume for the text within the element. Specify an integer or decimal value in the range of 1.0 to 100.0 (maximum volume), or use one of the following values, which correspond to predefined settings in the range of 0 to 100. (The `silent` value is not supported.)
+The `volume` attribute modifies the volume for the text within the element. You can specify an integer or decimal value in the range of 1.0 to 100.0 (maximum volume). You can also use one of the following string values, which correspond to predefined settings in the range of 0 to 100. (The `silent` value is not supported.)
 
 -   `x-soft` has the value 30.
 -   `soft` has the value 50.
@@ -354,7 +354,7 @@ The `volume` attribute modifies the volume for the text within the element. Spec
 
 > **Note:** The `<say-as>` element is only partially supported for most languages. For languages other than US English, the service typically supports only the `digits` and `letters` attributes of the element.
 
-The `<say-as>` element provides information about the type of text contained within the element and specifies the level of detail for rendering the text. The element has one required attribute, `interpret-as`, which indicates how the enclosed text is to be interpreted. It has two optional attributes, `format` and `detail`, which are used only with particular values within the `interpret-as` attribute, as illustrated in the following examples.
+The `<say-as>` element provides information about the type of text that is contained within the element and specifies the level of detail for rendering the text. The element has one required attribute, `interpret-as`, which indicates how the enclosed text is to be interpreted. It has two optional attributes, `format` and `detail`, which are used only with particular values within the `interpret-as` attribute, as illustrated in the following examples.
 
 Acceptable values for the `interpret-as` attribute and examples of each follow.
 
@@ -416,13 +416,13 @@ The `letters` value spells out the characters in the word within the element. Th
 ### number
 {: #sayAsNumber}
 
-The `number` value offers an alternative to the `cardinal` and `ordinal` values. You can use the optional `format` attribute to indicate how a series of numbers is to be interpreted. The following examples omit the `format` attribute to pronounce the number as a cardinal value, explicitly specify that it is to be pronounced as a `cardinal` value, and specify that it is to be pronounced as an `ordinal` value.
+The `number` value offers an alternative to the `cardinal` and `ordinal` values. You can use the optional `format` attribute to indicate how a series of numbers is to be interpreted. The first example omits the `format` attribute to pronounce the number as a cardinal value. The second example explicitly specifies that the number is to be pronounced as a `cardinal` value, and the third specifies that the number is to be pronounced as an `ordinal` value.
 
 ```xml
 <speak version="1.0">
   <say-as interpret-as="number">123456</say-as>
-  <say-as interpret-as="number" format="ordinal">123456</say-as>
   <say-as interpret-as="number" format="cardinal">123456</say-as>
+  <say-as interpret-as="number" format="ordinal">123456</say-as>
 </speak>
 ```
 {: codeblock}
@@ -466,7 +466,7 @@ The `vxml:boolean` value speaks *yes* or *no* depending on the `true` or `false`
 ### vxml:currency
 {: #vxml-currency}
 
-The `vxml:currency` value is used to control the synthesis of monetary values. The string must be written in the format `UUUmm.nn`, where `UUU` is the three-character currency indicator specified by ISO standard 4217 and `mm.nn` is the quantity. The following example says *forty-five dollars and thirty cents*.
+The `vxml:currency` value is used to control the synthesis of monetary values. The string must be written in the format `UUUmm.nn`, where `UUU` is the three-character currency indicator that is specified by ISO standard 4217 and `mm.nn` is the quantity. The following example says *forty-five dollars and thirty cents*.
 
 ```xml
 <speak version="1.0">
@@ -487,7 +487,7 @@ If the specified number includes more than two decimal places, the amount is syn
 ### vxml:date
 {: #vxml-date}
 
-The `vxml:date` value works like the `date` value, but the format is predefined as `YYYYMMDD`. If a day, month, or year value is not known or if you do not want it to be spoken, replace the value with a `?` (question mark), as shown in the second and third examples.
+The `vxml:date` value works like the `date` value, but the format is predefined as `YYYYMMDD`. If a day, month, or year value is not known or if you do not want it to be spoken, replace the value with a `?` (question mark). The second and third examples include question marks.
 
 ```xml
 <speak version="1.0">
@@ -506,7 +506,7 @@ The `vxml:digits` value performs the same function as the `digits` value.
 ### vxml:phone
 {: #vxml-phone}
 
-The `vxml:phone` value speaks a phone number with both digits and punctuation. This is equivalent to using the `number` value and specifying `telephone` for the `format` attribute and `punctuation` for the `detail` attribute.
+The `vxml:phone` value speaks a phone number with both digits and punctuation. It is equivalent to using the `number` value and specifying `telephone` for the `format` attribute and `punctuation` for the `detail` attribute.
 
 ```xml
 <speak version="1.0">
@@ -521,7 +521,7 @@ The `vxml:phone` value speaks a phone number with both digits and punctuation. T
 The `<speak>` element is the root element for SSML documents. Valid attributes are
 
 -   `version` is a required attribute that specifies the SSML specification. The accepted value is `1.0`.
--   `xml:lang` is not required by the service. Omit the attribute when using this element.
+-   `xml:lang` is not required by the service. Omit the attribute when you use this element.
 -   `xml:base` has no effect.
 
 ```xml
@@ -534,7 +534,7 @@ The `<speak>` element is the root element for SSML documents. Valid attributes a
 ## The sub element
 {: #sub_element}
 
-The `<sub>` element indicates that the text specified in the `alias` attribute is to replace the text enclosed within the element when speech is synthesized. The `alias` attribute is the only attribute of the element and is required.
+The `<sub>` element indicates that the text that is specified in the `alias` attribute is to replace the text that is enclosed within the element when speech is synthesized. The `alias` attribute is the only attribute of the element and is required.
 
 ```xml
 <speak version="1.0">

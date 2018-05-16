@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-08-11"
+  years: 2015, 2018
+lastupdated: "2018-05-12"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2017-08-11"
 # Research references
 {: #references}
 
-For more detailed information about the research and technical background behind the {{site.data.keyword.texttospeechshort}} service, see the following documents:
+For more detailed information about the research and technical background behind the {{site.data.keyword.texttospeechshort}} service, see the following documents.
 
 1.  Eide, Ellen M., and Raul Fernandez. [*Database Mining for Flexible Concatenative Text-to-Speech.* ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=4218196){: new_window} Proceedings of International Conference on Acoustics, Speech and Signal Processing (ICASSP), Vol. 4 (2007): pp. 697-700.
 1.  Eide, Ellen, Raul Fernandez, Ron Hoory, Wael Hamza, Zvi Kons, Michael Picheny, Ariel Sagi, Slava Shechtman, and Zhi Wei Shuang. [*The {{site.data.keyword.IBM_notm}} Submission to the 2006 Blizzard Text-to-Speech Challenge.* ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.festvox.org/blizzard/bc2006/ibm_blizzard2006.pdf){: new_window} In Blizzard Challenge Workshop 2006.
