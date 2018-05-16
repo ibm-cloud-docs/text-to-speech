@@ -90,4 +90,4 @@ The following command uses the `GET /v1/synthesize` method to synthesize Spanish
 -   Learn more about the service's HTTP interface in [The HTTP REST interface](/docs/services/text-to-speech/http.html).
 -   Learn about the service's WebSocket interface in [The WebSocket interface](/docs/services/text-to-speech/websockets.html).
 -   Get detailed information about the methods of the service's interface in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/text-to-speech/api/v1/){: new_window}.
--   Interact with the API in the [API explorer ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-api-explorer.mybluemix.net/apis/text-to-speech-v1){: new_window}.
+-   Interact with the API in the [API explorer ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-api-explorer.ng.bluemix.net/apis/text-to-speech-v1){: new_window}.
