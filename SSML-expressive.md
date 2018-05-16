@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-20"
+  years: 2015, 2018
+lastupdated: "2018-05-13"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2017-10-20"
 # Expressive SSML
 {: #expressive}
 
-By default, the {{site.data.keyword.texttospeechshort}} service synthesizes text in a neutral declarative style. The service extends SSML with an `<express-as>` element that lets you indicate expressiveness by converting text to synthesized speech in a variety of speaking styles. The element is analogous to the SSML element `<say-as>`, which specifies text normalization for formatted text such as dates, times, and numbers.
+By default, the {{site.data.keyword.texttospeechshort}} service synthesizes text in a neutral declarative style. The service extends SSML with an `<express-as>` element that effects expressiveness by converting text to synthesized speech in various speaking styles. The element is analogous to the SSML element `<say-as>`, which specifies text normalization for formatted text such as dates, times, and numbers.
 {: shortdesc}
 
 ## Language support

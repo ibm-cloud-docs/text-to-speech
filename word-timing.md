@@ -38,9 +38,9 @@ To return mark or word timing information, the service multiplexes independent b
 -   For each `<mark`> element, the service returns a JSON text message that indicates the exact time from the beginning of the synthesized audio at which the mark occurs.
 -   For word timings for all strings, it returns one or more JSON text messages, each of which contains an array of words and their start and end times from the beginning of the synthesized audio.
 
-Because the binary and text streams are independent, the service has very little control over the number of audio chunks it delivers and when the user receives the text and audio messages. For example, if the audio is synthesized more quickly than it is compressed, all text messages may arrive before any of the audio.
+Because the binary and text streams are independent, the service has little control over the number of audio chunks it delivers and when the user receives the text and audio messages. For example, if the audio is synthesized more quickly than it is compressed, all text messages might arrive before any of the audio.
 
-In practical terms, this means that the service can send an arbitrary number of audio chunks, including multiple chunks of audio before and after each text message. It is also possible for a single binary chunk to contain audio data that both precedes and follows the timing information for a mark or word.
+In practical terms, the service can send an arbitrary number of audio chunks, including multiple chunks of audio before and after each text message. It is also possible for a single binary chunk to contain audio data that both precede and follow the timing information for a mark or word.
 
 However, the text message that contains the timing information always arrives before the binary chunk that contains the corresponding audio. Moreover, the audio messages always arrive in order so that you can construct an accurate audio synthesis of the text from the binary results.
 
@@ -64,7 +64,7 @@ function onOpen(evt) {
 ```
 {: codeblock}
 
-When it has synthesized the text that precedes the mark, the service sends a text message that identifies the name of the mark and the time in seconds at which it occurs in the audio:
+When it has synthesized the text that precedes the mark, the service sends a text message that identifies the name of the mark and the time in seconds at which the mark occurs in the audio:
 
 ```javascript
 {
@@ -82,7 +82,7 @@ The text message that contains the timing information always arrives before the 
 
 The optional `timings` parameter of the JSON object that you pass to the service for a request returns timing information for all strings of the input text. This convenience eliminates the need to specify the SSML `<mark>` element for each word of the input. Pass an array that includes the string `words` to request word timings; pass an empty array or omit the parameter to receive no timing information.
 
-The service returns word timings over the WebSocket connection in the same way that it returns timing information for individual `<mark>` elements. It returns one or more JSON text messages, each of which contains an array of words and their start and end times in seconds from the beginning of the synthesized audio. For example, the following example requests word timing information:
+The service returns word timings over the WebSocket connection in the same way that it returns timing information for individual `<mark>` elements. It returns one or more JSON text messages. Each message contains an array of words and their start and end times in seconds from the beginning of the synthesized audio. For example, the following example requests word timing information:
 
 ```javascript
 function onOpen(evt) {
@@ -149,9 +149,9 @@ The service returns timing information for all strings of the input, including "
 ### Timings for SSML text
 {: #timingSSML}
 
-When the service synthesizes plain text, it returns all input characters except for blankspaces as part of the strings in its word timing response. However, the same is not true of SSML, since some SSML elements do not generate audio. The following list summarizes the SSML elements that can impact word timing information:
+When the service synthesizes plain text, it returns all input characters except for blank spaces as part of the strings in its word timing response. The same is not true of SSML, since some SSML elements do not generate audio. The following list summarizes the SSML elements that can impact word timing information:
 
--   `<say-as>` indicates how the text that is enclosed between the opening and closing `<say-as>` tags is to be handled in the normalization step, with additional attributes specifying how the embedded text is to be spoken. The following example indicates how the date is to be spoken:
+-   `<say-as>` indicates how the text that is enclosed between the opening and closing `<say-as>` tags is to be handled in the normalization step. Additional attributes specify how the embedded text is to be spoken. The following example indicates how the date is to be spoken:
 
     ```xml
     The baby was born on <say-as interpret-as="date" format="mdy">3/4/2016</say-as>.
@@ -167,8 +167,8 @@ When the service synthesizes plain text, it returns all input characters except 
     ```
     {: codeblock}
 
-    The service returns timing information for the string "*Hello.*". The service spells the word letter-by-letter during the normalization step, and the word timing information in the response reflects the start time of the letter "*h*" and the end time of the letter "*o*".
--   `<phoneme>` provides a pronunciation for the text enclosed in the opening and closing `<phoneme>` tags. But both the text and the closing tag are optional. The following example includes embedded text and a closing tag:
+    The service returns timing information for the string "*Hello.*". The service spells the word letter-by-letter during the normalization step. The word timing information in the response reflects the start time of the letter "*h*" and the end time of the letter "*o*".
+-   `<phoneme>` provides a pronunciation for the text that is enclosed in the opening and closing `<phoneme>` tags. But both the text and the closing tag are optional. The following example includes embedded text and a closing tag:
 
     ```xml
     The <phoneme alphabet="ibm" ph=".0tx.1me.0fo">tomato</phoneme> was ripe.
@@ -185,7 +185,7 @@ When the service synthesizes plain text, it returns all input characters except 
     {: codeblock}
 
     In this case, the service returns timing information for the following strings: "*The*", "*&lt;phoneme&gt;*", "*was*", "*ripe.*"
--   `<sub>` substitutes the text included in the element's `alias` attribute for the text enclosed between the opening and closing `<sub>` tags in the spoken audio. For example, the following input includes a single `<sub>` tag:
+-   `<sub>` substitutes the text that is included in the element's `alias` attribute for the text enclosed between the opening and closing `<sub>` tags in the spoken audio. For example, the following input includes a single `<sub>` tag:
 
     ```xml
     I work at <sub alias="International Business Machines">IBM</sub>.
@@ -197,12 +197,12 @@ When the service synthesizes plain text, it returns all input characters except 
 - `<paragraph>` (or `<p>`) can add silence to the audio. The service does not return timing information for the silence.
 - `<sentence>` (or `<s>`) can add silence to the audio. The service does not return timing information for the silence.
 
-SSML elements not mentioned in the list do not impact word timing information. For more information about the service's support for SSML, see [Using SSML](/docs/services/text-to-speech/SSML.html).
+SSML elements that are not mentioned in the list do not impact word timing information. For more information about the service's support for SSML, see [Using SSML](/docs/services/text-to-speech/SSML.html).
 
 ## Examples with mark elements
 {: #example}
 
-The following examples show a simple WebSocket session between a client and the service. The examples focus on the exchange of data, not on opening the connection. The client sends a text message that includes two `<mark>` elements, named `SIMPLE` and `EXAMPLE`, and requests that audio be returned in WAV format:
+The following examples show a simple WebSocket session between a client and the service. The examples focus on the exchange of data, not on opening the connection. The client sends a text message that includes two `<mark>` elements, named `SIMPLE` and `EXAMPLE`, and it requests the audio to be returned in WAV format:
 
 ```javascript
 {

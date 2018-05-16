@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2018-04-27"
+  years: 2015, 2018
+lastupdated: "2018-05-12"
 
 ---
 
@@ -36,7 +36,7 @@ The {{site.data.keyword.texttospeechfull}} service converts written text to natu
     1.  On the service dashboard, click the **Service credentials** tab.
     1.  Click **View credentials** under **Actions**.
     1.  Copy the `username`, `password`, and `url` values.
-- Make sure you have cURL:
+- Make sure that you have cURL:
     - The examples use cURL to call methods of the HTTP interface. Install the version for your operating system from [curl.haxx.se ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://curl.haxx.se/){: new_window}. Install the version that supports the Secure Sockets Layer (SSL) protocol. Make sure to include the installed binary file on your `PATH` environment variable.
 
 
@@ -45,7 +45,7 @@ The {{site.data.keyword.texttospeechfull}} service converts written text to natu
 
 The following commands use the `POST /v1/synthesize` method to synthesize US English input to audio files in two different formats. Both requests use the default US English voice, `en-US_MichaelVoice`.
 
-1.  Issue the following command to synthesize the string "hello world" and produce a WAV file named `hello_world.wav`.
+1.  Issue the following command to synthesize the string "hello world" and produce a WAV file that is named `hello_world.wav`.
     -   Replace `{username}` and `{password}` with your service credentials from the previous step.
 
     ```bash
@@ -58,7 +58,7 @@ The following commands use the `POST /v1/synthesize` method to synthesize US Eng
     ```
     {: pre}
 
-1.  Issue the following command to synthesize the same text but produce an Ogg file named `hello_world.ogg`, the default format.
+1.  Issue the following command to synthesize the same text but produce an Ogg file (the default format) that is named `hello_world.ogg`.
     -   Replace `{username}` and `{password}` with your service credentials.
 
     ```bash
@@ -75,7 +75,7 @@ The following commands use the `POST /v1/synthesize` method to synthesize US Eng
 
 The following command uses the `GET /v1/synthesize` method to synthesize Spanish input to an audio file.
 
-1.  Issue the following command to synthesize the string "hola mundo" and produce a WAV file named `hola_mundo.wav`. The input text is URL-encoded. The method includes the query parameters `accept` to specify the audio format and `voice` to specify a Spanish voice, `es-ES_EnriqueVoice`.
+1.  Issue the following command to synthesize the string "hola mundo" and produce a WAV file that is named `hola_mundo.wav`. The input text is URL-encoded. The method includes the query parameters `accept` to specify the audio format and `voice` to specify a Spanish voice, `es-ES_EnriqueVoice`.
     -   Replace `{username}` and `{password}` with your service credentials.
 
     ```bash
@@ -87,7 +87,7 @@ The following command uses the `GET /v1/synthesize` method to synthesize Spanish
 
 ## Next steps
 
--   Learn more about using the service's HTTP interface in [The HTTP REST interface](/docs/services/text-to-speech/http.html).
--   Learn about using the service's WebSocket interface in [The WebSocket interface](/docs/services/text-to-speech/websockets.html).
+-   Learn more about the service's HTTP interface in [The HTTP REST interface](/docs/services/text-to-speech/http.html).
+-   Learn about the service's WebSocket interface in [The WebSocket interface](/docs/services/text-to-speech/websockets.html).
 -   Get detailed information about the methods of the service's interface in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/text-to-speech/api/v1/){: new_window}.
 -   Interact with the API in the [API explorer ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-api-explorer.mybluemix.net/apis/text-to-speech-v1){: new_window}.

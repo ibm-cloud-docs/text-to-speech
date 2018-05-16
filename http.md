@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-15"
+lastupdated: "2018-05-13"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2018-04-15"
 # The HTTP REST interface
 {: #usingHTTP}
 
-To synthesize text to speech with the service's HTTP REST API, you call the `GET` or `POST` version of the service's `/v1/synthesize` method. You specify the text to be synthesized, the voice for the spoken audio, and the format for the audio. You can also specify a custom voice model to be used with the request. For detailed information about the HTTP interface, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/text-to-speech/api/v1/){: new_window}.
+To synthesize text to speech with the service's HTTP REST API, you call the `GET` or `POST` version of the service's `/v1/synthesize` method. You specify the text to be synthesized, the voice for the spoken audio, and the format for the audio. You can also specify a custom voice model to be used with the request. For more information about the HTTP interface, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/text-to-speech/api/v1/){: new_window}.
 {: shortdesc}
 
 ## Synthesizing text to audio
@@ -31,7 +31,7 @@ To synthesize text to audio, you call one of the two versions of the service's `
 -   The `GET /v1/synthesize` method accepts the text to be synthesized via its required `text` query parameter.
 -   The `POST /v1/synthesize` method accepts the text to be synthesized via a JSON construct in the required body of the request.
 
-Both versions of the method accept a maximum of 5 KB of input text; for more information, see [Specifying input text](#input). The two versions of the `/v1/synthesize` method have the following parameters in common:
+Both versions of the method accept a maximum of 5 KB of input text. For more information, see [Specifying input text](#input). The two versions of the `/v1/synthesize` method have the following parameters in common:
 
 <table>
   <caption>Table 1. Parameters of the <code>/v1/synthesize</code>
@@ -73,24 +73,28 @@ Both versions of the method accept a maximum of 5 KB of input text; for more inf
       Specifies a globally unique identifier (GUID) for a custom voice
       model to be used for the synthesis. A specified custom voice model
       is guaranteed to work only if it matches the language of the voice
-      used for the synthesis. If you include a customization ID, you must
-      call the method with the service credentials of the model's owner.
-      Omit the parameter to use the specified voice with no customization.
-      For more information, see
+      that is used for the synthesis. If you include a customization ID,
+      you must call the method with the service credentials of the model's
+      owner. Omit the parameter to use the specified voice with no
+      customization. For more information, see
       <a href="/docs/services/text-to-speech/custom-intro.html">Understanding
         customization</a>.
     </td>
   </tr>
 </table>
 
-You can also use the `X-Watson-Learning-Opt-Out` header parameter that is available for all {{site.data.keyword.watson}} services to control the logging of requests to the service; see [Controlling request logging for {{site.data.keyword.watson}} services](/docs/services/watson/getting-started-logging.html).
+You can also use the following request headers, which are available for all {{site.data.keyword.watson}} service, with a synthesize request:
+
+-   `X-Watson-Learning-Opt-Out` controls the logging of requests to the service; see [Controlling request logging for {{site.data.keyword.watson}} services](/docs/services/watson/getting-started-logging.html).
+-   `X-Watson-Authorization-Token` passes an authentication token with a request rather than requiring your service credentials; see [Tokens for authentication](/docs/services/watson/getting-started-tokens.html).
+-   `X-Watson-Metadata` associates a customer ID with data that is passed with a request; see [Information security](/docs/services/text-to-speech/information-security.html).
 
 > **Note:** If you specify an invalid query parameter or JSON field as part of the input to the `/v1/synthesize` method, the service returns a `Warnings` response header that describes and lists each invalid argument. The request succeeds despite the warnings.
 
 ## Specifying an audio format
 {: #format}
 
-Both versions of the `/v1/synthesize` method take an optional query parameter named `accept` to specify the requested audio format (MIME type) of the audio. (You can also specify the value with the `Accept` request header.) The parameter accepts the following audio formats. If you omit the parameter, the service returns the audio in Ogg format with the Opus codec (`audio/ogg;codecs=opus`) by default.
+Both versions of the `/v1/synthesize` method take an optional `accept` query parameter to specify the requested audio format (MIME type) of the audio. (You can also specify the value with the `Accept` request header.) The parameter accepts the following audio formats. If you omit the parameter, the service returns the audio in Ogg format with the Opus codec (`audio/ogg;codecs=opus`) by default.
 
 <table>
   <caption>Table 2. Supported audio formats</caption>
@@ -103,9 +107,9 @@ Both versions of the `/v1/synthesize` method take an optional query parameter na
       <code>audio/basic</code>
     </td>
     <td>
-      <em>Basic audio</em>, a single-channel audio format encoded using
-      8-bit u-law (or mu-law) data sampled at 8 kHz. This format
-      provides a lowest-common denominator media type. For more
+      <em>Basic audio</em>, a single-channel audio format that is encoded
+      by using 8-bit u-law (or mu-law) data that is sampled at 8 kHz. This
+      format provides a lowest-common denominator media type. For more
       information, see the IETF
       <a target="_blank" href="https://tools.ietf.org/html/rfc2046">Request
         for Comment (RFC) 2046 ![External link icon](../../icons/launch-glyph.svg "External link icon")</a> and
@@ -133,9 +137,9 @@ Both versions of the `/v1/synthesize` method take an optional query parameter na
       <a target="_blank" href="https://tools.ietf.org/html/rfc2586">Request
         for Comment (RFC) 2586 ![External link icon](../../icons/launch-glyph.svg "External link icon")</a> and
       <a target="_blank" href="https://en.wikipedia.org/wiki/Pulse-code_modulation">en.wikipedia.org/wiki/Pulse-code_modulation ![External link icon](../../icons/launch-glyph.svg "External link icon")</a>.<br/><br/>
-      You must specify the sampling rate with this audio format; for example,
-      <code>audio/l16;rate=16000</code> for audio sampled at 16 kHz. You can
-      also optionally specify the endianness as either
+      You must specify the sampling rate with this audio format. For example,
+      specify <code>audio/l16;rate=16000</code> for audio that is sampled at
+      16 kHz. You can also optionally specify the endianness as either
       <code>audio/l16;rate={rate};endianness=big-endian</code> or
       <code>audio/l16;rate={rate};endianness=little-endian</code>; the
       default is little endian.
@@ -173,9 +177,10 @@ Both versions of the `/v1/synthesize` method take an optional query parameter na
     </td>
     <td>
       <em>Ogg format</em> (<code>.ogg</code>), a free, open container format
-      maintained by the Xiph.org Foundation; for more information, see
+      that is maintained by the Xiph.org Foundation. For more information, see
       <a target="_blank" href="https://www.xiph.org/ogg/">xiph.org/ogg/ ![External link icon](../../icons/launch-glyph.svg "External link icon")</a>.
-      You can request audio streams compressed with the following codecs:
+      You can request audio streams that are compressed with the following
+      codecs:
       <ul style="margin-left:20px; padding:0px;">
         <li style="margin:10px 0px; line-height:120%;">
           <em>Opus</em>. For more information, see
@@ -204,9 +209,9 @@ Both versions of the `/v1/synthesize` method take an optional query parameter na
     <td>
       <em>Waveform Audio File Format (WAV)</em> (<code>.wav</code>) is
       a standard container format that is often used for uncompressed
-      audio bitstreams but can contain compressed audio, as well. Note
-      that due to the streaming nature of the returned audio, the WAV
-      file generated may not work in all audio players. Specifically,
+      audio bitstreams but can contain compressed audio, as well. Due to
+      the streaming nature of the returned audio, the WAV file that is
+      generated might not work in all audio players. Specifically,
       the attribute <code>numSamples</code> in the header of the file
       is set to <code>0</code> regardless of the length of the audio.
       For more information, see
@@ -221,9 +226,9 @@ Both versions of the `/v1/synthesize` method take an optional query parameter na
     </td>
     <td>
       <em>Web Media (WebM)</em> (<code>.webm</code>), an open media-file
-      format that provides support for audio streams compressed with the
-      Opus and Vorbis audio codecs. If you omit the codec, the service
-      returns the audio in Opus format. For more information, see
+      format that provides support for audio streams that are compressed
+      with the Opus and Vorbis audio codecs. If you omit the codec, the
+      service returns the audio in Opus format. For more information, see
       <a target="_blank" href="https://www.webmproject.org/">webmproject.org ![External link icon](../../icons/launch-glyph.svg "External link icon")</a>.
     </td>
   </tr>
@@ -234,7 +239,7 @@ The audio files can be played in a web browser by an audio player such as Audaci
 ### Specifying a sampling rate
 {: #sampling}
 
-The service always synthesizes audio with a sampling rate of 22,050 Hz. For most audio formats, the service returns audio with this default sampling rate. For some formats, you can specify a different sampling rate by including the `rate={rate}` parameter; for `audio/l16` and `audio/mulaw`, you *must* specify a sampling rate. The service resamples the audio and returns it at the specified rate. A specified sampling rate must lie in the range of 8 kHz to 192 kHz.
+The service always synthesizes audio with a sampling rate of 22,050 Hz. For most audio formats, the service returns audio with this default sampling rate. For some formats, you can specify a different sampling rate by including the `rate={rate}` parameter. For `audio/l16` and `audio/mulaw`, you *must* specify a sampling rate. The service resamples the audio and returns it at the specified rate. A specified sampling rate must lie in the range of 8 kHz to 192 kHz.
 
 The following table shows the default sampling rate of the audio that is returned for each format and indicates those formats for which the `rate` parameter can or must be specified.
 
@@ -364,7 +369,7 @@ The following table shows the default sampling rate of the audio that is returne
 
 The most reliable way to identify the sampling rate for any audio stream that the service returns is to extract the information from the stream itself. You can determine the rate by calling the `/v1/synthesize` method with some simple text (for example, "hello world") and specifying the format and codec that you plan to use. You can then obtain the codec and sampling rate by saving the audio stream to a file and opening it in an audio player.
 
-> **Note:** The Opus standard requires the output sampling rate to match the capabilities of the audio player as described in Section 5.1 of the Internet Engineering Task Force (IETF) [Request for Comments (RFC) 7845 ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://tools.ietf.org/html/rfc6455){: new_window}. For software audio players, the table indicates the typical output sampling rate, but the actual sampling rate of the audio varies with time within the stream. As mentioned, the service synthesizes the source audio at 22,050 Hz.
+> **Note:** The Opus standard requires the output sampling rate to match the capabilities of the audio player. For more information, see Section 5.1 of the Internet Engineering Task Force (IETF) [Request for Comments (RFC) 7845 ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://tools.ietf.org/html/rfc6455){: new_window}. For software audio players, the table indicates the typical output sampling rate, but the actual sampling rate of the audio varies with time within the stream. As mentioned, the service synthesizes the source audio at 22,050 Hz.
 
 ## Specifying a voice
 {: #voices}
@@ -459,12 +464,12 @@ The following table lists the voices that are available for each language and di
   </tr>
 </table>
 
-> **Note:** The voices `es-LA_SofiaVoice` and `es-US_SofiaVoice` are essentially the same voice. The most significant difference concerns how the two voices interpret a `$` (dollar sign): The Latin American version uses the term *pesos*, while the North American version uses the term *dolares*. Other minor differences may also exist between the two voices.
+> **Note:** The voices `es-LA_SofiaVoice` and `es-US_SofiaVoice` are essentially the same voice. The most significant difference concerns how the two voices interpret a `$` (dollar sign): The Latin American version uses the term *pesos*, while the North American version uses the term *dolares*. Other minor differences might exist between the two voices.
 
 ### Listing all available voices
 {: #listVoices}
 
-The `GET /v1/voices` method lists information about all available voices. It takes no arguments and returns a JSON array named `voices` that includes a separate object for each voice.
+The `GET /v1/voices` method lists information about all available voices. It takes no arguments and returns a JSON array that is named `voices`. The array includes a separate object for each voice.
 
 ```javascript
 {
@@ -489,13 +494,13 @@ The `GET /v1/voices` method lists information about all available voices. It tak
 
 The fields of the voice objects provide the following information:
 
--   `name` is an identifier for the voice (for example, `en-US_LisaVoice`). This is the value that you specify for the `voice` parameter of the `/v1/synthesize` method.
+-   `name` is an identifier for the voice (for example, `en-US_LisaVoice`). Specify this value for the `voice` parameter of the `/v1/synthesize` method.
 -   `language` specifies the language and region of the voice (for example, `en-US`).
 -   `gender` identifies the voice as `male` or `female`.
 -   `url` identifies the URL for the voice.
 -   `description` provides a brief description of the voice.
 -   `customizable` is a boolean value that indicates whether the voice can be customized with the service's customization interface. (Same as `custom_pronunciation`; maintained for backward compatibility.)
--   `supported_features` describes the additional service features that are supported with the voice:
+-   `supported_features` describes the additional service features that are supported by the voice:
     -   `voice_transformation` is a boolean value that indicates whether the voice can be transformed by using the SSML `<voice-transformation>` element.
     -   `custom_pronunciation` is a boolean value that indicates whether the voice can be customized with the service's customization interface. (Same as `customizable`.)
 
@@ -535,7 +540,7 @@ The `GET /v1/voices/{voice}` method lists information about a specific voice. It
   </tr>
 </table>
 
-If you omit the `customization_id` parameter, the method returns JSON output for the specified voice that is identical to the information returned for a voice by the `GET /v1/voices` method. If you specify a `customization_id`, the output includes an additional `customization` field that provides information about the specified custom voice model.
+If you omit the `customization_id` parameter, the method returns JSON output for the specified voice that is identical to the information returned for a voice by the `GET /v1/voices` method. If you specify a `customization_id`, the output includes a `customization` field that provides information about the specified custom voice model.
 
 ```javascript
 {
@@ -586,14 +591,14 @@ Although the `GET` and `POST` methods offer equivalent functionality, it is alwa
 ### Specifying SSML input
 {: #ssml}
 
-The Speech Synthesis Markup Language (SSML) is an XML-based markup language that is designed to provide annotations of text for speech synthesis applications such as the {{site.data.keyword.texttospeechshort}} service. SSML lets you specify many features to control the speech that is generated. You can use SSML elements and their attributes to gain greater control over the synthesis and resulting audio output.
+The Speech Synthesis Markup Language (SSML) is an XML-based markup language that is designed to provide annotations of text for speech synthesis applications such as the {{site.data.keyword.texttospeechshort}} service. You can use SSML elements and their attributes to gain greater control over the synthesis and resulting audio output.
 
-For information about using SSML to annotate input text, see [Using SSML](/docs/services/text-to-speech/SSML.html). The documentation introduces the inventory of SSML elements and attributes supported by the service, and it documents the service's expressive and voice-transformation extensions.
+For more information about using SSML to annotate input text, see [Using SSML](/docs/services/text-to-speech/SSML.html). The documentation introduces the inventory of SSML elements and attributes that are supported by the service. It also documents the service's expressive and voice-transformation extensions.
 
 ### Escaping XML control characters
 {: #escape}
 
-Because you can submit input text that includes XML-based SSML annotations, the service validates all input to ensure that any SSML is correct and well formed. Therefore, you must escape any XML control characters that are present in the input text, regardless of whether the input includes SSML. Use the equivalent escape strings or character encodings described in the following table instead of the indicated characters.
+Because you can submit input text that includes XML-based SSML annotations, the service validates all input to ensure that any SSML is correct and well formed. Therefore, you must escape any XML control characters that are present in the input text, regardless of whether the input includes SSML. Use the equivalent escape strings or character encodings from the following table instead of the indicated characters.
 
 <table style="width:80%">
   <caption>Table 6. Escaping XML control characters</caption>
