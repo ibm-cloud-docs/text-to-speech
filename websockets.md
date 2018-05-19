@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-15"
+lastupdated: "2018-05-19"
 
 ---
 
@@ -29,7 +29,7 @@ The synthesize request and response cycle includes the following steps:
 1.  [Send input text](#WSsend).
 1.  [Receive a response](#WSreceive).
 
-The WebSocket interface accepts identical input and produces identical results as the `GET` and `POST /v1/synthesize` methods of the HTTP interface. However, the WebSocket interface supports use of the SSML `<mark>` element to identify the location of user-specified markers in the audio, and it allows you to obtain word timing information in the audio for all strings of the input text. For more information, see [Obtaining word timings](/docs/services/text-to-speech/word-timing.html).
+The WebSocket interface accepts identical input and produces identical results as the `GET` and `POST /v1/synthesize` methods of the HTTP interface. However, the WebSocket interface supports use of the SSML `<mark>` element to identify the location of user-specified markers in the audio. It can also return timing information for all strings of the input text. For more information, see [Obtaining word timings](/docs/services/text-to-speech/word-timing.html).
 
 ## Open a connection
 {: #WSopen}
@@ -171,8 +171,8 @@ To synthesize text, the client passes a simple JSON text message to the service 
       more information, see
       <a href="/docs/services/text-to-speech/http.html#format">Specifying
       an audio format</a>. In addition to the supported specifications,
-      the WebSocket interface lets you specify `*/*` to use the default
-      audio format, <code>audio/ogg;codecs=opus</code>.
+      you can use `*/*` to specify the default audio format,
+      <code>audio/ogg;codecs=opus</code>.
     </td>
   </tr>
   <tr>
@@ -182,9 +182,9 @@ To synthesize text, the client passes a simple JSON text message to the service 
       Specifies that the service is to return word timing information
       for all strings of the input text. The service returns the start
       and end time of each string of the input. Specify <code>words</code>
-      as the sole element of the array to request word timings; specify
-      an empty list or omit the parameter to receive no word timings. For
-      more information, see
+      as the lone element of the array to request word timings. Specify
+      an empty array or omit the parameter to receive no word timings.
+      For more information, see
       <a href="/docs/services/text-to-speech/word-timing.html#timing">Obtaining
       word timings</a>. <em>Not supported for Japanese input text.</em>
     </td>
@@ -220,9 +220,14 @@ The service responds to this message by sending a text message that confirms the
 ## Receive a response
 {: #WSreceive}
 
-After it confirms the audio format, the service sends the synthesized audio as a binary stream of data in the indicated format. If the input text includes one or more SSML `<mark>` elements or if you specified the `timings` parameter with the request, the service sends timing information as one or more text messages. The service can also send text messages with warnings or errors. When it finishes synthesizing the input text, the service automatically closes the WebSocket connection.
+After it confirms the audio format, the service sends the synthesized audio as a binary stream of data in the indicated format. The service sends timing information as one or more text messages if
 
-The client needs to append binary responses from the service to the audio results received over the connection. It can handle text messages by responding to them, displaying them, or capturing them for use by the application (for example, if they contain mark locations). The following simple example of an `onMessage` function appends text and binary messages that are received from the service to the appropriate variable depending on their type. When the `onClose()` function executes, the entire audio stream has been received.
+-   The input text includes one or more SSML `<mark>` elements.
+-   You specify the `timings` parameter with the request.
+
+The service can also send text messages with warnings or errors. When it finishes synthesizing the input text, the service automatically closes the WebSocket connection.
+
+The client needs to append binary responses from the service to the audio results received over the connection. It can handle text messages by responding to them, displaying them, or capturing them for use by the application (for example, if they contain mark locations). The following simple example of an `onMessage` function appends text and binary messages that are received from the service to the appropriate variable based on their type. When the `onClose()` function executes, the entire audio stream has been received.
 
 ```javascript
 var messages;
@@ -259,13 +264,13 @@ If the socket closes with an error, the service sends the client an informative 
 ### Example error and warning messages
 {: #returnErrors}
 
-The first two examples show error responses. They include a JSON text message and a formatted message from the client's `onClose` callback method. The formatted messages begin with the boolean `true` because the connection is closed; they also include the WebSocket error code that caused the closure. The third example shows a warning response. It does not include the second message because the connection is not closed by the warning.
+The first two examples show error responses. They include a JSON text message and a formatted message from the client's `onClose` callback method. The formatted messages begin with the boolean `true` because the connection is closed. They also include the WebSocket error code that caused the closure. The third example shows a warning response. It does not include the second message because the connection is not closed by the warning.
 
 -   The first example shows error messages for an invalid argument for the `accept` parameter:
 
     ```javascript
     {
-      "error": "Unsupported mimetype.  Supported mimetypes are: ['application/json', 'audio/flac', ...]"
+      "error": "Unsupported mimetype. Supported mimetypes are: ['application/json', 'audio/flac', ...]"
     }
     (True, 1011, u'see the previous message for the error details.')
     ```
@@ -297,12 +302,17 @@ For more information about WebSocket return codes, see the Internet Engineering 
 
 The following brief example Python code defines a class that sends a simple message with a single `<mark>` element to the service over a WebSocket connection. The code works equally well for text that does not include a `<mark>` element.
 
-The code defines callback methods to handle state changes and responses in the connection. The Python callback methods differ slightly from the JavaScript event handlers shown previously. All methods log suitable messages to the console.
+The code defines callback methods to handle state changes and responses in the connection. The Python callback methods differ slightly from the JavaScript event handlers that were shown previously. All methods log suitable messages to the console.
 
 -   The `onConnect` method fires when the service accepts the connection but before the handshake is completed.
 -   The `onOpen` method fires when the handshake between the client and service is complete and the connection is fully established. The method sends a JSON text message that specifies the text to be synthesized and the requested format of the audio.
--   The `onMessage` method fires when the service sends a response. The method appends a binary response to the audio that is received from the service and a text message to the list of messages that are received from the service.
--   The `onClose` method fires when the connection is closed. The `wasClean` argument is a boolean that indicates whether the connection was closed as a result of the service's sending a close frame, as opposed to a network or protocol error. The `code` and `reason` arguments provide the WebSocket return code and its accompanying message.
+-   The `onMessage` method fires when the service sends a response. The method appends a binary response to the audio that is received from the service. It appends a text message to the list of messages that are received from the service.
+-   The `onClose` method fires when the connection is closed. The `wasClean` argument is a boolean that indicates why the connection was closed:
+
+    -   The service sent a close frame (`true`).
+    -   A network or protocol error occurred (`false`).
+
+    The `code` and `reason` arguments provide the WebSocket return code and its accompanying message.
 
 ```python
 class TTSWSClientProtocol(WebSocketClientProtocol):

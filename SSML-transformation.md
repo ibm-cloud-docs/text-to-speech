@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-20"
+  years: 2015, 2018
+lastupdated: "2018-05-19"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2017-10-20"
 # Voice transformation SSML
 {: #transformation}
 
-The {{site.data.keyword.texttospeechshort}} service, like most speech synthesis systems, can speak in only a limited number of voices. Moreover, some languages offer only one or two voices. To expand the range of possible voices, the service extends SSML with a `<voice-transformation>` element that lets you realize different virtual voices by controlling aspects of a default voice. Applications of the feature include
+The {{site.data.keyword.texttospeechshort}} service, like most speech synthesis systems, can speak in only a limited number of voices. Moreover, some languages offer only one or two voices. To expand the range of possible voices, the service extends SSML with a `<voice-transformation>` element. You can use this element to realize different virtual voices by controlling aspects of a default voice. Applications of the feature include
 {: shortdesc}
 
 -   *Giving another flavor to a voice.* You want a voice to sound a bit different in general or for a specific application.
@@ -47,7 +47,7 @@ Built-in transformations apply pre-configured changes to the attributes of a voi
 -   `Young` gives the voice a more youthful sound.
 -   `Soft` makes the voice sound softer.
 
-You can apply the optional `strength` attribute to either built-in voice to control the extent to which the service applies the transformation. Think of the value as a blending factor that the service applies to the original voice. The attribute accepts a value in the range of 0% (the voice remains unaltered) to 100% (the full extent of transformation); if you omit the attribute, the default strength is `100%`.
+You can apply the optional `strength` attribute to either built-in voice to control the extent to which the service applies the transformation. Think of the value as a blending factor that the service applies to the original voice. The attribute accepts a value in the range of 0 to 100 percent. Specifying `0%` leaves the voice unaltered; specifying `100%` achieves the full extent of transformation. If you omit the attribute, the default strength is `100%`.
 
 > **Note:** The service ignores attributes for custom transformations when you use a built-in transformation.
 
@@ -126,7 +126,7 @@ Custom transformations give you more fine-grained control over different aspects
       noise within safe limits. Extreme values might produce either noisy
       speech (for positive breathiness) or a buzzing sound (for negative
       breathiness). Use this attribute to compensate for buzz or extra
-      noise produced as side effects of other attributes.
+      noise that is produced as a side effect of other attributes.
     </td>
   </tr>
   <tr>
@@ -149,7 +149,7 @@ Custom transformations give you more fine-grained control over different aspects
     <td>
       The case-sensitive name of one of the built-in vocal-tract
       transformations: <code>Sunrise</code> or <code>Breeze</code>.
-      The names are symbolic; experiment with the timbres to learn
+      The names are symbolic. Experiment with the timbres to learn
       how they impact voice transformation. The attribute contributes
       to changing perceived speaker identity.
     </td>
@@ -162,8 +162,8 @@ Custom transformations give you more fine-grained control over different aspects
       <code>0%</code> cancels the transformation; <code>100%</code>
       represents full application of the transformation. The attribute
       quantifies the difference between the transformed and original
-      voices, enabling blending of the selected timbre with that of
-      the original voice. Even at moderate timbre extent values, the
+      voices. It enables blending of the selected timbre with the timbre
+      of the original voice. Even at moderate timbre extent values, the
       <code>timbre</code> attribute contributes to changing perceived
       speaker identity.
     </td>
@@ -182,7 +182,7 @@ The numeric ranges of the different attributes indicate the extent to which the 
 ### Using literal values
 {: #literals}
 
-As a convenience, many of the attributes also define literal values that you can use instead of percentages. The meanings of these values differ from those used with the SSML `<prosody>` element. The `<voice-transformation>` element uses a scale that is consistent across its attributes.
+As a convenience, many of the attributes also define literal values that you can use instead of percentages. The meanings of these values differ from the values that are used with the SSML `<prosody>` element. The `<voice-transformation>` element uses a scale that is consistent across its attributes.
 
 -   `x-low`, `x-slow`, and `x-narrow` equal a value of `-100%`.
 -   `low`, `slow`, and `narrow` equal a value of `-50%`.
@@ -193,15 +193,15 @@ As a convenience, many of the attributes also define literal values that you can
 ### Usage guidelines
 {: #guidelines}
 
-Some usage guidelines and cautionary information follow:
+Use the following guidelines and cautionary information:
 
--   To effect voice branding or multi-role applications, use the `timbre`, `pitch`, and `glottal_tension` attributes to change perceived speaker identity. You can use combinations of these three attributes to create virtual voices. Consider a virtual voice as a point in the multi-dimensional space realized by the specified timbre, pitch, and glottal tension, with different combinations yielding different virtual voices.
--   You can use the `pitch_range`, `breathiness`, and `rate` attributes to add flavor to a virtual voice. Other users can choose the same or very similar attribute values, so the service cannot guarantee the uniqueness of your virtual voice.
+-   For voice branding or multi-role applications, use the `timbre`, `pitch`, and `glottal_tension` attributes to change perceived speaker identity. You can use combinations of these three attributes to create virtual voices. Consider a virtual voice as a point in the multi-dimensional space that is realized by the specified timbre, pitch, and glottal tension. Different combinations of the attributes yield different virtual voices.
+-   You can use the `pitch_range`, `breathiness`, and `rate` attributes to add flavor to a virtual voice. Other users can choose the same or similar attribute values, so the service cannot guarantee the uniqueness of your virtual voice.
 -   Be aware of the following potential side effects of applying the attributes:
     -   High glottal tension, high pitch, and low rate can each cause buzzing sounds to occur. Increase the breathiness to mitigate the effect.
     -   Extremely low glottal tension can produce noisy speech. Decrease the breathiness to reduce the noise.
     -   Raising or lowering pitch range and rate to extreme degrees simultaneously can make speech sound unnatural.
--   As noted, some of the attributes are borrowed from the SSML `<prosody>` element (for more information, see [The prosody element](/docs/services/text-to-speech/SSML-elements.html#prosody_element)). To enable fine prosody control of a virtual voice, you can
+-   As noted, some of the attributes are borrowed from the SSML `<prosody>` element. For more information, see [The prosody element](/docs/services/text-to-speech/SSML-elements.html#prosody_element). To enable fine prosody control of a virtual voice, you can
     -   Nest `<prosody>` elements within `<voice-transformation>` elements.
     -   Nest `<voice-transformation>` elements within `<prosody>` elements.
 
@@ -209,7 +209,7 @@ Some usage guidelines and cautionary information follow:
 
 ## Custom transformation examples
 
-The following examples apply different attributes to demonstrate possible applications of custom transformation. The first example decreases the glottal tension to make the voice softer and increases the pitch range and rate moderately to introduce a more dynamic speaking style.
+The following examples apply different attributes to demonstrate possible applications of custom transformation. The first example decreases the glottal tension to make the voice softer. It also increases the pitch range and rate moderately to introduce a more dynamic speaking style.
 
 ```xml
 <voice-transformation type="Custom" glottal_tension="-50%"

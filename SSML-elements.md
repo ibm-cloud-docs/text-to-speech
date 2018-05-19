@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-13"
+lastupdated: "2018-05-19"
 
 ---
 
@@ -20,13 +20,13 @@ lastupdated: "2018-05-13"
 # SSML elements
 {: #elements}
 
-With the {{site.data.keyword.texttospeechshort}} service, you can use most Speech Synthesis Markup Language (SSML) elements to control the synthesis of your text with all supported languages. The following table summarizes the service's support for SSML elements and attributes.
+With the {{site.data.keyword.texttospeechshort}} service, you can use most Speech Synthesis Markup Language (SSML) elements to control the synthesis of your text. The elements are available for all supported languages. The following table summarizes the service's support for SSML elements and attributes.
 
 -   *Full* means that the service fully supports the element or attribute with its HTTP and WebSocket interfaces.
--   *Partial* means that the service does not support all aspects of the element or attribute or it supports the element or attribute with only one of its interfaces.
+-   *Partial* means that the service does not support all aspects of the element or attribute. It can also mean that the service supports the element or attribute with only one of its interfaces.
 -   *None* means that the service does not support the element or attribute.
 
-For more information about an element or attribute, refer to its description. Where noted, support for some attributes and values differs slightly from the SSML specification. For more information, see [W3C Speech Synthesis Markup Language (SSML) Version 1.0 ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.w3.org/TR/speech-synthesis/){: new_window}.
+For more information about an element or attribute, see its description. Where noted, support for some attributes and values differs slightly from the SSML specification. For more information, see [W3C Speech Synthesis Markup Language (SSML) Version 1.0 ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.w3.org/TR/speech-synthesis/){: new_window}.
 
 <table>
   <caption>Table 1. SSML elements</caption>
@@ -374,7 +374,7 @@ The `cardinal` value speaks the cardinal number for the numeral within the eleme
 ### date
 {: #sayAsDate}
 
-The `date` value speaks the date within the element according to the format given in the associated `format` attribute. The `format` attribute is required for the `date` value, but if no `format` is present, the service still attempts to pronounce the date. The following examples speak the indicated dates in the specified formats, where `d`, `m`, and `y` represent day, month, and year.
+The `date` value speaks the date within the element according to the format given in the associated `format` attribute. The `format` attribute is required for the `date` value. If no `format` is present, the service still attempts to pronounce the date. The following examples speak the indicated dates in the specified formats, where `d`, `m`, and `y` represent day, month, and year.
 
 ```xml
 <speak version="1.0">
@@ -416,7 +416,7 @@ The `letters` value spells out the characters in the word within the element. Th
 ### number
 {: #sayAsNumber}
 
-The `number` value offers an alternative to the `cardinal` and `ordinal` values. You can use the optional `format` attribute to indicate how a series of numbers is to be interpreted. The first example omits the `format` attribute to pronounce the number as a cardinal value. The second example explicitly specifies that the number is to be pronounced as a `cardinal` value, and the third specifies that the number is to be pronounced as an `ordinal` value.
+The `number` value offers an alternative to the `cardinal` and `ordinal` values. You can use the optional `format` attribute to indicate how a series of numbers is to be interpreted. The first example omits the `format` attribute to pronounce the number as a cardinal value. The second example explicitly specifies that the number is to be pronounced as a `cardinal` value. The third example specifies that the number is to be pronounced as an `ordinal` value.
 
 ```xml
 <speak version="1.0">
@@ -427,7 +427,7 @@ The `number` value offers an alternative to the `cardinal` and `ordinal` values.
 ```
 {: codeblock}
 
-You can also specify the value `telephone` for the `format` attribute. The examples show two different ways of pronouncing a series of numbers as a telephone number; to pronounce the numbers with the punctuation included, specify the value `punctuation` for the optional `detail` attribute.
+You can also specify the value `telephone` for the `format` attribute. The examples show two different ways of pronouncing a series of numbers as a telephone number. To pronounce the numbers with the punctuation included, specify the value `punctuation` for the optional `detail` attribute.
 
 ```xml
 <speak version="1.0">
@@ -534,7 +534,7 @@ The `<speak>` element is the root element for SSML documents. Valid attributes a
 ## The sub element
 {: #sub_element}
 
-The `<sub>` element indicates that the text that is specified in the `alias` attribute is to replace the text that is enclosed within the element when speech is synthesized. The `alias` attribute is the only attribute of the element and is required.
+The `<sub>` element indicates that the text that is specified by the `alias` attribute is to replace the text that is enclosed within the element when speech is synthesized. The `alias` attribute is the only attribute of the element and is required.
 
 ```xml
 <speak version="1.0">
