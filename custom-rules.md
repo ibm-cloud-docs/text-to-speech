@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-13"
+lastupdated: "2018-05-19"
 
 ---
 
@@ -36,7 +36,7 @@ A *word* cannot include white space. The service uses white space to delineate i
 
 ## Case-sensitivity
 
-A *word* is case-sensitive. For example, assume that a custom model contains the entry `{word='Sun', translation='Sunday'}`. In this case, the service applies its default pronunciation to the word `sun` but the custom translation to the word `Sun`, since only the latter has an initial capital letter.
+A *word* is case-sensitive. For example, assume that a custom model contains the entry `{word='Sun', translation='Sunday'}`. The service applies its default pronunciation to the word `sun` but the custom translation to the word `Sun`, since only the latter has an initial capital letter.
 
 
 ## Context sensitivity
@@ -55,7 +55,7 @@ Saint Anthony lives on Henry Street
 ```
 {: codeblock}
 
-However, if you override the default pronunciation rules for the string `St.` to translate it as `saint`, the service loses the ability to pronounce the word based on context. Applying a custom voice model that includes such a translation causes the service to pronounce the previous input sentence as
+However, if you override the default pronunciation rules for the string `St.` to translate it as `saint`, the service can no longer pronounce the word based on context. Applying a custom voice model that includes such a translation causes the service to pronounce the previous input sentence as
 
 ```
 Saint Anthony lives on Henry saint
@@ -99,7 +99,7 @@ Extra rules and a `part_of_speech` field apply to the creation of entries for wo
 -   A sounds-like translation can contain only *Katakana* characters. *Kanji* and *Hiragana* characters are not allowed.
 -   When you create a translation (sounds-like or phonetic) for a word, you can also specify an optional `part_of_speech` field to identify the word's part of speech. The service uses the part of speech to produce the correct intonation for the word. For a complete list, see [Japanese parts of speech](#partsOfSpeech).
 -   You can create only a single entry for any word, and you can specify only a single part of speech for any word. You cannot create multiple entries with different parts of speech (for instance, noun and verb) for the same word. Adding a translation for a word that exists in a model overwrites the word's existing translation, including its part of speech.
--   The service applies the longest matching word from the word/translation pairs that are defined for a custom voice model. For example, consider the following three entries for a custom model:
+-   The service applies the longest matching word from the word/translation pairs that are defined for a custom voice model. For example, consider the following three entries for a custom model.
 
     <pre><code>{
       "words": [

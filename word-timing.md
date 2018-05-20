@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-28"
+lastupdated: "2018-05-19"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2018-04-28"
 # Obtaining word timings
 {: #timing}
 
-In addition to providing the same functionality as the HTTP `GET` and `POST /v1/synthesize` methods, the WebSocket interface lets you obtain timing information for specific locations or all words of the input:
+The WebSocket interface provides the same functionality as the HTTP `GET` and `POST /v1/synthesize` methods. You can also use the WebSocket interface to obtain timing information for specific locations or for all words of the input:
 {: shortdesc}
 
 -   Include the SSML `<mark>` element in input text to identify the time at which the marker occurs in the audio.
@@ -35,10 +35,10 @@ Timing information is useful for synchronizing the audio and the input text. For
 
 To return mark or word timing information, the service multiplexes independent binary and text streams to construct its response:
 
--   For each `<mark`> element, the service returns a JSON text message that indicates the exact time from the beginning of the synthesized audio at which the mark occurs.
--   For word timings for all strings, it returns one or more JSON text messages, each of which contains an array of words and their start and end times from the beginning of the synthesized audio.
+-   For each `<mark`> element, the service returns a JSON text message. Each message indicates the exact time from the beginning of the synthesized audio at which the mark occurs.
+-   For word timings for all strings, the service returns one or more JSON text messages. Each message contains an array of words and their start and end times from the beginning of the synthesized audio.
 
-Because the binary and text streams are independent, the service has little control over the number of audio chunks it delivers and when the user receives the text and audio messages. For example, if the audio is synthesized more quickly than it is compressed, all text messages might arrive before any of the audio.
+The binary and text streams that the service sends are independent. So the service has little control over the number of audio chunks that it delivers and when the user receives the text and audio messages. For example, if the audio is synthesized more quickly than it is compressed, all text messages might arrive before any of the audio arrives.
 
 In practical terms, the service can send an arbitrary number of audio chunks, including multiple chunks of audio before and after each text message. It is also possible for a single binary chunk to contain audio data that both precede and follow the timing information for a mark or word.
 
@@ -64,7 +64,7 @@ function onOpen(evt) {
 ```
 {: codeblock}
 
-When it has synthesized the text that precedes the mark, the service sends a text message that identifies the name of the mark and the time in seconds at which the mark occurs in the audio:
+When it finishes synthesizing the text that precedes the mark, the service sends a text message that identifies the name of the mark and the time in seconds at which the mark occurs in the audio:
 
 ```javascript
 {
@@ -80,7 +80,7 @@ The text message that contains the timing information always arrives before the 
 ## Requesting word timings for all words
 {: #timingRequest}
 
-The optional `timings` parameter of the JSON object that you pass to the service for a request returns timing information for all strings of the input text. This convenience eliminates the need to specify the SSML `<mark>` element for each word of the input. Pass an array that includes the string `words` to request word timings; pass an empty array or omit the parameter to receive no timing information.
+The optional `timings` parameter of the JSON object that you pass to the service for a request returns timing information for all strings of the input text. This convenience eliminates the need to specify the SSML `<mark>` element for each word of the input. Pass an array that includes the string `words` to request word timings. Pass an empty array or omit the parameter to receive no timing information.
 
 The service returns word timings over the WebSocket connection in the same way that it returns timing information for individual `<mark>` elements. It returns one or more JSON text messages. Each message contains an array of words and their start and end times in seconds from the beginning of the synthesized audio. For example, the following example requests word timing information:
 
@@ -115,7 +115,7 @@ In response, the service can return the following text messages:
 ```
 {: codeblock}
 
-The response is just an example. The service can return one or more text messages with timing information for the input, and the messages can be interspersed with responses that contain binary chunks of audio. But the text message that contains the timing information for a word always arrives before the audio chunk that contains that word.
+The response is just an example. The service can return one or more text messages with timing information for the input. Moreover, the messages can be interspersed with responses that contain binary chunks of audio. But the text message that contains the timing information for a word always arrives before the audio chunk that contains that word.
 
 ### Timings for plain text
 {: #timingText}
@@ -151,14 +151,14 @@ The service returns timing information for all strings of the input, including "
 
 When the service synthesizes plain text, it returns all input characters except for blank spaces as part of the strings in its word timing response. The same is not true of SSML, since some SSML elements do not generate audio. The following list summarizes the SSML elements that can impact word timing information:
 
--   `<say-as>` indicates how the text that is enclosed between the opening and closing `<say-as>` tags is to be handled in the normalization step. Additional attributes specify how the embedded text is to be spoken. The following example indicates how the date is to be spoken:
+-   `<say-as>` indicates how the text that is enclosed between the opening and closing `<say-as>` tags is to be handled in the normalization step. Attributes specify how the embedded text is to be spoken. The following example indicates how the date is to be spoken:
 
     ```xml
     The baby was born on <say-as interpret-as="date" format="mdy">3/4/2016</say-as>.
     ```
     {: codeblock}
 
-    The service returns timing information for the following strings: "*The*", "*baby*", "*was*", "*born*", "*on*", "*3/4/2016.*" The service normalizes the string "*3/4/2016*" as "*march fourth two thousand sixteen*", and the word timing information for the string reflects the start time of "*march*" and the end time of "*sixteen*".
+    The service returns timing information for the following strings: "*The*", "*baby*", "*was*", "*born*", "*on*", "*3/4/2016.*" The service normalizes the string "*3/4/2016*" as "*march fourth two thousand sixteen*". The word timing information for the string reflects the start time of "*march*" and the end time of "*sixteen*".
 
     The following example indicates that the word `Hello` is to be spelled out:
 
@@ -185,14 +185,14 @@ When the service synthesizes plain text, it returns all input characters except 
     {: codeblock}
 
     In this case, the service returns timing information for the following strings: "*The*", "*&lt;phoneme&gt;*", "*was*", "*ripe.*"
--   `<sub>` substitutes the text that is included in the element's `alias` attribute for the text enclosed between the opening and closing `<sub>` tags in the spoken audio. For example, the following input includes a single `<sub>` tag:
+-   `<sub>` substitutes the text that is included in the element's `alias` attribute for the text that is enclosed between the opening and closing `<sub>` tags in the spoken audio. For example, the following input includes a single `<sub>` tag:
 
     ```xml
     I work at <sub alias="International Business Machines">IBM</sub>.
     ```
     {: codeblock}
 
-    The service produces timing information for the following strings: "*I*", "*work*", "*at*", "*{{site.data.keyword.IBM_notm}}.*". The service normalizes the string "*{{site.data.keyword.IBM_notm}}*" as "*International Business Machines*", and the timing information for the string reflects the start time of "*International*" and the end time of "*Machines*".
+    The service produces timing information for the following strings: "*I*", "*work*", "*at*", "*{{site.data.keyword.IBM_notm}}.*". The service normalizes the string "*{{site.data.keyword.IBM_notm}}*" as "*International Business Machines*". The timing information for the string reflects the start time of "*International*" and the end time of "*Machines*".
 -   `<break>` inserts a pause in the spoken text. The service reflects the resulting silence in the word timings as a gap between the end time of the word that precedes the `<break>` element and the start time of the word that follows the element.
 - `<paragraph>` (or `<p>`) can add silence to the audio. The service does not return timing information for the silence.
 - `<sentence>` (or `<s>`) can add silence to the audio. The service does not return timing information for the silence.
@@ -212,13 +212,13 @@ The following examples show a simple WebSocket session between a client and the 
 ```
 {: codeblock}
 
-The service first sends a message to confirm the audio format. It then sends multiple messages with the results. As noted previously, the service cannot guarantee the number of audio chunks it sends to the client or the order in which it delivers text and audio messages.
+The service first sends a message to confirm the audio format. It then sends multiple messages with the results. The service cannot guarantee the number of audio chunks that it sends to the client or the order in which the text and audio messages are delivered.
 
-Both of the following responses are possible. In each case, the service sends two text messages that identify the locations of the marks in the binary stream but an arbitrary number of binary messages that contain the audio. The timing information for a mark always arrives before the audio chunk that contains the location of the mark.
+Both of the following responses are possible. In each case, the service sends two text messages that identify the locations of the marks in the binary stream. But it sends an arbitrary number of binary messages that contain the audio. The timing information for a mark always arrives before the audio chunk that contains the location of the mark.
 
 ### First example response
 
-In the first example response, the text messages are interspersed with multiple audio messages:
+In the first example response, the text messages are interspersed with multiple audio messages.
 
 ```javascript
 {
@@ -255,7 +255,7 @@ In the first example response, the text messages are interspersed with multiple 
 
 ### Second example response
 
-In the second example response, the text messages arrive before any of the audio:
+In the second example response, the text messages arrive before any of the audio messages.
 
 ```javascript
 {
