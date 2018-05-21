@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-19"
+lastupdated: "2018-05-21"
 
 ---
 
@@ -106,7 +106,7 @@ You can apply the `<express-as>` element to the entire body of the text, a sente
 
 ## Expressive examples
 
-The following examples demonstrate the use of all three forms of expressiveness in the `text` attribute of the `POST /v1/synthesize` method. The text to be synthesized resides within the span of the SSML root `<speak>` element.
+The following examples demonstrate the use of all three forms of expressiveness in the `text` attribute of the `POST /v1/synthesize` method. The text to be synthesized is located within the span of the SSML root `<speak>` element.
 
 ```xml
 {

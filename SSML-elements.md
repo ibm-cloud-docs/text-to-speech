@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-19"
+lastupdated: "2018-05-21"
 
 ---
 
@@ -501,7 +501,7 @@ The `vxml:date` value works like the `date` value, but the format is predefined 
 ### vxml:digits
 {: #vxml-digits}
 
-The `vxml:digits` value performs the same function as the `digits` value.
+The `vxml:digits` value provides the same function as the `digits` value.
 
 ### vxml:phone
 {: #vxml-phone}
