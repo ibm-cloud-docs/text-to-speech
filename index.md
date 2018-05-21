@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-19"
+lastupdated: "2018-05-21"
 
 ---
 
@@ -34,7 +34,7 @@ The {{site.data.keyword.texttospeechshort}} service offers the following feature
 -   **SSML** - Accepts plain text or text that is marked up with the XML-based Speech Synthesis Markup Language (SSML). See [Using SSML](/docs/services/text-to-speech/SSML.html).
 -   **Expressiveness** - Extends SSML with an expressive element that you can use to indicate a speaking style of *GoodNews*, *Apology*, or *Uncertainty*. Available only for the US English Allison voice. See [Expressive SSML](/docs/services/text-to-speech/SSML-expressive.html).
 -   **Voice transformation** - Extends SSML by adding a voice transformation element. You can use the element to expand the range of possible voices by controlling aspects such as pitch, rate, and timbre. Also offers two built-in virtual voices, *Young* and *Soft*. Available only for US English voices. See [Voice transformation SSML](/docs/services/text-to-speech/SSML-transformation.html).
--   **Word timings** - With the WebSocket interface, supports the SSML `<mark>` element as well as optional word timing information for all strings of the input text. Timing information synchronizes the input text and the resulting audio. See [Obtaining word timings](/docs/services/text-to-speech/word-timing.html).
+-   **Word timings** - With the WebSocket interface, supports the SSML `<mark>` element and optional word timing information for all strings of the input text. Timing information synchronizes the input text and the resulting audio. See [Obtaining word timings](/docs/services/text-to-speech/word-timing.html).
 -   **Customization** - Provides a customization interface that you can use to specify how the service pronounces unusual words that occur in your input. You can define pronunciations with the International Phonetic Alphabet (IPA) or {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR). See [Understanding customization](/docs/services/text-to-speech/custom-intro.html).
 
 For more information about the pricing plans for the service, see the [{{site.data.keyword.texttospeechshort}} service in the {{site.data.keyword.Bluemix_short}} Catalog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/catalog/services/text-to-speech){: new_window}.
