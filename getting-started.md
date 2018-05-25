@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-12"
+lastupdated: "2018-05-25"
 
 ---
 
@@ -24,6 +24,10 @@ lastupdated: "2018-05-12"
 The {{site.data.keyword.texttospeechfull}} service converts written text to natural-sounding speech to provide speech-synthesis capabilities for applications. This cURL-based tutorial can help you get started quickly with the service. The examples show you how to call the service's `POST` and `GET /v1/synthesize` methods to request an audio stream.
 {: shortdesc}
 
+> **Important:** The tutorial uses service instance credentials to authenticate to the {{site.data.keyword.texttospeechshort}} service. In some regions, new service instances instead use {{site.data.keyword.Bluemix}} Identity and Access Management (IAM) tokens for authentication. Authenticate by using the approach that is right for your region and service instance.
+
+For more information about where the service uses IAM access tokens and how to use them for authentication, see the May 15 service update in the [Release notes](/docs/services/text-to-speech/release-notes.html#May2018).
+
 ## Before you begin
 {: #before-you-begin}
 
@@ -38,7 +42,6 @@ The {{site.data.keyword.texttospeechfull}} service converts written text to natu
     1.  Copy the `username`, `password`, and `url` values.
 - Make sure that you have cURL:
     - The examples use cURL to call methods of the HTTP interface. Install the version for your operating system from [curl.haxx.se ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://curl.haxx.se/){: new_window}. Install the version that supports the Secure Sockets Layer (SSL) protocol. Make sure to include the installed binary file on your `PATH` environment variable.
-
 
 ## Step 1: Synthesize text in US English
 {: #synthesizeEnglish}

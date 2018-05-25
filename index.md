@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-21"
+lastupdated: "2018-05-25"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2018-05-21"
 # About
 {: #about}
 
-> ** Service update:** *The {{site.data.keyword.texttospeechshort}} service was updated on May 15, 2018. It now supports the `X-Watson-Metadata` header and the `DELETE /v1/user_data` method. For more information about all recent changes to the service, see the [Release notes](/docs/services/text-to-speech/release-notes.html).*
+> ** Service update:** *The {{site.data.keyword.texttospeechshort}} service was updated on May 15, 2018. In some regions, the service now supports the `X-Watson-Metadata` header and the `DELETE /v1/user_data` method. In those regions, new service instances also use {{site.data.keyword.Bluemix}} Identity and Access Management (IAM) tokens for authentication. For more information about these changes, see the [Release notes](/docs/services/text-to-speech/release-notes.html).*
 
 The {{site.data.keyword.texttospeechfull}} service provides an application programming interface (API) that uses {{site.data.keyword.IBM_notm}}'s speech-synthesis capabilities to convert written text to natural-sounding speech. The service streams the results back to the client with minimal delay. The service offers both [HTTP REST](/docs/services/text-to-speech/http.html) and [WebSocket](/docs/services/text-to-speech/websockets.html) interfaces.
 {: shortdesc}
