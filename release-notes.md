@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-25"
+lastupdated: "2018-06-12"
 
 ---
 
@@ -23,11 +23,15 @@ lastupdated: "2018-05-25"
 The following sections document the new features and changes that were included for each release and update of the {{site.data.keyword.texttospeechshort}} service. Unless otherwise noted, all changes are compatible with earlier releases and are automatically and transparently available to all new and existing applications.
 {: shortdesc}
 
+## 12 June 2018
+{: #June2018}
+
+For applications that are hosted in Washington, DC (US East), the service now supports token-based Identity and Access Management (IAM) authentication. IAM uses access tokens rather than service credentials for authentication with a service. For more information about using IAM tokens with existing and new applications, see the [15 May 2018](#May2018) release update.
 
 ## 15 May 2018
 {: #May2018}
 
-The following features are enabled for applications that are hosted in Sydney (**au-syd**) as of May 15, 2018. They will be enabled for applications that are hosted in other regions soon.
+The following features are enabled for applications that are hosted in Sydney and AP North (**au-syd**) as of May 15, 2018. They will be enabled for applications that are hosted in other regions soon.
 
 -   The service now supports the `X-Watson-Metadata` header and the `DELETE /v1/user_data` method. For more information, see [Information security](/docs/services/text-to-speech/information-security.html).
 -   The service now supports a new API authentication process for service instances. {{site.data.keyword.Bluemix}} is in the process of migrating to token-based Identity and Access Management (IAM) authentication. IAM uses access tokens rather than service credentials for authentication with a service.
@@ -35,7 +39,7 @@ The following features are enabled for applications that are hosted in Sydney (*
     In the Sydney region, you use IAM access tokens with the {{site.data.keyword.texttospeechshort}} service for
 
     -   *New service instances* that you create after May 15. For more information, see [Authenticating with IAM tokens](/docs/services/watson/getting-started-iam.html).
-    -   *Existing service instances* that you migrate from Cloud Foundry to a resource group that is managed by the Resource Controller (RC). Service instances that were created before May 15 continue to use service credentials for authentication until you migrate them. For more information, see [Migrating Cloud Foundry service instances to a resource group](/docs/account/instance_migration.html).
+    -   *Existing service instances* that you migrate from Cloud Foundry to a resource group that is managed by the Resource Controller (RC). Service instances that were created before May 15 continue to use service credentials for authentication until you migrate them. For more information, see [Migrating Cloud Foundry service instances to a resource group](/docs/resources/instance_migration.html).
 
     All new and existing service instances in other regions continue to use service credentials (`{username}:{password}`) for authentication.
 
@@ -96,14 +100,10 @@ Service instances that use IAM access tokens cannot currently use JavaScript to 
 
 For the `audio/l16` format, you can now optionally specify the endianness of the audio that is returned. (You must already specify the sampling rate.) Examples are `audio/l16;rate=22050;endianness=big-endian` and `audio/l16;rate=22050;endianness=little-endian`; the default is big endian. For more information, see [Specifying an audio format](/docs/services/text-to-speech/http.html#format).
 
-## 14 July 2017
-{: #July2017}
-
-The service now supports the MP3 or Motion Picture Experts Group (MPEG) audio format. For more information about supported audio formats, see [Specifying an audio format](/docs/services/text-to-speech/http.html#format).
-
 ## Older releases
 {: #older}
 
+-   [14 July 2017](#July2017)
 -   [10 April 2017](#April2017)
 -   [1 December 2016](#December2016)
 -   [22 September 2016](/docs/services/text-to-speech/release-notes.html#September2016)
@@ -113,6 +113,11 @@ The service now supports the MP3 or Motion Picture Experts Group (MPEG) audio fo
 -   [17 December 2015](/docs/services/text-to-speech/release-notes.html#December2015)
 -   [21 September 2015](/docs/services/text-to-speech/release-notes.html#September2015)
 -   [1 July 2015](/docs/services/text-to-speech/release-notes.html#July2015)
+
+### 14 July 2017
+{: #July2017}
+
+The service now supports the MP3 or Motion Picture Experts Group (MPEG) audio format. For more information about supported audio formats, see [Specifying an audio format](/docs/services/text-to-speech/http.html#format).
 
 ### 10 April 2017
 {: #April2017}
