@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-12"
+lastupdated: "2018-06-15"
 
 ---
 
@@ -24,9 +24,9 @@ lastupdated: "2018-06-12"
 The {{site.data.keyword.texttospeechfull}} service converts written text to natural-sounding speech to provide speech-synthesis capabilities for applications. This cURL-based tutorial can help you get started quickly with the service. The examples show you how to call the service's `POST` and `GET /v1/synthesize` methods to request an audio stream.
 {: shortdesc}
 
-> **Important:** The tutorial uses service instance credentials to authenticate to the {{site.data.keyword.texttospeechshort}} service. In some regions, new service instances instead use {{site.data.keyword.Bluemix}} Identity and Access Management (IAM) tokens for authentication. Authenticate by using the approach that is right for your region and service instance.
+> **Important:** The tutorial uses service instance credentials to authenticate to the {{site.data.keyword.texttospeechshort}} service. In some regions, new service instances instead use {{site.data.keyword.Bluemix}} Identity and Access Management (IAM) for authentication. Authenticate by using the approach that is right for your region and service instance.
 
-For more information about where the service uses IAM access tokens and how to use them for authentication, see the June 12 and May 15 service updates in the [Release notes](/docs/services/text-to-speech/release-notes.html).
+For more information about where and how the service uses IAM authentication, see the [Release notes](/docs/services/text-to-speech/release-notes.html).
 
 ## Before you begin
 {: #before-you-begin}
