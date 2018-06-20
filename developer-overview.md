@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-15"
+lastupdated: "2018-06-20"
 
 ---
 
@@ -57,7 +57,7 @@ For example, your application might routinely encounter special terms with forei
 ## CORS support
 {: #cors}
 
-The service supports Cross-Origin Resource Sharing (CORS). By using CORS, web clients can request resources directly from a foreign domain. CORS avoids the same-origin security policy, which otherwise prevents such requests. A web page can communicate directly with the service without passing the request through the web server that hosts the page.
+The service supports Cross-Origin Resource Sharing (CORS). By using CORS, web pages can request resources directly from a foreign domain. CORS circumvents the same-origin security policy, which otherwise prevents such requests. Because the service supports CORS, a web page can communicate directly with the service without passing the request through the web server that hosts the page.
 
 For instance, a web page that is loaded from a server in {{site.data.keyword.Bluemix_notm}} can call the customization API directly, bypassing the {{site.data.keyword.Bluemix_notm}} server. For more information, see [enable-cors.org ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://enable-cors.org/){: new_window}.
 
