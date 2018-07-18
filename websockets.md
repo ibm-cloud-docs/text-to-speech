@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-19"
+lastupdated: "2018-07-18"
 
 ---
 
@@ -37,9 +37,16 @@ The WebSocket interface accepts identical input and produces identical results a
 You call the `/v1/synthesize` method over the WebSocket Secure (WSS) protocol to open a connection to the service. The method is available at the following endpoint:
 
 ```
-wss://stream.watsonplatform.net/text-to-speech/api/v1/synthesize
+wss://{host_name}/text-to-speech/api/v1/synthesize
 ```
 {: codeblock}
+
+where `{host_name}` identifies the regional host for your application:
+
+-   `stream.watsonplatform.net` for US South and UK (the following examples use this host name)
+-   `stream-fra.watsonplatform.net` for Frankfurt
+-   `gateway-syd.watsonplatform.net` for Sydney and AP North
+-   `gateway-wdc.watsonplatform.net` for US East
 
 A WebSocket client calls this method with the following query parameters to establish an authenticated connection with the service.
 
