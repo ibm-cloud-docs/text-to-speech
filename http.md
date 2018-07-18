@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-13"
+lastupdated: "2018-07-18"
 
 ---
 
@@ -107,9 +107,9 @@ Both versions of the `/v1/synthesize` method take an optional `accept` query par
       <code>audio/basic</code>
     </td>
     <td>
-      <em>Basic audio</em>, a single-channel audio format that is encoded
-      by using 8-bit u-law (or mu-law) data that is sampled at 8 kHz. This
-      format provides a lowest-common denominator media type. For more
+      <em>Basic audio</em>, a single-channel, lossy audio format that is
+      encoded by using 8-bit u-law (or mu-law) data that is sampled at 8 kHz.
+      This format provides a lowest-common denominator media type. For more
       information, see the IETF
       <a target="_blank" href="https://tools.ietf.org/html/rfc2046">Request
         for Comment (RFC) 2046 ![External link icon](../../icons/launch-glyph.svg "External link icon")</a> and
@@ -162,10 +162,10 @@ Both versions of the `/v1/synthesize` method take an optional `accept` query par
       <code>audio/mulaw;rate={rate}</code>
     </td>
     <td>
-      <em>8-bit mu-law (or u-law) audio</em>, a single-channel audio
-      format encoded using 8-bit u-law (or mu-law) data. You must
-      specify the sampling rate with this audio format. For more
-      information, see
+      <em>8-bit mu-law (or u-law) audio</em>, a single-channel, lossy audio
+      format that is encoded by using 8-bit u-law (or mu-law) data. You must
+      specify the sampling rate with this audio format. For more information,
+      see
       <a target="_blank" href="https://en.wikipedia.org/wiki/M-law_algorithm">en.wikipedia.org/wiki/M-law_algorithm ![External link icon](../../icons/launch-glyph.svg "External link icon")</a>.
     </td>
   </tr>
