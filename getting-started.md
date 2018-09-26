@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-06"
+lastupdated: "2018-09-26"
 
 ---
 
@@ -52,7 +52,7 @@ The following commands use the `POST /v1/synthesize` method to synthesize US Eng
     -   Replace `{username}` and `{password}` with your service credentials from the previous step.
 
     ```bash
-    curl -X POST -u {username}:{password} \
+    curl -X POST -u "{username}:{password}" \
     --header "Content-Type: application/json" \
     --header "Accept: audio/wav" \
     --data "{\"text\":\"hello world\"}" \
@@ -65,7 +65,7 @@ The following commands use the `POST /v1/synthesize` method to synthesize US Eng
     -   Replace `{username}` and `{password}` with your service credentials.
 
     ```bash
-    curl -X POST -u {username}:{password} \
+    curl -X POST -u "{username}:{password}" \
     --header "Content-Type: application/json" \
     --data "{\"text\":\"hello world\"}" \
     --output hello_world.ogg \
@@ -82,7 +82,7 @@ The following command uses the `GET /v1/synthesize` method to synthesize Spanish
     -   Replace `{username}` and `{password}` with your service credentials.
 
     ```bash
-    curl -X GET -u {username}:{password} \
+    curl -X GET -u "{username}:{password}" \
     --output hola_mundo.wav \
     "https://stream.watsonplatform.net/text-to-speech/api/v1/synthesize?accept=audio/wav&text=hola%20mundo&voice=es-ES_EnriqueVoice"
     ```
