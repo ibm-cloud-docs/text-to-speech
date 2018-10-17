@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-18"
+lastupdated: "2018-10-17"
 
 ---
 
@@ -558,9 +558,9 @@ If you omit the `customization_id` parameter, the method returns JSON output for
     "customization_id": "64f4807f-a5f1-5867-924f-7bba1a84fe97",
     "owner": "297cfd08-330a-22ba-93ce-1a73f454dd98",
     "created": "2017-09-16T17:12:31.743Z",
-    "name": "cURL Test",
+    "name": "curl Test",
     "language": "en-US",
-    "description": "Customization test via cURL",
+    "description": "Customization test via curl",
     "last_modified": "2017-09-16T17:12:31.743Z"
   }
 }

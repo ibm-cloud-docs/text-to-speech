@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-26"
+lastupdated: "2018-10-17"
 
 ---
 
@@ -61,7 +61,7 @@ If necessary, you can then delete the data associated with the customer ID by us
 ### Using the examples
 {: #customCurl}
 
-The examples that follow use cURL to demonstrate the methods of the customization interface. To run the examples, create an instance of the {{site.data.keyword.texttospeechshort}} service in {{site.data.keyword.Bluemix_notm}}. Then replace `{username}:{password}` in each example with the values of your *username* and *password* from your HTTP basic authentication credentials for the service instance. Concatenate the two values with an embedded colon to create a single string of the form *username*:*password*.
+The examples that follow use the `curl` command to demonstrate the methods of the customization interface. To run the examples, create an instance of the {{site.data.keyword.texttospeechshort}} service in {{site.data.keyword.Bluemix_notm}}. Then replace `{username}:{password}` in each example with the values of your *username* and *password* from your HTTP basic authentication credentials for the service instance. Concatenate the two values with an embedded colon to create a single string of the form *username*:*password*.
 
 Note that you must use your service credentials, *not* your {{site.data.keyword.Bluemix_notm}} ID and password. For more information, see [Service credentials for {{site.data.keyword.watson}} services](/docs/services/watson/getting-started-credentials.html).
 
@@ -107,13 +107,13 @@ You pass the following attributes as a JSON object with the body of the request.
   </tr>
 </table>
 
-The following example cURL command creates a new custom model named `cURL Test`.
+The following example `curl` command creates a new custom model named `curl Test`.
 The `Content-Type` header identifies the type of the input as `application/json`.
 
 ```bash
 curl -X POST -u "{username}:{password}"
 --header "Content-Type: application/json"
---data "{\"name\":\"cURL Test\", \"language\":\"en-US\", \"description\":\"Customization test via cURL\"}"
+--data "{\"name\":\"curl Test\", \"language\":\"en-US\", \"description\":\"Customization test via curl\"}"
 "https://stream.watsonplatform.net/text-to-speech/api/v1/customizations"
 ```
 {: pre}
@@ -145,9 +145,9 @@ The method returns its results as a JSON object of the following form:
   "customization_id": "64f4807f-a5f1-5867-924f-7bba1a84fe97",
   "owner": "297cfd08-330a-22ba-93ce-1a73f454dd98",
   "created": "2016-07-15T18:12:31.743Z",
-  "name": "cURL Test",
+  "name": "curl Test",
   "language": "en-US",
-  "description": "Customization test via cURL",
+  "description": "Customization test via curl",
   "last_modified": "2016-07-15T18:12:31.743Z",
   "words": []
 }
@@ -178,18 +178,18 @@ The method returns a JSON array that includes an object for each custom model ow
       "customization_id": "64f4807f-a5f1-5867-924f-7bba1a84fe97",
       "owner": "297cfd08-330a-22ba-93ce-1a73f454dd98",
       "created": "2016-07-15T19:15:17.926Z",
-      "name": "cURL Test",
+      "name": "curl Test",
       "language": "en-US",
-      "description": "Customization test via cURL",
+      "description": "Customization test via curl",
       "last_modified": "2016-07-15T19:15:17.926Z"
     },
     {
       "customization_id": "63f5807f-a4f2-5766-914e-7abb1a84fe97",
       "owner": "297cfd08-330a-22ba-93ce-1a73f454dd98",
       "created": "2016-07-15T18:12:31.743Z",
-      "name": "cURL Test Two",
+      "name": "curl Test Two",
       "language": "en-US",
-      "description": "Second customization test via cURL",
+      "description": "Second customization test via curl",
       "last_modified": "2016-07-15T18:23:50.912Z"
     }
   ]
@@ -209,7 +209,7 @@ The following example updates the name and description of a custom model. An emp
 ```bash
 curl -X POST -u "{username}:{password}"
 --header "Content-Type: application/json"
---data "{\"name\":\"cURL Test Update\", \"description\":\"Customization test update via cURL\", \"words\":[]}"
+--data "{\"name\":\"curl Test Update\", \"description\":\"Customization test update via curl\", \"words\":[]}"
 "https://stream.watsonplatform.net/text-to-speech/api/v1/customizations/{customization_id}"
 ```
 {: pre}

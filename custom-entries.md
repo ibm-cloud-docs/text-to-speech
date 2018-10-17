@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2018-09-26"
+lastupdated: "2018-10-17"
 
 ---
 
@@ -216,9 +216,9 @@ The method returns JSON output of the following form. Because this and the previ
   "customization_id": "64f4807f-a5f1-5867-924f-7bba1a84fe97",
   "owner": "297cfd08-330a-22ba-93ce-1a73f454dd98",
   "created": "2016-07-15T19:15:17.926Z",
-  "name": "cURL Test",
+  "name": "curl Test",
   "language": "en-US",
-  "description": "Customization test via cURL",
+  "description": "Customization test via curl",
   "last_modified": "2016-07-15T19:46:01.387Z",
   "words": [
     {
