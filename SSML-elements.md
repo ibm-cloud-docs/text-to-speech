@@ -234,7 +234,7 @@ The only valid attribute for either element is `xml:lang`, which allows for lang
 <speak version="1.0">
   <paragraph>
     <sentence>Text within a sentence element.</sentence>
-    <s>More text in another sentence.<s>
+    <s>More text in another sentence.</s>
   </paragraph>
 </speak>
 ```
