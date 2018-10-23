@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-19"
+lastupdated: "2018-10-23"
 
 ---
 
@@ -20,6 +20,8 @@ lastupdated: "2018-07-19"
 # The WebSocket interface
 {: #usingWebSocket}
 
+**Important:** You cannot use JavaScript to call the WebSocket interface from a browser. The `watson-token` parameter that is available with the `/v1/synthesize` method does not accept API keys, and you cannot pass request headers from JavaScript. For more information about working around this limitation, see the [Known limitations](/docs/services/text-to-speech/release-notes.html#limitations) in the release notes.
+
 To synthesize text to speech with the service's WebSocket interface, you first establish a connection with the service by calling its `/v1/synthesize` method. You then send the text to be synthesized to the service as a JSON text message over the connection. The service automatically closes the WebSocket connection when it finishes processing the request.
 {: shortdesc}
 
@@ -30,6 +32,8 @@ The synthesize request and response cycle includes the following steps:
 1.  [Receive a response](#WSreceive).
 
 The WebSocket interface accepts identical input and produces identical results as the `GET` and `POST /v1/synthesize` methods of the HTTP interface. However, the WebSocket interface supports use of the SSML `<mark>` element to identify the location of user-specified markers in the audio. It can also return timing information for all strings of the input text. For more information, see [Obtaining word timings](/docs/services/text-to-speech/word-timing.html).
+
+> **Note:** The snippets of example code that follow are written in JavaScript and are based on the HTML5 WebSocket API. For more information about the WebSocket protocol, see the Internet Engineering Task Force (IETF) [Request for Comment (RFC) 6455 ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://tools.ietf.org/html/rfc6455){: new_window}.
 
 ## Open a connection
 {: #WSopen}
@@ -63,10 +67,7 @@ A WebSocket client calls this method with the following query parameters to esta
     <td style="text-align:center">String</td>
     <td>
       Passes a valid authentication token instead of passing the service
-      credentials with the call. You can instead use the
-      <code>X-Watson-Authorization-Token</code> header to pass the token,
-      but you must pass a token in one of these two ways. For more
-      information, see
+      credentials with the call. For more information, see
       <a href="/docs/services/watson/getting-started-tokens.html">Tokens
         for authentication</a>.
     </td>
@@ -105,7 +106,7 @@ A WebSocket client calls this method with the following query parameters to esta
       over the connection. Logging is done only to improve the service for
       future users. The logged data is not shared or made public. To prevent
       IBM from accessing your data for general service improvements, specify
-      <code>true</code> for the parameter. See
+      <code>true</code> for the parameter. For more information, see
       <a href="/docs/services/watson/getting-started-logging.html">Controlling
         request logging for Watson services</a>.
     </td>
@@ -120,7 +121,7 @@ A WebSocket client calls this method with the following query parameters to esta
       or generic string that is to be associated with the data. You must
       URL-encode the argument to the parameter, for example,
       `customer_id%3dmy_ID`. By default, no customer ID is associated
-      with the data. See
+      with the data. For more information, see
       <a href="/docs/services/text-to-speech/information-security.html">Information
       security</a>.
     </td>
@@ -303,49 +304,3 @@ The first two examples show error responses. They include a JSON text message an
     {: codeblock}
 
 For more information about WebSocket return codes, see the Internet Engineering Task Force (IETF) [Request for Comments (RFC) 6455 ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://tools.ietf.org/html/rfc6455){: new_window}.
-
-## Example Python code
-{: #python}
-
-The following brief example Python code defines a class that sends a simple message with a single `<mark>` element to the service over a WebSocket connection. The code works equally well for text that does not include a `<mark>` element.
-
-The code defines callback methods to handle state changes and responses in the connection. The Python callback methods differ slightly from the JavaScript event handlers that were shown previously. All methods log suitable messages to the console.
-
--   The `onConnect` method fires when the service accepts the connection but before the handshake is completed.
--   The `onOpen` method fires when the handshake between the client and service is complete and the connection is fully established. The method sends a JSON text message that specifies the text to be synthesized and the requested format of the audio.
--   The `onMessage` method fires when the service sends a response. The method appends a binary response to the audio that is received from the service. It appends a text message to the list of messages that are received from the service.
--   The `onClose` method fires when the connection is closed. The `wasClean` argument is a boolean that indicates why the connection was closed:
-
-    -   The service sent a close frame (`true`).
-    -   A network or protocol error occurred (`false`).
-
-    The `code` and `reason` arguments provide the WebSocket return code and its accompanying message.
-
-```python
-class TTSWSClientProtocol(WebSocketClientProtocol):
-
-  def __init__(self):
-    WebSocketClientProtocol.__init__(self)
-    self.msgs = []
-    self.binaryBytesReceived = 0
-
-  def onConnect(self, response):
-    logging.info('onConnect')
-
-  def onOpen(self):
-    logging.info('onOpen')
-    self.sendMessage(json.dumps({'text': 'Hello <mark name="here"/> world',
-                                 'accept': 'audio/ogg;codecs=opus'}))
-
-  def onMessage(self, msg, binary):
-    if binary:
-      logging.info('binary message: %s bytes received', len(msg))
-      self.binaryBytesReceived += len(msg)
-    else:
-      logging.info(msg)
-      self.msgs.append(json.loads(msg))
-
-  def onClose(self, wasClean, code, reason):
-    logging.info((wasClean, code, reason))
-```
-{: codeblock}
