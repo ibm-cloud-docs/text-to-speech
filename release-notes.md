@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-15"
+lastupdated: "2018-10-23"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2018-06-15"
 # Release notes
 {: #release-notes}
 
-The following sections document the new features and changes that were included for each release and update of the {{site.data.keyword.texttospeechshort}} service. Unless otherwise noted, all changes are compatible with earlier releases and are automatically and transparently available to all new and existing applications.
+The following sections document the new features and changes that were included for each release and update of the {{site.data.keyword.texttospeechfull}} service. The information includes any known limitations. Unless otherwise noted, all changes are compatible with earlier releases and are automatically and transparently available to all new and existing applications.
 {: shortdesc}
 
 ## New API authentication process
@@ -38,18 +38,20 @@ The {{site.data.keyword.texttospeechshort}} service has a new API authentication
     When you use any of the {{site.data.keyword.watson}} SDKs, you can pass the API key and let the SDK manage the lifecycle of the tokens. For more information and examples, see [Authentication ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/text-to-speech/api/v1/curl.html?curl#authentication){: new_window} in the API reference.
 -   *For existing service instances that you created before the indicated date*, you continue to authenticate by providing the username and password for the service instance. Eventually, you will need to migrate these service instances to IAM authentication. Updates will be provided about migration process and dates. For more information about migration, see [Migrating Cloud Foundry service instances to a resource group](https://console.{DomainName}/docs/resources/instance_migration.html).
 
+**Important:** If you have an existing application that uses JavaScript to call the WebSocket interface from a browser, do not migrate your existing service instance to use IAM authentication at this time. This limitation does not apply to the service's HTTP REST interface. For more information, see [Known limitations](#limitations).
+
 To learn which authentication process to use with your service instance, view the service credentials by clicking the instance on the {{site.data.keyword.Bluemix_notm}} [Dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/dashboard/apps?watson){: new_window}.
 
 All new and existing service instances in other regions continue to use service credentials (`{username}:{password}`) for authentication. IAM tokens will be enabled for applications that are hosted in other regions soon.
 
-### WebSocket interface limitation
-{: #IAMwss}
+## Known limitations
+{: #limitations}
 
-Service instances that use IAM authentication cannot currently use JavaScript to call the {{site.data.keyword.texttospeechshort}} WebSocket interface. This limitation applies to any application (such as the service demo) that uses JavaScript to make WebSocket calls from a browser.
+The {{site.data.keyword.texttospeechshort}} service has the following known limitation.
 
-WebSocket calls that are made with other languages, such as Node.js, Java, and Python, can use IAM tokens by passing request headers. The {{site.data.keyword.watson}} SDKs described in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/text-to-speech/api/v1/curl.html?curl){: new_window} accept an API key and manage the lifecycle of the tokens.
-
-**Important:** If you have an existing application that uses JavaScript to call the WebSocket interface from a browser, do not migrate your existing service instance to use IAM authentication at this time. This limitation does not apply to the service's HTTP REST interface.
+-   Service instances that use IAM authentication cannot currently use JavaScript to call the {{site.data.keyword.texttospeechshort}} WebSocket interface. This limitation applies to any application (such as the service demo) that uses JavaScript to make WebSocket calls from a browser. WebSocket calls that are made with other languages can use IAM tokens by passing request headers. To work around this limitation, you can do the following:
+    -   Call the WebSocket interface from outside of a browser. You can call the interface from any language that supports WebSockets. Refer to information in [The WebSocket interface](/docs/services/text-to-speech/websockets.html) for guidance when working with another language.
+    -   Use the service's HTTP interface to perform speech recognition.
 
 ## 12 June 2018
 {: #June2018}
