@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-10-29"
+lastupdated: "2018-10-31"
 
 ---
 
@@ -228,7 +228,7 @@ The service responds to this message by sending a text message that confirms the
 {
   'binary_streams': [
     {
-      'content_type': 'audio/ogg;codecs=opus'
+      content_type: 'audio/ogg;codecs=opus'
     }
   ]
 }
