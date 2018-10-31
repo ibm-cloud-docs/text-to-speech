@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-10-17"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -86,7 +86,6 @@ Both versions of the method accept a maximum of 5 KB of input text. For more inf
 You can also use the following request headers, which are available for all {{site.data.keyword.watson}} service, with a synthesize request:
 
 -   `X-Watson-Learning-Opt-Out` controls the logging of requests to the service; see [Controlling request logging for {{site.data.keyword.watson}} services](/docs/services/watson/getting-started-logging.html).
--   `X-Watson-Authorization-Token` passes an authentication token with a request rather than requiring your service credentials; see [Tokens for authentication](/docs/services/watson/getting-started-tokens.html).
 -   `X-Watson-Metadata` associates a customer ID with data that is passed with a request; see [Information security](/docs/services/text-to-speech/information-security.html).
 
 > **Note:** If you specify an invalid query parameter or JSON field as part of the input to the `/v1/synthesize` method, the service returns a `Warnings` response header that describes and lists each invalid argument. The request succeeds despite the warnings.

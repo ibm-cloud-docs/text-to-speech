@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2018-09-26"
+lastupdated: "2018-10-28"
 
 ---
 
@@ -28,7 +28,7 @@ The first two examples generate a custom pronunciation for `IEEE` that is based 
 -   The HTTP `GET /v1/synthesize` method:
 
     ```bash
-    curl -X GET -u "{username}:{password}"
+    curl -X GET -u "apikey:{apikey}"
     --header "Accept: audio/flac"
     --output ieee.flac
     "https://stream.watsonplatform.net/text-to-speech/api/v1/synthesize?text=IEEE&customization_id={customization_id}"
@@ -38,7 +38,7 @@ The first two examples generate a custom pronunciation for `IEEE` that is based 
 -   The HTTP `POST /v1/synthesize` method:
 
     ```bash
-    curl -X POST -u "{username}:{password}"
+    curl -X POST -u "apikey:{apikey}"
     --header "Content-Type: application/json"
     --header "Accept: audio/flac"
     --data "{\"text\":\"IEEE\"}"
