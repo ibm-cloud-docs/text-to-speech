@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-10-17"
+lastupdated: "2018-10-28"
 
 ---
 
@@ -26,7 +26,7 @@ The first step in working with any custom model is to create it. Once it exists,
 ## Usage notes
 {: #customGuidelines}
 
-Keep the following in mind when working with the customization interface.
+Consider the following guidelines when working with the customization interface.
 
 ### Ownership of custom voice models
 {: #customOwner}
@@ -57,13 +57,6 @@ The service allows you to associate a customer ID with data that is added or upd
 -   `PUT /v1/customizations/{customization_id}/words/{word}`
 
 If necessary, you can then delete the data associated with the customer ID by using the `DELETE /v1/user_data` method. For more information, see [Information security](/docs/services/text-to-speech/information-security.html).
-
-### Using the examples
-{: #customCurl}
-
-The examples that follow use the `curl` command to demonstrate the methods of the customization interface. To run the examples, create an instance of the {{site.data.keyword.texttospeechshort}} service in {{site.data.keyword.Bluemix_notm}}. Then replace `{username}:{password}` in each example with the values of your *username* and *password* from your HTTP basic authentication credentials for the service instance. Concatenate the two values with an embedded colon to create a single string of the form *username*:*password*.
-
-Note that you must use your service credentials, *not* your {{site.data.keyword.Bluemix_notm}} ID and password. For more information, see [Service credentials for {{site.data.keyword.watson}} services](/docs/services/watson/getting-started-credentials.html).
 
 ## Creating a custom model
 {: #cuModelsCreate}
@@ -107,11 +100,10 @@ You pass the following attributes as a JSON object with the body of the request.
   </tr>
 </table>
 
-The following example `curl` command creates a new custom model named `curl Test`.
-The `Content-Type` header identifies the type of the input as `application/json`.
+The following example `curl` command creates a new custom model named `curl Test`. The `Content-Type` header identifies the type of the input as `application/json`.
 
 ```bash
-curl -X POST -u "{username}:{password}"
+curl -X POST -u "apikey:{apikey}"
 --header "Content-Type: application/json"
 --data "{\"name\":\"curl Test\", \"language\":\"en-US\", \"description\":\"Customization test via curl\"}"
 "https://stream.watsonplatform.net/text-to-speech/api/v1/customizations"
@@ -133,7 +125,7 @@ The method returns a JSON object that contains a globally unique identifier (GUI
 To query information about an existing custom model, use the `GET /v1/customizations/{customization_id}` method. This is the most direct means of seeing all of the information about a model, both its metadata and the word/translation pairs that it contains.
 
 ```bash
-curl -X GET -u "{username}:{password}"
+curl -X GET -u "apikey:{apikey}"
 "https://stream.watsonplatform.net/text-to-speech/api/v1/customizations/{customization_id}"
 ```
 {: pre}
@@ -164,7 +156,7 @@ The output also includes a `words` array that lists the model's custom entries. 
 To see information about all of the custom models that you own, use the `GET /v1/customizations` method:
 
 ```bash
-curl -X GET -u "{username}:{password}"
+curl -X GET -u "apikey:{apikey}"
 "https://stream.watsonplatform.net/text-to-speech/api/v1/customizations"
 ```
 {: pre}
@@ -207,7 +199,7 @@ To update information about a custom model, use the `POST /v1/customizations/{cu
 The following example updates the name and description of a custom model. An empty JSON array is sent with the `words` parameter to indicate that the model's entries are to remain unchanged.
 
 ```bash
-curl -X POST -u "{username}:{password}"
+curl -X POST -u "apikey:{apikey}"
 --header "Content-Type: application/json"
 --data "{\"name\":\"curl Test Update\", \"description\":\"Customization test update via curl\", \"words\":[]}"
 "https://stream.watsonplatform.net/text-to-speech/api/v1/customizations/{customization_id}"
@@ -222,7 +214,7 @@ For information about updating the words in a model, see [Adding multiple words 
 To discard a custom model that you no longer need, use the `DELETE /v1/customizations/{customization_id}` method. Use this method only if you are sure that you no longer need the model, since deletion is permanent.
 
 ```bash
-curl -X DELETE -u "{username}:{password}"
+curl -X DELETE -u "apikey:{apikey}"
 "https://stream.watsonplatform.net/text-to-speech/api/v1/customizations/{customization_id}"
 ```
 {: pre}

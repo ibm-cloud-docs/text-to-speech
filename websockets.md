@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-10-23"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2018-10-23"
 # The WebSocket interface
 {: #usingWebSocket}
 
-**Important:** You cannot use JavaScript to call the WebSocket interface from a browser. The `watson-token` parameter that is available with the `/v1/synthesize` method does not accept API keys, and you cannot pass request headers from JavaScript. For more information about working around this limitation, see the [Known limitations](/docs/services/text-to-speech/release-notes.html#limitations) in the release notes.
+**Important:** You cannot use JavaScript to call the WebSocket interface from a browser. The `watson-token` parameter that is available with the `/v1/synthesize` method does not accept IAM tokens or API keys, and you cannot pass request headers from JavaScript. For more information about working around this limitation, see the [Known limitations](/docs/services/text-to-speech/release-notes.html#limitations) in the release notes.
 
 To synthesize text to speech with the service's WebSocket interface, you first establish a connection with the service by calling its `/v1/synthesize` method. You then send the text to be synthesized to the service as a JSON text message over the connection. The service automatically closes the WebSocket connection when it finishes processing the request.
 {: shortdesc}
@@ -67,9 +67,19 @@ A WebSocket client calls this method with the following query parameters to esta
     <td style="text-align:center">String</td>
     <td>
       Passes a valid authentication token instead of passing the service
-      credentials with the call. For more information, see
+      credentials with the call. Watson authentication tokens are an
+      alternative to service credentials. They are based on pre-IAM service
+      credentials that use a `{username}` and `{password}` for authentication.
+      For more information, see
       <a href="/docs/services/watson/getting-started-tokens.html">Tokens
         for authentication</a>.
+      <br/><br/>
+      **Note:** You cannot use JavaScript to call the WebSocket interface from
+      a browser if your service credentials are based on IAM authentication.
+      The `watson-token` parameter does not accept IAM tokens or API keys.
+      For more information about working around this limitation, see the
+      [Known limitations](/docs/services/text-to-speech/release-notes.html#limitations)
+      in the release notes.
     </td>
   </tr>
   <tr>

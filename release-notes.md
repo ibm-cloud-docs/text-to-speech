@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-10-23"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -23,42 +23,45 @@ lastupdated: "2018-10-23"
 The following sections document the new features and changes that were included for each release and update of the {{site.data.keyword.texttospeechfull}} service. The information includes any known limitations. Unless otherwise noted, all changes are compatible with earlier releases and are automatically and transparently available to all new and existing applications.
 {: shortdesc}
 
-## New API authentication process
-{: #new-authentication}
-
-The {{site.data.keyword.texttospeechshort}} service has a new API authentication process for service instances that are hosted in the following regions as of the indicated dates:
-
--   Washington, DC (US East) as of June 12, 2018
--   Sydney and AP North (**au-syd**) as of May 15, 2018
-
-{{site.data.keyword.Bluemix}} is migrating to token-based Identity and Access Management (IAM) authentication. With some service instances, you authenticate to the API by using IAM.
-
--   *For new service instances that you create after the date indicated previously*, you use IAM for authentication. You can pass either a bearer token or an API key. Tokens support authenticated requests without embedding service credentials in every call. API keys use basic authentication.
-
-    When you use any of the {{site.data.keyword.watson}} SDKs, you can pass the API key and let the SDK manage the lifecycle of the tokens. For more information and examples, see [Authentication ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/text-to-speech/api/v1/curl.html?curl#authentication){: new_window} in the API reference.
--   *For existing service instances that you created before the indicated date*, you continue to authenticate by providing the username and password for the service instance. Eventually, you will need to migrate these service instances to IAM authentication. Updates will be provided about migration process and dates. For more information about migration, see [Migrating Cloud Foundry service instances to a resource group](https://console.{DomainName}/docs/resources/instance_migration.html).
-
-**Important:** If you have an existing application that uses JavaScript to call the WebSocket interface from a browser, do not migrate your existing service instance to use IAM authentication at this time. This limitation does not apply to the service's HTTP REST interface. For more information, see [Known limitations](#limitations).
-
-To learn which authentication process to use with your service instance, view the service credentials by clicking the instance on the {{site.data.keyword.Bluemix_notm}} [Dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/dashboard/apps?watson){: new_window}.
-
-All new and existing service instances in other regions continue to use service credentials (`{username}:{password}`) for authentication. IAM tokens will be enabled for applications that are hosted in other regions soon.
-
 ## Known limitations
 {: #limitations}
 
 The {{site.data.keyword.texttospeechshort}} service has the following known limitation.
 
--   Service instances that use IAM authentication cannot currently use JavaScript to call the {{site.data.keyword.texttospeechshort}} WebSocket interface. This limitation applies to any application (such as the service demo) that uses JavaScript to make WebSocket calls from a browser. WebSocket calls that are made with other languages can use IAM tokens by passing request headers. To work around this limitation, you can do the following:
+-   Service instances that use IAM authentication cannot currently use JavaScript to call the {{site.data.keyword.texttospeechshort}} WebSocket interface. This limitation applies to any application (such as the service demo) that uses JavaScript to make WebSocket calls from a browser. WebSocket calls that are made with other languages can use IAM tokens or API keys. To work around this limitation, you can do the following:
     -   Call the WebSocket interface from outside of a browser. You can call the interface from any language that supports WebSockets. Refer to information in [The WebSocket interface](/docs/services/text-to-speech/websockets.html) for guidance when working with another language.
     -   Use the service's HTTP interface to perform speech recognition.
+
+## 30 October 2018
+{: #October2018}
+
+The {{site.data.keyword.texttospeechshort}} service has migrated to token-based Identity and Access Management (IAM) authentication for all regions. All {{site.data.keyword.Bluemix}} services now use IAM authentication. The {{site.data.keyword.texttospeechshort}} service migrated in each region on the following dates:
+
+-   *US South:* October 30, 2018
+-   *Germany:* October 30, 2018
+-   *US East:* June 12, 2018
+-   *Sydney:* May 15, 2018
+
+The migration to IAM authentication affects new and existing service instances differently:
+
+-   *All new service instances that you create in any region* now use IAM authentication to access the service. You can pass either a bearer token or an API key: Tokens support authenticated requests without embedding service credentials in every call; API keys use HTTP basic authentication. When you use any of the {{site.data.keyword.watson}} SDKs, you can pass the API key and let the SDK manage the lifecycle of the tokens.
+-   *Existing service instances that you created in a region before the indicated migration date* continue to use the `{username}` and `{password}` from their previous service credentials for authentication until you migrate them to use IAM authentication. For more information about migrating to IAM authentication, see [Migrating Cloud Foundry service instances to a resource group](https://console.{DomainName}/docs/resources/instance_migration.html).
+
+    **Important:** If you have an existing application that uses JavaScript to call the WebSocket interface from a browser, do not migrate your service instance to use IAM authentication at this time. This limitation does not apply to the service's HTTP REST interface. For more information, see [Known limitations](#limitations).
+
+For more information, see the following documentation:
+
+-   To learn which authentication mechanism your service instance uses, view your service credentials by clicking the instance on the {{site.data.keyword.Bluemix_notm}} [Dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/dashboard/apps?watson){: new_window}.
+-   For more information about using IAM tokens with Watson services, see [Authenticating with IAM tokens](/docs/services/watson/getting-started-iam.html).
+-   For more information about using IAM API keys with Watson services, see [IAM service API keys](/docs/services/watson/apikey-bp.html).
+-   For examples that use IAM authentication, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/text-to-speech/api/v1/){: new_window}.
 
 ## 12 June 2018
 {: #June2018}
 
 The following features are enabled for applications that are hosted in Washington, DC (US East):
 
--   The service now supports a new API authentication process. For more information, see [New API authentication process](#new-authentication).
+-   The service now supports a new API authentication process. For more information, see the [30 October 2018 service update](#October2018).
 -   The service now supports the `X-Watson-Metadata` header and the `DELETE /v1/user_data` method. For more information, see [Information security](/docs/services/text-to-speech/information-security.html).
 
 ## 15 May 2018
@@ -66,17 +69,13 @@ The following features are enabled for applications that are hosted in Washingto
 
 The following features are enabled for applications that are hosted in Sydney and AP North (**au-syd**):
 
--   The service now supports a new API authentication process. For more information, see [New API authentication process](#new-authentication).
+-   The service now supports a new API authentication process. For more information, see the [30 October 2018 service update](#October2018).
 -   The service now supports the `X-Watson-Metadata` header and the `DELETE /v1/user_data` method. For more information, see [Information security](/docs/services/text-to-speech/information-security.html).
-
-## 2 October 2017
-{: #October2017}
-
-For the `audio/l16` format, you can now optionally specify the endianness of the audio that is returned. (You must already specify the sampling rate.) Examples are `audio/l16;rate=22050;endianness=big-endian` and `audio/l16;rate=22050;endianness=little-endian`; the default is big endian. For more information, see [Specifying an audio format](/docs/services/text-to-speech/http.html#format).
 
 ## Older releases
 {: #older}
 
+-   [2 October 2017](#October2017)
 -   [14 July 2017](#July2017)
 -   [10 April 2017](#April2017)
 -   [1 December 2016](#December2016)
@@ -87,6 +86,11 @@ For the `audio/l16` format, you can now optionally specify the endianness of the
 -   [17 December 2015](/docs/services/text-to-speech/release-notes.html#December2015)
 -   [21 September 2015](/docs/services/text-to-speech/release-notes.html#September2015)
 -   [1 July 2015](/docs/services/text-to-speech/release-notes.html#July2015)
+
+### 2 October 2017
+{: #October2017}
+
+For the `audio/l16` format, you can now optionally specify the endianness of the audio that is returned. (You must already specify the sampling rate.) Examples are `audio/l16;rate=22050;endianness=big-endian` and `audio/l16;rate=22050;endianness=little-endian`; the default is big endian. For more information, see [Specifying an audio format](/docs/services/text-to-speech/http.html#format).
 
 ### 14 July 2017
 {: #July2017}
