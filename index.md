@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-10-28"
+lastupdated: "2018-11-01"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2018-10-28"
 # About
 {: #about}
 
-> ** Service update:** *The {{site.data.keyword.texttospeechshort}} service was updated on October 30, 2018. The service now uses {{site.data.keyword.Bluemix}} Identity and Access Management (IAM) authentication in all regions. For more information, see the [October 30 2018 service update](/docs/services/text-to-speech/release-notes.html#October2018) in the release notes*.
+> ** Service update:** *The {{site.data.keyword.texttospeechshort}} service was updated on October 30, 2018. The service now uses {{site.data.keyword.Bluemix}} Identity and Access Management (IAM) authentication in all locations. For more information, see the [October 30 2018 service update](/docs/services/text-to-speech/release-notes.html#October2018) in the release notes*.
 
 The {{site.data.keyword.texttospeechfull}} service provides an application programming interface (API) that uses {{site.data.keyword.IBM_notm}}'s speech-synthesis capabilities to convert written text to natural-sounding speech. The service streams the results back to the client with minimal delay. The service offers both [HTTP REST](/docs/services/text-to-speech/http.html) and [WebSocket](/docs/services/text-to-speech/websockets.html) interfaces.
 
