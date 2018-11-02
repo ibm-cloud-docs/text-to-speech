@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-01"
 
 ---
 
@@ -30,22 +30,22 @@ The {{site.data.keyword.texttospeechshort}} service has the following known limi
 
 -   Service instances that use IAM authentication cannot currently use JavaScript to call the {{site.data.keyword.texttospeechshort}} WebSocket interface. This limitation applies to any application (such as the service demo) that uses JavaScript to make WebSocket calls from a browser. WebSocket calls that are made with other languages can use IAM tokens or API keys. To work around this limitation, you can do the following:
     -   Call the WebSocket interface from outside of a browser. You can call the interface from any language that supports WebSockets. Refer to information in [The WebSocket interface](/docs/services/text-to-speech/websockets.html) for guidance when working with another language.
-    -   Use the service's HTTP interface to perform speech recognition.
+    -   Use the service's HTTP interface for speech synthesis.
 
 ## 30 October 2018
 {: #October2018}
 
-The {{site.data.keyword.texttospeechshort}} service has migrated to token-based Identity and Access Management (IAM) authentication for all regions. All {{site.data.keyword.Bluemix}} services now use IAM authentication. The {{site.data.keyword.texttospeechshort}} service migrated in each region on the following dates:
+The {{site.data.keyword.texttospeechshort}} service has migrated to token-based Identity and Access Management (IAM) authentication for all locations. All {{site.data.keyword.Bluemix}} services now use IAM authentication. The {{site.data.keyword.texttospeechshort}} service migrated in each location on the following dates:
 
--   *US South:* October 30, 2018
--   *Germany:* October 30, 2018
--   *US East:* June 12, 2018
--   *Sydney:* May 15, 2018
+-   Dallas (**us-south**): October 30, 2018
+-   Frankfurt (**eu-de**): October 30, 2018
+-   Washington, DC (**us-east**): June 12, 2018
+-   Sydney (**au-syd**): May 15, 2018
 
 The migration to IAM authentication affects new and existing service instances differently:
 
--   *All new service instances that you create in any region* now use IAM authentication to access the service. You can pass either a bearer token or an API key: Tokens support authenticated requests without embedding service credentials in every call; API keys use HTTP basic authentication. When you use any of the {{site.data.keyword.watson}} SDKs, you can pass the API key and let the SDK manage the lifecycle of the tokens.
--   *Existing service instances that you created in a region before the indicated migration date* continue to use the `{username}` and `{password}` from their previous service credentials for authentication until you migrate them to use IAM authentication. For more information about migrating to IAM authentication, see [Migrating Cloud Foundry service instances to a resource group](https://console.{DomainName}/docs/resources/instance_migration.html).
+-   *All new service instances that you create in any location* now use IAM authentication to access the service. You can pass either a bearer token or an API key: Tokens support authenticated requests without embedding service credentials in every call; API keys use HTTP basic authentication. When you use any of the {{site.data.keyword.watson}} SDKs, you can pass the API key and let the SDK manage the lifecycle of the tokens.
+-   *Existing service instances that you created in a location before the indicated migration date* continue to use the `{username}` and `{password}` from their previous Cloud Foundry service credentials for authentication until you migrate them to use IAM authentication. For more information about migrating to IAM authentication, see [Migrating Cloud Foundry service instances to a resource group](https://console.{DomainName}/docs/resources/instance_migration.html).
 
     **Important:** If you have an existing application that uses JavaScript to call the WebSocket interface from a browser, do not migrate your service instance to use IAM authentication at this time. This limitation does not apply to the service's HTTP REST interface. For more information, see [Known limitations](#limitations).
 
@@ -59,7 +59,7 @@ For more information, see the following documentation:
 ## 12 June 2018
 {: #June2018}
 
-The following features are enabled for applications that are hosted in Washington, DC (US East):
+The following features are enabled for applications that are hosted in Washington, DC (**us-east**):
 
 -   The service now supports a new API authentication process. For more information, see the [30 October 2018 service update](#October2018).
 -   The service now supports the `X-Watson-Metadata` header and the `DELETE /v1/user_data` method. For more information, see [Information security](/docs/services/text-to-speech/information-security.html).
@@ -67,7 +67,7 @@ The following features are enabled for applications that are hosted in Washingto
 ## 15 May 2018
 {: #May2018}
 
-The following features are enabled for applications that are hosted in Sydney and AP North (**au-syd**):
+The following features are enabled for applications that are hosted in Sydney (**au-syd**):
 
 -   The service now supports a new API authentication process. For more information, see the [30 October 2018 service update](#October2018).
 -   The service now supports the `X-Watson-Metadata` header and the `DELETE /v1/user_data` method. For more information, see [Information security](/docs/services/text-to-speech/information-security.html).
