@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-11-01"
+lastupdated: "2018-11-04"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2018-11-01"
 # Overview for developers
 {: #overview}
 
-You can access the speech synthesis capabilities of the {{site.data.keyword.texttospeechshort}} service via an HTTP Representational State Transfer (REST) API or a WebSocket interface. Several Software Development Kits (SDKs) are also available to simplify application development in various languages and environments. The following sections provide an overview of application development with the service.
+You can access the speech synthesis capabilities of the {{site.data.keyword.texttospeechshort}} service via an HTTP Representational State Transfer (REST) API or a WebSocket interface. Several Software Development Kits (SDKs) are also available to simplify application development in various programming languages. The following sections provide an overview of application development with the service.
 {: shortdesc}
 
 ## HTTP interface
@@ -64,10 +64,10 @@ For instance, a web page that is loaded from a server in {{site.data.keyword.Blu
 ## Using Software Development Kits
 {: #sdks}
 
-The {{site.data.keyword.texttospeechshort}} service supports a number of SDKs to simplify the development of speech applications. The SDKs are available for many popular programming languages and platforms, including Node.js, Java, Python, and Ruby. All SDKs are available from the [watson-developer-cloud namespace ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/watson-developer-cloud){: new_window} on GitHub.
+SDKs are available for the {{site.data.keyword.texttospeechshort}} service to simplify the development of speech applications. {{site.data.keyword.watson}} SDKs are available for many popular programming languages and platforms.
 
--   For a complete list of SDKs and information about using them, see [{{site.data.keyword.watson}} SDKs](/docs/services/watson/getting-started-sdks.html).
--   For detailed information about all methods of the Node, Java, Python, and Ruby SDKs, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/text-to-speech/api/v1/){: new_window}.
+-   For a complete list of SDKs and links to the SDKs on GitHub, see [Using SDKs](/docs/services/watson/getting-started-sdks.html).
+-   For detailed information about all methods of the Node, Java, Python, and Ruby SDKs for the {{site.data.keyword.texttospeechshort}} service, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/text-to-speech/api/v1/){: new_window}.
 
 ## Learning more about application development
 {: #learn}
