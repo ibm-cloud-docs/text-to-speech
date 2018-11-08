@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-11-01"
+lastupdated: "2018-11-08"
 
 ---
 
@@ -31,6 +31,11 @@ The {{site.data.keyword.texttospeechshort}} service has the following known limi
 -   Service instances that use IAM authentication cannot currently use JavaScript to call the {{site.data.keyword.texttospeechshort}} WebSocket interface. This limitation applies to any application (such as the service demo) that uses JavaScript to make WebSocket calls from a browser. WebSocket calls that are made with other languages can use IAM tokens or API keys. To work around this limitation, you can do the following:
     -   Call the WebSocket interface from outside of a browser. You can call the interface from any language that supports WebSockets. Refer to information in [The WebSocket interface](/docs/services/text-to-speech/websockets.html) for guidance when working with another language.
     -   Use the service's HTTP interface for speech synthesis.
+
+## 7 November 2018
+{: #November2018a}
+
+The {{site.data.keyword.texttospeechshort}} service is now available in the IBM Cloud Tokyo location (**jp-tok**). Like all locations, Tokyo uses token-based Identity and Access Management (IAM) authentication. All new services instances that you create in this location use IAM authentication.
 
 ## 30 October 2018
 {: #October2018}
@@ -64,17 +69,10 @@ The following features are enabled for applications that are hosted in Washingto
 -   The service now supports a new API authentication process. For more information, see the [30 October 2018 service update](#October2018).
 -   The service now supports the `X-Watson-Metadata` header and the `DELETE /v1/user_data` method. For more information, see [Information security](/docs/services/text-to-speech/information-security.html).
 
-## 15 May 2018
-{: #May2018}
-
-The following features are enabled for applications that are hosted in Sydney (**au-syd**):
-
--   The service now supports a new API authentication process. For more information, see the [30 October 2018 service update](#October2018).
--   The service now supports the `X-Watson-Metadata` header and the `DELETE /v1/user_data` method. For more information, see [Information security](/docs/services/text-to-speech/information-security.html).
-
 ## Older releases
 {: #older}
 
+-   [15 May 2018](#May2018)
 -   [2 October 2017](#October2017)
 -   [14 July 2017](#July2017)
 -   [10 April 2017](#April2017)
@@ -86,6 +84,14 @@ The following features are enabled for applications that are hosted in Sydney (*
 -   [17 December 2015](/docs/services/text-to-speech/release-notes.html#December2015)
 -   [21 September 2015](/docs/services/text-to-speech/release-notes.html#September2015)
 -   [1 July 2015](/docs/services/text-to-speech/release-notes.html#July2015)
+
+### 15 May 2018
+{: #May2018}
+
+The following features are enabled for applications that are hosted in Sydney (**au-syd**):
+
+-   The service now supports a new API authentication process. For more information, see the [30 October 2018 service update](#October2018).
+-   The service now supports the `X-Watson-Metadata` header and the `DELETE /v1/user_data` method. For more information, see [Information security](/docs/services/text-to-speech/information-security.html).
 
 ### 2 October 2017
 {: #October2017}
