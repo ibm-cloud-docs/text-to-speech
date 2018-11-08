@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-08"
 
 ---
 
@@ -49,8 +49,9 @@ Both versions of the method accept a maximum of 5 KB of input text. For more inf
     <td>
       Specifies the requested audio format, or MIME type, in which the
       service is to return the audio. You can also specify this value with
-      the HTTP <code>Accept</code> request header. For more information,
-      see <a href="#format">Specifying an audio format</a>.
+      the HTTP <code>Accept</code> request header. URL-encode the argument
+      to the `accept` query parameter. For more information, see
+      <a href="#format">Specifying an audio format</a>.
     </td>
   </tr>
   <tr>
@@ -93,7 +94,21 @@ You can also use the following request headers, which are available for all {{si
 ## Specifying an audio format
 {: #format}
 
-Both versions of the `/v1/synthesize` method take an optional `accept` query parameter to specify the requested audio format (MIME type) of the audio. (You can also specify the value with the `Accept` request header.) The parameter accepts the following audio formats. If you omit the parameter, the service returns the audio in Ogg format with the Opus codec (`audio/ogg;codecs=opus`) by default.
+With both versions of the `/v1/synthesize` method, you can specify the requested audio format (MIME type) of the audio with either the `Accept` request header or the `accept` query parameter. If you use the `accept` query parameter, URL-encode the argument to the parameter. For example, URL-encode the following argument
+
+```
+audio/l16;rate=16000;endianness=little-endian
+```
+{: codeblock}
+
+as
+
+```
+audio%2Fl16%3Brate%3D16000%3Bendianness%3Dlittle-endian
+```
+{: codeblock}
+
+The parameter accepts the following audio formats. If you omit the parameter, the service returns the audio in Ogg format with the Opus codec (`audio/ogg;codecs=opus`) by default.
 
 <table>
   <caption>Table 2. Supported audio formats</caption>

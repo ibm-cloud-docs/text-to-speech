@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-11-01"
+lastupdated: "2018-11-08"
 
 ---
 
@@ -90,7 +90,7 @@ The following command uses the `GET /v1/synthesize` method to synthesize Spanish
     ```bash
     curl -X GET -u "apikey:{apikey}" \
     --output hola_mundo.wav \
-    "https://stream.watsonplatform.net/text-to-speech/api/v1/synthesize?accept=audio/wav&text=hola%20mundo&voice=es-ES_EnriqueVoice"
+    "https://stream.watsonplatform.net/text-to-speech/api/v1/synthesize?accept=audio%2Fwav&text=hola%20mundo&voice=es-ES_EnriqueVoice"
     ```
     {: pre}
 
