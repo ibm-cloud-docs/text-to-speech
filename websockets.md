@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-11-08"
+lastupdated: "2018-11-10"
 
 ---
 
@@ -104,18 +104,17 @@ A WebSocket client calls this method with the following query parameters to esta
       Omit the parameter to use the specified voice with no customization.
       For more information, see
       <a href="/docs/services/text-to-speech/custom-intro.html">Understanding
-         customization</a>.
+        customization</a>.
     </td>
   </tr>
   <tr>
     <td><code>x-watson-learning-opt-out</code><br/><em>Optional</em></td>
     <td style="text-align:center">Boolean</td>
     <td>
-      Specifies whether the service logs requests and results that are sent
-      over the connection. Logging is done only to improve the service for
-      future users. The logged data is not shared or made public. To prevent
-      IBM from accessing your data for general service improvements, specify
-      <code>true</code> for the parameter. For more information, see
+      Indicates whether the service logs requests and results that are sent
+      over the connection. To prevent IBM from accessing your data for general
+      service improvements, specify <code>true</code> for the parameter. For
+      more information, see
       <a href="/docs/services/watson/getting-started-logging.html">Controlling
         request logging for Watson services</a>.
     </td>
