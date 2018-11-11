@@ -108,7 +108,7 @@ audio%2Fl16%3Brate%3D16000%3Bendianness%3Dlittle-endian
 ```
 {: codeblock}
 
-The parameter accepts the following audio formats. If you omit the parameter, the service returns the audio in Ogg format with the Opus codec (`audio/ogg;codecs=opus`) by default.
+The parameter accepts the following audio formats. If you omit the parameter, the service returns the audio in Ogg format with the Opus codec (`audio/ogg;codecs=opus`) by default. The service always returns single-channel audio for all formats.
 
 <table>
   <caption>Table 2. Supported audio formats</caption>
