@@ -31,7 +31,8 @@ The WebSocket interface provides the same functionality as the HTTP `GET` and `P
 
 Timing information is useful for synchronizing the audio and the input text. For example, you can coordinate a robot's gestures with the content of the synthesized speech.
 
-> **Note:** The `timings` parameter is not supported for Japanese input text.
+The `timings` parameter is not supported for Japanese input text.
+{: note}
 
 ## How the service returns word timings
 {: #timingHow}

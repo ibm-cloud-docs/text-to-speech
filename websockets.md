@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-11-10"
+lastupdated: "2018-11-16"
 
 ---
 
@@ -23,7 +23,8 @@ lastupdated: "2018-11-10"
 # The WebSocket interface
 {: #usingWebSocket}
 
-**Important:** You cannot use JavaScript to call the WebSocket interface from a browser. The `watson-token` parameter that is available with the `/v1/synthesize` method does not accept IAM tokens or API keys, and you cannot pass request headers from JavaScript. For more information about working around this limitation, see the [Known limitations](/docs/services/text-to-speech/release-notes.html#limitations) in the release notes.
+You cannot use JavaScript to call the WebSocket interface from a browser. The `watson-token` parameter that is available with the `/v1/synthesize` method does not accept IAM tokens or API keys. For more information about working around this limitation, see the [Known limitations](/docs/services/text-to-speech/release-notes.html#limitations) in the release notes.
+{: important}
 
 To synthesize text to speech with the service's WebSocket interface, you first establish a connection with the service by calling its `/v1/synthesize` method. You then send the text to be synthesized to the service as a JSON text message over the connection. The service automatically closes the WebSocket connection when it finishes processing the request.
 {: shortdesc}
@@ -36,7 +37,8 @@ The synthesize request and response cycle includes the following steps:
 
 The WebSocket interface accepts identical input and produces identical results as the `GET` and `POST /v1/synthesize` methods of the HTTP interface. However, the WebSocket interface supports use of the SSML `<mark>` element to identify the location of user-specified markers in the audio. It can also return timing information for all strings of the input text. For more information, see [Obtaining word timings](/docs/services/text-to-speech/word-timing.html).
 
-> **Note:** The snippets of example code that follow are written in JavaScript and are based on the HTML5 WebSocket API. For more information about the WebSocket protocol, see the Internet Engineering Task Force (IETF) [Request for Comment (RFC) 6455 ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://tools.ietf.org/html/rfc6455){: new_window}.
+The snippets of example code that follow are written in JavaScript and are based on the HTML5 WebSocket API. For more information about the WebSocket protocol, see the Internet Engineering Task Force (IETF) [Request for Comment (RFC) 6455 ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://tools.ietf.org/html/rfc6455){: new_window}.
+{: note}
 
 ## Open a connection
 {: #WSopen}
@@ -76,10 +78,11 @@ A WebSocket client calls this method with the following query parameters to esta
       service credentials that use a `{username}` and `{password}` for
       authentication.
       <br/><br/>
-      **Note:** You cannot use JavaScript to call the WebSocket interface from
-      a browser if your service credentials are based on IAM authentication.
-      The `watson-token` parameter does not accept IAM tokens or API keys.
-      For more information about working around this limitation, see the
+      **Important:** You cannot use JavaScript to call the WebSocket
+      interface from a browser if your service credentials are based on
+      IAM authentication. The `watson-token` parameter does not accept
+      IAM tokens or API keys. For more information about working around
+      this limitation, see the
       [Known limitations](/docs/services/text-to-speech/release-notes.html#limitations)
       in the release notes.
     </td>

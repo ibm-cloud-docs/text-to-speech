@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-11-13"
+lastupdated: "2018-11-15"
 
 ---
 
@@ -210,7 +210,8 @@ You can use the service's customization interface to define a dictionary of cust
 ## The mark element
 {: #mark_element}
 
-> **Note:** The `<mark>` element is supported only by the service's WebSocket interface, not by its HTTP interface, which ignores the element. For more information, see [Specifying an SSML mark](/docs/services/text-to-speech/word-timing.html#mark).
+The `<mark>` element is supported only by the service's WebSocket interface, not by its HTTP interface, which ignores the element. For more information, see [Specifying an SSML mark](/docs/services/text-to-speech/word-timing.html#mark).
+{: note}
 
 The `<mark>` element is an empty element that places a marker into the text to be synthesized. The client is notified when all of the text that precedes the `<mark>` element has been synthesized. The element accepts a single `name` attribute that specifies a string that uniquely identifies the mark; the name must begin with an alphanumeric character. The name is returned along with the time at which the mark occurs in the synthesized audio.
 
@@ -355,7 +356,8 @@ The `volume` attribute modifies the volume for the text within the element. You 
 ## The say-as element
 {: #say-as_element}
 
-> **Note:** The `<say-as>` element is only partially supported for most languages. For languages other than US English, the service typically supports only the `digits` and `letters` attributes of the element.
+The `<say-as>` element is only partially supported for most languages. For languages other than US English, the service typically supports only the `digits` and `letters` attributes of the element.
+{: note}
 
 The `<say-as>` element provides information about the type of text that is contained within the element and specifies the level of detail for rendering the text. The element has one required attribute, `interpret-as`, which indicates how the enclosed text is to be interpreted. It has two optional attributes, `format` and `detail`, which are used only with particular values within the `interpret-as` attribute, as illustrated in the following examples.
 

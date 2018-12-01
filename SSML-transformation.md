@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-19"
+lastupdated: "2018-11-15"
 
 ---
 
@@ -52,7 +52,8 @@ Built-in transformations apply pre-configured changes to the attributes of a voi
 
 You can apply the optional `strength` attribute to either built-in voice to control the extent to which the service applies the transformation. Think of the value as a blending factor that the service applies to the original voice. The attribute accepts a value in the range of 0 to 100 percent. Specifying `0%` leaves the voice unaltered; specifying `100%` achieves the full extent of transformation. If you omit the attribute, the default strength is `100%`.
 
-> **Note:** The service ignores attributes for custom transformations when you use a built-in transformation.
+The service ignores attributes for custom transformations when you use a built-in transformation.
+{: note}
 
 ## Built-in transformation examples
 

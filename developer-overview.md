@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-11-04"
+lastupdated: "2018-11-15"
 
 ---
 
@@ -55,7 +55,8 @@ You can use custom voice models to create application-specific translations for 
 
 For example, your application might routinely encounter special terms with foreign origins, personal or geographic names, or abbreviations and acronyms. By using customization, you can define translations that tell the service how you want such terms to be pronounced. For more information, see [Understanding customization](/docs/services/text-to-speech/custom-intro.html).
 
-> **Note:** The customization interface is a beta release.
+The customization interface is a beta release.
+{: note}
 
 ## CORS support
 {: #cors}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-21"
+lastupdated: "2018-11-15"
 ---
 
 {:shortdesc: .shortdesc}
@@ -27,7 +27,8 @@ When you synthesize text with the {{site.data.keyword.texttospeechshort}} servic
 
 The service's regular pronunciation rules work well for common words. However, they can yield imperfect results for unusual words. Such words include special terms with foreign origins, personal or geographic names, and abbreviations or acronyms. If your application's lexicon includes such words, you can use the customization interface to specify how the service pronounces such words.
 
-> **Note:** The customization interface is beta functionality that is available for all languages.
+The customization interface is beta functionality that is available for all languages.
+{: note}
 
 ## How customization works
 {: #ciHow}
@@ -103,7 +104,8 @@ For example, consider the word `trinitroglycerin`. The service's regular pronunc
 
 In these examples, the phonetic translation string is composed of phoneme symbols and a single primary stress mark. The primary stress mark is represented by <code>&#712;</code> in IPA and by `1` in SPR. It is placed just before the symbol for the stressed vowel in both cases. Although the examples do not show it, you can also specify syllable boundaries and secondary stress positions in a phonetic translation. These elements are not required and normally are not needed to achieve a pronunciation. As with sounds-like translations, you can compose a phonetic translation from multiple strings that are delimited by spaces.
 
-> **Note:** You can also specify IPA translations as IPA Unicode values. For more information, see [Using IBM SPR](/docs/services/text-to-speech/SPRs.html) and the language-specific tables on the pages that are referred to in [Supported languages](/docs/services/text-to-speech/SPRs.html#supportedLanguages). For an example translation that uses IPA Unicode values, see [The phoneme element](/docs/services/text-to-speech/SSML-elements.html#phoneme_element).
+You can also specify IPA translations as IPA Unicode values. For more information, see [Using IBM SPR](/docs/services/text-to-speech/SPRs.html) and the language-specific tables on the pages that are referred to in [Supported languages](/docs/services/text-to-speech/SPRs.html#supportedLanguages). For an example translation that uses IPA Unicode values, see [The phoneme element](/docs/services/text-to-speech/SSML-elements.html#phoneme_element).
+{: note}
 
 ### Working with an existing phonetic translation
 {: #phoneticMethod}
