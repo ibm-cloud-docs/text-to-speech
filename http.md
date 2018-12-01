@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-11-11"
+lastupdated: "2018-11-15"
 
 ---
 
@@ -92,7 +92,8 @@ You can also use the following request headers, which are available for all {{si
 -   `X-Watson-Learning-Opt-Out` indicates whether the service logs request and result data to improve the service for future users. To prevent IBM from accessing your data for general service improvements, specify <code>true</code> for the parameter. For more information, see [Controlling request logging for {{site.data.keyword.watson}} services](/docs/services/watson/getting-started-logging.html).
 -   `X-Watson-Metadata` associates a customer ID with data that is passed with a request. For more information, see [Information security](/docs/services/text-to-speech/information-security.html).
 
-> **Note:** If you specify an invalid query parameter or JSON field as part of the input to the `/v1/synthesize` method, the service returns a `Warnings` response header that describes and lists each invalid argument. The request succeeds despite the warnings.
+If you specify an invalid query parameter or JSON field as part of the input to the `/v1/synthesize` method, the service returns a `Warnings` response header that describes and lists each invalid argument. The request succeeds despite the warnings.
+{: note}
 
 ## Specifying an audio format
 {: #format}
@@ -386,7 +387,8 @@ The following table shows the default sampling rate of the audio that is returne
 
 The most reliable way to identify the sampling rate for any audio stream that the service returns is to extract the information from the stream itself. You can determine the rate by calling the `/v1/synthesize` method with some simple text (for example, "hello world") and specifying the format and codec that you plan to use. You can then obtain the codec and sampling rate by saving the audio stream to a file and opening it in an audio player.
 
-> **Note:** The Opus standard requires the output sampling rate to match the capabilities of the audio player. For more information, see Section 5.1 of the Internet Engineering Task Force (IETF) [Request for Comments (RFC) 7845 ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://tools.ietf.org/html/rfc6455){: new_window}. For software audio players, the table indicates the typical output sampling rate, but the actual sampling rate of the audio varies with time within the stream. As mentioned, the service synthesizes the source audio at 22,050 Hz.
+The Opus standard requires the output sampling rate to match the capabilities of the audio player. For more information, see Section 5.1 of the Internet Engineering Task Force (IETF) [Request for Comments (RFC) 7845 ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://tools.ietf.org/html/rfc6455){: new_window}. For software audio players, the table indicates the typical output sampling rate, but the actual sampling rate of the audio varies with time within the stream. As mentioned, the service synthesizes the source audio at 22,050 Hz.
+{: note}
 
 ## Specifying a voice
 {: #voices}
@@ -481,7 +483,8 @@ The following table lists the voices that are available for each language and di
   </tr>
 </table>
 
-> **Note:** The voices `es-LA_SofiaVoice` and `es-US_SofiaVoice` are essentially the same voice. The most significant difference concerns how the two voices interpret a `$` (dollar sign): The Latin American version uses the term *pesos*, while the North American version uses the term *dolares*. Other minor differences might exist between the two voices.
+The voices `es-LA_SofiaVoice` and `es-US_SofiaVoice` are essentially the same voice. The most significant difference concerns how the two voices interpret a `$` (dollar sign): The Latin American version uses the term *pesos*, while the North American version uses the term *dolares*. Other minor differences might exist between the two voices.
+{: note}
 
 ### Listing all available voices
 {: #listVoices}
@@ -603,7 +606,8 @@ Both the `GET` and `POST` versions of the `/v1/synthesize` method accept a maxim
 
 Although the `GET` and `POST` methods offer equivalent functionality, it is always more secure to pass input text to the service with the `POST` method. A `POST` request passes input in the body of the request, while a `GET` request exposes the data in the URL.
 
-> **Note:** The examples that follow include line breaks for readability; do *not* include them in actual input.
+The examples that follow include line breaks for readability; do *not* include them in actual input.
+{: note}
 
 ### Specifying SSML input
 {: #ssml}

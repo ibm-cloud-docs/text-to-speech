@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-11-15"
+lastupdated: "2018-12-01"
 
 ---
 
@@ -55,7 +55,8 @@ The migration to IAM authentication affects new and existing service instances d
 -   *All new service instances that you create in any location* now use IAM authentication to access the service. You can pass either a bearer token or an API key: Tokens support authenticated requests without embedding service credentials in every call; API keys use HTTP basic authentication. When you use any of the {{site.data.keyword.watson}} SDKs, you can pass the API key and let the SDK manage the lifecycle of the tokens.
 -   *Existing service instances that you created in a location before the indicated migration date* continue to use the `{username}` and `{password}` from their previous Cloud Foundry service credentials for authentication until you migrate them to use IAM authentication. For more information about migrating to IAM authentication, see [Migrating Cloud Foundry service instances to a resource group](https://{DomainName}/docs/resources/instance_migration.html).
 
-    **Important:** If you have an existing application that uses JavaScript to call the WebSocket interface from a browser, do not migrate your service instance to use IAM authentication at this time. This limitation does not apply to the service's HTTP REST interface. For more information, see [Known limitations](#limitations).
+    If you have an existing application that uses JavaScript to call the WebSocket interface from a browser, do not migrate your service instance to use IAM authentication at this time. This limitation does not apply to the service's HTTP REST interface. For more information, see [Known limitations](#limitations).
+    {: important}
 
 For more information, see the following documentation:
 
@@ -163,20 +164,21 @@ The service now supports the MP3 or Motion Picture Experts Group (MPEG) audio fo
     -   `fr-FR_ReneeVoice`
 -   The `GET /v1/pronunciation` method now accepts an optional `customization_id` query parameter. The parameter obtains a word translation from a specified custom voice model. If the voice model does not contain the word, the method returns the word's default pronunciation. For more information, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/text-to-speech/api/v1/){: new_window}.
 
-    > **Note:** When using the `GET /v1/pronunciation` method without a customization ID and for a language other than US English, you can request a word's pronunciation only in {{site.data.keyword.IBM_notm}} SPR notation. For a language other than US English, you must specify `spr` with the method's `format` option.
+    When using the `GET /v1/pronunciation` method without a customization ID and for a language other than US English, you can request a word's pronunciation only in {{site.data.keyword.IBM_notm}} SPR notation. For a language other than US English, you must specify `spr` with the method's `format` option.
+    {: note}
 -   The list of supported audio formats now includes `audio/basic`, which provides single-channel audio that is encoded using 8-bit u-law (or mu-law) data that is sampled at 8 kHz. For more information, see [Specifying an audio format](/docs/services/text-to-speech/http.html#format).
 -   The HTTP and WebSocket `/v1/synthesize` methods can return a `warnings` response that includes messages about invalid query parameters or JSON fields that are included with a request. The format of the warnings changed. The following example shows the previous format:
 
-    `"warnings": "Unknown arguments: [u'invalid_arg_1', u'invalid_arg_2']."`
+    `"warnings": "Unknown arguments: [u'{invalid_arg_1}', u'{invalid_arg_2}']."`
 
     The same warning now has the following format:
 
-    `"warnings": "Unknown arguments: invalid_arg_1, invalid_arg_2."`
+    `"warnings": "Unknown arguments: {invalid_arg_1}, {invalid_arg_2}."`
 
 ### 10 March 2016
 {: #March2016}
 
--   The `GET` and `POST /v1/synthesize` methods can now return a `Warnings` response header that includes a list of warning messages about invalid query parameters or JSON fields that are included with the request. Each element of the list includes a string that describes the nature of the warning followed by an array of invalid argument strings; for example, `Unknown arguments: [u'invalid_arg_1', u'invalid_arg_2'].` For more information, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/text-to-speech/api/v1/){: new_window}.
+-   The `GET` and `POST /v1/synthesize` methods can now return a `Warnings` response header that includes a list of warning messages about invalid query parameters or JSON fields that are included with the request. Each element of the list includes a string that describes the nature of the warning followed by an array of invalid argument strings; for example, `Unknown arguments: [u'{invalid_arg_1}', u'{invalid_arg_2}'].` For more information, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/text-to-speech/api/v1/){: new_window}.
 -   The beta *{{site.data.keyword.watson}} Speech Software Development Kit (SDK) for the Apple&reg; iOS operating system* is deprecated and replaced by the *{{site.data.keyword.watson}} Developer Cloud Swift SDK*. The new SDK is available from the [swift-sdk repository ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/watson-developer-cloud/swift-sdk){: new_window} in the `watson-developer-cloud` namespace on GitHub.
 
 ### 22 February 2016
@@ -195,7 +197,8 @@ The service was updated with a new expressive SSML feature. The service extends 
 
     For more information about customization and its interface, see [Understanding customization](/docs/services/text-to-speech/custom-intro.html) and the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/text-to-speech/api/v1/){: new_window}.
 
-    > **Note:** The customization interface is a beta release that currently supports US English only. All customization methods and the `GET /v1/pronunciation` method can currently be used to create and manipulate custom voice models and word translations only in US English.
+    The customization interface is a beta release that currently supports US English only. All customization methods and the `GET /v1/pronunciation` method can currently be used to create and manipulate custom voice models and word translations only in US English.
+    {: note}
 -   The service supports a new voice, `pt-BR_IsabelaVoice`, to synthesize audio in Brazilian Portuguese with a female voice. For more information, see [Specifying a voice](/docs/services/text-to-speech/http.html#voices).
 
 ### 21 September 2015
@@ -207,7 +210,8 @@ The service was updated with a new expressive SSML feature. The service extends 
 
     Both SDKs support authenticating with the speech services by using either your {{site.data.keyword.Bluemix_short}} service credentials or an authentication token.
 
-    > **Note:** Because the SDKs are beta functionality, they are subject to change in the future.
+    Because the SDKs are beta functionality, they are subject to change in the future.
+    {: note}
 -   The service supports a new language, Japanese. The voice `ja-JP_EmiVoice` is a Japanese female voice.
 
 ### 1 July 2015
