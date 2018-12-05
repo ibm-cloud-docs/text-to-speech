@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-11-15"
+lastupdated: "2018-12-05"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2018-11-15"
 # The HTTP REST interface
 {: #usingHTTP}
 
-To synthesize text to speech with the service's HTTP REST API, you call the `GET` or `POST` version of the service's `/v1/synthesize` method. You specify the text to be synthesized, the voice for the spoken audio, and the format for the audio. You can also specify a custom voice model to be used with the request. For more information about the HTTP interface, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/text-to-speech/api/v1/){: new_window}.
+To synthesize text to speech with the service's HTTP REST API, you call the `GET` or `POST` version of the service's `/v1/synthesize` method. You specify the text to be synthesized, the voice for the spoken audio, and the format for the audio. You can also specify a custom voice model to be used with the request. For more information about the HTTP interface, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/text-to-speech){: new_window}.
 {: shortdesc}
 
 ## Synthesizing text to audio
