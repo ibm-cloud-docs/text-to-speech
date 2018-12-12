@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-12-11"
+lastupdated: "2018-12-12"
 
 ---
 
@@ -68,7 +68,7 @@ For instance, a web page that is loaded from a server in {{site.data.keyword.clo
 ## Using Software Development Kits
 {: #sdks}
 
-SDKs are available for the {{site.data.keyword.texttospeechshort}} service to simplify the development of speech applications. {{site.data.keyword.watson}} SDKs are available for many popular programming languages and platforms.
+SDKs are available for the {{site.data.keyword.texttospeechshort}} service to simplify the development of speech applications. {{site.data.keyword.ibmwatson}} SDKs are available for many popular programming languages and platforms.
 
 -   For a complete list of SDKs and links to the SDKs on GitHub, see [Using SDKs](/docs/services/watson/getting-started-sdks.html).
 -   For detailed information about all methods of the Node, Java, Python, and Ruby SDKs for the {{site.data.keyword.texttospeechshort}} service, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/text-to-speech){: new_window}.
@@ -76,7 +76,7 @@ SDKs are available for the {{site.data.keyword.texttospeechshort}} service to si
 ## Learning more about application development
 {: #learn}
 
-For more information about working with {{site.data.keyword.watson}} Developer Cloud services and {{site.data.keyword.cloud_notm}}, see
+For more information about working with {{site.data.keyword.watson}} services and {{site.data.keyword.cloud_notm}}, see
 
 -   For an introduction to working with {{site.data.keyword.watson}} services and {{site.data.keyword.cloud_notm}}, see [Getting started with {{site.data.keyword.watson}} and {{site.data.keyword.cloud_notm}}](/docs/services/watson/index.html).
 -   All new service instances use {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) for authentication. Older service instances might continue to use the `{username}` and `{password}` from their existing Cloud Foundry service credentials for authentication. For more information about authenticating to the service, see the [30 October 2018 service update](/docs/services/text-to-speech/release-notes.html#October2018) in the release notes.
