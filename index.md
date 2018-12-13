@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-12-12"
+lastupdated: "2018-12-13"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2018-12-12"
 # About
 {: #about}
 
-> ** Service update:** *The {{site.data.keyword.texttospeechshort}} service was updated on November 7, 2018. The service is now available in the {{site.data.keyword.cloud}} Tokyo location. For more information, see the [November 7 2018 service update](/docs/services/text-to-speech/release-notes.html#November2018a) in the release notes*.
+> ** Service update:** *The {{site.data.keyword.texttospeechshort}} service was updated on December 13, 2018. The service is now available in the {{site.data.keyword.cloud}} London location. For more information, see the [13 December 2018 service update](/docs/services/text-to-speech/release-notes.html#December2018) in the release notes*.
 
 The {{site.data.keyword.texttospeechfull}} service provides an application programming interface (API) that uses {{site.data.keyword.IBM_notm}}'s speech-synthesis capabilities to convert written text to natural-sounding speech. The service streams the results back to the client with minimal delay. The service offers both [HTTP REST](/docs/services/text-to-speech/http.html) and [WebSocket](/docs/services/text-to-speech/websockets.html) interfaces.
 
