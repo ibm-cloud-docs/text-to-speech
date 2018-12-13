@@ -65,7 +65,7 @@ curl -X POST -u "apikey:L_HALhLVIksh1b73l97LSs6R_3gLo4xkujAaxm7i-b9x"
 The following commands use the `POST /v1/synthesize` method to synthesize US English input to audio files in two different formats. Both requests use the default US English voice, `en-US_MichaelVoice`.
 
 1.  Issue the following command to synthesize the string "hello world" and produce a WAV file that is named `hello_world.wav`.
-    -   {: hide-dashboard} Replace `{apikey}` and `{url}` with your IAM API key and URL.
+    -   {: hide-dashboard} Replace `{apikey}` and `{url}` with your API key and URL.
 
     ```bash
     curl -X POST -u "apikey:{apikey}"{: apikey} \
@@ -78,7 +78,7 @@ The following commands use the `POST /v1/synthesize` method to synthesize US Eng
     {: pre}
 
 1.  Issue the following command to synthesize the same text but produce an Ogg file (the default format) that is named `hello_world.ogg`.
-    -   {: hide-dashboard} Replace `{apikey}` and `{url}` with your IAM API key and URL.
+    -   {: hide-dashboard} Replace `{apikey}` and `{url}` with your API key and URL.
 
     ```bash
     curl -X POST -u "apikey:{apikey}"{: apikey} \
@@ -95,7 +95,7 @@ The following commands use the `POST /v1/synthesize` method to synthesize US Eng
 The following command uses the `GET /v1/synthesize` method to synthesize Spanish input to an audio file.
 
 1.  Issue the following command to synthesize the string "hola mundo" and produce a WAV file that is named `hola_mundo.wav`. The input text is URL-encoded. The method includes the query parameters `accept` to specify the audio format and `voice` to specify a Spanish voice, `es-ES_EnriqueVoice`.
-    -   {: hide-dashboard} Replace `{apikey}` and `{url}` with your IAM API key and URL.
+    -   {: hide-dashboard} Replace `{apikey}` and `{url}` with your API key and URL.
 
     ```bash
     curl -X GET -u "apikey:{apikey}"{: apikey} \
