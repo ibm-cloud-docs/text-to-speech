@@ -16,7 +16,7 @@ lastupdated: "2018-12-13"
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java}'
+{:java: .ph data-hd-programlang='java}
 {:go: .ph data-hd-programlang='go'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
