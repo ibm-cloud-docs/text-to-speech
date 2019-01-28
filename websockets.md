@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-13"
+  years: 2015, 2019
+lastupdated: "2019-01-28"
 
 ---
 
@@ -22,9 +22,6 @@ lastupdated: "2018-12-13"
 
 # The WebSocket interface
 {: #usingWebSocket}
-
-You cannot use JavaScript to call the WebSocket interface from a browser. The `watson-token` parameter that is available with the `/v1/synthesize` method does not accept IAM tokens or API keys. For more information about working around this limitation, see the [Known limitations](/docs/services/text-to-speech/release-notes.html#limitations) in the release notes.
-{: important}
 
 To synthesize text to speech with the service's WebSocket interface, you first establish a connection with the service by calling its `/v1/synthesize` method. You then send the text to be synthesized to the service as a JSON text message over the connection. The service automatically closes the WebSocket connection when it finishes processing the request.
 {: shortdesc}
@@ -59,7 +56,7 @@ where `{host_name}` is the location in which your application is hosted:
 -   `gateway-tok.watsonplatform.net` for Tokyo
 -   `gateway-lon.watsonplatform.net` for London
 
-A WebSocket client calls this method with the following query parameters to establish an authenticated connection with the service.
+A WebSocket client calls this method with the following query parameters to establish an authenticated connection with the service. If you use Identity and Access Management (IAM) authentication, use the `access_token` query parameter. If you use Cloud Foundry service credentials, use the `watson-token` query parameter.
 
 <table>
   <caption>Table 1. Parameters of the <code>/v1/synthesize</code>
@@ -70,22 +67,28 @@ A WebSocket client calls this method with the following query parameters to esta
     <th style="text-align:left">Description</th>
   </tr>
   <tr>
-    <td><code>watson-token</code><br/><em>Optional</em></td>
+    <td style="text-align:left"><code>access_token</code>
+      <br/><em>Optional</em></td>
     <td style="text-align:center">String</td>
-    <td>
-      Passes a valid authentication token instead of passing the service
-      credentials with the call. Watson authentication tokens are an
-      alternative to service credentials. They are based on Cloud Foundry
-      service credentials that use a `{username}` and `{password}` for
-      authentication.
-      <br/><br/>
-      **Important:** You cannot use JavaScript to call the WebSocket
-      interface from a browser if your service credentials are based on
-      IAM authentication. The `watson-token` parameter does not accept
-      IAM tokens or API keys. For more information about working around
-      this limitation, see the
-      [Known limitations](/docs/services/text-to-speech/release-notes.html#limitations)
-      in the release notes.
+    <td style="text-align:left">
+      <em>If you use IAM authentication,</em> pass a valid IAM access
+      token to authenticate with the service. You pass an IAM access
+      token instead of passing an API key with the call. You must use
+      the access token before it expires.
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:left"><code>watson-token</code>
+      <br/><em>Optional</em></td>
+    <td style="text-align:center">String</td>
+    <td style="text-align:left">
+      <em>If you use Cloud Foundry service credentials,</em> pass a valid
+      {{site.data.keyword.watson}} authentication token to authenticate
+      with the service. You pass a {{site.data.keyword.watson}} token
+      instead of passing service credentials with the call.
+      {{site.data.keyword.watson}} tokens are based on Cloud Foundry
+      service credentials, which use a `username` and `password` for
+      HTTP basic authentication.
     </td>
   </tr>
   <tr>
@@ -143,14 +146,14 @@ A WebSocket client calls this method with the following query parameters to esta
   </tr>
 </table>
 
-The following snippet of JavaScript code opens a connection with the service. The call to the `/v1/synthesize` method passes the `voice` and `watson-token` query parameters, the former to direct the service to use the US English Allison voice. Once the connection is established, the event listeners (`onOpen`, `onClose`, and so on) are defined to respond to events from the service.
+The following snippet of JavaScript code opens a connection with the service. The call to the `/v1/synthesize` method passes the `voice` and `access_token` query parameters, the former to direct the service to use the US English Allison voice. Once the connection is established, the event listeners (`onOpen`, `onClose`, and so on) are defined to respond to events from the service.
 
 ```javascript
 var voice = 'en-US_AllisonVoice';
 var token = {authentication-token};
 var wsURI = 'wss://stream.watsonplatform.net/text-to-speech/api/v1/synthesize'
   + '?voice=' + voice
-  + '&watson-token=' + token;
+  + '&access_token=' + IAM_access_token;
 var websocket = new WebSocket(wsURI);
 websocket.onopen = function(evt) { onOpen(evt) };
 websocket.onclose = function(evt) { onClose(evt) };
