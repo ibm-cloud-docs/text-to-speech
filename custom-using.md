@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2018-10-28"
+  years: 2015, 2019
+lastupdated: "2019-01-28"
 
 ---
 
@@ -55,7 +55,7 @@ The third example establishes a WebSocket connection with the `/v1/synthesize` m
 ```javascript
 var token = {authentication-token};
 var wsURI = 'wss://stream.watsonplatform.net/text-to-speech/api/v1/synthesize'
-  + '?watson-token=' + token
+  + '?access_token=' + IAM_access_token
   + '&customization_id={customization_id}';
 var websocket = new WebSocket(wsURI);
 ```
