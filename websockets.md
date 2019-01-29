@@ -155,11 +155,11 @@ A WebSocket client calls this method with the following query parameters to esta
 The following snippet of JavaScript code opens a connection with the service. The call to the `/v1/synthesize` method passes the `voice` and `access_token` query parameters, the former to direct the service to use the US English Allison voice. Once the connection is established, the event listeners (`onOpen`, `onClose`, and so on) are defined to respond to events from the service.
 
 ```javascript
-var voice = 'en-US_AllisonVoice';
-var token = {authentication-token};
+var IAM_access_token = '{access_token}';
 var wsURI = 'wss://stream.watsonplatform.net/text-to-speech/api/v1/synthesize'
-  + '?voice=' + voice
-  + '&access_token=' + IAM_access_token;
+  + '?access_token=' + IAM_access_token
+  + '&voice=en-US_AllisonVoice';
+
 var websocket = new WebSocket(wsURI);
 websocket.onopen = function(evt) { onOpen(evt) };
 websocket.onclose = function(evt) { onClose(evt) };
