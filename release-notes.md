@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-01-28"
+lastupdated: "2019-01-29"
 
 ---
 
@@ -31,6 +31,16 @@ The following sections document the new features and changes that were included 
 
 No known limitations at this time.
 
+## 28 January 2019
+{: #January2019}
+
+The WebSocket interface now supports token-based Identity and Access Management (IAM) authentication from browser-based JavaScript code. The limitation to the contrary has been removed. To establish an authenticated connection with the WebSocket `/v1/synthesize` method:
+
+-   If you use IAM authentication, include the `access_token` query parameter.
+-   If you use Cloud Foundry service credentials, include the `watson-token` query parameter.
+
+For more information, see [Open a connection](/docs/services/text-to-speech/websockets.html#WSopen).
+
 ## 13 December 2018
 {: #December2018}
 
@@ -41,7 +51,25 @@ The {{site.data.keyword.texttospeechshort}} service is now available in the {{si
 
 The {{site.data.keyword.texttospeechshort}} service is now available in the {{site.data.keyword.cloud}} Tokyo location (**jp-tok**). Like all locations, Tokyo uses token-based Identity and Access Management (IAM) authentication. All new services instances that you create in this location use IAM authentication.
 
-## 30 October 2018
+## Older releases
+{: #older}
+
+-   [30 October 2018](#October2018)
+-   [12 June 2018](#June2018)
+-   [15 May 2018](#May2018)
+-   [2 October 2017](#October2017)
+-   [14 July 2017](#July2017)
+-   [10 April 2017](#April2017)
+-   [1 December 2016](#December2016)
+-   [22 September 2016](/docs/services/text-to-speech/release-notes.html#September2016)
+-   [23 June 2016](/docs/services/text-to-speech/release-notes.html#June2016)
+-   [10 March 2016](/docs/services/text-to-speech/release-notes.html#March2016)
+-   [22 February 2016](/docs/services/text-to-speech/release-notes.html#February2016)
+-   [17 December 2015](/docs/services/text-to-speech/release-notes.html#December2015)
+-   [21 September 2015](/docs/services/text-to-speech/release-notes.html#September2015)
+-   [1 July 2015](/docs/services/text-to-speech/release-notes.html#July2015)
+
+### 30 October 2018
 {: #October2018}
 
 The {{site.data.keyword.texttospeechshort}} service has migrated to token-based Identity and Access Management (IAM) authentication for all locations. All {{site.data.keyword.cloud_notm}} services now use IAM authentication. The {{site.data.keyword.texttospeechshort}} service migrated in each location on the following dates:
@@ -62,23 +90,6 @@ For more information, see the following documentation:
 -   For more information about using IAM tokens with {{site.data.keyword.watson}} services, see [Authenticating with IAM tokens](/docs/services/watson/getting-started-iam.html).
 -   For more information about using IAM API keys with {{site.data.keyword.watson}} services, see [IAM service API keys](/docs/services/watson/apikey-bp.html).
 -   For examples that use IAM authentication, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/text-to-speech){: new_window}.
-
-## Older releases
-{: #older}
-
--   [12 June 2018](#June2018)
--   [15 May 2018](#May2018)
--   [2 October 2017](#October2017)
--   [14 July 2017](#July2017)
--   [10 April 2017](#April2017)
--   [1 December 2016](#December2016)
--   [22 September 2016](/docs/services/text-to-speech/release-notes.html#September2016)
--   [23 June 2016](/docs/services/text-to-speech/release-notes.html#June2016)
--   [10 March 2016](/docs/services/text-to-speech/release-notes.html#March2016)
--   [22 February 2016](/docs/services/text-to-speech/release-notes.html#February2016)
--   [17 December 2015](/docs/services/text-to-speech/release-notes.html#December2015)
--   [21 September 2015](/docs/services/text-to-speech/release-notes.html#September2015)
--   [1 July 2015](/docs/services/text-to-speech/release-notes.html#July2015)
 
 ### 12 June 2018
 {: #June2018}
