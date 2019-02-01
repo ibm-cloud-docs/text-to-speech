@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-20"
+  years: 2015, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -29,7 +29,7 @@ The Speech Synthesis Markup Language (SSML) is an XML-based markup language that
 With the {{site.data.keyword.texttospeechshort}} service, you can use SSML to control the synthesis of your text with all supported languages. This includes using the SSML `<phoneme>` element to define a word's pronunciation in either the International Phonetic Alphabet (IPA) or the {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR). The service also relies on the SSML `<phoneme>` element to define the phonetic translation for a word with its customization interface; for more information, see [Understanding customization](/docs/services/text-to-speech/custom-intro.html).
 
 ## Introduction to SSML
-{: #introduction}
+{: #introduction-SSML}
 
 SSML operates by augmenting the plain text that is passed to a synthesizer with a predefined set of elements, or tags. An XML parser first separates the plain input text from the markup specifications. The specifications are then processed and sent as a set of instructions in a form that can be understood by the synthesizer to produce the desired effects. For the XML parser to carry out this job, the markup needs to be well formed; for example, elements must be closed and multiple elements must be properly nested. For an introduction to basic XML concepts, see [w3schools.com/xml/xml_whatis.asp ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.w3schools.com/xml/xml_whatis.asp){: new_window}.
 

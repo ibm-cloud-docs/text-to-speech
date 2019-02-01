@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-05-21"
+  years: 2015, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -27,7 +27,7 @@ By default, the {{site.data.keyword.texttospeechshort}} service synthesizes text
 {: shortdesc}
 
 ## Language support
-{: #languages}
+{: #languages-expressive}
 
 Currently, the service supports expressiveness only for the US English Allison voice (`en-US_AllisonVoice`). Using the element with any other voice returns an error.
 
