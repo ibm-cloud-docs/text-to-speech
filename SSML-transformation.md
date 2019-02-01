@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-15"
+  years: 2015, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -33,7 +33,7 @@ The {{site.data.keyword.texttospeechshort}} service, like most speech synthesis 
 You can apply the `<voice-transformation>` element to the entire body of the text, a sentence, or a word or fragment. The element accepts one required attribute, `type`, which describes the type of voice transformation to be applied to the specified text. You can apply a built-in transformation or create a custom transformation based on different aspects of the voice.
 
 ## Language support
-{: #languages}
+{: #languages-transformation}
 
 The service currently supports voice transformation for the following US English voices only:
 

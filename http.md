@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-05"
+  years: 2015, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -610,7 +610,7 @@ The examples that follow include line breaks for readability; do *not* include t
 {: note}
 
 ### Specifying SSML input
-{: #ssml}
+{: #ssml-http}
 
 The Speech Synthesis Markup Language (SSML) is an XML-based markup language that is designed to provide annotations of text for speech synthesis applications such as the {{site.data.keyword.texttospeechshort}} service. You can use SSML elements and their attributes to gain greater control over the synthesis and resulting audio output.
 

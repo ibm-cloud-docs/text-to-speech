@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-11-10"
+  years: 2015, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -29,7 +29,7 @@ The {{site.data.keyword.texttospeechshort}} service supports both the standard I
 The following sections introduce {{site.data.keyword.IBM_notm}} SPR notation. Because IPA is a standard notation, the documentation does not provide basic usage information for IPA. For brief usage guidance, see [Working with IPA](#ipa).
 
 ## Introduction to IBM SPR
-{: #introduction}
+{: #introduction-SPRs}
 
 An SPR pronunciation is defined with the `<phoneme>` element of the Speech Synthesis Markup Language (SSML) (see [The phoneme element](/docs/services/text-to-speech/SSML-elements.html#phoneme_element)). It consists of a sequence of allowable symbols for a given language enclosed in double quotes. The symbols define how the word enclosed in the `<phoneme>` element is to be pronounced. The `alphabet` attribute of the element has the value `ibm` to indicate that the pronunciation is defined in SPR, and the `ph` attribute defines the pronunciation. The following are examples of valid SPR notation for the words *through* and *shocking* in US English:
 
