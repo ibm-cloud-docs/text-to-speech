@@ -44,6 +44,8 @@ Text to Speech
     {: .navgroup id="howto"}
     http.md
     websockets.md
+    voices.md
+    audio-formats.md
     word-timing.md
 
     {: topicgroup}
