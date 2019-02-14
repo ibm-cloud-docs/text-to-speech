@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-01-29"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2019-01-29"
 # The WebSocket interface
 {: #usingWebSocket}
 
-To synthesize text to speech with the service's WebSocket interface, you first establish a connection with the service by calling its `/v1/synthesize` method. You then send the text to be synthesized to the service as a JSON text message over the connection. The service automatically closes the WebSocket connection when it finishes processing the request.
+To synthesize text to speech with the WebSocket interface of the {{site.data.keyword.texttospeechfull}} service, you first establish a connection with the service by calling its `/v1/synthesize` method. You then send the text to be synthesized to the service as a JSON text message over the connection. The service automatically closes the WebSocket connection when it finishes processing the request.
 {: shortdesc}
 
 The synthesize request and response cycle includes the following steps:
@@ -104,8 +104,7 @@ A WebSocket client calls this method with the following query parameters to esta
       Specifies the voice in which the text is to be spoken in the audio.
       Omit the parameter to use the default voice, `en-US_MichaelVoice`.
       For more information, see
-      <a href="/docs/services/text-to-speech/http.html#voices">Specifying
-        a voice</a>.
+      <a href="/docs/services/text-to-speech/voices.html">Languages and voices</a>.
     </td>
   </tr>
   <tr>
@@ -186,25 +185,25 @@ To synthesize text, the client passes a simple JSON text message to the service 
     <td>
       Provides the text that is to be synthesized. The client can pass
       plain text or text that is annotated with the Speech Synthesis
-      Markup Language (SSML). For more information, see
+      Markup Language (SSML). The client can pass a maximum of 5 KB of
+      text with the request. For more information, see
       <a href="/docs/services/text-to-speech/http.html#input">Specifying
-      input text</a>. SSML input can also include the
-      <code>&lt;mark&gt;</code> element; see
+      input text</a> and the sections that follow it.<br/><br/>
+      SSML input can also include the <code>&lt;mark&gt;</code> element.
+      For more information, see
       <a href="/docs/services/text-to-speech/word-timing.html#mark">Specifying
-      an SSML mark</a>. The client can pass a maximum of 5 KB of text with
-      the request.
+        an SSML mark</a>.
     </td>
   </tr>
   <tr>
     <td><code>accept</code><br/><em>Required</em></td>
     <td style="text-align:center">String</td>
     <td>
-      Specifies the requested format (MIME type) of the audio. For
-      more information, see
-      <a href="/docs/services/text-to-speech/http.html#format">Specifying
-      an audio format</a>. In addition to the supported specifications,
-      you can use `*/*` to specify the default audio format,
-      <code>audio/ogg;codecs=opus</code>.
+      Specifies the requested format (MIME type) of the audio. Use
+      `*/*` to request the default audio format,
+      <code>audio/ogg;codecs=opus</code>. For more information, see
+      <a href="/docs/services/text-to-speech/audio-formats.html">Audio
+      formats</a>.
     </td>
   </tr>
   <tr>
@@ -213,7 +212,7 @@ To synthesize text, the client passes a simple JSON text message to the service 
     <td>
       Specifies that the service is to return word timing information
       for all strings of the input text. The service returns the start
-      and end time of each string of the input. Specify <code>words</code>
+      and end time of each token of the input. Specify <code>words</code>
       as the lone element of the array to request word timings. Specify
       an empty array or omit the parameter to receive no word timings.
       For more information, see
@@ -236,7 +235,7 @@ function onOpen(evt) {
 ```
 {: codeblock}
 
-The service responds to this message by sending a text message that confirms the format of the audio response:
+The service responds to this message by sending a text message that confirms the format of the audio response. The following response confirms the default audio format.
 
 ```javascript
 {
@@ -289,16 +288,16 @@ The service can send the following return codes to the client over the WebSocket
 -   `1002` indicates that the service is closing the connection due to a protocol error.
 -   `1006` indicates that the connection closed abnormally.
 -   `1009` indicates that the frame size exceeded the 4 MB limit.
--   `1011` indicates that the service is terminating the connection because it encountered an unexpected condition that prevents it from fulfilling the request, such as an invalid argument. The return code can also indicate that the input text was too large; the text cannot exceed 5 KB.
+-   `1011` indicates that the service is terminating the connection because it encountered an unexpected condition that prevents it from fulfilling the request, such as an invalid argument. The return code can also indicate that the input text was too large.
 
-If the socket closes with an error, the service sends the client an informative message of the form `{"error": "Specific error message"}` before closing. The service can also send warning messages for unknown parameters.
+If the socket closes with an error, the service sends the client an informative message of the form `{"error": "Specific error message"}` before closing. The service can also send non-fatal warning messages for unknown parameters.
 
-### Example error and warning messages
+## Example error and warning messages
 {: #returnErrors}
 
-The first two examples show error responses. They include a JSON text message and a formatted message from the client's `onClose` callback method. The formatted messages begin with the boolean `true` because the connection is closed. They also include the WebSocket error code that caused the closure. The third example shows a warning response. It does not include the second message because the connection is not closed by the warning.
+The following examples show error responses. They include a JSON text message and a formatted message from the client's `onClose` callback method. The formatted messages begin with the boolean `true` because the connection is closed. They also include the WebSocket error code that caused the closure.
 
--   The first example shows error messages for an invalid argument for the `accept` parameter:
+-   This example shows error messages for an invalid argument for the `accept` parameter:
 
     ```javascript
     {
@@ -308,7 +307,7 @@ The first two examples show error responses. They include a JSON text message an
     ```
     {: codeblock}
 
--   The second example shows error messages for a missing `text` parameter:
+-   This example shows error messages for a missing `text` parameter:
 
     ```javascript
     {
@@ -318,13 +317,13 @@ The first two examples show error responses. They include a JSON text message an
     ```
     {: codeblock}
 
--   The third example shows a warning message for an unknown parameter named `invalid-parameter`:
+The following example shows a warning response, in this case for an unknown parameter named `invalid-parameter`. It does not include the second message because the connection is not closed by the warning.
 
-    ```javascript
-    {
-      "warnings": "Unknown arguments: invalid-parameter."
-    }
-    ```
-    {: codeblock}
+```javascript
+{
+  "warnings": "Unknown arguments: invalid-parameter."
+}
+```
+{: codeblock}
 
 For more information about WebSocket return codes, see the Internet Engineering Task Force (IETF) [Request for Comments (RFC) 6455 ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://tools.ietf.org/html/rfc6455){: new_window}.

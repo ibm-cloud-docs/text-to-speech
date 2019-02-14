@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-13"
+  years: 2015, 2019
+lastupdated: "2019-02-13"
 
 ---
 
@@ -29,15 +29,21 @@ You can access the speech synthesis capabilities of the {{site.data.keyword.text
 ## HTTP interface
 {: #http}
 
-To synthesize text with the HTTP REST API, you call the `GET` or `POST` version of the service's `/v1/synthesize` method. The two versions of the method offer generally equivalent functionality:
+To synthesize text with the HTTP API, you call the `GET` or `POST` version of the service's `/v1/synthesize` method. The two versions of the method offer generally equivalent functionality:
 
--   *Input text:* The `GET /v1/synthesize` method accepts the text to be synthesized via a query parameter. The `POST /v1/synthesize` method accepts the text in the body of the request. Both methods impose a size limit of 5 KB on the text to be synthesized.
+-   *Input text:* The `GET /v1/synthesize` method accepts the text to be synthesized via a query parameter. The `POST /v1/synthesize` method accepts the text in the body of the request. Both methods impose a size limit of 8 KB on the total size of the request (text plus headers).
 
     You can pass the service plain text or text that is annotated with the Speech Synthesis Markup Language (SSML). SSML is an XML-based markup language that provides annotations of text for speech synthesis applications such as the {{site.data.keyword.texttospeechshort}} service. The service augments SSML with service-specific expressive and voice-transformation elements.
--   *Voices:* The service accepts text and produces audio in various languages, voices, and dialects. The service offers at least one male or female voice, sometimes both, for each supported language and different dialects such as US and British English. You can use the service's `GET /v1/voices` or `GET /v1/voices/{voice}` methods to learn more about the supported voices. The service synthesizes the text into the language of the specified voice; be sure to match the voice to the input text.
+
+    For more information, see [Specifying input text](/docs/services/text-to-speech/http.html#input).
+-   *Voices:* The service accepts text and produces audio in various languages, voices, and dialects. The service offers at least one male or female voice, sometimes both, for each supported language and different dialects such as US and British English.
+
+    You can use the service's `GET /v1/voices` or `GET /v1/voices/{voice}` methods to learn more about the supported voices. The service synthesizes the text into the language of the specified voice. Be sure to match the voice to the input text.
+
+    For more information, see [Languages and voices](/docs/services/text-to-speech/voices.html).
 -   *Audio formats:* The service can produce audio in the following formats: Ogg or Web Media (WebM) format with the Opus (default) or Vorbis codec, MP3 (Motion Picture Experts Group, or MPEG) format, Waveform Audio File Format (WAV), Free Lossless Audio Codec (FLAC), Linear 16-bit Pulse-Code Modulation (PCM), 8-bit mu-law (u-law), or basic audio.
 
-For more information, see [The HTTP REST interface](/docs/services/text-to-speech/http.html).
+    For more information, see [Audio formats](/docs/services/text-to-speech/audio-formats.html).
 
 ## WebSocket interface
 {: #websocket}

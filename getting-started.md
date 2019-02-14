@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-13"
+  years: 2015, 2019
+lastupdated: "2019-02-13"
 
 ---
 
@@ -106,6 +106,6 @@ The following command uses the `GET /v1/synthesize` method to synthesize Spanish
 
 ## Next steps
 
--   Learn more about the service's HTTP interface in [The HTTP REST interface](/docs/services/text-to-speech/http.html).
+-   Learn more about the service's HTTP interface in [The HTTP interface](/docs/services/text-to-speech/http.html).
 -   Learn about the service's WebSocket interface in [The WebSocket interface](/docs/services/text-to-speech/websockets.html).
 -   Get detailed information about the methods of the service's interface in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/text-to-speech){: new_window}.

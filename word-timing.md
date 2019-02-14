@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-05-19"
+  years: 2015, 2019
+lastupdated: "2019-02-14"
 
 ---
 
@@ -204,7 +204,7 @@ When the service synthesizes plain text, it returns all input characters except 
 SSML elements that are not mentioned in the list do not impact word timing information. For more information about the service's support for SSML, see [Using SSML](/docs/services/text-to-speech/SSML.html).
 
 ## Examples with mark elements
-{: #example}
+{: #timingExample}
 
 The following examples show a simple WebSocket session between a client and the service. The examples focus on the exchange of data, not on opening the connection. The client sends a text message that includes two `<mark>` elements, named `SIMPLE` and `EXAMPLE`, and it requests the audio to be returned in WAV format:
 
