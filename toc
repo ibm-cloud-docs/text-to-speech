@@ -20,13 +20,6 @@ Text to Speech
         [Watson videos](https://www.youtube.com/user/IBMWatsonSolutions)
     {: .navgroup-end}
 
-    {: .navgroup id="reference"}
-    [API reference](https://cloud.ibm.com/apidocs/text-to-speech)
-    information-security.md
-    /watson/watson-using-sdks
-    [Watson GitHub repos](https://github.com/watson-developer-cloud/)
-    {: .navgroup-end}
-
     {: .navgroup id="howto"}
     http.md
     websockets.md
@@ -65,6 +58,13 @@ Text to Speech
     Service background
         science.md
         references.md
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    [API reference](https://cloud.ibm.com/apidocs/text-to-speech)
+    information-security.md
+    /watson/watson-using-sdks
+    [Watson GitHub repos](https://github.com/watson-developer-cloud/)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
