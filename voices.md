@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-14"
+lastupdated: "2019-02-26"
 
 ---
 
@@ -29,12 +29,12 @@ The {{site.data.keyword.texttospeechfull}} service supports a variety of languag
 ## Supported languages and voices
 {: #languageVoices}
 
-Table 1 lists the voices that are available for each language and dialect, including their gender. If you omit the optional `voice` parameter from a request, the service uses the `en-US_MichaelVoice` voice by default.
+Table 1 lists the voices that are available for each language and dialect, including their gender. If you omit the optional `voice` parameter from a request, the service uses the `en-US_MichaelVoice` voice by default. To understand why the service offers two versions of some voices, see [Speech synthesis technologies](#technologiesVoices).
 
 <table style="width:90%">
   <caption>Table 1. Supported languages and voices</caption>
   <tr>
-    <th style="text-align:left">Languages</th>
+    <th style="text-align:left">Language</th>
     <th style="text-align:center">Voice</th>
     <th style="text-align:center">Gender</th>
   </tr>
@@ -70,7 +70,8 @@ Table 1 lists the voices that are available for each language and dialect, inclu
   </tr>
   <tr>
     <td style="text-align:left">Italian</td>
-    <td style="text-align:center"><code>it-IT_FrancescaVoice</code></td>
+    <td style="text-align:center"><code>it-IT_FrancescaVoice</code><br/>
+      <code>it-IT_FrancescaV2Voice</code></td>
     <td style="text-align:center">Female</td>
   </tr>
   <tr>
@@ -95,23 +96,46 @@ Table 1 lists the voices that are available for each language and dialect, inclu
   </tr>
   <tr>
     <td style="text-align:left">US English</td>
-    <td style="text-align:center"><code>en-US_AllisonVoice</code></td>
+    <td style="text-align:center"><code>en-US_AllisonVoice</code><br/>
+      <code>en-US_AllisonV2Voice</code></td>
     <td style="text-align:center">Female</td>
   </tr>
   <tr>
     <td></td>
-    <td style="text-align:center"><code>en-US_LisaVoice</code></td>
+    <td style="text-align:center"><code>en-US_LisaVoice</code><br/>
+      <code>en-US_LisaV2Voice</code></td>
     <td style="text-align:center">Female</td>
   </tr>
   <tr>
     <td></td>
-    <td style="text-align:center"><code>en-US_MichaelVoice</code></td>
+    <td style="text-align:center"><code>en-US_MichaelVoice</code><br/>
+      <code>en-US_MichaelV2Voice</code></td>
     <td style="text-align:center">Male</td>
   </tr>
 </table>
 
-The voices `es-LA_SofiaVoice` and `es-US_SofiaVoice` are essentially the same voice. The most significant difference concerns how the two voices interpret a `$` (dollar sign). The Latin American version uses the term *pesos*, while the North American version uses the term *dolares*. Other minor differences might exist between the two voices.
+The voices `es-LA_SofiaVoice` and `es-US_SofiaVoice` are essentially the same voice. The most significant difference concerns how the two voices interpret a $ (dollar sign). The Latin American version uses the term *pesos*, while the North American version uses the term *d&oacute;lares*. Other minor differences might also exist between the two voices.
 {: note}
+
+### Speech synthesis technologies
+{: #technologiesVoices}
+
+The service makes available two versions of some voices, for example, `en-US_AllisonVoice` and `en-US_AllisonV2Voice`. The primary difference between the two versions reflects the technology that the service uses to synthesize speech:
+
+-   *Concatenative synthesis* assembles segments (or units) of recorded speech to generate the requested audio. It generates audio that might be considered crisper sounding, but the concatenation points of the recorded segments sometimes result in speech distortions.
+
+    Voices that do not include the string `V2` in their names (for example, `en-US_AllisonVoice`) are based on concatenative synthesis.
+-   *Deep-learning synthesis* uses a Deep Neural Network (DNN) to synthesize speech for the specified text. Rather than string together recorded segments of audio, this approach relies on machine learning to train a DNN on recorded speech data. Deep-learning, or DNN-based, synthesis produces audio with a more natural prosody and a more consistent overall quality.
+
+    Voices that include the string `V2` in their names (for example, `en-US_AllisonV2Voice`) are newer voices that use DNN-based synthesis.
+
+You need to experiment with the new voices before adopting them for your application. The two technologies produce audio with different signal qualities, so the new voices might not be better for all applications. Also, the DNN-based voices do not support the following SSML elements:
+
+-   `<prosody>`
+-   `<express-as>`
+-   `<voice-transformation>`
+
+If your application uses these tags, continue to use the voices that are based on concatenative synthesis.
 
 ### Voice customization
 {: #customizeVoice}

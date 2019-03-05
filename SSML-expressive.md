@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-01"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -29,7 +29,7 @@ By default, the {{site.data.keyword.texttospeechshort}} service synthesizes text
 ## Language support
 {: #languages-expressive}
 
-Currently, the service supports expressiveness only for the US English Allison voice (`en-US_AllisonVoice`). Using the element with any other voice returns an error.
+The service supports expressiveness only for the US English Allison voice (`en-US_AllisonVoice`). Expressiveness is not supported with the `en-US_AllisonV2Voice` voice. Using the element with an unsupported voice returns an error.
 
 ## The express-as element
 

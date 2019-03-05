@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-15"
+  years: 2015, 2019
+lastupdated: "2019-02-15"
 
 ---
 
@@ -164,7 +164,7 @@ For more information about an element or attribute, see its description. Where n
 ## The audio element
 {: #audio_element}
 
-This `<audio>` element inserts recorded elements into the service-generated audio. It is not currently supported.
+This `<audio>` element inserts recorded elements into the service-generated audio. It is not supported.
 
 ## The break element
 {: #break_element}
@@ -193,17 +193,17 @@ The `<break>` element inserts a pause into the spoken text. It has the following
 ## The desc element
 {: #desc_element}
 
-The `<desc>` element can occur only within an `<audio>` element. Because the `<audio>` element is not currently supported, neither is the `<desc>` element.
+The `<desc>` element can occur only within an `<audio>` element. Because the `<audio>` element is not supported, neither is the `<desc>` element.
 
 ## The emphasis element
 {: #emphasis_element}
 
-The `<emphasis>` element requests that the enclosed text is spoken with emphasis. It is not currently supported.
+The `<emphasis>` element requests that the enclosed text is spoken with emphasis. It is not supported.
 
 ## The lexicon element
 {: #lexicon_element}
 
-This `<lexicon>` element introduces pronunciation dictionaries for the given SSML document. It is not currently supported.
+This `<lexicon>` element introduces pronunciation dictionaries for the given SSML document. It is not supported.
 
 You can use the service's customization interface to define a dictionary of custom entries (word/translation pairs) for use during speech synthesis. For more information, see [Understanding customization](/docs/services/text-to-speech/custom-intro.html).
 
@@ -225,14 +225,14 @@ The `<mark>` element is an empty element that places a marker into the text to b
 ## The meta and metadata elements
 {: #mm_element}
 
-The `<meta>` and `<metadata>` elements are containers in which you can place information about the document. They are not currently supported.
+The `<meta>` and `<metadata>` elements are containers in which you can place information about the document. They are not supported.
 
 ## The paragraph and sentence elements
 {: #ps_element}
 
 The `<paragraph>` (or `<p>`) and `<sentence>` (or `<s>`) elements are optional elements that can be used to give hints about textual structure. If the text that is enclosed in a `<paragraph>` or `<sentence>` element does not end with an end-of-sentence punctuation character (like a period), the service adds a longer than normal pause to the synthesized audio.
 
-The only valid attribute for either element is `xml:lang`, which allows for language switching. The attribute is not currently supported.
+The only valid attribute for either element is `xml:lang`, which allows for language switching. The attribute is not supported.
 
 ```xml
 <speak version="1.0">
@@ -279,7 +279,10 @@ For more information about using SPR and IPA notations with the `<phoneme>` elem
 ## The prosody element
 {: #prosody_element}
 
-The `<prosody>` element controls the pitch, speaking rate, and volume of the text. All attributes are optional, but an error occurs if no attribute is specified. The SSML specification allows for three attributes that the service does not currently support: `contour`, `range`, and `duration`. The service supports the `pitch`, `rate`, and `volume` attributes.
+The `<prosody>` element controls the pitch, speaking rate, and volume of the text. All attributes are optional, but an error occurs if no attribute is specified. The SSML specification allows for three attributes that the service does not support: `contour`, `range`, and `duration`. The service supports the `pitch`, `rate`, and `volume` attributes.
+
+The services does not support the `<prosody>` element with the `V2`, DNN-based voices (for example, `en-US_AllisonV2Voice`). For more information about these voices, see [Speech synthesis technologies](/docs/services/text-to-speech/voices.html#technologiesVoices).
+{: note}
 
 ### The pitch attribute
 {: #prosody-pitch}
@@ -551,4 +554,4 @@ The `<sub>` element indicates that the text that is specified by the `alias` att
 ## The voice element
 {: #voice_element}
 
-This `<voice>` element requests a change in voice. It is not currently supported.
+This `<voice>` element requests a change in voice. It is not supported.
