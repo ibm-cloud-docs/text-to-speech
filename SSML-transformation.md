@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-01"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -35,13 +35,13 @@ You can apply the `<voice-transformation>` element to the entire body of the tex
 ## Language support
 {: #languages-transformation}
 
-The service currently supports voice transformation for the following US English voices only:
+The service supports voice transformation for the following US English voices only:
 
 -   `en-US_AllisonVoice`
 -   `en-US_LisaVoice`
 -   `en-US_MichaelVoice`
 
-Using the element with any other voice returns an error.
+Voice transformation is not supported with the `V2`, DNN-based versions of these voices (for example, `en-US_AllisonV2Voice`). Using the element with an unsupported voice returns an error.
 
 ## Built-in transformations
 

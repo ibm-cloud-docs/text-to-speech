@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -31,6 +31,22 @@ The following sections document the new features and changes that were included 
 
 No known limitations at this time.
 
+## 4 March 2019
+{: #March2019}
+
+The service now offers four new voices that use deep-learning synthesis to generate audio:
+
+-   `it-IT_FrancescaV2Voice`
+-   `en-US_AllisonV2Voice`
+-   `en-US_LisaV2Voice`
+-   `en-US_MichaelV2Voice`
+
+These new voices use machine learning and a Deep Neural Network (DNN) to synthesize text to speech. Deep-learning, or DNN-based, synthesis produces audio with a more natural prosody and a more consistent overall quality.
+
+But the new voices also produce audio with different signal qualities from the existing voices, so they might not be appropriate for all applications. Also, the new voices do not support the SSML elements `<prosody>`, `<express-as>`, and `<voice-transformation>`.
+
+For more information about these DNN-based voices and how they differ from the existing voices, see [Speech synthesis technologies](/docs/services/text-to-speech/voices.html#technologiesVoices).
+
 ## 28 January 2019
 {: #January2019}
 
@@ -46,14 +62,10 @@ For more information, see [Open a connection](/docs/services/text-to-speech/webs
 
 The {{site.data.keyword.texttospeechshort}} service is now available in the {{site.data.keyword.cloud}} London location (**eu-gb**). Like all locations, London uses token-based Identity and Access Management (IAM) authentication. All new services instances that you create in this location use IAM authentication.
 
-## 7 November 2018
-{: #November2018a}
-
-The {{site.data.keyword.texttospeechshort}} service is now available in the {{site.data.keyword.cloud}} Tokyo location (**jp-tok**). Like all locations, Tokyo uses token-based Identity and Access Management (IAM) authentication. All new services instances that you create in this location use IAM authentication.
-
 ## Older releases
 {: #older}
 
+-   [7 November 2018](#November2018)
 -   [30 October 2018](#October2018)
 -   [12 June 2018](#June2018)
 -   [15 May 2018](#May2018)
@@ -68,6 +80,11 @@ The {{site.data.keyword.texttospeechshort}} service is now available in the {{si
 -   [17 December 2015](/docs/services/text-to-speech/release-notes.html#December2015)
 -   [21 September 2015](/docs/services/text-to-speech/release-notes.html#September2015)
 -   [1 July 2015](/docs/services/text-to-speech/release-notes.html#July2015)
+
+### 7 November 2018
+{: #November2018}
+
+The {{site.data.keyword.texttospeechshort}} service is now available in the {{site.data.keyword.cloud}} Tokyo location (**jp-tok**). Like all locations, Tokyo uses token-based Identity and Access Management (IAM) authentication. All new services instances that you create in this location use IAM authentication.
 
 ### 30 October 2018
 {: #October2018}
