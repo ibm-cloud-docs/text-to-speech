@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-06"
 
 ---
 
@@ -56,8 +56,7 @@ Both versions of the method accept a maximum of 5 KB of input text. For more inf
       service is to return the audio. You can also specify this value with
       the HTTP <code>Accept</code> request header. URL-encode the argument
       to the `accept` query parameter. For more information, see
-      <a href="/docs/services/text-to-speech/audio-formats.html">Audio
-        formats</a>.
+      [Audio formats](/docs/services/text-to-speech/audio-formats.html).
     </td>
   </tr>
   <tr>
@@ -69,8 +68,7 @@ Both versions of the method accept a maximum of 5 KB of input text. For more inf
       the audio. Use the <code>/v1/voices</code> method to get the
       current list of supported voices. The default voice is
       <code>en-US_MichaelVoice</code>. For more information, see
-      <a href="/docs/services/text-to-speech/voices.html">Languages
-        and voices</a>.
+      [Languages and voices](/docs/services/text-to-speech/voices.html).
     </td>
   </tr>
   <tr>
@@ -85,8 +83,7 @@ Both versions of the method accept a maximum of 5 KB of input text. For more inf
       ID, you must call the method with the service credentials of the
       model's owner. Omit the parameter to use the specified voice with
       no customization. For more information, see
-      <a href="/docs/services/text-to-speech/custom-intro.html">Understanding
-        customization</a>.
+      [Understanding customization](/docs/services/text-to-speech/custom-intro.html).
     </td>
   </tr>
 </table>
