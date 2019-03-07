@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-06"
 
 ---
 
@@ -40,61 +40,61 @@ For more information about an element or attribute, see its description. Where n
     <th style="text-align:center; width:12%">Support</th>
   </tr>
   <tr>
-    <td><a href="#audio_element"><strong>Audio</strong></a></td>
+    <td>[Audio](#audio_element)</td>
     <td style="text-align:center">None</td>
-    <td style="padding-left:75px"><a href="#say-as_element"><strong>Say-as</strong></a></td>
+    <td style="padding-left:75px">[Say-as](#say-as_element)</td>
     <td style="text-align:center">Partial</td>
   </tr>
   <tr>
-    <td><a href="#break_element"><strong>Break</strong></a></td>
+    <td>[Break](#break_element)</td>
     <td style="text-align:center">Full</td>
-    <td style="padding-left:100px"><a href="#sayAsCardinal">cardinal</a></td>
+    <td style="padding-left:100px">[cardinal](#sayAsCardinal)</td>
     <td style="text-align:center">Partial</td>
   </tr>
   <tr>
-    <td><a href="#desc_element"><strong>Desc</strong></a></td>
+    <td>[Desc](#desc_element)</td>
     <td style="text-align:center">None</td>
-    <td style="padding-left:100px"><a href="#sayAsDate">date</a></td>
+    <td style="padding-left:100px">[date](#sayAsDate)</td>
     <td style="text-align:center">Partial</td>
   </tr>
   <tr>
-    <td><a href="#emphasis_element"><strong>Emphasis</strong></a></td>
+    <td>[Emphasis](#emphasis_element)</td>
     <td style="text-align:center">None</td>
-    <td style="padding-left:100px"><a href="#sayAsDigits">digits</a></td>
+    <td style="padding-left:100px">[digits](#sayAsDigits)</td>
     <td style="text-align:center">Partial</td>
   </tr>
   <tr>
-    <td><a href="#lexicon_element"><strong>Lexicon</strong></a></td>
+    <td>[Lexicon](#lexicon_element)</td>
     <td style="text-align:center">None</td>
-    <td style="padding-left:100px"><a href="#sayAsLetters">letters</a></td>
+    <td style="padding-left:100px">[letters](#sayAsLetters)</td>
     <td style="text-align:center">Partial</td>
   </tr>
   <tr>
-    <td><a href="#mark_element"><strong>Mark</strong></a></td>
+    <td>[Mark](#mark_element)</td>
     <td style="text-align:center">Partial</td>
-    <td style="padding-left:100px"><a href="#sayAsNumber">number</a></td>
+    <td style="padding-left:100px">[number](#sayAsNumber)</td>
     <td style="text-align:center">Partial</td>
   </tr>
   <tr>
-    <td><a href="#mm_element"><strong>Meta</strong></a></td>
+    <td>[Meta](#mm_element)</td>
     <td style="text-align:center">None</td>
     <td style="padding-left:125px">cardinal</td>
     <td style="text-align:center">Partial</td>
   </tr>
   <tr>
-    <td><a href="#mm_element"><strong>Metadata</strong></a></td>
+    <td>[Metadata](#mm_element)</td>
     <td style="text-align:center">None</td>
     <td style="padding-left:125px">ordinal</td>
     <td style="text-align:center">Partial</td>
   </tr>
   <tr>
-    <td><a href="#ps_element"><strong>Paragraph</strong></a></td>
+    <td>[Paragraph](#ps_element)</td>
     <td style="text-align:center">Full</td>
     <td style="padding-left:125px">telephone</td>
     <td style="text-align:center">Partial</td>
   </tr>
   <tr>
-    <td><a href="#phoneme_element"><strong>Phoneme</strong></a></td>
+    <td>[Phoneme](#phoneme_element)</td>
     <td style="text-align:center">Full</td>
     <td style="padding-left:150px">punctuation</td>
     <td style="text-align:center">Partial</td>
@@ -102,61 +102,61 @@ For more information about an element or attribute, see its description. Where n
   <tr>
     <td style="padding-left:25px">IBM SPR</td>
     <td style="text-align:center">Full</td>
-    <td style="padding-left:100px"><a href="#sayAsOrdinal">ordinal</a></td>
+    <td style="padding-left:100px">[ordinal](#sayAsOrdinal)</td>
     <td style="text-align:center">Partial</td>
   </tr>
   <tr>
     <td style="padding-left:25px">IPA</td>
     <td style="text-align:center">Full</td>
-    <td style="padding-left:100px"><a href="#vxml-boolean">vxml:boolean</a></td>
+    <td style="padding-left:100px">[vxml:boolean](#vxml-boolean)</td>
     <td style="text-align:center">Partial</td>
   </tr>
   <tr>
-    <td><a href="#prosody_element"><strong>Prosody</strong></a></td>
+    <td>[Prosody](#prosody_element)</td>
     <td style="text-align:center">Partial</td>
-    <td style="padding-left:100px"><a href="#vxml-currency">vxml:currency</a></td>
+    <td style="padding-left:100px">[vxml:currency](#vxml-currency)</td>
     <td style="text-align:center">Partial</td>
   </tr>
   <tr>
     <td style="padding-left:25px">contour</td>
     <td style="text-align:center">None</td>
-    <td style="padding-left:100px"><a href="#vxml-date">vxml:date</a></td>
+    <td style="padding-left:100px">[vxml:date](#vxml-date)</td>
     <td style="text-align:center">Partial</td>
   </tr>
   <tr>
     <td style="padding-left:25px">duration</td>
     <td style="text-align:center">None</td>
-    <td style="padding-left:100px"><a href="#vxml-digits">vxml:digits</a></td>
+    <td style="padding-left:100px">[vxml:digits](#vxml-digits)</td>
     <td style="text-align:center">Partial</td>
   </tr>
   <tr>
-    <td style="padding-left:25px"><a href="#prosody-pitch">pitch</a></td>
+    <td style="padding-left:25px">[pitch](#prosody-pitch)</td>
     <td style="text-align:center">Full</td>
-    <td style="padding-left:100px"><a href="#vxml-phone">vxml:phone</a></td>
+    <td style="padding-left:100px">[vxml:phone](#vxml-phone)</td>
     <td style="text-align:center">Partial</td>
   </tr>
   <tr>
     <td style="padding-left:25px">range</td>
     <td style="text-align:center">None</td>
-    <td style="padding-left:75px"><a href="#ps_element"><strong>Sentence</strong></a></td>
+    <td style="padding-left:75px">[Sentence](#ps_element)</td>
     <td style="text-align:center">Full</td>
   </tr>
   <tr>
-    <td style="padding-left:25px"><a href="#prosody-rate">rate</a></td>
+    <td style="padding-left:25px">[rate](#prosody-rate)</td>
     <td style="text-align:center">Full</td>
-    <td style="padding-left:75px"><a href="#speak_element"><strong>Speak</strong></a></td>
+    <td style="padding-left:75px">[Speak](#speak_element)</td>
     <td style="text-align:center">Full</td>
   </tr>
   <tr>
-    <td style="padding-left:25px"><a href="#prosody-volume">volume</a></td>
+    <td style="padding-left:25px">[volume](#prosody-volume)</td>
     <td style="text-align:center">Full</td>
-    <td style="padding-left:75px"><a href="#sub_element"><strong>Sub</strong></a></td>
+    <td style="padding-left:75px">[Sub](#sub_element)</td>
     <td style="text-align:center">Full</td>
   </tr>
   <tr>
     <td></td>
     <td></td>
-    <td style="padding-left:75px"><a href="#voice_element"><strong>Voice</strong></a></td>
+    <td style="padding-left:75px">[Voice](#voice_element)</td>
     <td style="text-align:center">None</td>
   </tr>
 </table>
