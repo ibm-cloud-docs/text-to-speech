@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-03-14"
 
 subcollection: text-to-speech
 
@@ -60,6 +60,9 @@ curl -X POST -u "apikey:L_HALhLVIksh1b73l97LSs6R_3gLo4xkujAaxm7i-b9x"
 ```
 {:pre}
 {: hide-dashboard}
+
+You can use a browser or other tools to play the audio files that are produced by the examples in this tutorial. For more information, see [Playing an audio file](/docs/services/text-to-speech/audio-formats.html#formatsPlay).
+{: note}
 
 ## Step 1: Synthesize text in US English
 {: #synthesizeEnglish}
