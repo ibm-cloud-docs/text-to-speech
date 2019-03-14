@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-03-14"
 
 subcollection: text-to-speech
 
@@ -172,8 +172,6 @@ Table 1 lists the audio formats (MIME types) in which you can request synthesize
   </tr>
 </table>
 
-The audio files can be played in a web browser by an audio player such as Audacity&reg; ([audacityteam.org ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.audacityteam.org/){: new_window}) or FFmpeg ([ffmpeg.org ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ffmpeg.org){: new_window}).
-
 ## Specifying an audio format
 {: #formatSpecify}
 
@@ -334,3 +332,11 @@ The most reliable way to identify the sampling rate for any audio stream that th
 
 The Opus standard requires the output sampling rate to match the capabilities of the audio player. For more information, see Section 5.1 of the Internet Engineering Task Force (IETF) [Request for Comments (RFC) 7845 ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://tools.ietf.org/html/rfc6455){: new_window}. For software audio players, the table indicates the typical output sampling rate, but the actual sampling rate of the audio varies with time within the stream. As mentioned, the service synthesizes the source audio at 22,050 Hz.
 {: note}
+
+## Playing an audio file
+{: #formatsPlay}
+
+To play an audio file that the service generates, use one of the following tools:
+
+-   A web browser such as Google Chrome&trade;, Firefox&reg; or Microsoft&reg; Internet Explorer&reg;.
+-   An audio player such as Audacity&reg; ([audacityteam.org ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.audacityteam.org/){: new_window}) or FFmpeg ([ffmpeg.org ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ffmpeg.org){: new_window}).
