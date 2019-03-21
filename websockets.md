@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-03-21"
 
 subcollection: text-to-speech
 
@@ -183,7 +183,8 @@ To synthesize text, the client passes a simple JSON text message to the service 
       Provides the text that is to be synthesized. The client can pass
       plain text or text that is annotated with the Speech Synthesis
       Markup Language (SSML). The client can pass a maximum of 5 KB of
-      text with the request. For more information, see
+      input text with the request. The limit includes any SSML that you
+      specify. For more information, see
       [Specifying input text](/docs/services/text-to-speech/http.html#input)
       and the sections that follow it.<br/><br/>
       SSML input can also include the <code>&lt;mark&gt;</code> element.

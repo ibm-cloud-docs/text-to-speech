@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-03-21"
 
 subcollection: text-to-speech
 
@@ -25,7 +25,7 @@ subcollection: text-to-speech
 # The HTTP interface
 {: #usingHTTP}
 
-To synthesize text to speech with the HTTP REST interface of the {{site.data.keyword.texttospeechfull}} service, you call the `GET` or `POST /v1/synthesize` method. You specify the text to be synthesized and the voice and format for the spoken audio. You can also specify a custom voice model to be used with the request.
+To synthesize text to speech with the HTTP REST interface of the {{site.data.keyword.texttospeechfull}} service, you call the `GET` or `POST /v1/synthesize` method. You specify the text that is to be synthesized and the voice and format for the spoken audio. You can also specify a custom voice model that is to be used with the request.
 {: shortdesc}
 
 For more information about the HTTP interface, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/text-to-speech){: new_window}.
@@ -35,10 +35,10 @@ For more information about the HTTP interface, see the [API reference ![External
 
 To synthesize text to audio, you call one of the two versions of the service's `/v1/synthesize` method:
 
--   The `GET /v1/synthesize` method accepts the text to be synthesized via its required `text` query parameter.
--   The `POST /v1/synthesize` method accepts the text to be synthesized via a JSON construct in the required body of the request.
+-   The `GET /v1/synthesize` method accepts the text that is to be synthesized as a required `text` query parameter. The maximum size of the request is 8 KB, which includes the input text, any SSML that you specify. and the URL and headers.
+-   The `POST /v1/synthesize` method accepts the text that is to be synthesized as a JSON construct in the required body of the request. The maximum size of the request is 8 KB for the URL and headers, and 5 KB for the input text that is sent in the body of the request. The 5 KB limit includes any SSML that you specify.
 
-Both versions of the method accept a maximum of 5 KB of input text. For more information, see [Specifying input text](#input). The two versions of the `/v1/synthesize` method have the following parameters in common:
+The two versions of the `/v1/synthesize` method have the following parameters in common:
 
 <table>
   <caption>Table 1. Parameters of the <code>/v1/synthesize</code>
@@ -101,7 +101,7 @@ If you specify an invalid query parameter or JSON field as part of the input to 
 ## Specifying input text
 {: #input}
 
-Both the `GET` and `POST /v1/synthesize` methods accept a maximum of 5 KB of input text, and both accept input that is annotated with SSML. The two versions differ primarily in how you specify the text to be synthesized:
+Both the `GET` and `POST /v1/synthesize` methods accept plain input text or text that is annotated with SSML. The two versions differ primarily in how you specify the text that is to be synthesized:
 
 -   The `GET /v1/synthesize` method accepts input text that is specified by the `text` query parameter. You specify the input as plain text or as SSML, both of which must be URL-encoded.
 -   The `POST /v1/synthesize` method accepts input text in the body of the request. You specify the input with the following simple JSON construct that encapsulates plain text or SSML. You must also specify a value of `application/json` for the `Content-Type` header.
