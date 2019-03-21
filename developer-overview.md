@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-03-21"
 
 subcollection: text-to-speech
 
@@ -33,7 +33,9 @@ You can access the speech synthesis capabilities of the {{site.data.keyword.text
 
 To synthesize text with the HTTP API, you call the `GET` or `POST` version of the service's `/v1/synthesize` method. The two versions of the method offer generally equivalent functionality:
 
--   *Input text:* The `GET /v1/synthesize` method accepts the text to be synthesized via a query parameter. The `POST /v1/synthesize` method accepts the text in the body of the request. Both methods impose a size limit of 8 KB on the total size of the request (text plus headers).
+-   *Input text:* You pass the input text that is to be synthesized in two different ways:
+    -   The `GET /v1/synthesize` method accepts the input text as a query parameter. The maximum size of the request is 8 KB, which includes the input text and the URL and headers.
+    -   The `POST /v1/synthesize` method accepts the input text in the body of the request. The maximum size of the request is 8 KB for the URL and headers, and 5 KB for the input text that is sent in the body of the request.
 
     You can pass the service plain text or text that is annotated with the Speech Synthesis Markup Language (SSML). SSML is an XML-based markup language that provides annotations of text for speech synthesis applications such as the {{site.data.keyword.texttospeechshort}} service. The service augments SSML with service-specific expressive and voice-transformation elements.
 
@@ -50,7 +52,7 @@ To synthesize text with the HTTP API, you call the `GET` or `POST` version of th
 ## WebSocket interface
 {: #websocket}
 
-The service offers a WebSocket interface that you can use to synthesize text. The interface provides a single version of the `/v1/synthesize` method that accepts a maximum of 5 KB of text. You specify the text to be synthesized, the voice to be used, and the format for the audio. You can provide plain text or text that is annotated with SSML. For more information, see [The WebSocket interface](/docs/services/text-to-speech/websockets.html).
+The service offers a WebSocket interface that you can use to synthesize text. The interface provides a single version of the `/v1/synthesize` method that accepts a maximum of 5 KB of input text. You specify the text to be synthesized, the voice to be used, and the format for the audio. You can provide plain text or text that is annotated with SSML. For more information, see [The WebSocket interface](/docs/services/text-to-speech/websockets.html).
 
 The WebSocket interface supports use of the SSML `<mark>` element to identify specific locations in audio. You can also request word timing information for all words of the input text. For more information, see [Obtaining word timings](/docs/services/text-to-speech/word-timing.html).
 
