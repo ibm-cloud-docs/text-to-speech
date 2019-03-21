@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-03-21"
 
 subcollection: text-to-speech
 
@@ -33,6 +33,15 @@ The following sections document the new features and changes that were included 
 
 No known limitations at this time.
 
+## 21 March 2019
+{: #March2019b}
+
+Users can now see only service credential information that is associated with the role that has been assigned to their {{site.data.keyword.cloud_notm}} account. For example, if you are assigned a `reader` role, any `writer` or higher levels of service credentials are no longer visible.
+
+This change does not affect API access for users or applications with existing service credentials. The change affects only the viewing of credentials within {{site.data.keyword.cloud_notm}}.
+
+For more information about service keys and user roles, see [IAM service API keys](/docs/services/watson?topic=watson-api-key-bp#api-key-bp).
+
 ## 4 March 2019
 {: #March2019}
 
@@ -59,14 +68,10 @@ The WebSocket interface now supports token-based Identity and Access Management 
 
 For more information, see [Open a connection](/docs/services/text-to-speech/websockets.html#WSopen).
 
-## 13 December 2018
-{: #December2018}
-
-The {{site.data.keyword.texttospeechshort}} service is now available in the {{site.data.keyword.cloud}} London location (**eu-gb**). Like all locations, London uses token-based Identity and Access Management (IAM) authentication. All new services instances that you create in this location use IAM authentication.
-
 ## Older releases
 {: #older}
 
+-   [13 December 2018](#December2018)
 -   [7 November 2018](#November2018)
 -   [30 October 2018](#October2018)
 -   [12 June 2018](#June2018)
@@ -82,6 +87,11 @@ The {{site.data.keyword.texttospeechshort}} service is now available in the {{si
 -   [17 December 2015](/docs/services/text-to-speech/release-notes.html#December2015)
 -   [21 September 2015](/docs/services/text-to-speech/release-notes.html#September2015)
 -   [1 July 2015](/docs/services/text-to-speech/release-notes.html#July2015)
+
+### 13 December 2018
+{: #December2018}
+
+The {{site.data.keyword.texttospeechshort}} service is now available in the {{site.data.keyword.cloud}} London location (**eu-gb**). Like all locations, London uses token-based Identity and Access Management (IAM) authentication. All new services instances that you create in this location use IAM authentication.
 
 ### 7 November 2018
 {: #November2018}
