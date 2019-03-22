@@ -54,6 +54,8 @@ Text to Speech
         es-ES-SPRs.md
         en-US-SPRs.md
 
+    ha-dr.md
+
     {: topicgroup}
     Service background
         science.md
