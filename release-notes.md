@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-21"
+lastupdated: "2019-03-25"
 
 subcollection: text-to-speech
 
@@ -33,6 +33,16 @@ The following sections document the new features and changes that were included 
 
 No known limitations at this time.
 
+## 24 March 2019
+{: #March2019c}
+
+-   The service now offers Deep Neural Network (DNN) versions of its German voices:
+    -   `de-DE_BirgitV2Voice`
+    -   `de-DE_DieterV2Voice`
+
+    For more information about DNN-based voices, see [Speech synthesis technologies](/docs/services/text-to-speech/voices.html#technologiesVoices).
+-   All of the service's DNN-based voices now support the `pitch` and `rate` attributes of the SSML `<prosody>` element. The DNN-based voices do not support the `volume` attribute of the `<prosody>` element. For more information, see [The prosody element](/docs/services/text-to-speech/SSML-elements.html#prosody_element).
+
 ## 21 March 2019
 {: #March2019b}
 
@@ -43,7 +53,7 @@ This change does not affect API access for users or applications with existing s
 For more information about service keys and user roles, see [IAM service API keys](/docs/services/watson?topic=watson-api-key-bp#api-key-bp).
 
 ## 4 March 2019
-{: #March2019}
+{: #March2019a}
 
 The service now offers four new voices that use deep-learning synthesis to generate audio:
 
@@ -52,25 +62,16 @@ The service now offers four new voices that use deep-learning synthesis to gener
 -   `en-US_LisaV2Voice`
 -   `en-US_MichaelV2Voice`
 
-These new voices use machine learning and a Deep Neural Network (DNN) to synthesize text to speech. Deep-learning, or DNN-based, synthesis produces audio with a more natural prosody and a more consistent overall quality.
+These new voices use machine learning and a DNN to synthesize text to speech. Deep-learning, or DNN-based, synthesis produces audio with a more natural prosody and a more consistent overall quality.
 
 But the new voices also produce audio with different signal qualities from the existing voices, so they might not be appropriate for all applications. Also, the new voices do not support the SSML elements `<prosody>`, `<express-as>`, and `<voice-transformation>`.
 
 For more information about these DNN-based voices and how they differ from the existing voices, see [Speech synthesis technologies](/docs/services/text-to-speech/voices.html#technologiesVoices).
 
-## 28 January 2019
-{: #January2019}
-
-The WebSocket interface now supports token-based Identity and Access Management (IAM) authentication from browser-based JavaScript code. The limitation to the contrary has been removed. To establish an authenticated connection with the WebSocket `/v1/synthesize` method:
-
--   If you use IAM authentication, include the `access_token` query parameter.
--   If you use Cloud Foundry service credentials, include the `watson-token` query parameter.
-
-For more information, see [Open a connection](/docs/services/text-to-speech/websockets.html#WSopen).
-
 ## Older releases
 {: #older}
 
+-   [28 January 2019](#January2019)
 -   [13 December 2018](#December2018)
 -   [7 November 2018](#November2018)
 -   [30 October 2018](#October2018)
@@ -87,6 +88,16 @@ For more information, see [Open a connection](/docs/services/text-to-speech/webs
 -   [17 December 2015](/docs/services/text-to-speech/release-notes.html#December2015)
 -   [21 September 2015](/docs/services/text-to-speech/release-notes.html#September2015)
 -   [1 July 2015](/docs/services/text-to-speech/release-notes.html#July2015)
+
+### 28 January 2019
+{: #January2019}
+
+The WebSocket interface now supports token-based Identity and Access Management (IAM) authentication from browser-based JavaScript code. The limitation to the contrary has been removed. To establish an authenticated connection with the WebSocket `/v1/synthesize` method:
+
+-   If you use IAM authentication, include the `access_token` query parameter.
+-   If you use Cloud Foundry service credentials, include the `watson-token` query parameter.
+
+For more information, see [Open a connection](/docs/services/text-to-speech/websockets.html#WSopen).
 
 ### 13 December 2018
 {: #December2018}

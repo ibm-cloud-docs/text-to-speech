@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-03-25"
 
 subcollection: text-to-speech
 
@@ -62,12 +62,14 @@ Table 1 lists the voices that are available for each language and dialect, inclu
   </tr>
   <tr>
     <td style="text-align:left">German</td>
-    <td style="text-align:center"><code>de-DE_BirgitVoice</code></td>
+    <td style="text-align:center"><code>de-DE_BirgitVoice</code><br/>
+      <code>de-DE_BirgitV2Voice</code></td>
     <td style="text-align:center">Female</td>
   </tr>
   <tr>
     <td></td>
-    <td style="text-align:center"><code>de-DE_DieterVoice</code></td>
+    <td style="text-align:center"><code>de-DE_DieterVoice</code><br/>
+      <code>de-DE_DieterV2Voice</code></td>
     <td style="text-align:center">Male</td>
   </tr>
   <tr>
@@ -131,13 +133,13 @@ The service makes available two versions of some voices, for example, `en-US_All
 
     Voices that include the string `V2` in their names (for example, `en-US_AllisonV2Voice`) are newer voices that use DNN-based synthesis.
 
-You need to experiment with the new voices before adopting them for your application. The two technologies produce audio with different signal qualities, so the new voices might not be better for all applications. Also, the DNN-based voices do not support the following SSML elements:
+You need to experiment with the new voices before adopting them for your application. The two technologies produce audio with different signal qualities, so the new voices might not be better for all applications. Also, the DNN-based voices do not support the following SSML elements or attributes:
 
--   `<prosody>`
--   `<express-as>`
--   `<voice-transformation>`
+-   The `volume` attribute of the `<prosody>` element
+-   The `<express-as>` element
+-   The `<voice-transformation>` element
 
-If your application uses these tags, continue to use the voices that are based on concatenative synthesis.
+If your application uses these elements, continue to use the voices that are based on concatenative synthesis.
 
 ### Voice customization
 {: #customizeVoice}

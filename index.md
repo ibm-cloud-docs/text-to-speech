@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-03-25"
 
 subcollection: text-to-speech
 
@@ -25,7 +25,7 @@ subcollection: text-to-speech
 # About
 {: #about}
 
-> ** Service update:** *The {{site.data.keyword.texttospeechshort}} service was updated on March 4, 2019. The service now offers four new voices that use machine learning and a Deep Neural Network (DNN) to synthesize text to speech. For more information, see the [4 March 2019 service update](/docs/services/text-to-speech/release-notes.html#March2019) in the release notes*.
+> ** Service update:** *The {{site.data.keyword.texttospeechshort}} service was updated on March 24, 2019. The service now offers Deep Neural Network (DNN) versions of its German voices, and all DNN-based voices now support the `pitch` and `rate` attributes of the SSML `<prosody>` element. For more information, see the [24 March 2019 service update](/docs/services/text-to-speech/release-notes.html#March2019c) in the release notes*.
 
 The {{site.data.keyword.texttospeechfull}} service provides an application programming interface (API) that uses {{site.data.keyword.IBM_notm}}'s speech-synthesis capabilities to convert written text to natural-sounding speech. The service streams the results back to the client with minimal delay. The service offers both [HTTP](/docs/services/text-to-speech/http.html) and [WebSocket](/docs/services/text-to-speech/websockets.html) interfaces.
 
