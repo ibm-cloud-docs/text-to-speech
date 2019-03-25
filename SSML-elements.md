@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-03-25"
 
 subcollection: text-to-speech
 
@@ -28,7 +28,7 @@ subcollection: text-to-speech
 With the {{site.data.keyword.texttospeechshort}} service, you can use most Speech Synthesis Markup Language (SSML) elements to control the synthesis of your text. The elements are available for all supported languages. The following table summarizes the service's support for SSML elements and attributes.
 
 -   *Full* means that the service fully supports the element or attribute with its HTTP and WebSocket interfaces.
--   *Partial* means that the service does not support all aspects of the element or attribute. It can also mean that the service supports the element or attribute with only one of its interfaces.
+-   *Partial* means that the service does not support all aspects of the element or attribute. It can also mean that the service supports the element or attribute with only one of its interfaces, or that the element or attribute is not supported with all voices.
 -   *None* means that the service does not support the element or attribute.
 
 For more information about an element or attribute, see its description. Where noted, support for some attributes and values differs slightly from the SSML specification. For more information, see [W3C Speech Synthesis Markup Language (SSML) Version 1.0 ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.w3.org/TR/speech-synthesis/){: new_window}.
@@ -151,7 +151,7 @@ For more information about an element or attribute, see its description. Where n
   </tr>
   <tr>
     <td style="padding-left:25px">[volume](#prosody-volume)</td>
-    <td style="text-align:center">Full</td>
+    <td style="text-align:center">Partial</td>
     <td style="padding-left:75px">[Sub](#sub_element)</td>
     <td style="text-align:center">Full</td>
   </tr>
@@ -283,9 +283,6 @@ For more information about using SPR and IPA notations with the `<phoneme>` elem
 
 The `<prosody>` element controls the pitch, speaking rate, and volume of the text. All attributes are optional, but an error occurs if no attribute is specified. The SSML specification allows for three attributes that the service does not support: `contour`, `range`, and `duration`. The service supports the `pitch`, `rate`, and `volume` attributes.
 
-The services does not support the `<prosody>` element with the `V2`, DNN-based voices (for example, `en-US_AllisonV2Voice`). For more information about these voices, see [Speech synthesis technologies](/docs/services/text-to-speech/voices.html#technologiesVoices).
-{: note}
-
 ### The pitch attribute
 {: #prosody-pitch}
 
@@ -339,6 +336,9 @@ The `rate` attribute indicates a change in the speaking rate for the text within
 
 ### The volume attribute
 {: #prosody-volume}
+
+The service does not support the `volume` attribute of the `<prosody>` element with its DNN-based voices (for example, `en-US_AllisonV2Voice`). For more information about these voices, see [Speech synthesis technologies](/docs/services/text-to-speech/voices.html#technologiesVoices).
+{: note}
 
 The `volume` attribute modifies the volume for the text within the element. You can specify an integer or decimal value in the range of 1.0 to 100.0 (maximum volume). You can also use one of the following string values, which correspond to predefined settings in the range of 0 to 100. (The `silent` value is not supported.)
 
