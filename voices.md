@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-25"
+lastupdated: "2019-03-28"
 
 subcollection: text-to-speech
 
@@ -32,6 +32,9 @@ The {{site.data.keyword.texttospeechfull}} service supports a variety of languag
 {: #languageVoices}
 
 Table 1 lists the voices that are available for each language and dialect, including their gender. If you omit the optional `voice` parameter from a request, the service uses the `en-US_MichaelVoice` voice by default. To understand why the service offers two versions of some voices, see [Speech synthesis technologies](#technologiesVoices).
+
+A problem with the deployment of the `V2` voices currently causes background noise in synthesized speech. For more information, see [Known limitations](/docs/services/text-to-speech/release-notes.html#limitations).
+{: note}
 
 <table style="width:90%">
   <caption>Table 1. Supported languages and voices</caption>
