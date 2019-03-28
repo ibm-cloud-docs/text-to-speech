@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-25"
+lastupdated: "2019-03-28"
 
 subcollection: text-to-speech
 
@@ -31,7 +31,7 @@ The following sections document the new features and changes that were included 
 ## Known limitations
 {: #limitations}
 
-No known limitations at this time.
+A problem with the deployment of the `V2`, Deep Neural Network (DNN) voices causes background noise in synthesized speech. {{site.data.keyword.IBM_notm}} is working to address the issue.
 
 ## 24 March 2019
 {: #March2019c}
