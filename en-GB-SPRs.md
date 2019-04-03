@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-04-03"
 
 subcollection: text-to-speech
 
@@ -28,6 +28,7 @@ subcollection: text-to-speech
 The following sections describe the valid symbols for British English.
 
 ## Regular vowels
+{: #gbRegularVowels}
 
 <table style="width:90%">
   <caption>Table 1. Regular vowels (British English)</caption>
@@ -253,6 +254,7 @@ The following sections describe the valid symbols for British English.
 </table>
 
 ## Diphthongs
+{: #gbDiphthongs}
 
 <table style="width:90%">
   <caption>Table 2. Diphthongs (British English)</caption>
@@ -315,6 +317,7 @@ The following sections describe the valid symbols for British English.
 </table>
 
 ## Reduced vowels
+{: #gbReducedVowels}
 
 <table style="width:90%">
   <caption>Table 3. Reduced vowels (British English)</caption>
@@ -365,6 +368,7 @@ The following sections describe the valid symbols for British English.
 </table>
 
 ## Consonants
+{: #gbConsonants}
 
 <table style="width:90%">
   <caption>Table 4. Consonants (British English)</caption>

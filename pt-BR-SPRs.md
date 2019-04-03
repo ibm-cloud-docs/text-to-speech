@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-04-03"
 
 subcollection: text-to-speech
 
@@ -28,6 +28,7 @@ subcollection: text-to-speech
 The following sections describe the valid symbols for Brazilian Portuguese.
 
 ## Regular vowels
+{: #ptRegularVowels}
 
 <table style="width:90%">
   <caption>Table 1. Regular vowels (Brazilian Portuguese)</caption>
@@ -227,6 +228,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
 1.  The SPR symbol `a` maps to two different IPA symbols with different pronunciations: `a` and <code>&#592;</code>. In general, the SPR symbol maps to `a` for synthesis of stressed syllables and to <code>&#592;</code> for synthesis of unstressed syllables.
 
 ## Semi-vowels
+{: #ptSemiVowels}
 
 <table style="width:90%">
   <caption>Table 2. Semi-vowels (Brazilian Portuguese)</caption>
@@ -303,6 +305,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
 </table>
 
 ## Consonants
+{: #ptConsonants}
 
 <table style="width:90%">
   <caption>Table 3. Consonants (Brazilian Portuguese)</caption>

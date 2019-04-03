@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-04-03"
 
 subcollection: text-to-speech
 
@@ -28,6 +28,7 @@ subcollection: text-to-speech
 The following sections describe the valid symbols for Japanese.
 
 ## Vowels and marks
+{: #jaVowelsMarks}
 
 <table style="width:90%">
   <caption>Table 1. Vowels and marks (Japanese)</caption>
@@ -182,6 +183,7 @@ The following sections describe the valid symbols for Japanese.
 1.  The `:` symbol must be followed by a vowel, possibly with other symbols, such as syllable boundary, in between.
 
 ## Consonants
+{: #jaConsonants}
 
 <table style="width:90%">
   <caption>Table 2. Consonants (Japanese)</caption>

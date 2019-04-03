@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-04-03"
 
 subcollection: text-to-speech
 
@@ -28,6 +28,7 @@ subcollection: text-to-speech
 The following sections describe the valid symbols for French.
 
 ## Vowels
+{: #frVowels}
 
 <table style="width:90%">
   <caption>Table 1. Vowels (French)</caption>
@@ -289,6 +290,7 @@ The following sections describe the valid symbols for French.
 1.  The `x` is elided in certain contexts.
 
 ## Consonants
+{: #frConsonants}
 
 <table style="width:90%">
   <caption>Table 2. Consonants (French)</caption>
@@ -617,6 +619,7 @@ The following sections describe the valid symbols for French.
 </table>
 
 ## Liaison
+{: #frLiaison}
 
 In French, the `_` (underscore) can be used following a word-final consonant (but within the double-quotes that enclose the SPR) to indicate that it is a liaison consonant. A liaison consonant is pronounced only if the following word begins with a vowel.
 
