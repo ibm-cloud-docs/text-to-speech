@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-04-03"
 
 subcollection: text-to-speech
 
@@ -28,6 +28,7 @@ subcollection: text-to-speech
 The following sections describe the valid symbols for Italian.
 
 ## Regular vowels
+{: #itRegularVowels}
 
 <table style="width:90%">
   <caption>Table 1. Regular vowels (Italian)</caption>
@@ -146,6 +147,7 @@ The following sections describe the valid symbols for Italian.
 </table>
 
 ## Consonants
+{: #itConsonants}
 
 <table style="width:90%">
   <caption>Table 2. Consonants (Italian)</caption>
@@ -515,6 +517,7 @@ The following sections describe the valid symbols for Italian.
 </table>
 
 ## Geminates
+{: #itGeminates}
 
 <table style="width:90%">
   <caption>Table 3. Geminates (Italian)</caption>
@@ -599,6 +602,7 @@ The following sections describe the valid symbols for Italian.
 </table>
 
 ## Allophones
+{: #itAllophones}
 
 If an allophone is not used in SPR, the {{site.data.keyword.texttospeechshort}} service automatically generates the appropriate variant for the given context.
 

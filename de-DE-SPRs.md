@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-04-03"
 
 subcollection: text-to-speech
 
@@ -28,6 +28,7 @@ subcollection: text-to-speech
 The following sections describe the valid symbols for German.
 
 ## Regular vowels
+{: #deRegularVowels}
 
 <table style="width:90%">
   <caption>Table 1. Regular vowels (German)</caption>
@@ -275,6 +276,7 @@ The following sections describe the valid symbols for German.
 </table>
 
 ## Reduced vowels
+{: #deReducedVowels}
 
 <table style="width:90%">
   <caption>Table 2. Reduced vowels (German)</caption>
@@ -313,6 +315,7 @@ The following sections describe the valid symbols for German.
 </table>
 
 ## Diphthongs
+{: #deDiphthongs}
 
 <table style="width:90%">
   <caption>Table 3. Diphthongs (German)</caption>
@@ -385,6 +388,7 @@ The following sections describe the valid symbols for German.
 </table>
 
 ## Nasalized vowels
+{: #deNasalizedVowels}
 
 Nasalized vowels in French occur mostly in foreign loan words.
 
@@ -471,6 +475,7 @@ Nasalized vowels in French occur mostly in foreign loan words.
 </table>
 
 ## Consonants
+{: #deConsonants}
 
 <table style="width:90%">
   <caption>Table 5. Consonants (German)</caption>

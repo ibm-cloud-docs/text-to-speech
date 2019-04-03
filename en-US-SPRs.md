@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-04-03"
 
 subcollection: text-to-speech
 
@@ -28,6 +28,7 @@ subcollection: text-to-speech
 The following sections describe the valid symbols for US English.
 
 ## Regular vowels
+{: #usRegularVowels}
 
 <table style="width:90%">
   <caption>Table 1. Regular vowels (US English)</caption>
@@ -243,6 +244,7 @@ The following sections describe the valid symbols for US English.
 </table>
 
 ## Diphthongs
+{: #usDiphthongs}
 
 <table style="width:90%">
   <caption>Table 2. Diphthongs (US English)</caption>
@@ -305,6 +307,7 @@ The following sections describe the valid symbols for US English.
 </table>
 
 ## Reduced vowels
+{: #usReducedVowels}
 
 <table style="width:90%">
   <caption>Table 3. Reduced vowels (US English)</caption>
@@ -357,6 +360,7 @@ The following sections describe the valid symbols for US English.
 </table>
 
 ## Consonants
+{: #usConsonants}
 
 <table style="width:90%">
   <caption>Table 4. Consonants (US English)</caption>
