@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-21"
+lastupdated: "2019-04-05"
 
 subcollection: text-to-speech
 
@@ -25,7 +25,7 @@ subcollection: text-to-speech
 # Overview for developers
 {: #overview}
 
-You can access the speech synthesis capabilities of the {{site.data.keyword.texttospeechshort}} service via an HTTP Representational State Transfer (REST) API or a WebSocket interface. Several Software Development Kits (SDKs) are also available to simplify application development in various programming languages. The following sections provide an overview of application development with the service.
+You can access the speech synthesis capabilities of the {{site.data.keyword.texttospeechfull}} service via an HTTP Representational State Transfer (REST) API or a WebSocket interface. Several Software Development Kits (SDKs) are also available to simplify application development in various programming languages. The following sections provide an overview of application development with the service.
 {: shortdesc}
 
 ## HTTP interface
