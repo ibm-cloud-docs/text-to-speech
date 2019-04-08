@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-27"
+lastupdated: "2019-04-08"
 
 subcollection: text-to-speech
 
@@ -33,7 +33,7 @@ The {{site.data.keyword.texttospeechfull}} service provides an application progr
 
 The {{site.data.keyword.texttospeechshort}} service offers the following features and capabilities:
 
--   **Audio formats** - Produces audio in Ogg or WebM with the Opus or Vorbis codec, WAV, FLAC, MP3 (MPEG), l16 (PCM), mulaw, or basic format. For more informatrion, see [Audio formats](/docs/services/text-to-speech/audio-formats.html).
+-   **Audio formats** - Produces audio in Ogg or WebM with the Opus or Vorbis codec, WAV, FLAC, MP3 (MPEG), l16 (PCM), mulaw, or basic format. For more information, see [Audio formats](/docs/services/text-to-speech/audio-formats.html).
 -   **Voices** - Synthesizes text to audio in various languages, voices, and dialects. The service offers DNN-based versions of some voices. For more information, see [Languages and voices](/docs/services/text-to-speech/voices.html).
 -   **SSML** - Accepts plain text or text that is marked up with the XML-based Speech Synthesis Markup Language (SSML). For more information, see [Using SSML](/docs/services/text-to-speech/SSML.html).
 -   **Expressiveness** - Extends SSML with an expressive element that you can use to indicate a speaking style of *GoodNews*, *Apology*, or *Uncertainty*. Available only for the US English Allison voice that is not DNN-based. For more information, see [Expressive SSML](/docs/services/text-to-speech/SSML-expressive.html).
