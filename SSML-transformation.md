@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-04-09"
 
 subcollection: text-to-speech
 
@@ -25,7 +25,7 @@ subcollection: text-to-speech
 # Voice transformation SSML
 {: #transformation}
 
-The {{site.data.keyword.texttospeechshort}} service, like most speech synthesis systems, can speak in only a limited number of voices. Moreover, some languages offer only one or two voices. To expand the range of possible voices, the service extends SSML with a `<voice-transformation>` element. You can use this element to realize different virtual voices by controlling aspects of a default voice. Applications of the feature include
+The {{site.data.keyword.texttospeechfull}} service, like most speech synthesis systems, can speak in only a limited number of voices. Moreover, some languages offer only one or two voices. To expand the range of possible voices, the service extends SSML with a `<voice-transformation>` element. You can use this element to realize different virtual voices by controlling aspects of a default voice. Applications of the feature include
 {: shortdesc}
 
 -   *Giving another flavor to a voice.* You want a voice to sound a bit different in general or for a specific application.
