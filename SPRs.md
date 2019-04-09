@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-04-09"
 
 subcollection: text-to-speech
 
@@ -25,7 +25,7 @@ subcollection: text-to-speech
 # Using IBM SPR
 {: #sprs}
 
-The {{site.data.keyword.texttospeechshort}} service supports both the standard International Phonetic Alphabet (IPA) and {{site.data.keyword.IBM}} Symbolic Phonetic Representation (SPR) notation to represent the sounds of words. SPR is a phonetic coding that represents the pronunciation of a word, the sounds that make up the word, how the sounds are divided into syllables, and which syllables are stressed. SPR is an alternative representation to IPA.
+The {{site.data.keyword.texttospeechfull}} service supports both the standard International Phonetic Alphabet (IPA) and {{site.data.keyword.IBM}} Symbolic Phonetic Representation (SPR) notation to represent the sounds of words. SPR is a phonetic coding that represents the pronunciation of a word, the sounds that make up the word, how the sounds are divided into syllables, and which syllables are stressed. SPR is an alternative representation to IPA.
 {: shortdesc}
 
 The following sections introduce {{site.data.keyword.IBM_notm}} SPR notation. Because IPA is a standard notation, the documentation does not provide basic usage information for IPA. For brief usage guidance, see [Working with IPA](#ipa).
