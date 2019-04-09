@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-14"
+lastupdated: "2019-04-09"
 
 subcollection: text-to-speech
 
@@ -26,7 +26,6 @@ subcollection: text-to-speech
 {: #audioFormats}
 
 The {{site.data.keyword.texttospeechfull}} service can return synthesized audio in a number of formats. For most formats, the service returns audio with a default sampling rate of 22,050 Hz. For some formats, you can or must specify the sampling rate of the audio. The service always returns single-channel audio for all formats.
-
 {: shortdesc}
 
 ## Supported audio formats
