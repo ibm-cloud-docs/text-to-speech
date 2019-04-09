@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-21"
+lastupdated: "2019-04-09"
 
 subcollection: text-to-speech
 
@@ -131,6 +131,7 @@ A WebSocket client calls this method with the following query parameters to esta
       more information, see
       [Controlling request logging for Watson services](/docs/services/watson/getting-started-logging.html).
     </td>
+  </tr>
   <tr>
     <td style="text-align:left"><code>x-watson-metadata</code>
       <br/><em>Optional</em></td>
@@ -217,7 +218,7 @@ To synthesize text, the client passes a simple JSON text message to the service 
   </tr>
 </table>
 
-The following snippet of JavaScript code passes a simple *Hello world* message as the input text and requests the default format for the audio. The calls are included in the `onOpen` function that is defined for the client to ensure that they are sent only after the connection is established.
+The following snippet of JavaScript code passes a simple "Hello world" message as the input text and requests the default format for the audio. The calls are included in the `onOpen` function that is defined for the client to ensure that they are sent only after the connection is established.
 
 ```javascript
 function onOpen(evt) {
