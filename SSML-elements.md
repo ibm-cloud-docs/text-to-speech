@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-25"
+lastupdated: "2019-04-09"
 
 subcollection: text-to-speech
 
@@ -25,7 +25,7 @@ subcollection: text-to-speech
 # SSML elements
 {: #elements}
 
-With the {{site.data.keyword.texttospeechshort}} service, you can use most Speech Synthesis Markup Language (SSML) elements to control the synthesis of your text. The elements are available for all supported languages. The following table summarizes the service's support for SSML elements and attributes.
+With the {{site.data.keyword.texttospeechfull}} service, you can use most Speech Synthesis Markup Language (SSML) elements to control the synthesis of your text. The elements are available for all supported languages. The following table summarizes the service's support for SSML elements and attributes.
 
 -   *Full* means that the service fully supports the element or attribute with its HTTP and WebSocket interfaces.
 -   *Partial* means that the service does not support all aspects of the element or attribute. It can also mean that the service supports the element or attribute with only one of its interfaces, or that the element or attribute is not supported with all voices.
