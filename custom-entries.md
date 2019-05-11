@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-05-11"
 
 subcollection: text-to-speech
 
@@ -87,7 +87,7 @@ The JSON content sent in the request body equates to the following:
 ```
 {: codeblock}
 
-As mentioned in [Updating a custom model](/docs/services/text-to-speech/custom-models.html#cuModelsUpdate), you can also use the `POST /v1/customizations/{customization_id}` method to add words to a custom model. The following example uses this method to add the same two words as the previous example; it makes no changes to the model's metadata. With the exception of the URL, the two methods are identical.
+As mentioned in [Updating a custom model](/docs/services/text-to-speech?topic=text-to-speech-customModels#cuModelsUpdate), you can also use the `POST /v1/customizations/{customization_id}` method to add words to a custom model. The following example uses this method to add the same two words as the previous example; it makes no changes to the model's metadata. With the exception of the URL, the two methods are identical.
 
 ```bash
 curl -X POST -u "apikey:{apikey}"
@@ -100,7 +100,7 @@ curl -X POST -u "apikey:{apikey}"
 ## Adding words to a Japanese custom model
 {: #cuJapaneseAdd}
 
-Additional considerations and an additional `part_of_speech` field apply when creating entries for words in a Japanese custom model; for more information, see [Working with Japanese entries](/docs/services/text-to-speech/custom-rules.html#jaNotes). Specify a part of speech for a Japanese custom entry as follows:
+Additional considerations and an additional `part_of_speech` field apply when creating entries for words in a Japanese custom model; for more information, see [Working with Japanese entries](/docs/services/text-to-speech?topic=text-to-speech-rules#jaNotes). Specify a part of speech for a Japanese custom entry as follows:
 
 -   For the `PUT /v1/customizations/{customization_id}/words/{word}` method, pass a JSON object of the following form:
 
@@ -206,7 +206,7 @@ The method returns a JSON array with the following data. For Japanese custom mod
 ```
 {: codeblock}
 
-As described in [Querying a custom model](/docs/services/text-to-speech/custom-models.html#cuModelsQuery), you can also use the `GET /v1/customizations/{customization_id}` method to see both the metadata and the words for a custom model:
+As described in [Querying a custom model](/docs/services/text-to-speech?topic=text-to-speech-customModels#cuModelsQuery), you can also use the `GET /v1/customizations/{customization_id}` method to see both the metadata and the words for a custom model:
 
 ```bash
 curl -X GET -u "apikey:{apikey}"

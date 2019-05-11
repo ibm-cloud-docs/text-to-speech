@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-09"
+lastupdated: "2019-05-11"
 
 subcollection: text-to-speech
 
@@ -34,7 +34,7 @@ The synthesize request and response cycle includes the following steps:
 1.  [Send input text](#WSsend).
 1.  [Receive a response](#WSreceive).
 
-The WebSocket interface accepts identical input and produces identical results as the `GET` and `POST /v1/synthesize` methods of the HTTP interface. However, the WebSocket interface supports use of the SSML `<mark>` element to identify the location of user-specified markers in the audio. It can also return timing information for all strings of the input text. For more information, see [Obtaining word timings](/docs/services/text-to-speech/word-timing.html).
+The WebSocket interface accepts identical input and produces identical results as the `GET` and `POST /v1/synthesize` methods of the HTTP interface. However, the WebSocket interface supports use of the SSML `<mark>` element to identify the location of user-specified markers in the audio. It can also return timing information for all strings of the input text. For more information, see [Obtaining word timings](/docs/services/text-to-speech?topic=text-to-speech-timing).
 
 The snippets of example code that follow are written in JavaScript and are based on the HTML5 WebSocket API. For more information about the WebSocket protocol, see the Internet Engineering Task Force (IETF) [Request for Comment (RFC) 6455 ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://tools.ietf.org/html/rfc6455){: new_window}.
 {: note}
@@ -78,7 +78,7 @@ A WebSocket client calls this method with the following query parameters to esta
       token instead of passing an API key with the call. You must use
       the access token before it expires. For information about obtaining
       an access token, see
-      [Authenticating with IAM tokens](/docs/services/watson/getting-started-iam.html).
+      [Authenticating with IAM tokens](/docs/services/watson?topic=watson-iam).
     </td>
   </tr>
   <tr>
@@ -94,7 +94,7 @@ A WebSocket client calls this method with the following query parameters to esta
       service credentials, which use a `username` and `password` for
       HTTP basic authentication. For information about obtaining a
       {{site.data.keyword.watson}} token, see
-      [{{site.data.keyword.watson}} tokens](/docs/services/watson/getting-started-tokens.html).
+      [{{site.data.keyword.watson}} tokens](/docs/services/watson?topic=watson-gs-tokens-watson-tokens).
     </td>
   </tr>
   <tr>
@@ -104,7 +104,7 @@ A WebSocket client calls this method with the following query parameters to esta
       Specifies the voice in which the text is to be spoken in the audio.
       Omit the parameter to use the default voice, `en-US_MichaelVoice`.
       For more information, see
-      [Languages and voices](/docs/services/text-to-speech/voices.html).
+      [Languages and voices](/docs/services/text-to-speech?topic=text-to-speech-voices).
     </td>
   </tr>
   <tr>
@@ -118,7 +118,7 @@ A WebSocket client calls this method with the following query parameters to esta
       call the method with the service credentials of the custom model's owner.
       Omit the parameter to use the specified voice with no customization.
       For more information, see
-      [Understanding customization](/docs/services/text-to-speech/custom-intro.html).
+      [Understanding customization](/docs/services/text-to-speech?topic=text-to-speech-customIntro).
     </td>
   </tr>
   <tr>
@@ -129,7 +129,7 @@ A WebSocket client calls this method with the following query parameters to esta
       over the connection. To prevent IBM from accessing your data for general
       service improvements, specify <code>true</code> for the parameter. For
       more information, see
-      [Controlling request logging for Watson services](/docs/services/watson/getting-started-logging.html).
+      [Controlling request logging for Watson services](/docs/services/watson?topic=watson-gs-logging-overview).
     </td>
   </tr>
   <tr>
@@ -144,7 +144,7 @@ A WebSocket client calls this method with the following query parameters to esta
       URL-encode the argument to the parameter, for example,
       `customer_id%3dmy_ID`. By default, no customer ID is associated
       with the data. For more information, see
-      [Information security](/docs/services/text-to-speech/information-security.html).
+      [Information security](/docs/services/text-to-speech?topic=text-to-speech-information-security).
     </td>
   </tr>
 </table>
@@ -186,11 +186,11 @@ To synthesize text, the client passes a simple JSON text message to the service 
       Markup Language (SSML). The client can pass a maximum of 5 KB of
       input text with the request. The limit includes any SSML that you
       specify. For more information, see
-      [Specifying input text](/docs/services/text-to-speech/http.html#input)
+      [Specifying input text](/docs/services/text-to-speech?topic=text-to-speech-usingHTTP#input)
       and the sections that follow it.<br/><br/>
       SSML input can also include the <code>&lt;mark&gt;</code> element.
       For more information, see
-      [Specifying an SSML mark](/docs/services/text-to-speech/word-timing.html#mark).
+      [Specifying an SSML mark](/docs/services/text-to-speech?topic=text-to-speech-timing#mark).
     </td>
   </tr>
   <tr>
@@ -200,7 +200,7 @@ To synthesize text, the client passes a simple JSON text message to the service 
       Specifies the requested format (MIME type) of the audio. Use
       `*/*` to request the default audio format,
       <code>audio/ogg;codecs=opus</code>. For more information, see
-      [Audio formats](/docs/services/text-to-speech/audio-formats.html).
+      [Audio formats](/docs/services/text-to-speech?topic=text-to-speech-audioFormats).
     </td>
   </tr>
   <tr>
@@ -213,7 +213,7 @@ To synthesize text, the client passes a simple JSON text message to the service 
       as the lone element of the array to request word timings. Specify
       an empty array or omit the parameter to receive no word timings.
       For more information, see
-      [Obtaining word timings](/docs/services/text-to-speech/word-timing.html#timing). <em>Not supported for Japanese input text.</em>
+      [Obtaining word timings](/docs/services/text-to-speech?topic=text-to-speech-timing#timing). <em>Not supported for Japanese input text.</em>
     </td>
   </tr>
 </table>

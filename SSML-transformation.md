@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-09"
+lastupdated: "2019-05-11"
 
 subcollection: text-to-speech
 
@@ -207,7 +207,7 @@ Use the following guidelines and cautionary information:
     -   High glottal tension, high pitch, and low rate can each cause buzzing sounds to occur. Increase the breathiness to mitigate the effect.
     -   Extremely low glottal tension can produce noisy speech. Decrease the breathiness to reduce the noise.
     -   Raising or lowering pitch range and rate to extreme degrees simultaneously can make speech sound unnatural.
--   As noted, some of the attributes are borrowed from the SSML `<prosody>` element. For more information, see [The prosody element](/docs/services/text-to-speech/SSML-elements.html#prosody_element). To enable fine prosody control of a virtual voice, you can
+-   As noted, some of the attributes are borrowed from the SSML `<prosody>` element. For more information, see [The prosody element](/docs/services/text-to-speech?topic=text-to-speech-elements#prosody_element). To enable fine prosody control of a virtual voice, you can
     -   Nest `<prosody>` elements within `<voice-transformation>` elements.
     -   Nest `<voice-transformation>` elements within `<prosody>` elements.
 
