@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-09"
+lastupdated: "2019-05-11"
 
 subcollection: text-to-speech
 
@@ -176,7 +176,7 @@ Table 1 lists the audio formats (MIME types) in which you can request synthesize
 
 Specifying an audio format is optional. By default, the service returns audio in the format `audio/ogg;codecs=opus`. But you can specify a format for either the HTTP or the WebSocket interface:
 
--   With the HTTP `GET` and `POST /v1/synthesize` methods, you specify a format by using the `Accept` request header or the `accept` query parameter. To receive audio in the default format, omit both the header and the query parameter. For more information, see [Synthesizing text to audio](/docs/services/text-to-speech/http.html#synthesize).
+-   With the HTTP `GET` and `POST /v1/synthesize` methods, you specify a format by using the `Accept` request header or the `accept` query parameter. To receive audio in the default format, omit both the header and the query parameter. For more information, see [Synthesizing text to audio](/docs/services/text-to-speech?topic=text-to-speech-usingHTTP#synthesize).
 
     If you use the `accept` query parameter, URL-encode the argument to the parameter. For example, URL-encode the following argument
 
@@ -192,7 +192,7 @@ Specifying an audio format is optional. By default, the service returns audio in
     ```
     {: codeblock}
 
--   With the WebSocket interface, you specify a format by using the `accept` parameter of the text message that you pass to initiate synthesis. To receive audio in the default format, specify the value `*/*` for the parameter. For more information, see [Send input text](/docs/services/text-to-speech/websockets.html#WSsend).
+-   With the WebSocket interface, you specify a format by using the `accept` parameter of the text message that you pass to initiate synthesis. To receive audio in the default format, specify the value `*/*` for the parameter. For more information, see [Send input text](/docs/services/text-to-speech?topic=text-to-speech-usingWebSocket#WSsend).
 
 ## Specifying a sampling rate
 {: #formatRate}

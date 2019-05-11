@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-05-11"
 
 subcollection: text-to-speech
 
@@ -37,4 +37,4 @@ The {{site.data.keyword.texttospeechshort}} service is a concatenative system th
 
     Some words have multiple permissible pronunciations, so the text-processing front-end first produces a single, canonical pronunciation at run time. This approach might not reflect the pronunciation that the speaker used when the audio corpus was recorded. So the service augments a candidate set of pronunciations with alternative forms that are inventoried in an alternate-baseform dictionary. It lets the search choose forms that reduce cost in terms of pitch, duration, and contiguity concerns and constraints. This algorithm facilitates selection of longer contiguous chunks from the data set, resulting in an optimal flow of speech in the synthesized result.
 
-The topic of synthesizing text to speech is inherently complex, and any explanation of the service requires more explanatory depth than this brief summary can accommodate. For more information about the scientific research behind the service, see the documents that are listed in [Research references](/docs/services/text-to-speech/references.html).
+The topic of synthesizing text to speech is inherently complex, and any explanation of the service requires more explanatory depth than this brief summary can accommodate. For more information about the scientific research behind the service, see the documents that are listed in [Research references](/docs/services/text-to-speech?topic=text-to-speech-references).

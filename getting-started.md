@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-14"
+lastupdated: "2019-05-11"
 
 subcollection: text-to-speech
 
@@ -33,7 +33,7 @@ subcollection: text-to-speech
 The {{site.data.keyword.texttospeechfull}} service converts written text to natural-sounding speech to provide speech-synthesis capabilities for applications. This curl-based tutorial can help you get started quickly with the service. The examples show you how to call the service's `POST` and `GET /v1/synthesize` methods to request an audio stream.
 {: shortdesc}
 
-The tutorial uses {{site.data.keyword.cloud}} Identity and Access Management (IAM) API keys for authentication. Older service instances might continue to use the `{username}` and `{password}` from their existing Cloud Foundry service credentials for authentication. Authenticate by using the approach that is right for your service instance. For more information about the service's use of IAM authentication, see the [30 October 2018 service update](/docs/services/text-to-speech/release-notes.html#October2018) in the release notes.
+The tutorial uses {{site.data.keyword.cloud}} Identity and Access Management (IAM) API keys for authentication. Older service instances might continue to use the `{username}` and `{password}` from their existing Cloud Foundry service credentials for authentication. Authenticate by using the approach that is right for your service instance. For more information about the service's use of IAM authentication, see the [30 October 2018 service update](/docs/services/text-to-speech?topic=text-to-speech-release-notes#October2018) in the release notes.
 {: important}
 
 ## Before you begin
@@ -61,7 +61,7 @@ curl -X POST -u "apikey:L_HALhLVIksh1b73l97LSs6R_3gLo4xkujAaxm7i-b9x"
 {:pre}
 {: hide-dashboard}
 
-You can use a browser or other tools to play the audio files that are produced by the examples in this tutorial. For more information, see [Playing an audio file](/docs/services/text-to-speech/audio-formats.html#formatsPlay).
+You can use a browser or other tools to play the audio files that are produced by the examples in this tutorial. For more information, see [Playing an audio file](/docs/services/text-to-speech?topic=text-to-speech-audioFormats#formatsPlay).
 {: note}
 
 ## Step 1: Synthesize text in US English
@@ -111,6 +111,6 @@ The following command uses the `GET /v1/synthesize` method to synthesize Spanish
 
 ## Next steps
 
--   Learn more about the service's HTTP interface in [The HTTP interface](/docs/services/text-to-speech/http.html).
--   Learn about the service's WebSocket interface in [The WebSocket interface](/docs/services/text-to-speech/websockets.html).
+-   Learn more about the service's HTTP interface in [The HTTP interface](/docs/services/text-to-speech?topic=text-to-speech-usingHTTP).
+-   Learn about the service's WebSocket interface in [The WebSocket interface](/docs/services/text-to-speech?topic=text-to-speech-usingWebSocket).
 -   Get detailed information about the methods of the service's interface in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/text-to-speech){: new_window}.

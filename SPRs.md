@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-09"
+lastupdated: "2019-05-11"
 
 subcollection: text-to-speech
 
@@ -33,7 +33,7 @@ The following sections introduce {{site.data.keyword.IBM_notm}} SPR notation. Be
 ## Introduction to IBM SPR
 {: #introduction-SPRs}
 
-An SPR pronunciation is defined with the `<phoneme>` element of the Speech Synthesis Markup Language (SSML) (see [The phoneme element](/docs/services/text-to-speech/SSML-elements.html#phoneme_element)). It consists of a sequence of allowable symbols for a given language enclosed in double quotes. The symbols define how the word enclosed in the `<phoneme>` element is to be pronounced. The `alphabet` attribute of the element has the value `ibm` to indicate that the pronunciation is defined in SPR, and the `ph` attribute defines the pronunciation. The following are examples of valid SPR notation for the words *through* and *shocking* in US English:
+An SPR pronunciation is defined with [the phoneme element](/docs/services/text-to-speech?topic=text-to-speech-elements#phoneme_element) of the Speech Synthesis Markup Language (SSML). It consists of a sequence of allowable symbols for a given language enclosed in double quotes. The symbols define how the word enclosed in the `<phoneme>` element is to be pronounced. The `alphabet` attribute of the element has the value `ibm` to indicate that the pronunciation is defined in SPR, and the `ph` attribute defines the pronunciation. The following are examples of valid SPR notation for the words *through* and *shocking* in US English:
 
 ```xml
 <phoneme alphabet="ibm" ph=".1Tru">through</phoneme>
@@ -142,7 +142,7 @@ Also consider the following when defining a word's pronunciation in SPR format:
 The following information applies to working with pronunciations in IPA notation:
 
 -   Use only the documented IPA symbols. When several IPA symbols (or symbol combinations) are listed for an SPR symbol, all are equivalent to the single SPR symbol. In this case, the service treats all of these IPA symbols the same and does not realize the subtle or regional differences that the IPA system is meant to describe.
--   You can also specify IPA pronunciations as IPA Unicode values. The language-specific tables listed in the following section document both the IPA symbols and their equivalent IPA Unicode values. For an example pronunciation that uses IPA Unicode values, see [The phoneme element](/docs/services/text-to-speech/SSML-elements.html#phoneme_element).
+-   You can also specify IPA pronunciations as IPA Unicode values. The language-specific tables listed in the following section document both the IPA symbols and their equivalent IPA Unicode values. For an example pronunciation that uses IPA Unicode values, see [The phoneme element](/docs/services/text-to-speech?topic=text-to-speech-elements#phoneme_element).
 
 To learn more, see the following:
 
@@ -154,11 +154,11 @@ To learn more, see the following:
 
 The following pages document the SPR symbols, IPA symbols, and equivalent IPA Unicode values for each language. They show examples of each symbol in words from the language. Because of dialectal differences, the examples might not always match your pronunciation.
 
--   [Brazilian Portuguese symbols](/docs/services/text-to-speech/pt-BR-SPRs.html)
--   [British English symbols](/docs/services/text-to-speech/en-GB-SPRs.html)
--   [French symbols](/docs/services/text-to-speech/fr-FR-SPRs.html)
--   [German symbols](/docs/services/text-to-speech/de-DE-SPRs.html)
--   [Italian symbols](/docs/services/text-to-speech/it-IT-SPRs.html)
--   [Japanese symbols](/docs/services/text-to-speech/ja-JP-SPRs.html)
--   [Spanish symbols](/docs/services/text-to-speech/es-ES-SPRs.html)
--   [US English symbols](/docs/services/text-to-speech/en-US-SPRs.html)
+-   [Brazilian Portuguese symbols](/docs/services/text-to-speech?topic=text-to-speech-ptSymbols)
+-   [British English symbols](/docs/services/text-to-speech?topic=text-to-speech-gbSymbols)
+-   [French symbols](/docs/services/text-to-speech?topic=text-to-speech-frSymbols)
+-   [German symbols](/docs/services/text-to-speech?topic=text-to-speech-deSymbols)
+-   [Italian symbols](/docs/services/text-to-speech?topic=text-to-speech-itSymbols)
+-   [Japanese symbols](/docs/services/text-to-speech?topic=text-to-speech-jaSymbols)
+-   [Spanish symbols](/docs/services/text-to-speech?topic=text-to-speech-esSymbols)
+-   [US English symbols](/docs/services/text-to-speech?topic=text-to-speech-usSymbols)
