@@ -1,0 +1,80 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="text-to-speech" audience="service" arm="343" href="/docs/services/text-to-speech/getting-started.html" path="services/text-to-speech"}
+Text to Speech-Service
+
+    {: .navgroup id="learn"}
+    getting-started.md
+    index.md
+    developer-overview.md
+
+    {: .topicgroup}
+    Demos
+        [Quick demo](https://text-to-speech-demo.ng.bluemix.net/)
+
+    {: .topicgroup}
+    Zusätzliche Ressourcen
+        [Blog](https://developer.ibm.com/watson/blog/)
+        [Webinare](https://www.ibm.com/watson/webinars/)
+        [Watson-Videos](https://www.youtube.com/user/IBMWatsonSolutions)
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    http.md
+    websockets.md
+    voices.md
+    audio-formats.md
+    word-timing.md
+
+    {: topicgroup}
+    Anpassungsschnittstelle
+        custom-intro.md
+        custom-rules.md
+        custom-models.md
+        custom-entries.md
+        custom-using.md
+
+    {: topicgroup}
+    SSML
+        SSML.md
+        SSML-elements.md
+        SSML-expressive.md
+        SSML-transformation.md
+
+    {: topicgroup}
+    IBM SPR
+        SPRs.md
+        pt-BR-SPRs.md
+        en-GB-SPRs.md
+        fr-FR-SPRs.md
+        de-DE-SPRs.md
+        it-IT-SPRs.md
+        ja-JP-SPRs.md
+        es-ES-SPRs.md
+        en-US-SPRs.md
+
+    ha-dr.md
+
+    {: topicgroup}
+    Hintergrund des Service
+        science.md
+        references.md
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    [API-Referenz](https://cloud.ibm.com/apidocs/text-to-speech)
+    information-security.md
+    /watson/watson-using-sdks
+    [Watson GitHub-Repositories](https://github.com/watson-developer-cloud/)
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    release-notes.md
+
+    {: .topicgroup}
+    Entwicklercommunity
+        [StackOverflow ](http://stackoverflow.com/questions/tagged/ibm-watson-cognitive+text-to-speech)
+        [IBM Developer Answers](https://developer.ibm.com/answers/topics/text-to-speech/)
+        [WDC Slack channel](http://wdc-slack-inviter.mybluemix.net/)
+    {: .navgroup-end}
