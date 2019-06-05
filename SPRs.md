@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-11"
+lastupdated: "2019-06-04"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -146,8 +146,8 @@ The following information applies to working with pronunciations in IPA notation
 
 To learn more, see the following:
 
--   For more information about IPA, see [en.wikipedia.org/wiki/International_Phonetic_Alphabet ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://en.wikipedia.org/wiki/International_Phonetic_Alphabet){: new_window}.
--   For more information about phonetic symbols for Unicode, see [en.wikipedia.org/wiki/Phonetic_symbols_in_Unicode ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://en.wikipedia.org/wiki/Phonetic_symbols_in_Unicode){: new_window}.
+-   For more information about IPA, see [wikipedia.org/wiki/International_Phonetic_Alphabet](https://wikipedia.org/wiki/International_Phonetic_Alphabet){: external}.
+-   For more information about phonetic symbols for Unicode, see [wikipedia.org/wiki/Phonetic_symbols_in_Unicode](https://wikipedia.org/wiki/Phonetic_symbols_in_Unicode){: external}.
 
 ## Supported languages
 {: #supportedLanguages}
