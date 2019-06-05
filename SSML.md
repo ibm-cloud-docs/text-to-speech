@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-11"
+lastupdated: "2019-06-04"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -33,7 +33,7 @@ With the {{site.data.keyword.texttospeechfull}} service, you can use SSML to con
 ## Introduction to SSML
 {: #introduction-SSML}
 
-SSML operates by augmenting the plain text that is passed to a synthesizer with a predefined set of elements, or tags. An XML parser first separates the plain input text from the markup specifications. The specifications are then processed and sent as a set of instructions in a form that can be understood by the synthesizer to produce the desired effects. For the XML parser to carry out this job, the markup needs to be well formed; for example, elements must be closed and multiple elements must be properly nested. For an introduction to basic XML concepts, see [w3schools.com/xml/xml_whatis.asp ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.w3schools.com/xml/xml_whatis.asp){: new_window}.
+SSML operates by augmenting the plain text that is passed to a synthesizer with a predefined set of elements, or tags. An XML parser first separates the plain input text from the markup specifications. The specifications are then processed and sent as a set of instructions in a form that can be understood by the synthesizer to produce the desired effects. For the XML parser to carry out this job, the markup needs to be well formed; for example, elements must be closed and multiple elements must be properly nested. For an introduction to basic XML concepts, see [w3schools.com/xml/xml_whatis.asp](http://www.w3schools.com/xml/xml_whatis.asp){: external}.
 
 An SSML element is anything contained within, and including, an opening tag and its matching closing tag. As shown in the following example, an element can contain a combination of other elements (tags can be nested) and text. Additionally, elements can require or optionally accept attributes set to particular values.
 
@@ -46,7 +46,7 @@ An SSML element is anything contained within, and including, an opening tag and 
 ```
 {: codeblock}
 
-A full legal SSML document consists of an XML prolog, which contains information such as encoding and the schema against which to validate the SSML document, followed by the root element, `<speak>`. (For more information about the structure of the prolog, see [tizag.com/xmlTutorial/xmlprolog.php ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.tizag.com/xmlTutorial/xmlprolog.php){: new_window}.) Within the span of the `<speak>` element, you specify the text that is to be synthesized, augmented with additional elements.
+A full legal SSML document consists of an XML prolog, which contains information such as encoding and the schema against which to validate the SSML document, followed by the root element, `<speak>`. (For more information about the structure of the prolog, see [tizag.com/xmlTutorial/xmlprolog.php](http://www.tizag.com/xmlTutorial/xmlprolog.php){: external}.) Within the span of the `<speak>` element, you specify the text that is to be synthesized, augmented with additional elements.
 
 ```xml
 <!-- The XML Prolog -->
@@ -66,7 +66,7 @@ The service supports SSML fragments, which are SSML elements that do not include
 ## SSML support
 {: #ssmlSupport}
 
-The {{site.data.keyword.texttospeechshort}} service bases its support on SSML Version 1.0, which was recommended by W3C on September 7, 2004. For more information about the W3C SSML recommendation, see [W3C Speech Synthesis Markup Language (SSML) Version 1.0 ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.w3.org/TR/speech-synthesis/){: new_window}.
+The {{site.data.keyword.texttospeechshort}} service bases its support on SSML Version 1.0, which was recommended by W3C on September 7, 2004. For more information about the W3C SSML recommendation, see [W3C Speech Synthesis Markup Language (SSML) Version 1.0](http://www.w3.org/TR/speech-synthesis/){: external}.
 
 For more information about using SSML with the service, see the following:
 

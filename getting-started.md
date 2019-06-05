@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-11"
+lastupdated: "2019-06-04"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -40,15 +40,15 @@ The tutorial uses {{site.data.keyword.cloud}} Identity and Access Management (IA
 {: #before-you-begin}
 
 - {: hide-dashboard}  Create an instance of the service:
-    1.  {: hide-dashboard} Go to the [{{site.data.keyword.texttospeechshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/text-to-speech){: new_window} page in the {{site.data.keyword.cloud_notm}} Catalog.
+    1.  {: hide-dashboard} Go to the [{{site.data.keyword.texttospeechshort}}](https://{DomainName}/catalog/services/text-to-speech){: external} page in the {{site.data.keyword.cloud_notm}} Catalog.
     1.  {: hide-dashboard} Sign up for a free {{site.data.keyword.cloud_notm}} account or log in.
     1.  {: hide-dashboard} Click **Create**.
 -   Copy the credentials to authenticate to your service instance:
-    1.  {: hide-dashboard} From the [{{site.data.keyword.cloud_notm}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/dashboard/apps){: new_window}, click on your {{site.data.keyword.texttospeechshort}} service instance to go to the {{site.data.keyword.texttospeechshort}} service dashboard page.
+    1.  {: hide-dashboard} From the [{{site.data.keyword.cloud_notm}} dashboard](https://{DomainName}/dashboard/apps){: external}, click on your {{site.data.keyword.texttospeechshort}} service instance to go to the {{site.data.keyword.texttospeechshort}} service dashboard page.
     1.  On the **Manage** page, click **Show** to view your credentials.
     1.  Copy the `API Key` and `URL` values.
 -   Make sure that you have the `curl` command.
-    -   The examples use the `curl` command to call methods of the HTTP interface. Install the version for your operating system from [curl.haxx.se ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://curl.haxx.se/){: new_window}. Install the version that supports the Secure Sockets Layer (SSL) protocol. Make sure to include the installed binary file on your `PATH` environment variable.
+    -   The examples use the `curl` command to call methods of the HTTP interface. Install the version for your operating system from [curl.haxx.se](https://curl.haxx.se/){: external}. Install the version that supports the Secure Sockets Layer (SSL) protocol. Make sure to include the installed binary file on your `PATH` environment variable.
 
 When you enter a command, replace `{apikey}` and `{url}` with your actual API key and URL. Omit the braces, which indicate a variable value, from the command. An actual value resembles the following example:
 {: hide-dashboard}
@@ -113,4 +113,4 @@ The following command uses the `GET /v1/synthesize` method to synthesize Spanish
 
 -   Learn more about the service's HTTP interface in [The HTTP interface](/docs/services/text-to-speech?topic=text-to-speech-usingHTTP).
 -   Learn about the service's WebSocket interface in [The WebSocket interface](/docs/services/text-to-speech?topic=text-to-speech-usingWebSocket).
--   Get detailed information about the methods of the service's interface in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/text-to-speech){: new_window}.
+-   Get detailed information about the methods of the service's interface in the [API reference](https://{DomainName}/apidocs/text-to-speech){: external}.

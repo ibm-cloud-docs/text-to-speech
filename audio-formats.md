@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-11"
+lastupdated: "2019-06-04"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -48,9 +48,8 @@ Table 1 lists the audio formats (MIME types) in which you can request synthesize
       encoded by using 8-bit u-law (or mu-law) data that is sampled at 8 kHz.
       This format provides a lowest-common denominator media type. For more
       information, see the IETF
-      <a target="_blank" href="https://tools.ietf.org/html/rfc2046">Request
-        for Comment (RFC) 2046 ![External link icon](../../icons/launch-glyph.svg "External link icon")</a> and
-      <a target="_blank" href="http://www.iana.org/assignments/media-types/audio/basic">iana.org/assignments/media-types/audio/basic ![External link icon](../../icons/launch-glyph.svg "External link icon")</a>.
+      [Request for Comment (RFC) 2046](https://tools.ietf.org/html/rfc2046) and
+      [iana.org/assignments/media-types/audio/basic](http://www.iana.org/assignments/media-types/audio/basic).
     </td>
   </tr>
   <tr>
@@ -60,7 +59,7 @@ Table 1 lists the audio formats (MIME types) in which you can request synthesize
     <td>
       <em>Free Lossless Audio Codec (FLAC)</em> (<code>.flac</code>),
       a lossless compressed audio coding format. For more information, see
-      <a target="_blank" href="https://en.wikipedia.org/wiki/FLAC">en.wikipedia.org/wiki/FLAC ![External link icon](../../icons/launch-glyph.svg "External link icon")</a>.
+      [wikipedia.org/wiki/FLAC](https://wikipedia.org/wiki/FLAC).
     </td>
   </tr>
   <tr>
@@ -71,9 +70,8 @@ Table 1 lists the audio formats (MIME types) in which you can request synthesize
       <em>Linear 16-bit Pulse-Code Modulation (PCM)</em>, an uncompressed
       audio data format (often <code>.raw</code> or <code>.pcm</code>). For
       more information, see the Internet Engineering Task Force (IETF)
-      <a target="_blank" href="https://tools.ietf.org/html/rfc2586">Request
-        for Comment (RFC) 2586 ![External link icon](../../icons/launch-glyph.svg "External link icon")</a> and
-      <a target="_blank" href="https://en.wikipedia.org/wiki/Pulse-code_modulation">en.wikipedia.org/wiki/Pulse-code_modulation ![External link icon](../../icons/launch-glyph.svg "External link icon")</a>.<br/><br/>
+      [Request for Comment (RFC) 2586](https://tools.ietf.org/html/rfc2586) and
+      [wikipedia.org/wiki/Pulse-code_modulation](https://wikipedia.org/wiki/Pulse-code_modulation).<br/><br/>
       You must specify the sampling rate with this audio format. For example,
       specify <code>audio/l16;rate=16000</code> for audio that is sampled at
       16 kHz. You can also optionally specify the endianness as either
@@ -91,7 +89,7 @@ Table 1 lists the audio formats (MIME types) in which you can request synthesize
       <em>MP3</em> or <em>Motion Picture Experts Group (MPEG)</em>, a lossy
       data compression format (MP3 and MPEG refer to the same format).
       For more information, see
-      <a target="_blank" href="https://en.wikipedia.org/wiki/MP3">en.wikipedia.org/wiki/MP3 ![External link icon](../../icons/launch-glyph.svg "External link icon")</a>.
+      [wikipedia.org/wiki/MP3](https://wikipedia.org/wiki/MP3).
     </td>
   </tr>
   <tr>
@@ -103,7 +101,7 @@ Table 1 lists the audio formats (MIME types) in which you can request synthesize
       format that is encoded by using 8-bit u-law (or mu-law) data. You must
       specify the sampling rate with this audio format. For more information,
       see
-      <a target="_blank" href="https://en.wikipedia.org/wiki/M-law_algorithm">en.wikipedia.org/wiki/M-law_algorithm ![External link icon](../../icons/launch-glyph.svg "External link icon")</a>.
+      [wikipedia.org/wiki/M-law_algorithm](https://wikipedia.org/wiki/M-law_algorithm).
     </td>
   </tr>
   <tr>
@@ -115,21 +113,21 @@ Table 1 lists the audio formats (MIME types) in which you can request synthesize
     <td>
       <em>Ogg format</em> (<code>.ogg</code>), a free, open container format
       that is maintained by the Xiph.org Foundation. For more information, see
-      <a target="_blank" href="https://www.xiph.org/ogg/">xiph.org/ogg/ ![External link icon](../../icons/launch-glyph.svg "External link icon")</a>.
+      [xiph.org/ogg/](https://www.xiph.org/ogg/).
       You can request audio streams that are compressed with the following
       codecs:
       <ul style="margin-left:20px; padding:0px;">
         <li style="margin:10px 0px; line-height:120%;">
           <em>Opus</em>. For more information, see
-          <a target="_blank" href="https://www.opus-codec.org/">opus-codec.org ![External link icon](../../icons/launch-glyph.svg "External link icon")</a> and
-          <a target="_blank" href="https://en.wikipedia.org/wiki/Opus">en.wikipedia.org/wiki/Opus (audio format) ![External link icon](../../icons/launch-glyph.svg "External link icon")</a>.
+	  [opus-codec.org](https://www.opus-codec.org/) and
+	  [wikipedia.org/wiki/Opus (audio format)](https://wikipedia.org/wiki/Opus).
           On the <em>Opus (audio format)</em> page, look especially at the
           <em>Containers</em> section.
         </li>
         <li style="margin:10px 0px; line-height:120%;">
           <em>Vorbis</em>. For more information, see
-          <a target="_blank" href="https://xiph.org/vorbis/">xiph.org/vorbis ![External link icon](../../icons/launch-glyph.svg "External link icon")</a> and
-          <a target="_blank" href="https://en.wikipedia.org/wiki/Vorbis">en.wikipedia.org/wiki/Vorbis ![External link icon](../../icons/launch-glyph.svg "External link icon")</a>.
+	  [xiph.org/vorbis](https://xiph.org/vorbis/) and
+	  [wikipedia.org/wiki/Vorbis](https://wikipedia.org/wiki/Vorbis).
         </li>
       </ul>
       Both codecs are free, open, lossy audio-compression formats. Opus
@@ -152,7 +150,7 @@ Table 1 lists the audio formats (MIME types) in which you can request synthesize
       the attribute <code>numSamples</code> in the header of the file
       is set to <code>0</code> regardless of the length of the audio.
       For more information, see
-      <a target="_blank" href="https://en.wikipedia.org/wiki/WAV">en.wikipedia.org/wiki/WAV ![External link icon](../../icons/launch-glyph.svg "External link icon")</a>.
+      [wikipedia.org/wiki/WAV](https://wikipedia.org/wiki/WAV).
     </td>
   </tr>
   <tr>
@@ -166,7 +164,7 @@ Table 1 lists the audio formats (MIME types) in which you can request synthesize
       format that provides support for audio streams that are compressed
       with the Opus and Vorbis audio codecs. If you omit the codec, the
       service returns the audio in Opus format. For more information, see
-      <a target="_blank" href="https://www.webmproject.org/">webmproject.org ![External link icon](../../icons/launch-glyph.svg "External link icon")</a>.
+      [webmproject.org](https://www.webmproject.org/).
     </td>
   </tr>
 </table>
@@ -329,7 +327,7 @@ Table 2 shows the default sampling rate of the audio that is returned for each f
 
 The most reliable way to identify the sampling rate for any audio stream that the service returns is to extract the information from the stream itself. You can determine the rate by calling the `/v1/synthesize` method with some simple text (for example, "hello world") and specifying the format and codec that you plan to use. You can then obtain the codec and sampling rate by saving the audio stream to a file and opening it in an audio player.
 
-The Opus standard requires the output sampling rate to match the capabilities of the audio player. For more information, see Section 5.1 of the Internet Engineering Task Force (IETF) [Request for Comments (RFC) 7845 ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://tools.ietf.org/html/rfc6455){: new_window}. For software audio players, the table indicates the typical output sampling rate, but the actual sampling rate of the audio varies with time within the stream. As mentioned, the service synthesizes the source audio at 22,050 Hz.
+The Opus standard requires the output sampling rate to match the capabilities of the audio player. For more information, see Section 5.1 of the Internet Engineering Task Force (IETF) [Request for Comments (RFC) 7845](http://tools.ietf.org/html/rfc6455){: external}. For software audio players, the table indicates the typical output sampling rate, but the actual sampling rate of the audio varies with time within the stream. As mentioned, the service synthesizes the source audio at 22,050 Hz.
 {: note}
 
 ## Playing an audio file
@@ -338,4 +336,4 @@ The Opus standard requires the output sampling rate to match the capabilities of
 To play an audio file that the service generates, use one of the following tools:
 
 -   A web browser such as Google Chrome&trade;, Firefox&reg; or Microsoft&reg; Internet Explorer&reg;.
--   An audio player such as Audacity&reg; ([audacityteam.org ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.audacityteam.org/){: new_window}) or FFmpeg ([ffmpeg.org ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ffmpeg.org){: new_window}).
+-   An audio player such as Audacity&reg; ([audacityteam.org](http://www.audacityteam.org/){: external}) or FFmpeg ([ffmpeg.org](https://www.ffmpeg.org){: external}).
