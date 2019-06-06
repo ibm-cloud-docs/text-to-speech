@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-04"
+lastupdated: "2019-06-06"
 
 subcollection: text-to-speech
 
@@ -146,8 +146,8 @@ The following information applies to working with pronunciations in IPA notation
 
 To learn more, see the following:
 
--   For more information about IPA, see [wikipedia.org/wiki/International_Phonetic_Alphabet](https://wikipedia.org/wiki/International_Phonetic_Alphabet){: external}.
--   For more information about phonetic symbols for Unicode, see [wikipedia.org/wiki/Phonetic_symbols_in_Unicode](https://wikipedia.org/wiki/Phonetic_symbols_in_Unicode){: external}.
+-   For more information about IPA, see [International Phonetic Alphabet](https://wikipedia.org/wiki/International_Phonetic_Alphabet){: external}.
+-   For more information about phonetic symbols for Unicode, see [Phonetic symbols in Unicode](https://wikipedia.org/wiki/Phonetic_symbols_in_Unicode){: external}.
 
 ## Supported languages
 {: #supportedLanguages}

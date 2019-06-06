@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-04"
+lastupdated: "2019-06-06"
 
 subcollection: text-to-speech
 
@@ -58,8 +58,8 @@ Table 1 lists the audio formats (MIME types) in which you can request synthesize
     </td>
     <td>
       <em>Free Lossless Audio Codec (FLAC)</em> (<code>.flac</code>),
-      a lossless compressed audio coding format. For more information, see
-      [wikipedia.org/wiki/FLAC](https://wikipedia.org/wiki/FLAC).
+      a lossless compressed audio coding format. For more information,
+      see [FLAC](https://wikipedia.org/wiki/FLAC).
     </td>
   </tr>
   <tr>
@@ -71,7 +71,7 @@ Table 1 lists the audio formats (MIME types) in which you can request synthesize
       audio data format (often <code>.raw</code> or <code>.pcm</code>). For
       more information, see the Internet Engineering Task Force (IETF)
       [Request for Comment (RFC) 2586](https://tools.ietf.org/html/rfc2586) and
-      [wikipedia.org/wiki/Pulse-code_modulation](https://wikipedia.org/wiki/Pulse-code_modulation).<br/><br/>
+      [Pulse-code modulation](https://wikipedia.org/wiki/Pulse-code_modulation).<br/><br/>
       You must specify the sampling rate with this audio format. For example,
       specify <code>audio/l16;rate=16000</code> for audio that is sampled at
       16 kHz. You can also optionally specify the endianness as either
@@ -88,8 +88,7 @@ Table 1 lists the audio formats (MIME types) in which you can request synthesize
     <td>
       <em>MP3</em> or <em>Motion Picture Experts Group (MPEG)</em>, a lossy
       data compression format (MP3 and MPEG refer to the same format).
-      For more information, see
-      [wikipedia.org/wiki/MP3](https://wikipedia.org/wiki/MP3).
+      For more information, see [MP3](https://wikipedia.org/wiki/MP3).
     </td>
   </tr>
   <tr>
@@ -100,8 +99,7 @@ Table 1 lists the audio formats (MIME types) in which you can request synthesize
       <em>8-bit mu-law (or u-law) audio</em>, a single-channel, lossy audio
       format that is encoded by using 8-bit u-law (or mu-law) data. You must
       specify the sampling rate with this audio format. For more information,
-      see
-      [wikipedia.org/wiki/M-law_algorithm](https://wikipedia.org/wiki/M-law_algorithm).
+      see [M-law algorithm](https://wikipedia.org/wiki/M-law_algorithm).
     </td>
   </tr>
   <tr>
@@ -120,14 +118,13 @@ Table 1 lists the audio formats (MIME types) in which you can request synthesize
         <li style="margin:10px 0px; line-height:120%;">
           <em>Opus</em>. For more information, see
 	  [opus-codec.org](https://www.opus-codec.org/) and
-	  [wikipedia.org/wiki/Opus (audio format)](https://wikipedia.org/wiki/Opus).
-          On the <em>Opus (audio format)</em> page, look especially at the
-          <em>Containers</em> section.
+	  [Opus (audio format)](https://wikipedia.org/wiki/Opus_%28audio_format%29).
+          Look especially at the <em>Containers</em> section.
         </li>
         <li style="margin:10px 0px; line-height:120%;">
           <em>Vorbis</em>. For more information, see
 	  [xiph.org/vorbis](https://xiph.org/vorbis/) and
-	  [wikipedia.org/wiki/Vorbis](https://wikipedia.org/wiki/Vorbis).
+	  [Vorbis](https://wikipedia.org/wiki/Vorbis).
         </li>
       </ul>
       Both codecs are free, open, lossy audio-compression formats. Opus
@@ -149,8 +146,7 @@ Table 1 lists the audio formats (MIME types) in which you can request synthesize
       generated might not work in all audio players. Specifically,
       the attribute <code>numSamples</code> in the header of the file
       is set to <code>0</code> regardless of the length of the audio.
-      For more information, see
-      [wikipedia.org/wiki/WAV](https://wikipedia.org/wiki/WAV).
+      For more information, see [WAV](https://wikipedia.org/wiki/WAV).
     </td>
   </tr>
   <tr>
