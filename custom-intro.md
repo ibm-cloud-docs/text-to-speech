@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-04"
+lastupdated: "2019-06-06"
 
 subcollection: text-to-speech
 
@@ -126,7 +126,7 @@ The following resources provide information about phonetic translation:
 
 -   For more information about using SSML and its `<phoneme>` element, see [Using SSML](/docs/services/text-to-speech?topic=text-to-speech-ssml).
 -   For more information about specifying SPR translations and their equivalent IPA symbols, see [Using IBM SPR](/docs/services/text-to-speech?topic=text-to-speech-sprs).
--   For more information about using IPA symbols and for audio samples of the symbols, consult sources on the web. You can find a detailed introductory discussion at [wikipedia.org/wiki/International_Phonetic_Alphabet](https://wikipedia.org/wiki/International_Phonetic_Alphabet){: external}.
+-   For more information about using IPA symbols and for audio samples of the symbols, consult sources on the web. You can find a detailed introductory discussion at [International Phonetic Alphabet](https://wikipedia.org/wiki/International_Phonetic_Alphabet){: external}.
 
 ## Mixed sounds-like and phonetic translation
 
