@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-05"
+lastupdated: "2019-06-10"
 
 subcollection: text-to-speech
 
@@ -71,6 +71,9 @@ The following commands use the `POST /v1/synthesize` method to synthesize US Eng
 
 1.  Issue the following command to synthesize the string "hello world" and produce a WAV file that is named `hello_world.wav`.
     -   {: hide-dashboard} Replace `{apikey}` and `{url}` with your API key and URL.
+
+    *Windows users,* replace the backslash (`\`) at the end of each line with a caret (`^`). Make sure there are no trailing spaces.
+    {: tip}
 
     ```bash
     curl -X POST -u "apikey:{apikey}"{: apikey} \
