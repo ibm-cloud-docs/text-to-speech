@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-04"
+lastupdated: "2019-06-13"
 
 subcollection: text-to-speech
 
@@ -65,7 +65,7 @@ You can use custom voice models to create application-specific translations for 
 
 For example, your application might routinely encounter special terms with foreign origins, personal or geographic names, or abbreviations and acronyms. By using customization, you can define translations that tell the service how you want such terms to be pronounced. For more information, see [Understanding customization](/docs/services/text-to-speech?topic=text-to-speech-customIntro).
 
-The customization interface is a beta release.
+The customization interface is a beta release. Also, you must have the Standard pricing plan to use voice model customization. Users of the Lite plan cannot use the customization interface. For more information, see the [pricing page](https://www.ibm.com/cloud/watson-text-to-speech/pricing){: external} for the {{site.data.keyword.texttospeechshort}} service.
 {: note}
 
 ## CORS support
