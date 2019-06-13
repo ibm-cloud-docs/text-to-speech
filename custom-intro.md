@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-06"
+lastupdated: "2019-06-13"
 
 subcollection: text-to-speech
 
@@ -30,7 +30,7 @@ When you synthesize text with {{site.data.keyword.texttospeechfull}}, the servic
 
 The service's regular pronunciation rules work well for common words. However, they can yield imperfect results for unusual words. Such words include special terms with foreign origins, personal or geographic names, and abbreviations or acronyms. If your application's lexicon includes such words, you can use the customization interface to specify how the service pronounces such words.
 
-The customization interface is beta functionality that is available for all languages.
+The customization interface is beta functionality that is available for all languages. You must have the Standard pricing plan to use voice model customization. Users of the Lite plan cannot use the customization interface. For more information, see the [pricing page](https://www.ibm.com/cloud/watson-text-to-speech/pricing){: external} for the {{site.data.keyword.texttospeechshort}} service.
 {: note}
 
 ## How customization works
