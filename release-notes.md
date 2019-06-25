@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-04"
+lastupdated: "2019-06-25"
 
 subcollection: text-to-speech
 
@@ -31,7 +31,19 @@ The following sections document the new features and changes that were included 
 ## Known limitations
 {: #limitations}
 
-A problem with the deployment of the `V2`, Deep Neural Network (DNN) voices causes background noise in synthesized speech. {{site.data.keyword.IBM_notm}} is working to address the issue.
+No known limitations at this time.
+
+## 24 June 2019
+{: #June2019}
+
+-   The service now offers two versions of most of its available voices:
+    -   [Standard voices](/docs/services/text-to-speech?topic=text-to-speech-voices#standardVoices) that use concatenative synthesis to assemble segments of recorded speech to generate audio. Standard voices do not include a version string in their name (for example, `en-US_AllisonVoice`).
+    -   [Neural voices](/docs/services/text-to-speech?topic=text-to-speech-voices#neuralVoices) that use a deep neural network (DNN) to predict the acoustic (spectral) features of the speech. Neural voices include a version string (`V3`) in their name (for example, `en-US_AllisonV3Voice`).
+
+    Enhanced neural versions are available for all standard voices except for the `ja-JP_EmiVoice` voice, which is pending and will be available soon. You cannot use the SSML `<express-as>` and `<voice-transformation>` elements with the neural voices, and you cannot use the `volume` attribute of the `<prosody>` element with the neural voices.
+
+    For more information about all available voices, see [Languages and voices](/docs/services/text-to-speech?topic=text-to-speech-voices).
+-   The service no longer includes the `V2` DNN voices that were previously available. If you use a `V2` voice in your application, the service automatically uses the equivalent `V3` voice instead.
 
 ## 24 March 2019
 {: #March2019c}
@@ -40,7 +52,7 @@ A problem with the deployment of the `V2`, Deep Neural Network (DNN) voices caus
     -   `de-DE_BirgitV2Voice`
     -   `de-DE_DieterV2Voice`
 
-    For more information about DNN-based voices, see [Speech synthesis technologies](/docs/services/text-to-speech?topic=text-to-speech-voices#technologiesVoices).
+    For more information about DNN-based voices, see [Languages and voices](/docs/services/text-to-speech?topic=text-to-speech-voices).
 -   All of the service's DNN-based voices now support the `pitch` and `rate` attributes of the SSML `<prosody>` element. The DNN-based voices do not support the `volume` attribute of the `<prosody>` element. For more information, see [The prosody element](/docs/services/text-to-speech?topic=text-to-speech-elements#prosody_element).
 
 ## 21 March 2019
@@ -52,25 +64,10 @@ This change does not affect API access for users or applications with existing s
 
 For more information about service keys and user roles, see [IAM service API keys](/docs/services/watson?topic=watson-api-key-bp#api-key-bp).
 
-## 4 March 2019
-{: #March2019a}
-
-The service now offers four new voices that use deep-learning synthesis to generate audio:
-
--   `it-IT_FrancescaV2Voice`
--   `en-US_AllisonV2Voice`
--   `en-US_LisaV2Voice`
--   `en-US_MichaelV2Voice`
-
-These new voices use machine learning and a DNN to synthesize text to speech. Deep-learning, or DNN-based, synthesis produces audio with a more natural prosody and a more consistent overall quality.
-
-But the new voices also produce audio with different signal qualities from the existing voices, so they might not be appropriate for all applications. Also, the new voices do not support the SSML elements `<prosody>`, `<express-as>`, and `<voice-transformation>`.
-
-For more information about these DNN-based voices and how they differ from the existing voices, see [Speech synthesis technologies](/docs/services/text-to-speech?topic=text-to-speech-voices#technologiesVoices).
-
 ## Older releases
 {: #older}
 
+-   [4 March 2019](#March2019a)
 -   [28 January 2019](#January2019)
 -   [13 December 2018](#December2018)
 -   [7 November 2018](#November2018)
@@ -88,6 +85,22 @@ For more information about these DNN-based voices and how they differ from the e
 -   [17 December 2015](#December2015)
 -   [21 September 2015](#September2015)
 -   [1 July 2015](#July2015)
+
+### 4 March 2019
+{: #March2019a}
+
+The service now offers four new voices that use deep-learning synthesis to generate audio:
+
+-   `it-IT_FrancescaV2Voice`
+-   `en-US_AllisonV2Voice`
+-   `en-US_LisaV2Voice`
+-   `en-US_MichaelV2Voice`
+
+These new voices use machine learning and a DNN to synthesize text to speech. Deep-learning, or DNN-based, synthesis produces audio with a more natural prosody and a more consistent overall quality.
+
+But the new voices also produce audio with different signal qualities from the existing voices, so they might not be appropriate for all applications. Also, the new voices do not support the SSML elements `<prosody>`, `<express-as>`, and `<voice-transformation>`.
+
+For more information about these DNN-based voices and how they differ from the existing voices, see [Languages and voices](/docs/services/text-to-speech?topic=text-to-speech-voices).
 
 ### 28 January 2019
 {: #January2019}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-04"
+lastupdated: "2019-06-24"
 
 subcollection: text-to-speech
 
@@ -82,9 +82,9 @@ The two versions of the `/v1/synthesize` method have the following parameters in
       model that is to be used for the synthesis. A specified custom voice
       model is guaranteed to work only if it matches the language of the
       voice that is used for the synthesis. If you include a customization
-      ID, you must call the method with the service credentials of the
-      model's owner. Omit the parameter to use the specified voice with
-      no customization. For more information, see
+      ID, you must make the request with credentials for the instance of
+      the service that owns the custom model. Omit the parameter to use
+      the specified voice with no customization. For more information, see
       [Understanding customization](/docs/services/text-to-speech?topic=text-to-speech-customIntro).
     </td>
   </tr>

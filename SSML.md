@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-04"
+lastupdated: "2019-06-23"
 
 subcollection: text-to-speech
 
@@ -93,6 +93,6 @@ Specifically, the service returns an error in the following cases:
 -   *French liaison in invalid location.* In the `ph` attribute of a `<phoneme>` element, the liaison character does not follow a consonant or occurs in the middle of the word pronunciation.
 -   *Japanese `:` symbol does not precede a vowel.* In the `ph` attribute of a `<phoneme>` element, a `:` character does not occur before a vowel (possibly with other symbols, such as syllable boundary, in between).
 -   *Invalid syllable stress.* The `ph` attribute of a `<phoneme>` element for an {{site.data.keyword.IBM_notm}} SPR includes invalid syllable stress. For French, a syllable stress symbol does not immediately precede a vowel. For Spanish or Italian, a secondary (`2`) or no stress (`0`) symbol is used. For Japanese, a secondary stress symbol (`2`) is used.
--   *Invalid use of SSML `<express-as>` or `<voice-transformation>` element.* You can use these SSML extensions only with the specified US English voices.
--   *Invalid use of SSML `<prosody>` element.* You cannot use this element with the `V2`, DNN-based voices (for example, `en-US_AllisonV2Voice`).
+-   *Invalid use of SSML `<express-as>` or `<voice-transformation>` element.* You can use these SSML extensions only with the specified standard US English voices.
+-   *Invalid use of SSML `<prosody>` element.* You cannot use the `contour`, `duration`, and `range` attributes of the `<prosody>` element with any voice. Also, you cannot use the `volume` attribute of the `<prosody>` element with neural voices (for example, `en-US_AllisonV3Voice`).
 -   *Unescaped XML control characters.* The input text itself contains a <code>&quot;</code>, <code>&apos;</code>, `&`, `<`, or `>` character instead of its equivalent escape string or character encoding. For more information, see [Escaping XML control characters](/docs/services/text-to-speech?topic=text-to-speech-usingHTTP#escape).

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-04"
+lastupdated: "2019-06-21"
 
 subcollection: text-to-speech
 
@@ -31,9 +31,10 @@ By default, the {{site.data.keyword.texttospeechfull}} service synthesizes text 
 ## Language support
 {: #languages-expressive}
 
-The service supports expressiveness only for the US English Allison voice (`en-US_AllisonVoice`). Expressiveness is not supported with the `en-US_AllisonV2Voice` voice. Using the element with an unsupported voice returns an error.
+The service supports expressiveness only for the standard US English Allison voice (`en-US_AllisonVoice`). Expressiveness is not supported with the neural `en-US_AllisonV3Voice` voice. Using the element with an unsupported voice returns an error.
 
 ## The express-as element
+{: #ssml-express-as}
 
 You can apply the `<express-as>` element to the entire body of the text, a sentence, or a fragment such as a phrase or word. The element accepts one required attribute, `type`, which describes the type of expression to use for the specified text: `GoodNews`, `Apology`, or `Uncertainty`.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-23"
 
 subcollection: text-to-speech
 
@@ -37,10 +37,10 @@ To synthesize text with the HTTP API, you call the `GET` or `POST` version of th
     -   The `GET /v1/synthesize` method accepts the input text as a query parameter. The maximum size of the request is 8 KB, which includes the input text and the URL and headers.
     -   The `POST /v1/synthesize` method accepts the input text in the body of the request. The maximum size of the request is 8 KB for the URL and headers, and 5 KB for the input text that is sent in the body of the request.
 
-    You can pass the service plain text or text that is annotated with the Speech Synthesis Markup Language (SSML). SSML is an XML-based markup language that provides annotations of text for speech synthesis applications such as the {{site.data.keyword.texttospeechshort}} service. The service augments SSML with service-specific expressive and voice-transformation elements.
+    You can pass the service plain text or text that is annotated with the Speech Synthesis Markup Language (SSML). SSML is an XML-based markup language that provides annotations of text for speech synthesis applications such as the {{site.data.keyword.texttospeechshort}} service. The service augments SSML with service-specific expressive and voice-transformation elements, which are available for some standard US English voices.
 
     For more information, see [Specifying input text](/docs/services/text-to-speech?topic=text-to-speech-usingHTTP#input).
--   *Voices:* The service accepts text and produces audio in various languages, voices, and dialects. The service offers at least one male or female voice, sometimes both, for each supported language and different dialects such as US and British English. It also offers versions of some voices that use Deep Neural Network (DNN) technology to synthesize text to speech.
+-   *Voices:* The service accepts text and produces audio in various languages, voices, and dialects. The service offers at least one male or female voice, sometimes both, for each supported language and different dialects such as US and British English. It offers both standard (concatenative) and enhanced neural versions of most voices.
 
     You can use the service's `GET /v1/voices` or `GET /v1/voices/{voice}` methods to learn more about the supported voices. The service synthesizes the text into the language of the specified voice. Be sure to match the voice to the input text.
 
@@ -81,7 +81,7 @@ For instance, a web page that is loaded from a server in {{site.data.keyword.clo
 SDKs are available for the {{site.data.keyword.texttospeechshort}} service to simplify the development of speech applications. {{site.data.keyword.ibmwatson}} SDKs are available for many popular programming languages and platforms.
 
 -   For a complete list of SDKs and links to the SDKs on GitHub, see [Using SDKs](/docs/services/watson?topic=watson-using-sdks).
--   For detailed information about all methods of the Node, Java, Python, Ruby, and Go SDKs for the {{site.data.keyword.texttospeechshort}} service, see the [API reference](https://{DomainName}/apidocs/text-to-speech){: external}.
+-   For detailed information about all methods of the Node, Java&trade;, Python, Ruby, Swift, and Go SDKs for the {{site.data.keyword.texttospeechshort}} service, see the [API reference](https://{DomainName}/apidocs/text-to-speech){: external}.
 
 ## Learning more about application development
 {: #learn}

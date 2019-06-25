@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-04"
+lastupdated: "2019-06-24"
 
 subcollection: text-to-speech
 
@@ -28,95 +28,182 @@ subcollection: text-to-speech
 The {{site.data.keyword.texttospeechfull}} service supports a variety of languages, voices, and dialects. The service offers at least one male or female voice, sometimes both, for each language. Each voice uses appropriate cadence and intonation for its dialect.
 {: shortdesc}
 
+The `V2` voices that were previously available with the service have been discontinued. If you use a `V2` voice in your application, the service automatically uses the equivalent `V3` voice instead.
+{: note}
+
 ## Supported languages and voices
 {: #languageVoices}
 
-Table 1 lists the voices that are available for each language and dialect, including their gender. If you omit the optional `voice` parameter from a request, the service uses the `en-US_MichaelVoice` voice by default. To understand why the service offers two versions of some voices, see [Speech synthesis technologies](#technologiesVoices).
+Table 1 lists the voices that are available for each language and dialect, including their type and gender. Most voices are available as both [Standard voices](#standardVoices) and [Neural voices](#neuralVoices). (A neural version of the Japanese voice is not yet available.) If you omit the optional `voice` parameter from a request, the service uses the standard `en-US_MichaelVoice` voice by default.
 
-A problem with the deployment of the `V2` voices currently causes background noise in synthesized speech. For more information, see [Known limitations](/docs/services/text-to-speech?topic=text-to-speech-release-notes#limitations).
-{: note}
-
-<table style="width:90%">
+<table style="width:100%">
   <caption>Table 1. Supported languages and voices</caption>
   <tr>
     <th style="text-align:left">Language</th>
+    <th style="text-align:center">Type</th>
     <th style="text-align:center">Voice</th>
     <th style="text-align:center">Gender</th>
   </tr>
   <tr>
     <td style="text-align:left">Brazilian Portuguese</td>
+    <td style="text-align:center">Standard</td>
     <td style="text-align:center"><code>pt-BR_IsabelaVoice</code></td>
     <td style="text-align:center">Female</td>
   </tr>
   <tr>
+    <td style="text-align:left"></td>
+    <td style="text-align:center">Neural</td>
+    <td style="text-align:center"><code>pt-BR_IsabelaV3Voice</code></td>
+    <td style="text-align:center">Female</td>
+  </tr>
+  <tr>
     <td style="text-align:left">Castilian Spanish</td>
+    <td style="text-align:center">Standard</td>
     <td style="text-align:center"><code>es-ES_EnriqueVoice</code></td>
     <td style="text-align:center">Male</td>
   </tr>
   <tr>
+    <td style="text-align:left"></td>
+    <td style="text-align:center">Neural</td>
+    <td style="text-align:center"><code>es-ES_EnriqueV3Voice</code></td>
+    <td style="text-align:center">Male</td>
+  </tr>
+  <tr>
     <td></td>
+    <td style="text-align:center">Standard</td>
     <td style="text-align:center"><code>es-ES_LauraVoice</code></td>
     <td style="text-align:center">Female</td>
   </tr>
   <tr>
+    <td></td>
+    <td style="text-align:center">Neural</td>
+    <td style="text-align:center"><code>es-ES_LauraV3Voice</code></td>
+    <td style="text-align:center">Female</td>
+  </tr>
+  <tr>
     <td style="text-align:left">French</td>
+    <td style="text-align:center">Standard</td>
     <td style="text-align:center"><code>fr-FR_ReneeVoice</code></td>
     <td style="text-align:center">Female</td>
   </tr>
   <tr>
+    <td style="text-align:left"></td>
+    <td style="text-align:center">Neural</td>
+    <td style="text-align:center"><code>fr-FR_ReneeV3Voice</code></td>
+    <td style="text-align:center">Female</td>
+  </tr>
+  <tr>
     <td style="text-align:left">German</td>
-    <td style="text-align:center"><code>de-DE_BirgitVoice</code><br/>
-      <code>de-DE_BirgitV2Voice</code></td>
+    <td style="text-align:center">Standard</td>
+    <td style="text-align:center"><code>de-DE_BirgitVoice</code></td>
+    <td style="text-align:center">Female</td>
+  </tr>
+  <tr>
+    <td style="text-align:left"></td>
+    <td style="text-align:center">Neural</td>
+    <td style="text-align:center"><code>de-DE_BirgitV3Voice</code></td>
     <td style="text-align:center">Female</td>
   </tr>
   <tr>
     <td></td>
-    <td style="text-align:center"><code>de-DE_DieterVoice</code><br/>
-      <code>de-DE_DieterV2Voice</code></td>
+    <td style="text-align:center">Standard</td>
+    <td style="text-align:center"><code>de-DE_DieterVoice</code></td>
+    <td style="text-align:center">Male</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td style="text-align:center">Neural</td>
+    <td style="text-align:center"><code>de-DE_DieterV3Voice</code></td>
     <td style="text-align:center">Male</td>
   </tr>
   <tr>
     <td style="text-align:left">Italian</td>
-    <td style="text-align:center"><code>it-IT_FrancescaVoice</code><br/>
-      <code>it-IT_FrancescaV2Voice</code></td>
+    <td style="text-align:center">Standard</td>
+    <td style="text-align:center"><code>it-IT_FrancescaVoice</code></td>
+    <td style="text-align:center">Female</td>
+  </tr>
+  <tr>
+    <td style="text-align:left"></td>
+    <td style="text-align:center">Neural</td>
+    <td style="text-align:center"><code>it-IT_FrancescaV3Voice</code></td>
     <td style="text-align:center">Female</td>
   </tr>
   <tr>
     <td style="text-align:left">Japanese</td>
+    <td style="text-align:center">Standard</td>
     <td style="text-align:center"><code>ja-JP_EmiVoice</code></td>
     <td style="text-align:center">Female</td>
   </tr>
   <tr>
     <td style="text-align:left">Latin American Spanish</td>
+    <td style="text-align:center">Standard</td>
     <td style="text-align:center"><code>es-LA_SofiaVoice</code></td>
     <td style="text-align:center">Female</td>
   </tr>
   <tr>
+    <td style="text-align:left"></td>
+    <td style="text-align:center">Neural</td>
+    <td style="text-align:center"><code>es-LA_SofiaV3Voice</code></td>
+    <td style="text-align:center">Female</td>
+  </tr>
+  <tr>
     <td style="text-align:left">North American Spanish</td>
+    <td style="text-align:center">Standard</td>
     <td style="text-align:center"><code>es-US_SofiaVoice</code></td>
     <td style="text-align:center">Female</td>
   </tr>
   <tr>
+    <td style="text-align:left"></td>
+    <td style="text-align:center">Neural</td>
+    <td style="text-align:center"><code>es-US_SofiaV3Voice</code></td>
+    <td style="text-align:center">Female</td>
+  </tr>
+  <tr>
     <td style="text-align:left">UK English</td>
+    <td style="text-align:center">Standard</td>
     <td style="text-align:center"><code>en-GB_KateVoice</code></td>
     <td style="text-align:center">Female</td>
   </tr>
   <tr>
+    <td style="text-align:left"></td>
+    <td style="text-align:center">Neural</td>
+    <td style="text-align:center"><code>en-GB_KateV3Voice</code></td>
+    <td style="text-align:center">Female</td>
+  </tr>
+  <tr>
     <td style="text-align:left">US English</td>
-    <td style="text-align:center"><code>en-US_AllisonVoice</code><br/>
-      <code>en-US_AllisonV2Voice</code></td>
+    <td style="text-align:center">Standard</td>
+    <td style="text-align:center"><code>en-US_AllisonVoice</code></td>
+    <td style="text-align:center">Female</td>
+  </tr>
+  <tr>
+    <td style="text-align:left"></td>
+    <td style="text-align:center">Neural</td>
+    <td style="text-align:center"><code>en-US_AllisonV3Voice</code></td>
     <td style="text-align:center">Female</td>
   </tr>
   <tr>
     <td></td>
-    <td style="text-align:center"><code>en-US_LisaVoice</code><br/>
-      <code>en-US_LisaV2Voice</code></td>
+    <td style="text-align:center">Standard</td>
+    <td style="text-align:center"><code>en-US_LisaVoice</code></td>
     <td style="text-align:center">Female</td>
   </tr>
   <tr>
     <td></td>
-    <td style="text-align:center"><code>en-US_MichaelVoice</code><br/>
-      <code>en-US_MichaelV2Voice</code></td>
+    <td style="text-align:center">Neural</td>
+    <td style="text-align:center"><code>en-US_LisaV3Voice</code></td>
+    <td style="text-align:center">Female</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td style="text-align:center">Standard</td>
+    <td style="text-align:center"><code>en-US_MichaelVoice</code></td>
+    <td style="text-align:center">Male</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td style="text-align:center">Neural</td>
+    <td style="text-align:center"><code>en-US_MichaelV3Voice</code></td>
     <td style="text-align:center">Male</td>
   </tr>
 </table>
@@ -124,25 +211,25 @@ A problem with the deployment of the `V2` voices currently causes background noi
 The voices `es-LA_SofiaVoice` and `es-US_SofiaVoice` are essentially the same voice. The most significant difference concerns how the two voices interpret a $ (dollar sign). The Latin American version uses the term *pesos*, while the North American version uses the term *d&oacute;lares*. Other minor differences might also exist between the two voices.
 {: note}
 
-### Speech synthesis technologies
-{: #technologiesVoices}
+### Standard voices
+{: #standardVoices}
 
-The service makes available two versions of some voices, for example, `en-US_AllisonVoice` and `en-US_AllisonV2Voice`. The primary difference between the two versions reflects the technology that the service uses to synthesize speech:
+Standard voices do not include a version string (`V3`) in their name (for example, `pt-BR_IsabelaVoice` and `en-US_AllisonVoice`). Standard voices use concatenative synthesis to assemble segments (or units) of recorded speech to generate the requested audio. The concatenation points of the recorded segments sometimes result in speech discontinuities that can degrade the quality and naturalness of the resulting speech.
 
--   *Concatenative synthesis* assembles segments (or units) of recorded speech to generate the requested audio. It generates audio that might be considered crisper sounding, but the concatenation points of the recorded segments sometimes result in speech distortions.
+### Neural voices
+{: #neuralVoices}
 
-    Voices that do not include the string `V2` in their names (for example, `en-US_AllisonVoice`) are based on concatenative synthesis.
--   *Deep-learning synthesis* uses a Deep Neural Network (DNN) to synthesize speech for the specified text. Rather than string together recorded segments of audio, this approach relies on machine learning to train a DNN on recorded speech data. Deep-learning, or DNN-based, synthesis produces audio with a more natural prosody and a more consistent overall quality.
+Neural voices include a version string (`V3`) in their name (for example, `pt-BR_IsabelaV3Voice` and `en-US_AllisonV3Voice`). Instead of segment selection and concatenation, neural voices use a deep neural network (DNN) to predict the acoustic (spectral) features of the speech. The DNN is trained on natural human speech and generates the resulting audio from the predicted acoustic features.
 
-    Voices that include the string `V2` in their names (for example, `en-US_AllisonV2Voice`) are newer voices that use DNN-based synthesis.
+The enhanced neural voices sound more natural and smoother than the standard voices with greater consistency in overall quality. For more information about neural voice technology, see the research paper [High quality, lightweight and adaptable Text to Speech using LPCNet](https://arxiv.org/abs/1905.00590){: external}.
 
-You need to experiment with the new voices before adopting them for your application. The two technologies produce audio with different signal qualities, so the new voices might not be better for all applications. Also, the DNN-based voices do not support the following SSML elements or attributes:
+The neural voices do not support the following SSML elements or attributes:
 
 -   The `volume` attribute of the `<prosody>` element
 -   The `<express-as>` element
 -   The `<voice-transformation>` element
 
-If your application uses these elements, continue to use the voices that are based on concatenative synthesis.
+However, you might find that these SSML features are no longer needed when using the neural voices. Also, you can make pitch and rate modifications to neural voices by using the `<prosody>` element in place of the `<voice-transformation>` element. For more information, see [The prosody element](/docs/services/text-to-speech?topic=text-to-speech-elements#prosody_element).
 
 ### Voice customization
 {: #customizeVoice}
@@ -150,6 +237,8 @@ If your application uses these elements, continue to use the voices that are bas
 When you synthesize text, the service applies language-dependent pronunciation rules to convert the ordinary spelling of each word to a phonetic spelling. The service's pronunciation rules work well for common words, but they can yield imperfect results for unusual words, such as terms with foreign origins, personal names, and abbreviations or acronyms.
 
 If your application's lexicon includes such words, you can use the customization interface to specify how the service pronounces them. For more information, see [Understanding customization](/docs/services/text-to-speech?topic=text-to-speech-customIntro).
+
+You create a custom voice model for a specific language, not for a specific voice. So a custom model can be used with any voice, standard or neural, for its specified language.
 
 ## Specifying a voice
 {: #specifyVoice}
@@ -224,9 +313,10 @@ The `GET /v1/voices/{voice}` method lists information about a specific voice. It
     <td style="text-align:center">String</td>
     <td>
       Provides the globally unique identifier (GUID) of a custom voice
-      model that is defined for the specified voice. If you include a
-      customization ID, you must call the method with the service
-      credentials of the custom model's owner.
+      model that is defined for the language of the specified voice. If
+      you include a customization ID, you must make the request with
+      credentials for the instance of the service that owns the custom
+      model.
     </td>
   </tr>
 </table>
@@ -258,4 +348,4 @@ If you omit the `customization_id` parameter, the method returns JSON output for
 ```
 {: codeblock}
 
-The attributes of the additional `customization` field provide information such as the GUID, name, language, and description of the custom voice model. They also show the service credentials of the model's owner, the date and time at which the model was created, and the date and time of its last modification.
+The attributes of the additional `customization` field provide information such as the GUID, name, language, and description of the custom voice model. They also show the credentials of the model's owner, the date and time at which the model was created, and the date and time of its last modification.

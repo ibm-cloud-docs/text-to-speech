@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="text-to-speech" audience="service" arm="343" href="/docs/services/text-to-speech?topic=text-to-speech-gettingStarted" path="services/text-to-speech"}
+{: .toc subcollection="text-to-speech" category="ai" audience="service" arm="343" href="/docs/services/text-to-speech?topic=text-to-speech-gettingStarted" path="services/text-to-speech"}
 Text to Speech
 
     {: .navgroup id="learn"}

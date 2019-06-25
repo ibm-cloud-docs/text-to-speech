@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-04"
+lastupdated: "2019-06-24"
 
 subcollection: text-to-speech
 
@@ -36,11 +36,11 @@ Consider the following guidelines when working with the customization interface.
 ### Ownership of custom voice models
 {: #customOwner}
 
-A custom voice model is owned by the instance of the {{site.data.keyword.texttospeechshort}} service whose credentials are used to create it. You must use service credentials created for that service instance with methods of the customization interface to work with the custom model in any way.
+A custom voice model is owned by the instance of the {{site.data.keyword.texttospeechshort}} service whose credentials are used to create it. You must use credentials for that service instance with methods of the customization interface to work with the custom model in any way.
 
-All service credentials obtained for the same instance of the {{site.data.keyword.texttospeechshort}} service share access to all custom models created for that service instance. To restrict access to a custom model, create a separate instance of the service and use only the credentials for that service instance to create and work with the model. Credentials for other service instances cannot affect the custom model.
+All credentials obtained for the same instance of the {{site.data.keyword.texttospeechshort}} service share access to all custom models created for that service instance. To restrict access to a custom model, create a separate instance of the service and use only the credentials for that service instance to create and work with the model. Credentials for other service instances cannot affect the custom model.
 
-An advantage of sharing ownership across service credentials is that you can cancel a set of credentials, for example, if they become compromised. You can then create new credentials for the same service instance and still maintain ownership of and access to custom models created with the original credentials.
+An advantage of sharing ownership across credentials is that you can cancel a set of credentials, for example, if they become compromised. You can then create new credentials for the same service instance and still maintain ownership of and access to custom models created with the original credentials.
 
 ### Request logging and data privacy
 {: #customLogging}
@@ -66,7 +66,7 @@ If necessary, you can then delete the data associated with the customer ID by us
 ## Creating a custom model
 {: #cuModelsCreate}
 
-To create a new custom model, use the `POST /v1/customizations` method. A new model is always empty when you first create it; you must use other methods to populate it with word/translation pairs. The new custom model is owned by the user whose service credentials are used to create it. For more information, see [Ownership of custom voice models](#customOwner).
+To create a new custom model, use the `POST /v1/customizations` method. A new model is always empty when you first create it. You must use other methods to populate it with word/translation pairs. The new custom model is owned by the service instance whose credentials are used to create it. For more information, see [Ownership of custom voice models](#customOwner).
 
 You pass the following attributes as a JSON object with the body of the request.
 
@@ -92,7 +92,9 @@ You pass the following attributes as a JSON object with the body of the request.
     <td style="text-align:center">String</td>
     <td>
       An identifier for the language of the custom model. The default
-      is <code>en-US</code> for US English.
+      is <code>en-US</code> for US English. The custom model can be used
+      with any voice, standard or neural, that is available in the specified
+      language.
     </td>
   </tr>
   <tr>
@@ -151,7 +153,7 @@ The method returns its results as a JSON object of the following form:
 ```
 {: codeblock}
 
-In addition to the information entered when the model was created, the output includes the service credentials of the model's owner, the model's language, and the times at which the model was created and last modified. Because the model has not been modified since its creation, the two times in the example are the same.
+In addition to the information entered when the model was created, the output includes the credentials of the model's owner, the model's language, and the times at which the model was created and last modified. Because the model has not been modified since its creation, the two times in the example are the same.
 
 The output also includes a `words` array that lists the model's custom entries. Because the model has yet to be updated, the array in the example is empty.
 
@@ -166,7 +168,7 @@ curl -X GET -u "apikey:{apikey}"
 ```
 {: pre}
 
-The method returns a JSON array that includes an object for each custom model owned by the requester. The owner's service credentials are shown in the `owner` field.
+The method returns a JSON array that includes an object for each custom model owned by the requester. The owner's credentials are shown in the `owner` field.
 
 ```javascript
 {

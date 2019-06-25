@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-04"
+lastupdated: "2019-06-21"
 
 subcollection: text-to-speech
 
@@ -337,7 +337,7 @@ The `rate` attribute indicates a change in the speaking rate for the text within
 ### The volume attribute
 {: #prosody-volume}
 
-The service does not support the `volume` attribute of the `<prosody>` element with its DNN-based voices (for example, `en-US_AllisonV2Voice`). For more information about these voices, see [Speech synthesis technologies](/docs/services/text-to-speech?topic=text-to-speech-voices#technologiesVoices).
+The service does not support the `volume` attribute of the `<prosody>` element with its neural voices (for example, `en-US_AllisonV3Voice`). For more information, see [Neural voices](/docs/services/text-to-speech?topic=text-to-speech-voices#neuralVoices).
 {: note}
 
 The `volume` attribute modifies the volume for the text within the element. You can specify an integer or decimal value in the range of 1.0 to 100.0 (maximum volume). You can also use one of the following string values, which correspond to predefined settings in the range of 0 to 100. (The `silent` value is not supported.)
