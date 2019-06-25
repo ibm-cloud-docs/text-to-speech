@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-21"
 
 subcollection: text-to-speech
 
@@ -38,7 +38,7 @@ The customization interface is beta functionality that is available for all lang
 
 The customization interface of the {{site.data.keyword.texttospeechshort}} service creates a dictionary of words and their translations for a specific language. This dictionary is referred to as a *custom voice model*, or just a custom model. Each custom entry in a custom voice model consists of a *word*/*translation* pair. A word's translation tells the service how to pronounce the word when it occurs in input text.
 
-The customization interface provides methods to create and manage your custom voice models, which the service stores permanently. After you create a custom model, you can use it during synthesis with any version of the `/v1/synthesize` method. When the service synthesizes input text, it determines the pronunciation of words that appear in the custom model by applying their translations either directly or indirectly.
+The customization interface provides methods to create and manage your custom voice models, which the service stores permanently. After you create a custom model, you can use it during synthesis with any version of the `/v1/synthesize` method. When the service synthesizes input text, it determines the pronunciation of words that appear in the custom model by applying their translations either directly or indirectly. Because you create a custom voice model for a specific language, a custom model can be used with any voice, standard or neural, that is available in that language.
 
 You specify the translation for a word in a custom voice model as a *sounds-like translation* or a *phonetic translation*. You can use both methods for entries in the same custom model, and you can mix the two methods within the same translation. A number of rules and guidelines apply to custom entries. For more information, see [Rules for creating custom entries](/docs/services/text-to-speech?topic=text-to-speech-rules).
 

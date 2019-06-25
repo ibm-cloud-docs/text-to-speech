@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-04"
+lastupdated: "2019-06-21"
 
 subcollection: text-to-speech
 
@@ -35,6 +35,7 @@ For more detailed information about the research and technical background behind
 1.  Fernandez, Raul, Zvi Kons, Slava Shechtman, Zhi Wei Shuang, Ron Hoory, Bhuvana Ramabhadran, and Yong Qin. [*The {{site.data.keyword.IBM_notm}} Submission to the 2008 Text-to-Speech Blizzard Challenge.*](http://festvox.org/blizzard/bc2008/ibm_Blizzard2008.pdf){: external} In Blizzard Challenge Workshop 2008.
 1.  Fernandez, Raul, and Bhuvana Ramabhadran. [*Automatic Exploration of Corpus-Specific Properties for Expressive Text-to-Speech: A Case Study in Emphasis.*](http://www.isca-speech.org/archive_open/archive_papers/ssw6/ssw6_034.pdf){: external} Proceedings of the Sixth ISCA Workshop on Speech Synthesis (August 2007): pp. 34-39.
 1.  Fernandez, Raul, Raimo Bakis, Ellen Eide, Wael Hamza, John Pitrelli, and Michael A. Picheny. *The 2006 TC-STAR Evaluation of the {{site.data.keyword.IBM_notm}} Expressive Text-to-Speech Synthesis System.* Speech-to-Speech Translation Workshop, Barcelona, Spain (2006), pp. 175-180.
+1.  Kons, Zvi, Slava Shechtman, Alex Sorin, Carmel Rabinovitz, and Ron Hoory. [*High quality, lightweight and adaptable TTS using LPCNet.*](https://arxiv.org/abs/1905.00590){: external} Submitted to Interspeech (2019).
 1.  Pitrelli, John F., Raimo Bakis, Ellen M. Eide, Raul Fernandez, Wael Hamza, and Michael A. Picheny. [*The {{site.data.keyword.IBM_notm}} Expressive Text-to-Speech Synthesis System for American English.*](http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=1643639&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D1643639){: external} IEEE Transactions on Audio, Speech, and Language Processing, Vol. 14(4) (July 2006): pp. 1099-1108.
 1.  Rendel, Asaf, Raul Fernandez, Ron Hoory, and Bhuvana Ramabhadran. [*Using Continuous Lexical Embeddings to Improve Symbolic-Prosody Prediction in a Text-to-Speech Front End.*](http://www.icassp2016.org/Papers/ViewPapers.asp?PaperNum=3425){: external} Proceedings ICASSP (2016), pp. 5655-5659.
 1.  Shechtman, Slava. [*Maximum-Likelihood Dynamic Intonation Model for Concatenative {{site.data.keyword.texttospeechshort}} System.*](http://www.isca-speech.org/archive_open/archive_papers/ssw6/ssw6_234.pdf){: external} Proceedings of the Sixth ISCA Workshop on Speech Synthesis (August 2007): pp. 234-239.

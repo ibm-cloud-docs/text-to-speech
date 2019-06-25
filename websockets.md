@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-04"
+lastupdated: "2019-06-24"
 
 subcollection: text-to-speech
 
@@ -115,9 +115,9 @@ A WebSocket client calls this method with the following query parameters to esta
       model that is to be used for the synthesis. A custom voice model is
       guaranteed to work only if it matches the language of the voice that
       is used for the synthesis. If you include a customization ID, you must
-      call the method with the service credentials of the custom model's owner.
-      Omit the parameter to use the specified voice with no customization.
-      For more information, see
+      make the request with credentials for the instance of the service that
+      owns the custom model. Omit the parameter to use the specified voice
+      with no customization. For more information, see
       [Understanding customization](/docs/services/text-to-speech?topic=text-to-speech-customIntro).
     </td>
   </tr>
@@ -156,8 +156,8 @@ var IAM_access_token = '{access_token}';
 var wsURI = 'wss://stream.watsonplatform.net/text-to-speech/api/v1/synthesize'
   + '?access_token=' + IAM_access_token
   + '&voice=en-US_AllisonVoice';
-
 var websocket = new WebSocket(wsURI);
+
 websocket.onopen = function(evt) { onOpen(evt) };
 websocket.onclose = function(evt) { onClose(evt) };
 websocket.onmessage = function(evt) { onMessage(evt) };

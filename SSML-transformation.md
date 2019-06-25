@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-04"
+lastupdated: "2019-06-21"
 
 subcollection: text-to-speech
 
@@ -43,9 +43,10 @@ The service supports voice transformation for the following US English voices on
 -   `en-US_LisaVoice`
 -   `en-US_MichaelVoice`
 
-Voice transformation is not supported with the `V2`, DNN-based versions of these voices (for example, `en-US_AllisonV2Voice`). Using the element with an unsupported voice returns an error.
+Voice transformation is not supported with the neural versions of these voices (for example, `en-US_AllisonV3Voice`). Using the element with an unsupported voice returns an error.
 
 ## Built-in transformations
+{: #ssml-built-in}
 
 Built-in transformations apply pre-configured changes to the attributes of a voice. Think of them as virtual voices that are made available by the service. The service offers two built-in transformations. To use them, you specify the case-sensitive name of the built-in transformation with the `type` attribute:
 
@@ -58,6 +59,7 @@ The service ignores attributes for custom transformations when you use a built-i
 {: note}
 
 ## Built-in transformation examples
+{: #ssml-built-in-examples}
 
 The following examples apply the two built-in transformations to the same sentence with different strengths:
 
@@ -73,6 +75,7 @@ The following examples apply the two built-in transformations to the same senten
 {: codeblock}
 
 ## Custom transformations
+{: #ssml-custom-transforms}
 
 Custom transformations give you more fine-grained control over different aspects of the voice transformation. To use a custom transformation, you specify `Custom` for the `type` attribute. You can then use one or more of the following optional attributes to control the transformation.
 
@@ -214,6 +217,7 @@ Use the following guidelines and cautionary information:
     You *cannot* nest `<voice-transformation>` elements.
 
 ## Custom transformation examples
+{: #ssml-custom-transforms-examples}
 
 The following examples apply different attributes to demonstrate possible applications of custom transformation. The first example decreases the glottal tension to make the voice softer. It also increases the pitch range and rate moderately to introduce a more dynamic speaking style.
 
