@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-24"
+lastupdated: "2019-06-29"
 
 subcollection: text-to-speech
 
@@ -219,9 +219,14 @@ Standard voices do not include a version string (`V3`) in their name (for exampl
 ### Neural voices
 {: #neuralVoices}
 
-Neural voices include a version string (`V3`) in their name (for example, `pt-BR_IsabelaV3Voice` and `en-US_AllisonV3Voice`). Instead of segment selection and concatenation, neural voices use a deep neural network (DNN) to predict the acoustic (spectral) features of the speech. The DNN is trained on natural human speech and generates the resulting audio from the predicted acoustic features.
+Neural voices include a version string (`V3`) in their name (for example, `pt-BR_IsabelaV3Voice` and `en-US_AllisonV3Voice`). Instead of relying on segment selection and concatenation, neural voice technology uses multiple deep neural networks (DNNs) to predict the acoustic (spectral) features of the speech. The DNNs are trained on natural human speech and generate the resulting audio from the predicted acoustic features.
 
-The enhanced neural voices sound more natural and smoother than the standard voices with greater consistency in overall quality. For more information about neural voice technology, see the research paper [High quality, lightweight and adaptable Text to Speech using LPCNet](https://arxiv.org/abs/1905.00590){: external}.
+During synthesis, the DNNs predict the pitch and phoneme duration (prosody), spectral structure, and waveform of the speech. Neural voices produce speech that is crisp and clear, with a very natural-sounding and smooth audio quality. Thus, neural voices have greater consistency in overall quality than standard voices.
+
+For more information about the service's neural voice technology, see
+
+-   The blog post [IBM Watson Text to Speech: Neural Voices Generally Available](https://medium.com/ibm-watson/ibm-watson-text-to-speech-neural-voices-added-to-service-e562106ff9c7){: external}
+-   The research paper [High quality, lightweight and adaptable Text to Speech using LPCNet](https://arxiv.org/abs/1905.00590){: external}
 
 The neural voices do not support the following SSML elements or attributes:
 
