@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-21"
+lastupdated: "2019-07-01"
 
 subcollection: text-to-speech
 
@@ -29,10 +29,10 @@ For more detailed information about the research and technical background behind
 {: shortdesc}
 
 1.  Eide, Ellen M., and Raul Fernandez. [*Database Mining for Flexible Concatenative Text-to-Speech.*](http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=4218196){: external} Proceedings of International Conference on Acoustics, Speech and Signal Processing (ICASSP), Vol. 4 (2007): pp. 697-700.
-1.  Eide, Ellen, Raul Fernandez, Ron Hoory, Wael Hamza, Zvi Kons, Michael Picheny, Ariel Sagi, Slava Shechtman, and Zhi Wei Shuang. [*The {{site.data.keyword.IBM_notm}} Submission to the 2006 Blizzard Text-to-Speech Challenge.*](http://www.festvox.org/blizzard/bc2006/ibm_blizzard2006.pdf){: external} In Blizzard Challenge Workshop 2006.
+1.  Eide, Ellen, Raul Fernandez, Ron Hoory, Wael Hamza, Zvi Kons, Michael Picheny, Ariel Sagi, Slava Shechtman, and Zhi Wei Shuang. [*The {{site.data.keyword.IBM_notm}} Submitted to the 2006 Blizzard Text-to-Speech Challenge.*](http://www.festvox.org/blizzard/bc2006/ibm_blizzard2006.pdf){: external} In Blizzard Challenge Workshop 2006.
 1.  Fernandez, Raul, Asaf Rendel, Bhuvana Ramabhadran, and Ron Hoory. [*Using Deep Bidirectional Recurrent Neural Networks for Prosodic-Target Prediction in a Unit-Selection Text-to-Speech System.*](https://www.researchgate.net/publication/295080074_Using_Deep_Bidirectional_Recurrent_Neural_Networks_for_Prosodic-Target_Prediction_in_a_Unit-Selection_Text-to-Speech_System){: external} Proceedings Interspeech (2015), pp. 1606-1610.
 1.  Fernandez, Raul, Asaf Rendel, Bhuvana Ramabhadran, and Ron Hoory. [*Prosody Contour Prediction with Long Short-Term Memory, Bi-directional, Deep Recurrent Neural Networks.*](https://www.researchgate.net/publication/267154161_Prosody_Contour_Prediction_with_Long_Short-Term_Memory_Bi-Directional_Deep_Recurrent_Neural_Networks){: external} Proceedings Interspeech (2014), pp. 2268-2272.
-1.  Fernandez, Raul, Zvi Kons, Slava Shechtman, Zhi Wei Shuang, Ron Hoory, Bhuvana Ramabhadran, and Yong Qin. [*The {{site.data.keyword.IBM_notm}} Submission to the 2008 Text-to-Speech Blizzard Challenge.*](http://festvox.org/blizzard/bc2008/ibm_Blizzard2008.pdf){: external} In Blizzard Challenge Workshop 2008.
+1.  Fernandez, Raul, Zvi Kons, Slava Shechtman, Zhi Wei Shuang, Ron Hoory, Bhuvana Ramabhadran, and Yong Qin. [*The {{site.data.keyword.IBM_notm}} Submitted to the 2008 Text-to-Speech Blizzard Challenge.*](http://festvox.org/blizzard/bc2008/ibm_Blizzard2008.pdf){: external} In Blizzard Challenge Workshop 2008.
 1.  Fernandez, Raul, and Bhuvana Ramabhadran. [*Automatic Exploration of Corpus-Specific Properties for Expressive Text-to-Speech: A Case Study in Emphasis.*](http://www.isca-speech.org/archive_open/archive_papers/ssw6/ssw6_034.pdf){: external} Proceedings of the Sixth ISCA Workshop on Speech Synthesis (August 2007): pp. 34-39.
 1.  Fernandez, Raul, Raimo Bakis, Ellen Eide, Wael Hamza, John Pitrelli, and Michael A. Picheny. *The 2006 TC-STAR Evaluation of the {{site.data.keyword.IBM_notm}} Expressive Text-to-Speech Synthesis System.* Speech-to-Speech Translation Workshop, Barcelona, Spain (2006), pp. 175-180.
 1.  Kons, Zvi, Slava Shechtman, Alex Sorin, Carmel Rabinovitz, and Ron Hoory. [*High quality, lightweight and adaptable TTS using LPCNet.*](https://arxiv.org/abs/1905.00590){: external} Submitted to Interspeech (2019).

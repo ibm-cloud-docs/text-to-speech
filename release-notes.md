@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-29"
+lastupdated: "2019-07-01"
 
 subcollection: text-to-speech
 
@@ -38,7 +38,7 @@ No known limitations at this time.
 
 -   The service now offers two versions of most of its available voices:
     -   [Standard voices](/docs/services/text-to-speech?topic=text-to-speech-voices#standardVoices) that use concatenative synthesis to assemble segments of recorded speech to generate audio. Standard voices do not include a version string in their name (for example, `en-US_AllisonVoice`).
-    -   [Neural voices](/docs/services/text-to-speech?topic=text-to-speech-voices#neuralVoices) that use deep neural networks (DNNs) to predict the acoustic (spectral) features of the speech. Neural voices include a version string (`V3`) in their name (for example, `en-US_AllisonV3Voice`).
+    -   [Neural voices](/docs/services/text-to-speech?topic=text-to-speech-voices#neuralVoices) that use Deep Neural Networks (DNNs) to predict the acoustic (spectral) features of the speech. Neural voices include a version string (`V3`) in their name (for example, `en-US_AllisonV3Voice`).
 
     Enhanced neural versions are available for all standard voices except for the `ja-JP_EmiVoice` voice, which is pending and will be available soon. You cannot use the SSML `<express-as>` and `<voice-transformation>` elements with the neural voices, and you cannot use the `volume` attribute of the `<prosody>` element with the neural voices.
 
@@ -48,7 +48,7 @@ No known limitations at this time.
 ## 24 March 2019
 {: #March2019c}
 
--   The service now offers `V2` deep neural network (DNN) versions of its German voices:
+-   The service now offers `V2` Deep Neural Network (DNN) versions of its German voices:
     -   `de-DE_BirgitV2Voice`
     -   `de-DE_DieterV2Voice`
 
@@ -96,7 +96,7 @@ The service now offers four new `V2` voices that use deep-learning synthesis to 
 -   `en-US_LisaV2Voice`
 -   `en-US_MichaelV2Voice`
 
-These new voices use machine learning and a DNN to synthesize text to speech. Deep-learning, or DNN-based, synthesis produces audio with a more natural prosody and a more consistent overall quality.
+These new voices use machine learning and a DNN to synthesize text to speech. Deep-learning, or Deep Neural Network (DNN)-based, synthesis produces audio with a more natural prosody and a more consistent overall quality.
 
 But the new voices also produce audio with different signal qualities from the existing voices, so they might not be appropriate for all applications. Also, the new voices do not support the SSML elements `<prosody>`, `<express-as>`, and `<voice-transformation>`.
 
