@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-04"
+lastupdated: "2019-07-06"
 
 subcollection: text-to-speech
 
@@ -29,7 +29,7 @@ The {{site.data.keyword.texttospeechshort}} service is a concatenative system th
 {: shortdesc}
 
 -   **Acoustic model** - This model consists of a decision tree that is responsible for generating candidate units for the search. For each of the phones in a sequence of phones to be synthesized, the model considers the phone in the context of the preceding and following two phones. It then produces a set of acoustic units that the search evaluates for fitness. This step effectively reduces the complexity of the search by restricting it to only those units that meet some contextual criteria and discarding all others.
--   **Prosody target models** - These models consist of Deep Recurrent Neural Networks (RNNs). The models are responsible for generating target values for prosodic aspects of the speech (such as duration and intonation) given a sequence of linguistic features that are extracted from the input text. This list includes attributes such as part of speech, lexical stress, word-level prominence, and positional features (for example, the position of the syllable or word in the sentence). The prosody target models help guide the search toward those units that meet the prosodic criteria that are predicted by this model.
+-   **Prosody target models** - The prosody target models for some voices are based on Deep Recurrent Neural Networks (RNNs). For other voices, the models rely on decision trees to determine the prosody. In both cases, the models are responsible for generating target values for prosodic aspects of the speech (such as duration and intonation) given a sequence of linguistic features that are extracted from the input text. This list includes attributes such as part of speech, lexical stress, word-level prominence, and positional features (for example, the position of the syllable or word in the sentence). The prosody target models help guide the search toward those units that meet the prosodic criteria that are predicted by the models.
 -   **Search** - Given the list of candidates that are returned by the acoustic model and the target prosody, this module carries out a Viterbi search. The search extracts a sequence of acoustic units that minimizes a cost function, which considers both concatenation and target costs. As a result, audible artifacts from joining two units are minimized, and the module tries to approximate the target prosody suggested by the prosody target models. This search also favors contiguous chunks in the synthesis corpus to further reduce such artifacts.
 -   **Waveform generation** - When the search returns the optimal sequence of units, the system uses time-domain Pitch Synchronous Overlap and Add (PSOLA) to generate the output waveform. PSOLA is a digital signal-processing technique that is used for speech processing. Specifically, it is used for speech synthesis. It can modify the pitch and duration of a speech signal and blend the units that are returned by the search in a seamless way.
 
