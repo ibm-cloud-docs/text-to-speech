@@ -25,8 +25,31 @@ subcollection: text-to-speech
 # The science behind the service
 {: #science}
 
-The {{site.data.keyword.texttospeechshort}} service is a concatenative system that relies on an inventory of acoustic units from a large synthesis corpus to produce output speech for arbitrary input text. It is based on the following pipeline of processes. These processes facilitate an efficient, real-time search over this inventory of units followed by a post-processing of the units.
+The {{site.data.keyword.texttospeechfull}} service offers voices that rely on two types of technology: [neural voice technology](#science-neural) and [concatenative synthesis](#science-concatenative). Both technologies synthesize speech from input text, but they use different approaches to produce audio with different characteristics. Neural (`V3`) voices are enhanced versions of the service's original concatenative voices.
 {: shortdesc}
+
+The topic of synthesizing text to speech is inherently complex. For more information about the scientific research behind the service's speech technology, see the documents that are listed in [Research references](/docs/services/text-to-speech?topic=text-to-speech-references).
+
+## Neural voice technology
+{: #science-neural}
+
+Neural voice technology synthesizes human-quality speech from input text. The service first analyzes the input text to determine the desired content. It then uses three Deep Neural Networks (DNNs) to predict the acoustic (spectral) features of the speech and encode the resulting audio:
+{: shortdesc}
+
+-   Prosody prediction
+-   Acoustic feature prediction
+-   Neural vocoder
+
+During synthesis, the DNNs predict the pitch and phoneme duration (prosody), spectral structure, and waveform of the speech. Neural voices produce speech that is crisp and clear, with a very natural-sounding and smooth audio quality.
+
+The DNNs are trained on natural human speech to predict the acoustic features of the audio. This modular approach has the advantage of enabling fast and easy training, as well as independent control of each component. Once the base networks are trained, they can then be adapted to new speaking styles or voices for branding and personalization purposes.
+
+For more information about the service's neural voice technology, see the blog post [IBM Watson Text to Speech: Neural Voices Generally Available](https://medium.com/ibm-watson/ibm-watson-text-to-speech-neural-voices-added-to-service-e562106ff9c7){: external}. Refer also to [Kons and others (2019)](/docs/services/text-to-speech?topic=text-to-speech-references#kons2019), which describes the technology that underlies the service's enhanced neural voices.
+
+## Concatenative synthesis
+{: #science-concatenative}
+
+Concatenative synthesis relies on an inventory of acoustic units from a large synthesis corpus to produce output speech for arbitrary input text. It is based on the following pipeline of processes. These processes facilitate an efficient, real-time search over this inventory of units followed by a post-processing of the units.
 
 -   **Acoustic model** - This model consists of a decision tree that is responsible for generating candidate units for the search. For each of the phones in a sequence of phones to be synthesized, the model considers the phone in the context of the preceding and following two phones. It then produces a set of acoustic units that the search evaluates for fitness. This step effectively reduces the complexity of the search by restricting it to only those units that meet some contextual criteria and discarding all others.
 -   **Prosody target models** - The prosody target models for some voices are based on Deep Recurrent Neural Networks (RNNs). For other voices, the models rely on decision trees to determine the prosody. In both cases, the models are responsible for generating target values for prosodic aspects of the speech (such as duration and intonation) given a sequence of linguistic features that are extracted from the input text. This list includes attributes such as part of speech, lexical stress, word-level prominence, and positional features (for example, the position of the syllable or word in the sentence). The prosody target models help guide the search toward those units that meet the prosodic criteria that are predicted by the models.
@@ -36,5 +59,3 @@ The {{site.data.keyword.texttospeechshort}} service is a concatenative system th
     For all of the linguistic features in the previous back-end processes, the service uses a text-processing front end to parse the text before it synthesizes the text into audio form. The front end sanitizes the text of any formatting artifacts such as HTML tags. It then uses a proprietary language that is driven by language-dependent linguistic rules to prepare the text and generate pronunciations. This module normalizes language-dependent features of the text such as dates, times, numbers, and currency. For example, it performs abbreviation expansion from a dictionary and numeric expansion from rules for ordinals and cardinals.
 
     Some words have multiple permissible pronunciations, so the text-processing front-end first produces a single, canonical pronunciation at run time. This approach might not reflect the pronunciation that the speaker used when the audio corpus was recorded. So the service augments a candidate set of pronunciations with alternative forms that are inventoried in an alternate-baseform dictionary. It lets the search choose forms that reduce cost in terms of pitch, duration, and contiguity concerns and constraints. This algorithm facilitates selection of longer contiguous chunks from the data set, resulting in an optimal flow of speech in the synthesized result.
-
-The topic of synthesizing text to speech is inherently complex, and any explanation of the service requires more explanatory depth than this brief summary can accommodate. For more information about the scientific research behind the service, see the documents that are listed in [Research references](/docs/services/text-to-speech?topic=text-to-speech-references).
