@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-23"
+lastupdated: "2019-07-06"
 
 subcollection: text-to-speech
 
@@ -29,7 +29,7 @@ You can access the speech synthesis capabilities of the {{site.data.keyword.text
 {: shortdesc}
 
 ## HTTP interface
-{: #http}
+{: #overview-http}
 
 To synthesize text with the HTTP API, you call the `GET` or `POST` version of the service's `/v1/synthesize` method. The two versions of the method offer generally equivalent functionality:
 
@@ -40,7 +40,7 @@ To synthesize text with the HTTP API, you call the `GET` or `POST` version of th
     You can pass the service plain text or text that is annotated with the Speech Synthesis Markup Language (SSML). SSML is an XML-based markup language that provides annotations of text for speech synthesis applications such as the {{site.data.keyword.texttospeechshort}} service. The service augments SSML with service-specific expressive and voice-transformation elements, which are available for some standard US English voices.
 
     For more information, see [Specifying input text](/docs/services/text-to-speech?topic=text-to-speech-usingHTTP#input).
--   *Voices:* The service accepts text and produces audio in various languages, voices, and dialects. The service offers at least one male or female voice, sometimes both, for each supported language and different dialects such as US and British English. It offers both standard (concatenative) and enhanced neural versions of most voices.
+-   *Voices:* The service accepts text and produces audio in various languages, voices, and dialects. The service offers at least one female voice for each language. For some languages the service offers multiple voices, which can include both male and female voices. The service also offers different dialects such as US and British English. It offers both standard (concatenative) and enhanced neural versions of most voices.
 
     You can use the service's `GET /v1/voices` or `GET /v1/voices/{voice}` methods to learn more about the supported voices. The service synthesizes the text into the language of the specified voice. Be sure to match the voice to the input text.
 
@@ -50,14 +50,14 @@ To synthesize text with the HTTP API, you call the `GET` or `POST` version of th
     For more information, see [Audio formats](/docs/services/text-to-speech?topic=text-to-speech-audioFormats).
 
 ## WebSocket interface
-{: #websocket}
+{: #overview-websocket}
 
 The service offers a WebSocket interface that you can use to synthesize text. The interface provides a single version of the `/v1/synthesize` method that accepts a maximum of 5 KB of input text. You specify the text to be synthesized, the voice to be used, and the format for the audio. You can provide plain text or text that is annotated with SSML. For more information, see [The WebSocket interface](/docs/services/text-to-speech?topic=text-to-speech-usingWebSocket).
 
 The WebSocket interface supports use of the SSML `<mark>` element to identify specific locations in audio. You can also request word timing information for all words of the input text. For more information, see [Obtaining word timings](/docs/services/text-to-speech?topic=text-to-speech-timing).
 
 ## Customization interface
-{: #customization}
+{: #overview-customization}
 
 The service includes a customization interface that you can use to create custom voice models for use during speech synthesis. A custom voice model is a dictionary of words and their translations for a specific language. Each word/translation pair in a model tells the service how to pronounce the word when it occurs in input text.
 

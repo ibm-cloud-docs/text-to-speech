@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-07-01"
+lastupdated: "2019-07-06"
 
 subcollection: text-to-speech
 
@@ -25,7 +25,7 @@ subcollection: text-to-speech
 # Languages and voices
 {: #voices}
 
-The {{site.data.keyword.texttospeechfull}} service supports a variety of languages, voices, and dialects. The service offers at least one male or female voice, sometimes both, for each language. Each voice uses appropriate cadence and intonation for its dialect.
+The {{site.data.keyword.texttospeechfull}} service supports a variety of languages, voices, and dialects. The service offers at least one female voice for each language. For some languages the service offers multiple voices, including both male and female voices. Each voice uses appropriate cadence and intonation for its dialect.
 {: shortdesc}
 
 The `V2` voices that were previously available with the service have been discontinued. If you use a `V2` voice in your application, the service automatically uses the equivalent `V3` voice instead.

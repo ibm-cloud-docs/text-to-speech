@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-25"
+lastupdated: "2019-07-06"
 
 subcollection: text-to-speech
 
@@ -46,7 +46,9 @@ For more information about the pricing plans for the service, see the {{site.dat
 ## Language support
 {: #languages-index}
 
-The service supports voices in the following languages: Brazilian Portuguese, English (UK and US dialects), French, German, Italian, Japanese, and Spanish (Castilian, Latin American, and North American dialects). The service offers at least one male or female voice, sometimes both, for each language. Each voice uses appropriate cadence and intonation for its dialect. The service offers both standard and neural versions of most voices.
+The service supports voices in the following languages: Brazilian Portuguese, English (UK and US dialects), French, German, Italian, Japanese, and Spanish (Castilian, Latin American, and North American dialects).
+
+The service offers at least one female voice for each language. For some languages the service offers multiple voices, including both male and female voices. Each voice uses appropriate cadence and intonation for its dialect. The service offers both standard and neural versions of most voices.
 
 For more information about the voices that are available for each language, see [Languages and voices](/docs/services/text-to-speech?topic=text-to-speech-voices).
 
