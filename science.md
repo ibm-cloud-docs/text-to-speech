@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-07-06"
+lastupdated: "2019-07-08"
 
 subcollection: text-to-speech
 
@@ -44,7 +44,10 @@ During synthesis, the DNNs predict the pitch and phoneme duration (prosody), spe
 
 The DNNs are trained on natural human speech to predict the acoustic features of the audio. This modular approach has the advantage of enabling fast and easy training, as well as independent control of each component. Once the base networks are trained, they can then be adapted to new speaking styles or voices for branding and personalization purposes.
 
-For more information about the service's neural voice technology, see the blog post [IBM Watson Text to Speech: Neural Voices Generally Available](https://medium.com/ibm-watson/ibm-watson-text-to-speech-neural-voices-added-to-service-e562106ff9c7){: external}. Refer also to [Kons and others (2019)](/docs/services/text-to-speech?topic=text-to-speech-references#kons2019), which describes the technology that underlies the service's enhanced neural voices.
+For more information about the service's neural voice technology, see
+
+-   The blog post [IBM Watson Text to Speech: Neural Voices Generally Available](https://medium.com/ibm-watson/ibm-watson-text-to-speech-neural-voices-added-to-service-e562106ff9c7){: external}
+-   The research paper [High quality, lightweight and adaptable Text to Speech using LPCNet](https://arxiv.org/abs/1905.00590){: external}
 
 ## Concatenative synthesis
 {: #science-concatenative}
