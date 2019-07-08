@@ -33,18 +33,21 @@ The topic of synthesizing text to speech is inherently complex. For more informa
 ## Neural voice technology
 {: #science-neural}
 
-Neural voice technology synthesizes human-quality speech from input text. The service first analyzes the input text to determine the desired content. It then uses three Deep Neural Networks (DNNs) to predict the acoustic (spectral) features of the speech and encode the resulting audio:
-{: shortdesc}
+Neural voice technology synthesizes human-quality speech from input text. The service first analyzes the input text to determine the desired content. As with its concatenative models, the service uses an acoustic model that consists of a decision tree to generate candidate units for synthesis.
+
+For each of the phones in a sequence of phones to be synthesized, the model considers the phone in the context of the preceding and following two phones. It then produces a set of acoustic units that are evaluated for fitness. This step reduces the complexity of the search by restricting it to only those units that meet some contextual criteria and discarding all others.
+
+The service then uses three Deep Neural Networks (DNNs) to predict the acoustic (spectral) features of the speech and encode the resulting audio:
 
 -   Prosody prediction
 -   Acoustic feature prediction
 -   Neural vocoder
 
-During synthesis, the DNNs predict the pitch and phoneme duration (prosody), spectral structure, and waveform of the speech. Neural voices produce speech that is crisp and clear, with a very natural-sounding and smooth audio quality.
+During synthesis, the DNNs predict the pitch and phoneme duration (prosody), spectral structure, and waveform of the speech. For example, the prosody prediction module generates target values for the linguistic features that are extracted from the input text. The features include such attributes as part of speech, lexical stress, word-level prominence, and positional features such as the position of the syllable or word in the sentence.
 
 The DNNs are trained on natural human speech to predict the acoustic features of the audio. This modular approach has the advantage of enabling fast and easy training, as well as independent control of each component. Once the base networks are trained, they can then be adapted to new speaking styles or voices for branding and personalization purposes.
 
-For more information about the service's neural voice technology, see
+Neural voices produce speech that is crisp and clear, with a very natural-sounding and smooth audio quality. For more information about the service's neural voice technology, see
 
 -   The blog post [IBM Watson Text to Speech: Neural Voices Generally Available](https://medium.com/ibm-watson/ibm-watson-text-to-speech-neural-voices-added-to-service-e562106ff9c7){: external}
 -   The research paper [High quality, lightweight and adaptable Text to Speech using LPCNet](https://arxiv.org/abs/1905.00590){: external}
