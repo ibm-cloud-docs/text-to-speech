@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-07-01"
+lastupdated: "2019-07-30"
 
 subcollection: text-to-speech
 
@@ -33,6 +33,11 @@ The following sections document the new features and changes that were included 
 
 No known limitations at this time.
 
+## 30 July 2019
+{: #July2019}
+
+The service now offers a neural voice in Japanese: `ja-JP_EmiV3Voice`. Both standard and neural versions of all available voices in all supported languages are now available. For more information, see [Languages and voices](/docs/services/text-to-speech?topic=text-to-speech-voices).
+
 ## 24 June 2019
 {: #June2019}
 
@@ -55,18 +60,10 @@ No known limitations at this time.
     For more information about DNN-based voices, see [Languages and voices](/docs/services/text-to-speech?topic=text-to-speech-voices).
 -   All of the service's DNN-based voices now support the `pitch` and `rate` attributes of the SSML `<prosody>` element. The DNN-based voices do not support the `volume` attribute of the `<prosody>` element. For more information, see [The prosody element](/docs/services/text-to-speech?topic=text-to-speech-elements#prosody_element).
 
-## 21 March 2019
-{: #March2019b}
-
-Users can now see only service credential information that is associated with the role that has been assigned to their {{site.data.keyword.cloud_notm}} account. For example, if you are assigned a `reader` role, any `writer` or higher levels of service credentials are no longer visible.
-
-This change does not affect API access for users or applications with existing service credentials. The change affects only the viewing of credentials within {{site.data.keyword.cloud_notm}}.
-
-For more information about service keys and user roles, see [IAM service API keys](/docs/services/watson?topic=watson-api-key-bp#api-key-bp).
-
 ## Older releases
 {: #older}
 
+-   [21 March 2019](#March2019b)
 -   [4 March 2019](#March2019a)
 -   [28 January 2019](#January2019)
 -   [13 December 2018](#December2018)
@@ -85,6 +82,15 @@ For more information about service keys and user roles, see [IAM service API key
 -   [17 December 2015](#December2015)
 -   [21 September 2015](#September2015)
 -   [1 July 2015](#July2015)
+
+### 21 March 2019
+{: #March2019b}
+
+Users can now see only service credential information that is associated with the role that has been assigned to their {{site.data.keyword.cloud_notm}} account. For example, if you are assigned a `reader` role, any `writer` or higher levels of service credentials are no longer visible.
+
+This change does not affect API access for users or applications with existing service credentials. The change affects only the viewing of credentials within {{site.data.keyword.cloud_notm}}.
+
+For more information about service keys and user roles, see [IAM service API keys](/docs/services/watson?topic=watson-api-key-bp#api-key-bp).
 
 ### 4 March 2019
 {: #March2019a}

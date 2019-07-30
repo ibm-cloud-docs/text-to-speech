@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-07-06"
+lastupdated: "2019-07-25"
 
 subcollection: text-to-speech
 
@@ -34,7 +34,7 @@ The `V2` voices that were previously available with the service have been discon
 ## Supported languages and voices
 {: #languageVoices}
 
-Table 1 lists the voices that are available for each language and dialect, including their type and gender. Most voices are available as both [Standard voices](#standardVoices) and [Neural voices](#neuralVoices). (A neural version of the Japanese voice is not yet available.) If you omit the optional `voice` parameter from a request, the service uses the standard `en-US_MichaelVoice` voice by default.
+Table 1 lists the voices that are available for each language and dialect, including their type and gender. All voices are available as both [Standard voices](#standardVoices) and [Neural voices](#neuralVoices). If you omit the optional `voice` parameter from a request, the service uses the standard `en-US_MichaelVoice` voice by default.
 
 <table style="width:100%">
   <caption>Table 1. Supported languages and voices</caption>
@@ -132,6 +132,12 @@ Table 1 lists the voices that are available for each language and dialect, inclu
     <td style="text-align:left">Japanese</td>
     <td style="text-align:center">Standard</td>
     <td style="text-align:center"><code>ja-JP_EmiVoice</code></td>
+    <td style="text-align:center">Female</td>
+  </tr>
+  <tr>
+    <td style="text-align:left"></td>
+    <td style="text-align:center">Neural</td>
+    <td style="text-align:center"><code>ja-JP_EmiV3Voice</code></td>
     <td style="text-align:center">Female</td>
   </tr>
   <tr>
