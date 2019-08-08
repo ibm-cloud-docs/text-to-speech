@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-06-04"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -31,20 +31,19 @@ subcollection: text-to-speech
 Kunden sind selbst für die Einhaltung der geltenden Gesetze und Bestimmungen verantwortlich, was auch die Datenschutzgrundverordnung (DSGVO) der Europäischen Union beinhaltet. Kunden sollten sich von kompetenter juristischer Stelle zu Inhalt und Auslegung aller relevanten Gesetze und Vorschriften beraten lassen, die ihre Geschäftstätigkeit und die von ihnen eventuell einzuleitenden Maßnahmen zur Einhaltung dieser Gesetze und Vorschriften betreffen.
 {: important}
 
-Die in dieser Dokumentation beschriebenen Produkte, Services und Leistungsmerkmale sind möglicherweise nicht für alle Kundensituationen geeignet und nur eingeschränkt verfügbar. {{site.data.keyword.IBM_notm}} erteilt keine Rechts-, Steuer- oder Auditberatung und gibt keine Garantie bezüglich der Konformität von IBM Produkten oder Services mit den geltenden Gesetzen und Vorschriften. 
+Die in dieser Dokumentation beschriebenen Produkte, Services und Leistungsmerkmale sind möglicherweise nicht für alle Kundensituationen geeignet und nur eingeschränkt verfügbar. {{site.data.keyword.IBM_notm}} erteilt keine Rechts-, Steuer- oder Auditberatung und gibt keine Garantie bezüglich der Konformität von IBM Produkten oder Services mit den geltenden Gesetzen und Vorschriften.
 
 Falls Sie für die erstellten {{site.data.keyword.cloud}} {{site.data.keyword.watson}}-Ressourcen Unterstützung hinsichtlich der DSGVO benötigen, ziehen Sie Folgendes hinzu:
 
--   Lesen Sie für Ressourcen, die in der Europäischen Union (EU) erstellt werden, den Abschnitt [Unterstützung für {{site.data.keyword.cloud_notm}}-Ressourcen anfordern, die in der Europäischen Union erstellt werden](/docs/services/watson/getting-started-gdpr-sar.html#request-EU).
--   Lesen Sie für Ressourcen, die außerhalb der EU erstellt werden, den Abschnitt [Unterstützung für Ressourcen anfordern, die außerhalb der Europäischen Union erstellt werden](/docs/services/watson/getting-started-gdpr-sar.html#request-non-EU).
+-   Lesen Sie für Ressourcen, die in der Europäischen Union (EU) erstellt werden, den Abschnitt [Unterstützung für {{site.data.keyword.cloud_notm}}-Ressourcen anfordern, die in der Europäischen Union erstellt werden](/docs/services/watson?topic=watson-gdpr-sar#request-EU).
+-   Lesen Sie für Ressourcen, die außerhalb der EU erstellt werden, den Abschnitt [Unterstützung für Ressourcen anfordern, die außerhalb der Europäischen Union erstellt werden](/docs/services/watson?topic=watson-gdpr-sar#request-non-EU).
 
-## Datenschutzgrundverordnung der Europäischen Union (DSGVO)
+## Datenschutz-Grundverordnung der Europäischen Union (DSGVO)
 {: #gdpr}
 
 {{site.data.keyword.IBM_notm}} hat sich dazu verpflichtet, seinen Kunden und Partnern innovative Lösungen für Datenschutz, Sicherheit und Governance zu bieten und sie bei der Einhaltung der DSGVO zu unterstützen.
 
-
-Weitere Informationen zu den eigenen Maßnahmen von {{site.data.keyword.IBM_notm}} für die Einhaltung der DSGVO sowie zu den Leistungsmerkmalen und Angeboten, die Ihnen dabei helfen, die Einhaltung der DSGVO vorzubereiten, finden Sie [hier ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](../../icons/launch-glyph.svg "Symbol für externen Link")](http://www.ibm.com/gdpr){: new_window}.
+Weitere Informationen zu den eigenen Maßnahmen von {{site.data.keyword.IBM_notm}} für die Einhaltung der DSGVO sowie zu den Leistungsmerkmalen und Angeboten, die Ihnen dabei helfen, die Einhaltung der DSGVO vorzubereiten, finden Sie [hier](http://www.ibm.com/gdpr){: external}.
 
 ## Daten im Text to Speech-Service kennzeichnen und löschen
 {: #gdpr-text-to-speech}

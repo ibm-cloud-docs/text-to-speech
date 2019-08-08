@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-09"
+lastupdated: "2019-06-06"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -46,11 +46,12 @@ In Tabelle 1 sind die Audioformate (MIME-Typen) aufgelistet, in denen Sie synthe
     <td>
       Das <em>Basisaudioformat</em> ist ein verlustbehaftetes
       Einkanalaudioformat, das unter Verwendung von mit 8 kHz abgetasteten
-      8-Bit-U-Law-Daten (oder Mu-Law-Daten) codiert wird. Dieses Format stellt
+      8-Bit-U-Law-Daten (oder Mu-Law-Daten) codiert wird.
+      Dieses Format stellt
       einen Medientyp mit dem kleinsten gemeinsamen Nenner bereit. Weitere
-Informationen finden Sie auf der IETF-Seite
-      <a target="_blank" href="https://tools.ietf.org/html/rfc2046">Request
-        for Comment (RFC) 2046![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")</a> sowie unter der Adresse <a target="_blank" href="http://www.iana.org/assignments/media-types/audio/basic">iana.org/assignments/media-types/audio/basic.![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")</a>
+      Informationen finden Sie auf der IETF-Seite
+      [Request for Comment (RFC) 2046](https://tools.ietf.org/html/rfc2046) und
+      [iana.org/assignments/media-types/audio/basic](http://www.iana.org/assignments/media-types/audio/basic).
     </td>
   </tr>
   <tr>
@@ -60,7 +61,8 @@ Informationen finden Sie auf der IETF-Seite
     <td>
       <em>Free Lossless Audio Codec (FLAC)</em> ist ein
       verlustfreies komprimiertes Audiocodierungsformat
-      (Dateierweiterung <code>.flac</code>). Weitere Informationen finden Sie unter der Adresse <a target="_blank" href="https://en.wikipedia.org/wiki/FLAC">en.wikipedia.org/wiki/FLAC.![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")</a>
+      (Dateierweiterung <code>.flac</code>). Weitere Informationen finden Sie
+      unter [FLAC](https://wikipedia.org/wiki/FLAC).
     </td>
   </tr>
   <tr>
@@ -70,7 +72,10 @@ Informationen finden Sie auf der IETF-Seite
     <td>
       Die <em>lineare 16-Bit-PCM (Pulse-Code Modulation)</em> ist ein
 unkomprimiertes Audiodatenformat (häufig mit der Dateierweiterung
-<code>.raw</code> oder <code>.pcm</code>). Weitere Informationen finden Sie auf der von der Internet Engineering Task Force (IETF) betriebenen Seite       <a target="_blank" href="https://tools.ietf.org/html/rfc2586">Request for Comment (RFC) 2586![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")</a> sowie unter der Adresse <a target="_blank" href="https://en.wikipedia.org/wiki/Pulse-code_modulation">en.wikipedia.org/wiki/Pulse-code_modulation.![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")</a><br/><br/>
+<code>.raw</code> oder <code>.pcm</code>). Weitere
+      Informationen finden Sie auf der von Internet Engineering Task Force (IETF) betriebenen Seite
+      [Request for Comment (RFC) 2586](https://tools.ietf.org/html/rfc2586) und
+      [Pulscodemodulation](https://wikipedia.org/wiki/Pulse-code_modulation).<br/><br/>
       Bei diesem Audioformat müssen Sie die Abtastfrequenz angeben. Geben Sie
 beispielsweise <code>audio/l16;rate=16000</code> für eine Audioausgabe an, die
 mit 16 kHz abgetastet wird. Optional können Sie die Endianess-Einstellung
@@ -87,7 +92,8 @@ entweder mit <code>audio/l16;rate={rate};endianness=big-endian</code> oder mit
     <td>
       <em>MP3</em> oder <em>Motion Picture Experts Group (MPEG)</em> ist ein
 verlustbehaftetes Datenkomprimierungsformat (MP3 und MPEG bezeichnen dasselbe
-Format). Weitere Informationen finden Sie unter der Adresse <a target="_blank" href="https://en.wikipedia.org/wiki/MP3">en.wikipedia.org/wiki/MP3.![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")</a>
+Format).
+      eitere Informationen finden Sie unter [MP3](https://wikipedia.org/wiki/MP3).
     </td>
   </tr>
   <tr>
@@ -96,8 +102,8 @@ Format). Weitere Informationen finden Sie unter der Adresse <a target="_blank" h
     </td>
     <td>
       <em>8-Bit-Mu-Law-Audio (oder U-Law-Audio)</em> ist ein verlustbehaftetes
-Einkanalaudioformat, das unter Verwendung von 8-Bit-U-Law-Daten (oder Mu-Law-Daten) codiert wird. 
-Bei diesem Audioformat müssen Sie die Abtastfrequenz angeben. Weitere Informationen finden Sie unter der Adresse <a target="_blank" href="https://en.wikipedia.org/wiki/M-law_algorithm">en.wikipedia.org/wiki/M-law_algorithm.![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")</a>
+Einkanalaudioformat, das unter Verwendung von 8-Bit-U-Law-Daten (oder Mu-Law-Daten) codiert wird. Bei diesem Audioformat müssen Sie die Abtastfrequenz angeben. eitere Informationen finden Sie unter
+      [M-Law-Algorithmus](https://wikipedia.org/wiki/M-law_algorithm).
     </td>
   </tr>
   <tr>
@@ -108,20 +114,25 @@ Bei diesem Audioformat müssen Sie die Abtastfrequenz angeben. Weitere Informati
     </td>
     <td>
       Das Format <em>Ogg</em> (<code>.ogg</code>) ist ein freigegebenes offenes
-Containerformat, das von der Xiph.org Foundation verwaltet wird. Weitere Informationen finden Sie unter der Adresse <a target="_blank" href="https://www.xiph.org/ogg/">xiph.org/ogg/.![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")</a>
+Containerformat, das von der Xiph.org Foundation verwaltet wird. Weitere Informationen finden Sie unter
+      [xiph.org/ogg/](https://www.xiph.org/ogg/).
       Sie können Audiodatenströme anfordern, die mit den folgenden Codecs
 komprimiert wurden:
       <ul style="margin-left:20px; padding:0px;">
         <li style="margin:10px 0px; line-height:120%;">
-          <em>Opus</em>. Weitere Informationen finden Sie unter den Adressen <a target="_blank" href="https://www.opus-codec.org/">opus-codec.org![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")</a> und <a target="_blank" href="https://en.wikipedia.org/wiki/Opus">en.wikipedia.org/wiki/Opus (audio format).![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")</a>
-          Lesen Sie auf der Seite <em>Opus (audio format)</em> insbesondere
-den Abschnitt <em>Containers</em>.
-</li>
+          <em>Opus</em>. Weitere Informationen finden Sie unter
+	  [opus-codec.org](https://www.opus-codec.org/) und
+	  [Opus (Audioformat)](https://wikipedia.org/wiki/Opus_%28audio_format%29).
+          Sehen Sie sich vor allem den Abschnitt <em>Container</em> an.
+        </li>
         <li style="margin:10px 0px; line-height:120%;">
-          <em>Vorbis</em>. Weitere Informationen finden Sie unter den Adressen <a target="_blank" href="https://xiph.org/vorbis/">xiph.org/vorbis![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")</a> und <a target="_blank" href="https://en.wikipedia.org/wiki/Vorbis">en.wikipedia.org/wiki/Vorbis.![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")</a>
+          <em>Vorbis</em>. Weitere Informationen finden Sie unter
+	  [xiph.org/vorbis](https://xiph.org/vorbis/) und
+	  [Vorbis](https://wikipedia.org/wiki/Vorbis).
         </li>
       </ul>
-      Beide Codecs sind freigegebene offene Audiokomprimierungsformate mit Verlusten. Opus ist der bevorzugte Codec, aber gemäß der Ogg-Spezifikation gibt der Service die Audioausgabe im Vorbis-Format zurück, falls Sie den Codec nicht angeben. Wenn Sie das Audioformat gänzlich weglassen, gibt der Service die Audioausgabe standardmäßig im Format 'Ogg' mit Opus-Codec zurück.</td>
+      Beide Codecs sind freigegebene offene Audiokomprimierungsformate mit Verlusten. Opus ist der bevorzugte Codec, aber gemäß der Ogg-Spezifikation gibt der Service die Audioausgabe im Vorbis-Format zurück, falls Sie den Codec nicht angeben. Wenn Sie das Audioformat gänzlich weglassen, gibt der Service die Audioausgabe standardmäßig im Format 'Ogg' mit Opus-Codec zurück.
+    </td>
   </tr>
   <tr>
     <td>
@@ -135,7 +146,8 @@ verwendet wird, jedoch auch komprimierte Audiodaten enthalten kann
 zurückgegebenen Audiodaten um einen Datenstrom handelt, funktioniert die
 generierte WAV-Datei möglicherweise nicht bei allen Audiowiedergabegeräten. Speziell
 ist das Attribut <code>numSamples</code> im Header der Datei ungeachtet der
-Länge der Audioausgabe auf <code>0</code> gesetzt. Weitere Informationen finden Sie unter der Adresse <a target="_blank" href="https://en.wikipedia.org/wiki/WAV">en.wikipedia.org/wiki/WAV.![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")</a>
+Länge der Audioausgabe auf <code>0</code> gesetzt.
+      Weitere Informationen finden Sie unter [WAV](https://wikipedia.org/wiki/WAV).
     </td>
   </tr>
   <tr>
@@ -147,9 +159,9 @@ Länge der Audioausgabe auf <code>0</code> gesetzt. Weitere Informationen finden
     <td>
       <em>Web Media (WebM)</em> ist ein offenes Mediendateiformat
 (Dateierweiterung <code>.webm</code>), das Unterstützung für Audiodatenströme
-bereitstellt, die mit den Audio-Codecs 'Opus' und 'Vorbis' komprimiert wurden.
-Wenn Sie den Codec nicht angeben, gibt der Service die Audioausgabe in Opus-Format
-zurück. Weitere Informationen finden Sie unter der Adresse <a target="_blank" href="https://www.webmproject.org/">webmproject.org.![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")</a>
+bereitstellt, die mit den Audio-Codecs 'Opus' und 'Vorbis' komprimiert wurden. Wenn Sie den Codec nicht angeben, gibt der Service die Audioausgabe in Opus-Format
+zurück. Weitere Informationen finden Sie unter
+      [webmproject.org](https://www.webmproject.org/).
     </td>
   </tr>
 </table>
@@ -159,7 +171,7 @@ zurück. Weitere Informationen finden Sie unter der Adresse <a target="_blank" h
 
 Die Angabe eines Audioformats ist optional. Standardmäßig gibt der Service die Audioausgabe im Format `audio/ogg;codecs=opus` zurück. Sie können jedoch ein Format für die HTTP- oder WebSocket-Schnittstelle angeben:
 
--   Bei den HTTP-Methoden `GET` und `POST /v1/synthesize` geben Sie ein Format mithilfe des Anforderungsheaders `Accept` oder des Abfrageparameters `accept` an. Wenn Sie die Audioausgabe im Standardformat erhalten wollen, lassen Sie sowohl den Header als auch den Abfrageparameter weg. Weitere Informationen enthält der Abschnitt [Audioausgabe synthetisch aus Text erstellen](/docs/services/text-to-speech/http.html#synthesize).
+-   Bei den HTTP-Methoden `GET` und `POST /v1/synthesize` geben Sie ein Format mithilfe des Anforderungsheaders `Accept` oder des Abfrageparameters `accept` an. Wenn Sie die Audioausgabe im Standardformat erhalten wollen, lassen Sie sowohl den Header als auch den Abfrageparameter weg. Weitere Informationen enthält der Abschnitt [Audioausgabe synthetisch aus Text erstellen](/docs/services/text-to-speech?topic=text-to-speech-usingHTTP#synthesize).
 
     Wenn Sie den Abfrageparameter `accept` verwenden, codieren Sie das Argument für den Parameter als URL. Codieren Sie beispielsweise das Argument
 
@@ -175,7 +187,7 @@ Die Angabe eines Audioformats ist optional. Standardmäßig gibt der Service die
     ```
     {: codeblock}
 
--   Bei der WebSocket-Schnittstelle geben Sie ein Format mithilfe des Parameters `accept` der Textnachricht an, die Sie zur Initialisierung der Synthese übergeben. Um die Audioausgabe im Standardformat zu erhalten, geben Sie den Wert `*/*` für den Parameter an. Weitere Informationen finden Sie im Abschnitt [Eingabetext senden](/docs/services/text-to-speech/websockets.html#WSsend).
+-   Bei der WebSocket-Schnittstelle geben Sie ein Format mithilfe des Parameters `accept` der Textnachricht an, die Sie zur Initialisierung der Synthese übergeben. Um die Audioausgabe im Standardformat zu erhalten, geben Sie den Wert `*/*` für den Parameter an. Weitere Informationen finden Sie im Abschnitt [Eingabetext senden](/docs/services/text-to-speech?topic=text-to-speech-usingWebSocket#WSsend).
 
 ## Abtastfrequenz angeben
 {: #formatRate}
@@ -312,7 +324,7 @@ Tabelle 2 zeigt die Standardabtastfrequenz der Audioausgabe, die für das jeweil
 
 Die Abtastfrequenz für einen Audiodatenstrom, der vom Service zurückgegeben wird, kann am zuverlässigsten dadurch angegeben werden, dass die Informationen aus dem Datenstrom selbst extrahiert werden. Sie können die Frequenz bestimmen, indem Sie die Methode `/v1/synthesize` mit einem einfachen Text aufrufen (z. B. 'hello world') und das Format sowie den Codec angeben, die Sie verwenden wollen. Anschließend können Sie den Codec und die Abtastfrequenz abrufen, indem Sie den Audiodatenstrom in einer Datei speichern und in einem Audioplayer öffnen.
 
-Beim Standard 'Opus' muss die Ausgabeabtastfrequenz unbedingt mit der Funktionalität des Audioplayers übereinstimmen. Weitere Informationen enthält Abschnitt 5.1 auf der von der Internet Engineering Task Force (IETF) betriebenen Seite [Request for Comments (RFC) 7845.![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://tools.ietf.org/html/rfc6455){: new_window} Für als Software bereitgestellte Audioplayer ist in der Tabelle die typische Ausgabeabtastfrequenz aufgeführt; die tatsächliche Abtastfrequenz der Audioausgabe variiert jedoch im Datenstrom von Zeit zu Zeit. Wie bereits erläutert, erstellt der Service die Audioausgabe aus der Quelle mit 22.050 Hz.
+Beim Standard 'Opus' muss die Ausgabeabtastfrequenz unbedingt mit der Funktionalität des Audioplayers übereinstimmen. Weitere Informationen enthält Abschnitt 5.1 auf der von der Internet Engineering Task Force (IETF) betriebenen Seite [Request for Comments (RFC) 7845](http://tools.ietf.org/html/rfc6455){: external}. Für als Software bereitgestellte Audioplayer ist in der Tabelle die typische Ausgabeabtastfrequenz aufgeführt; die tatsächliche Abtastfrequenz der Audioausgabe variiert jedoch im Datenstrom von Zeit zu Zeit. Wie bereits erläutert, erstellt der Service die Audioausgabe aus der Quelle mit 22.050 Hz.
 {: note}
 
 ## Audiodatei wiedergeben
@@ -321,4 +333,4 @@ Beim Standard 'Opus' muss die Ausgabeabtastfrequenz unbedingt mit der Funktional
 Verwenden Sie zur Wiedergabe einer durch den Service generierten Audiodatei eines der folgenden Tools:
 
 -   Web-Browser wie beispielsweise Google Chrome&trade;, Firefox&reg; oder Microsoft&reg; Internet Explorer&reg;
--   Audioplayer wie beispielsweise Audacity&reg; ([audacityteam.org ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://www.audacityteam.org/){: new_window}) oder FFmpeg ([ffmpeg.org ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ffmpeg.org){: new_window}).
+-   Audioplayer wie beispielsweise Audacity&reg; ([audacityteam.org](http://www.audacityteam.org/){: external}) oder FFmpeg ([ffmpeg.org](https://www.ffmpeg.org){: external}).

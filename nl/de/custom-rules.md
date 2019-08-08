@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-03-07"
+lastupdated: "2018-06-04"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -94,7 +94,7 @@ SPR (Symbolic Phonetic Representation) ist ein von {{site.data.keyword.IBM_notm}
 -   Mit einem Punkt können Sie den Beginn einer Silbe in einer Umsetzung kenntlich machen. Punkte sind jedoch optional und haben keinen Einfluss auf die Aussprache des Wortes. Sie treten bei der Aussprache für ein Wort nur dann in Erscheinung, wenn Sie sie in die Umsetzung des Wortes einbeziehen. Verwenden Sie keine Leerzeichen, um Silbengrenzen anzugeben.
 -   {{site.data.keyword.IBM_notm}} empfiehlt, dem Vokal mit der Hauptbetonung für ein Wort das Symbol `1` voranzustellen; dies ist jedoch nicht zwingend erforderlich. Der Service ermittelt, wo die Betonung zu setzen ist, falls Sie sie nicht angeben. Mit einem Symbol `2` können Sie außerdem die Position für eine Nebenbetonung angeben, aber auch die Verwendung des Symbols `2` ist optional. Diese Symbole treten bei der Aussprache für ein Wort nur dann in Erscheinung, wenn Sie sie in die Umsetzung des Wortes einbeziehen.
 
-Weitere Informationen zum Arbeiten mit SPR finden Sie im Abschnitt [IBM SPR verwenden](/docs/services/text-to-speech/SPRs.html).
+Weitere Informationen zum Arbeiten mit SPR finden Sie im Abschnitt [IBM SPR verwenden](/docs/services/text-to-speech?topic=text-to-speech-sprs).
 
 ## Mit Einträgen in Japanisch arbeiten
 {: #jaNotes}
@@ -131,7 +131,7 @@ Für die Erstellung von Einträgen für Wörter in einem angepassten Sprechmodel
 ### Japanische Wortarten
 {: #partsOfSpeech}
 
-In der folgenden Tabelle sind die Wortarten aufgelistet, die für angepasste Einträge in Japanisch unterstützt werden. Weitere Informationen zum Angeben einer Wortart für einen angepassten Eintrag in Japanisch enthält der Abschnitt [Wörter zu einem angepassten Modell für Japanisch hinzufügen](/docs/services/text-to-speech/custom-entries.html#cuJapaneseAdd).
+In der folgenden Tabelle sind die Wortarten aufgelistet, die für angepasste Einträge in Japanisch unterstützt werden. Weitere Informationen zum Angeben einer Wortart für einen angepassten Eintrag in Japanisch enthält der Abschnitt [Wörter zu einem angepassten Modell für Japanisch hinzufügen](/docs/services/text-to-speech?topic=text-to-speech-customWords#cuJapaneseAdd).
 
 <table style="width:75%">
   <caption>Tabelle 1. Japanische Wortarten</caption>

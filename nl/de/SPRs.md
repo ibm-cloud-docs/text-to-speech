@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-09"
+lastupdated: "2019-06-06"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -33,7 +33,7 @@ In den folgenden Abschnitten wird die Schreibweise gemäß {{site.data.keyword.I
 ## Einführung in IBM SPR
 {: #introduction-SPRs}
 
-Eine SPR-Aussprache wird mit dem Element `<phoneme>` von SSML (Speech Synthesis Markup Language) definiert; entsprechende Informationen finden Sie unter [Element 'phoneme'](/docs/services/text-to-speech/SSML-elements.html#phoneme_element). Sie besteht aus einer Abfolge mit zulässigen Symbolen für eine bestimmte Sprache, die in doppelte Anführungszeichen eingeschlossen ist. Die Symbole definieren, wie das im Element `<phoneme>` eingeschlossene Wort auszusprechen ist. Das Attribut `alphabet` des Elements macht durch den Wert `ibm` kenntlich, dass die Aussprache in SPR definiert ist, und das Attribut `ph` definiert die Aussprache. Die folgenden Beispiele zeigen gültige SPR-Schreibweisen für die Wörter *through* und *shocking* in amerikanischem Englisch:
+Die SPR-Aussprache wird mit [dem Phonem-Element](/docs/services/text-to-speech?topic=text-to-speech-elements#phoneme_element) von Speech Synthesis Markup Language (SSML) definiert. Sie besteht aus einer Abfolge mit zulässigen Symbolen für eine bestimmte Sprache, die in doppelte Anführungszeichen eingeschlossen ist. Die Symbole definieren, wie das im Element `<phoneme>` eingeschlossene Wort auszusprechen ist. Das Attribut `alphabet` des Elements macht durch den Wert `ibm` kenntlich, dass die Aussprache in SPR definiert ist, und das Attribut `ph` definiert die Aussprache. Die folgenden Beispiele zeigen gültige SPR-Schreibweisen für die Wörter *through* und *shocking* in amerikanischem Englisch:
 
 ```xml
 <phoneme alphabet="ibm" ph=".1Tru">through</phoneme>
@@ -142,23 +142,23 @@ Beachten Sie außerdem Folgendes, wenn Sie die Aussprache eines Wortes im SPR-Fo
 Für die Arbeit mit Aussprache in IPA-Schreibweise gelten die folgenden Informationen:
 
 -   Verwenden Sie ausschließlich die dokumentierten IPA-Symbole. Wenn für ein SPR-Symbol mehrere IPA-Symbole (oder Symbolkombinationen) aufgeführt sind, sind alle zum einzelnen SPR-Symbol äquivalent. In diesem Fall behandelt der Service alle diese IPA-Symbole gleich und erkennt die subtilen oder regionalen Unterschiede, die das IPA-System beschreiben soll, nicht.
--   IPA-Aussprachen können auch in Form von IPA-Unicode-Werten angegeben werden. Die im folgenden Abschnitt genannten sprachspezifischen Tabellen dokumentieren sowohl die IPA-Symbole als auch deren äquivalente IPA-Unicode-Werte. Eine Beispielaussprache, die IPA-Unicode-Werte verwendet, finden Sie im Abschnitt [Element 'phoneme'](/docs/services/text-to-speech/SSML-elements.html#phoneme_element).
+-   IPA-Aussprachen können auch in Form von IPA-Unicode-Werten angegeben werden. Die im folgenden Abschnitt genannten sprachspezifischen Tabellen dokumentieren sowohl die IPA-Symbole als auch deren äquivalente IPA-Unicode-Werte. Eine Beispielaussprache, die IPA-Unicode-Werte verwendet, finden Sie im Abschnitt [Element 'phoneme'](/docs/services/text-to-speech?topic=text-to-speech-elements#phoneme_element).
 
 Weitere Informationen bieten die folgenden Quellen:
 
--   Unter der Adresse [en.wikipedia.org/wiki/International_Phonetic_Alphabet ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://en.wikipedia.org/wiki/International_Phonetic_Alphabet){: new_window} finden Sie weitere Informationen zu IPA.
--   Unter der Adresse [en.wikipedia.org/wiki/Phonetic_symbols_in_Unicode ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://en.wikipedia.org/wiki/Phonetic_symbols_in_Unicode){: new_window} sind zusätzliche Angaben über phonetische Symbole für Unicode verfügbar.
+-   Weitere Informationen zu IPA finden Sie unter [Internationales Phonetisches Alphabet](https://wikipedia.org/wiki/International_Phonetic_Alphabet){: external}.
+-   Weitere Informationen zu phonetischen Symbolen für Unicode finden Sie unter [Phonetische Symbole in Unicode](https://wikipedia.org/wiki/Phonetic_symbols_in_Unicode){: external}.
 
 ## Unterstützte Sprachen
 {: #supportedLanguages}
 
 In den folgenden Abschnitten sind die SPR-Symbole, IPA-Symbole und äquivalenten IPA-Unicode-Werte für die einzelnen Sprachen dokumentiert. Für jedes Symbol sind dabei Beispiele in Wörtern aus dieser Sprache angegeben. Aufgrund von dialektalen Unterschieden stimmen die Beispiele möglicherweise nicht immer mit Ihrer Aussprache überein.
 
--   [Symbole für Portugiesisch (Brasilien)](/docs/services/text-to-speech/pt-BR-SPRs.html)
--   [Symbole für britisches Englisch](/docs/services/text-to-speech/en-GB-SPRs.html)
--   [Symbole für Französisch](/docs/services/text-to-speech/fr-FR-SPRs.html)
--   [Symbole für Deutsch](/docs/services/text-to-speech/de-DE-SPRs.html)
--   [Symbole für Italienisch](/docs/services/text-to-speech/it-IT-SPRs.html)
--   [Symbole für Japanisch](/docs/services/text-to-speech/ja-JP-SPRs.html)
--   [Symbole für Spanisch](/docs/services/text-to-speech/es-ES-SPRs.html)
--   [Symbole für amerikanisches Englisch](/docs/services/text-to-speech/en-US-SPRs.html)
+-   [Symbole für brasilianisches Portugiesisch](/docs/services/text-to-speech?topic=text-to-speech-ptSymbols)
+-   [Symbole für britisches Englisch](/docs/services/text-to-speech?topic=text-to-speech-gbSymbols)
+-   [Symbole für Französisch](/docs/services/text-to-speech?topic=text-to-speech-frSymbols)
+-   [Symbole für Deutsch](/docs/services/text-to-speech?topic=text-to-speech-deSymbols)
+-   [Symbole für Italienisch](/docs/services/text-to-speech?topic=text-to-speech-itSymbols)
+-   [Symbole für Japanisch](/docs/services/text-to-speech?topic=text-to-speech-jaSymbols)
+-   [Symbole für Spanisch](/docs/services/text-to-speech?topic=text-to-speech-esSymbols)
+-   [Symbole für amerikanisches Englisch](/docs/services/text-to-speech?topic=text-to-speech-usSymbols)

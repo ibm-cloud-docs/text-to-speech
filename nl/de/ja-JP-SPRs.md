@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-06-04"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -34,7 +34,7 @@ In den folgenden Abschnitten sind die gültigen Symbole für Japanisch beschrieb
   <caption>Tabelle 1. Vokale und Markierungen (Japanisch)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Symbol in SPR für<br/>Japanisch
+      Japanisch<br/>Symbol in SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Symbol in IPA
@@ -191,7 +191,7 @@ Silbengrenzen.
   <caption>Tabelle 2. Konsonanten (Japanisch)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Symbol in SPR für<br/>Japanisch
+      Japanisch<br/>Symbol in SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Symbol in IPA

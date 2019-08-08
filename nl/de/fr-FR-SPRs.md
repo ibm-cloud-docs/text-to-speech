@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-06-04"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -34,7 +34,7 @@ In den folgenden Abschnitten sind die gültigen Symbole für Französisch beschr
   <caption>Tabelle 1. Vokale (Französisch)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Symbol in SPR für<br/>Französisch
+      Französisch<br/>Symbol in SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Symbol in IPA
@@ -296,7 +296,7 @@ In den folgenden Abschnitten sind die gültigen Symbole für Französisch beschr
   <caption>Tabelle 2. Konsonanten (Französisch)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Symbol in SPR für<br/>Französisch
+      Französisch<br/>Symbol in SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Symbol in IPA
@@ -627,7 +627,7 @@ In Französisch kann nach einem Konsonanten am Wortende (jedoch innerhalb der do
   <caption>Tabelle 3. Bindung (Französisch)</caption>
   <tr>
     <th style="width:33%; text-align:center; vertical-align:bottom">
-      Symbol in SPR für<br/>Französisch
+      Französisch<br/>Symbol in SPR
     </th>
     <th style="width:33%; text-align:center; vertical-align:bottom">
       Symbol in IPA

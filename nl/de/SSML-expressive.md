@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-09"
+lastupdated: "2019-06-21"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -31,9 +31,10 @@ Der {{site.data.keyword.texttospeechfull}}-Service erstellt aus Text standardmä
 ## Sprachunterstützung
 {: #languages-expressive}
 
-Die Expressivität wird vom Service nur bei der Stimme 'Allison' für amerikanisches Englisch unterstützt (`en-US_AllisonVoice`). Bei der Stimme `en-US_AllisonV2Voice` wird die Expressivität nicht unterstützt. Die Verwendung des Elements bei einer nicht unterstützten Stimme gibt einen Fehler zurück.
+Die Expressivität wird vom Service nur bei der Stimme 'Allison' für amerikanisches Standard-Englisch unterstützt (`en-US_AllisonVoice`). Bei der neuronalen Stimme `en-US_AllisonV3Voice` wird die Expressivität nicht unterstützt. Die Verwendung des Elements bei einer nicht unterstützten Stimme gibt einen Fehler zurück.
 
 ## Element 'express-as'
+{: #ssml-express-as}
 
 Sie können das Element `<express-as>` auf den gesamten Text, einen Satz oder ein Fragment wie einen Ausdruck oder ein Wort anwenden. Das Element akzeptiert nur ein einziges erforderliches Attribut namens `type`, das den Typ der Expressivität beschreibt, die für den angegebenen Text verwendet werden soll: `GoodNews` (= gute Neuigkeiten), `Apology` (= Entschuldigung) oder `Uncertainty` (= Unsicherheit).
 

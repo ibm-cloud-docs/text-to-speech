@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-06-04"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -34,7 +34,7 @@ In den folgenden Abschnitten sind die gültigen Symbole für amerikanisches Engl
   <caption>Tabelle 1. Normale Vokale (amerikanisches Englisch)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Symbol in SPR für<br/>amerikanisches Englisch
+      Amerikanisches Englisch<br/>Symbol in SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Symbol in IPA
@@ -250,7 +250,7 @@ In den folgenden Abschnitten sind die gültigen Symbole für amerikanisches Engl
   <caption>Tabelle 2. Diphthonge (amerikanisches Englisch)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Symbol in SPR für<br/>amerikanisches Englisch
+      Amerikanisches Englisch<br/>Symbol in SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Symbol in IPA
@@ -313,7 +313,7 @@ In den folgenden Abschnitten sind die gültigen Symbole für amerikanisches Engl
   <caption>Tabelle 3. Reduzierte Vokale (amerikanisches Englisch)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Symbol in SPR für<br/>amerikanisches Englisch
+      Amerikanisches Englisch<br/>Symbol in SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Symbol in IPA
@@ -366,7 +366,7 @@ In den folgenden Abschnitten sind die gültigen Symbole für amerikanisches Engl
   <caption>Tabelle 4. Konsonanten (amerikanisches Englisch)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Symbol in SPR für<br/>amerikanisches Englisch
+      Amerikanisches Englisch<br/>Symbol in SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Symbol in IPA
@@ -614,7 +614,8 @@ In den folgenden Abschnitten sind die gültigen Symbole für amerikanisches Engl
     </td>
     <td style="text-align:center">
       h<br/><br/>
-      &#614;<br/><br/>
+      &#614;
+    <br/><br/>
       x<br/><br/>
       &#967;
     </td>
