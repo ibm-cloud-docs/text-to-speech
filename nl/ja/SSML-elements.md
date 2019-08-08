@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-09"
+lastupdated: "2019-06-21"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -25,13 +25,13 @@ subcollection: text-to-speech
 # SSML 要素
 {: #elements}
 
-{{site.data.keyword.texttospeechfull}} サービスでは、SSML (Speech Synthesis Markup Language) のほとんどの要素を使用してテキストの音声合成を制御できます。これらの要素は、サポートされているすべての言語で利用できます。以下の表に、このサービスでサポートされる SSML の要素と属性をまとめます。
+{{site.data.keyword.texttospeechfull}} サービスでは、SSML (Speech Synthesis Markup Language) のほとんどの要素を使用してテキストの音声合成を制御できます。 これらの要素は、サポートされているすべての言語で利用できます。 以下の表に、このサービスでサポートされる SSML の要素と属性をまとめます。
 
 -   *完全* は、その要素または属性がサービスの HTTP インターフェースおよび WebSocket インターフェースで完全にサポートされていることを意味します。
--   *一部* は、その要素および属性の一部の側面がサービスでサポートされていないことを意味します。また、要素または属性が片方のサービス・インターフェースだけでサポートされていることや、要素または属性が一部の音声ではサポートされていないことを意味する場合もあります。
+-   *一部* は、その要素および属性の一部の側面がサービスでサポートされていないことを意味します。 また、要素または属性が片方のサービス・インターフェースだけでサポートされていることや、要素または属性が一部の音声ではサポートされていないことを意味する場合もあります。
 -   *なし* は、その要素および属性がサービスでサポートされていないことを意味します。
 
-要素または属性について詳しくは、その説明を参照してください。注記があるところは、属性と値のサポートが SSML 仕様とわずかに異なるところです。詳しくは、[W3C Speech Synthesis Markup Language (SSML) Version 1.0 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://www.w3.org/TR/speech-synthesis/){: new_window} を参照してください。
+要素または属性について詳しくは、その説明を参照してください。 注記があるところは、属性と値のサポートが SSML 仕様とわずかに異なるところです。 詳しくは、[W3C Speech Synthesis Markup Language (SSML) Version 1.0](http://www.w3.org/TR/speech-synthesis/){: external} を参照してください。
 
 <table>
   <caption>表 1. SSML 要素</caption>
@@ -158,7 +158,7 @@ subcollection: text-to-speech
   <tr>
     <td></td>
     <td></td>
-    <td style="padding-left:75px">[voice](#voice_element)</td>
+    <td style="padding-left:75px">[音声](#voice_element)</td>
     <td style="text-align:center">なし</td>
   </tr>
 </table>
@@ -176,7 +176,6 @@ subcollection: text-to-speech
 -   `strength`。強度を示す多様な値を使用して休止の長さを指定します。
     -   `none`: 処理中に生成される可能性がある中断を抑制します。
     -   `x-weak`、`weak`、`medium`、`strong`、または `x-strong`: 右に行くに従って強くなる中断を挿入します。
-
 -   `time`。秒またはミリ秒単位で休止の長さを指定します。 有効な値の形式は、秒の場合は `{integer}s`、ミリ秒の場合は `{integer}ms` です。
 
 ```xml
@@ -196,24 +195,24 @@ subcollection: text-to-speech
 ## desc 要素
 {: #desc_element}
 
-`<desc>` 要素は、`<audio>` 要素内にのみ指定できます。`<audio>` 要素はサポートされていないため、`<desc>` 要素もサポートされていません。
+`<desc>` 要素は、`<audio>` 要素内にのみ指定できます。 `<audio>` 要素はサポートされていないため、`<desc>` 要素もサポートされていません。
 
 ## emphasis 要素
 {: #emphasis_element}
 
-`<emphasis>` 要素は、囲まれているテキストを強調して発話するように要求します。サポートされていません。
+`<emphasis>` 要素は、囲まれているテキストを強調して発話するように要求します。 サポートされていません。
 
 ## lexicon 要素
 {: #lexicon_element}
 
 この `<lexicon>` 要素は、指定した SSML 文書用の発音辞書を導入します。 サポートされていません。
 
-サービスのカスタマイズ・インターフェースを使用して、音声合成時に使用するカスタム項目 (単語/トランスレーションのペア) の辞書を定義できます。詳しくは、[カスタマイズの理解](/docs/services/text-to-speech/custom-intro.html)を参照してください。
+サービスのカスタマイズ・インターフェースを使用して、音声合成時に使用するカスタム項目 (単語/トランスレーションのペア) の辞書を定義できます。 詳しくは、[カスタマイズの理解](/docs/services/text-to-speech?topic=text-to-speech-customIntro)を参照してください。
 
 ## mark 要素
 {: #mark_element}
 
-`<mark>` 要素がサポートされるのは、サービスの WebSocket インターフェースのみです。HTTP インターフェースではサポートされず、この要素は無視されます。 詳しくは、[SSML マークの指定](/docs/services/text-to-speech/word-timing.html#mark)を参照してください。
+`<mark>` 要素がサポートされるのは、サービスの WebSocket インターフェースのみです。HTTP インターフェースではサポートされず、この要素は無視されます。 詳しくは、[SSML マークの指定](/docs/services/text-to-speech?topic=text-to-speech-timing#mark)を参照してください。
 {: note}
 
 `<mark>` 要素は、合成するテキストにマーカーを配置する空要素です。 `<mark>` 要素の前にあるすべてのテキストが合成されると、クライアントに通知されます。 この要素は、マークを一意的に識別するストリングを指定する単一の `name` 属性を受け入れます。この名前の先頭は英数字にする必要があります。 合成音声内でマークが出現する時間とともに名前が返されます。
@@ -233,9 +232,9 @@ subcollection: text-to-speech
 ## paragraph 要素および sentence 要素
 {: #ps_element}
 
-`<paragraph>` (または `<p>`) および `<sentence>` (または `<s>`) 要素は、テキスト構造に関するヒントを示すために使用できるオプション要素です。`<paragraph>` 要素または `<sentence>` 要素で囲まれているテキストが文末を示す句読点文字 (ピリオドなど) で終わっていない場合、サービスは、通常より長い休止を合成音声に追加します。
+`<paragraph>` (または `<p>`) および `<sentence>` (または `<s>`) 要素は、テキスト構造に関するヒントを示すために使用できるオプション要素です。 `<paragraph>` 要素または `<sentence>` 要素で囲まれているテキストが文末を示す句読点文字 (ピリオドなど) で終わっていない場合、サービスは、通常より長い休止を合成音声に追加します。
 
-どちらの要素も、有効な属性は、言語を切り替えるための `xml:lang` のみです。この属性はサポートされていません。
+どちらの要素も、有効な属性は、言語を切り替えるための `xml:lang` のみです。 この属性はサポートされていません。
 
 ```xml
 <speak version="1.0">
@@ -250,13 +249,13 @@ subcollection: text-to-speech
 ## phoneme 要素
 {: #phoneme_element}
 
-`<phoneme>` 要素では、囲まれているテキストの表音表記を指定できます。表音つづりによって、単語の音、音を構成する音節、強勢が置かれる音節を表せます。この要素には、以下の 2 つの属性があります。
+`<phoneme>` 要素では、囲まれているテキストの表音表記を指定できます。 表音つづりによって、単語の音、音を構成する音節、強勢が置かれる音節を表せます。 この要素には、以下の 2 つの属性があります。
 
 -   `alphabet`。使用する音韻体系を指定するオプション属性です。 サポートされる表音文字は以下のとおりです。
     -   標準 International Phonetic Alphabet (IPA): `alphabet="ipa"`
     -   {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR): `alphabet="ibm"`
 
-表音文字を指定しなかった場合、サービスはデフォルトとして IBM の SPR を使用します。
+    表音文字を指定しなかった場合、サービスはデフォルトとして IBM の SPR を使用します。
 -   `ph`。指定されている表音文字で発音を指定する必須属性です。 次の例は、*tomato* という単語の発音を両方の形式で表したものです。
 
     -   IPA 形式の場合
@@ -277,7 +276,7 @@ subcollection: text-to-speech
           &lt;phoneme alphabet="ibm" ph=".0tx.1me.0Fo"&gt;tomato&lt;/phoneme&gt;
         &lt;/speak&gt;</code></pre>
 
-`<phoneme>` 要素で SPR 表記および IPA 表記を使用する方法について詳しくは、[IBM SPR の使用](/docs/services/text-to-speech/SPRs.html)を参照してください。
+`<phoneme>` 要素で SPR 表記および IPA 表記を使用する方法について詳しくは、[IBM SPR の使用](/docs/services/text-to-speech?topic=text-to-speech-sprs)を参照してください。
 
 ## prosody 要素
 {: #prosody_element}
@@ -287,11 +286,11 @@ subcollection: text-to-speech
 ### pitch 属性
 {: #prosody-pitch}
 
-`pitch` 属性は、要素内のテキストのベースライン・ピッチを変更します。受け入れられる値は、以下のとおりです。
+`pitch` 属性は、要素内のテキストのベースライン・ピッチを変更します。 受け入れられる値は、以下のとおりです。
 
 -   数値と、それに続く `Hz` (Hertz) の指定: ベースライン・ピッチは、指定値に (上または下に) 転調されます。
--   相対的な変更値 (半音単位): 現行ベースラインから絶対シフトを行う数値。数値の前に `+` (上昇) または `-` (下降) を指定し、数値の後に `st` (semitones (半音)) を指定します (`+5st` など)。
--   相対的な変更値 (パーセント): 現行ベースラインから絶対シフトを行う数値。数値の前に `+` (上昇) または `-` (下降) を指定し、数値の後に `%` (パーセント記号) を指定します (`-10%` など)。
+-   相対的な変更値 (半音単位): 現行ベースラインから絶対シフトを行う数値。 数値の前に `+` (上昇) または `-` (下降) を指定し、数値の後に `st` (semitones (半音)) を指定します (`+5st` など)。
+-   相対的な変更値 (パーセント): 現行ベースラインから絶対シフトを行う数値。 数値の前に `+` (上昇) または `-` (下降) を指定し、数値の後に `%` (パーセント記号) を指定します (`-10%` など)。
 -   ピッチを対応する事前定義値に変更する以下の 6 つのキーワードのいずれか:
     -   `default`。サービスのデフォルト・ベースライン・ピッチを使用します。
     -   `x-low`。ピッチ・ベースラインを 12 半音下にシフトします。
@@ -315,7 +314,7 @@ subcollection: text-to-speech
 ### rate 属性
 {: #prosody-rate}
 
-`rate` 属性は、要素内のテキストの発話速度の変更を指定します。速度は、単語/分単位で指定します。発話速度が 50 単語/分の場合、`rate` は `50` になります。 `rate` に正数を設定した場合の動作は、現在の W3C の prosody の rate 属性の仕様には準拠していません。また、サービスでは、相対的な変更をパーセントで表す (`+15%` など) ことはできますが、相対的な変更を値で表す (`+15` など) ことはできません。受け入れられる値は、以下のとおりです。
+`rate` 属性は、要素内のテキストの発話速度の変更を指定します。 速度は、単語/分単位で指定します。発話速度が 50 単語/分の場合、`rate` は `50` になります。 `rate` に正数を設定した場合の動作は、現在の W3C の prosody の rate 属性の仕様には準拠していません。 また、サービスでは、相対的な変更をパーセントで表す (`+15%` など) ことはできますが、相対的な変更を値で表す (`+15` など) ことはできません。 受け入れられる値は、以下のとおりです。
 
 -   相対的なパーセントの増加または減少: `+10%`。
 -   正数としての単語/分の数値: `75`。
@@ -338,10 +337,10 @@ subcollection: text-to-speech
 ### volume 属性
 {: #prosody-volume}
 
-サービスで DNN ベースの音声 (`en-US_AllisonV2Voice` など) を使用する場合は、`<prosody>` 要素の `volume` 属性はサポートされません。これらの音声について詳しくは、[音声合成テクノロジー](/docs/services/text-to-speech/voices.html#technologiesVoices)を参照してください。
+サービスでニューラル音声 (`en-US_AllisonV3Voice` など) を使用する場合は、`<prosody>` 要素の `volume` 属性はサポートされません。詳しくは、[ニューラル音声](/docs/services/text-to-speech?topic=text-to-speech-voices#neuralVoices)を参照してください。
 {: note}
 
-`volume` 属性は、要素内のテキストの音量を変更します。1.0 から 100.0 (最大音量) までの範囲の整数または小数の値を指定できます。0 から 100 までの範囲の事前定義設定値に対応する以下のストリング値のいずれかを使用することもできます (`silent` 値はサポートされていません)。
+`volume` 属性は、要素内のテキストの音量を変更します。 1.0 から 100.0 (最大音量) までの範囲の整数または小数の値を指定できます。 0 から 100 までの範囲の事前定義設定値に対応する以下のストリング値のいずれかを使用することもできます (`silent` 値はサポートされていません)。
 
 -   `x-soft`。値は 30 です。
 -   `soft`。値は 50 です。
@@ -362,17 +361,17 @@ subcollection: text-to-speech
 ## say-as 要素
 {: #say-as_element}
 
-ほとんどの言語では、`<say-as>` 要素は部分的にしかサポートされていません。米国英語を除き、一般にこの要素の属性としてサポートされるのは、`digits` 属性と `letters` 属性のみです。
+ほとんどの言語では、`<say-as>` 要素は部分的にしかサポートされていません。 米国英語を除き、一般にこの要素の属性としてサポートされるのは、`digits` 属性と `letters` 属性のみです。
 {: note}
 
-`<say-as>` 要素には、要素内に含まれているテキストのタイプについての情報を指定し、テキストを発話するときの詳細なレベルを表します。この要素には、1 つの必須属性 `interpret-as` があります。この属性は、囲まれているテキストの解釈方法を指定します。 2 つのオプション属性 `format` および `detail` があります。これらの属性は、以下の例に示すように、`interpret-as` 属性内の特定の値でのみ使用されます。
+`<say-as>` 要素には、要素内に含まれているテキストのタイプについての情報を指定し、テキストを発話するときの詳細なレベルを表します。 この要素には、1 つの必須属性 `interpret-as` があります。この属性は、囲まれているテキストの解釈方法を指定します。 2 つのオプション属性 `format` および `detail` があります。これらの属性は、以下の例に示すように、`interpret-as` 属性内の特定の値でのみ使用されます。
 
 以下に、`interpret-as` 属性の許容値および各値の例を示します。
 
 ### cardinal
 {: #sayAsCardinal}
 
-値 `cardinal` を指定すると、要素内の数字が基数として発話されます。以下の例はどちらとも、*Super Bowl forty-nine* と発話されます。最初の例は冗長です。指定してもサービスのデフォルトの動作は変わりません。
+値 `cardinal` を指定すると、要素内の数字が基数として発話されます。 以下の例はどちらとも、*Super Bowl forty-nine* と発話されます。 最初の例は冗長です。指定してもサービスのデフォルトの動作は変わりません。
 
 ```xml
 <speak version="1.0">
@@ -385,7 +384,7 @@ subcollection: text-to-speech
 ### date
 {: #sayAsDate}
 
-値 `date` を指定すると、関連する `format` 属性で指定したフォーマットに従って、要素内の日付が発話されます。`format` 属性は、値 `date` には必須です。`format` を指定しなくても、サービスは日付を発音しようとします。以下の例では、指定された日付を指定フォーマットで発話します (ここで、`d`、`m`、および `y` はそれぞれ日、月、および年を表します)。
+値 `date` を指定すると、関連する `format` 属性で指定したフォーマットに従って、要素内の日付が発話されます。 `format` 属性は、値 `date` には必須です。 `format` を指定しなくても、サービスは日付を発音しようとします。 以下の例では、指定された日付を指定フォーマットで発話します (ここで、`d`、`m`、および `y` はそれぞれ日、月、および年を表します)。
 
 ```xml
 <speak version="1.0">
@@ -403,7 +402,7 @@ subcollection: text-to-speech
 ### digits
 {: #sayAsDigits}
 
-値 `digits` を指定すると、要素内の数値に含まれている数字が発話されます。以下の例では、*123456* の数字が 1 つずつ発話されます。
+値 `digits` を指定すると、要素内の数値に含まれている数字が発話されます。 以下の例では、*123456* の数字が 1 つずつ発話されます。
 
 ```xml
 <speak version="1.0">
@@ -415,7 +414,7 @@ subcollection: text-to-speech
 ### letters
 {: #sayAsLetters}
 
-値 `letters` を指定すると、要素内の単語に含まれている文字が読み上げられます。以下の例では、単語 *hello* を構成する文字が 1 つずつ読み上げられます。
+値 `letters` を指定すると、要素内の単語に含まれている文字が読み上げられます。 以下の例では、単語 *hello* を構成する文字が 1 つずつ読み上げられます。
 
 ```xml
 <speak version="1.0">
@@ -427,7 +426,7 @@ subcollection: text-to-speech
 ### number
 {: #sayAsNumber}
 
-`number` 値は、`cardinal` 値および `ordinal` 値に代わるものです。オプションの `format` 属性を使用して、一連の数字の解釈方法を指定できます。最初の例は、`format` 属性を省略して、数字を基数値として発音しています。2 番目の例は、数字を `cardinal` 値として発音するように明示的に指定しています。3 番目の例は、数字を `ordinal` 値として発音するように指定しています。
+`number` 値は、`cardinal` 値および `ordinal` 値に代わるものです。 オプションの `format` 属性を使用して、一連の数字の解釈方法を指定できます。 最初の例は、`format` 属性を省略して、数字を基数値として発音しています。 2 番目の例は、数字を `cardinal` 値として発音するように明示的に指定しています。 3 番目の例は、数字を `ordinal` 値として発音するように指定しています。
 
 ```xml
 <speak version="1.0">
@@ -438,7 +437,7 @@ subcollection: text-to-speech
 ```
 {: codeblock}
 
-`format` 属性に値 `telephone` を指定することもできます。一連の数字を電話番号として発音する 2 つの異なる方法を、以下の例で表しています。区切り記号を含めて数字を発音するためには、オプションの `detail` 属性に値 `punctuation` を指定します。
+`format` 属性に値 `telephone` を指定することもできます。 一連の数字を電話番号として発音する 2 つの異なる方法を、以下の例で表しています。 区切り記号を含めて数字を発音するためには、オプションの `detail` 属性に値 `punctuation` を指定します。
 
 ```xml
 <speak version="1.0">
@@ -451,7 +450,7 @@ subcollection: text-to-speech
 ### ordinal
 {: #sayAsOrdinal}
 
-値 `ordinal` を指定すると、要素内の数字の序数値が発話されます。以下の例では、*second first* と発話されます。
+値 `ordinal` を指定すると、要素内の数字の序数値が発話されます。 以下の例では、*second first* と発話されます。
 
 ```xml
 <speak version="1.0">
@@ -477,7 +476,7 @@ subcollection: text-to-speech
 ### vxml:currency
 {: #vxml-currency}
 
-値 `vxml:currency` は、通貨値の合成を制御するために使用します。ストリングは `UUUmm.nn` のフォーマットで記述する必要があります。ここで、`UUU` は、ISO 標準 4217 で規定されている 3 文字の通貨標識であり、`mm.nn` は数量です。 以下の例では、*forty-five dollars and thirty cents* と読み上げられます。
+値 `vxml:currency` は、通貨値の合成を制御するために使用します。 ストリングは `UUUmm.nn` のフォーマットで記述する必要があります。ここで、`UUU` は、ISO 標準 4217 で規定されている 3 文字の通貨標識であり、`mm.nn` は数量です。 以下の例では、*forty-five dollars and thirty cents* と読み上げられます。
 
 ```xml
 <speak version="1.0">
@@ -498,7 +497,7 @@ subcollection: text-to-speech
 ### vxml:date
 {: #vxml-date}
 
-値 `vxml:date` は、値 `date` と同様に動作しますが、フォーマットは `YYYYMMDD` として事前定義されています。日、月、または年が不明である場合、または日、月、または年を発音しないようにする場合は、その値を `?` (疑問符) に置き換えます。2 番目と 3 番目の例に疑問符が含まれています。
+値 `vxml:date` は、値 `date` と同様に動作しますが、フォーマットは `YYYYMMDD` として事前定義されています。 日、月、または年が不明である場合、または日、月、または年を発音しないようにする場合は、その値を `?` (疑問符) に置き換えます。2 番目と 3 番目の例に疑問符が含まれています。
 
 ```xml
 <speak version="1.0">
@@ -517,7 +516,7 @@ subcollection: text-to-speech
 ### vxml:phone
 {: #vxml-phone}
 
-値 `vxml:phone` を指定すると、数字と区切り記号の両方を含めて電話番号が発話されます。これは、`number` 値を使用して `telephone` (`format` 属性) および `punctuation` (`detail` 属性) を指定することと同じです。
+値 `vxml:phone` を指定すると、数字と区切り記号の両方を含めて電話番号が発話されます。 これは、`number` 値を使用して `telephone` (`format` 属性) および `punctuation` (`detail` 属性) を指定することと同じです。
 
 ```xml
 <speak version="1.0">
@@ -545,7 +544,7 @@ subcollection: text-to-speech
 ## sub 要素
 {: #sub_element}
 
-`<sub>` 要素は、音声の合成時に、`alias` 属性で指定したテキストで、要素で囲まれているテキストを置き換えることを指定します。`alias` 属性は、この要素の唯一の属性であり、必須です。
+`<sub>` 要素は、音声の合成時に、`alias` 属性で指定したテキストで、要素で囲まれているテキストを置き換えることを指定します。 `alias` 属性は、この要素の唯一の属性であり、必須です。
 
 ```xml
 <speak version="1.0">

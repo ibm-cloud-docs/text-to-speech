@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-06-24"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -25,10 +25,10 @@ subcollection: text-to-speech
 # カスタム音声モデルの使用
 {: #customUsing}
 
-カスタム・モデルを作成してカスタム項目を設定したら、HTTP の `GET /v1/synthesize` または `POST /v1/synthesize` メソッド、または WebSocket の `/v1/synthesize` メソッドの `customization_id` 照会パラメーターを使用して、カスタム・モデルのカスタマイズ ID (GUID) を渡して使用します。カスタム・モデルを使用して `synthesize` メソッドを呼び出すには、そのモデルの所有者のサービス資格情報を使用する必要があります。
+カスタム・モデルを作成してカスタム項目を設定したら、HTTP の `GET /v1/synthesize` または `POST /v1/synthesize` メソッド、または WebSocket の `/v1/synthesize` メソッドの `customization_id` 照会パラメーターを使用して、カスタム・モデルのカスタマイズ ID (GUID) を渡して使用します。 カスタマイズ ID を含める場合、指定されたカスタム・モデルを所有するサービスのインスタンスのための資格情報を使用して、`synthesize` メソッドを呼び出す必要があります。
 {: shortdesc}
 
-最初の 2 つの例は、指定したカスタム・モデルの項目に基づいて `IEEE` のカスタム発音を生成するものです。サービスの標準の発音ルールによるデフォルトの発音の代わりに、カスタム発音が使用されます。
+最初の 2 つの例は、指定したカスタム・モデルの項目に基づいて `IEEE` のカスタム発音を生成するものです。 サービスの標準の発音ルールによるデフォルトの発音の代わりに、カスタム発音が使用されます。
 
 -   HTTP の `GET /v1/synthesize` メソッドを使用する場合
 
