@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-06-04"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -126,7 +126,7 @@ Die Antwort ist nur ein Beispiel. Der Service kann eine oder mehrere Textnachric
 ### Takt für einfachen Text
 {: #timingText}
 
-Der Syntheseprozess des Service beinhaltet einen Schritt für die Textnormalisierung, bei dem Zahlen, Datumsangaben, Uhrzeiten, Geldbeträge, Akronyme und Abkürzungen ausformuliert werden. Die Ergebnisse entsprechen der zu verwendenden Aussprache für solche Zeichenfolgen. Die Zeichenfolge *$200* wird beispielsweise in drei Wörtern gesprochen: *two*, *hundred* und *dollars*. Da Worttaktinformationen zum Synchronisieren der Audioausgabe mit dem Eingabetext verwendet werden, gibt der Service Taktinformationen zurück, die der nicht normalisierten Schreibweise der Eingabe entprechen.
+Der Syntheseprozess des Service beinhaltet einen Schritt für die Textnormalisierung, bei dem Zahlen, Datumsangaben, Uhrzeiten, Geldbeträge, Akronyme und Abkürzungen ausformuliert werden. Die Ergebnisse entsprechen der zu verwendenden Aussprache für solche Zeichenfolgen. Die Zeichenfolge *$200* wird beispielsweise in drei Wörtern gesprochen: *two*, *hundred* und *dollars*. Da Worttaktinformationen zum Synchronisieren der Audioausgabe mit dem Eingabetext verwendet werden, gibt der Service Taktinformationen zurück, die der nicht normalisierten Schreibweise der Eingabe entsprechen.
 
 Beispieleingabetext:
 
@@ -200,10 +200,10 @@ Wenn der Service aus einfachem Text synthetisch Sprache erstellt, gibt er mit Au
 
     Der Service erzeugt Taktinformationen für die folgenden Zeichenfolgen: "*I*", "*work*", "*at*", "*{{site.data.keyword.IBM_notm}}.*". Er normalisiert die Zeichenfolge "*{{site.data.keyword.IBM_notm}}*" als "*International Business Machines*". Die Taktinformationen für die Zeichenfolge bilden den Startzeitpunkt von "*International*" und den Endzeitpunkt von "*Machines*" ab.
 -   Das Element `break` fügt eine Pause im gesprochenen Text ein. Der Service bildet die resultierende Sprechpause im Worttakt als Lücke zwischen dem Endzeitpunkt des Wortes vor dem Element `<break>` und dem Startzeitpunkt des Wortes nach dem Element ab.
-- Das Element `paragraph` (oder `p`) kann eine Sprechpause zur Audioausgabe hinzufügen. Für die Sprechpause werden vom Service keine Taktinformationen zurückgegeben.
+- Das Element `paragraph` (oder `<p>`) kann eine Sprechpause zur Audioausgabe hinzufügen. Für die Sprechpause werden vom Service keine Taktinformationen zurückgegeben.
 - Das Element `sentence` (oder `s`) kann eine Sprechpause zur Audioausgabe hinzufügen. Für die Sprechpause werden vom Service keine Taktinformationen zurückgegeben.
 
-SSML-Elemente, die in der Liste nicht aufgeführt sind, haben keine Auswirkungen auf die Worttaktinformationen. Weitere Angaben über die Unterstützung des Service für SSML enthält der Abschnitt [SSML verwenden](/docs/services/text-to-speech/SSML.html).
+SSML-Elemente, die in der Liste nicht aufgeführt sind, haben keine Auswirkungen auf die Worttaktinformationen. Weitere Angaben über die Unterstützung des Service für SSML enthält der Abschnitt [SSML verwenden](/docs/services/text-to-speech?topic=text-to-speech-ssml).
 
 ## Beispiele mit Markierungselementen
 {: #timingExample}

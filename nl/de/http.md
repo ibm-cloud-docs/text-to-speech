@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-21"
+lastupdated: "2019-06-24"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -28,7 +28,7 @@ subcollection: text-to-speech
 Um mit der HTTP-REST-Schnittstelle des {{site.data.keyword.texttospeechfull}}-Service synthetisch Sprache aus Text zu erstellen, rufen Sie die Methode `GET` oder `POST /v1/synthesize` auf. Sie geben den Text an, aus dem synthetisch Sprache erstellt werden soll, sowie die Stimme und das Format für die gesprochene Audioausgabe. Sie können auch ein angepasstes Sprechmodell angeben, das für die Anforderung verwendet werden soll.
 {: shortdesc}
 
-Weitere Informationen zur HTTP-Schnittstelle enthält die [API-Referenz.![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/apidocs/text-to-speech){: new_window}
+Weitere Informationen zur HTTP-Schnittstelle enthält die [API-Referenz](https://{DomainName}/apidocs/text-to-speech){: external}.
 
 ## Audioausgabe synthetisch aus Text erstellen
 {: #synthesize}
@@ -49,52 +49,51 @@ Bei den beiden Versionen der Methode `/v1/synthesize` werden die folgenden Param
     <th style="text-align:left">Beschreibung</th>
   </tr>
   <tr>
-    <td><code>accept</code><br/><em>Optional</em></td>
+    <td><code>accept</code><br/><em>      Optional
+    </em></td>
     <td style="text-align:center">Abfrage</td>
     <td style="text-align:center">Zeichenfolge</td>
     <td>
       Gibt das angeforderte Audioformat oder den MIME-Typ an, in dem der
       Service die Audiodaten zurückgeben soll. Diesen Wert können Sie auch im
       HTTP-Anforderungsheader <code>Accept</code> angeben. Codieren Sie das
-      Argument für den Abfrageparameter `accept` als URL. 
-      Weitere Informationen finden Sie unter [Audioformate](/docs/services/text-to-speech/audio-formats.html).
+      Argument für den Abfrageparameter `accept` als URL. Weitere Informationen finden Sie unter [Audioformate](/docs/services/text-to-speech?topic=text-to-speech-audioFormats).
     </td>
   </tr>
   <tr>
-    <td><code>voice</code><br/><em>Optional</em></td>
+    <td><code>voice</code><br/><em>      Optional
+    </em></td>
     <td style="text-align:center">Abfrage</td>
     <td style="text-align:center">Zeichenfolge</td>
     <td>
       Gibt die Stimme an, von der der Text in der Audioausgabe
       gesprochen werden soll. Mit der Methode <code>/v1/voices</code>
       können Sie die aktuelle Liste der unterstützten Stimmen
-      abrufen. Die Standardstimme ist <code>en-US_MichaelVoice</code>. 
-      Weitere Informationen finden Sie unter
-      [Sprachen und Stimmen](/docs/services/text-to-speech/voices.html).
-</td>
+      abrufen. Die Standardstimme ist <code>en-US_MichaelVoice</code>. Weitere Informationen finden Sie unter
+      [Sprachen und Stimmen](/docs/services/text-to-speech?topic=text-to-speech-voices).
+    </td>
   </tr>
   <tr>
-    <td><code>customization_id</code><br/><em>Optional</em></td>
+    <td><code>customization_id</code><br/><em>      Optional
+    </em></td>
     <td style="text-align:center">Abfrage</td>
     <td style="text-align:center">Zeichenfolge</td>
     <td>
       Gibt eine GUID (global eindeutige ID) für ein angepasstes Sprechmodell
       an, das für die Synthese verwendet werden soll. Ein angegebenes
       angepasstes Sprechmodell funktioniert nur dann, wenn es mit der Sprache
-      der Stimme übereinstimmt, die für die Synthese verwendet wird. Falls Sie
-      eine Anpassungs-ID einbeziehen, müssen Sie die Methode mit den
-      Serviceberechtigungsnachweisen des Modelleigners aufrufen. Lassen Sie
-      den Parameter weg, um die angegebene Stimme ohne Anpassung zu verwenden.
-      Weitere Informationen enthält der Abschnitt
+      der Stimme übereinstimmt, die für die Synthese verwendet wird. Wenn Sie eine Anpassungs-ID angeben, müssen Sie die Anforderung mit den Berechtigungsnachweisen für die Instanz des Service ausführen, der Eigner des angepassten Modells ist. Lassen Sie
+      den Parameter weg, um die angegebene Stimme ohne Anpassung zu verwenden. Weitere Informationen enthält der Abschnitt
       [Wissenswertes
-      über die Anpassung](/docs/services/text-to-speech/custom-intro.html).</td>
+      über die Anpassung](/docs/services/text-to-speech?topic=text-to-speech-customIntro).
+    </td>
   </tr>
 </table>
 
 Zusammen mit einer Anforderung für die synthetische Erstellung können Sie auch die folgenden Anforderungsheader verwenden, die für alle {{site.data.keyword.watson}}-Services verfügbar sind:
 
--   Der Header `X-Watson-Learning-Opt-Out` gibt an, ob der Service Anforderungs- und Antwortdaten protokolliert, um den Service für künftige Benutzer zu verbessern. Wenn Sie verhindern möchten, dass IBM zur allgemeinen Serviceverbesserung auf Ihre Daten zugreift, geben Sie den Wert <code>true</code> für den Parameter an. Weitere Informationen enthält der Abschnitt [Anforderungsprotokollierung für {{site.data.keyword.watson}}-Services steuern](/docs/services/watson/getting-started-logging.html).
--   Der Header `X-Watson-Metadata` ordnet die Daten, die mit einer Anforderung übergeben werden, einer Kunden-ID zu. Weitere Informationen finden Sie unter [Informationssicherheit](/docs/services/text-to-speech/information-security.html).
+-   Der Header `X-Watson-Learning-Opt-Out` gibt an, ob der Service Anforderungs- und Antwortdaten protokolliert, um den Service für künftige Benutzer zu verbessern. Wenn Sie verhindern möchten, dass IBM zur allgemeinen Serviceverbesserung auf Ihre Daten zugreift, geben Sie den Wert <code>true</code> für den Parameter an. Weitere Informationen enthält der Abschnitt [Anforderungsprotokollierung für {{site.data.keyword.watson}}-Services steuern](/docs/services/watson?topic=watson-gs-logging-overview).
+-   Der Header `X-Watson-Metadata` ordnet die Daten, die mit einer Anforderung übergeben werden, einer Kunden-ID zu. Weitere Informationen finden Sie unter [Informationssicherheit](/docs/services/text-to-speech?topic=text-to-speech-information-security).
 
 Falls die Eingabe für die Methode `/v1/synthesize` einen ungültigen Abfrageparameter oder ein ungültiges JSON-Feld enthält, gibt der Service einen Antwortheader namens `Warnings` zurück, in dem jedes ungültige Argument beschrieben und aufgeführt ist. Die Anforderung wird ungeachtet der Warnungen erfolgreich ausgeführt.
 {: note}
@@ -121,7 +120,7 @@ Die Methoden `GET` und `POST` bieten zwar eine äquivalente Funktionalität, die
 
 SSML (Speech Synthesis Markup Language) ist eine XML-basierte Markup-Sprache, die zur Bereitstellung von Annotationen bei Text für Sprachsyntheseanwendungen wie dem {{site.data.keyword.texttospeechshort}}-Service konzipiert ist. Mithilfe der SSML-Elemente und ihrer Attribute können Sie die Synthese und die resultierende Audioausgabe stärker steuern.
 
-Weitere Informationen zum Annotieren von Eingabetext mit SSML enthält der Abschnitt [SSML verwenden](/docs/services/text-to-speech/SSML.html). In der Dokumentation sind die vom Service unterstützten SSML-Elemente und -Attribute aufgeführt. Außerdem sind dort die Erweiterungen des Service für die Expressivität und die Stimmenumwandlung dokumentiert.
+Weitere Informationen zum Annotieren von Eingabetext mit SSML enthält der Abschnitt [SSML verwenden](/docs/services/text-to-speech?topic=text-to-speech-ssml). In der Dokumentation sind die vom Service unterstützten SSML-Elemente und -Attribute aufgeführt. Außerdem sind dort die Erweiterungen des Service für die Expressivität und die Stimmenumwandlung dokumentiert.
 
 ## XML-Steuerzeichen mit Escapezeichen versehen
 {: #escape}
@@ -162,7 +161,7 @@ Da Sie Eingabetext übergeben können, der XML-basierte SSML-Annotationen enthä
   </tr>
 </table>
 
-Weitere Informationen zur Validierung von Eingabetext durch den Service finden Sie unter [SSML-Validierung](/docs/services/text-to-speech/SSML.html#errors).
+Weitere Informationen zur Validierung von Eingabetext durch den Service finden Sie unter [SSML-Validierung](/docs/services/text-to-speech?topic=text-to-speech-ssml#errors).
 
 ## Beispiele für Eingabetext
 {: #httpExamples}

@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-06-04"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -34,7 +34,7 @@ In den folgenden Abschnitten sind die gültigen Symbole für Deutsch beschrieben
   <caption>Tabelle 1. Normale Vokale (Deutsch)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Symbol in SPR für<br/>Deutsch
+      Deutsch<br/>Symbol in SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Symbol in IPA
@@ -282,7 +282,7 @@ In den folgenden Abschnitten sind die gültigen Symbole für Deutsch beschrieben
   <caption>Tabelle 2. Reduzierte Vokale (Deutsch)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Symbol in SPR für<br/>Deutsch
+      Deutsch<br/>Symbol in SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Symbol in IPA
@@ -321,7 +321,7 @@ In den folgenden Abschnitten sind die gültigen Symbole für Deutsch beschrieben
   <caption>Tabelle 3. Diphthonge (Deutsch)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Symbol in SPR für<br/>Deutsch
+      Deutsch<br/>Symbol in SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Symbol in IPA
@@ -397,7 +397,7 @@ Fremdsprache auf.
   <caption>Tabelle 4. Nasalvokale (Deutsch)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Symbol in SPR für<br/>Deutsch
+      Deutsch<br/>Symbol in SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Symbol in IPA
@@ -482,7 +482,7 @@ Fremdsprache auf.
   <caption>Tabelle 5. Konsonanten (Deutsch)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Symbol in SPR für<br/>Deutsch
+      Deutsch<br/>Symbol in SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Symbol in IPA

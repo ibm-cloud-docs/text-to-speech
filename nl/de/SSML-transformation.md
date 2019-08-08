@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-09"
+lastupdated: "2019-06-21"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -43,9 +43,10 @@ Die Stimmenumwandlung wird vom Service nur bei den folgenden Stimmen für amerik
 -   `en-US_LisaVoice`
 -   `en-US_MichaelVoice`
 
-Bei den DNN-basierten `V2`-Versionen dieser Stimmen (z. B. `en-US_AllisonV2Voice`) wird die Stimmenumwandlung nicht unterstützt. Die Verwendung des Elements bei einer nicht unterstützten Stimme gibt einen Fehler zurück.
+Die Stimmenumwandlung wird mit den neuronalen Versionen dieser Stimmen (z. B. `en-US_AllisonV3Voice`) nicht unterstützt. Die Verwendung des Elements bei einer nicht unterstützten Stimme gibt einen Fehler zurück.
 
 ## Integrierte Umwandlungen
+{: #ssml-built-in}
 
 Die integrierten Umwandlungen wenden vorkonfigurierte Änderungen auf die Attribute einer Stimme an. Sie sind mit virtuellen Stimmen vergleichbar, die durch den Service zur Verfügung gestellt werden. Der Service bietet zwei integrierte Umwandlungen. Um sie zu verwenden, geben Sie den Namen der integrierten Umwandlung, bei dem die Groß- und Kleinschreibung beachtet werden muss, mit dem Attribut `type` an:
 
@@ -53,10 +54,12 @@ Die integrierten Umwandlungen wenden vorkonfigurierte Änderungen auf die Attrib
 -   Die Umwandlung `Soft` macht den Klang der Stimme weicher.
 
 Auf jede integrierte Stimme können Sie das optionale Attribut `strength` anwenden, um den Umfang zu steuern, in dem der Service die Umwandlung anwendet. Dieser Wert ist mit einer Art Überblendungsfaktor vergleichbar, den der Service auf die ursprüngliche Stimme anwendet. Das Attribut akzeptiert einen Wert im Bereich von 0 bis 100 Prozent. Bei Angabe von `0%` wird die Stimme nicht geändert; durch Angabe von `100%` wird der volle Umfang der Umwandlung erreicht. Falls Sie das Attribut nicht angeben, wird `100%` als Standardwert für 'strength' verwendet.
+
 Wenn Sie eine integrierte Umwandlung verwenden, ignoriert der Service Attribute für angepasste Umwandlungen.
 {: note}
 
 ## Beispiele für integrierte Umwandlungen
+{: #ssml-built-in-examples}
 
 In den folgenden Beispielen werden die beiden integrierten Umwandlungen unterschiedlich stark auf denselben Satz angewendet:
 
@@ -72,6 +75,7 @@ In den folgenden Beispielen werden die beiden integrierten Umwandlungen untersch
 {: codeblock}
 
 ## Angepasste Umwandlungen
+{: #ssml-custom-transforms}
 
 Mit angepassten Umwandlungen können Sie verschiedene Aspekte der Stimmenumwandlung differenzierter steuern. Zur Verwendung einer angepassten Umwandlung geben Sie den Wert `Custom` für das Attribut `type` an. Anschließend können Sie mit einem oder mehreren der folgenden optionalen Attribute die Umwandlung steuern.
 
@@ -93,7 +97,7 @@ Mit angepassten Umwandlungen können Sie verschiedene Aspekte der Stimmenumwandl
       wahrgenommene durchschnittliche Tonhöhe. Es ist dem Attribut
       <code>pitch</code> des SSML-Elements <code>&lt;prosody&gt;</code> entlehnt. Mit
       seiner Hilfe kann die wahrgenommene Identität des Sprechers geändert werden.
-</td>
+    </td>
   </tr>
   <tr>
     <td><code>pitch_range</code></td>
@@ -103,9 +107,8 @@ Mit angepassten Umwandlungen können Sie verschiedene Aspekte der Stimmenumwandl
     <td>
       Normalisiert relative Änderungen des dynamischen Stimmhöhenumfangs
       im Rahmen von unproblematischen Grenzwerten. Das Herauf- oder Herabsetzen
-      des Stimmhöhenumfangs macht den Sprechstil mehr oder weniger expressiv. 
-      Das Attribut ist dem Attribut <code>range</code> des SSML-Elements
-      <code>&lt;prosody&gt;</code> entlehnt. </td>
+      des Stimmhöhenumfangs macht den Sprechstil mehr oder weniger expressiv. Das Attribut ist dem Attribut <code>range</code> des SSML-Elements
+      <code>&lt;prosody&gt;</code> entlehnt.</td>
   </tr>
   <tr>
     <td><code>glottal_tension</code></td>
@@ -143,11 +146,13 @@ Mit angepassten Umwandlungen können Sie verschiedene Aspekte der Stimmenumwandl
       <code>fast</code>, <code>x-fast</code>]</td>
     <td>
       Normalisiert relative Änderungen des Sprechtempos
-      im Rahmen von unproblematischen Grenzwerten. Durch ein Herauf- oder
+      im Rahmen von unproblematischen Grenzwerten.
+      Durch ein Herauf- oder
       Herabsetzen des Tempos wird die Sprache schneller oder langsamer.
       Ein positives (schnelleres) Tempo vergrößert den wahrgenommenen
       Tonhöhenbereich; ein negatives (langsameres) Tempo schränkt den
-      wahrgenommenen Tonhöhenbereich ein. Das Attribut ist dem Attribut
+      wahrgenommenen Tonhöhenbereich ein.
+      Das Attribut ist dem Attribut
       <code>rate</code> des SSML-Elements <code>&lt;prosody&gt;</code> entlehnt.</td>
   </tr>
   <tr>
@@ -157,7 +162,8 @@ Mit angepassten Umwandlungen können Sie verschiedene Aspekte der Stimmenumwandl
     <td>
       Der Name (mit Beachtung der Groß- und Kleinschreibung) für eine der
       integrierten Umwandlungen für den Stimmweg: <code>Sunrise</code> oder
-      <code>Breeze</code>. Die Namen sind symbolisch. Experimentieren
+      <code>Breeze</code>.
+      Die Namen sind symbolisch. Experimentieren
       Sie mit den Timbres, um ihren Einfluss auf die Stimmenumwandlung
       kennenzulernen. Dieses Attribut trägt dazu bei, die wahrgenommene
       Identität des Sprechers zu ändern.
@@ -210,13 +216,14 @@ Beachten Sie die folgenden Richtlinien und Warnhinweise:
     -   Hoher Glottisdruck, große Tonhöhe und geringes Tempo können das Auftreten von Schnarrgeräuschen verursachen. Setzen Sie den Wert für die Aspiration herauf, um den Effekt abzuschwächen.
     -   Ein extrem niedriger Glottisdruck kann zu undeutlicher Sprache führen. Setzen Sie die Aspiration herab, um diese Störung zu reduzieren.
     -   Die gleichzeitige Anhebung oder Verringerung des Tonhöhenbereichs und des Tempos auf extreme Werte kann dazu führen, dass die Stimme unnatürlich klingt.
--   Wie bereits angegeben, wurden einige Attribute dem SSML-Element `<prosody>` entlehnt. Weitere Informationen enthält der Abschnitt [Element 'prosody'](/docs/services/text-to-speech/SSML-elements.html#prosody_element). Mit den folgenden Maßnahmen können Sie eine differenzierte Steuerung der Prosodie für eine virtuelle Stimme erreichen:
+-   Wie bereits angegeben, wurden einige Attribute dem SSML-Element `<prosody>` entlehnt. Weitere Informationen enthält der Abschnitt [Element 'prosody'](/docs/services/text-to-speech?topic=text-to-speech-elements#prosody_element). Mit den folgenden Maßnahmen können Sie eine differenzierte Steuerung der Prosodie für eine virtuelle Stimme erreichen:
     -   Verschachteln Sie Elemente `<prosody>` in Elementen `<voice-transformation>`.
     -   Verschachteln Sie Elemente `<voice-transformation>` in Elementen `<prosody>`.
 
     Elemente `<voice-transformation>` können *nicht* verschachtelt werden.
 
 ## Beispiele für angepasste Umwandlungen
+{: #ssml-custom-transforms-examples}
 
 In den folgenden Beispielen werden verschiedene Attribute angewendet, um die Anwendungsmöglichkeiten der angepassten Umwandlung zu veranschaulichen. Beim ersten Beispiel wird der Glottisdruck verringert, damit die Stimme weicher klingt. Außerdem werden der Tonhöhenbereich und das Tempo moderat erhöht, um einen dynamischeren Sprechstil zu erzielen.
 
@@ -239,6 +246,7 @@ Im zweiten Beispiel werden die maximalen Werte für Glottisdruck und Tonhöhe mi
 {: codeblock}
 
 In den nächsten beiden Beispielen wird die wahrgenommene Identität des Sprechers durch eine Anwendung des Timbres geändert. Die Stimme wird durch die Steuerung des Überblendungsgrades und die Änderung des Tonhöhenniveaus geändert. Im ersten Beispiel wird der Standardumfang 100% für das Timbre verwendet.
+
 ```xml
 <voice-transformation type="Custom" timbre="Sunrise" pitch="40%">
   Do you have more information?

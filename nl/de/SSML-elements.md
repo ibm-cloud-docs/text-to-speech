@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-09"
+lastupdated: "2019-06-21"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -31,7 +31,7 @@ Beim {{site.data.keyword.texttospeechfull}}-Service können Sie die meisten Elem
 -   *Teilweise* bedeutet, dass der Service nicht alle Aspekte des Elements oder Attributs unterstützt. Dies kann auch bedeuten, dass der Service das Element bzw. Attribut nur bei einer seiner Schnittstellen unterstützt oder dass das Element bzw. Attribut nicht bei allen Stimmen unterstützt wird.
 -   *Keine* bedeutet, dass der Service das Element oder Attribut nicht unterstützt.
 
-Weitere Informationen zu einem Element oder Attribut finden Sie in der zugehörigen Beschreibung. Bei einigen Attributen und Werten unterscheidet sich die Unterstützung etwas von der SSML-Spezifikation; solche Fälle sind entsprechend gekennzeichnet. Zusätzliche Angaben sind auf der Seite [W3C Speech Synthesis Markup Language (SSML) Version 1.0 ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://www.w3.org/TR/speech-synthesis/){: new_window} zu finden.
+Weitere Informationen zu einem Element oder Attribut finden Sie in der zugehörigen Beschreibung. Bei einigen Attributen und Werten unterscheidet sich die Unterstützung etwas von der SSML-Spezifikation; solche Fälle sind entsprechend gekennzeichnet. Zusätzliche Angaben sind auf der Seite [W3C Speech Synthesis Markup Language (SSML) Version 1.0](http://www.w3.org/TR/speech-synthesis/){: external}.
 
 <table>
   <caption>Tabelle 1. SSML-Elemente</caption>
@@ -207,12 +207,12 @@ Das Element `<emphasis>` fordert an, dass der eingeschlossene Text beim Sprechen
 
 Dieses Element `<lexicon>` führt Wortausspracheverzeichnisse für das angegebene SSML-Dokument ein. Es wird nicht unterstützt.
 
-In der Anpassungsschnittstelle des Service können Sie ein Wörterverzeichnis mit angepassten Einträgen (Paare aus Wort und Umsetzung) definieren, das während der Sprachsynthese verwendet werden soll. Weitere Informationen enthält der Abschnitt [Wissenswertes über die Anpassung](/docs/services/text-to-speech/custom-intro.html).
+In der Anpassungsschnittstelle des Service können Sie ein Wörterverzeichnis mit angepassten Einträgen (Paare aus Wort und Umsetzung) definieren, das während der Sprachsynthese verwendet werden soll. Weitere Informationen enthält der Abschnitt [Wissenswertes über die Anpassung](/docs/services/text-to-speech?topic=text-to-speech-customIntro).
 
 ## Element 'mark'
 {: #mark_element}
 
-Das Element `<mark>` wird nur durch die WebSocket-Schnittstelle des Service unterstützt. Von der HTTP-Schnittstelle wird das Element nicht unterstützt und ignoriert. Weitere Informationen finden Sie unter [SSML-Markup eingeben](/docs/services/text-to-speech/word-timing.html#mark).
+Das Element `<mark>` wird nur durch die WebSocket-Schnittstelle des Service unterstützt. Von der HTTP-Schnittstelle wird das Element nicht unterstützt und ignoriert. Weitere Informationen finden Sie unter [SSML-Markup eingeben](/docs/services/text-to-speech?topic=text-to-speech-timing#mark).
 {: note}
 
 Das Element `<mark>` ist ein leeres Element, das eine Markierung in dem Text setzt, aus dem synthetisch Sprache erstellt werden soll. Der Client wird benachrichtigt, sobald aus dem gesamten Text, der dem Element `<mark>` vorangeht, synthetisch Sprache erstellt worden ist. Das Element akzeptiert ein einziges Attribut `name`, in dem eine Zeichenfolge angegeben ist, die die Markierung eindeutig kennzeichnet; der Name muss mit einem alphanumerischen Zeichen beginnen. Der Name wird zusammen mit dem Zeitpunkt zurückgegeben, an dem die Markierung in der synthetisch erstellten Audioausgabe vorkommt.
@@ -232,7 +232,7 @@ Die Elemente `<meta>` und `<metadata>` sind Container, in denen Sie Informatione
 ## Elemente 'paragraph' und 'sentence'
 {: #ps_element}
 
-Die Elemente `<paragraph>` (bzw. `p`) und `<sentence>` (bzw. `s`) sind optionale Elemente, mit denen Hinweise zur Textstruktur gegeben werden können. Falls der in einem Element `<paragraph>` oder `<sentence>` eingeschlossene Text nicht mit einem Interpunktionszeichen für das Ende eines Satzes (z. B. einem Punkt) aufhört, fügt der Service der synthetisch erstellten Audioausgabe eine längere Pause als gewöhnlich hinzu.
+Die Elemente `<paragraph>` (bzw. `<p>`) und `<sentence>` (bzw. `s`) sind optionale Elemente, mit denen Hinweise zur Textstruktur gegeben werden können. Falls der in einem Element `<paragraph>` oder `<sentence>` eingeschlossene Text nicht mit einem Interpunktionszeichen für das Ende eines Satzes (z. B. einem Punkt) aufhört, fügt der Service der synthetisch erstellten Audioausgabe eine längere Pause als gewöhnlich hinzu.
 
 Das einzige gültige Attribut für beide Elemente ist `xml:lang`; es ermöglicht einen Wechsel der Sprache. Das Attribut wird nicht unterstützt.
 
@@ -276,7 +276,7 @@ Das Element `<phoneme>` stellt eine phonetische Aussprache für den eingeschloss
           &lt;phoneme alphabet="ibm" ph=".0tx.1me.0Fo"&gt;tomato&lt;/phoneme&gt;
         &lt;/speak&gt;</code></pre>
 
-Näheres über die Verwendung der SPR- und IPA-Schreibweise beim Element `<phoneme>` finden Sie unter [IBM SPR verwenden](/docs/services/text-to-speech/SPRs.html).
+Näheres über die Verwendung der SPR- und IPA-Schreibweise beim Element `<phoneme>` finden Sie unter [IBM SPR verwenden](/docs/services/text-to-speech?topic=text-to-speech-sprs).
 
 ## Element 'prosody'
 {: #prosody_element}
@@ -290,7 +290,7 @@ Das Attribut `pitch` ändert die Grundtonhöhe für den Text innerhalb des Eleme
 
 -   Zahl gefolgt von der Bezeichnung `Hz` (Hertz): Hierbei wird die Grundtonhöhe um den angegebenen Wert transponiert (aufwärts oder abwärts).
 -   Relativer Änderungswert (in Halbtönen): Eine Zahl, die eine absolute Verschiebung vom aktuellen Grundniveau bewirkt. Der Zahl geht das Zeichen `+` (Erhöhung) oder `-` (Absenkung) voran; auf sie folgt die Angabe `st` (für 'semitones' = Halbtöne). Beispiel: `+5st`.
--   Relativer Änderungswert in Prozent: Eine Zahl, die eine relative Verschiebung vom aktuellen Grundniveau bewirkt. Der Zahl geht das Zeichen `+` (Erhöhung) oder `-` (Absenkung) voran; auf sie folgt `%` (Prozentzeichen). Beispiel: `-10%`. 
+-   Relativer Änderungswert in Prozent: Eine Zahl, die eine relative Verschiebung vom aktuellen Grundniveau bewirkt. Der Zahl geht das Zeichen `+` (Erhöhung) oder `-` (Absenkung) voran; auf sie folgt `%` (Prozentzeichen). Beispiel: `-10%`.
 -   1 der folgenden sechs Schlüsselwörter, die die Tonhöhe in die entsprechenden vordefinierten Werte ändern:
     -   `default` verwendet die Standardgrundtonhöhe des Service.
     -   `x-low` verschiebt die Grundtonhöhe um 12 Halbtöne nach unten.
@@ -336,7 +336,7 @@ Das Attribut `rate` ändert das Sprechtempo für den Text innerhalb des Elements
 ### Attribut 'volume'
 {: #prosody-volume}
 
-Das Attribut `volume` des Elements `<prosody>` wird vom Service bei den DNN-basierten Stimmen (z. B. `en-US_AllisonV2Voice`) nicht unterstützt. Weitere Informationen zu diesen Stimmen erhalten Sie im Abschnitt [Technologien der Sprachsynthese](/docs/services/text-to-speech/voices.html#technologiesVoices).
+Der Service unterstützt nicht das Attribut `volume` des Elements `<prosody>` mit seinen neuronalen Stimmen (z. B. `en-US_AllisonV3Voice`). Weitere Informationen finden Sie unter [Neuronale Stimmen](/docs/services/text-to-speech?topic=text-to-speech-voices#neuralVoices).
 {: note}
 
 Das Attribut `volume` ändert die Lautstärke für den Text innerhalb des Elements. Sie können eine ganze Zahl oder einen Dezimalwert im Bereich von 1,0 bis 100,0 (maximale Lautstärke) angeben. Sie können auch einen der folgenden Zeichenfolgewerte verwenden, die vordefinierten Einstellungen im Bereich von 0 bis 100 entsprechen. (Der Wert `silent` wird nicht unterstützt.)
@@ -495,7 +495,7 @@ Wenn die angegebene Zahl mehr als zwei Dezimalstellen umfasst, wird der Betrag s
 ### Wert 'vxml:date'
 {: #vxml-date}
 
-Der Wert `vxml:date` hat dieselbe Funktionsweise wie der Wert `date`, das Format ist allerdings mit `JJJJMMTT` vordefiniert. Falls ein Wert für den Tag, den Monat oder das Jahr unbekannt ist oder nicht gesprochen werden soll, ersetzen Sie den Wert durch `?` (Fragezeichen). Im zweiten und dritten Beispiel werden Fragezeichenn verwendet.
+Der Wert `vxml:date` hat dieselbe Funktionsweise wie der Wert `date`, das Format ist allerdings mit `JJJJMMTT` vordefiniert. Falls ein Wert für den Tag, den Monat oder das Jahr unbekannt ist oder nicht gesprochen werden soll, ersetzen Sie den Wert durch `?` (Fragezeichen). Im zweiten und dritten Beispiel werden Fragezeichen verwendet.
 
 ```xml
 <speak version="1.0">
@@ -509,7 +509,7 @@ Der Wert `vxml:date` hat dieselbe Funktionsweise wie der Wert `date`, das Format
 ### Wert 'vxml:digits'
 {: #vxml-digits}
 
-Der Wert `vxml:digits` bietet dieselbe Funktionweise wie der Wert `digits`.
+Der Wert `vxml:digits` bietet dieselbe Funktionsweise wie der Wert `digits`.
 
 ### Wert 'vxml:phone'
 {: #vxml-phone}

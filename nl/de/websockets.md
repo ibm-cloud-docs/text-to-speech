@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-09"
+lastupdated: "2019-06-24"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -34,9 +34,9 @@ Der Zyklus der Anforderung und Antwort für die synthetische Erstellung beinhalt
 1.  [Eingabetext senden](#WSsend)
 1.  [Antwort empfangen](#WSreceive)
 
-Die WebSocket-Schnittstelle akzeptiert dieselben Eingaben wie die Methoden `GET` und `POST /v1/synthesize` der HTTP-Schnittstelle und erzeugt identische Ergebnisse. Bei der WebSocket-Schnittstelle wird jedoch die Verwendung des SSML-Elements `<mark>` unterstützt, mit dem die Position von benutzerdefinierten Markierungen in der Audioausgabe angegeben werden kann. Außerdem können bei dieser Schnittstelle Taktinformationen für alle Zeichenfolgen des Eingabetextes zurückgegeben werden. Weitere Informationen finden Sie unter [Worttakt abrufen](/docs/services/text-to-speech/word-timing.html).
+Die WebSocket-Schnittstelle akzeptiert dieselben Eingaben wie die Methoden `GET` und `POST /v1/synthesize` der HTTP-Schnittstelle und erzeugt identische Ergebnisse. Bei der WebSocket-Schnittstelle wird jedoch die Verwendung des SSML-Elements `<mark>` unterstützt, mit dem die Position von benutzerdefinierten Markierungen in der Audioausgabe angegeben werden kann. Außerdem können bei dieser Schnittstelle Taktinformationen für alle Zeichenfolgen des Eingabetextes zurückgegeben werden. Weitere Informationen finden Sie unter [Worttakt abrufen](/docs/services/text-to-speech?topic=text-to-speech-timing).
 
-Die folgenden Snippets des Beispielcodes sind in JavaScript geschrieben und basieren auf der HTML5-WebSocket-API. Weitere Informationen zum WebSocket-Protokoll finden Sie auf der von der Internet Engineering Task Force (IETF) betriebenen Seite [Request for Comment (RFC) 6455.![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://tools.ietf.org/html/rfc6455){: new_window}
+Die folgenden Snippets des Beispielcodes sind in JavaScript geschrieben und basieren auf der HTML5-WebSocket-API. Weitere Informationen zum WebSocket-Protokoll finden Sie auf der von der Internet Engineering Task Force (IETF) betriebenen Seite [Request for Comment (RFC) 6455](http://tools.ietf.org/html/rfc6455){: external}.
 {: note}
 
 ## Verbindung öffnen
@@ -69,62 +69,63 @@ Ein WebSocket-Client ruft diese Methode mit den folgenden Abfrageparametern auf,
   </tr>
   <tr>
     <td style="text-align:left"><code>access_token</code>
-      <br/><em>Optional</em></td>
+      <br/><em>      Optional
+    </em></td>
     <td style="text-align:center">Zeichenfolge</td>
     <td style="text-align:left">
       <em>Falls Sie die IAM-Authentifizierung nutzen,</em> übergeben Sie ein
-      gültiges IAM-Zugriffstoken, um sich beim Service zu authentifizieren.
-      Mit dem Aufruf übergeben Sie ein IAM-Zugriffstoken anstelle eines
-      API-Schlüssels. Sie müssen das Zugriffstoken nutzen, bevor es abläuft.
-      Informationen zum Anfordern eines Zugriffstokens finden Sie unter
-      [Authentifizierung mit IAM-Tokens durchführen](/docs/services/watson/getting-started-iam.html).
+      gültiges IAM-Zugriffstoken, um sich beim Service zu authentifizieren. Mit dem Aufruf übergeben Sie ein IAM-Zugriffstoken anstelle eines
+      API-Schlüssels. Sie müssen das Zugriffstoken nutzen, bevor es abläuft. Informationen zum Anfordern eines Zugriffstokens finden Sie unter
+      [Authentifizierung mit IAM-Tokens durchführen](/docs/services/watson?topic=watson-iam).
     </td>
   </tr>
   <tr>
     <td style="text-align:left"><code>watson-token</code>
-      <br/><em>Optional</em></td>
+      <br/><em>      Optional
+    </em></td>
     <td style="text-align:center">Zeichenfolge</td>
     <td style="text-align:left">
       <em>Falls Sie Cloud Foundry-Serviceberechtigungsnachweise verwenden,</em>
       übergeben Sie ein gültiges
       {{site.data.keyword.watson}}-Authentifizierungstoken, um sich beim
       Service zu authentifizieren. Sie übergeben ein {{site.data.keyword.watson}}-Token,
-      statt mit dem Aufruf Serviceberechtigungsnachweise zu übergeben. 
+      statt mit dem Aufruf Serviceberechtigungsnachweise zu übergeben.
       {{site.data.keyword.watson}}-Tokens basieren auf Cloud
       Foundry-Serviceberechtigungsnachweisen, die für die
       HTTP-Basisauthentifizierung einen `Benutzernamen` und
       ein `Kennwort` verwenden. Informationen zum Anfordern
-      eines {{site.data.keyword.watson}}-Tokens finden Sie unter [{{site.data.keyword.watson}}-Tokens](/docs/services/watson/getting-started-tokens.html).
+      eines {{site.data.keyword.watson}}-Tokens finden Sie unter [{{site.data.keyword.watson}}-Tokens](/docs/services/watson?topic=watson-gs-tokens-watson-tokens).
     </td>
   </tr>
   <tr>
-    <td><code>voice</code><br/><em>Optional</em></td>
+    <td><code>voice</code><br/><em>      Optional
+    </em></td>
     <td style="text-align:center">Zeichenfolge</td>
     <td>
       Gibt die Stimme an, die den Text in der Audioausgabe sprechen soll.
       Lassen Sie den Parameter weg, wenn die Standardstimme
       `en-US_MichaelVoice` verwendet werden soll.
-       Weitere Informationen finden Sie unter
-      [Sprachen und Stimmen](/docs/services/text-to-speech/voices.html).
-</td>
+      Weitere Informationen finden Sie unter
+      [Sprachen und Stimmen](/docs/services/text-to-speech?topic=text-to-speech-voices).
+    </td>
   </tr>
   <tr>
-    <td><code>customization_id</code><br/><em>Optional</em></td>
+    <td><code>customization_id</code><br/><em>      Optional
+    </em></td>
     <td style="text-align:center">Zeichenfolge</td>
     <td>
       Gibt die GUID (global eindeutige ID) für ein angepasstes Sprechmodell
       an, das für die Synthese verwendet werden soll. Ein angepasstes
       Sprechmodell funktioniert nur dann, wenn es mit der Sprache
-      der Stimme übereinstimmt, die für die Synthese verwendet wird. Falls Sie
-      eine Anpassungs-ID einbeziehen, müssen Sie die Methode mit den
-      Serviceberechtigungsnachweisen für den Eigner des angepassten Modells
-      aufrufen. Lassen Sie den Parameter weg, um die angegebene Stimme
-      ohne Anpassung zu verwenden. Weitere Informationen enthält der
-      Abschnitt [Wissenswertes
-      über die Anpassung](/docs/services/text-to-speech/custom-intro.html).</td>
+      der Stimme übereinstimmt, die für die Synthese verwendet wird. Wenn Sie eine Anpassungs-ID angeben, müssen Sie die Anforderung mit den Berechtigungsnachweisen für die Instanz des Service ausführen, der Eigner des angepassten Modells ist. Lassen Sie den Parameter weg, um die angegebene Stimme
+      ohne Anpassung zu verwenden. Weitere Informationen enthält der Abschnitt
+      [Wissenswertes
+      über die Anpassung](/docs/services/text-to-speech?topic=text-to-speech-customIntro).
+    </td>
   </tr>
   <tr>
-    <td><code>x-watson-learning-opt-out</code><br/><em>Optional</em></td>
+    <td><code>x-watson-learning-opt-out</code><br/><em>      Optional
+    </em></td>
     <td style="text-align:center">Boolescher Wert</td>
     <td>
       Gibt an, ob der Service Anforderungen und Ergebnisse protokolliert, die
@@ -132,11 +133,13 @@ Ein WebSocket-Client ruft diese Methode mit den folgenden Abfrageparametern auf,
       IBM zur allgemeinen Serviceverbesserung auf Ihre Daten zugreift, geben Sie
       den Wert <code>true</code> für den Parameter an. Weitere Informationen
       enthält der Abschnitt [Anforderungsprotokollierung
-      für Watson-Services steuern](/docs/services/watson/getting-started-logging.html).</td>
+      für Watson-Services steuern](/docs/services/watson?topic=watson-gs-logging-overview).
+    </td>
   </tr>
   <tr>
     <td style="text-align:left"><code>x-watson-metadata</code>
-      <br/><em>Optional</em></td>
+      <br/><em>      Optional
+    </em></td>
     <td style="text-align:center">Zeichenfolge</td>
     <td style="text-align:left">
       Ordnet den Daten, die über die Verbindung übertragen werden, eine
@@ -146,7 +149,8 @@ Ein WebSocket-Client ruft diese Methode mit den folgenden Abfrageparametern auf,
       soll. Sie müssen das Argument für den Parameter als URL codieren, z. B.
       `customer_id%3dmy_ID`. Standardmäßig wird den Daten
       keine Kunden-ID zugeordnet. Weitere Informationen finden Sie unter
-[Informationssicherheit](/docs/services/text-to-speech/information-security.html).</td>
+[Informationssicherheit](/docs/services/text-to-speech?topic=text-to-speech-information-security).
+    </td>
   </tr>
 </table>
 
@@ -157,8 +161,8 @@ var IAM_access_token = '{access_token}';
 var wsURI = 'wss://stream.watsonplatform.net/text-to-speech/api/v1/synthesize'
   + '?access_token=' + IAM_access_token
   + '&voice=en-US_AllisonVoice';
-
 var websocket = new WebSocket(wsURI);
+
 websocket.onopen = function(evt) { onOpen(evt) };
 websocket.onclose = function(evt) { onClose(evt) };
 websocket.onmessage = function(evt) { onMessage(evt) };
@@ -183,14 +187,13 @@ Um aus Text synthetisch Sprache zu erstellen, übergibt der Client eine einfache
     <td style="text-align:center">Zeichenfolge</td>
     <td>
       Gibt den Text an, aus dem synthetisch Sprache erstellt werden soll. Der
-      Client kann einfachen Text oder mit SSML annotierten Text übergeben.
-      Der Client kann mit der Anforderung Eingabetext in einer Größe von maximal
+      Client kann einfachen Text oder mit SSML annotierten Text übergeben. Der Client kann mit der Anforderung Eingabetext in einer Größe von maximal
       5 KB übergeben. Die Begrenzung bezieht jeden gegebenenfalls angegebenen
       SSML-Code ein. Weitere Informationen finden Sie unter
       [Eingabetext
-      angeben](/docs/services/text-to-speech/http.html#input) sowie in den dort folgenden Abschnitten.<br/><br/>
-      SSML-Eingabe kann auch das Element <code>&lt;mark&gt;</code> enthalten. 
-      Weitere Informationen finden Sie unter [SSML-Markup eingeben](/docs/services/text-to-speech/word-timing.html#mark).
+      angeben](/docs/services/text-to-speech?topic=text-to-speech-usingHTTP#input) sowie in den dort folgenden Abschnitten.<br/><br/>
+      SSML-Eingabe kann auch das Element <code>&lt;mark&gt;</code> enthalten.
+      Weitere Informationen finden Sie unter [SSML-Markup eingeben](/docs/services/text-to-speech?topic=text-to-speech-timing#mark).
     </td>
   </tr>
   <tr>
@@ -199,12 +202,12 @@ Um aus Text synthetisch Sprache zu erstellen, übergibt der Client eine einfache
     <td>
       Gibt das angeforderte Format (MIME-Typ) der Audioausgabe an. Verwenden
       Sie den Wert `*/*`, um das Standardaudioformat
-      <code>audio/ogg;codecs=opus</code> anzufordern. Weitere Informationen
-      finden Sie unter [Audioformate](/docs/services/text-to-speech/audio-formats.html).
+      <code>audio/ogg;codecs=opus</code> anzufordern. Weitere Informationen finden Sie unter [Audioformate](/docs/services/text-to-speech?topic=text-to-speech-audioFormats).
     </td>
   </tr>
   <tr>
-    <td><code>timings</code><br/><em>Optional</em></td>
+    <td><code>timings</code><br/><em>      Optional
+    </em></td>
     <td style="text-align:center">Zeichenfolge[ ]</td>
     <td>
       Gibt an, dass der Service für alle Zeichenfolgen des Eingabetextes
@@ -212,9 +215,10 @@ Um aus Text synthetisch Sprache zu erstellen, übergibt der Client eine einfache
       und die Endzeit für jedes Token der Eingabe zurück. Geben Sie
       <code>words</code> als einziges Element des Arrays an, um den Worttakt
       anzufordern. Geben Sie ein leeres Array an oder lassen Sie den Parameter
-      weg, damit keine Worttaktinformationen empfangen werden. Weitere Informationen
+      weg, damit keine Worttaktinformationen empfangen werden.
+      Weitere Informationen
       finden Sie unter [Worttakt
-      anfordern](/docs/services/text-to-speech/word-timing.html#timing). <em>Bei Eingabetext in Japanisch wird dieser Parameter
+      anfordern](/docs/services/text-to-speech?topic=text-to-speech-timing#timing). <em>Bei Eingabetext in Japanisch wird dieser Parameter
       nicht unterstützt.</em>
     </td>
   </tr>
@@ -324,4 +328,4 @@ Das folgende Beispiel zeigt eine Warnantwort, in diesem Fall für einen unbekann
 ```
 {: codeblock}
 
-Weitere Informationen zu WebSocket-Rückgabecodes finden Sie auf der von der Internet Engineering Task Force (IETF) betriebenen Seite [Request for Comments (RFC) 6455.![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://tools.ietf.org/html/rfc6455){: new_window}
+Weitere Informationen zu WebSocket-Rückgabecodes finden Sie auf der von der Internet Engineering Task Force (IETF) betriebenen Seite [Request for Comments (RFC) 6455](http://tools.ietf.org/html/rfc6455){: external}.

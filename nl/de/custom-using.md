@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-06-24"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -25,7 +25,7 @@ subcollection: text-to-speech
 # Angepasstes Sprechmodell verwenden
 {: #customUsing}
 
-Nachdem Sie ein angepasstes Modell erstellt und mit angepassten Einträgen gefüllt haben, verwenden Sie es, indem Sie seine Anpassungs-ID (GUID) mit dem Abfrageparameter `customization_id` der HTTP-Methode `GET` bzw. `POST /v1/synthetisize` oder der WebSocket-Methode `/v1/synthesize` übergeben. Zum Aufrufen einer Methode `synthesize`, die ein angepasstes Modell verwendet, müssen die Serviceberechtigungsnachweise für den Eigner des Modells verwendet werden.
+Nachdem Sie ein angepasstes Modell erstellt und mit angepassten Einträgen gefüllt haben, verwenden Sie es, indem Sie seine Anpassungs-ID (GUID) mit dem Abfrageparameter `customization_id` der HTTP-Methode `GET` bzw. `POST /v1/synthetisize` oder der WebSocket-Methode `/v1/synthesize` übergeben. Wenn Sie eine Anpassungs-ID angeben, müssen Sie die Methode `synthesize` mit Berechtigungsnachweisen für die Instanz des Service aufrufen, die Eigner des angegebenen angepassten Modells ist.
 {: shortdesc}
 
 In den ersten beiden Beispielen wird eine angepasste Aussprache für das Wort `IEEE` generiert, die auf Einträgen aus dem angepassten Modell basiert. Die angepasste Aussprache wird anstelle der Standardaussprache aus den normalen Ausspracheregeln des Service verwendet.

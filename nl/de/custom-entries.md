@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-06-24"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -25,7 +25,7 @@ subcollection: text-to-speech
 # Angepasste Einträge erstellen und verwalten
 {: #customWords}
 
-Nachdem ein angepasstes Modell erstellt wurde, besteht der nächste Schritt darin, angepasste Einträge als Paare aus Wort und Umsetzung hinzuzufügen. Hiermit wird definiert, wie angegebene Wörter während der synthetischen Erstellung auszusprechen sind. Die Definitionen setzen die normalen Standardausspracheregeln des Service außer Kraft. Sie können gleichzeitig Umsetzungen für eines oder mehrere Wörter hinzufügen und abfragen; außerdem können Sie einzelne Wörter löschen, die Sie nicht mehr benötigen. Wenn Sie erst einmal mit der Anpassungsschnittstelle vertraut sind, kann die gleichzeitige Bearbeitung mehrerer Wörter bequemer sein, als einzelne Wörter nacheinander separat zu bearbeiten. Damit Sie eine der Methoden nutzen können, die eine Anpassungs-ID erforderlich machen, müssen Sie die Serviceberechtigungsnachweise der Serviceinstanz verwenden, die Eigner des angepassten Modells ist.
+Nachdem ein angepasstes Modell erstellt wurde, besteht der nächste Schritt darin, angepasste Einträge als Paare aus Wort und Umsetzung hinzuzufügen. Hiermit wird definiert, wie angegebene Wörter während der synthetischen Erstellung auszusprechen sind. Die Definitionen setzen die normalen Standardausspracheregeln des Service außer Kraft. Sie können gleichzeitig Umsetzungen für eines oder mehrere Wörter hinzufügen und abfragen; außerdem können Sie einzelne Wörter löschen, die Sie nicht mehr benötigen. Wenn Sie erst einmal mit der Anpassungsschnittstelle vertraut sind, kann die gleichzeitige Bearbeitung mehrerer Wörter bequemer sein, als einzelne Wörter nacheinander separat zu bearbeiten. Damit Sie eine der Methoden nutzen können, die eine Anpassungs-ID erforderlich machen, müssen Sie die Berechtigungsnachweise der Serviceinstanz verwenden, die Eigner des angepassten Modells ist.
 {: shortdesc}
 
 ## Einzelnes Wort zu einem angepassten Modell hinzufügen
@@ -88,7 +88,7 @@ Der JSON-Inhalt, der im Anforderungshauptteil gesendet wird, sieht hierbei folge
 ```
 {: codeblock}
 
-Wie bereits im Abschnitt [Angepasstes Modell aktualisieren](/docs/services/text-to-speech/custom-models.html#cuModelsUpdate) erläutert wurde, können Sie Wörter zu einem angepassten Modell auch mithilfe der Methode `POST /v1/customizations/{customization_id}` hinzufügen. Im folgenden Beispiel werden mit dieser Methode dieselben beiden Wörter wie im vorherigen Beispiel hinzugefügt; die Methode nimmt keine Änderungen an den Metadaten des Modells vor. Mit Ausnahme der URL sind beide Methoden identisch.
+Wie bereits im Abschnitt [Angepasstes Modell aktualisieren](/docs/services/text-to-speech?topic=text-to-speech-customModels#cuModelsUpdate) erläutert wurde, können Sie Wörter zu einem angepassten Modell auch mithilfe der Methode `POST /v1/customizations/{customization_id}` hinzufügen. Im folgenden Beispiel werden mit dieser Methode dieselben beiden Wörter wie im vorherigen Beispiel hinzugefügt; die Methode nimmt keine Änderungen an den Metadaten des Modells vor. Mit Ausnahme der URL sind beide Methoden identisch.
 
 ```bash
 curl -X POST -u "apikey:{apikey}"
@@ -101,7 +101,7 @@ curl -X POST -u "apikey:{apikey}"
 ## Wörter zu einem angepassten Modell für Japanisch hinzufügen
 {: #cuJapaneseAdd}
 
-Für die Erstellung von Einträgen für Wörter in einem angepassten Modell für Japanisch gibt es zusätzliche Hinweise sowie ein Feld `part_of_speech`. Weitere Informationen hierzu enthält der Abschnitt [Mit Einträgen in Japanisch arbeiten](/docs/services/text-to-speech/custom-rules.html#jaNotes). Die Wortart für einen angepassten Eintrag in Japanisch geben Sie folgendermaßen an:
+Für die Erstellung von Einträgen für Wörter in einem angepassten Modell für Japanisch gibt es zusätzliche Hinweise sowie ein Feld `part_of_speech`. Weitere Informationen hierzu enthält der Abschnitt [Mit Einträgen in Japanisch arbeiten](/docs/services/text-to-speech?topic=text-to-speech-rules#jaNotes). Die Wortart für einen angepassten Eintrag in Japanisch geben Sie folgendermaßen an:
 
 -   Übergeben Sie für die Methode `PUT /v1/customizations/{customization_id}/words/{word}` ein JSON-Objekt mit dem folgenden Format:
 
@@ -207,7 +207,7 @@ Die Methode gibt ein JSON-Array mit den folgenden Daten zurück. Bei angepassten
 ```
 {: codeblock}
 
-Wie bereits im Abschnitt [Angepasstes Modell abfragen](/docs/services/text-to-speech/custom-models.html#cuModelsQuery) erläutert wurde, können Sie die Methode `GET /v1/customizations/{customization_id}` ebenfalls verwenden, um sowohl die Metadaten als auch die Wörter für ein angepasstes Modell anzuzeigen:
+Wie bereits im Abschnitt [Angepasstes Modell abfragen](/docs/services/text-to-speech?topic=text-to-speech-customModels#cuModelsQuery) erläutert wurde, können Sie die Methode `GET /v1/customizations/{customization_id}` ebenfalls verwenden, um sowohl die Metadaten als auch die Wörter für ein angepasstes Modell anzuzeigen:
 
 ```bash
 curl -X GET -u "apikey:{apikey}"

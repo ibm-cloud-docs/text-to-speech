@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-09"
+lastupdated: "2019-06-21"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -25,12 +25,12 @@ subcollection: text-to-speech
 # Wissenswertes über die Anpassung
 {: #customIntro}
 
-Wenn Sie mit {{site.data.keyword.texttospeechfull}} aus Text synthetisch Sprache erstellen, wendet der Service sprachenabhängige Ausspracheregeln an. Durch die Anwendung der Regeln konvertiert der Service die herkömmliche (also die ortografische) Schreibweise jedes Wortes in eine phonetische Schreibweise. Die phonetische Schreibweise eines Wortes verwendet Phonemsymbole, um zu definieren, wie das Wort ausgesprochen wird. Bei diesen Symbolen handelt es sich um die verschiedenen Lauteinheiten, die Wörter in einer Sprache unterscheiden, um die Grenzen zwischen den Silben und um die Betonungszeichen für die Silben.
+Wenn Sie mit {{site.data.keyword.texttospeechfull}} aus Text synthetisch Sprache erstellen, wendet der Service sprachenabhängige Ausspracheregeln an. Durch die Anwendung der Regeln konvertiert der Service die herkömmliche (also die orthografische) Schreibweise jedes Wortes in eine phonetische Schreibweise. Die phonetische Schreibweise eines Wortes verwendet Phonemsymbole, um zu definieren, wie das Wort ausgesprochen wird. Bei diesen Symbolen handelt es sich um die verschiedenen Lauteinheiten, die Wörter in einer Sprache unterscheiden, um die Grenzen zwischen den Silben und um die Betonungszeichen für die Silben.
 {: shortdesc}
 
 Die normalen Ausspracheregeln des Service sind für gängige Wörter gut geeignet. Bei ungewöhnlichen Wörtern können sie jedoch zu mangelhaften Ergebnissen führen. Hierzu gehören Sonderbegriffe fremdsprachigen Ursprungs, Personennamen bzw. geografische Bezeichnungen und Abkürzungen oder Akronyme. Falls das Wörterbuch Ihrer Anwendung solche Wörter enthält, können Sie mit der Anpassungsschnittstelle angeben, wie sie vom Service ausgesprochen werden sollen.
 
-Die Anpassungsschnittstelle ist als Betafunktionalität für alle Sprachen verfügbar.
+Die Anpassungsschnittstelle ist als Betafunktionalität für alle Sprachen verfügbar. Sie benötigen den Standardpreisplan, um die Anpassung des Sprachmodells nutzen zu können. Benutzer des Lite-Plans können die Anpassungsschnittstelle nicht verwenden. Weitere Informationen enthält die [Preisstruktur-Seite](https://www.ibm.com/cloud/watson-text-to-speech/pricing){: external} für den {{site.data.keyword.texttospeechshort}}-Service.
 {: note}
 
 ## Funktionsweise der Anpassung
@@ -38,14 +38,14 @@ Die Anpassungsschnittstelle ist als Betafunktionalität für alle Sprachen verf�
 
 Die Anpassungsschnittstelle des {{site.data.keyword.texttospeechshort}}-Service erstellt ein Wörterverzeichnis mit Wörtern und deren Umsetzungen für eine bestimmte Sprache. Dieses Wörterverzeichnis wird als *angepasstes Sprechmodell* oder auch kurz als 'angepasstes Modell' bezeichnet. Jeder angepasste Eintrag in einem angepassten Sprechmodell besteht aus einem Paar im Format *Wort*/*Umsetzung*. Die Umsetzung eines Wortes teilt dem Service mit, wie das Wort auszusprechen ist, wenn es im Eingabetext vorkommt.
 
-Die Anpassungsschnittstelle bietet Methoden, mit denen Sie Ihre angepassten Sprechmodelle, die vom Service permanent gespeichert werden, erstellen und verwalten können. Nachdem Sie ein angepasstes Modell erstellt haben, können Sie es während der Synthese mit jeder beliebigen Version der Methode `/v1/synthesize` verwenden. Wenn der Service aus Eingabetext synthetisch Sprache erstellt, ermittelt er die Aussprache der Wörter, die im angepassten Modell enthalten sind, durch eine direkte oder indirekte Anwendung ihrer Umsetzungen.
+Die Anpassungsschnittstelle bietet Methoden, mit denen Sie Ihre angepassten Sprechmodelle, die vom Service permanent gespeichert werden, erstellen und verwalten können. Nachdem Sie ein angepasstes Modell erstellt haben, können Sie es während der Synthese mit jeder beliebigen Version der Methode `/v1/synthesize` verwenden. Wenn der Service aus Eingabetext synthetisch Sprache erstellt, ermittelt er die Aussprache der Wörter, die im angepassten Modell enthalten sind, durch eine direkte oder indirekte Anwendung ihrer Umsetzungen. Da Sie ein benutzerdefiniertes Sprechmodell für eine bestimmte Sprache erstellen, kann ein benutzerdefiniertes Modell mit einer beliebigen (standardmäßigen oder neuronalen) Sprache verwendet werden, das in dieser Sprache verfügbar ist. 
 
-Die Umsetzung für ein Wort geben Sie in einem angepassten Sprechmodell als *gleich klingende Umsetzung* oder *phonetische Umsetzung* an. Sie können beide Methoden für Einträge in demselben angepassten Modell verwenden und die beiden Methoden auch innerhalb einer Umsetzung kombinieren. Für angepasste Einträge gelten eine Reihe von Regeln und Richtlinien. Weitere Informationen finden Sie im Abschnitt [Regeln für die Erstellung von angepassten Einträgen](/docs/services/text-to-speech/custom-rules.html).
+Die Umsetzung für ein Wort geben Sie in einem angepassten Sprechmodell als *gleich klingende Umsetzung* oder *phonetische Umsetzung* an. Sie können beide Methoden für Einträge in demselben angepassten Modell verwenden und die beiden Methoden auch innerhalb einer Umsetzung kombinieren. Für angepasste Einträge gelten eine Reihe von Regeln und Richtlinien. Weitere Informationen finden Sie im Abschnitt [Regeln für die Erstellung von angepassten Einträgen](/docs/services/text-to-speech?topic=text-to-speech-rules).
 
 ## Gleich klingende Umsetzung
 {: #soundsLike}
 
-Bei der *gleich klingenden Umsetzung* werden die normalen Ausspracherregeln des Service verwendet, um die Aussprache eines Zielworts indirekt darzustellen. Eine gleich klingende Umsetzung wird aus den normalen Aussprachevarianten für eines oder mehrere Wörter gebildet. Der Service ersetzt zunächst jedes Vorkommmen des Wortes im Eingabetext durch die angegebene Umsetzung. Anschließend wendet er seine normalen Ausspracheregeln auf die Umsetzung an, wobei die Umsetzung in ihre phonetische Darstellung konvertiert und auf diese Weise die Aussprache erhalten wird.
+Bei der *gleich klingenden Umsetzung* werden die normalen Ausspracheregeln des Service verwendet, um die Aussprache eines Zielworts indirekt darzustellen. Eine gleich klingende Umsetzung wird aus den normalen Aussprachevarianten für eines oder mehrere Wörter gebildet. Der Service ersetzt zunächst jedes Vorkommen des Wortes im Eingabetext durch die angegebene Umsetzung. Anschließend wendet er seine normalen Ausspracheregeln auf die Umsetzung an, wobei die Umsetzung in ihre phonetische Darstellung konvertiert und auf diese Weise die Aussprache erhalten wird.
 
 Viele gängige Abkürzungen und Akronyme werden beispielsweise einwandfrei durch die normalen Ausspracheregeln des Service umgesetzt. Der Service spricht die Abkürzung *cm* als *centimeter* aus. Seltener verwendete Abkürzungen werden Buchstabe für Buchstabe ausgesprochen. Beispielsweise wird die Zeichenfolge *Str* (Abkürzung für *street*) als *S T R* ausgesprochen, also mit einzeln ausgesprochenen Buchstaben. Mit der Methode für die gleich klingende Umsetzung können Sie die Umsetzung *street* für die Zeichenfolge *Str* angeben.
 
@@ -107,7 +107,7 @@ Dies wird nachfolgend am Beispiel des Wortes `trinitroglycerin` erläutert. Die 
 
 In diesen Beispielen besteht die Zeichenfolge für die phonetische Umsetzung aus Phonemsymbolen und einer einzigen Markierung für die Hauptbetonung. Die Markierung für die Hauptbetonung wird in IPA mit <code>&#712;</code> und in SPR mit `1` dargestellt. In beiden Fällen steht sie unmittelbar vor dem Symbol für den betonten Vokal. Auch wenn es in den Beispielen nicht dargestellt ist, können Sie ebenfalls Silbengrenzen und Positionen für eine Nebenbetonung in einer phonetischen Umsetzung angeben. Diese Elemente sind nicht erforderlich und werden normalerweise nicht benötigt, um eine Aussprache festzulegen. Wie gleich klingende Umsetzungen können Sie auch eine phonetische Umsetzung aus mehreren Zeichenfolgen bilden, die durch Leerzeichen voneinander abgegrenzt werden.
 
-Umsetzungen im IPA-Format können Sie auch als IPA-Unicode-Werte angeben. Weitere Informationen enthalten der Abschnitt [IBM SPR verwenden](/docs/services/text-to-speech/SPRs.html) und die sprachspezifischen Tabellen auf den Seiten, auf die im Abschnitt [Unterstützte Sprachen](/docs/services/text-to-speech/SPRs.html#supportedLanguages) Bezug genommen wird. Ein Beispiel für eine Umsetzung, die IPA-Unicode-Werte verwendet, finden Sie unter [Element 'phoneme'](/docs/services/text-to-speech/SSML-elements.html#phoneme_element).
+Umsetzungen im IPA-Format können Sie auch als IPA-Unicode-Werte angeben. Weitere Informationen enthalten der Abschnitt [IBM SPR verwenden](/docs/services/text-to-speech?topic=text-to-speech-sprs) und die sprachspezifischen Tabellen auf den Seiten, auf die im Abschnitt [Unterstützte Sprachen](/docs/services/text-to-speech?topic=text-to-speech-sprs#supportedLanguages) Bezug genommen wird. Ein Beispiel für eine Umsetzung, die IPA-Unicode-Werte verwendet, finden Sie unter [Element 'phoneme'](/docs/services/text-to-speech?topic=text-to-speech-elements#phoneme_element).
 {: note}
 
 ### Vorhandene phonetische Umsetzung bearbeiten
@@ -117,16 +117,16 @@ Sofern Sie nicht gerade Experte auf dem Gebiet der Phonetik sind, ist die Bildun
 
 Mit der Methode `/GET v/1/pronunciation` können Sie eine erste phonetische Umsetzung für ein Wort anfordern. Anschließend können Sie die Umsetzung ändern und so die gewünschte Aussprache erzielen. Wie bei der Methode für gleich klingende Umsetzungen arbeiten Sie auch hier nach dem Prinzip von Versuch und Irrtum. Sie übergeben Ihre mögliche Umsetzung an den Service, lassen aus dem Wort synthetisch Eingabetext erstellen, hören sich die resultierende Audioausgabe an und bearbeiten die mögliche Umsetzung. Diesen Prozess können Sie wiederholen, bis Sie mit der Aussprache zufrieden sind.
 
-Zusätzliche Angaben finden Sie im Abschnitt [Wort aus einer Sprache abfragen](/docs/services/text-to-speech/custom-entries.html#cuWordsQueryLanguage).
+Zusätzliche Angaben finden Sie im Abschnitt [Wort aus einer Sprache abfragen](/docs/services/text-to-speech?topic=text-to-speech-customWords#cuWordsQueryLanguage).
 
 ### Weitere Informationen zur phonetischen Umsetzung
 {: #phoneticInfo}
 
 Die folgenden Quellen bieten weitere Informationen zur phonetischen Umsetzung:
 
--   Näheres über die Verwendung von SSML und des Elements `<phoneme>` finden Sie unter [SSML verwenden](/docs/services/text-to-speech/SSML.html).
--   Weitere Informationen zur Angabe von SPR-Umsetzungen und ihre äquivalenten IPA-Symbole enthält der Abschnitt [IBM SPR verwenden](/docs/services/text-to-speech/SPRs.html).
--   Zusätzliche Angaben über die Verwendung von IPA-Symbolen und Tonbeispiele für die Symbole bieten Quellen im Web. Unter der Adresse [en.wikipedia.org/wiki/International_Phonetic_Alphabet ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://en.wikipedia.org/wiki/International_Phonetic_Alphabet){: new_window} finden Sie eine ausführliche Einführung und Erläuterung.
+-   Näheres über die Verwendung von SSML und des Elements `<phoneme>` finden Sie unter [SSML verwenden](/docs/services/text-to-speech?topic=text-to-speech-ssml).
+-   Weitere Informationen zur Angabe von SPR-Umsetzungen und ihre äquivalenten IPA-Symbole enthält der Abschnitt [IBM SPR verwenden](/docs/services/text-to-speech?topic=text-to-speech-sprs).
+-   Zusätzliche Angaben über die Verwendung von IPA-Symbolen und Tonbeispiele für die Symbole bieten Quellen im Web. Unter der Adresse [Internationales phonetisches Alphabet](https://wikipedia.org/wiki/International_Phonetic_Alphabet){: external} finden Sie eine ausführliche Einführung und Erläuterung.
 
 ## Gleich klingende und phonetische Umsetzung kombinieren
 
