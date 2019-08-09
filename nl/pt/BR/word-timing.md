@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-06-04"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -203,7 +203,7 @@ O serviço retorna todos os caracteres de entrada quando sintetiza textos sem fo
 - `<paragraph>` (ou `<p>`) pode incluir o silêncio no áudio. O serviço não retorna informações de sincronização para o silêncio.
 - `<sentence>` (ou `<s>`) pode incluir o silêncio no áudio. O serviço não retorna informações de sincronização para o silêncio.
 
-Os elementos do SSML não mencionados na lista não afetam as informações de sincronização de palavra. Para obter mais informações sobre o suporte ao SSML do serviço, consulte [Usando o SSML](/docs/services/text-to-speech/SSML.html).
+Os elementos do SSML não mencionados na lista não afetam as informações de sincronização de palavra. Para obter mais informações sobre o suporte ao SSML do serviço, consulte [Usando o SSML](/docs/services/text-to-speech?topic=text-to-speech-ssml).
 
 ## Exemplos com elementos de marca
 {: #timingExample}

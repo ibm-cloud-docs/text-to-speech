@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-21"
+lastupdated: "2019-06-24"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -28,7 +28,7 @@ subcollection: text-to-speech
 Para sintetizar o texto para fala com a interface HTTP REST do serviço {{site.data.keyword.texttospeechfull}}, você chama o método `GET` ou `POST /v1/synthesize`. Você especifica o texto que deve ser sintetizado e a voz e o formato para o áudio falado. Também é possível especificar um modelo de voz customizado que deve ser usado com a solicitação.
 {: shortdesc}
 
-Para obter mais informações sobre a interface HTTP, consulte a [Referência de API ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/apidocs/text-to-speech){: new_window}.
+Para obter mais informações sobre a interface HTTP, consulte a [Referência de API](https://{DomainName}/apidocs/text-to-speech){: external}.
 
 ## Sintetizando o texto para áudio
 {: #synthesize}
@@ -49,36 +49,39 @@ As duas versões do método `/v1/synthesize` têm os parâmetros a seguir em com
     <th style="text-align:left">Descrição</th>
   </tr>
   <tr>
-    <td><code>accept</code><br/><em>Opcional</em></td>
+    <td><code>aceitar</code><br/><em>      Opcional
+    </em></td>
     <td style="text-align:center">Consulta</td>
     <td style="text-align:center">Sequência</td>
     <td>
-      Especifica o formato de áudio ou o tipo MIME solicitado, no qual o serviço deve retornar o áudio. Também é possível especificar esse valor com o cabeçalho de solicitação HTTP <code>Accept</code>. Codifique com URL o argumento para o parâmetro de consulta `accept`. Para obter mais informações, consulte [Formatos de áudio](/docs/services/text-to-speech/audio-formats.html).
+      Especifica o formato de áudio ou o tipo MIME solicitado, no qual o serviço deve retornar o áudio. Também é possível especificar esse valor com o cabeçalho de solicitação HTTP <code>Accept</code>. Codifique com URL o argumento para o parâmetro de consulta `accept`. Para obter mais informações, consulte [Formatos de áudio](/docs/services/text-to-speech?topic=text-to-speech-audioFormats).
     </td>
   </tr>
   <tr>
-    <td><code>voice</code><br/><em>Opcional</em></td>
+    <td><code>voice</code><br/><em>      Opcional
+    </em></td>
     <td style="text-align:center">Consulta</td>
     <td style="text-align:center">Sequência</td>
     <td>
       Especifica a voz na qual o texto deve ser falado no áudio. Use o método <code>/v1/vozes</code>para obter a
-      lista atual de vozes suportadas. A voz padrão é <code>en-US_MichaelVoice</code>. Para obter mais informações, consulte [Idiomas e vozes](/docs/services/text-to-speech/voices.html).
+      lista atual de vozes suportadas. A voz padrão é <code>en-US_MichaelVoice</code>. Para obter mais informações, consulte [Idiomas e vozes](/docs/services/text-to-speech?topic=text-to-speech-voices).
     </td>
   </tr>
   <tr>
-    <td><code>customization_id</code><br/><em>Opcional</em></td>
+    <td><code>customization_id</code><br/><em>      Opcional
+    </em></td>
     <td style="text-align:center">Consulta</td>
     <td style="text-align:center">Sequência</td>
     <td>
-      Especifica um identificador exclusivo global (GUID) para um modelo de voz customizado que deve ser usado para a síntese. É garantido que um modelo de voz customizado especificado funcione somente se ele corresponder ao idioma da voz usada para a síntese. Ao incluir um ID de customização, deve-se chamar o método com as credenciais de serviço do proprietário do modelo. Omita o parâmetro para usar a voz especificada sem a customização. Para obter mais informações, consulte [Entendendo a customização](/docs/services/text-to-speech/custom-intro.html).
+      Especifica um identificador exclusivo global (GUID) para um modelo de voz customizado que deve ser usado para a síntese. É garantido que um modelo de voz customizado especificado funcione somente se ele corresponder ao idioma da voz usada para a síntese. Se você incluir um ID de customização, a solicitação deverá ser realizada com credenciais para a instância do serviço que possui o modelo customizado. Omita o parâmetro para usar a voz especificada sem a customização. Para obter mais informações, consulte [Entendendo a customização](/docs/services/text-to-speech?topic=text-to-speech-customIntro).
     </td>
   </tr>
 </table>
 
 Também é possível usar os cabeçalhos de solicitação a seguir, que estão disponíveis para todos os serviços {{site.data.keyword.watson}}, com uma solicitação sintetizada:
 
--   `X-Watson-Learning-Opt-Out` indica se o serviço registra dados da solicitação e de resposta para realizar melhorias para usuários futuros. Para evitar que a IBM acesse seus dados para melhorias gerais de serviço, especifique <code>true</code> para o parâmetro. Para obter mais informações, consulte [Controlando a criação de log de solicitação para serviços {{site.data.keyword.watson}}](/docs/services/watson/getting-started-logging.html).
--   `X-Watson-Metadados`associa um ID do cliente aos dados que são transmitidos com uma solicitação. Para obter mais informações, consulte [Segurança de informações](/docs/services/text-to-speech/information-security.html).
+-   `X-Watson-Learning-Opt-Out` indica se o serviço registra dados da solicitação e de resposta para realizar melhorias para usuários futuros. Para evitar que a IBM acesse seus dados para melhorias gerais de serviço, especifique <code>true</code> para o parâmetro. Para obter mais informações, consulte [Controlando a criação de logs de solicitação para serviços {{site.data.keyword.watson}}](/docs/services/watson?topic=watson-gs-logging-overview).
+-   `X-Watson-Metadados`associa um ID do cliente aos dados que são transmitidos com uma solicitação. Para obter mais informações, consulte [Segurança de informações](/docs/services/text-to-speech?topic=text-to-speech-information-security).
 
 Se você especificar um parâmetro de consulta ou campo JSON inválido como parte da entrada para o método `/v1/synthesize`, o serviço retornará um cabeçalho de resposta `Warnings` que descreve e lista cada argumento inválido. A solicitação será bem-sucedida, apesar dos avisos.
 {: note}
@@ -105,7 +108,7 @@ Embora os métodos `GET` e `POST` ofereçam funcionalidade equivalente, é sempr
 
 O Speech Synthesis Markup Language (SSML) é uma linguagem de marcações baseada em XML que foi projetada para fornecer anotações de texto para aplicativos de síntese de discurso, como o serviço {{site.data.keyword.texttospeechshort}}. É possível usar os elementos do SSML e seus atributos para obter maior controle sobre a síntese e a saída de áudio resultante.
 
-Para obter mais informações sobre como usar o SSML para anotar o texto de entrada, consulte [Usando o SSML](/docs/services/text-to-speech/SSML.html). A documentação faz um inventário dos atributos e elementos do SSML suportados pelo serviço. Também documenta as extensões expressivas e de transformação de voz do serviço.
+Para obter mais informações sobre como usar o SSML para anotar o texto de entrada, consulte [Usando o SSML](/docs/services/text-to-speech?topic=text-to-speech-ssml). A documentação faz um inventário dos atributos e elementos do SSML suportados pelo serviço. Também documenta as extensões expressivas e de transformação de voz do serviço.
 
 ## Escapando Caracteres de Controle XML
 {: #escape}
@@ -125,28 +128,28 @@ Como é possível enviar um texto de entrada que inclua as anotações do SSML b
     <td style="text-align:center"><code>&amp;#34;</code></td>
   </tr>
   <tr>
-    <td style="text-align:center"><code>'</code><br/>(apóstrofo ou aspa simples)</td>
+    <td style="text-align:center"><code>'</code><br/>(apóstrofo ou aspas simples)</td>
     <td style="text-align:center"><code>&amp;apos;</code></td>
     <td style="text-align:center"><code>&amp;#39;</code></td>
   </tr>
   <tr>
-    <td style="text-align:center"><code>&amp;</code><br/>(e comercial)</td>
-    <td style="text-align:center"><code>&amp; amp;</code></td>
+    <td style="text-align:center"><code>&amp;</code><br/>(e comercial [símbolo &])</td>
+    <td style="text-align:center"><code>&amp;amp;</code></td>
     <td style="text-align:center"><code>&amp;#38;</code></td>
   </tr>
   <tr>
-    <td style="text-align:center"><code>&lt;</code><br/>(colchete de ângulo esquerdo)</td>
+    <td style="text-align:center"><code>&lt;</code><br/>(sinal de maior)</td>
     <td style="text-align:center"><code>&amp;lt;</code></td>
     <td style="text-align:center"><code>&amp;#60;</code></td>
   </tr>
   <tr>
-    <td style="text-align:center"><code>&gt;</code><br/>(colchete de ângulo direito)</td>
+    <td style="text-align:center"><code>&gt;</code><br/>(sinal de menor)</td>
     <td style="text-align:center"><code>&amp;gt;</code></td>
     <td style="text-align:center"><code>&amp;#62;</code></td>
   </tr>
 </table>
 
-Para obter mais informações sobre como o serviço valida o texto de entrada, consulte [Validação de SSML](/docs/services/text-to-speech/SSML.html#errors).
+Para obter mais informações sobre como o serviço valida o texto de entrada, consulte [Validação de SSML](/docs/services/text-to-speech?topic=text-to-speech-ssml#errors).
 
 ## Exemplos de texto de entrada
 {: #httpExamples}

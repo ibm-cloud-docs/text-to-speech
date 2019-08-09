@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-09"
+lastupdated: "2019-06-21"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -43,9 +43,10 @@ O serviço suporta a transformação de voz somente para as seguintes vozes em i
 -   `en-US_LisaVoice`
 -   `en-US_MichaelVoice`
 
-A transformação de voz não é suportada com as versões `V2` e baseada em DNN dessas vozes (por exemplo, `en-US_AllisonV2Voice`). O uso do elemento com uma voz não suportada retorna um erro.
+A transformação de voz não é suportada com as versões neurais dessas vozes (por exemplo, `en-US_AllisonV3Voice`). O uso do elemento com uma voz não suportada retorna um erro.
 
 ## Transformações integradas
+{: #ssml-built-in}
 
 As transformações integradas aplicam mudanças pré-configuradas aos atributos de uma voz. Considere-as como vozes virtuais disponibilizadas pelo serviço. O serviço oferece duas transformações integradas. Para usá-las, você especifica o nome da transformação integrada com distinção entre maiúsculas e minúsculas com o atributo `type`:
 
@@ -58,6 +59,7 @@ O serviço ignora os atributos para transformações customizadas quando você u
 {: note}
 
 ## Exemplos de transformação integrada
+{: #ssml-built-in-examples}
 
 Os exemplos a seguir aplicam as duas transformações integradas à mesma sentença com diferentes intensidades:
 
@@ -73,6 +75,7 @@ Os exemplos a seguir aplicam as duas transformações integradas à mesma senten
 {: codeblock}
 
 ## Transformações customizadas
+{: #ssml-custom-transforms}
 
 Transformações customizadas fornecem mais controle de baixa granularidade sobre diferentes aspectos da transformação de voz. Para usar uma transformação customizada, você especifica `Custom` para o atributo `type`. Em seguida, será possível usar um ou mais dos atributos opcionais a seguir para controlar a transformação.
 
@@ -206,13 +209,14 @@ Use as diretrizes e informações de advertência a seguir:
     -   A alta tensão glótica, o tom elevado e a baixa taxa podem causar sons de zumbido. Aumente a respiração para atenuar o efeito.
     -   A tensão glotal muito baixa pode produzir um discurso ruidoso. Diminua a respiração para reduzir o ruído.
     -   Aumentar ou reduzir o intervalo de tom e a taxa para níveis extremos simultaneamente pode fazer com que a fala não soe natural.
--   Conforme observado, alguns dos atributos são emprestados a partir do elemento SSML `<prosody>`. Para obter mais informações, consulte [O elemento prosody](/docs/services/text-to-speech/SSML-elements.html#prosody_element). Para ativar o controle preciso de prosódia de uma voz virtual, é possível
+-   Conforme observado, alguns dos atributos são emprestados a partir do elemento SSML `<prosody>`. Para obter mais informações, consulte [O elemento prosody](/docs/services/text-to-speech?topic=text-to-speech-elements#prosody_element). Para ativar o controle preciso de prosódia de uma voz virtual, é possível
     -   Neste elementos `<prosody>`dentro dos elementos `<voice-transformation>`.
     -   Neste elementos `<voice-transformation>`dentro dos elementos `<prosody>`.
 
     Você *não pode*aninhar elementos `<voice-transformation>`.
 
 ## Exemplos de transformação customizada
+{: #ssml-custom-transforms-examples}
 
 Os exemplos a seguir aplicam atributos diferentes para demonstrar possíveis aplicações da transformação customizada. O primeiro exemplo diminui a tensão glótica para tornar a voz mais suave. Também aumenta o intervalo de tom e a taxa moderadamente para introduzir um estilo de fala mais dinâmico.
 

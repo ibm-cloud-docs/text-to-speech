@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-03-07"
+lastupdated: "2018-06-04"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -94,7 +94,7 @@ O Symbolic Phonetic Representation (SPR) é um formato proprietário e dependent
 -   É possível usar um ponto para indicar o início de uma sílaba em uma tradução, mas os pontos são opcionais e não influenciam a pronúncia da palavra. Eles aparecem na pronúncia para uma palavra somente se você os incluir em sua tradução. Não use espaços para indicar limites silábicos.
 -   A {{site.data.keyword.IBM_notm}} recomenda que você anteceda a vogal com o acento primário para uma palavra com um símbolo `1`, embora isso não seja estritamente necessário. O serviço determina onde o estresse ocorre se você não indicar isso. Também é possível usar um símbolo `2` para indicar cada posição de acento secundário, mas o uso de símbolos `2` também é opcional. Eles aparecem na pronúncia para uma palavra somente se você os incluir em sua tradução.
 
-Para obter mais informações sobre como trabalhar com o SPR, consulte [Usando o IBM SPR](/docs/services/text-to-speech/SPRs.html).
+Para obter mais informações sobre como trabalhar com o SPR, consulte [Usando o IBM SPR](/docs/services/text-to-speech?topic=text-to-speech-sprs).
 
 ## Trabalhando com entradas em japonês
 {: #jaNotes}
@@ -131,7 +131,7 @@ Regras adicionais e um campo `part_of_speech` se aplicam à criação de entrada
 ### Partes do discurso em japonês
 {: #partsOfSpeech}
 
-A tabela a seguir lista as partes do discurso suportadas para as entradas customizadas em japonês. Para obter mais informações sobre como especificar a parte do discurso para uma entrada customizada em japonês, consulte [Incluindo palavras em um modelo customizado em japonês](/docs/services/text-to-speech/custom-entries.html#cuJapaneseAdd).
+A tabela a seguir lista as partes do discurso suportadas para as entradas customizadas em japonês. Para obter mais informações sobre como especificar a parte do discurso para uma entrada customizada em japonês, consulte [Incluindo palavras em um modelo customizado em japonês](/docs/services/text-to-speech?topic=text-to-speech-customWords#cuJapaneseAdd).
 
 <table style="width:75%">
   <caption>Tabela 1. Partes do discurso em japonês</caption>

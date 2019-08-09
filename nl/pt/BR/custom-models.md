@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-06-24"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -36,11 +36,11 @@ Considere as diretrizes a seguir ao trabalhar com a interface de customização.
 ### Propriedade de modelos de voz customizados
 {: #customOwner}
 
-Um modelo de voz customizado é de propriedade da instância de serviço do {{site.data.keyword.texttospeechshort}} cujas credenciais são usadas para criá-lo. Deve-se usar as credenciais de serviço criadas para essa instância de serviço com os métodos da interface de customização para trabalhar com o modelo customizado.
+Um modelo de voz customizado é de propriedade da instância de serviço do {{site.data.keyword.texttospeechshort}} cujas credenciais são usadas para criá-lo. Para trabalhar com o modelo customizado de qualquer forma, deve-se usar credenciais para essa instância de serviço com métodos da interface de customização.
 
-Todas as credenciais de serviço obtidas para a mesma instância do {{site.data.keyword.texttospeechshort}}serviço compartilham acesso a todos os modelos customizados criados para essa instância de serviço. Para restringir o acesso a um modelo customizado, crie uma instância separada do serviço e use somente as credenciais para essa instância de serviço para criar e trabalhar com o modelo. Credenciais para outras instâncias de serviço não afetam o modelo customizado.
+Todas as credenciais obtidas para a mesma instância do serviço {{site.data.keyword.texttospeechshort}} compartilham o acesso a todos os modelos customizados criados para essa instância. Para restringir o acesso a um modelo customizado, crie uma instância separada do serviço e use somente as credenciais para essa instância de serviço para criar e trabalhar com o modelo. Credenciais para outras instâncias de serviço não afetam o modelo customizado.
 
-Uma vantagem de compartilhar a propriedade entre as credenciais de serviço é que é possível cancelar um conjunto de credenciais, por exemplo, se ficarem comprometidas. Em seguida, será possível criar novas credenciais para a mesma instância de serviço e ainda manter a propriedade e o acesso aos modelos customizados criados com as credenciais originais.
+Uma vantagem de compartilhar a propriedade entre as credenciais é cancelar um conjunto de credenciais, por exemplo, se elas ficarem comprometidas. Em seguida, será possível criar novas credenciais para a mesma instância de serviço e ainda manter a propriedade e o acesso aos modelos customizados criados com as credenciais originais.
 
 ### Solicitar a criação de log e a privacidade de dados
 {: #customLogging}
@@ -50,7 +50,7 @@ A maneira como o serviço manipula a criação de log de solicitação para cham
 -   O serviço *não* registra dados (palavras e traduções) usados para construir modelos de voz customizados. Não é necessário configurar o cabeçalho de solicitação `X-Watson-Learning-Opt-Out` ao usar a interface de customização para gerenciar palavras e traduções em um modelo customizado. Seus dados de treinamento nunca são usados para melhorar os modelos base do serviço.
 -   O serviço *registra* os dados de log quando um modelo customizado é usado com uma solicitação de sintetização. Deve-se configurar o cabeçalho de solicitação `X-Watson-Learning-Opt-Out` para `true` para evitar a criação de log para solicitações de sintetização.
 
-Para obter mais informações, consulte [Controlando a criação de log de solicitação para serviços {{site.data.keyword.watson}}](/docs/services/watson/getting-started-logging.html).
+Para obter mais informações, consulte [Controlando a criação de logs de solicitação para serviços {{site.data.keyword.watson}}](/docs/services/watson?topic=watson-gs-logging-overview).
 
 ### Segurança de Informações
 {: #customSecurity}
@@ -61,12 +61,12 @@ O serviço permite associar um ID do cliente aos dados incluídos ou atualizados
 -   `POST /v1/customizations/{customization_id}/words`
 -   `PUT /v1/customizations/{customization_id}/words/{word}`
 
-Se necessário, será possível excluir os dados associados ao ID do cliente em seguida, usando o método `DELETE /v1/user_data`. Para obter mais informações, consulte [Segurança de informações](/docs/services/text-to-speech/information-security.html).
+Se necessário, será possível excluir os dados associados ao ID do cliente em seguida, usando o método `DELETE /v1/user_data`. Para obter mais informações, consulte [Segurança de informações](/docs/services/text-to-speech?topic=text-to-speech-information-security).
 
 ## Criando um modelo customizado
 {: #cuModelsCreate}
 
-Para criar um novo modelo customizado, use o método `POST /v1/customizations`. Como novo modelo está sempre vazio ao criá-lo pela primeira vez, deve-se usar outros métodos para preenchê-lo com pares de palavra/tradução. O novo modelo customizado é de propriedade do usuário cujas credenciais de serviço são usadas para criá-lo. Para obter mais informações, consulte [Propriedade de modelos de voz customizados](#customOwner).
+Para criar um novo modelo customizado, use o método `POST /v1/customizations`. Um novo modelo estará sempre vazio no momento de sua criação. Deve-se usar outros métodos para preenchê-lo com pares de palavra/tradução. O novo modelo customizado é de propriedade da instância de serviço cujas credenciais são usadas para criá-lo. Para obter mais informações, consulte [Propriedade de modelos de voz customizados](#customOwner).
 
 Você transmite os atributos a seguir como um objeto JSON com o corpo da solicitação.
 
@@ -78,21 +78,23 @@ Você transmite os atributos a seguir como um objeto JSON com o corpo da solicit
     <th style="text-align:left">Descrição</th>
   </tr>
   <tr>
-    <td><code>name</code><br/><em>Necessário</em></td>
+    <td><code> name </code><br/><em>Necessário</em></td>
     <td style="text-align:center">Sequência</td>
     <td>
       Um nome definido pelo usuário para o novo modelo customizado. O nome é usado para rotular o modelo para fácil identificação. O nome deve ser exclusivo entre todos os modelos customizados possuídos.
     </td>
   </tr>
   <tr>
-    <td><code>language</code><br/><em>Opcional</em></td>
+    <td><code>linguagem                                                        </code><br/><em>      Opcional
+    </em></td>
     <td style="text-align:center">Sequência</td>
     <td>
-      Um identificador para o idioma do modelo customizado. O padrão é <code>en-US</code> para inglês americano.
+      Um identificador para o idioma do modelo customizado. O padrão é <code>en-US</code> para inglês americano. O modelo customizado pode ser usado com qualquer voz, padrão ou neural que esteja disponível no idioma especificado.
     </td>
   </tr>
   <tr>
-    <td><code>description</code><br/><em>Opcional</em></td>
+    <td><code>description</code><br/><em>      Opcional
+    </em></td>
     <td style="text-align:center">Sequência</td>
     <td>
       Uma descrição do novo modelo. Embora seja opcional, uma descrição é altamente recomendada.
@@ -146,7 +148,7 @@ O método retorna seus resultados como um objeto JSON do seguinte formato:
 ```
 {: codeblock}
 
-Além das informações inseridas quando o modelo foi criado, a saída inclui as credenciais de serviço de seu proprietário, seu idioma e os horários nos quais ele foi criado e modificado pela última vez. Como o modelo não foi modificado desde sua criação, os dois horários no exemplo são iguais.
+Além das informações inseridas na criação do modelo, a saída inclui as credenciais do proprietário do modelo, o idioma do modelo e os horários de criação e última modificação do modelo. Como o modelo não foi modificado desde sua criação, os dois horários no exemplo são iguais.
 
 A saída também inclui uma matriz `words` que lista as entradas customizadas do modelo. Como o modelo ainda não foi atualizado, a matriz no exemplo está vazia.
 
@@ -161,7 +163,7 @@ curl -X GET -u "apikey:{apikey}"
 ```
 {: pre}
 
-O método retorna uma matriz JSON que inclui um objeto para cada modelo customizado pertencente ao solicitante. As credenciais de serviço do proprietário são mostradas no campo `owner`.
+O método retorna uma matriz JSON que inclui um objeto para cada modelo customizado pertencente ao solicitante. As credenciais do proprietário são mostradas no campo `owner`.
 
 ```javascript
 {
@@ -206,7 +208,7 @@ curl -X POST -u "apikey:{apikey}"
 ```
 {: pre}
 
-Para obter informações sobre como atualizar as palavras em um modelo, consulte [Incluindo diversas palavras em um modelo customizado](/docs/services/text-to-speech/custom-entries.html#cuWordsAdd).
+Para obter informações sobre como atualizar as palavras em um modelo, consulte [Incluindo diversas palavras em um modelo customizado](/docs/services/text-to-speech?topic=text-to-speech-customWords#cuWordsAdd).
 
 ## Excluindo um modelo customizado
 {: #cuModelsDelete}

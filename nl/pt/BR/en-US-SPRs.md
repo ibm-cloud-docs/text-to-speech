@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-06-04"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -34,7 +34,7 @@ As seções a seguir descrevem os símbolos válidos para o inglês americano.
   <caption>Tabela 1. Vowels regulares (Inglês dos EUA)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Símbolo de SPR US English<br/>
+      Inglês americano<br/>Símbolo do SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Símbolo do IPA
@@ -250,7 +250,7 @@ As seções a seguir descrevem os símbolos válidos para o inglês americano.
   <caption>Tabela 2. Ditongos (inglês americano)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Símbolo de SPR US English<br/>
+      Inglês americano<br/>Símbolo do SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Símbolo do IPA
@@ -313,7 +313,7 @@ As seções a seguir descrevem os símbolos válidos para o inglês americano.
   <caption>Tabela 3. Vogais reduzidas (inglês americano)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Símbolo de SPR US English<br/>
+      Inglês americano<br/>Símbolo do SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Símbolo do IPA
@@ -366,7 +366,7 @@ As seções a seguir descrevem os símbolos válidos para o inglês americano.
   <caption>Tabela 4. Consoantes (inglês americano)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Símbolo de SPR US English<br/>
+      Inglês americano<br/>Símbolo do SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Símbolo do IPA

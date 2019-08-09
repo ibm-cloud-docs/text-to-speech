@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-06-04"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -34,7 +34,7 @@ As seções a seguir descrevem os símbolos válidos para o inglês britânico.
   <caption>Tabela 1. Vogais regulares (inglês britânico)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Símbolo Inglês britânico<br/>SPR
+      Inglês britânico<br/>Símbolo do SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Símbolo do IPA
@@ -260,7 +260,7 @@ As seções a seguir descrevem os símbolos válidos para o inglês britânico.
   <caption>Tabela 2. Ditongos (inglês britânico)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Símbolo Inglês britânico<br/>SPR
+      Inglês britânico<br/>Símbolo do SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Símbolo do IPA
@@ -323,7 +323,7 @@ As seções a seguir descrevem os símbolos válidos para o inglês britânico.
   <caption>Tabela 3. Vogais reduzidas (inglês britânico)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Símbolo Inglês britânico<br/>SPR
+      Inglês britânico<br/>Símbolo do SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Símbolo do IPA
@@ -374,7 +374,7 @@ As seções a seguir descrevem os símbolos válidos para o inglês britânico.
   <caption>Tabela 4. Consoantes (inglês britânico)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Símbolo Inglês britânico<br/>SPR
+      Inglês britânico<br/>Símbolo do SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Símbolo do IPA

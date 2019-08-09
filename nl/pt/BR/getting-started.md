@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-14"
+lastupdated: "2019-07-03"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -33,36 +33,35 @@ subcollection: text-to-speech
 O serviço {{site.data.keyword.texttospeechfull}} converte o texto escrito em discurso semelhante ao natural para fornecer recursos de síntese de discurso para aplicativos. Esse tutorial baseado em curl pode ajudá-lo a começar rapidamente a usar o serviço. Os exemplos mostram como chamar os métodos `POST` e `GET /v1/synthesize` do serviço para solicitar um fluxo de áudio.
 {: shortdesc}
 
-O tutorial usa as chaves de API do {{site.data.keyword.cloud}} Identity and Access Management (IAM) para a autenticação. As instâncias de serviço mais antigas podem continuar usando o `{username}` e o `{password}` de suas credenciais de serviço existentes do Cloud Foundry para a autenticação. Autentique-se usando a abordagem ideal para sua instância de serviço. Para obter mais informações sobre o uso da autenticação do IAM pelo serviço, consulte a [Atualização de serviço de 30 de outubro de 2018](/docs/services/text-to-speech/release-notes.html#October2018) nas notas sobre a liberação.
-{: important}
-
 ## Antes de começar
 {: #before-you-begin}
 
 - {: hide-dashboard}  Crie uma instância do serviço:
-    1.  {: hide-dashboard} Acesse a página [{{site.data.keyword.texttospeechshort}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/catalog/services/text-to-speech){: new_window} no {{site.data.keyword.cloud_notm}} Catalog.
+    1.  {: hide-dashboard} Acesse a página [{{site.data.keyword.texttospeechshort}}](https://{DomainName}/catalog/services/text-to-speech){: external} no catálogo do {{site.data.keyword.cloud_notm}}.
     1.  {: hide-dashboard} Inscreva-se para obter uma conta gratuita do {{site.data.keyword.cloud_notm}} ou efetue login.
     1.  {: hide-dashboard} Clique em **Criar**.
 -   Copie as credenciais para autenticar sua instância de serviço:
-    1.  {: hide-dashboard} No painel do [{{site.data.keyword.cloud_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/dashboard/apps){: new_window}, clique em sua instância de serviço do {{site.data.keyword.texttospeechshort}} para acessar a página do painel do serviço {{site.data.keyword.texttospeechshort}}.
+    1.  {: hide-dashboard} Na [Lista de recursos do {{site.data.keyword.cloud_notm}}](https://{DomainName}/resources){: external}, clique em sua instância de serviço do {{site.data.keyword.texttospeechshort}} e acesse a página do painel de serviço do {{site.data.keyword.texttospeechshort}}.
     1.  Na página **Gerenciar**, clique em **Mostrar** para visualizar suas credenciais.
     1.  Copie os valores de `API Key` e `URL`.
--   Certifique-se de que você tenha o comando `curl`.
-    -   Os exemplos usam o comando `curl` para chamar métodos da interface HTTP. Instale a versão para o seu sistema operacional por meio de [curl.haxx.se ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://curl.haxx.se/){: new_window}. Instale a versão que suporta o protocolo Secure Sockets Layer (SSL). Certifique-se de incluir o arquivo binário instalado em sua variável de ambiente `PATH`.
 
-Ao inserir um comando, substitua `{apikey}` e `{url}` por sua URL e chave de API reais. Omita as chaves, que indicam um valor de variável, do comando. Um valor real é semelhante ao exemplo a seguir:
-{: hide-dashboard}
+### Usando os exemplos de curl
+{: #getting-started-curl}
 
-```bash
-curl -X POST -u "apikey :L_HALhLVIksh1b73l97LSs6R_3gLo4xkujAaxm7i-b9x"
-. . .
-"https://stream.watsonplatform.net/text-to-speech/api/v1/synthesize"
-```
-{:pre}
-{: hide-dashboard}
+Esse tutorial usa o comando `curl` para chamar métodos da interface HTTP do serviço. Certifique-se de ter o comando `curl` instalado em seu sistema.
 
-É possível usar um navegador ou outras ferramentas para reproduzir os arquivos de áudio produzidos pelos exemplos nesse tutorial. Para obter mais informações, consulte [Reproduzindo um arquivo de áudio](/docs/services/text-to-speech/audio-formats.html#formatsPlay).
-{: note}
+1.  Para testar se o `curl` está instalado, execute o comando a seguir na linha de comandos. Se a saída listar a versão do `curl` que suporta Secure Sockets Layer (SSL), tudo estará configurado para o tutorial.
+
+    ```bash
+    curl -V
+    ```
+    {: pre}
+
+1.  Se necessário, instale a versão do `curl` com SSL ativado para seu sistema operacional em
+[curl.haxx.se](https://curl.haxx.se/){: external}.
+
+Omita os colchetes dos exemplos. Eles indicam valores de variáveis.
+{: tip}
 
 ## Etapa 1: sintetizar textos em inglês americano
 {: #synthesizeEnglish}
@@ -71,6 +70,9 @@ Os comandos a seguir usam o método `POST /v1/synthesize` para sintetizar a entr
 
 1.  Emita o comando a seguir para sintetizar a sequência "hello world" e produzir um arquivo WAV denominado `hello_world.wav`.
     -   {: hide-dashboard} Substitua `{apikey}` e `{url}` por sua URL e chave de API.
+
+    *Usuários do Windows,* substituam a barra invertida (``\`) no final de cada linha por um acento circunflexo (``^`). Certifiquem-se de que não haja espaços à direita.
+    {: tip}
 
     ```bash
     curl -X POST -u "apikey:{apikey}"{: apikey} \
@@ -94,6 +96,9 @@ Os comandos a seguir usam o método `POST /v1/synthesize` para sintetizar a entr
     ```
     {: pre}
 
+É possível usar um navegador ou outras ferramentas para reproduzir os arquivos de áudio produzidos pelos exemplos nesse tutorial. Para obter mais informações, consulte [Reproduzindo um arquivo de áudio](/docs/services/text-to-speech?topic=text-to-speech-audioFormats#formatsPlay).
+{: note}
+
 ## Etapa 2: sintetizar textos em espanhol
 {: #synthesizeSpanish}
 
@@ -111,6 +116,6 @@ O comando a seguir usa o método `GET /v1/synthesize` para sintetizar uma entrad
 
 ## Próximas etapas
 
--   Saiba mais sobre a interface HTTP do serviço em [A interface HTTP](/docs/services/text-to-speech/http.html).
--   Saiba mais sobre a interface WebSocket do serviço em [A interface WebSocket](/docs/services/text-to-speech/websockets.html).
--   Obtenha informações detalhadas sobre os métodos da interface do serviço na [Referência de API ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/apidocs/text-to-speech){: new_window}.
+-   Saiba mais sobre a interface HTTP do serviço em [A interface HTTP](/docs/services/text-to-speech?topic=text-to-speech-usingHTTP).
+-   Saiba mais sobre a interface WebSocket do serviço em [A interface WebSocket](/docs/services/text-to-speech?topic=text-to-speech-usingWebSocket).
+-   Obtenha informações detalhadas sobre os métodos da interface do serviço na [Referência de API](https://{DomainName}/apidocs/text-to-speech){: external}.

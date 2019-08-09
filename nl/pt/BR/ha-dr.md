@@ -2,14 +2,14 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-03-19"
+lastupdated: "2019-06-04"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -52,11 +52,11 @@ Para o serviço {{site.data.keyword.texttospeechshort}}, apenas os dados para mo
 Preserve as informações a seguir sobre seus modelos de voz e entradas customizados:
 
 -   Uma lista de todos os seus modelos de voz customizados e suas definições. Para listar informações sobre seus modelos customizados:
-    -   Use o método `GET /v1/customizations` para listar informações sobre todos os modelos customizados. Para obter mais informações, consulte [Consultando todos os modelos customizados](/docs/services/text-to-speech/custom-models.html#cuModelsQueryAll).
-    -   Use o método `GET /v1/customizations/{customization_id}` para listar informações sobre um modelo customizado especificado. Para obter mais informações, consulte [Consultando um modelo customizado](/docs/services/text-to-speech/custom-models.html#cuModelsQuery).
+    -   Use o método `GET /v1/customizations` para listar informações sobre todos os modelos customizados. Para obter mais informações, consulte [Consultando todos os modelos customizados](/docs/services/text-to-speech?topic=text-to-speech-customModels#cuModelsQueryAll).
+    -   Use o método `GET /v1/customizations/{customization_id}` para listar informações sobre um modelo customizado especificado. Para obter mais informações, consulte [Consultando um modelo customizado](/docs/services/text-to-speech?topic=text-to-speech-customModels#cuModelsQuery).
 -   Informações sobre todas as entradas customizadas (pares de palavra/tradução) em seus modelos de voz customizados:
-    -   Use o método `GET /v1/customizations/{customization_id}/words` para listar informações sobre todos os pares de palavra/tradução de um modelo customizado. Para obter mais informações, consulte [Consultando todas as palavras de um modelo customizado](/docs/services/text-to-speech/custom-entries.html#cuWordsQueryModel).
-    -   Use o método `GET /v1/customizations/{customization_id}/words/{word}` para listar informações sobre um par de palavra/tradução especificado de um modelo customizado. Para obter mais informações, consulte [Consultando uma única palavra de um modelo customizado](/docs/services/text-to-speech/custom-entries.html#cuWordQueryModel).
+    -   Use o método `GET /v1/customizations/{customization_id}/words` para listar informações sobre todos os pares de palavra/tradução de um modelo customizado. Para obter mais informações, consulte [Consultando todas as palavras de um modelo customizado](/docs/services/text-to-speech?topic=text-to-speech-customWords#cuWordsQueryModel).
+    -   Use o método `GET /v1/customizations/{customization_id}/words/{word}` para listar informações sobre um par de palavra/tradução especificado de um modelo customizado. Para obter mais informações, consulte [Consultando uma única palavra de um modelo customizado](/docs/services/text-to-speech?topic=text-to-speech-customWords#cuWordQueryModel).
 
 Uma melhor prática é preservar essas informações em um formato que possa ser usado para recriar seus modelos de voz customizados no caso de uma falha. Manter ativamente as informações sobre seus modelos e entradas customizados e preparar antecipadamente as chamadas listadas na seção a seguir pode permitir a recuperação o mais rápido possível.
 
@@ -65,8 +65,8 @@ Uma melhor prática é preservar essas informações em um formato que possa ser
 
 Se precisar se recuperar de um desastre, será possível usar as informações de backup para recriar seus modelos de voz e entradas customizados:
 
-1.  Para recriar seus modelos de voz customizados, use o método `POST /v1/customizations`. Para obter mais informações, consulte [Criando um modelo customizado](/docs/services/text-to-speech/custom-models.html#cuModelsCreate).
-1.  Para incluir diversos pares de palavra/tradução em seus modelos de voz customizados, use o método `POST /v1/customizations/{customization_id}/words`. Para obter mais informações, consulte [Incluindo diversas palavras em um modelo customizado](/docs/services/text-to-speech/custom-entries.html#cuWordsAdd).
-1.  Para incluir um par de palavra/tradução único em seus modelos de voz customizados, use o método `POST /v1/customizations/{customization_id}/words/{word}`. Para obter mais informações, consulte [Incluindo uma única palavra em um modelo customizado](/docs/services/text-to-speech/custom-entries.html#cuWordAdd).
+1.  Para recriar seus modelos de voz customizados, use o método `POST /v1/customizations`. Para obter mais informações, consulte [Criando um modelo customizado](/docs/services/text-to-speech?topic=text-to-speech-customModels#cuModelsCreate).
+1.  Para incluir diversos pares de palavra/tradução em seus modelos de voz customizados, use o método `POST /v1/customizations/{customization_id}/words`. Para obter mais informações, consulte [Incluindo diversas palavras em um modelo customizado](/docs/services/text-to-speech?topic=text-to-speech-customWords#cuWordsAdd).
+1.  Para incluir um par de palavra/tradução único em seus modelos de voz customizados, use o método `POST /v1/customizations/{customization_id}/words/{word}`. Para obter mais informações, consulte [Incluindo uma única palavra em um modelo customizado](/docs/services/text-to-speech?topic=text-to-speech-customWords#cuWordAdd).
 
 Todas as suas entradas customizadas podem ser incluídas de uma vez, em grupos ou individualmente.

@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-09"
+lastupdated: "2019-06-21"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -30,7 +30,8 @@ Ao sintetizar um texto com o {{site.data.keyword.texttospeechfull}}, o serviço 
 
 As regras de pronúncia regular do serviço funcionam bem para palavras comuns. No entanto, podem produzir resultados imperfeitos para palavras incomuns. Essas palavras incluem termos especiais com origens estrangeiras, nomes pessoais ou geográficos, abreviações ou acrônimos. Se o léxico de seu aplicativo incluir essas palavras, será possível usar a interface de customização para especificar como o serviço as pronunciará.
 
-A interface de customização é a funcionalidade beta disponível para todos os idiomas.
+A interface de customização é a funcionalidade beta disponível para todos os idiomas. Deve-se ter o plano de precificação Padrão para usar a customização
+de modelo de voz. Os usuários do plano Lite não podem usar a interface de customização. Para obter mais informações, consulte a [página de precificação](https://www.ibm.com/cloud/watson-text-to-speech/pricing){: external} para o serviço {{site.data.keyword.texttospeechshort}}.
 {: note}
 
 ## Como Funciona a Customização
@@ -38,9 +39,9 @@ A interface de customização é a funcionalidade beta disponível para todos os
 
 A interface de customização do serviço {{site.data.keyword.texttospeechshort}} cria um dicionário de palavras e suas traduções para um idioma específico. Esse dicionário é referido como um *modelo de voz customizado* ou um modelo customizado. Cada entrada customizada em um modelo de voz customizado consiste em um par de *palavra*/*tradução*. A tradução de uma palavra diz ao serviço como pronunciá-la quando ela ocorrer no texto de entrada.
 
-A interface de customização fornece métodos para criar e gerenciar seus modelos de voz customizados, que serão armazenados permanentemente pelo serviço. Depois de criar um modelo customizado, é possível usá-lo durante a síntese com qualquer versão do método `/v1/synthesize`. Quando o serviço sintetiza o texto de entrada, determina a pronúncia de palavras que aparecem no modelo customizado aplicando suas traduções, direta ou indiretamente.
+A interface de customização fornece métodos para criar e gerenciar seus modelos de voz customizados, que serão armazenados permanentemente pelo serviço. Depois de criar um modelo customizado, é possível usá-lo durante a síntese com qualquer versão do método `/v1/synthesize`. Quando o serviço sintetiza o texto de entrada, determina a pronúncia de palavras que aparecem no modelo customizado aplicando suas traduções, direta ou indiretamente. Como um modelo de voz customizado é criado para um idioma específico, ele pode ser usado com qualquer voz, padrão ou neural, que esteja disponível nesse idioma.
 
-Você especifica a tradução para uma palavra em um modelo de voz customizado como uma *tradução semelhante* ou uma *tradução fonética*. É possível usar ambos os métodos para entradas no mesmo modelo customizado e combinar os dois dentro da mesma tradução. Diversas regras e diretrizes se aplicam às entradas customizadas. Para obter mais informações, consulte [Regras para criar entradas customizadas](/docs/services/text-to-speech/custom-rules.html).
+Você especifica a tradução para uma palavra em um modelo de voz customizado como uma *tradução semelhante* ou uma *tradução fonética*. É possível usar ambos os métodos para entradas no mesmo modelo customizado e combinar os dois dentro da mesma tradução. Diversas regras e diretrizes se aplicam às entradas customizadas. Para obter mais informações, consulte [Regras para criar entradas customizadas](/docs/services/text-to-speech?topic=text-to-speech-rules).
 
 ## Tradução semelhante
 {: #soundsLike}
@@ -107,7 +108,7 @@ Por exemplo, considere a palavra `trinitroglycerin`. As regras de pronúncia reg
 
 Nesses exemplos, a sequência de tradução fonética é composta de símbolos de fonema e de uma única marca de acento primário. A marca de acento primário é representada por <code>&#712;</code> no IPA e por `1` no SPR. Ela é colocada antes do símbolo para a vogal acentuada em ambos os casos. Embora os exemplos não mostrem isso, também é possível especificar limites silábicos e posições de acento secundário em uma tradução fonética. Esses elementos não são exigidos e normalmente não são necessários para obter uma pronúncia. Como com traduções semelhantes, é possível compor uma tradução fonética de diversas sequências delimitadas por espaços.
 
-Também é possível especificar traduções do IPA como valores Unicode do IPA. Para obter mais informações, consulte [Usando o IBM SPR](/docs/services/text-to-speech/SPRs.html) e as tabelas específicas do idioma nas páginas referidas em [Idiomas suportados](/docs/services/text-to-speech/SPRs.html#supportedLanguages). Para obter uma tradução de exemplo que usa valores Unicode do IPA, consulte [O elemento phoneme](/docs/services/text-to-speech/SSML-elements.html#phoneme_element).
+Também é possível especificar traduções do IPA como valores Unicode do IPA. Para obter mais informações, consulte [Usando o IBM SPR](/docs/services/text-to-speech?topic=text-to-speech-sprs) e as tabelas específicas do idioma nas páginas referidas em [Idiomas suportados](/docs/services/text-to-speech?topic=text-to-speech-sprs#supportedLanguages). Para obter uma tradução de exemplo que usa valores Unicode do IPA, consulte [O elemento phoneme](/docs/services/text-to-speech?topic=text-to-speech-elements#phoneme_element).
 {: note}
 
 ### Trabalhando com uma tradução fonética existente
@@ -117,16 +118,16 @@ A menos que você seja um especialista em fonologia, compor traduções fonétic
 
 É possível usar o método `/GET v/1/pronunciation` para obter uma tradução fonética inicial para uma palavra. Em seguida, é possível modificar a tradução para obter a pronúncia desejada. Como com o método de semelhança, você segue um processo de tentativa e erro. Você envia sua tradução candidata para o serviço, sintetiza a palavra como texto de entrada, escuta o áudio resultante e edita a tradução candidata. É possível repetir o processo até que você esteja satisfeito com a pronúncia.
 
-Para obter mais informações, consulte [Consultando uma palavra de um idioma](/docs/services/text-to-speech/custom-entries.html#cuWordsQueryLanguage).
+Para obter mais informações, consulte [Consultando uma palavra de um idioma](/docs/services/text-to-speech?topic=text-to-speech-customWords#cuWordsQueryLanguage).
 
 ### Mais informações sobre a tradução fonética
 {: #phoneticInfo}
 
 Os recursos a seguir fornecem informações sobre a tradução fonética:
 
--   Para obter mais informações sobre como usar SSML e seu elemento `<phoneme>`, consulte [Usando SSML](/docs/services/text-to-speech/SSML.html).
--   Para obter mais informações sobre como especificar traduções do SPR e seus símbolos equivalentes do IPA, consulte [Usando o IBM SPR](/docs/services/text-to-speech/SPRs.html).
--   Para obter mais informações sobre amostras de áudio dos símbolos e como usar símbolos do IPA, consulte as fontes na web. É possível localizar uma discussão introdutória detalhada em [en.wikipedia.org/wiki/International_Phonetic_Alphabet ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://en.wikipedia.org/wiki/International_Phonetic_Alphabet){: new_window}.
+-   Para obter mais informações sobre como usar SSML e seu elemento `<phoneme>`, consulte [Usando SSML](/docs/services/text-to-speech?topic=text-to-speech-ssml).
+-   Para obter mais informações sobre como especificar traduções do SPR e seus símbolos equivalentes do IPA, consulte [Usando o IBM SPR](/docs/services/text-to-speech?topic=text-to-speech-sprs).
+-   Para obter mais informações sobre amostras de áudio dos símbolos e como usar símbolos do IPA, consulte as fontes na web. É possível encontrar uma discussão introdutória detalhada em [Alfabeto fonético internacional](https://wikipedia.org/wiki/International_Phonetic_Alphabet){: external}.
 
 ## Tradução combinada dos métodos de semelhança e fonético
 

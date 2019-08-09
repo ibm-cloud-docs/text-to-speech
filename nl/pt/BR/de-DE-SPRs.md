@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-06-04"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -34,7 +34,7 @@ As seções a seguir descrevem os símbolos válidos para o alemão.
   <caption>Tabela 1. Vogais regulares (alemão)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Símbolo alemão<br/>SPR
+      Alemão<br/>Símbolo do SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Símbolo do IPA
@@ -282,7 +282,7 @@ As seções a seguir descrevem os símbolos válidos para o alemão.
   <caption>Tabela 2. Vowels Reduzidos (Alemão)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Símbolo alemão<br/>SPR
+      Alemão<br/>Símbolo do SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Símbolo do IPA
@@ -321,7 +321,7 @@ As seções a seguir descrevem os símbolos válidos para o alemão.
   <caption>Tabela 3. Diphthongs (Alemão)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Símbolo alemão<br/>SPR
+      Alemão<br/>Símbolo do SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Símbolo do IPA
@@ -396,7 +396,7 @@ As vogais desagradáveis em francês ocorrem principalmente em palavras de empr�
   <caption>Tabela 4. Vogais anasaladas (alemão)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Símbolo alemão<br/>SPR
+      Alemão<br/>Símbolo do SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Símbolo do IPA
@@ -481,7 +481,7 @@ As vogais desagradáveis em francês ocorrem principalmente em palavras de empr�
   <caption>Tabela 5. Consoantes (alemão)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Símbolo alemão<br/>SPR
+      Alemão<br/>Símbolo do SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Símbolo do IPA

@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-09"
+lastupdated: "2019-06-24"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -34,9 +34,9 @@ O ciclo de solicitação e resposta sintetizado inclui as etapas a seguir:
 1.  [Enviar o texto de entrada](#WSsend).
 1.  [Receber uma resposta](#WSreceive).
 
-A interface WebSocket aceita entradas idênticas e produz resultados idênticos, como os métodos `GET` e `POST /v1/synthesize` da interface HTTP. No entanto, a interface WebSocket suporta o uso do elemento `<mark>` do SSML para identificar o local de marcadores especificados pelo usuário no áudio. Ele também pode retornar informações de sincronização para todas as cadeias do texto de entrada. Para obter mais informações, consulte [Obtendo sincronizações de palavra](/docs/services/text-to-speech/word-timing.html).
+A interface WebSocket aceita entradas idênticas e produz resultados idênticos, como os métodos `GET` e `POST /v1/synthesize` da interface HTTP. No entanto, a interface WebSocket suporta o uso do elemento `<mark>` do SSML para identificar o local de marcadores especificados pelo usuário no áudio. Ele também pode retornar informações de sincronização para todas as cadeias do texto de entrada. Para obter mais informações, consulte [Obtendo sincronizações de palavra](/docs/services/text-to-speech?topic=text-to-speech-timing).
 
-Os fragmentos de código de exemplo a seguir são gravados em JavaScript e são baseados na API do WebSocket HTML5. Para obter mais informações sobre o protocolo WebSocket, consulte o Internet Engineering Task Force (IETF) [Request for Comment (RFC) 6455 ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://tools.ietf.org/html/rfc6455){: new_window}.
+Os fragmentos de código de exemplo a seguir são gravados em JavaScript e são baseados na API do WebSocket HTML5. Para obter mais informações sobre o protocolo WebSocket, consulte o Internet Engineering Task Force (IETF) [Solicitação de comentários (RFC) 6455](http://tools.ietf.org/html/rfc6455){: external}.
 {: note}
 
 ## Estabelecer uma conexão
@@ -69,53 +69,58 @@ Um cliente WebSocket chama esse método com os parâmetros de consulta a seguir 
   </tr>
   <tr>
     <td style="text-align:left"><code>access_token</code>
-     <br/><em>Opcional</em></td>
+      <br/><em>      Opcional
+    </em></td>
     <td style="text-align:center">Sequência</td>
     <td style="text-align:left">
-      <em>Se você usar a autenticação do IAM,</em> transmita um token de acesso IAM válido para autenticar-se com o serviço. Você transmite um token de acesso do IAM em vez de uma chave de API com a chamada. Deve-se usar o token de acesso antes de sua expiração. Para obter informações sobre como obter um token de acesso, consulte [Autenticando-se com tokens do IAM](/docs/services/watson/getting-started-iam.html).
+      <em>Se você usar a autenticação do IAM,</em> transmita um token de acesso IAM válido para autenticar-se com o serviço. Você transmite um token de acesso do IAM em vez de uma chave de API com a chamada. Deve-se usar o token de acesso antes de sua expiração. Para obter informações sobre como obter um token de acesso, consulte [Autenticando-se com tokens do IAM](/docs/services/watson?topic=watson-iam).
     </td>
   </tr>
   <tr>
-    <td style="text-align:left"><code>Watson-token</code>
-     <br/><em>Opcional</em></td>
+    <td style="text-align:left"><code>watson-token</code>
+      <br/><em>      Opcional
+    </em></td>
     <td style="text-align:center">Sequência</td>
     <td style="text-align:left">
       <em>Se você usar as credenciais de serviço do Cloud Foundry,</em> transmita um token de autenticação do {{site.data.keyword.watson}} válido para autenticar-se com o serviço. Você transmite um token do {{site.data.keyword.watson}} em vez de credenciais de serviço com a chamada.
-      Os tokens do {{site.data.keyword.watson}} são baseados em credenciais de serviço do Cloud Foundry, que usam um `username` e uma `password` para a autenticação básica HTTP. Para obter informações sobre como obter um token do {{site.data.keyword.watson}}, consulte [Tokens do {{site.data.keyword.watson}}](/docs/services/watson/getting-started-tokens.html).
+      Os tokens do {{site.data.keyword.watson}} são baseados em credenciais de serviço do Cloud Foundry, que usam um `username` e uma `password` para a autenticação básica HTTP. Para obter informações sobre como obter um token do {{site.data.keyword.watson}}, consulte
+[Tokens do {{site.data.keyword.watson}}](/docs/services/watson?topic=watson-gs-tokens-watson-tokens).
     </td>
   </tr>
   <tr>
-    <td><code>voice</code><br/><em>Opcional</em></td>
+    <td><code>voice</code><br/><em>      Opcional
+    </em></td>
     <td style="text-align:center">Sequência</td>
     <td>
       Especifica a voz na qual o texto deve ser falado no áudio.
       Omita o parâmetro para usar a voz padrão, `en-US_MichaelVoice`.
-      Para obter mais informações, consulte [Idiomas e vozes](/docs/services/text-to-speech/voices.html).
+      Para obter mais informações, consulte [Idiomas e vozes](/docs/services/text-to-speech?topic=text-to-speech-voices).
     </td>
   </tr>
   <tr>
-    <td><code>customization_id</code><br/><em>Opcional</em></td>
+    <td><code>customization_id</code><br/><em>      Opcional
+    </em></td>
     <td style="text-align:center">Sequência</td>
     <td>
       Especifica o Identificador Exclusivo Global (GUID) para uma voz customizada
-      modelo que deve ser usado para a síntese. É garantido que um modelo de voz customizado funcione apenas se ele corresponder ao idioma da voz usada para a síntese. Ao incluir um ID de customização, deve-se chamar o método com as credenciais de serviço do proprietário do modelo customizado.
-      Omita o parâmetro para usar a voz especificada sem a customização.
-      Para obter mais informações, consulte [Entendendo a customização](/docs/services/text-to-speech/custom-intro.html).
+      modelo que deve ser usado para a síntese. É garantido que um modelo de voz customizado funcione apenas se ele corresponder ao idioma da voz usada para a síntese. Se você incluir um ID de customização, a solicitação deverá ser realizada com credenciais para a instância do serviço que possui o modelo customizado. Omita o parâmetro para usar a voz especificada sem a customização. Para obter mais informações, consulte [Entendendo a customização](/docs/services/text-to-speech?topic=text-to-speech-customIntro).
     </td>
   </tr>
   <tr>
-    <td><code>x-watson-learning-opt-out</code><br/><em>Opcional</em></td>
+    <td><code>x-watson-learning-opt-out</code><br/><em>      Opcional
+    </em></td>
     <td style="text-align:center">Booleano</td>
     <td>
-      Indica se o serviço registra solicitações e resultados enviados por meio da conexão. Para evitar que a IBM acesse seus dados para melhorias gerais de serviço, especifique <code>true</code> para o parâmetro. Para obter mais informações, consulte [Controlando a criação de log de solicitação para serviços do Watson](/docs/services/watson/getting-started-logging.html).
+      Indica se o serviço registra solicitações e resultados enviados por meio da conexão. Para evitar que a IBM acesse seus dados para melhorias gerais de serviço, especifique <code>true</code> para o parâmetro. Para obter mais informações, consulte [Controlando a criação de log de solicitação para serviços do Watson](/docs/services/watson?topic=watson-gs-logging-overview).
     </td>
   </tr>
   <tr>
-    <td style="text-align:left"><code>x-metadata-metadata</code>
-     <br/><em>Opcional</em></td>
+    <td style="text-align:left"><code>x-watson-metadata</code>
+      <br/><em>      Opcional
+    </em></td>
     <td style="text-align:center">Sequência</td>
     <td style="text-align:left">
-      Associa um ID do cliente aos dados transmitidos pela conexão. O parâmetro aceita o argumento <code>customer_id={id}</code>, em que <code>id</code> é uma sequência genérica ou aleatória que deve ser associada aos dados. Deve-se codificar com URL o argumento para o parâmetro, por exemplo, `customer_id%3dmy_ID`. Por padrão, nenhum ID do cliente está associado aos dados. Para obter mais informações, consulte [Segurança de informações](/docs/services/text-to-speech/information-security.html).
+      Associa um ID do cliente aos dados transmitidos pela conexão. O parâmetro aceita o argumento <code>customer_id={id}</code>, em que <code>id</code> é uma sequência genérica ou aleatória que deve ser associada aos dados. Deve-se codificar com URL o argumento para o parâmetro, por exemplo, `customer_id%3dmy_ID`. Por padrão, nenhum ID do cliente está associado aos dados. Para obter mais informações, consulte [Segurança de informações](/docs/services/text-to-speech?topic=text-to-speech-information-security).
     </td>
   </tr>
 </table>
@@ -125,14 +130,14 @@ O fragmento de código JavaScript a seguir estabelece uma conexão com o serviç
 ```javascript
 var IAM_access_token = '{ access_token }';
 var wsURI = 'wss: //stream.watsonplatform.net/text-to-speech/api/v1/synthesize '
-  + '? access_token = ' + IAM_access_token
+  + '?access_token=' + IAM_access_token
   + '&voice=en-US_AllisonVoice';
+var websocket = new WebSocket(wsURI);
 
-var websocket = new WebSocket (wsURI);
-websocket.onopen = function (evt) { onOpen (evt) };
-websocket.onclose = function (evt) { onClose (evt) };
-websocket.onmessage = função (evt) { onMessage (evt) };
-websocket.onerror = função (evt) { onError (evt) };
+websocket.onopen = function(evt) { onOpen(evt) };
+websocket.onclose = function(evt) { onClose(evt) };
+websocket.onmessage = function(evt) { onMessage(evt) };
+websocket.onerror = function(evt) { onError(evt) };
 ```
 {: codeblock}
 
@@ -149,31 +154,32 @@ Para sintetizar o texto, o cliente transmite uma mensagem de texto JSON simples 
     <th style="text-align:left">Descrição</th>
   </tr>
   <tr>
-    <td><code>texto</code><br/><em>Necessário</em></td>
+    <td><code>text</code><br/><em>Necessário</em></td>
     <td style="text-align:center">Sequência</td>
     <td>
       Fornece o texto que deve ser sintetizado. O cliente pode transmitir um texto sem formatação ou anotado com o Speech Synthesis
       Markup Language (SSML). O cliente pode transmitir um máximo de 5 KB de texto de entrada com a solicitação. O limite inclui qualquer SSML especificado. Para obter informações adicionais, consulte
-     [Especificando Texto de Entrada](/docs/services/text-to-speech/http.html#input)
+     [Especificando Texto de Entrada](/docs/services/text-to-speech?topic=text-to-speech-usingHTTP#input)
       e as seções que o seguem.<br/><br/>
       A entrada do SSML também pode incluir o elemento <code>&lt;mark&gt;</code>.
-      Para obter mais informações, consulte [Especificando uma marca do SSML](/docs/services/text-to-speech/word-timing.html#mark).
+      Para obter mais informações, consulte [Especificando uma marca do SSML](/docs/services/text-to-speech?topic=text-to-speech-timing#mark).
     </td>
   </tr>
   <tr>
-    <td><code>accept</code><br/><em>Obrigatório</em></td>
+    <td><code>aceitar</code><br/><em>Necessário</em></td>
     <td style="text-align:center">Sequência</td>
     <td>
       Especifica o formato solicitado (tipo MIME) do áudio. Use
-      `*/*` para solicitar o formato de áudio padrão, <code>audio/ogg;codecs=opus</code>. Para obter mais informações, consulte [Formatos de áudio](/docs/services/text-to-speech/audio-formats.html).
+      `*/*` para solicitar o formato de áudio padrão, <code>audio/ogg;codecs=opus</code>. Para obter mais informações, consulte [Formatos de áudio](/docs/services/text-to-speech?topic=text-to-speech-audioFormats).
     </td>
   </tr>
   <tr>
-    <td><code>timings</code><br/><em>Opcional</em></td>
+    <td><code>timings</code><br/><em>      Opcional
+    </em></td>
     <td style="text-align:center">String[ ]</td>
     <td>
       Especifica que o serviço deve retornar informações de sincronização de palavra para todas as sequências do texto de entrada. O serviço retorna o horário de início e de término de cada token da entrada. Especifique <code>words</code> como o elemento lone da matriz para solicitar sincronizações de palavra. Especifique uma matriz vazia ou omita o parâmetro para não receber sincronizações de palavra.
-      Para obter mais informações, consulte [Obtendo sincronizações de palavra](/docs/services/text-to-speech/word-timing.html#timing). <em>Não suportado para o texto de entrada em japonês.</em>
+      Para obter mais informações, consulte [Obtendo sincronizações de palavra](/docs/services/text-to-speech?topic=text-to-speech-timing#timing). <em>Não suportado para o texto de entrada em japonês.</em>
     </td>
   </tr>
 </table>
@@ -282,4 +288,4 @@ O exemplo a seguir mostra uma resposta de aviso, nesse caso, para um parâmetro 
 ```
 {: codeblock}
 
-Para obter mais informações sobre os códigos de retorno do WebSocket, consulte o Internet Engineering Task Force (IETF) [Solicitação de Comentários (RFC) 6455 ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://tools.ietf.org/html/rfc6455){: new_window}.
+Para obter mais informações sobre os códigos de retorno do WebSocket, consulte o Internet Engineering Task Force (IETF) [Solicitação de comentários (RFC) 6455](http://tools.ietf.org/html/rfc6455){: external}.

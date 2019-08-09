@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-06-04"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -34,7 +34,7 @@ As seções a seguir descrevem os símbolos válidos para o espanhol. Os dialeto
   <caption>Tabela 1. Vogais regulares (espanhol)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      símbolo Espanhol<br/>SPR
+      Espanhol<br/>Símbolo do SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Símbolo do IPA
@@ -125,7 +125,7 @@ As seções a seguir descrevem os símbolos válidos para o espanhol. Os dialeto
   <caption>Tabela 2. Consoantes (espanhol)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      símbolo Espanhol<br/>SPR
+      Espanhol<br/>Símbolo do SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Símbolo do IPA
@@ -385,8 +385,8 @@ As seções a seguir descrevem os símbolos válidos para o espanhol. Os dialeto
       L [<strong>4</strong>]
     </td>
     <td style="text-align:center">
-      & #654;<br/><br/>
-      & #669; [<strong>5</strong>]
+      &#654;<br/><br/>
+      &#669; [<strong>5</strong>]
     </td>
     <td style="text-align:center">
       028E<br/><br/>
@@ -394,7 +394,7 @@ As seções a seguir descrevem os símbolos válidos para o espanhol. Os dialeto
     </td>
     <td>
       <u>ll</u>over, po<u>ll</u>o<br/><br/>
-     <u>y</u>egua, pla<u>y</u>a
+      <u>y</u>egua, pla<u>y</u>a
     </td>
   </tr>
   <tr>
@@ -459,7 +459,7 @@ Cada alofone é uma variação do fonema indicado entre parênteses. Se um alofo
   <caption>Tabela 3. Alofones (espanhol)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Alófilo Espanhol<br/>Símbolo SPR
+      Alofone espanhol<br/>Símbolo do SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Símbolo do IPA
