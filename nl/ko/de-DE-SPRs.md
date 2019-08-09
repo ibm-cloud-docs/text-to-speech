@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-06-04"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -25,7 +25,7 @@ subcollection: text-to-speech
 # 독일어 기호
 {: #deSymbols}
 
-다음 절에서는 독일어의 올바른 기호에 대해 설명합니다. 
+다음 절에서는 독일어의 올바른 기호에 대해 설명합니다.
 
 ## 일반 모음
 {: #deRegularVowels}
@@ -34,7 +34,7 @@ subcollection: text-to-speech
   <caption>표 1. 일반 모음(독일어)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      독일어<br/>SPR 기호
+독일어<br/>SPR 기호
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA 기호
@@ -282,7 +282,7 @@ Y
   <caption>표 2. 약모음(독일어)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      독일어<br/>SPR 기호
+독일어<br/>SPR 기호
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA 기호
@@ -321,7 +321,7 @@ Y
   <caption>표 3. 이중 모음(독일어)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      독일어<br/>SPR 기호
+독일어<br/>SPR 기호
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA 기호
@@ -390,13 +390,13 @@ Y
 ## 비음화 모음
 {: #deNasalizedVowels}
 
-프랑스어의 비음화 모음은 대부분 외국어의 차용어에서만 발생합니다. 
+프랑스어의 비음화 모음은 대부분 외국어의 차용어에서만 발생합니다.
 
 <table style="width:90%">
   <caption>표 4. 비음화 모음(독일어)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      독일어<br/>SPR 기호
+독일어<br/>SPR 기호
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA 기호
@@ -481,7 +481,7 @@ Y
   <caption>표 5. 자음(독일어)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      독일어<br/>SPR 기호
+독일어<br/>SPR 기호
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA 기호
@@ -929,5 +929,5 @@ Y
 
 **참고:**
 
-1.  IPA 기호 <code>&#240;</code>(IPA 유니코드 `00F0`)에는 대부분이 영어인 외국어의 차용어에서만 발생합니다(예: *The New York Times*). 그러나 서비스는 IPA 기호 `d`(IPA 유니코드 `0064`)로 해당 소리를 실현합니다. 
-1.  IPA 기호 <code>&#952;</code>(IPA 유니코드 `03B8`)에는 대부분이 영어인 외국어의 차용어에서만 발생합니다(예: *thriller New York Times*). 그러나 서비스는 IPA 기호 <code>&#678;</code>(IPA 유니코드 `02A6`)로 해당 소리를 실현합니다. 
+1.  IPA 기호 <code>&#240;</code>(IPA 유니코드 `00F0`)에는 대부분이 영어인 외국어의 차용어에서만 발생합니다(예: *The New York Times*). 그러나 서비스는 IPA 기호 `d`(IPA 유니코드 `0064`)로 해당 소리를 실현합니다.
+1.  IPA 기호 <code>&#952;</code>(IPA 유니코드 `03B8`)에는 대부분이 영어인 외국어의 차용어에서만 발생합니다(예: *thriller New York Times*). 그러나 서비스는 IPA 기호 <code>&#678;</code>(IPA 유니코드 `02A6`)로 해당 소리를 실현합니다.

@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-06-04"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -25,7 +25,7 @@ subcollection: text-to-speech
 # 브라질 포르투갈어 기호
 {: #ptSymbols}
 
-다음 절에서는 브라질 포르투갈어의 올바른 기호에 대해 설명합니다. 
+다음 절에서는 브라질 포르투갈어의 올바른 기호에 대해 설명합니다.
 
 ## 일반 모음
 {: #ptRegularVowels}
@@ -34,7 +34,7 @@ subcollection: text-to-speech
   <caption>표 1. 일반 모음(브라질 포르투갈어)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      브라질 포르투갈어<br/>SPR 기호
+브라질 포르투갈어<br/>SPR 기호
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA 기호
@@ -56,8 +56,7 @@ subcollection: text-to-speech
     </td>
     <td style="text-align:center">
       0061<br/><br/>
-      0250
-    </td>
+      0250</td>
     <td>
       vir<u>ar</u>, m<u>a</u>r<br/><br/>
       Terr<u>a</u>, muit<u>a</u>
@@ -225,7 +224,7 @@ subcollection: text-to-speech
 
 **참고:**
 
-1.  SPR 기호 `a`는 두 가지 다른 IPA 기호를 다른 발음 즉, `a` 및 <code>&#592;</code>으로 맵핑합니다. 일반적으로, SPR 기호는 `a`(강세가 있는 음절의 합성) 및 <code>&#592;</code>(강세가 없는 음절의 합성)에 맵핑합니다. 
+1.  SPR 기호 `a`는 두 가지 다른 IPA 기호를 다른 발음 즉, `a` 및 <code>&#592;</code>으로 맵핑합니다. 일반적으로, SPR 기호는 `a`(강세가 있는 음절의 합성) 및 <code>&#592;</code>(강세가 없는 음절의 합성)에 맵핑합니다.
 
 ## 반모음
 {: #ptSemiVowels}
@@ -234,7 +233,7 @@ subcollection: text-to-speech
   <caption>표 2. 반모음(브라질 포르투갈어)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      브라질 포르투갈어<br/>SPR 기호
+브라질 포르투갈어<br/>SPR 기호
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA 기호
@@ -311,7 +310,7 @@ Y
   <caption>표 3. 자음(브라질 포르투갈어)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      브라질 포르투갈어<br/>SPR 기호
+브라질 포르투갈어<br/>SPR 기호
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA 기호

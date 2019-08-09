@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-09"
+lastupdated: "2019-06-21"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -31,16 +31,17 @@ subcollection: text-to-speech
 ## 언어 지원
 {: #languages-expressive}
 
-서비스는 미국 영어의 Allison 음성(`en-US_AllisonVoice`)에만 표현성을 지원합니다. 표현성은 `en-US_AllisonV2Voice` 음성으로 지원되지 않습니다. 지원되지 않는 음성으로 요소를 사용하면 오류가 리턴됩니다. 
+서비스는 표준 미국 영어의 Allison 음성(`en-US_AllisonVoice`)에만 표현성을 지원합니다. 표현성은 신경 `en-US_AllisonV3Voice` 음성에서는 지원되지 않습니다. 지원되지 않는 음성에 요소를 사용하면 오류가 리턴됩니다.
 
 ## express-as 요소
+{: #ssml-express-as}
 
-`<express-as>` 요소를 텍스트, 문장 또는 단어나 단편의 전체 본문(예: 구문 또는 단어)에 적용할 수 있습니다. 요소는 지정된 텍스트에 사용할 표현식의 유형(`GoodNews`, `Apology` 또는 `Uncertainty`)에 대해 설명하는 하나의 필수 속성인 `type`을 허용합니다. 
+`<express-as>` 요소를 텍스트, 문장 또는 단어나 단편의 전체 본문(예: 구문 또는 단어)에 적용할 수 있습니다. 요소는 지정된 텍스트에 사용할 표현식의 유형(`GoodNews`, `Apology` 또는 `Uncertainty`)에 대해 설명하는 하나의 필수 속성인 `type`을 허용합니다.
 
 ### GoodNews
 {: #goodnews}
 
-`GoodNews`는 긍정적이고 활기찬 메시지를 표시합니다. 
+`GoodNews`는 긍정적이고 활기찬 메시지를 표시합니다.
 
 ```xml
 <express-as type="GoodNews">
@@ -64,7 +65,7 @@ subcollection: text-to-speech
 ### Apology
 {: #apology}
 
-`Apology`는 후회의 메시지를 표시합니다. 
+`Apology`는 후회의 메시지를 표시합니다.
 
 ```xml
 <express-as type="Apology">
@@ -88,7 +89,7 @@ subcollection: text-to-speech
 ### Uncertainty
 {: #uncertainty}
 
-`Uncertainty`는 불확실하고 의문의 메시지를 전달합니다. 
+`Uncertainty`는 불확실하고 의문의 메시지를 전달합니다.
 
 ```xml
 <express-as type="Uncertainty">

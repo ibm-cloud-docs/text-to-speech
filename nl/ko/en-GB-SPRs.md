@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-06-04"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -25,7 +25,7 @@ subcollection: text-to-speech
 # 영국 영어 기호
 {: #gbSymbols}
 
-다음 절에서는 영국 영어의 올바른 기호에 대해 설명합니다. 
+다음 절에서는 영국 영어의 올바른 기호에 대해 설명합니다.
 
 ## 일반 모음
 {: #gbRegularVowels}
@@ -62,8 +62,7 @@ subcollection: text-to-speech
       0061+02D0<br/><br/>
       0251<br/><br/>
       0251+02D0<br/><br/>
-      0250
-    </td>
+      0250</td>
     <td>
       p<u>a</u>th, f<u>a</u>ther, ch<u>a</u>nt
     </td>
@@ -146,12 +145,14 @@ subcollection: text-to-speech
     </td>
     <td style="text-align:center">
       o<br/><br/>
-      &#111;&#650;<br/><br/>
+      &#111;&#650;
+    <br/><br/>
       &#601;&#650;
     </td>
     <td style="text-align:center">
       006F<br/><br/>
-      006F+028A<br/><br/>
+      006F+028A
+    <br/><br/>
       0259+028A
     </td>
     <td>
@@ -164,12 +165,10 @@ subcollection: text-to-speech
     </td>
     <td style="text-align:center">
       &#596;<br/><br/>
-      &#596;&#720;
-    </td>
+      &#596;&#720;</td>
     <td style="text-align:center">
       0254<br/><br/>
-      0254+02D0
-    </td>
+      0254+02D0</td>
     <td>
       l<u>a</u>w, c<u>ou</u>rt, h<u>a</u>ll, w<u>a</u>ter
     </td>
@@ -448,8 +447,7 @@ Y
     </td>
     <td style="text-align:center">
       g<br/><br/>
-      &#609;
-    </td>
+      &#609;</td>
     <td style="text-align:center">
       0067<br/><br/>
       0261
@@ -623,7 +621,8 @@ Y
     <td style="text-align:center">
       h<br/><br/>
       x<br/><br/>
-      &#967;<br/><br/>
+      &#967;
+    <br/><br/>
       &#614;
     </td>
     <td style="text-align:center">
