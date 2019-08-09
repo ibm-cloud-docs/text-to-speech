@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-06-04"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -25,7 +25,7 @@ subcollection: text-to-speech
 # 스페인어 기호
 {: #esSymbols}
 
-다음 절에서는 스페인어의 올바른 기호에 대해 설명합니다. 라틴 아메리카 및 북아메리카 통용어는 SPR 지원의 측면에서는 동일합니다. 명시된 경우를 제외하고 두 개의 통용어는 카스티야 스페인어와 동일합니다. 
+다음 절에서는 스페인어의 올바른 기호에 대해 설명합니다. 라틴 아메리카 및 북아메리카 통용어는 SPR 지원의 측면에서는 동일합니다. 명시된 경우를 제외하고 두 개의 통용어는 카스티야 스페인어와 동일합니다.
 
 ## 일반 모음
 {: #esReducedVowels}
@@ -300,7 +300,7 @@ subcollection: text-to-speech
     </td>
     <td style="text-align:center">
       h [<strong>2</strong>]<br/><br/>
-      x [<strong>3</strong>]
+x [<strong>3</strong>]
     </td>
     <td style="text-align:center">
       0068<br/><br/>
@@ -443,17 +443,17 @@ Y
 
 **참고:**
 
-1.  SPR 기호 `T`는 카스티야 스페인어로만 구현됩니다. 해당 기호가 SPR 입력에 존재하는 경우에도 내부적으로 북아메리카 및 라틴 아메리카 스페인어로 된 음성 기호 `s`로 대체됩니다. 
-1.  IPA 기호 `h`는 북아메리카 및 라틴 아메리카 스페인어에만 적용됩니다. 
+1.  SPR 기호 `T`는 카스티야 스페인어로만 구현됩니다. 해당 기호가 SPR 입력에 존재하는 경우에도 내부적으로 북아메리카 및 라틴 아메리카 스페인어로 된 음성 기호 `s`로 대체됩니다.
+1.  IPA 기호 `h`는 북아메리카 및 라틴 아메리카 스페인어에만 적용됩니다.
 1.  IPA 기호 `x`는 카스티야 스페인어에만 적용됩니다.
-1.  SPR 기호 `L`은 북아메리카 및 라틴 아메리카 스페인어(<code>&#654;</code> 및 <code>&#669;</code>) 양쪽에 다른 발음을 사용하여 두 가지 다른 IPA 기호에 맵핑합니다. 이러한 통용어가 사용된 이 SPR 기호를 지정하면 두 가지 변형 중 하나가 생성될 수 있습니다. 원어민도 종종 발음 간의 차이를 구분하지 못합니다. 
-1.  IPA 기호 <code>&#669;</code>는 북아메리카 및 라틴 아메리카 스페인어로 된 SPR 기호 `L`로 맵핑합니다. 
-1.  IPA 기호 <code>&#669;</code>는 카스티야 스페인어로 된 SPR 기호 `Y`로 맵핑합니다. 
+1.  SPR 기호 `L`은 북아메리카 및 라틴 아메리카 스페인어(<code>&#654;</code> 및 <code>&#669;</code>) 양쪽에 다른 발음을 사용하여 두 가지 다른 IPA 기호에 맵핑합니다. 이러한 통용어가 사용된 이 SPR 기호를 지정하면 두 가지 변형 중 하나가 생성될 수 있습니다. 원어민도 종종 발음 간의 차이를 구분하지 못합니다.
+1.  IPA 기호 <code>&#669;</code>는 북아메리카 및 라틴 아메리카 스페인어로 된 SPR 기호 `L`로 맵핑합니다.
+1.  IPA 기호 <code>&#669;</code>는 카스티야 스페인어로 된 SPR 기호 `Y`로 맵핑합니다.
 
 ## 이음
 {: #esAllophones}
 
-각 이음은 소괄호 내에 표시된 음소의 변형입니다. SPR에서 이음이 사용되지 않으면 {{site.data.keyword.texttospeechshort}} 서비스는 자동으로 제공된 컨텍스트를 적절하게 변경합니다. 
+각 이음은 소괄호 내에 표시된 음소의 변형입니다. SPR에서 이음이 사용되지 않으면 {{site.data.keyword.texttospeechshort}} 서비스는 자동으로 제공된 컨텍스트를 적절하게 변경합니다.
 
 <table style="width:90%">
   <caption>표 3. 이음(스페인어)</caption>

@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-06-04"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -25,7 +25,7 @@ subcollection: text-to-speech
 # 프랑스어 기호
 {: #frSymbols}
 
-다음 절에서는 프랑스어의 올바른 기호에 대해 설명합니다. 
+다음 절에서는 프랑스어의 올바른 기호에 대해 설명합니다.
 
 ## 모음
 {: #frVowels}
@@ -34,7 +34,7 @@ subcollection: text-to-speech
   <caption>표 1. 모음(프랑스어)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      프랑스어<br/>SPR 기호
+불어<br/>SPR 기호
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA 기호
@@ -58,8 +58,7 @@ subcollection: text-to-speech
     <td style="text-align:center">
       0061<br/><br/>
       0251<br/><br/>
-      0250
-    </td>
+      0250</td>
     <td>
       p<u>a</u>ttes, l<u>a</u>c, c<u>a</u>ve
     </td>
@@ -85,10 +84,11 @@ subcollection: text-to-speech
     </td>
     <td style="text-align:center">
       &#603;<br/><br/>
-      &#604;
+      &ㅕ#604;
     </td>
     <td style="text-align:center">
-      025B<br/><br/>
+      025B
+    <br/><br/>
       025C
     </td>
     <td>
@@ -287,7 +287,7 @@ subcollection: text-to-speech
 
 **참고:**
 
-1.  `x`가 특정 컨텍스트에서 생략됩니다. 
+1.  `x`가 특정 컨텍스트에서 생략됩니다.
 
 ## 자음
 {: #frConsonants}
@@ -296,7 +296,7 @@ subcollection: text-to-speech
   <caption>표 2. 자음(프랑스어)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      프랑스어<br/>SPR 기호
+불어<br/>SPR 기호
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA 기호
@@ -370,8 +370,7 @@ subcollection: text-to-speech
     </td>
     <td style="text-align:center">
       g<br/><br/>
-      &#609;
-    </td>
+      &#609;</td>
     <td style="text-align:center">
       0067<br/><br/>
       0261
@@ -621,13 +620,13 @@ subcollection: text-to-speech
 ## 연음
 {: #frLiaison}
 
-프랑스어의 경우 `_`(밑줄)은 다음과 같이 연음임을 표시하는 단어의 끝에 오는 자음(그러나 SPR을 묶은 큰따옴표 내에 있음)에서 사용될 수 있습니다. 연음 자음은 다음에 오는 단어가 모음으로 시작되는 경우에만 발음됩니다. 
+프랑스어의 경우 `_`(밑줄)은 다음과 같이 연음임을 표시하는 단어의 끝에 오는 자음(그러나 SPR을 묶은 큰따옴표 내에 있음)에서 사용될 수 있습니다. 연음 자음은 다음에 오는 단어가 모음으로 시작되는 경우에만 발음됩니다.
 
 <table style="width:54%">
   <caption>표 3. 연음(프랑스어)</caption>
   <tr>
     <th style="width:33%; text-align:center; vertical-align:bottom">
-      프랑스어<br/>SPR 기호
+불어<br/>SPR 기호
     </th>
     <th style="width:33%; text-align:center; vertical-align:bottom">
       IPA 기호
@@ -649,9 +648,9 @@ subcollection: text-to-speech
   </tr>
 </table>
 
-연음 기호가 포함되거나 포함되지 않은 단어의 예는 다음과 같습니다. 
+연음 기호가 포함되거나 포함되지 않은 단어의 예는 다음과 같습니다.
 
--   `"p0'oe't1it_"`: `t`는 다음에 오는 단어가 모음으로 시작되는 경우에만 발음됩니다. 
--   `"nEt"`: `t`는 항상 발음됩니다. 
+-   `"p0'oe't1it_"`: `t`는 다음에 오는 단어가 모음으로 시작되는 경우에만 발음됩니다.
+-   `"nEt"`: `t`는 항상 발음됩니다.
 
- 변환 값인 `"p'oe't1it_"`가 포함된 사전 항목 *petit*의 경우 입력 문자열 *un petit ami*에서 마지막 `t`가 발음되지만, 입력 문자열 *un petit chien*에서는 발음되지 않습니다. 변환 값 `"nEt"`가 포함된 항목에는 컨텍스트에 관계 없이 마지막 `t`가 발음됩니다. 
+ 변환 값인 `"p'oe't1it_"`가 포함된 사전 항목 *petit*의 경우 입력 문자열 *un petit ami*에서 마지막 `t`가 발음되지만, 입력 문자열 *un petit chien*에서는 발음되지 않습니다. 변환 값 `"nEt"`가 포함된 항목에는 컨텍스트에 관계 없이 마지막 `t`가 발음됩니다.

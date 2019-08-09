@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-06-04"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -25,7 +25,7 @@ subcollection: text-to-speech
 # 이탈리아어 기호
 {: #itSymbols}
 
-다음 절에서는 이탈리아어의 올바른 기호에 대해 설명합니다. 
+다음 절에서는 이탈리아어의 올바른 기호에 대해 설명합니다.
 
 ## 일반 모음
 {: #itRegularVowels}
@@ -34,7 +34,7 @@ subcollection: text-to-speech
   <caption>표 1. 일반 모음(이탈리아어)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      이탈리아어<br/>SPR 기호
+이탈리아어<br/>SPR 기호
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA 기호
@@ -153,7 +153,7 @@ subcollection: text-to-speech
   <caption>표 2. 자음(이탈리아어)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      이탈리아어<br/>SPR 기호
+이탈리아어<br/>SPR 기호
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA 기호
@@ -523,7 +523,7 @@ subcollection: text-to-speech
   <caption>표 3. 이중 자음(이탈리아어)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      이탈리아어<br/>SPR 기호
+이탈리아어<br/>SPR 기호
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA 기호
@@ -604,7 +604,7 @@ subcollection: text-to-speech
 ## 이음
 {: #itAllophones}
 
-SPR에서 이음이 사용되지 않으면 {{site.data.keyword.texttospeechshort}} 서비스는 자동으로 제공된 컨텍스트를 적절하게 변경합니다. 
+SPR에서 이음이 사용되지 않으면 {{site.data.keyword.texttospeechshort}} 서비스는 자동으로 제공된 컨텍스트를 적절하게 변경합니다.
 
 <table style="width:90%">
   <caption>표 4. 이음(이탈리아어)</caption>

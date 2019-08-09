@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-06-04"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -25,7 +25,7 @@ subcollection: text-to-speech
 # 일본어 기호
 {: #jaSymbols}
 
-다음 절에서는 일본어의 올바른 기호에 대해 설명합니다. 
+다음 절에서는 일본어의 올바른 기호에 대해 설명합니다.
 
 ## 모음 및 표시
 {: #jaVowelsMarks}
@@ -34,7 +34,7 @@ subcollection: text-to-speech
   <caption>표 1. 모음 및 표시(일본어)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      일본어<br/>SPR 기호
+일본어<br/>SPR 기호
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA 기호
@@ -53,13 +53,11 @@ subcollection: text-to-speech
     <td style="text-align:center">
       a<br/><br/>
       &#592;<br/><br/>
-      &#593;
-    </td>
+      &#593;</td>
     <td style="text-align:center">
       0061<br/><br/>
       0250<br/><br/>
-      0251
-    </td>
+      0251</td>
     <td>
       &#30456;&#25163;(<u>&#12450;</u>&#12452;&#12486;)
     </td>
@@ -85,11 +83,13 @@ subcollection: text-to-speech
       u
     </td>
     <td style="text-align:center">
-      &#623;<br/><br/>
+      &#623;
+    <br/><br/>
       u
     </td>
     <td style="text-align:center">
-      026F<br/><br/>
+      026F
+    <br/><br/>
       0075
     </td>
     <td>
@@ -180,7 +180,7 @@ subcollection: text-to-speech
 
 **참고:**
 
-1.  `:` 기호는 모음 앞에 표시되어야 합니다(음절 경계와 같이 다른 기호와 함께 사이에 표시될 수 있음). 
+1.  `:` 기호는 모음 앞에 표시되어야 합니다(음절 경계와 같이 다른 기호와 함께 사이에 표시될 수 있음).
 
 ## 자음
 {: #jaConsonants}
@@ -189,7 +189,7 @@ subcollection: text-to-speech
   <caption>표 2. 자음(일본어)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      일본어<br/>SPR 기호
+일본어<br/>SPR 기호
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA 기호
@@ -470,7 +470,7 @@ subcollection: text-to-speech
       v
     </td>
     <td style="text-align:center">
-      0062<br/><br/>
+        0062<br/><br/>
       0076
     </td>
     <td>

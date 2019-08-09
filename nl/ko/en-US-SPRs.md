@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-06-04"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -25,7 +25,7 @@ subcollection: text-to-speech
 # 미국 영어 기호
 {: #usSymbols}
 
-다음 절에서는 미국 영어의 올바른 기호에 대해 설명합니다. 
+다음 절에서는 미국 영어의 올바른 기호에 대해 설명합니다.
 
 ## 일반 모음
 {: #usRegularVowels}
@@ -34,7 +34,7 @@ subcollection: text-to-speech
   <caption>표 1. 일반 모음(미국 영어)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      미국 영어<br/>SPR 기호
+미국 영어<br/>SPR 기호
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA 기호
@@ -62,8 +62,7 @@ subcollection: text-to-speech
       0061+02D0<br/><br/>
       0251<br/><br/>
       0251+02D0<br/><br/>
-      0250
-    </td>
+      0250</td>
     <td>
       f<u>a</u>ther, l<u>o</u>t
     </td>
@@ -250,7 +249,7 @@ subcollection: text-to-speech
   <caption>표 2. 이중 모음(미국 영어)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      미국 영어<br/>SPR 기호
+미국 영어<br/>SPR 기호
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA 기호
@@ -313,7 +312,7 @@ Y
   <caption>표 3. 약모음(미국 영어)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      미국 영어<br/>SPR 기호
+미국 영어<br/>SPR 기호
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA 기호
@@ -366,7 +365,7 @@ Y
   <caption>표 4. 자음(미국 영어)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      미국 영어<br/>SPR 기호
+미국 영어<br/>SPR 기호
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA 기호
@@ -440,8 +439,7 @@ Y
     </td>
     <td style="text-align:center">
       g<br/><br/>
-      &#609;
-    </td>
+      &#609;</td>
     <td style="text-align:center">
       0067<br/><br/>
       0261
@@ -614,13 +612,15 @@ Y
     </td>
     <td style="text-align:center">
       h<br/><br/>
-      &#614;<br/><br/>
+      &#614;
+    <br/><br/>
       x<br/><br/>
       &#967;
     </td>
     <td style="text-align:center">
       0068<br/><br/>
-      0266<br/><br/>
+      0266
+    <br/><br/>
       0078<br/><br/>
       03C7
     </td>
@@ -676,12 +676,10 @@ Y
     </td>
     <td style="text-align:center">
       r<br/><br/>
-      &#633;
-    </td>
+      &#633;</td>
     <td style="text-align:center">
       0072<br/><br/>
-      0279
-    </td>
+      0279</td>
     <td>
       bo<u>rr</u>ow, <u>r</u>ake
     </td>
