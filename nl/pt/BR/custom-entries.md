@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-06-24"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -25,7 +25,7 @@ subcollection: text-to-speech
 # Criando e gerenciando entradas customizadas
 {: #customWords}
 
-Quando houver um modelo customizado, a próxima etapa será incluir entradas customizadas no formato de pares de palavra/tradução para definir como as palavras especificadas devem ser pronunciadas durante a síntese. As definições substituem as regras de pronúncia regular padrão do serviço. É possível incluir e consultar traduções para uma ou mais palavras por vez e excluir palavras individuais que não são mais necessárias. Assim que estiver familiarizado com a interface de customização, manipular diversas palavras de uma vez será mais conveniente do que trabalhar com somente uma palavra por vez. Deve-se usar credenciais de serviço para que a instância do serviço que possui um modelo customizado use qualquer método que requeira seu ID de customização.
+Quando houver um modelo customizado, a próxima etapa será incluir entradas customizadas no formato de pares de palavra/tradução para definir como as palavras especificadas devem ser pronunciadas durante a síntese. As definições substituem as regras de pronúncia regular padrão do serviço. É possível incluir e consultar traduções para uma ou mais palavras por vez e excluir palavras individuais que não são mais necessárias. Assim que estiver familiarizado com a interface de customização, manipular diversas palavras de uma vez será mais conveniente do que trabalhar com somente uma palavra por vez. Deve-se usar credenciais para a instância do serviço que possui um modelo customizado para usar qualquer método que requeira o ID de customização.
 {: shortdesc}
 
 ## Incluindo uma única palavra em um modelo customizado
@@ -87,7 +87,7 @@ O conteúdo JSON enviado no corpo da solicitação é igual ao seguinte:
 ```
 {: codeblock}
 
-Conforme mencionado em [Atualizando um modelo customizado](/docs/services/text-to-speech/custom-models.html#cuModelsUpdate), também é possível usar o método `POST /v1/customizations/{customization_id}` para incluir palavras em um modelo customizado. O exemplo a seguir usa esse método para incluir as mesmas duas palavras que o exemplo anterior e não faz mudanças nos metadados do modelo. Com a exceção da URL, os dois métodos são idênticos.
+Conforme mencionado em [Atualizando um modelo customizado](/docs/services/text-to-speech?topic=text-to-speech-customModels#cuModelsUpdate), também é possível usar o método `POST /v1/customizations/{customization_id}` para incluir palavras em um modelo customizado. O exemplo a seguir usa esse método para incluir as mesmas duas palavras que o exemplo anterior e não faz mudanças nos metadados do modelo. Com a exceção da URL, os dois métodos são idênticos.
 
 ```bash
 curl -X POST -u "apikey:{apikey}"
@@ -100,7 +100,7 @@ curl -X POST -u "apikey:{apikey}"
 ## Incluindo palavras em um modelo customizado em japonês
 {: #cuJapaneseAdd}
 
-Considerações adicionais e um campo `part_of_speech` adicional se aplicam ao criar entradas para palavras em um modelo customizado em japonês. Para obter mais informações, consulte [Trabalhando com entradas em japonês](/docs/services/text-to-speech/custom-rules.html#jaNotes). Especifique uma parte do discurso para uma entrada customizada em japonês da seguinte forma:
+Considerações adicionais e um campo `part_of_speech` adicional se aplicam ao criar entradas para palavras em um modelo customizado em japonês. Para obter mais informações, consulte [Trabalhando com entradas em japonês](/docs/services/text-to-speech?topic=text-to-speech-rules#jaNotes). Especifique uma parte do discurso para uma entrada customizada em japonês da seguinte forma:
 
 -   Para o método `PUT /v1/customizations/{customization_id}/words/{word}`, transmita um objeto JSON do seguinte formato:
 
@@ -206,7 +206,7 @@ O método retorna uma matriz JSON com os dados a seguir. Para modelos customizad
 ```
 {: codeblock}
 
-Conforme descrito em [Consultando um modelo customizado](/docs/services/text-to-speech/custom-models.html#cuModelsQuery), também é possível usar o método `GET /v1/customizations/{customization_id}` para ver os metadados e as palavras de um modelo customizado:
+Conforme descrito em [Consultando um modelo customizado](/docs/services/text-to-speech?topic=text-to-speech-customModels#cuModelsQuery), também é possível usar o método `GET /v1/customizations/{customization_id}` para ver os metadados e as palavras de um modelo customizado:
 
 ```bash
 curl -X GET -u "apikey:{apikey}"

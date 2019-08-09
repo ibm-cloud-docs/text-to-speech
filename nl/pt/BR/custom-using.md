@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-06-24"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -25,7 +25,8 @@ subcollection: text-to-speech
 # Usando um modelo de voz customizado
 {: #customUsing}
 
-Depois de criar um modelo customizado e preenchê-lo com as entradas customizadas, use-o transmitindo seu ID de customização (GUID) com o parâmetro de consulta `customization_id` do método HTTP `GET` ou `POST /v1/synthesize` ou do método WebSocket `/v1/synthesize`. As credenciais de serviço do proprietário de um modelo devem ser usadas para chamar um método `synthesize` que usa o modelo customizado.
+Depois de criar um modelo customizado e preenchê-lo com as entradas customizadas, use-o transmitindo seu ID de customização (GUID) com o parâmetro de consulta `customization_id` do método HTTP `GET` ou `POST /v1/synthesize` ou do método WebSocket `/v1/synthesize`. Ao incluir um ID de customização, um método `synthesize` deve ser chamado com credenciais para a instância
+do serviço que possui o modelo customizado especificado.
 {: shortdesc}
 
 Os primeiros dois exemplos geram uma pronúncia customizada para `IEEE`, que se baseia em entradas do modelo customizado indicado. A pronúncia customizada é usada em vez da pronúncia padrão das regras de pronúncia regular do serviço.

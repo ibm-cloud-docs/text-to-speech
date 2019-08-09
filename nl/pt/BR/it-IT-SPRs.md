@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-06-04"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -34,7 +34,7 @@ As seções a seguir descrevem os símbolos válidos para o italiano.
   <caption>Tabela 1. Vogais regulares (italiano)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Símbolo italiano<br/>SPR
+      Italiano<br/>Símbolo do SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Símbolo do IPA
@@ -79,7 +79,7 @@ As seções a seguir descrevem os símbolos válidos para o italiano.
       E
     </td>
     <td style="text-align:center">
-      & #603;
+      &#603;
     </td>
     <td style="text-align:center">
       025B
@@ -153,7 +153,7 @@ As seções a seguir descrevem os símbolos válidos para o italiano.
   <caption>Tabela 2. Consoantes (italiano)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Símbolo italiano<br/>SPR
+      Italiano<br/>Símbolo do SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Símbolo do IPA
@@ -523,7 +523,7 @@ As seções a seguir descrevem os símbolos válidos para o italiano.
   <caption>Tabela 3. Geminações (Italiano)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Símbolo italiano<br/>SPR
+      Italiano<br/>Símbolo do SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Símbolo do IPA
@@ -610,7 +610,7 @@ Se um alofone não for usado no SPR, o serviço {{site.data.keyword.texttospeech
   <caption>Tabela 4. Alofones (italiano)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Símbolo de SPR<br/>alofone italiano
+      Alofone italiano<br/>Símbolo do SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Símbolo do IPA

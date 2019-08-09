@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-09"
+lastupdated: "2019-06-06"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -46,11 +46,7 @@ A Tabela 1 lista os formatos de áudio (tipos MIME) nos quais é possível solic
     <td>
       <em>Áudio Básico</em>, um formato de áudio de canal único e com lossico que é
       codificado pelo uso de dados de 8 bits u-law (ou mulei) que são amostrados em 8 kHz.
-      Esse formato fornece um tipo de mídia de denominador comum mais baixo. Para mais
-      informações, consulte o IETF
-     <a target="_blank" href="https://tools.ietf.org/html/rfc2046">Solicitação
-        para Comment (RFC) 2046 ![External link icon](../../icons/launch-glyph.svg "External link icon")</a>e
-     <a target="_blank" href="http://www.iana.org/assignments/media-types/audio/basic">iana.org/assignments/media-types/audio/basic ![External link icon](../../icons/launch-glyph.svg "External link icon")</a>.
+      Esse formato fornece um tipo de mídia de denominador comum mais baixo. Para obter mais informações, consulte o IETF [Solicitação de comentários (RFC) 2046](https://tools.ietf.org/html/rfc2046) e [iana.org/assignments/media-types/audio/basic](http://www.iana.org/assignments/media-types/audio/basic).
     </td>
   </tr>
   <tr>
@@ -59,8 +55,7 @@ A Tabela 1 lista os formatos de áudio (tipos MIME) nos quais é possível solic
     </td>
     <td>
       <em>Free Lossless Audio Codec (FLAC)</em> (<code>.flac</code>),
-      um formato de codificação de áudio compactado e sem perdas. Para obter informações adicionais, consulte
-     <a target="_blank" href="https://en.wikipedia.org/wiki/FLAC">en.wikipedia.org/wiki/FLAC ![External link icon](../../icons/launch-glyph.svg "External link icon")</a>.
+      um formato de codificação de áudio compactado e sem perdas. Para obter mais informações, consulte [FLAC](https://wikipedia.org/wiki/FLAC).
     </td>
   </tr>
   <tr>
@@ -69,12 +64,9 @@ A Tabela 1 lista os formatos de áudio (tipos MIME) nos quais é possível solic
     </td>
     <td>
       <em>Módulos de Código de Pulso de 16 bits (PCM) lineares</em>, um descompactado
-      formato de dados de áudio (geralmente <code>.raw</code>ou <code>.pcm</code>). Para
-      mais informações, consulte o IETF (Internet Engineering Task Force)
-     <a target="_blank" href="https://tools.ietf.org/html/rfc2586">Solicitação
-        para Comment (RFC) 2586 ![External link icon](../../icons/launch-glyph.svg "External link icon")</a>e
-     <a target="_blank" href="https://en.wikipedia.org/wiki/Pulse-code_modulation">en.wikipedia.org/wiki/Pulse-code_modulation ![External link icon](../../icons/launch-glyph.svg "External link icon")</a>.<br/><br/>
-      Deve-se especificar a taxa de amostragem com esse formato de áudio. Por exemplo,
+      formato de dados de áudio (geralmente <code>.raw</code>ou <code>.pcm</code>). Para obter mais informações, consulte o Internet Engineering Task Force (IETF) [Solicitação de comentários (RFC) 2586](https://tools.ietf.org/html/rfc2586) e [Modulação de código de pulso](https://wikipedia.org/wiki/Pulse-code_modulation).<br/><br/>
+      Deve-se
+      especificar a taxa de amostragem com esse formato de áudio. Por exemplo,
       especifique <code>audio/l16;rate=16000</code> para o áudio amostrado em
       16 kHz. Também é possível, opcionalmente, especificar a ordenação como
       <code>audio/l16;rate={rate};endianness=big-endian</code> ou
@@ -90,8 +82,7 @@ A Tabela 1 lista os formatos de áudio (tipos MIME) nos quais é possível solic
     <td>
       <em>MP3</em>ou <em>Motion Picture Experts Group (MPEG)</em>, uma lossy
       o formato de compactação de dados (MP3 e MPEG se referem ao mesmo formato).
-      Para obter mais informações, consulte
-      <a target="_blank" href="https://en.wikipedia.org/wiki/MP3">en.wikipedia.org/wiki/MP3 ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")</a>.
+      Para obter mais informações, consulte [MP3](https://wikipedia.org/wiki/MP3).
     </td>
   </tr>
   <tr>
@@ -101,34 +92,28 @@ A Tabela 1 lista os formatos de áudio (tipos MIME) nos quais é possível solic
     <td>
       <em>8-bit mu-law (or u-law) audio</em>, um formato de áudio de canal único com perdas
       que é codificado usando dados u-law (ou mu-law) de 8 bits. Deve-se
-      especificar a taxa de amostragem com esse formato de áudio. Para obter mais informações,
-      consulte
-      <a target="_blank" href="https://en.wikipedia.org/wiki/M-law_algorithm">en.wikipedia.org/wiki/M-law_algorithm ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")</a>.
+      especificar a taxa de amostragem com esse formato de áudio. Para obter mais informações, consulte
+[Algoritmo M-law](https://wikipedia.org/wiki/M-law_algorithm).
     </td>
   </tr>
   <tr>
     <td>
-      <code>áudio / ogg</code><br/>
-     <code>áudio / ogg; codecs=opus</code><br/>
-     <code>áudio / ogg; codecs=vorbis</code>
+      <code>audio/ogg</code><br/>
+      <code>audio/ogg;codecs=opus</code><br/>
+      <code>audio/ogg;codecs=vorbis</code>
     </td>
     <td>
       <em>Ogg format</em> (<code>.ogg</code>), um formato grátis e de contêiner aberto
-      mantido pela Xiph.org Foundation. Para obter mais informações, consulte
-      <a target="_blank" href="https://www.xiph.org/ogg/">xiph.org/ogg/ ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")</a>.
+      mantido pela Xiph.org Foundation. Para obter mais informações, consulte [xiph.org/ogg/](https://www.xiph.org/ogg/).
       É possível solicitar fluxos de áudio compactados com os codecs
       a seguir:
       <ul style="margin-left:20px; padding:0px;">
         <li style="margin:10px 0px; line-height:120%;">
-          <em>Opus</em>. Para obter mais informações, consulte
-          <a target="_blank" href="https://www.opus-codec.org/">opus-codec.org ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")</a> e <a target="_blank" href="https://en.wikipedia.org/wiki/Opus">en.wikipedia.org/wiki/Opus (audio format) ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")</a>.
-          Na página <em>Opus (formato de áudio)</em>, confira com atenção a seção
-          <em>Contêineres</em>.
+          <em>Opus</em>. Para obter mais informações, consulte [opus-codec.org](https://www.opus-codec.org/) e [Opus (formato de áudio)](https://wikipedia.org/wiki/Opus_%28audio_format%29).
+          Procure especialmente na seção <em>Contêineres</em>.
         </li>
         <li style="margin:10px 0px; line-height:120%;">
-          <em>Vorbis</em>. Para obter informações adicionais, consulte
-         <a target="_blank" href="https://xiph.org/vorbis/">xiph.org/vorbis ![External link icon](../../icons/launch-glyph.svg "External link icon")</a>e
-         <a target="_blank" href="https://en.wikipedia.org/wiki/Vorbis">en.wikipedia.org/wiki/Vorbis ![External link icon](../../icons/launch-glyph.svg "External link icon")</a>.
+          <em>Vorbis</em>. Para obter mais informações, consulte [xiph.org/vorbis](https://xiph.org/vorbis/) e [Vorbis](https://wikipedia.org/wiki/Vorbis).
         </li>
       </ul>
       Ambos os codecs são livres, abertos, formatos de compactação de áudio com lossy. Opus
@@ -150,22 +135,20 @@ A Tabela 1 lista os formatos de áudio (tipos MIME) nos quais é possível solic
       gerado pode não funcionar em todos os leitores de áudio. Especificamente,
       o atributo <code>numSamples</code>no cabeçalho do arquivo
       é configurado como <code>0</code>independentemente do comprimento do áudio.
-      Para obter informações adicionais, consulte
-     <a target="_blank" href="https://en.wikipedia.org/wiki/WAV">en.wikipedia.org/wiki/WAV ![External link icon](../../icons/launch-glyph.svg "External link icon")</a>.
+      Para obter mais informações, consulte [WAV](https://wikipedia.org/wiki/WAV).
     </td>
   </tr>
   <tr>
     <td>
-      <code>áudio / webm</code><br/>
-     <code>áudio / webm; codecs=opus</code><br/>
-     <code>áudio / webm; codecs=vorbis</code>
+      <code>audio/webm</code><br/>
+      <code>audio/webm;codecs=opus</code><br/>
+      <code>áudio / webm; codecs=vorbis</code>
     </td>
     <td>
       <em>Web Media (WebM)</em>(<code>.webm</code>), um arquivo de mídia aberto
       formato que fornece suporte para fluxos de áudio que são compactados
       com os codecs de áudio Opus e Vorbis. Se você omitir o codec, o
-      O serviço retorna o áudio no formato Opus. Para obter informações adicionais, consulte
-     <a target="_blank" href="https://www.webmproject.org/">webmproject.org ![External link icon](../../icons/launch-glyph.svg "External link icon")</a>.
+      O serviço retorna o áudio no formato Opus. Para obter mais informações, consulte [webmproject.org](https://www.webmproject.org/).
     </td>
   </tr>
 </table>
@@ -175,7 +158,7 @@ A Tabela 1 lista os formatos de áudio (tipos MIME) nos quais é possível solic
 
 Especificar um formato de áudio é opcional. Por padrão, o serviço retorna áudio no formato `áudio / ogg; codecs=opus`. Mas é possível especificar um formato para a interface HTTP ou WebSocket:
 
--   Com os métodos HTTP `GET`e `POST /v1/synthesize`, você especifica um formato usando o cabeçalho da solicitação `Accept`ou o parâmetro de consulta `accept`. Para receber áudio no formato padrão, omita tanto o cabeçalho quanto o parâmetro de consulta. Para obter mais informações, consulte [Sintetizando Texto para Áudio](/docs/services/text-to-speech/http.html#synthesize).
+-   Com os métodos HTTP `GET`e `POST /v1/synthesize`, você especifica um formato usando o cabeçalho da solicitação `Accept`ou o parâmetro de consulta `accept`. Para receber áudio no formato padrão, omita tanto o cabeçalho quanto o parâmetro de consulta. Para obter mais informações, consulte [Sintetizando Texto para Áudio](/docs/services/text-to-speech?topic=text-to-speech-usingHTTP#synthesize).
 
     Se você usar o parâmetro de consulta `accept`, a URL-codifique o argumento para o parâmetro. Por exemplo, URL-encode o seguinte argumento
 
@@ -191,7 +174,7 @@ Especificar um formato de áudio é opcional. Por padrão, o serviço retorna á
     ```
     {: codeblock}
 
--   Com a interface WebSocket, você especifica um formato usando o parâmetro `accept`da mensagem de texto que você transmite para iniciar a síntese. Para receber áudio no formato padrão, especifique o valor `*/ *`para o parâmetro. Para obter mais informações, consulte [Enviar texto de entrada](/docs/services/text-to-speech/websockets.html#WSsend).
+-   Com a interface WebSocket, você especifica um formato usando o parâmetro `accept`da mensagem de texto que você transmite para iniciar a síntese. Para receber áudio no formato padrão, especifique o valor `*/ *`para o parâmetro. Para obter mais informações, consulte [Enviar texto de entrada](/docs/services/text-to-speech?topic=text-to-speech-usingWebSocket#WSsend).
 
 ## Especificando uma taxa de amostragem
 {: #formatRate}
@@ -269,8 +252,8 @@ A Tabela 2 mostra a taxa de amostragem padrão do áudio que é retornado para c
   </tr>
   <tr>
     <td>
-      <code>áudio / ogg</code><br/>
-     <code>áudio / ogg; codecs=vorbis</code>
+      <code>audio/ogg</code><br/>
+      <code>audio/ogg;codecs=vorbis</code>
     </td>
     <td style="text-align:center">
       22,050 Hz
@@ -303,8 +286,8 @@ A Tabela 2 mostra a taxa de amostragem padrão do áudio que é retornado para c
   </tr>
   <tr>
     <td>
-      <code>áudio / webm</code><br/>
-     <code>áudio / webm; codecs=opus</code>
+      <code>audio/webm</code><br/>
+      <code>audio/webm;codecs=opus</code>
     </td>
     <td style="text-align:center">
       48.000 Hz [consulte a <strong>Nota</strong>]
@@ -328,7 +311,7 @@ A Tabela 2 mostra a taxa de amostragem padrão do áudio que é retornado para c
 
 A maneira mais confiável de identificar a taxa de amostragem para qualquer fluxo de áudio retornado pelo serviço é extrair as informações do fluxo em si. É possível determinar a taxa chamando o método `/v1/synthesize` com algum texto simples (por exemplo, "hello world") e especificando o formato e o codec que você planeja usar. Em seguida, é possível obter o codec e a taxa de amostragem salvando o fluxo de áudio em um arquivo e abrindo-o em um reprodutor de áudio.
 
-O padrão Opus requer que a taxa de amostragem de saída corresponda aos recursos do reprodutor de áudio. Para obter mais informações, consulte a Seção 5.1 da Internet Engineering Task Force (IETF) [Solicitação de comentários (RFC) 7845![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://tools.ietf.org/html/rfc6455){: new_window}. A tabela indica a taxa de amostragem de saída comum para reprodutores de áudio de software, mas a taxa de amostragem real do áudio varia de acordo com o tempo dentro do fluxo. Conforme mencionado, o serviço sintetiza o áudio de origem em 22.050 Hz.
+O padrão Opus requer que a taxa de amostragem de saída corresponda aos recursos do reprodutor de áudio. Para obter mais informações, consulte a Seção 5.1 do Internet Engineering Task Force (IETF) [Solicitação de comentários (RFC) 7845](http://tools.ietf.org/html/rfc6455){: external}. A tabela indica a taxa de amostragem de saída comum para reprodutores de áudio de software, mas a taxa de amostragem real do áudio varia de acordo com o tempo dentro do fluxo. Conforme mencionado, o serviço sintetiza o áudio de origem em 22.050 Hz.
 {: note}
 
 ## Reproduzindo um arquivo de áudio
@@ -337,4 +320,4 @@ O padrão Opus requer que a taxa de amostragem de saída corresponda aos recurso
 Para reproduzir um arquivo de áudio gerado pelo serviço, use uma das ferramentas a seguir:
 
 -   Um navegador da web, como o Google Chrome&trade;, o Firefox&reg; ou o Microsoft&reg; Internet Explorer&reg;.
--   Um reprodutor de áudio, como o Audacity&reg; ([audacityteam.org ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://www.audacityteam.org/){: new_window}) ou o FFmpeg ([ffmpeg.org ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ffmpeg.org){: new_window}).
+-   Um reprodutor de áudio, como o Audacity &reg; ([audacityteam.org](http://www.audacityteam.org/){: external}) ou o FFmpeg ([ffmpeg.org](https://www.ffmpeg.org){: external}).

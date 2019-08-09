@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-07-25"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -25,98 +25,191 @@ subcollection: text-to-speech
 # Idiomas e vozes
 {: #voices}
 
-O serviço {{site.data.keyword.texttospeechfull}}suporta uma variedade de idiomas, vozes e dialetos. O serviço oferece ao menos uma voz masculina ou feminina, às vezes ambas, para cada idioma. Cada voz usa a cadência e a entonação apropriadas para seu dialeto.
+O serviço {{site.data.keyword.texttospeechfull}}suporta uma variedade de idiomas, vozes e dialetos. O serviço oferece pelo menos uma voz feminina para cada idioma. Para alguns idiomas, o serviço oferece diversas vozes, incluindo vozes masculinas e femininas. Cada voz usa a cadência e a entonação apropriadas para seu dialeto.
 {: shortdesc}
+
+As vozes da `V2`, que estavam disponíveis anteriormente com o serviço, foram descontinuadas. Se você usar uma voz da `V2` em seu aplicativo, o serviço usará automaticamente a voz equivalente da `V3` como alternativa.
+{: note}
 
 ## Idiomas e vozes suportados
 {: #languageVoices}
 
-A Tabela 1 lista as vozes que estão disponíveis para cada idioma e dialeto, incluindo seu sexo. Se você omitir o parâmetro opcional `voice` de uma solicitação, o serviço usará a voz `en-US_MichaelVoice` por padrão. Para entender por que o serviço oferece duas versões de algumas vozes, consulte [Tecnologias de síntese de discurso](#technologiesVoices).
+A tabela 1 lista as vozes disponíveis para cada idioma e dialeto, incluindo seu tipo e gênero. Todas as vozes estão disponíveis como [Vozes padrão](#standardVoices) e [Vozes neurais](#neuralVoices). Se o parâmetro opcional `voice` for omitido de uma solicitação, o serviço usará a voz padrão `en-US_MichaelVoice`.
 
-Atualmente, um problema com a implementação das vozes da `V2` causa ruído de segundo plano no discurso sintetizado. Para obter mais informações, consulte [Limitações conhecidas](/docs/services/text-to-speech/release-notes.html#limitations).
-{: note}
-
-<table style="width:90%">
+<table style="width:100%">
   <caption>Tabela 1. Idiomas e vozes suportados</caption>
   <tr>
     <th style="text-align:left">Idioma</th>
+    <th style="text-align:center">Tipo</th>
     <th style="text-align:center">Voz</th>
     <th style="text-align:center">Gênero</th>
   </tr>
   <tr>
     <td style="text-align:left">Português do Brasil</td>
+    <td style="text-align:center">Padrão</td>
     <td style="text-align:center"><code>pt-BR_IsabelaVoice</code></td>
     <td style="text-align:center">Feminina</td>
   </tr>
   <tr>
+    <td style="text-align:left"></td>
+    <td style="text-align:center">Neural</td>
+    <td style="text-align:center"><code>pt-BR_IsabelaV3Voice</code></td>
+    <td style="text-align:center">Feminina</td>
+  </tr>
+  <tr>
     <td style="text-align:left">Castelhano</td>
+    <td style="text-align:center">Padrão</td>
     <td style="text-align:center"><code>es-ES_EnriqueVoice</code></td>
     <td style="text-align:center">Male</td>
   </tr>
   <tr>
+    <td style="text-align:left"></td>
+    <td style="text-align:center">Neural</td>
+    <td style="text-align:center"><code>es-ES_EnriqueV3Voice</code></td>
+    <td style="text-align:center">Male</td>
+  </tr>
+  <tr>
     <td></td>
+    <td style="text-align:center">Padrão</td>
     <td style="text-align:center"><code>es-ES_LauraVoice</code></td>
     <td style="text-align:center">Feminina</td>
   </tr>
   <tr>
+    <td></td>
+    <td style="text-align:center">Neural</td>
+    <td style="text-align:center"><code>es-ES_LauraV3Voice</code></td>
+    <td style="text-align:center">Feminina</td>
+  </tr>
+  <tr>
     <td style="text-align:left">Francês</td>
+    <td style="text-align:center">Padrão</td>
     <td style="text-align:center"><code>fr-FR_ReneeVoice</code></td>
     <td style="text-align:center">Feminina</td>
   </tr>
   <tr>
+    <td style="text-align:left"></td>
+    <td style="text-align:center">Neural</td>
+    <td style="text-align:center"><code>fr-FR_ReneeV3Voice</code></td>
+    <td style="text-align:center">Feminina</td>
+  </tr>
+  <tr>
     <td style="text-align:left">Alemão</td>
-    <td style="text-align:center"><code>de-DE_BirgitVoice</code><br/>
-     <code>de-DE_BirgitV2Voice</code></td>
+    <td style="text-align:center">Padrão</td>
+    <td style="text-align:center"><code>de-DE_BirgitVoice</code></td>
+    <td style="text-align:center">Feminina</td>
+  </tr>
+  <tr>
+    <td style="text-align:left"></td>
+    <td style="text-align:center">Neural</td>
+    <td style="text-align:center"><code>de-DE_BirgitV3Voice</code></td>
     <td style="text-align:center">Feminina</td>
   </tr>
   <tr>
     <td></td>
-    <td style="text-align:center"><code>de-DE_DieterVoice</code><br/>
-     <code>de-DE_DieterV2Voice</code></td>
+    <td style="text-align:center">Padrão</td>
+    <td style="text-align:center"><code>de-DE_DieterVoice</code></td>
+    <td style="text-align:center">Male</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td style="text-align:center">Neural</td>
+    <td style="text-align:center"><code>de-DE_DieterV3Voice</code></td>
     <td style="text-align:center">Male</td>
   </tr>
   <tr>
     <td style="text-align:left">Italiano</td>
-    <td style="text-align:center"><code>it-IT_FrancescaVoice</code><br/>
-     <code>it-IT_FrancescaV2Voice</code></td>
+    <td style="text-align:center">Padrão</td>
+    <td style="text-align:center"><code>it-IT_FrancescaVoice</code></td>
+    <td style="text-align:center">Feminina</td>
+  </tr>
+  <tr>
+    <td style="text-align:left"></td>
+    <td style="text-align:center">Neural</td>
+    <td style="text-align:center"><code>it-IT_FrancescaV3Voice</code></td>
     <td style="text-align:center">Feminina</td>
   </tr>
   <tr>
     <td style="text-align:left">Japonês</td>
+    <td style="text-align:center">Padrão</td>
     <td style="text-align:center"><code>ja-JP_EmiVoice</code></td>
     <td style="text-align:center">Feminina</td>
   </tr>
   <tr>
+    <td style="text-align:left"></td>
+    <td style="text-align:center">Neural</td>
+    <td style="text-align:center"><code>ja-JP_EmiV3Voice</code></td>
+    <td style="text-align:center">Feminina</td>
+  </tr>
+  <tr>
     <td style="text-align:left">Espanhol da América Latina</td>
+    <td style="text-align:center">Padrão</td>
     <td style="text-align:center"><code>es-LA_SofiaVoice</code></td>
     <td style="text-align:center">Feminina</td>
   </tr>
   <tr>
+    <td style="text-align:left"></td>
+    <td style="text-align:center">Neural</td>
+    <td style="text-align:center"><code>es-LA_SofiaV3Voice</code></td>
+    <td style="text-align:center">Feminina</td>
+  </tr>
+  <tr>
     <td style="text-align:left">Espanhol da América do Norte</td>
+    <td style="text-align:center">Padrão</td>
     <td style="text-align:center"><code>es-US_SofiaVoice</code></td>
     <td style="text-align:center">Feminina</td>
   </tr>
   <tr>
+    <td style="text-align:left"></td>
+    <td style="text-align:center">Neural</td>
+    <td style="text-align:center"><code>es-US_SofiaV3Voice</code></td>
+    <td style="text-align:center">Feminina</td>
+  </tr>
+  <tr>
     <td style="text-align:left">Inglês britânico</td>
+    <td style="text-align:center">Padrão</td>
     <td style="text-align:center"><code>en-GB_KateVoice</code></td>
     <td style="text-align:center">Feminina</td>
   </tr>
   <tr>
+    <td style="text-align:left"></td>
+    <td style="text-align:center">Neural</td>
+    <td style="text-align:center"><code>en-GB_KateV3Voice</code></td>
+    <td style="text-align:center">Feminina</td>
+  </tr>
+  <tr>
     <td style="text-align:left">Inglês americano</td>
-    <td style="text-align:center"><code>en-US_AllisonVoice</code><br/>
-     <code>en-US_AllisonV2Voice</code></td>
+    <td style="text-align:center">Padrão</td>
+    <td style="text-align:center"><code>en-US_AllisonVoice</code></td>
+    <td style="text-align:center">Feminina</td>
+  </tr>
+  <tr>
+    <td style="text-align:left"></td>
+    <td style="text-align:center">Neural</td>
+    <td style="text-align:center"><code>en-US_AllisonV3Voice</code></td>
     <td style="text-align:center">Feminina</td>
   </tr>
   <tr>
     <td></td>
-    <td style="text-align:center"><code>en-US_LisaVoice</code><br/>
-     <code>en-US_LisaV2Voice</code></td>
+    <td style="text-align:center">Padrão</td>
+    <td style="text-align:center"><code>en-US_LisaVoice</code></td>
     <td style="text-align:center">Feminina</td>
   </tr>
   <tr>
     <td></td>
-    <td style="text-align:center"><code>en-US_MichaelVoice</code><br/>
-     <code>en-US_MichaelV2Voice</code></td>
+    <td style="text-align:center">Neural</td>
+    <td style="text-align:center"><code>en-US_LisaV3Voice</code></td>
+    <td style="text-align:center">Feminina</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td style="text-align:center">Padrão</td>
+    <td style="text-align:center"><code>en-US_MichaelVoice</code></td>
+    <td style="text-align:center">Male</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td style="text-align:center">Neural</td>
+    <td style="text-align:center"><code>en-US_MichaelV3Voice</code></td>
     <td style="text-align:center">Male</td>
   </tr>
 </table>
@@ -124,37 +217,46 @@ Atualmente, um problema com a implementação das vozes da `V2` causa ruído de 
 As vozes `es-LA_SofiaVoice` e `es-US_SofiaVoice` são essencialmente a mesma. A diferença mais significativa diz respeito a como as duas vozes interpretam um $ (cifrão). A versão da América Latina usa o termo *pesos*, enquanto que a versão da América do Norte usa o termo *d&oacute;lares*. Outras diferenças menores também podem existir entre as duas vozes.
 {: note}
 
-### Tecnologias de síntese de discurso
-{: #technologiesVoices}
+### Vozes padrão
+{: #standardVoices}
 
-O serviço disponibiliza duas versões de algumas vozes, por exemplo, `en-US_AllisonVoice` e `en-US_AllisonV2Voice`. A diferença primária entre as duas versões reflete a tecnologia que o serviço usa para sintetizar o discurso:
+As vozes padrão não incluem uma sequência de versões (`V3`) em seu nome (por exemplo, `pt-BR_IsabelaVoice` e `en-US_AllisonVoice`). As vozes padrão usam a síntese concatenativa para montar segmentos (ou unidades) de discursos gravados para gerar o áudio solicitado. Os pontos de concatenação dos segmentos registrados, às vezes, resultam em descontinuidades de fala que podem comprometer a qualidade e a naturalidade do discurso resultante.
 
--   A *síntese concatenativa* monta segmentos (ou unidades) de discurso registrado para gerar o áudio solicitado. Ela gera um áudio que pode ser considerado mais nítido, mas os pontos de concatenação dos segmentos registrados, às vezes, resultam em distorções de fala.
+### Vozes neurais
+{: #neuralVoices}
 
-    Vozes que não incluem a sequência `V2` em seus nomes (por exemplo, `en-US_AllisonVoice`) são baseadas na síntese concatenativa.
--   A *síntese de deep learning* usa uma Deep Neural Network (DNN) para sintetizar o discurso para o texto especificado. Em vez de incluir os segmentos registrados de áudio em uma sequência, essa abordagem conta com o aprendizado de máquina para treinar uma DNN em dados de discurso registrados. A síntese de deep-learning ou baseada em DNN produz um áudio com uma prosódia mais natural e uma qualidade geral mais consistente.
+As vozes neurais incluem uma sequência de versões (`V3`) em seu nome (por exemplo, `pt-BR_IsabelaV3Voice` e `en-US_AllisonV3Voice`). Em vez de depender da seleção e da concatenação de segmentos, a tecnologia de voz neural usa diversas Redes Neurais Profundas (DNNs) para prever os recursos acústicos (espectrais) do discurso. As DNNs são treinadas em discursos humanos naturais e geram o áudio resultante por meio dos recursos acústicos preditos.
 
-    As vozes que incluem a sequência `V2` em seus nomes (por exemplo, `en-US_AllisonV2Voice`) são vozes mais novas que usam a síntese baseada em DNN.
+Durante a síntese, as DNNs preveem a duração do tom e do fonema (prosódia), a estrutura espectral e a forma de onda do discurso. As
+vozes neurais produzem um discurso nítido e limpo, com uma qualidade de áudio muito natural e suave. Assim, elas têm maior consistência na qualidade geral do que as vozes padrão.
 
-É necessário experimentar as novas vozes antes de adotá-las para seu aplicativo. As duas tecnologias produzem áudio com diferentes qualidades de sinal, portanto, as novas vozes podem não ser melhores para todos os aplicativos. Além disso, as vozes baseadas em DNN não suportam os elementos ou atributos do SSML a seguir:
+Para obter mais informações sobre a tecnologia de voz neural do serviço, consulte
+
+-   A postagem do blog [IBM
+Watson Text to Speech: vozes neurais com disponibilidade geral](https://medium.com/ibm-watson/ibm-watson-text-to-speech-neural-voices-added-to-service-e562106ff9c7){: external}
+-   O documento de pesquisa [Text to Speech de alta qualidade, leve e adaptável usando o LPCNet](https://arxiv.org/abs/1905.00590){: external}
+
+As vozes neurais não suportam os elementos ou atributos SSML a seguir:
 
 -   O atributo `volume`do elemento `<prosody>`
 -   O elemento `<express-as>`
 -   O elemento `<voice-transformation>`
 
-Se o seu aplicativo usar esses elementos, continue usando as vozes baseadas na síntese concatenativa.
+No entanto, é possível que você descubra que esses recursos SSML não são mais necessários ao usar as vozes neurais. Além disso, é possível fazer modificações de tom e taxa em vozes neurais usando o elemento `<prosody>` em vez do elemento `<voice-transformation>`. Para obter mais informações, consulte [O elemento prosody](/docs/services/text-to-speech?topic=text-to-speech-elements#prosody_element).
 
 ### Customização de voz
 {: #customizeVoice}
 
 Ao sintetizar o texto, o serviço aplica as regras de pronúncia dependentes de idioma para converter a ortografia comum de cada palavra em uma ortografia fonética. As regras de pronúncia do serviço funcionam bem para palavras comuns, mas podem produzir resultados imperfeitos para palavras incomuns, tais como termos com origens estrangeiras, nomes pessoais, abreviações ou acrônimos.
 
-Se o léxico de seu aplicativo incluir essas palavras, será possível usar a interface de customização para especificar como o serviço as pronuncia. Para obter mais informações, consulte [Entendendo a customização](/docs/services/text-to-speech/custom-intro.html).
+Se o léxico de seu aplicativo incluir essas palavras, será possível usar a interface de customização para especificar como o serviço as pronuncia. Para obter mais informações, consulte [Entendendo a customização](/docs/services/text-to-speech?topic=text-to-speech-customIntro).
+
+É possível criar um modelo de voz customizado para um idioma específico, não para uma voz específica. Portanto, um modelo customizado pode ser usado com qualquer voz, padrão ou neural, para o idioma especificado.
 
 ## Especificando uma voz
 {: #specifyVoice}
 
-Os métodos HTTP `GET` e `POST /v1/synthesize`, bem como o método WebSocket `/v1/synthesize`, aceitam um parâmetro de consulta `voice` opcional para especificar a voz para o áudio sintetizado. Para obter mais informações, consulte [A interface HTTP](/docs/services/text-to-speech/http.html) e [A interface WebSocket](/docs/services/text-to-speech/websockets.html).
+Os métodos HTTP `GET` e `POST /v1/synthesize`, bem como o método WebSocket `/v1/synthesize`, aceitam um parâmetro de consulta `voice` opcional para especificar a voz para o áudio sintetizado. Para obter mais informações, consulte [A interface HTTP](/docs/services/text-to-speech?topic=text-to-speech-usingHTTP) e [A interface WebSocket](/docs/services/text-to-speech?topic=text-to-speech-usingWebSocket).
 
 O serviço baseia seu entendimento do idioma para o texto de entrada na voz especificada. Certifique-se de especificar uma voz que corresponda ao idioma do texto de entrada. Por exemplo, ao especificar a voz francesa (`fr-FR_ReneeVoice`), o serviço assumirá que o texto de entrada está escrito em francês. Ao transmitir um texto que não está escrito no idioma da voz (por exemplo, texto em inglês para a voz francesa), o serviço poderá não produzir resultados significativos.
 
@@ -217,11 +319,12 @@ O método `GET /v1/voices/{voice}` lista informações sobre uma voz específica
     </td>
   </tr>
   <tr>
-    <td><code>customization_id</code><br/><em>Opcional</em></td>
+    <td><code>customization_id</code><br/><em>      Opcional
+    </em></td>
     <td style="text-align:center">Consulta</td>
     <td style="text-align:center">Sequência</td>
     <td>
-      Fornece o identificador exclusivo global (GUID) de um modelo de voz customizado definido para a voz especificada. Ao incluir um ID de customização, deve-se chamar o método com as credenciais de serviço do proprietário do modelo customizado.
+      Fornece o Identificador Exclusivo Global (GUID) de um modelo de voz customizado que foi definido para o idioma da voz especificada. Se você incluir um ID de customização, a solicitação deverá ser realizada com credenciais para a instância do serviço que possui o modelo customizado.
     </td>
   </tr>
 </table>
@@ -252,4 +355,5 @@ Se você omitir o parâmetro `customization_id`, o método retornará a saída J
 ```
 {: codeblock}
 
-Os atributos do campo adicional `customization` fornecem informações, como o GUID, o nome, o idioma e a descrição do modelo de voz customizado. Também mostram as credenciais de serviço do proprietário do modelo, a data e o horário nos quais o modelo foi criado e a data e o horário de sua última modificação.
+Os atributos do campo adicional `customization` fornecem informações, como o GUID, o nome, o idioma e a descrição do modelo de voz customizado. Eles também mostram as credenciais do proprietário do modelo, a data e a hora nas quais o modelo foi criado e a data e a hora da última
+modificação.

@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-06-04"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -34,7 +34,7 @@ As seções a seguir descrevem os símbolos válidos para o francês.
   <caption>Tabela 1. Vogais (francês)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Símbolo<br/>SPR francês
+      Francês<br/>Símbolo do SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Símbolo do IPA
@@ -296,7 +296,7 @@ As seções a seguir descrevem os símbolos válidos para o francês.
   <caption>Tabela 2. Consoantes (francês)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Símbolo<br/>SPR francês
+      Francês<br/>Símbolo do SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Símbolo do IPA
@@ -627,7 +627,7 @@ Em francês, o `_` (sublinhado) pode ser usado após uma consoante no final de u
   <caption>Tabela 3. Ligação (Francês)</caption>
   <tr>
     <th style="width:33%; text-align:center; vertical-align:bottom">
-      Símbolo<br/>SPR francês
+      Francês<br/>Símbolo do SPR
     </th>
     <th style="width:33%; text-align:center; vertical-align:bottom">
       Símbolo do IPA

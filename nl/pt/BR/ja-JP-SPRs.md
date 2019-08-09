@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-06-04"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -34,7 +34,7 @@ As seções a seguir descrevem os símbolos válidos para o japonês.
   <caption>Tabela 1. Vogais e marcas (japonês)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Símbolo do SPR para o<br/>japonês
+      Japonês<br/>Símbolo do SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Símbolo do IPA
@@ -70,7 +70,7 @@ As seções a seguir descrevem os símbolos válidos para o japonês.
     </td>
     <td style="text-align:center">
       i<br/><br/>
-      & #618;
+      &#618;
     </td>
     <td style="text-align:center">
       0069<br/><br/>
@@ -189,7 +189,7 @@ As seções a seguir descrevem os símbolos válidos para o japonês.
   <caption>Tabela 2. Consoantes (japonês)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Símbolo do SPR para o<br/>japonês
+      Japonês<br/>Símbolo do SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Símbolo do IPA
