@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-06-24"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -25,7 +25,7 @@ subcollection: text-to-speech
 # カスタム項目の作成と管理
 {: #customWords}
 
-カスタム・モデルを作成したら、次のステップは、単語/トランスレーションのペアの形式でカスタム項目を追加することです。カスタム項目により、指定した単語を合成中にどのように発音するかを定義します。この定義は、サービスのデフォルトの通常の発音ルールをオーバーライドします。 1 つ以上の単語のトランスレーションを同時に追加および照会できます。また、不要になった個別の単語を削除できます。 カスタマイズ・インターフェースに慣れたら、複数の単語を同時に操作すると、単語ごとに作業するよりも便利な場合があります。 カスタム・モデルのカスタマイズ ID を必要とするメソッドを使用する場合は、そのモデルを所有するサービス・インスタンスのサービス資格情報を使用する必要があります。
+カスタム・モデルを作成したら、次のステップは、単語/トランスレーションのペアの形式でカスタム項目を追加することです。カスタム項目により、指定した単語を合成中にどのように発音するかを定義します。 この定義は、サービスのデフォルトの通常の発音ルールをオーバーライドします。 1 つ以上の単語のトランスレーションを同時に追加および照会できます。また、不要になった個別の単語を削除できます。 カスタマイズ・インターフェースに慣れたら、複数の単語を同時に操作すると、単語ごとに作業するよりも便利な場合があります。 カスタム・モデルのカスタマイズ ID を必要とするメソッドを使用する場合は、そのモデルを所有するサービス・インスタンスの資格情報を使用する必要があります。
 {: shortdesc}
 
 ## カスタム・モデルへの単一の単語の追加
@@ -33,7 +33,7 @@ subcollection: text-to-speech
 
 単一の単語/トランスレーションのペアをカスタム・モデルに追加するには、`PUT /v1/customizations/{customization_id}/words/{word}` メソッドを使用します。 メソッドの URL で、追加する単語を指定します。 単一の `translation` 属性を使用して JSON オブジェクトとして単語のトランスレーションを指定します。 モデル内に既に存在している単語の新規トランスレーションを追加した場合、その単語の既存のトランスレーションが上書きされます。
 
-トランスレーションを指定するには、同音異字方式または表音方式 (またはその 2 つの組み合わせ) を使用します。表音トランスレーションの場合は、International Phonetic Alphabet (IPA) フォーマットまたは {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR) フォーマットを使用できます。以下の例では、`IEEE` という単語に対応するトランスレーションをカスタム・モデルに追加するさまざまな方法を示しています。
+トランスレーションを指定するには、同音異字方式または表音方式 (またはその 2 つの組み合わせ) を使用します。 表音トランスレーションの場合は、International Phonetic Alphabet (IPA) フォーマットまたは {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR) フォーマットを使用できます。 以下の例では、`IEEE` という単語に対応するトランスレーションをカスタム・モデルに追加するさまざまな方法を示しています。
 
 -   **同音異字:** この例の場合は、以下のように同音異字方式を使用するのが最も簡単です。
 
@@ -65,7 +65,7 @@ subcollection: text-to-speech
 ## カスタム・モデルへの複数の単語の追加
 {: #cuWordsAdd}
 
-同時に 1 つ以上の単語をカスタム・モデルに追加するには、`POST /v1/customizations/{customization_id}/words` メソッドを使用します。カスタム・モデルに追加する項目は、単語/トランスレーションのペアの JSON 配列として指定します。 以下の例では、単語 `NCAA` および `iPhone` の一般的な同音異字トランスレーションをカスタム・モデルに追加します。
+同時に 1 つ以上の単語をカスタム・モデルに追加するには、`POST /v1/customizations/{customization_id}/words` メソッドを使用します。 カスタム・モデルに追加する項目は、単語/トランスレーションのペアの JSON 配列として指定します。 以下の例では、単語 `NCAA` および `iPhone` の一般的な同音異字トランスレーションをカスタム・モデルに追加します。
 
 ```bash
 curl -X POST -u "apikey:{apikey}"
@@ -87,7 +87,7 @@ curl -X POST -u "apikey:{apikey}"
 ```
 {: codeblock}
 
-[カスタム・モデルの更新](/docs/services/text-to-speech/custom-models.html#cuModelsUpdate)で説明したように、`POST /v1/customizations/{customization_id}` メソッドを使用して、単語をカスタム・モデルに追加することもできます。 以下の例では、このメソッドを使用して、前の例と同じ 2 つの単語を追加しています。モデルのメタデータに違いはありません。URL を除き、2 つのメソッドは同じです。
+[カスタム・モデルの更新](/docs/services/text-to-speech?topic=text-to-speech-customModels#cuModelsUpdate)で説明したように、`POST /v1/customizations/{customization_id}` メソッドを使用して、単語をカスタム・モデルに追加することもできます。 以下の例では、このメソッドを使用して、前の例と同じ 2 つの単語を追加しています。モデルのメタデータに違いはありません。 URL を除き、2 つのメソッドは同じです。
 
 ```bash
 curl -X POST -u "apikey:{apikey}"
@@ -100,7 +100,7 @@ curl -X POST -u "apikey:{apikey}"
 ## 日本語のカスタム・モデルへの単語の追加
 {: #cuJapaneseAdd}
 
-日本語のカスタム・モデルの単語に対する項目を作成する場合は、追加の考慮事項と `part_of_speech` フィールドが適用されます。詳しくは、[日本語の項目の処理](/docs/services/text-to-speech/custom-rules.html#jaNotes)を参照してください。以下のように、日本語のカスタム項目の品詞を指定します。
+日本語のカスタム・モデルの単語に対する項目を作成する場合は、追加の考慮事項と `part_of_speech` フィールドが適用されます。詳しくは、[日本語の項目の処理](/docs/services/text-to-speech?topic=text-to-speech-rules#jaNotes)を参照してください。 以下のように、日本語のカスタム項目の品詞を指定します。
 
 -   `PUT /v1/customizations/{customization_id}/words/{word}` メソッドの場合は、以下の形式で JSON オブジェクトを渡します。
 
@@ -128,7 +128,7 @@ curl -X POST -u "apikey:{apikey}"
     ```
     {: codeblock}
 
-以下の `PUT /v1/customizations/{customization_id}/words/{word}` メソッドの例では、`NY` を表す 2 バイト・ストリングの URL エンコード表記を、名詞 (`Mesi`) の<code>&#12491;&#12517;&#12540;&#12520;&#12540;&#12463;</code> (英語の `New York`) に変換しています。このカスタム・トランスレーションが定義されていない場合、ストリングは`エヌワイ`と読まれます。
+以下の `PUT /v1/customizations/{customization_id}/words/{word}` メソッドの例では、`NY` を表す 2 バイト・ストリングの URL エンコード表記を、名詞 (`Mesi`) の<code>&#12491;&#12517;&#12540;&#12520;&#12540;&#12463;</code> (英語の `New York`) に変換しています。 このカスタム・トランスレーションが定義されていない場合、ストリングは`エヌワイ`と読まれます。
 
 -   **同音異字:**
 
@@ -154,7 +154,7 @@ curl -X POST -u "apikey:{apikey}"
 ## カスタム・モデルに含まれている単一の単語の照会
 {: #cuWordQueryModel}
 
-カスタム・モデルに含まれている単一の単語のトランスレーションを照会するには、`GET /v1/customizations/{customization_id}/words/{word}` メソッドを使用します。メソッドの URL に単語を指定します。トランスレーションが、カスタム・モデルで定義されているとおりに (同音異字または表音)、返されます。
+カスタム・モデルに含まれている単一の単語のトランスレーションを照会するには、`GET /v1/customizations/{customization_id}/words/{word}` メソッドを使用します。 メソッドの URL に単語を指定します。 トランスレーションが、カスタム・モデルで定義されているとおりに (同音異字または表音)、返されます。
 
 以下の例では、単語 `IEEE` のトランスレーションについてカスタム・モデルに照会しています。
 
@@ -176,7 +176,7 @@ curl -X GET -u "apikey:{apikey}"
 ## カスタム・モデルに含まれているすべての単語の照会
 {: #cuWordsQueryModel}
 
-カスタム・モデルに定義されているすべての単語のトランスレーションを表示するには、`GET /v1/customizations/{customization_id}/words` メソッドを使用します。以下の例では、このメソッドにより、3 つの単語の同音異字トランスレーションが含まれているカスタム・モデルの項目がリストされます。
+カスタム・モデルに定義されているすべての単語のトランスレーションを表示するには、`GET /v1/customizations/{customization_id}/words` メソッドを使用します。 以下の例では、このメソッドにより、3 つの単語の同音異字トランスレーションが含まれているカスタム・モデルの項目がリストされます。
 
 ```bash
 curl -X GET -u "apikey:{apikey}"
@@ -206,7 +206,7 @@ curl -X GET -u "apikey:{apikey}"
 ```
 {: codeblock}
 
-[カスタム・モデルの照会](/docs/services/text-to-speech/custom-models.html#cuModelsQuery)で説明したように、以下のように `GET /v1/customizations/{customization_id}` メソッドを使用して、カスタム・モデルのメタデータと単語の両方を表示することもできます。
+[カスタム・モデルの照会](/docs/services/text-to-speech?topic=text-to-speech-customModels#cuModelsQuery)で説明したように、以下のように `GET /v1/customizations/{customization_id}` メソッドを使用して、カスタム・モデルのメタデータと単語の両方を表示することもできます。
 
 ```bash
 curl -X GET -u "apikey:{apikey}"

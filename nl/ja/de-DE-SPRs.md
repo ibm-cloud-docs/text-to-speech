@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-06-04"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -927,5 +927,5 @@ subcollection: text-to-speech
 
 **注:**
 
-1.  IPA 記号 <code>&#240;</code> (IPA Unicode `00F0`) が出現するのは外来語に限られ、その大部分は英語です (*The New York Times* など)。ただし、サービスでその音は IPA 記号 `d` (IPA Unicode `0064`) として生成されます。
-1.  IPA 記号 <code>&#952;</code> (IPA Unicode `03B8`) が出現するのは外来語に限られ、その大部分は英語です (*thriller* など)。ただし、サービスはこの音を IPA 記号 <code>&#678;</code> (IPA Unicode `02A6`) として生成します。
+1.  IPA 記号 <code>&#240;</code> (IPA Unicode `00F0`) が出現するのは外来語に限られ、その大部分は英語です (*The New York Times* など)。 ただし、サービスでその音は IPA 記号 `d` (IPA Unicode `0064`) として生成されます。
+1.  IPA 記号 <code>&#952;</code> (IPA Unicode `03B8`) が出現するのは外来語に限られ、その大部分は英語です (*thriller* など)。 ただし、サービスはこの音を IPA 記号 <code>&#678;</code> (IPA Unicode `02A6`) として生成します。

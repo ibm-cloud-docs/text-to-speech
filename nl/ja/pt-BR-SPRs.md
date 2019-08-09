@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-06-04"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -225,7 +225,7 @@ subcollection: text-to-speech
 
 **注:**
 
-1.  SPR 記号 `a` は、発音が異なる 2 つの別の IPA 記号 `a` および <code>&#592;</code> にマップされます。一般に、SPR 記号は、強勢が置かれる音節の合成の場合は `a` に、強勢が置かれない音節の合成の場合は <code>&#592;</code> にマップされます。
+1.  SPR 記号 `a` は、発音が異なる 2 つの別の IPA 記号 `a` および <code>&#592;</code> にマップされます。 一般に、SPR 記号は、強勢が置かれる音節の合成の場合は `a` に、強勢が置かれない音節の合成の場合は <code>&#592;</code> にマップされます。
 
 ## 半母音
 {: #ptSemiVowels}
