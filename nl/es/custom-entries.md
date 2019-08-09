@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-06-24"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -25,7 +25,7 @@ subcollection: text-to-speech
 # Creación y gestión de entradas personalizadas
 {: #customWords}
 
-Una vez que existe un modelo personalizado, el siguiente paso es añadir entradas personalizadas en forma de pares palabra/conversión para definir cómo se deben pronunciar algunas palabras específicas durante la síntesis. Las definiciones sobrescriben las reglas de pronunciación regular predeterminadas del servicio. Se pueden añadir y consultar conversiones para una o más palabras de una vez, y se pueden suprimir palabras individuales que ya no se necesiten. Una vez que esté familiarizado con la interfaz de personalización, puede ser más conveniente manipular varias palabras a la vez que trabajar palabra por palabra. Debe utilizar las credenciales de servicio para la instancia del servicio que es propietaria de un modelo personalizado para utilizar cualquier método que requiera un ID de personalización.
+Una vez que existe un modelo personalizado, el siguiente paso es añadir entradas personalizadas en forma de pares palabra/conversión para definir cómo se deben pronunciar algunas palabras específicas durante la síntesis. Las definiciones sobrescriben las reglas de pronunciación regular predeterminadas del servicio. Se pueden añadir y consultar conversiones para una o más palabras de una vez, y se pueden suprimir palabras individuales que ya no se necesiten. Una vez que esté familiarizado con la interfaz de personalización, puede ser más conveniente manipular varias palabras a la vez que trabajar palabra por palabra. Debe utilizar las credenciales para la instancia del servicio que es propietaria de un modelo personalizado para utilizar cualquier método que requiera su ID de personalización.
 {: shortdesc}
 
 ## Añadir una palabra a un modelo personalizado
@@ -87,7 +87,7 @@ El contenido JSON enviado en el cuerpo de la solicitud equivale a lo siguiente:
 ```
 {: codeblock}
 
-Tal como se menciona en [Actualizar un modelo personalizado](/docs/services/text-to-speech/custom-models.html#cuModelsUpdate), también se puede utilizar el método `POST /v1/customizations/{customization_id}` para añadir palabras a un modelo personalizado. En el ejemplo siguiente se utiliza este método para añadir las mismas dos palabras que en el ejemplo anterior; no se hacen cambios en los metadatos del modelo. Excepción en el URL, los dos métodos son idénticos.
+Tal como se menciona en [Actualizar un modelo personalizado](/docs/services/text-to-speech?topic=text-to-speech-customModels#cuModelsUpdate), también se puede utilizar el método `POST /v1/customizations/{customization_id}` para añadir palabras a un modelo personalizado. En el ejemplo siguiente se utiliza este método para añadir las mismas dos palabras que en el ejemplo anterior; no se hacen cambios en los metadatos del modelo. Excepción en el URL, los dos métodos son idénticos.
 
 ```bash
 curl -X POST -u "apikey:{apikey}"
@@ -100,7 +100,7 @@ curl -X POST -u "apikey:{apikey}"
 ## Añadir palabras a un modelo personalizado en japonés
 {: #cuJapaneseAdd}
 
-Se aplican consideraciones adicionales y también un campo adicional, `part_of_speech` (categoría léxica), al crear entradas de palabras en un modelo personalizado en japonés; para obtener más información, consulte [Trabajar con entradas en japonés](/docs/services/text-to-speech/custom-rules.html#jaNotes). Para especificar una categoría léxica para una entrada personalizada en japonés, haga lo siguiente:
+Se aplican consideraciones adicionales y también un campo adicional, `part_of_speech` (categoría léxica), al crear entradas de palabras en un modelo personalizado en japonés; para obtener más información, consulte [Trabajar con entradas en japonés](/docs/services/text-to-speech?topic=text-to-speech-rules#jaNotes). Para especificar una categoría léxica para una entrada personalizada en japonés, haga lo siguiente:
 
 -   Para el método `PUT /v1/customizations/{customization_id}/words/{word}`, pase un objeto JSON con el formato siguiente:
 
@@ -206,7 +206,7 @@ El método devuelve una matriz JSON con los datos siguientes. Para los modelos p
 ```
 {: codeblock}
 
-Tal como de describe en [Consulta de un modelo personalizado](/docs/services/text-to-speech/custom-models.html#cuModelsQuery), también puede utilizar el método `GET /v1/customizations/{customization_id}` para ver los metadatos y las palabras de un modelo personalizado:
+Tal como de describe en [Consulta de un modelo personalizado](/docs/services/text-to-speech?topic=text-to-speech-customModels#cuModelsQuery), también puede utilizar el método `GET /v1/customizations/{customization_id}` para ver los metadatos y las palabras de un modelo personalizado:
 
 ```bash
 curl -X GET -u "apikey:{apikey}"

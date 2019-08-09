@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-09"
+lastupdated: "2019-06-21"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -30,7 +30,7 @@ Al sintetizar texto con {{site.data.keyword.texttospeechfull}}, el servicio apli
 
 Las reglas de pronunciación regular del servicio funcionan bien para las palabras comunes. Sin embargo, pueden producir resultados imperfectos para palabras inusuales. Estas palabras incluyen términos especiales de origen extranjero, nombres de persona o geográficos y abreviaturas o acrónimos. Si el léxico de la aplicación incluye palabras de este tipo, puede utilizar la interfaz de personalización para especificar cómo las pronuncia el servicio.
 
-La interfaz de personalización es una funcionalidad beta que está disponible para todos los idiomas.
+La interfaz de personalización es una funcionalidad beta que está disponible para todos los idiomas. Debe tener el Plan de precios estándar para utilizar la personalización del modelo de voz. Los usuarios del plan Lite no pueden utilizar la interfaz de personalización. Para obtener más información, consulte la [página de precios](https://www.ibm.com/cloud/watson-text-to-speech/pricing){: external} del servicio {{site.data.keyword.texttospeechshort}}.
 {: note}
 
 ## Cómo funciona la personalización
@@ -38,9 +38,9 @@ La interfaz de personalización es una funcionalidad beta que está disponible p
 
 La interfaz de personalización del servicio {{site.data.keyword.texttospeechshort}} crea un diccionario de palabras y sus traducciones para un idioma específico. Este diccionario se conoce como *modelo de voz personalizado* o simplemente modelo personalizado. Cada entrada personalizada de un modelo de voz personalizado consta de un par de *palabra*/*conversión*. La conversión de una palabra indica al servicio cómo pronunciar la palabra cuando aparece en el texto de entrada.
 
-La interfaz de personalización proporciona métodos para crear y gestionar los modelos de voz personalizados, que el servicio almacena permanentemente. Después de crear un modelo personalizado, puede utilizarlo durante la síntesis con cualquier versión del método `/v1/synthesize`. Cuando el servicio sintetiza texto de entrada, determina la pronunciación de las palabras que aparecen en el modelo personalizado aplicando sus conversiones directa o indirectamente.
+La interfaz de personalización proporciona métodos para crear y gestionar los modelos de voz personalizados, que el servicio almacena permanentemente. Después de crear un modelo personalizado, puede utilizarlo durante la síntesis con cualquier versión del método `/v1/synthesize`. Cuando el servicio sintetiza texto de entrada, determina la pronunciación de las palabras que aparecen en el modelo personalizado aplicando sus conversiones directa o indirectamente. Puesto que crea un modelo de voz personalizado para un idioma específico, se puede utilizar un modelo personalizado con cualquier voz, estándar o neuronal, que esté disponible en ese idioma.
 
-La conversión para una palabra en un modelo de voz personalizado se especifica como una *conversión 'suena como'* o como una *conversión fonética*. Puede utilizar los dos métodos para las entradas en el mismo modelo personalizado y puede mezclar los dos métodos dentro de la misma conversión. Se aplican varias reglas y directrices a las entradas personalizadas. Para obtener más información, consulte [Reglas para crear entradas personalizadas](/docs/services/text-to-speech/custom-rules.html).
+La conversión para una palabra en un modelo de voz personalizado se especifica como una *conversión 'suena como'* o como una *conversión fonética*. Puede utilizar los dos métodos para las entradas en el mismo modelo personalizado y puede mezclar los dos métodos dentro de la misma conversión. Se aplican varias reglas y directrices a las entradas personalizadas. Para obtener más información, consulte [Reglas para crear entradas personalizadas](/docs/services/text-to-speech?topic=text-to-speech-rules).
 
 ## Conversión 'suena como'
 {: #soundsLike}
@@ -107,7 +107,7 @@ Por ejemplo, si tenemos la palabra `trinitroglycerin`. Las reglas de pronunciaci
 
 En estos ejemplos, la serie de conversión fonética se compone de símbolos de fonemas y una única marca de acento primario. La marca de acento primario se representa con <code>&#712;</code> en IPA y con `1` en SPR. En ambos casos, se coloca justo antes del símbolo de la vocal acentuada. Aunque los ejemplos no lo muestran, en una conversión fonética también puede especificar límites de sílaba y posiciones de acento secundario. Estos elementos no son obligatorios y, por lo general, no son necesarios para lograr una pronunciación. Al igual que con las conversiones 'suena como', se puede componer una conversión fonética a partir de varias series delimitada por espacios.
 
-También se puede especificar conversiones IPA con valores IPA Unicode. Para obtener más información, consulte [Utilización de IBM SPR](/docs/services/text-to-speech/SPRs.html) y las tablas específicas del idioma en las páginas correspondientes de [Idiomas soportados](/docs/services/text-to-speech/SPRs.html#supportedLanguages). Para ver una conversión de ejemplo que utilice valores de IPA Unicode, consulte [Elemento phoneme](/docs/services/text-to-speech/SSML-elements.html#phoneme_element).
+También se puede especificar conversiones IPA con valores IPA Unicode. Para obtener más información, consulte [Utilización de IBM SPR](/docs/services/text-to-speech?topic=text-to-speech-sprs) y las tablas específicas del idioma en las páginas correspondientes de [Idiomas soportados](/docs/services/text-to-speech?topic=text-to-speech-sprs#supportedLanguages). Para ver una conversión de ejemplo que utilice valores de IPA Unicode, consulte [Elemento phoneme](/docs/services/text-to-speech?topic=text-to-speech-elements#phoneme_element).
 {: note}
 
 ### Trabajar con una conversión fonética existente
@@ -117,16 +117,16 @@ A menos que sea un experto en fonología, la composición de conversiones fonét
 
 Puede utilizar el método `/GET v/1/pronunciation` para obtener una conversión fonética inicial para una palabra. A continuación, puede modificar la conversión para conseguir la pronunciación deseada. Al igual que con el método 'suena como', se sigue un proceso de ensayo-error. Envía la conversión candidata al servicio, sintetiza la palabra introduciéndola como texto de entrada, escucha el audio resultante y vuelve a editar la conversión candidata. Puede repetir el proceso hasta que esté satisfecho con la pronunciación.
 
-Para obtener más información, consulte [Consultar una palabra de un idioma](/docs/services/text-to-speech/custom-entries.html#cuWordsQueryLanguage).
+Para obtener más información, consulte [Consultar una palabra de un idioma](/docs/services/text-to-speech?topic=text-to-speech-customWords#cuWordsQueryLanguage).
 
 ### Más información sobre la conversión fonética
 {: #phoneticInfo}
 
 Los recursos siguientes proporcionan información sobre la conversión fonética:
 
--   Para obtener más información sobre el uso de SSML y el elemento `<phoneme>`, consulte [Utilización de SSML](/docs/services/text-to-speech/SSML.html).
--   Para obtener más información sobre la especificación de conversiones SPR y sus símbolos IPA equivalentes, consulte [Utilización de IBM SPR](/docs/services/text-to-speech/SPRs.html).
--   Para obtener más información sobre el uso de símbolos IPA y para muestras de audio de los símbolos, consulte las fuentes en la web. Puede encontrar una descripción introductoria detallada en [en.wikipedia.org/wiki/International_Phonetic_Alphabet ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://en.wikipedia.org/wiki/International_Phonetic_Alphabet){: new_window}.
+-   Para obtener más información sobre el uso de SSML y el elemento `<phoneme>`, consulte [Utilización de SSML](/docs/services/text-to-speech?topic=text-to-speech-ssml).
+-   Para obtener más información sobre la especificación de conversiones SPR y sus símbolos IPA equivalentes, consulte [Utilización de IBM SPR](/docs/services/text-to-speech?topic=text-to-speech-sprs).
+-   Para obtener más información sobre el uso de símbolos IPA y para muestras de audio de los símbolos, consulte las fuentes en la web. Puede encontrar una descripción introductoria detallada en [Alfabeto fonético internacional](https://wikipedia.org/wiki/International_Phonetic_Alphabet){: external}.
 
 ## Mezcla de conversión 'suena como' y fonética
 

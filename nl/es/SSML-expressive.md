@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-09"
+lastupdated: "2019-06-21"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -31,9 +31,10 @@ De forma predeterminada, el servicio {{site.data.keyword.texttospeechfull}} sint
 ## Soporte de idiomas
 {: #languages-expressive}
 
-El servicio da soporte a la expresividad sólo para la voz de Allison en inglés de EE.UU. (`en-US_AllisonVoice`). La expresividad no está soportada para la voz `en-US_AllisonV2Voice`. Si se utiliza el elemento con una voz no soportada, se devuelve un error.
+El servicio da soporte a la expresividad sólo para la voz estándar de Allison en inglés de EE.UU. (`en-US_AllisonVoice`). La expresividad no está soportada para la voz neuronal `en-US_AllisonV3Voice`. Si se utiliza el elemento con una voz no soportada, se devuelve un error.
 
 ## Elemento express-as
+{: #ssml-express-as}
 
 Puede aplicar el elemento `<express-as>` a todo el cuerpo del texto, a una oración o a un fragmento, como por ejemplo una frase o una palabra. El elemento acepta un atributo obligatorio, `type`, que describe el tipo de expresión que se debe utilizar para el texto especificado: `GoodNews`, `Apology` o `Uncertainty`.
 

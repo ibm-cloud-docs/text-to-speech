@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-09"
+lastupdated: "2019-06-06"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -33,7 +33,7 @@ En las secciones siguientes se introduce la notación {{site.data.keyword.IBM_no
 ## Introducción a IBM SPR
 {: #introduction-SPRs}
 
-Una pronunciación SPR se define con el elemento `<phoneme>` de SSML (Speech Synthesis Markup Language) (consulte [Elemento phoneme](/docs/services/text-to-speech/SSML-elements.html#phoneme_element)). Consiste en una secuencia de símbolos permitidos para un idioma dado entre comillas dobles. Los símbolos definen cómo se debe pronunciar la palabra contenida en el elemento `<phoneme>`. El atributo `alphabet` del elemento tiene el valor `ibm` para indicar que la pronunciación está definida en SPR, y el atributo `ph` define la pronunciación. A continuación se muestran unos ejemplos de notación SPR válida para las palabras *through* y *shocking* en inglés de Estados Unidos:
+Una pronunciación SPR se define con el [Elemento phoneme](/docs/services/text-to-speech?topic=text-to-speech-elements#phoneme_element) de SSML (Speech Synthesis Markup Language). Consiste en una secuencia de símbolos permitidos para un idioma dado entre comillas dobles. Los símbolos definen cómo se debe pronunciar la palabra contenida en el elemento `<phoneme>`. El atributo `alphabet` del elemento tiene el valor `ibm` para indicar que la pronunciación está definida en SPR, y el atributo `ph` define la pronunciación. A continuación se muestran unos ejemplos de notación SPR válida para las palabras *through* y *shocking* en inglés de Estados Unidos:
 
 ```xml
 <phoneme alphabet="ibm" ph=".1Tru">through</phoneme>
@@ -142,23 +142,23 @@ Tenga en cuenta también lo siguiente al definir la pronunciación de una palabr
 La información siguiente se aplica para trabajar con pronunciaciones en la notación IPA:
 
 -   Utilice únicamente los símbolos IPA documentados. Cuando se listan varios símbolos IPA (o combinaciones de símbolos) para un símbolo SPR, todos son equivalentes al símbolo SPR individual. En este caso, el servicio trata todos estos símbolos IPA de la misma forma y no advierte las diferencias sutiles o regionales que el sistema IPA sí describe.
--   También puede especificar pronunciaciones IPA como valores de IPA Unicode. En las tablas específicas de cada idioma de la sección siguiente se documentan los símbolos IPA y sus valores IPA Unicode equivalentes. Para obtener un ejemplo de pronunciación que utilice valores IPA Unicode, consulte [Elemento phoneme](/docs/services/text-to-speech/SSML-elements.html#phoneme_element).
+-   También puede especificar pronunciaciones IPA como valores de IPA Unicode. En las tablas específicas de cada idioma de la sección siguiente se documentan los símbolos IPA y sus valores IPA Unicode equivalentes. Para obtener un ejemplo de pronunciación que utilice valores IPA Unicode, consulte [Elemento phoneme](/docs/services/text-to-speech?topic=text-to-speech-elements#phoneme_element).
 
 Para obtener más información, consulte lo siguiente:
 
--   Para obtener más información sobre IPA, consulte [en.wikipedia.org/wiki/International_Phonetic_Alphabet ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://en.wikipedia.org/wiki/International_Phonetic_Alphabet){: new_window}.
--   Para obtener más información sobre los símbolos fonéticos para Unicode, consulte [en.wikipedia.org/wiki/Phonetic_symbols_in_Unicode ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://en.wikipedia.org/wiki/Phonetic_symbols_in_Unicode){: new_window}.
+-   Para obtener más información sobre IPA, consulte [Alfabeto fonético internacional (IPA - International Phonetic Alphabet)](https://wikipedia.org/wiki/International_Phonetic_Alphabet){: external}.
+-   Para obtener más información sobre los símbolos fonéticos en Unicode, consulte [Símbolos fonéticos en Unicode](https://wikipedia.org/wiki/Phonetic_symbols_in_Unicode){: external}.
 
 ## Idiomas soportados
 {: #supportedLanguages}
 
 En las páginas siguientes se documentan los símbolos SPR, los símbolos IPA y los valores IPA Unicode equivalentes para cada idioma. Se muestran ejemplos de cada símbolo en palabras del idioma. Debido a las diferencias dialectales, es posible que los ejemplos no siempre coincidan con su pronunciación.
 
--   [Símbolos para el portugués de Brasil](/docs/services/text-to-speech/pt-BR-SPRs.html)
--   [Símbolos para el inglés británico](/docs/services/text-to-speech/en-GB-SPRs.html)
--   [Símbolos para el francés](/docs/services/text-to-speech/fr-FR-SPRs.html)
--   [Símbolos para el alemán](/docs/services/text-to-speech/de-DE-SPRs.html)
--   [Símbolos para el italiano](/docs/services/text-to-speech/it-IT-SPRs.html)
--   [Símbolos para el japonés](/docs/services/text-to-speech/ja-JP-SPRs.html)
--   [Símbolos para el español](/docs/services/text-to-speech/es-ES-SPRs.html)
--   [Símbolos para el inglés de EE.UU.](/docs/services/text-to-speech/en-US-SPRs.html)
+-   [Símbolos para el portugués de Brasil](/docs/services/text-to-speech?topic=text-to-speech-ptSymbols)
+-   [Símbolos para el inglés británico](/docs/services/text-to-speech?topic=text-to-speech-gbSymbols)
+-   [Símbolos para el francés](/docs/services/text-to-speech?topic=text-to-speech-frSymbols)
+-   [Símbolos para el alemán](/docs/services/text-to-speech?topic=text-to-speech-deSymbols)
+-   [Símbolos para el italiano](/docs/services/text-to-speech?topic=text-to-speech-itSymbols)
+-   [Símbolos para el japonés](/docs/services/text-to-speech?topic=text-to-speech-jaSymbols)
+-   [Símbolos para el español](/docs/services/text-to-speech?topic=text-to-speech-esSymbols)
+-   [Símbolos para el inglés de EE.UU.](/docs/services/text-to-speech?topic=text-to-speech-usSymbols)

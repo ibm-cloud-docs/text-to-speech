@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-09"
+lastupdated: "2019-06-21"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -43,9 +43,10 @@ El servicio sólo admite la transformación de voz para las siguientes voces en 
 -   `en-US_LisaVoice`
 -   `en-US_MichaelVoice`
 
-No se admite la transformación de voz con la `V2`, las versiones basadas en DNN de estas voces (por ejemplo, `en-US_AllisonV2Voice`). Si se utiliza el elemento con una voz no soportada, se devuelve un error.
+La transformación de voz no recibe soporte con las versiones neuronales de estas voces (por ejemplo, `en-US_AllisonV3Voice`). Si se utiliza el elemento con una voz no soportada, se devuelve un error.
 
 ## Transformaciones integradas
+{: #ssml-built-in}
 
 Las transformaciones integradas aplican cambios preconfigurados a los atributos de una voz. Considérelas voces virtuales que están disponibles en el servicio. El servicio ofrece dos transformaciones integradas. Para utilizarlas, especifique el nombre sensible a mayúsculas y minúsculas de la transformación integrada con el atributo `type`:
 
@@ -58,6 +59,7 @@ El servicio ignora los atributos de las transformaciones personalizadas si se ut
 {: note}
 
 ## Ejemplos de transformación integradas
+{: #ssml-built-in-examples}
 
 En los ejemplos siguientes se aplican las dos transformaciones integradas a la misma frase con distintas intensidades:
 
@@ -73,6 +75,7 @@ En los ejemplos siguientes se aplican las dos transformaciones integradas a la m
 {: codeblock}
 
 ## Transformaciones personalizadas
+{: #ssml-custom-transforms}
 
 Las transformaciones personalizadas permiten un control más preciso de distintos aspectos de la transformación de voz. Para utilizar una transformación personalizada, debe especificar `Custom` en el atributo `type`. A continuación, puede utilizar uno o más de los siguientes atributos opcionales para controlar la transformación.
 
@@ -89,11 +92,7 @@ Las transformaciones personalizadas permiten un control más preciso de distinto
       [<code>x-low</code>, <code>low</code>, <code>default</code>,
       <code>high</code>, <code>x-high</code>]</td>
     <td>
-      Cambio relativo normalizado del nivel de contorno medio de tono (pitch)
-      dentro de límites seguros. Este atributo controla el nivel de tonalidad
-      medio percibido. Se toma prestado del atributo <code>pitch</code>
-      del elemento SSML <code>&lt;prosody&gt;</code>. Contribuye
-      a cambiar la percepción de la identidad del hablante.
+      Cambio relativo normalizado del nivel de contorno medio de tono (pitch) dentro de límites seguros. Este atributo controla el nivel de tonalidad medio percibido. Se toma prestado del atributo <code>pitch</code> del elemento SSML <code>&lt;prosody&gt;</code>. Contribuye a cambiar la percepción de la identidad del hablante.
     </td>
   </tr>
   <tr>
@@ -102,11 +101,7 @@ Las transformaciones personalizadas permiten un control más preciso de distinto
       [<code>x-narrow</code>, <code>narrow</code>, <code>default</code>,
       <code>wide</code>, <code>x-wide</code>]</td>
     <td>
-      Cambio relativo normalizado del rango dinámico del contorno del tono (pitch)
-      dentro de límites seguros. Al aumentar o disminuir el rango del tono
-      hace que el estilo de voz sea más o menos expresivo. Este atributo
-      se toma prestado del atributo <code>range</code> del elemento SSML
-      <code>&lt;prosody&gt;</code>.</td>
+      Cambio relativo normalizado del rango dinámico del contorno del tono (pitch) dentro de límites seguros. Al aumentar o disminuir el rango del tono hace que el estilo de voz sea más o menos expresivo. Este atributo se toma prestado del atributo <code>range</code> del elemento SSML <code>&lt;prosody&gt;</code>.</td>
   </tr>
   <tr>
     <td><code>glottal_tension</code></td>
@@ -114,12 +109,7 @@ Las transformaciones personalizadas permiten un control más preciso de distinto
       [<code>x-low</code>, <code>low</code>, <code>default</code>,
       <code>high</code>, <code>x-high</code>]</td>
     <td>
-      Cambio relativo normalizado de la tensión glotal dentro de límites
-      seguros. Al aumentar o disminuir la tensión glotal se percibe una calidad
-      de habla más tensa o más laxa. Un valor positivo puede producir
-      zumbidos, que puede aliviar aumentando el valor del atributo
-      <code>breathiness</code>. Un valor negativo se percibe como más
-      susurrante y generalmente más agradable.
+      Cambio relativo normalizado de la tensión glotal dentro de límites seguros. Al aumentar o disminuir la tensión glotal se percibe una calidad de habla más tensa o más laxa. Un valor positivo puede producir zumbidos, que puede aliviar aumentando el valor del atributo <code>breathiness</code>. Un valor negativo se percibe como más susurrante y generalmente más agradable.
     </td>
   </tr>
   <tr>
@@ -128,11 +118,7 @@ Las transformaciones personalizadas permiten un control más preciso de distinto
       [<code>x-low</code>, <code>low</code>, <code>default</code>,
       <code>high</code>, <code>x-high</code>]</td>
     <td>
-      Cambio relativo normalizado del nivel percibido el ruido de aspiración
-      dentro de límites seguros. Los valores extremos pueden producir un habla
-      con ruidos (para un valor de breathiness positivo) o un sonido de zumbido
-      (para un valor de breathiness negativo). Utilice este atributo para compensar los zumbidos o los
-      ruidos producidos como efectos secundarios de otros atributos.
+      Cambio relativo normalizado del nivel percibido el ruido de aspiración dentro de límites seguros. Los valores extremos pueden producir un habla con ruidos (para un valor de breathiness positivo) o un sonido de zumbido (para un valor de breathiness negativo). Utilice este atributo para compensar los zumbidos o los ruidos producidos como efectos secundarios de otros atributos.
     </td>
   </tr>
   <tr>
@@ -142,35 +128,24 @@ Las transformaciones personalizadas permiten un control más preciso de distinto
       <code>fast</code>, <code>x-fast</code>]</td>
     <td>
       Cambio relativo normalizado de la velocidad de habla dentro de límites seguros.
-      AL aumentar o disminuir la velocidad, el habla se produce más rápida o más lentamente.
-      Una velocidad positiva (más rápida) hace que el rango de tono percibido sea más amplio,
-      y una velocidad negativa (más lenta) estrecha perceptualmente el rango de tono.
-      Este atributo se toma prestado del atributo <code>rate</code> del
-      elemento SSML <code>&lt;prosody&gt;</code>.</td>
+      Al aumentar o disminuir la velocidad, el habla se produce más rápida o más lentamente.
+      Una velocidad positiva (más rápida) hace que el rango de tono percibido sea más amplio, y una velocidad negativa (más lenta) estrecha perceptualmente el rango de tono.
+      Este atributo se toma prestado del atributo <code>rate</code> del elemento SSML <code>&lt;prosody&gt;</code>.</td>
   </tr>
   <tr>
     <td><code>timbre</code></td>
     <td style="text-align:center">[<code>Sunrise</code>,
       <code>Breeze</code>]</td>
     <td>
-      El nombre sensible a mayúsculas y minúsculas de una de las transformaciones integradas
-      del tracto vocal: <code>Sunrise</code> o <code>Breeze</code>.
-      Los nombres son simbólicos. Experimente con los timbres para ver su
-      impacto sobre la transformación de la voz. Este atributo contribuye
-      a cambiar la percepción de la identidad del hablante.
+      El nombre sensible a mayúsculas y minúsculas de una de las transformaciones integradas del tracto vocal: <code>Sunrise</code> o <code>Breeze</code>.
+      Los nombres son simbólicos. Experimente con los timbres para ver su impacto sobre la transformación de la voz. Este atributo contribuye a cambiar la percepción de la identidad del hablante.
     </td>
   </tr>
   <tr>
     <td><code>timbre_extent</code></td>
     <td style="text-align:center">[0%, 100%]</td>
     <td>
-      El alcance se la transformación del tracto vocal <code>timbre</code>:
-      <code>0%</code> cancela la transformación; <code>100%</code>
-      representa que la transformación se aplica completamente. Este atributo
-      cuantifica la diferencia entre las voces transformadas y originales. Permite mezclar el timbre seleccionado con el timbre de la voz
-      original. Incluso con valores moderados de timbre_extent, el
-      atributo <code>timbre</code> contribuye a cambiar la percepción
-      de la identidad del hablante.
+      El alcance se la transformación del tracto vocal <code>timbre</code>: <code>0%</code> cancela la transformación; <code>100%</code> representa que la transformación se aplica completamente. Este atributo cuantifica la diferencia entre las voces transformadas y originales. Permite mezclar el timbre seleccionado con el timbre de la voz original. Incluso con valores moderados de timbre_extent, el atributo <code>timbre</code> contribuye a cambiar la percepción de la identidad del hablante.
     </td>
   </tr>
 </table>
@@ -206,13 +181,14 @@ Utilice las siguientes directrices y la siguiente información admonitoria:
     -   Si se utilizan unos valores elevados para glottal_tension y pitch y una velocidad baja puede hacer que se produzcan zumbidos. Para mitigar este efecto, puede aumentar el valor de breathiness.
     -   Un valor de glottal_tension demasiado bajo puede producir ruidos en el habla. Para reducir estos ruidos puede disminuir el valor de breathiness.
     -   Si se eleva o de reduce pitch_range y rate simultáneamente hasta sus grados extremos, puede que la voz no suene natural.
--   Tal como se ha indicado, algunos de los atributos se han tomado prestados del elemento SSML `<prosody>`. Para obtener más información, consulte [Elemento prosody](/docs/services/text-to-speech/SSML-elements.html#prosody_element). Para habilitar el control ajustado de prosody de una voz virtual, puede
+-   Tal como se ha indicado, algunos de los atributos se han tomado prestados del elemento SSML `<prosody>`. Para obtener más información, consulte [Elemento prosody](/docs/services/text-to-speech?topic=text-to-speech-elements#prosody_element). Para habilitar el control ajustado de prosody de una voz virtual, puede
     -   Anidar elementos de `<prosody>` dentro de elementos de `<voice-transformation>`.
     -   Anidar elementos de `<voice-transformation>` dentro de elementos de `<prosody>`.
 
     *No se pueden* anidar elementos de `<voice-transformation>`.
 
 ## Ejemplos de transformaciones personalizadas
+{: #ssml-custom-transforms-examples}
 
 En los siguientes ejemplos se aplican distintos atributos para mostrar posibles aplicaciones de las transformaciones personalizadas. En el primer ejemplo se reduce glottal_tension para suavizar la voz. También se aumenta de forma moderada pitch_range y rate para introducir un estilo de habla más dinámico.
 
