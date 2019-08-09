@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-09"
+lastupdated: "2019-06-21"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -31,7 +31,7 @@ Con el servicio {{site.data.keyword.texttospeechfull}}, puede utilizar la mayor�
 -   *Parcial* significa que el servicio no da soporte a todos los aspectos del elemento o atributo. También puede significar que el servicio da soporte al elemento o atributo con sólo una de sus interfaces, o que el elemento o atributo no está soportado con todas las voces.
 -   *Ninguno* significa que el servicio no da soporte al elemento o atributo.
 
-Para obtener más información sobre un elemento o atributo, consulte su descripción. Allí donde se indique, el soporte para algunos atributos y valores difiere ligeramente de la especificación SSML. Para obtener más información, consulte [W3C Speech Synthesis Markup Language (SSML) Versión 1.0 ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://www.w3.org/TR/speech-synthesis/){: new_window}.
+Para obtener más información sobre un elemento o atributo, consulte su descripción. Allí donde se indique, el soporte para algunos atributos y valores difiere ligeramente de la especificación SSML. Para obtener más información, consulte la [Versión 1.0 de W3C Speech Synthesis Markup Language (SSML)](http://www.w3.org/TR/speech-synthesis/){: external}.
 
 <table>
   <caption>Tabla 1. Elementos SSML</caption>
@@ -207,12 +207,12 @@ El elemento `<emphasis>` solicita que el texto indicado se diga con énfasis. No
 
 El elemento `<lexicon>` introduce diccionarios de pronunciación para el documento SSML indicado. No está soportado.
 
-Puede utilizar la interfaz de personalización del servicio para definir un diccionario de entradas personalizadas (pares de palabra/conversión) para su uso durante la síntesis de voz. Para obtener más información, consulte [Comprender la personalización](/docs/services/text-to-speech/custom-intro.html).
+Puede utilizar la interfaz de personalización del servicio para definir un diccionario de entradas personalizadas (pares de palabra/conversión) para su uso durante la síntesis de voz. Para obtener más información, consulte [Comprender la personalización](/docs/services/text-to-speech?topic=text-to-speech-customIntro).
 
 ## Elemento mark
 {: #mark_element}
 
-El elemento `<mark>` solo está soportado en la interfaz WebSocket del servicio, no en la interfaz HTTP, que lo ignora. Para obtener más información, consulte [Especificar un elemento SSML mark](/docs/services/text-to-speech/word-timing.html#mark).
+El elemento `<mark>` solo está soportado en la interfaz WebSocket del servicio, no en la interfaz HTTP, que lo ignora. Para obtener más información, consulte [Especificar un elemento SSML mark](/docs/services/text-to-speech?topic=text-to-speech-timing#mark).
 {: note}
 
 El elemento `<mark>` es un elemento vacío que coloca una marca en el texto que se va a sintetizar. Se notifica al cliente cuando todo el texto que precede al elemento `<mark>` se ha sintetizado. El elemento acepta solo un atributo `name` que especifica una serie que identifica de forma exclusiva la marca; el nombre debe empezar por un carácter alfanumérico. El nombre se devuelve junto con el tiempo en que aparece la marca en el audio sintetizado.
@@ -276,7 +276,7 @@ El elemento `<phoneme>` proporciona una pronunciación fonética para el texto q
           &lt;phoneme alphabet="ibm" ph=".0tx.1me.0Fo"&gt;tomato&lt;/phoneme&gt;
         &lt;/speak&gt;</code></pre>
 
-Para obtener más información sobre cómo utilizar las notaciones SPR e IPA con el elemento `<phoneme>`, consulte [Utilización de IBM SPR](/docs/services/text-to-speech/SPRs.html).
+Para obtener más información sobre cómo utilizar las notaciones SPR e IPA con el elemento `<phoneme>`, consulte [Utilización de IBM SPR](/docs/services/text-to-speech?topic=text-to-speech-sprs).
 
 ## Elemento prosody
 {: #prosody_element}
@@ -337,7 +337,7 @@ El atributo `rate` indica un cambio en la velocidad de habla para el texto de de
 ### Atributo volume
 {: #prosody-volume}
 
-El servicio no admite el atributo `volume` del elemento `<prosody>` en sus voces basadas en DNN (por ejemplo, `en-US_AllisonV2Voice`). Para obtener más información sobre estas voces, consulte [Tecnologías de síntesis de voz](/docs/services/text-to-speech/voices.html#technologiesVoices).
+El servicio no admite el atributo `volume` del elemento `<prosody>` en sus voces neuronales (por ejemplo, `en-US_AllisonV3Voice`). Para obtener más información, consulte [Voces neuronales](/docs/services/text-to-speech?topic=text-to-speech-voices#neuralVoices).
 {: note}
 
 El atributo `volume` modifica el volumen del texto que hay dentro del elemento. Puede especificar un valor entero o decimal dentro del rango de 1,0 a 100,0 (volumen máximo). También puede utilizar uno de los valores de serie siguientes, que corresponden a valores predefinidos dentro del rango de 0 a 100. (El valor `silent` no está soportado).

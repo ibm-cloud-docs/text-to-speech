@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-09"
+lastupdated: "2019-06-06"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -44,13 +44,8 @@ En la Tabla 1 se enumeran los formatos de audio (tipos MIME) en los que se puede
       <code>audio/basic</code>
     </td>
     <td>
-      <em>Basic audio</em>, un formato de audio de un solo canal, con mucha pérdida
-      que se codifica utilizando datos u-law (o mu-law) de 8 bits muestreados a 8 kHz.
-      Este formato proporciona un tipo de soporte de mínimo común denominador. Para obtener más
-      información, consulte el IETF
-      <a target="_blank" href="https://tools.ietf.org/html/rfc2046">Request
-        for Comment (RFC) 2046 ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")</a> e
-      <a target="_blank" href="http://www.iana.org/assignments/media-types/audio/basic">iana.org/assignments/media-types/audio/basic ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")</a>.
+      <em>Basic audio</em>, un formato de audio de un solo canal, con mucha pérdida que se codifica utilizando datos u-law (o mu-law) de 8 bits muestreados a 8 kHz.
+      Este formato proporciona un tipo de soporte de mínimo común denominador. Para obtener más información, consulte el IETF [Request for Comment (RFC) 2046](https://tools.ietf.org/html/rfc2046) y también [iana.org/assignments/media-types/audio/basic](http://www.iana.org/assignments/media-types/audio/basic).
     </td>
   </tr>
   <tr>
@@ -58,9 +53,7 @@ En la Tabla 1 se enumeran los formatos de audio (tipos MIME) en los que se puede
       <code>audio/flac</code>
     </td>
     <td>
-      <em>Free Lossless Audio Codec (FLAC)</em> (<code>.flac</code>),
-      un formato de código de audio comprimido sin pérdidas. Para obtener más información, consulte
-      <a target="_blank" href="https://en.wikipedia.org/wiki/FLAC">en.wikipedia.org/wiki/FLAC ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")</a>.
+      <em>Free Lossless Audio Codec (FLAC)</em> (<code>.flac</code>), un formato de código de audio comprimido sin pérdidas. Para obtener más información, consulte [FLAC](https://wikipedia.org/wiki/FLAC).
     </td>
   </tr>
   <tr>
@@ -68,17 +61,8 @@ En la Tabla 1 se enumeran los formatos de audio (tipos MIME) en los que se puede
       <code>audio/l16;rate={rate}</code>
     </td>
     <td>
-      <em>Linear 16-bit Pulse-Code Modulation (PCM)</em>, un formato de datos de
-      audio sin comprimir (a menudo <code>.raw</code> o <code>.pcm</code>). Para
-      obtener más información, consulte Internet Engineering Task Force (IETF)
-      <a target="_blank" href="https://tools.ietf.org/html/rfc2586">Request
-        for Comment (RFC) 2586 ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")</a> y
-      <a target="_blank" href="https://en.wikipedia.org/wiki/Pulse-code_modulation">en.wikipedia.org/wiki/Pulse-code_modulation ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")</a>.<br/><br/>
-      Con este formato de audio, debe especificar la frecuencia de muestreo. Por ejemplo,
-      especifique <code>audio/l16;rate=16000</code> para audio muestreado a
-      16 kHz. Opcionalmente, también puede especificar la endianness como
-      <code>audio/l16;rate={rate};endianness=big-endian</code> o como
-      <code>audio/l16;rate={rate};endianness=little-endian</code>.
+      <em>Linear 16-bit Pulse-Code Modulation (PCM)</em>, un formato de datos de audio sin comprimir (a menudo <code>.raw</code> o <code>.pcm</code>). Para obtener más información, consulte Internet Engineering Task Force (IETF) [Request for Comment (RFC) 2586](https://tools.ietf.org/html/rfc2586) y [Pulse-code modulation](https://wikipedia.org/wiki/Pulse-code_modulation).<br/><br/>
+      Con este formato de audio, debe especificar la frecuencia de muestreo. Por ejemplo, especifique <code>audio/l16;rate=16000</code> para audio muestreado a 16 kHz. Opcionalmente, también puede especificar la endianness como <code>audio/l16;rate={rate};endianness=big-endian</code> o como <code>audio/l16;rate={rate};endianness=little-endian</code>.
       El valor predeterminado es little endian.
     </td>
   </tr>
@@ -88,10 +72,8 @@ En la Tabla 1 se enumeran los formatos de audio (tipos MIME) en los que se puede
       <code>audio/mpeg</code>
     </td>
     <td>
-      <em>MP3</em> o <em>Motion Picture Experts Group (MPEG)</em>, un formato de
-      compresión de datos con mucha pérdida (MP3 y MPEG se refieren al mismo formato).
-      Para obtener más información, consulte
-      <a target="_blank" href="https://en.wikipedia.org/wiki/MP3">en.wikipedia.org/wiki/MP3 ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")</a>.
+      <em>MP3</em> o <em>Motion Picture Experts Group (MPEG)</em>, un formato de compresión de datos con mucha pérdida (MP3 y MPEG se refieren al mismo formato).
+      Para obtener más información, consulte [MP3](https://wikipedia.org/wiki/MP3).
     </td>
   </tr>
   <tr>
@@ -99,11 +81,7 @@ En la Tabla 1 se enumeran los formatos de audio (tipos MIME) en los que se puede
       <code>audio/mulaw;rate={rate}</code>
     </td>
     <td>
-      <em>audio mu-law (o u-law) de 8 bits</em>, un formato de audio de un solo canal
-      con mucha pérdida que se codifica utilizando datos u-law (o mu-law) de 8 bits. Con este
-      formato de audio, debe especificar la frecuencia de muestreo. Para obtener más información,
-      consulte
-      <a target="_blank" href="https://en.wikipedia.org/wiki/M-law_algorithm">en.wikipedia.org/wiki/M-law_algorithm ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")</a>.
+      <em>audio mu-law (o u-law) de 8 bits</em>, un formato de audio de un solo canal con mucha pérdida que se codifica utilizando datos u-law (o mu-law) de 8 bits. Con este formato de audio, debe especificar la frecuencia de muestreo. Para obtener más información, consulte [M-law algorithm](https://wikipedia.org/wiki/M-law_algorithm).
     </td>
   </tr>
   <tr>
@@ -113,30 +91,18 @@ En la Tabla 1 se enumeran los formatos de audio (tipos MIME) en los que se puede
       <code>audio/ogg;codecs=vorbis</code>
     </td>
     <td>
-      <em>Formato Ogg</em> (<code>.ogg</code>), un formato de contenedor abierto y
-      gratuito que mantiene la Fundación Xiph.org. Para obtener más información, consulte
-      <a target="_blank" href="https://www.xiph.org/ogg/">xiph.org/ogg/ ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")</a>.
-      Puede solicitar secuencias de audio comprimidas con los siguientes
-      códecs:
+      <em>Formato Ogg</em> (<code>.ogg</code>), un formato de contenedor abierto y gratuito que mantiene la Fundación Xiph.org. Para obtener más información, consulte [xiph.org/ogg/](https://www.xiph.org/ogg/).
+      Puede solicitar secuencias de audio comprimidas con los siguientes códecs:
       <ul style="margin-left:20px; padding:0px;">
         <li style="margin:10px 0px; line-height:120%;">
-          <em>Opus</em>. Para obtener más información, consulte
-          <a target="_blank" href="https://www.opus-codec.org/">opus-codec.org ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")</a> y
-          <a target="_blank" href="https://en.wikipedia.org/wiki/Opus">en.wikipedia.org/wiki/Opus (formato de audio) ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")</a>.
-          En la página <em>Opus (formato de audio)</em>, consulte especialmente la sección
-          <em>Contenedores</em>.
+          <em>Opus</em>. Para obtener más información, consulte [opus-codec.org](https://www.opus-codec.org/) y [Opus (audio format)](https://wikipedia.org/wiki/Opus_%28audio_format%29).
+          Consulte especialmente la sección sobre los <em>Contenedores</em>.
         </li>
         <li style="margin:10px 0px; line-height:120%;">
-          <em>Vorbis</em>. Para obtener más información, consulte
-          <a target="_blank" href="https://xiph.org/vorbis/">xiph.org/vorbis ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")</a> y
-          <a target="_blank" href="https://en.wikipedia.org/wiki/Vorbis">en.wikipedia.org/wiki/Vorbis ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")</a>.
+          <em>Vorbis</em>. Para obtener más información, consulte [xiph.org/vorbis](https://xiph.org/vorbis/) y [Vorbis](https://wikipedia.org/wiki/Vorbis).
         </li>
       </ul>
-      Los dos códecs son formatos de compresión de audio con mucha pérdida, gratuitos, y abiertos. Opus
-      es el códec preferido, pero en la especificación Ogg, el servicio devuelve
-      el audio en formato Vorbis si se omite el códec. Si además se
-      omite el formato de audio, de forma predeterminada, el
-      servicio devuelve el audio en formato Ogg con el códec Opus.
+      Los dos códecs son formatos de compresión de audio con mucha pérdida, gratuitos, y abiertos. Opus es el códec preferido, pero en la especificación Ogg, el servicio devuelve el audio en formato Vorbis si se omite el códec. Si además se omite el formato de audio, de forma predeterminada, el servicio devuelve el audio en formato Ogg con el códec Opus.
     </td>
   </tr>
   <tr>
@@ -144,15 +110,8 @@ En la Tabla 1 se enumeran los formatos de audio (tipos MIME) en los que se puede
       <code>audio/wav</code>
     </td>
     <td>
-      <em>Waveform Audio File Format (WAV)</em> (<code>.wav</code>) es un formato
-      de contenedor estándar que se utiliza a menudo para las secuencias de bits
-      de audio no comprimido, pero también puede contener audio comprimido. Debido
-      a la naturaleza de streaming del audio devuelto, puede ser que el archivo WAV
-      generado no funcione en todos los reproductores de audio. Concretamente,
-      el atributo <code>numSamples</code> de la cabecera del archivo está
-      definido a <code>0</code> independientemente  de la longitud del audio.
-      Para obtener más información, consulte
-      <a target="_blank" href="https://en.wikipedia.org/wiki/WAV">en.wikipedia.org/wiki/WAV ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")</a>.
+      <em>Waveform Audio File Format (WAV)</em> (<code>.wav</code>) es un formato de contenedor estándar que se utiliza a menudo para las secuencias de bits de audio no comprimido, pero también puede contener audio comprimido. Debido a la naturaleza de streaming del audio devuelto, puede ser que el archivo WAV generado no funcione en todos los reproductores de audio. Concretamente, el atributo <code>numSamples</code> de la cabecera del archivo está definido a <code>0</code> independientemente  de la longitud del audio.
+      Para obtener más información, consulte [WAV](https://wikipedia.org/wiki/WAV).
     </td>
   </tr>
   <tr>
@@ -162,11 +121,7 @@ En la Tabla 1 se enumeran los formatos de audio (tipos MIME) en los que se puede
       <code>audio/webm;codecs=vorbis</code>
     </td>
     <td>
-      <em>Web Media (WebM)</em> (<code>.webm</code>), un formato de archivo
-      multimedia que ofrece soporte para secuencias de audio comprimidas con
-      los códecs de audio Opus y Vorbis. Si se omite el códec, el servicio
-      devuelve el audio en formato Opus. Para obtener más información, consulte
-      <a target="_blank" href="https://www.webmproject.org/">webmproject.org ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")</a>.
+      <em>Web Media (WebM)</em> (<code>.webm</code>), un formato de archivo multimedia que ofrece soporte para secuencias de audio comprimidas con los códecs de audio Opus y Vorbis. Si se omite el códec, el servicio devuelve el audio en formato Opus. Para obtener más información, consulte [webmproject.org](https://www.webmproject.org/).
     </td>
   </tr>
 </table>
@@ -176,7 +131,7 @@ En la Tabla 1 se enumeran los formatos de audio (tipos MIME) en los que se puede
 
 Especificar un formato de audio es opcional. De forma predeterminada, el servicio devuelve el audio en formato `audio/ogg;codecs=opus`. Sin embargo, puede especificar un formato para la interfaz HTTP o la interfaz WebSocket:
 
--   Con los métodos HTTP `GET` y `POST /v1/synthesize`, se puede especificar un formato utilizando la cabecera de la solicitud `Accept` o el parámetro de consulta `accept`. Para recibir audio en el formato predeterminado, se debe omitir tanto la cabecera como el parámetro de consulta. Para obtener más información, consulte [Sintetizar texto a audio](/docs/services/text-to-speech/http.html#synthesize).
+-   Con los métodos HTTP `GET` y `POST /v1/synthesize`, se puede especificar un formato utilizando la cabecera de la solicitud `Accept` o el parámetro de consulta `accept`. Para recibir audio en el formato predeterminado, se debe omitir tanto la cabecera como el parámetro de consulta. Para obtener más información, consulte [Sintetizar texto a audio](/docs/services/text-to-speech?topic=text-to-speech-usingHTTP#synthesize).
 
     Si utiliza el parámetro de consulta `accept`, codifique como URL el argumento en el parámetro. Por ejemplo, codifique como URL el siguiente argumento
 
@@ -192,7 +147,7 @@ Especificar un formato de audio es opcional. De forma predeterminada, el servici
     ```
     {: codeblock}
 
--   Para especificar un formato con la interfaz WebSocket, se utiliza el parámetro `accept` del mensaje de texto que se pasa para iniciar la síntesis. Para recibir audio en el formato predeterminado, se especifica el valor `*/*` en el parámetro. Para obtener más información, consulte [Enviar texto de entrada](/docs/services/text-to-speech/websockets.html#WSsend).
+-   Para especificar un formato con la interfaz WebSocket, se utiliza el parámetro `accept` del mensaje de texto que se pasa para iniciar la síntesis. Para recibir audio en el formato predeterminado, se especifica el valor `*/*` en el parámetro. Para obtener más información, consulte [Enviar texto de entrada](/docs/services/text-to-speech?topic=text-to-speech-usingWebSocket#WSsend).
 
 ## Especificar una frecuencia de muestreo
 {: #formatRate}
@@ -329,7 +284,7 @@ En la tabla 2 se muestra la frecuencia de muestreo predeterminada del audio que 
 
 La forma más fiable de identificar la frecuencia de muestreo para cualquier secuencia de audio que devuelva el servicio es extraer la información de la propia secuencia. Puede determinar la frecuencia llamando al método `/v1/synthesize` con algún texto simple (por ejemplo, "hello world") y especificando el formato y el códec que tiene previsto utilizar. A continuación, puede obtener el códec y la frecuencia de muestreo guardando la secuencia de audio en un archivo y abriéndola en un reproductor de audio.
 
-El estándar Opus requiere que la frecuencia de muestreo de salida coincida con las capacidades del reproductor de audio. Para obtener más información, consulte la sección 5.1 de Internet Engineering Task Force (IETF) [Request for Comments (RFC) 7845 ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://tools.ietf.org/html/rfc6455){: new_window}. Para los reproductores de audio de software, la tabla indica la frecuencia de muestreo de salida típica, pero la frecuencia de muestreo real del audio varía con el tiempo dentro de la secuencia. Tal como se ha mencionado, el servicio sintetiza el audio de origen a 22.050 Hz.
+El estándar Opus requiere que la frecuencia de muestreo de salida coincida con las capacidades del reproductor de audio. Para obtener más información, consulte la sección 5.1 de Internet Engineering Task Force (IETF) [Request for Comments (RFC) 7845](http://tools.ietf.org/html/rfc6455){: external}. Para los reproductores de audio de software, la tabla indica la frecuencia de muestreo de salida típica, pero la frecuencia de muestreo real del audio varía con el tiempo dentro de la secuencia. Tal como se ha mencionado, el servicio sintetiza el audio de origen a 22.050 Hz.
 {: note}
 
 ## Reproducir un archivo de audio
@@ -338,4 +293,4 @@ El estándar Opus requiere que la frecuencia de muestreo de salida coincida con 
 Para reproducir un archivo de audio que haya generado el servicio, utilice una de las siguientes herramientas:
 
 -   Un navegador web como por ejemplo Google Chrome&trade;, Firefox&reg; o Microsoft&reg; Internet Explorer&reg;.
--   Un reproductor de audio como por ejemplo Audacity&reg; ([audacityteam.org ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://www.audacityteam.org/){: new_window}) o FFmpeg ([ffmpeg.org ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ffmpeg.org){: new_window}).
+-   Un reproductor de audio como, por ejemplo, Audacity&reg; ([audacityteam.org](http://www.audacityteam.org/){: external}) o FFmpeg ([ffmpeg.org](https://www.ffmpeg.org){: external}).

@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-21"
+lastupdated: "2019-06-24"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -28,7 +28,7 @@ subcollection: text-to-speech
 Para sintetizar texto a voz con la interfaz HTTP REST del servicio {{site.data.keyword.texttospeechfull}}, debe llamar al método `GET` o `POST /v1/synthesize`. Debe especificar el texto a sintetizar y la voz y el formato para el audio hablado. También puede especificar un modelo de voz personalizado a utilizar con la solicitud.
 {: shortdesc}
 
-Para obtener más información sobre la interfaz de HTTP, consulte la [Referencia de API ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/apidocs/text-to-speech){: new_window}.
+Para obtener más información sobre la interfaz de HTTP, consulte la [Consulta de API](https://{DomainName}/apidocs/text-to-speech){: external}.
 
 ## Sintetizar texto a audio
 {: #synthesize}
@@ -53,11 +53,7 @@ Las dos versiones del método `/v1/synthesize` tienen los siguientes parámetros
     <td style="text-align:center">Consulta</td>
     <td style="text-align:center">Serie</td>
     <td>
-      Especifica el formato de audio solicitado, o el tipo MIME, en el que.
-      el servicio debe devolver el audio. También puede especificar este valor
-      con la cabecera de solicitud HTTP <code>Accept</code>. Codifique como URL el argumento
-      en el parámetro de consulta `accept`. Para obtener más información,
-      consulte [Formatos de audio](/docs/services/text-to-speech/audio-formats.html).
+      Especifica el formato de audio solicitado, o el tipo MIME, en el que el servicio debe devolver el audio. También puede especificar este valor con la cabecera de solicitud HTTP <code>Accept</code>. Codifique como URL el argumento en el parámetro de consulta `accept`. Para obtener más información, consulte [Formatos de audio](/docs/services/text-to-speech?topic=text-to-speech-audioFormats).
     </td>
   </tr>
   <tr>
@@ -65,11 +61,7 @@ Las dos versiones del método `/v1/synthesize` tienen los siguientes parámetros
     <td style="text-align:center">Consulta</td>
     <td style="text-align:center">Serie</td>
     <td>
-      Especifica la voz en que se debe leer el texto en el
-      audio. Utilice el método <code>/v1/voices</code> para obtener
-      la lista actual de voces soportadas. La voz predeterminada es
-      <code>en-US_MichaelVoice</code>. Para obtener más información, consulte
-      [Idiomas y voces](/docs/services/text-to-speech/voices.html).
+      Especifica la voz en que se debe leer el texto en el audio. Utilice el método <code>/v1/voices</code> para obtener la lista actual de voces soportadas. La voz predeterminada es <code>en-US_MichaelVoice</code>. Para obtener más información, consulte [Idiomas y voces](/docs/services/text-to-speech?topic=text-to-speech-voices).
     </td>
   </tr>
   <tr>
@@ -77,22 +69,15 @@ Las dos versiones del método `/v1/synthesize` tienen los siguientes parámetros
     <td style="text-align:center">Consulta</td>
     <td style="text-align:center">Serie</td>
     <td>
-      Especifica un identificador exclusivo global (GUID) de un modelo de voz
-      personalizado a utilizar para la síntesis. Sólo se garantiza que un modelo
-      de voz personalizado especificado funcionará si coincide con el idioma de
-      la voz que se utiliza para la síntesis. Si incluye un ID de personalización,
-      debe llamar al método con las credenciales de servicio del propietario del
-      modelo. Omita el parámetro para utilizar la voz especificada sin
-      personalización. Para obtener más información, consulte
-      [Comprender la personalización](/docs/services/text-to-speech/custom-intro.html).
+      Especifica un identificador exclusivo global (GUID) de un modelo de voz personalizado a utilizar para la síntesis. Sólo se garantiza que un modelo de voz personalizado especificado funcionará si coincide con el idioma de la voz que se utiliza para la síntesis. Si incluye un ID de personalización, debe realizar la solicitud con las credenciales para la instancia del servicio que posee el modelo personalizado. Omita el parámetro para utilizar la voz especificada sin personalización. Para obtener más información, consulte [Comprender la personalización](/docs/services/text-to-speech?topic=text-to-speech-customIntro).
     </td>
   </tr>
 </table>
 
 También puede utilizar las siguientes cabeceras de solicitud, que están disponibles para todos los servicios de {{site.data.keyword.watson}}, con una solicitud de síntesis:
 
--   `X-Watson-Learning-Opt-Out` indica si el servicio registra datos de solicitud y respuesta para mejorar el servicio para los usuarios futuros. Para evitar que IBM acceda a sus datos para mejoras de servicio generales, especifique <code>true</code> en el parámetro. Para obtener más información, consulte [Control del registro de solicitud para servicios de {{site.data.keyword.watson}}](/docs/services/watson/getting-started-logging.html).
--   `X-Watson-Metadata` asocia un ID de cliente a los datos que se pasan en una solicitud. Para obtener más información, consulte [Seguridad de la información](/docs/services/text-to-speech/information-security.html).
+-   `X-Watson-Learning-Opt-Out` indica si el servicio registra datos de solicitud y respuesta para mejorar el servicio para los usuarios futuros. Para evitar que IBM acceda a sus datos para mejoras de servicio generales, especifique <code>true</code> en el parámetro. Para obtener más información, consulte [Control del registro de solicitud para servicios de {{site.data.keyword.watson}}](/docs/services/watson?topic=watson-gs-logging-overview).
+-   `X-Watson-Metadata` asocia un ID de cliente a los datos que se pasan en una solicitud. Para obtener más información, consulte [Seguridad de la información](/docs/services/text-to-speech?topic=text-to-speech-information-security).
 
 Si especifica un parámetro de consulta no válido o un campo JSON como parte de la entrada en el método `/v1/synthesize`, el servicio devuelve una cabecera de respuesta `Warnings` que describe y lista cada argumento no válido. La solicitud tiene éxito a pesar de las advertencias.
 {: note}
@@ -119,7 +104,7 @@ Aunque los métodos `GET` y `POST` ofrecen una funcionalidad equivalente, siempr
 
 SSML (Speech Synthesis Markup Language) es un lenguaje de códigos basado en XML, diseñado para proporcionar anotaciones de texto para aplicaciones de síntesis de voz, como por ejemplo el servicio {{site.data.keyword.texttospeechshort}}. Puede utilizar los elementos SSML y sus atributos para obtener un mayor control sobre la síntesis y sobre la salida de audio resultante.
 
-Para obtener más información sobre el uso de SSML para anotar el texto de entrada, consulte [Utilización de SSML](/docs/services/text-to-speech/SSML.html). En la documentación se inventarían los elementos y atributos SSML que admite el servicio. También se documentan las extensiones de expresión y de conversión de voz del servicio.
+Para obtener más información sobre el uso de SSML para anotar el texto de entrada, consulte [Utilización de SSML](/docs/services/text-to-speech?topic=text-to-speech-ssml). En la documentación se inventarían los elementos y atributos SSML que admite el servicio. También se documentan las extensiones de expresión y de conversión de voz del servicio.
 
 ## Escapar los caracteres de control XML
 {: #escape}
@@ -160,7 +145,7 @@ Puesto que puede enviar texto de entrada que incluye anotaciones SSML basadas en
   </tr>
 </table>
 
-Para obtener más información sobre cómo el servicio valida el texto de entrada, consulte [Validación de SSML](/docs/services/text-to-speech/SSML.html#errors).
+Para obtener más información sobre cómo el servicio valida el texto de entrada, consulte [Validación de SSML](/docs/services/text-to-speech?topic=text-to-speech-ssml#errors).
 
 ## Ejemplos de texto de entrada
 {: #httpExamples}

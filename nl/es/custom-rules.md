@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-03-07"
+lastupdated: "2018-06-04"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -94,7 +94,7 @@ SPR (Symbolic Phonetic Representation) es un formato propietario, dependiente de
 -   Puede utilizar un punto para indicar el principio de una sílaba en una conversión, pero los puntos son opcionales y no influyen en la pronunciación de la palabra. Sólo aparecen en la pronunciación de una palabra si se incluyen en la conversión de la misma. No utilice espacios para indicar los límites silábicos.
 -   {{site.data.keyword.IBM_notm}} recomienda marcar la vocal que tiene el acento primario con un símbolo `1` antes de la vocal, aunque no es estrictamente necesario. El servicio determina dónde va el acento si no se indica. También puede utilizar un símbolo `2` para indicar la posición del acento secundario, pero el uso del símbolo `2` también es opcional. Sólo aparecen en la pronunciación de una palabra si se incluyen en la conversión de la misma.
 
-Para obtener más información sobre cómo trabajar con SPR, consulte [Utilización de IBM SPR](/docs/services/text-to-speech/SPRs.html).
+Para obtener más información sobre cómo trabajar con SPR, consulte [Utilización de IBM SPR](/docs/services/text-to-speech?topic=text-to-speech-sprs).
 
 ## Trabajar con entradas en japonés
 {: #jaNotes}
@@ -131,7 +131,7 @@ Se aplican reglas adicionales, así como el campo adicional `part_of_speech` par
 ### Categorías léxicas del japonés
 {: #partsOfSpeech}
 
-En la tabla siguiente se listan las categorías léxicas que están soportadas para las entradas personalizadas en japonés. Para obtener más información sobre cómo especificar la categoría léxica de una entrada personalizada en japonés, consulte [Añadir palabras a un modelo personalizado en japonés](/docs/services/text-to-speech/custom-entries.html#cuJapaneseAdd).
+En la tabla siguiente se listan las categorías léxicas que están soportadas para las entradas personalizadas en japonés. Para obtener más información sobre cómo especificar la categoría léxica de una entrada personalizada en japonés, consulte [Añadir palabras a un modelo personalizado en japonés](/docs/services/text-to-speech?topic=text-to-speech-customWords#cuJapaneseAdd).
 
 <table style="width:75%">
   <caption>Tabla 1. Categorías léxicas del japonés</caption>
