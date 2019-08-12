@@ -1,15 +1,15 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-03-07"
+  years: 2019
+lastupdated: "2019-07-08"
 
-subcollection: text-to-speech
+subcollection: text-to-speech-data
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -25,16 +25,24 @@ subcollection: text-to-speech
 # La scienza alla base del servizio
 {: #science}
 
-Il servizio {{site.data.keyword.texttospeechshort}} è un sistema concatenativo che si basa su un inventario di unità acustiche derivanti da un corpus di sintesi di grandi dimensioni per produrre il discorso di output per il testo di input arbitrario. Si basa sulle seguenti pipeline dei processi. Questi processi facilitano una ricerca in tempo reale ed efficiente in questo inventario di unità seguita da una post-elaborazione delle unità.
+{{site.data.keyword.texttospeechdatafull}} for {{site.data.keyword.icp4dfull}} si basa su una tecnologia di voce neurale per sintetizzare un discorso di qualità umana dal testo di input. Le voci neurali producono un discorso nitido e chiaro, con una qualità audio dal suono molto naturale e fluido.
 {: shortdesc}
 
--   **Modello acustico** - Questo modello è composto da una struttura ad albero delle decisioni responsabile della generazione di unità candidate per la ricerca. Per ciascuno dei telefoni presenti in una sequenza di telefoni da sintetizzare, il modello considera il telefono nel contesto di due telefoni, quello precedente e quello successivo. Produce quindi una serie di unità acustiche che la ricerca valuta per l'idoneità. Questo passo riduce in modo efficace la complessità della ricerca restringendola a quelle unità che soddisfano alcuni criteri contestuali ed eliminando tutte le altre. 
--   **Modelli finali di prosodia** - Questo modelli sono composti da reti neurali ricorrenti profonde (Deep Recurrent Neural Networks - RNN). I modelli sono responsabili della generazione dei valori finali per gli aspetti prosodici del discorso (ad esempio durata e intonazione), data una sequenza di caratteristiche linguistiche estratte dal testo di input. Questo elenco include attributi come ad esempio una parte del discorso, lo stress lessicale, l'importanza del livello di parole e le caratteristiche di posizionamento (ad esempio, la posizione della sillaba o della parola nella frase). I modelli finali di prosodia ti aiutano a guidare la ricerca verso quelle unità che soddisfano i criteri prosodici previsti da questo modello. 
--   **Ricerca** - Dato l'elenco dei candidati restituiti dal modello acustico e dalla prosodia finale, questo modulo esegue una ricerca Viterbi. La ricerca estrae una sequenza delle unità acustiche che riduce una funzione di costo che considera sia i costi di concatenazione che finali. Di conseguenza, le risorse udibili provenienti dall'unione di due unità sono ridotte al minimo e il modulo tenta di approssimarsi alla prosodia finale suggerita dai modelli finali di prosodia. Questa ricerca favorisce anche i blocchi contigui nel corpus di sintesi per ridurre ulteriormente tali risorse. 
--   **Generazione di waveform** - Quando la ricerca restituisce la sequenza ottimale di unità, il sistema utilizza PSOLA (Pitch Synchronous Overlap and Add - Sovrapposizione e aggiunta a toni sincroni) del dominio del tempo per generare un waveform di output. PSOLA è una tecnica di elaborazione del segnale digitale che viene utilizzata per l'elaborazione di un discorso. Nello specifico, viene utilizzata per la sintesi vocale. Può modificare il tono e la durata di un segnale vocale e combinare le unità restituite dalla ricerca senza soluzione di continuità. 
+Il servizio analizza prima il testo di input per determinare il contenuto desiderato. Utilizza un modello acustico che consiste in una struttura ad albero delle decisioni per generare le unità candidate per la sintesi. Per ciascuno dei telefoni presenti in una sequenza di telefoni da sintetizzare, il modello considera il telefono nel contesto di due telefoni, quello precedente e quello successivo. Produce quindi una serie di unità acustiche di cui viene valutata l'idoneità. Questo passo riduce la complessità della ricerca restringendola a quelle unità che soddisfano alcuni criteri contestuali ed eliminando tutte le altre. 
 
-    Per tutte le caratteristiche linguistiche nei processi di backend precedenti, il servizio utilizza un frontend di elaborazione del testo per analizzare il testo prima di sintetizzarlo in formato audio. Il frontend ripulisce il testo dalle risorse di formattazione come le tag HTML. Utilizza quindi una lingua proprietaria guidata da regole linguistiche che dipendono dalla lingua per preparare il testo e generare la pronuncia. Questo modulo normalizza le funzioni che dipendono dalla lingua del testo come date, ore, numeri e valuta. Ad esempio, esegue l'espansione abbreviata da un dizionario e da un'espansione numerica dalle regole per i numeri ordinali e cardinali. 
+Il servizio utilizza quindi tre DNN (Deep Neural Network) per prevedere le caratteristiche acustiche (spettrali) del discorso e codificare l'audio risultante: 
 
-    Per alcune parole si possono utilizzare più pronunce, quindi il frontend di elaborazione del testo produce innanzitutto una singola pronuncia canonica nel runtime. Questo approccio potrebbe non riflettere la pronuncia che l'oratore ha utilizzato quando è stato registrato il corpus audio. Di conseguenza, il servizio amplia una serie candidata di pronunce con forme alternative archiviate in un dizionario di base alternativo. Consente alla ricerca di scegliere i formati che riducono il costo in termini di problemi e limitazioni di tono, durata e contiguità. Questo algoritmo facilita la selezione di blocchi contigui più lunghi provenienti dal dataset, ottenendo un flusso ottimale del discorso nel risultato sintetizzato. 
+-   Previsione della prosodia 
+-   Previsione della caratteristica acustica 
+-   Vocoder neurale 
 
-L'argomento della sintetizzazione del testo in voce è intrinsecamente complesso e qualsiasi spiegazione del servizio richiede una profondità esplicativa maggiore di quanto questo breve riepilogo possa contenere. Per ulteriori informazioni sulla ricerca scientifica alla base del servizio, consulta i documenti elencati in [Riferimenti di ricerca](/docs/services/text-to-speech/references.html).
+Durante la sintesi, le DNN prevedono la durata tonale e fonemica (prosodia), la struttura spettrale e la forma d'onda del discorso. Ad esempio, il modulo di previsione della prosodia genera dei valori di destinazione per le caratteristiche linguistiche estratte dal testo di input. Le caratteristiche includono attributi quali la parte del discorso, l'accento lessicale, la prominenza a livello delle parole e le caratteristiche posizionali quali la posizione della sillaba o della parola nella frase. 
+
+Le DNN sono addestrate sul discorso umano naturale per prevedere le caratteristiche acustiche dell'audio. Questo approccio modulare presenta il vantaggio di consentire un addestramento facile e veloce, così come il controllo indipendente di ciascun componente. Una volta addestrate, le reti di base possono essere adattate a nuove voci o nuovi stili di pronuncia per finalità di consolidamento del marchio e di personalizzazione. 
+
+Per ulteriori informazioni sulla tecnologia vocale neurale del servizio, vedi 
+
+-   Il post del blog [IBM Watson Text to Speech: Neural Voices Generally Available](https://medium.com/ibm-watson/ibm-watson-text-to-speech-neural-voices-added-to-service-e562106ff9c7){: external} 
+-   L'articolo di ricerca [High quality, lightweight and adaptable Text to Speech using LPCNet](https://arxiv.org/abs/1905.00590){: external} 
+
+L'argomento della sintetizzazione del testo in voce è intrinsecamente complesso. Per ulteriori informazioni sulla ricerca scientifica alla base della tecnologia vocale del servizio, consulta i documenti elencati in [Riferimenti di ricerca](/docs/services/text-to-speech-data?topic=text-to-speech-data-references).

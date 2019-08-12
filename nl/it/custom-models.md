@@ -1,15 +1,15 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-03-07"
+  years: 2019
+lastupdated: "2019-06-24"
 
-subcollection: text-to-speech
+subcollection: text-to-speech-data
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -36,21 +36,11 @@ Considera le seguenti linee guida quando lavori con l'interfaccia di personalizz
 ### Proprietà di modelli vocali personalizzati
 {: #customOwner}
 
-Un modello vocale personalizzato è di proprietà dell'istanza del servizio {{site.data.keyword.texttospeechshort}} di cui vengono utilizzate le credenziali per crearlo. Per lavorare con il modello personalizzato devi utilizzare le credenziali create per tale istanza del servizio con i metodi dell'interfaccia di personalizzazione.
+Un modello vocale personalizzato è di proprietà dell'istanza del servizio {{site.data.keyword.texttospeechshort}} di cui vengono utilizzate le credenziali per crearlo. Per lavorare con il modello personalizzato devi utilizzare le credenziali per tale istanza del servizio con i metodi dell'interfaccia di personalizzazione.
 
-Tutte le credenziali del servizio ottenute per la stessa istanza del servizio {{site.data.keyword.texttospeechshort}} condividono l'accesso a tutti i modelli personalizzati creati per tale istanza. Per limitare l'accesso a un modello personalizzato, crea un'istanza del servizio separata e utilizza solo le credenziali di tale istanza per creare e utilizzare il modello. Le credenziali per altre istanze del servizio non possono influire sul modello personalizzato.
+Tutte le credenziali ottenute per la stessa istanza del servizio {{site.data.keyword.texttospeechshort}} condividono l'accesso a tutti i modelli personalizzati creati per tale istanza. Per limitare l'accesso a un modello personalizzato, crea un'istanza del servizio separata e utilizza solo le credenziali di tale istanza per creare e utilizzare il modello. Le credenziali per altre istanze del servizio non possono influire sul modello personalizzato.
 
-Un vantaggio della condivisione della proprietà tra le credenziali del servizio è che puoi annullare un insieme di credenziali, ad esempio, se vengono compromesse. Puoi quindi creare nuove credenziali per la stessa istanza del servizio e mantenere comunque la proprietà e l'accesso ai modelli personalizzati creati con le credenziali originali.
-
-### Registrazione delle richieste e privacy dei dati 
-{: #customLogging}
-
-Il modo in cui il servizio gestisce la registrazione delle richieste per le chiamate all'interfaccia di personalizzazione dipende dalla richiesta:
-
--   Il servizio *non* registra i dati (parole e traduzioni) utilizzati per creare i modelli vocali personalizzati. Non devi impostare l'intestazione della richiesta `X-Watson-Learning-Opt-Out` quando utilizzi l'interfaccia di personalizzazione per gestire le parole e le traduzioni in un modello personalizzato. I tuoi dati di addestramento non vengono mai utilizzati per migliorare i modelli di base del servizio.
--   Il servizio *registra* i dati quando un modello di dati viene utilizzato con una richiesta di sintesi. Devi impostare l'intestazione della richiesta `X-Watson-Learning-Opt-Out` su `true` per impedire la registrazione delle richieste di sintesi.
-
-Per ulteriori informazioni, vedi [Controllo della registrazione delle richieste per i servizi {{site.data.keyword.watson}}](/docs/services/watson/getting-started-logging.html).
+Un vantaggio della condivisione della proprietà tra le credenziali è che puoi annullare un insieme di credenziali, ad esempio, se vengono compromesse. Puoi quindi creare nuove credenziali per la stessa istanza del servizio e mantenere comunque la proprietà e l'accesso ai modelli personalizzati creati con le credenziali originali.
 
 ### Sicurezza delle informazioni
 {: #customSecurity}
@@ -61,12 +51,12 @@ Il servizio ti consente di associare un ID cliente ai dati che vengono aggiunti 
 -   `POST /v1/customizations/{customization_id}/words`
 -   `PUT /v1/customizations/{customization_id}/words/{word}`
 
-Se necessario, puoi quindi eliminare i dati associati all'ID cliente utilizzando il metodo `DELETE /v1/user_data`. Per ulteriori informazioni, vedi [Sicurezza delle informazioni](/docs/services/text-to-speech/information-security.html).
+Se necessario, puoi quindi eliminare i dati associati all'ID cliente utilizzando il metodo `DELETE /v1/user_data`. Per ulteriori informazioni, vedi [Sicurezza delle informazioni](/docs/services/text-to-speech-data?topic=text-to-speech-data-information-security).
 
 ## Creazione di un modello personalizzato
 {: #cuModelsCreate}
 
-Per creare un nuovo modello personalizzato, utilizza il metodo `POST /v1/customizations`. Un nuovo modello è sempre vuoto quando lo crei per la prima volta; devi utilizzare altri metodi per popolarlo con coppie di parole/traduzioni. Il nuovo modello personalizzato è di proprietà dell'utente di cui vengono utilizzate le credenziali del servizio per crearlo. Per ulteriori informazioni, vedi [Proprietà di modelli vocali personalizzati](#customOwner).
+Per creare un nuovo modello personalizzato, utilizza il metodo `POST /v1/customizations`. Un nuovo modello è sempre vuoto quando lo crei per la prima volta. Devi utilizzare altri metodi per popolarlo con coppie di parole/traduzioni. Il nuovo modello personalizzato è di proprietà dell'istanza del servizio di cui vengono utilizzate le credenziali per crearlo. Per ulteriori informazioni, vedi [Proprietà di modelli vocali personalizzati](#customOwner).
 
 Passa i seguenti attributi come oggetto JSON con il corpo della richiesta.
 
@@ -92,7 +82,8 @@ Passa i seguenti attributi come oggetto JSON con il corpo della richiesta.
     <td style="text-align:center">Stringa</td>
     <td>
       Un identificativo per la lingua del modello personalizzato. Il valore
-      predefinito è <code>en-US</code> per l'inglese americano.
+      predefinito è <code>en-US</code> per l'inglese americano. Il modello personalizzato
+      può essere utilizzato con qualsiasi voce disponibile nella lingua specificata.
     </td>
   </tr>
   <tr>
@@ -108,10 +99,11 @@ Passa i seguenti attributi come oggetto JSON con il corpo della richiesta.
 Il seguente comando `curl` di esempio crea un nuovo modello personalizzato denominato `curl Test`. L'intestazione `Content-Type` identifica il tipo di input come `application/json`.
 
 ```bash
-curl -X POST -u "apikey:{apikey}"
+curl -X POST
+--header "Authorization: Bearer {token}"
 --header "Content-Type: application/json"
 --data "{\"name\":\"curl Test\", \"language\":\"en-US\", \"description\":\"Customization test via curl\"}"
-"https://stream.watsonplatform.net/text-to-speech/api/v1/customizations"
+"{url}/v1/customizations"
 ```
 {: pre}
 
@@ -130,8 +122,9 @@ Il metodo restituisce un oggetto JSON che contiene un GUID (globally unique iden
 Per eseguire la query sulle informazioni relative a un modello personalizzato esistente, utilizza il metodo `GET /v1/customizations/{customization_id}`. Questo è il modo più diretto per vedere tutte le informazioni su un modello, sia i suoi metadati che le coppie di parole/traduzioni che contiene.
 
 ```bash
-curl -X GET -u "apikey:{apikey}"
-"https://stream.watsonplatform.net/text-to-speech/api/v1/customizations/{customization_id}"
+curl -X GET
+--header "Authorization: Bearer {token}"
+"{url}/v1/customizations/{customization_id}"
 ```
 {: pre}
 
@@ -151,7 +144,7 @@ Il metodo restituisce i suoi risultati come oggetto JSON del seguente formato:
 ```
 {: codeblock}
 
-Oltre alle informazioni immesse al momento della creazione del modello, l'output include le credenziali del servizio del proprietario del modello, la lingua e le ore di creazione e ultima modifica del modello. Poiché il modello non è stato modificato dalla sua creazione, le due ore nell'esempio sono uguali.
+Oltre alle informazioni immesse al momento della creazione del modello, l'output include le credenziali del proprietario del modello, la lingua e le ore di creazione e l'ultima modifica del modello. Poiché il modello non è stato modificato dalla sua creazione, le due ore nell'esempio sono uguali.
 
 L'output include anche un array `words` che elenca le voci personalizzate del modello. Poiché il modello deve ancora essere aggiornato, l'array nell'esempio è vuoto.
 
@@ -161,12 +154,13 @@ L'output include anche un array `words` che elenca le voci personalizzate del mo
 Per visualizzare informazioni su tutti i modelli personalizzati di tua proprietà, utilizza il metodo `GET /v1/customizations`:
 
 ```bash
-curl -X GET -u "apikey:{apikey}"
-"https://stream.watsonplatform.net/text-to-speech/api/v1/customizations"
+curl -X GET
+--header "Authorization: Bearer {token}"
+"{url}/v1/customizations"
 ```
 {: pre}
 
-Il metodo restituisce un array JSON che include un oggetto per ciascun modello personalizzato di proprietà del richiedente. Le credenziali del servizio del proprietario sono mostrate nel campo `owner`.
+Il metodo restituisce un array JSON che include un oggetto per ciascun modello personalizzato di proprietà del richiedente. Le credenziali del proprietario sono mostrate nel campo `owner`.
 
 ```javascript
 {
@@ -204,14 +198,15 @@ Per aggiornare le informazioni relative a un modello personalizzato, utilizza il
 Il seguente esempio aggiorna il nome e la descrizione di un modello personalizzato. Viene inviato un array JSON vuoto con il parametro `words` per indicare che le voci del modello devono rimanere invariate.
 
 ```bash
-curl -X POST -u "apikey:{apikey}"
+curl -X POST
+--header "Authorization: Bearer {token}"
 --header "Content-Type: application/json"
 --data "{\"name\":\"curl Test Update\", \"description\":\"Customization test update via curl\", \"words\":[]}"
-"https://stream.watsonplatform.net/text-to-speech/api/v1/customizations/{customization_id}"
+"{url}/v1/customizations/{customization_id}"
 ```
 {: pre}
 
-Per informazioni sull'aggiornamento delle parole in un modello, vedi [Aggiunta di più parole a un modello personalizzato](/docs/services/text-to-speech/custom-entries.html#cuWordsAdd).
+Per informazioni sull'aggiornamento delle parole in un modello, vedi [Aggiunta di più parole a un modello personalizzato](/docs/services/text-to-speech-data?topic=text-to-speech-data-customWords#cuWordsAdd).
 
 ## Eliminazione di un modello personalizzato
 {: #cuModelsDelete}
@@ -219,7 +214,8 @@ Per informazioni sull'aggiornamento delle parole in un modello, vedi [Aggiunta d
 Per eliminare un modello personalizzato che non ti serve più, utilizza il metodo `DELETE /v1/customizations/{customization_id}`. Utilizza questo metodo solo se sei certo di non aver più bisogno del modello, poiché l'eliminazione è permanente.
 
 ```bash
-curl -X DELETE -u "apikey:{apikey}"
-"https://stream.watsonplatform.net/text-to-speech/api/v1/customizations/{customization_id}"
+curl -X DELETE
+--header "Authorization: Bearer {token}"
+"{url}/v1/customizations/{customization_id}"
 ```
 {: pre}

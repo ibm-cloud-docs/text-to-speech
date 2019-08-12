@@ -1,15 +1,15 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-04-03"
+  years: 2019
+lastupdated: "2019-06-04"
 
-subcollection: text-to-speech
+subcollection: text-to-speech-data
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -34,7 +34,7 @@ Le seguenti sezioni descrivono i simboli validi per l'inglese americano.
   <caption>Tabella 1. Vocali regolari (inglese americano)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Simbolo SPR<br/>per l'inglese americano
+      Inglese americano<br/>Simbolo SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Simbolo IPA
@@ -250,7 +250,7 @@ Le seguenti sezioni descrivono i simboli validi per l'inglese americano.
   <caption>Tabella 2. Dittonghi (inglese americano)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Simbolo SPR<br/>per l'inglese americano
+      Inglese americano<br/>Simbolo SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Simbolo IPA
@@ -313,7 +313,7 @@ Le seguenti sezioni descrivono i simboli validi per l'inglese americano.
   <caption>Tabella 3. Vocali ridotte (inglese americano)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Simbolo SPR<br/>per l'inglese americano
+      Inglese americano<br/>Simbolo SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Simbolo IPA
@@ -366,7 +366,7 @@ Le seguenti sezioni descrivono i simboli validi per l'inglese americano.
   <caption>Tabella 4. Consonanti (inglese americano)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Simbolo SPR<br/>per l'inglese americano
+      Inglese americano<br/>Simbolo SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Simbolo IPA

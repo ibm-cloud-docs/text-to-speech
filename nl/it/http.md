@@ -1,15 +1,15 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-03-21"
+  years: 2019
+lastupdated: "2019-06-24"
 
-subcollection: text-to-speech
+subcollection: text-to-speech-data
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -25,10 +25,10 @@ subcollection: text-to-speech
 # L'interfaccia HTTP
 {: #usingHTTP}
 
-Per sintetizzare il testo in voce utilizzando l'interfaccia REST HTTP del servizio {{site.data.keyword.texttospeechfull}}, chiama il metodo `GET` o `POST /v1/synthesize`. Specifica il testo che deve essere sintetizzato e la voce e il formato per l'audio pronunciato. Puoi anche specificare un modello vocale personalizzato da utilizzare con la richiesta.
+Per sintetizzare il testo in voce utilizzando l'interfaccia REST HTTP del servizio {{site.data.keyword.texttospeechdatafull}} for {{site.data.keyword.icp4dfull}}, chiama il metodo `GET` o `POST /v1/synthesize`. Specifica il testo che deve essere sintetizzato e la voce e il formato per l'audio pronunciato. Puoi anche specificare un modello vocale personalizzato da utilizzare con la richiesta.
 {: shortdesc}
 
-Per ulteriori informazioni sull'interfaccia HTTP, vedi il [Riferimento API ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}/apidocs/text-to-speech){: new_window}.
+Per ulteriori informazioni sull'interfaccia HTTP, vedi il [Riferimento API](https://{DomainName}/apidocs/text-to-speech-data){: external}.
 
 ## Sintetizzazione del testo in audio
 {: #synthesize}
@@ -57,8 +57,7 @@ Le due versioni del metodo `/v1/synthesize` hanno in comune i seguenti parametri
       Specifica il formato audio richiesto, o tipo MIME, in cui il
       servizio deve restituire l'audio. Puoi anche specificare questo valore con
       l'intestazione della richiesta HTTP <code>Accept</code>. Codifica in URL l'argomento
-      nel parametro di query `accept`. Per ulteriori informazioni, vedi
-      [Formati audio](/docs/services/text-to-speech/audio-formats.html).
+      nel parametro di query `accept`. Per ulteriori informazioni, vedi [Formati audio](/docs/services/text-to-speech-data?topic=text-to-speech-data-audioFormats).
     </td>
   </tr>
   <tr>
@@ -69,8 +68,7 @@ Le due versioni del metodo `/v1/synthesize` hanno in comune i seguenti parametri
       Specifica la voce in cui deve essere pronunciato il testo
       nell'audio. Utilizza il metodo <code>/v1/voices</code> per ottenere
       l'elenco corrente delle voci supportate. La voce predefinita è
-      <code>en-US_MichaelVoice</code>. Per ulteriori informazioni, vedi
-      [Lingue e voci](/docs/services/text-to-speech/voices.html).
+      <code>en-US_MichaelV3Voice</code>. Per ulteriori informazioni, vedi [Lingue e voci](/docs/services/text-to-speech-data?topic=text-to-speech-data-voices).
     </td>
   </tr>
   <tr>
@@ -81,19 +79,16 @@ Le due versioni del metodo `/v1/synthesize` hanno in comune i seguenti parametri
       Specifica un GUID (globally unique identifier) per un modello vocale
       personalizzato che deve essere utilizzato per la sintesi. È garantito che un modello
       vocale personalizzato specificato funzioni solo se corrisponde alla lingua
-      della voce utilizzata per la sintesi. Se includi un ID di personalizzazione,
-      devi chiamare il metodo utilizzando le credenziali di servizio del proprietario
-      del modello. Ometti il parametro per utilizzare la voce specificata
+      della voce utilizzata per la sintesi. Se includi un ID
+      di personalizzazione, devi effettuare la richiesta con le credenziali per l'istanza del servizio
+      che gestisce il modello personalizzato. Ometti il parametro per utilizzare la voce specificata
       senza alcuna personalizzazione. Per ulteriori informazioni, vedi
-      [Informazioni sulla personalizzazione](/docs/services/text-to-speech/custom-intro.html).
+      [Informazioni sulla personalizzazione](/docs/services/text-to-speech-data?topic=text-to-speech-data-customIntro).
     </td>
   </tr>
 </table>
 
-Con una richiesta di sintesi, puoi anche utilizzare le seguenti intestazioni di richiesta, che sono disponibili per tutti i servizi {{site.data.keyword.watson}}:
-
--   `X-Watson-Learning-Opt-Out` indica se il servizio registra i dati di richiesta e risposta per migliorare il servizio per gli utenti futuri. Per impedire a IBM di accedere ai tuoi dati per miglioramenti generali del servizio, specifica <code>true</code> per il parametro. Per ulteriori informazioni, vedi [Controllo della registrazione delle richieste per i servizi {{site.data.keyword.watson}}](/docs/services/watson/getting-started-logging.html).
--   `X-Watson-Metadata` associa un ID cliente ai dati che vengono passati con la richiesta. Per ulteriori informazioni, vedi [Sicurezza delle informazioni](/docs/services/text-to-speech/information-security.html).
+Puoi anche utilizzare l'intestazione della richiesta `X-Watson-Metadata`, che associa un ID cliente ai dati che vengono passati con una richiesta. Per ulteriori informazioni, vedi [Sicurezza delle informazioni](/docs/services/text-to-speech-data?topic=text-to-speech-data-information-security).
 
 Se specifichi un parametro di query o un campo JSON non valido come parte dell'input al metodo `/v1/synthesize`, il servizio restituisce un'intestazione di risposta `Warnings` che descrive ed elenca ogni argomento non valido. La richiesta riesce nonostante le avvertenze.
 {: note}
@@ -120,7 +115,7 @@ Sebbene i metodi `GET` e `POST` offrano funzionalità equivalenti, è sempre pi�
 
 SSML (Speech Synthesis Markup Language) è un linguaggio di markup basato su XML progettato per fornire annotazioni di testo per le applicazioni di sintesi vocale come il servizio {{site.data.keyword.texttospeechshort}}. Puoi utilizzare gli elementi SSML e i loro attributi per ottenere un maggiore controllo sulla sintesi e sull'output audio risultante.
 
-Per ulteriori informazioni sull'utilizzo di SSML per annotare il testo di input, vedi [Utilizzo di SSML](/docs/services/text-to-speech/SSML.html). La documentazione archivia gli elementi SSML e gli attributi supportati dal servizio. Documenta inoltre le estensioni di espressività e di trasformazione della voce del servizio.
+Per ulteriori informazioni sull'utilizzo di SSML per annotare il testo di input, vedi [Utilizzo di SSML](/docs/services/text-to-speech-data?topic=text-to-speech-data-ssml). La documentazione archivia gli elementi SSML e gli attributi supportati dal servizio.
 
 ## Escape dei caratteri di controllo XML
 {: #escape}
@@ -161,7 +156,7 @@ Dal momento che puoi inoltrare il testo di input che include annotazioni SSML ba
   </tr>
 </table>
 
-Per ulteriori informazioni su come il servizio convalida il testo di input, vedi [Convalida SSML](/docs/services/text-to-speech/SSML.html#errors).
+Per ulteriori informazioni su come il servizio convalida il testo di input, vedi [Convalida SSML](/docs/services/text-to-speech-data?topic=text-to-speech-data-ssml#errors).
 
 ## Esempi di testo di input
 {: #httpExamples}
@@ -220,28 +215,16 @@ I seguenti esempi passano l'input nel corpo del metodo `POST /v1/synthesize`:
 ### Input di esempio con i caratteri di controllo XML
 {: #xmlExamples}
 
-I seguenti esempi inviano due frasi al metodo `POST /v1/synthesize`. Gli esempi eseguono correttamente l'escape dei caratteri XML incorporati.
+Il seguente esempio invia una frase al metodo `POST /v1/synthesize`. L'esempio esegue correttamente l'escape dei caratteri XML incorporati.
 
 ```
 "What have I learned?" he asked. "Everything!"
 ```
 {: codeblock}
 
--   Input di testo semplice:
-
-    ```javascript
-    {
-      "text": "&quot;What have I learned?&quot; he asked. &quot;Everything!&quot;"
+```javascript
+{
+  "text": "&quot;What have I learned?&quot; he asked. &quot;Everything!&quot;"
     }
-    ```
-    {: codeblock}
-
--   Input SSML:
-
-    ```javascript
-    {
-      "text": "<s>&quot;What have I learned?&quot; he asked.
-        &quot;<express-as type=\"GoodNews\">Everything!</express-as>&quot;</s>"
-    }
-    ```
-    {: codeblock}
+```
+{: codeblock}

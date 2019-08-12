@@ -1,15 +1,15 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-04-03"
+  years: 2019
+lastupdated: "2019-06-04"
 
-subcollection: text-to-speech
+subcollection: text-to-speech-data
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -34,7 +34,7 @@ Le seguenti sezioni descrivono i simboli validi per il portoghese brasiliano.
   <caption>Tabella 1. Vocali regolari (portoghese brasiliano)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Simbolo<br/>SPR per il portoghese brasiliano
+      Portoghese brasiliano<br/>Simbolo SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Simbolo IPA
@@ -234,7 +234,7 @@ Le seguenti sezioni descrivono i simboli validi per il portoghese brasiliano.
   <caption>Tabella 2. Semivocali (portoghese brasiliano)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Simbolo<br/>SPR per il portoghese brasiliano
+      Portoghese brasiliano<br/>Simbolo SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Simbolo IPA
@@ -311,7 +311,7 @@ Le seguenti sezioni descrivono i simboli validi per il portoghese brasiliano.
   <caption>Tabella 3. Consonanti (portoghese brasiliano)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Simbolo<br/>SPR per il portoghese brasiliano
+      Portoghese brasiliano<br/>Simbolo SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Simbolo IPA

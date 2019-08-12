@@ -1,15 +1,15 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2018-03-07"
+  years: 2019
+lastupdated: "2018-06-04"
 
-subcollection: text-to-speech
+subcollection: text-to-speech-data
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -94,7 +94,7 @@ La rappresentazione SPR (Symbolic Phonetic Representation ) è un formato propri
 -   Puoi utilizzare un punto per indicare l'inizio di una sillaba in una traduzione, ma i punti sono facoltativi e non influiscono sulla pronuncia della parola. Vengono riportati nella pronuncia di una parola solo se li includi nella traduzione della parola. Non utilizzare gli spazi per indicare le sillabazioni.
 -   {{site.data.keyword.IBM_notm}} ti consiglia di precedere la vocale che ha l'accento principale per una parola con un simbolo `1`, sebbene non sia strettamente necessario. Il servizio determina dove si presenta l'accento se non lo indichi tu. Puoi anche utilizzare un simbolo `2` per indicare la posizione di ogni accento secondario, ma anche l'utilizzo dei simboli `2` è facoltativo. Vengono riportati nella pronuncia di una parola solo se li includi nella traduzione della parola.
 
-Per ulteriori informazioni sull'utilizzo di SPR, vedi [Utilizzo di IBM SPR](/docs/services/text-to-speech/SPRs.html).
+Per ulteriori informazioni sull'utilizzo di SPR, vedi [Utilizzo di IBM SPR](/docs/services/text-to-speech-data?topic=text-to-speech-data-sprs).
 
 ## Utilizzo di voci in giapponese
 {: #jaNotes}
@@ -131,7 +131,7 @@ Per la creazione di voci per le parole in un modello vocale personalizzato in gi
 ### Parti del discorso in giapponese
 {: #partsOfSpeech}
 
-La seguente tabella elenca le parti del discorso supportate per le voci personalizzate in giapponese. Per ulteriori informazioni sulla specifica della parte del discorso per una voce personalizzata in giapponese, vedi [Aggiunta di parole a un modello personalizzato in giapponese](/docs/services/text-to-speech/custom-entries.html#cuJapaneseAdd).
+La seguente tabella elenca le parti del discorso supportate per le voci personalizzate in giapponese. Per ulteriori informazioni sulla specifica della parte del discorso per una voce personalizzata in giapponese, vedi [Aggiunta di parole a un modello personalizzato in giapponese](/docs/services/text-to-speech-data?topic=text-to-speech-data-customWords#cuJapaneseAdd).
 
 <table style="width:75%">
   <caption>Tabella 1. Parti del discorso in giapponese</caption>

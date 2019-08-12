@@ -1,15 +1,15 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-04-03"
+  years: 2019
+lastupdated: "2019-06-11"
 
-subcollection: text-to-speech
+subcollection: text-to-speech-data
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -28,7 +28,7 @@ subcollection: text-to-speech
 Le seguenti sezioni descrivono i simboli validi per lo spagnolo. I dialetti latino americano e nord americano sono identici in termini di supporto SPR. Tranne dove indicato, i due dialetti sono uguali allo spagnolo castigliano.
 
 ## Vocali regolari
-{: #esReducedVowels}
+{: #esRegularVowels}
 
 <table style="width:90%">
   <caption>Tabella 1. Vocali regolari (spagnolo)</caption>
