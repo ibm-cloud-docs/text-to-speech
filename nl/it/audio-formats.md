@@ -1,15 +1,15 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-04-09"
+  years: 2019
+lastupdated: "2019-06-11"
 
-subcollection: text-to-speech
+subcollection: text-to-speech-data
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -25,7 +25,7 @@ subcollection: text-to-speech
 # Formati audio
 {: #audioFormats}
 
-Il servizio {{site.data.keyword.texttospeechfull}} può restituire l'audio sintetizzato in numerosi formati. Per la maggior parte dei formati, il servizio restituisce l'audio con una velocità di campionamento predefinita di 22.050 Hz. Per alcuni formati, puoi o devi specificare la velocità di campionamento dell'audio. Il servizio restituisce sempre l'audio a canale singolo per tutti i formati.
+{{site.data.keyword.texttospeechdatafull}} for {{site.data.keyword.icp4dfull}} può restituire l'audio sintetizzato in numerosi formati. Per la maggior parte dei formati, il servizio restituisce l'audio con una velocità di campionamento predefinita di 22.050 Hz. Per alcuni formati, puoi o devi specificare la velocità di campionamento dell'audio. Il servizio restituisce sempre l'audio a canale singolo per tutti i formati.
 {: shortdesc}
 
 ## Formati audio supportati
@@ -48,9 +48,8 @@ La Tabella 1 elenca i formati audio (tipi MIME) in cui puoi richiedere l'audio s
       che viene codificato utilizzando dati u-law (o mu-law) a 8 bit campionati a 8 kHz.
       Questo formato fornisce un tipo di supporto con un minimo comune denominatore. Per ulteriori
       informazioni, vedi IETF
-      <a target="_blank" href="https://tools.ietf.org/html/rfc2046">Request
-        for Comment (RFC) 2046 ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")</a> e
-      <a target="_blank" href="http://www.iana.org/assignments/media-types/audio/basic">iana.org/assignments/media-types/audio/basic ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")</a>.
+      [Request for Comment (RFC) 2046](https://tools.ietf.org/html/rfc2046) e
+      [iana.org/assignments/media-types/audio/basic](http://www.iana.org/assignments/media-types/audio/basic).
     </td>
   </tr>
   <tr>
@@ -59,8 +58,8 @@ La Tabella 1 elenca i formati audio (tipi MIME) in cui puoi richiedere l'audio s
     </td>
     <td>
       <em>FLAC (Free Lossless Audio Codec)</em> (<code>.flac</code>),
-      un formato di codifica audio compresso senza perdita di dati. Per ulteriori informazioni, vedi
-      <a target="_blank" href="https://en.wikipedia.org/wiki/FLAC">en.wikipedia.org/wiki/FLAC ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")</a>.
+      un formato di codifica audio compresso senza perdita di dati. Per ulteriori informazioni,
+      vedi [FLAC](https://wikipedia.org/wiki/FLAC).
     </td>
   </tr>
   <tr>
@@ -71,9 +70,8 @@ La Tabella 1 elenca i formati audio (tipi MIME) in cui puoi richiedere l'audio s
       <em>PCM (Pulse-Code Modulation) lineare a 16 bit</em>, un formato di dati
       audio non compresso (spesso <code>.raw</code> o <code>.pcm</code>). Per
       ulteriori informazioni, vedi IETF (Internet Engineering Task Force)
-      <a target="_blank" href="https://tools.ietf.org/html/rfc2586">Request
-        for Comment (RFC) 2586 ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")</a> e
-      <a target="_blank" href="https://en.wikipedia.org/wiki/Pulse-code_modulation">en.wikipedia.org/wiki/Pulse-code_modulation ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")</a>.<br/><br/>
+      [Request for Comment (RFC) 2586](https://tools.ietf.org/html/rfc2586) e
+      [Pulse-code modulation](https://wikipedia.org/wiki/Pulse-code_modulation).<br/><br/>
       Con questo formato audio devi specificare la velocità di campionamento. Ad esempio,
       specifica <code>audio/l16;rate=16000</code> per l'audio campionato a
       16 kHz. Facoltativamente, puoi anche specificare la proprietà endian come
@@ -90,8 +88,7 @@ La Tabella 1 elenca i formati audio (tipi MIME) in cui puoi richiedere l'audio s
     <td>
       <em>MP3</em> o <em>MPEG (Motion Picture Experts Group)</em>, un formato di
       compressione dati con perdita di dati (MP3 e MPEG si riferiscono allo stesso formato).
-      Per ulteriori informazioni, vedi
-      <a target="_blank" href="https://en.wikipedia.org/wiki/MP3">en.wikipedia.org/wiki/MP3 ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")</a>.
+      Per ulteriori informazioni, vedi [MP3](https://wikipedia.org/wiki/MP3).
     </td>
   </tr>
   <tr>
@@ -102,8 +99,7 @@ La Tabella 1 elenca i formati audio (tipi MIME) in cui puoi richiedere l'audio s
       <em>Audio mu-law (o u-law) a 8 bit</em>, un formato audio con perdita di dati a canale
       singolo che viene codificato utilizzando dati u-law (o mu-law) a 8 bit. Con questo formato
       audio devi specificare la velocità di campionamento. Per ulteriori informazioni,
-      vedi
-      <a target="_blank" href="https://en.wikipedia.org/wiki/M-law_algorithm">en.wikipedia.org/wiki/M-law_algorithm ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")</a>.
+      vedi [M-law algorithm](https://wikipedia.org/wiki/M-law_algorithm).
     </td>
   </tr>
   <tr>
@@ -114,22 +110,21 @@ La Tabella 1 elenca i formati audio (tipi MIME) in cui puoi richiedere l'audio s
     </td>
     <td>
       <em>Formato Ogg</em> (<code>.ogg</code>), un formato contenitore aperto
-      e gratuito gestito da Xiph.org Foundation. Per ulteriori informazioni, vedi
-      <a target="_blank" href="https://www.xiph.org/ogg/">xiph.org/ogg/ ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")</a>.
+      e gratuito gestito da Xiph.org Foundation. Per ulteriori informazioni,
+      vedi [xiph.org/ogg/](https://www.xiph.org/ogg/).
       Puoi richiedere flussi audio compressi con i seguenti
       codec:
       <ul style="margin-left:20px; padding:0px;">
         <li style="margin:10px 0px; line-height:120%;">
           <em>Opus</em>. Per ulteriori informazioni, vedi
-          <a target="_blank" href="https://www.opus-codec.org/">opus-codec.org ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")</a> e
-          <a target="_blank" href="https://en.wikipedia.org/wiki/Opus">en.wikipedia.org/wiki/Opus (audio format) ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")</a>.
-          Nella pagina <em>Opus (audio format)</em>, consulta in particolare la sezione
-          <em>Containers</em>.
+	  [opus-codec.org](https://www.opus-codec.org/) e
+	  [Opus (audio format)](https://wikipedia.org/wiki/Opus_%28audio_format%29).
+          Consulta in particolare la sezione <em>Containers</em>.
         </li>
         <li style="margin:10px 0px; line-height:120%;">
           <em>Vorbis</em>. Per ulteriori informazioni, vedi
-          <a target="_blank" href="https://xiph.org/vorbis/">xiph.org/vorbis ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")</a> e
-          <a target="_blank" href="https://en.wikipedia.org/wiki/Vorbis">en.wikipedia.org/wiki/Vorbis ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")</a>.
+	  [xiph.org/vorbis](https://xiph.org/vorbis/) e
+	  [Vorbis](https://wikipedia.org/wiki/Vorbis).
         </li>
       </ul>
       Entrambi i codec sono formati di compressione audio gratuiti, aperti e con perdita di dati. Opus
@@ -151,8 +146,7 @@ La Tabella 1 elenca i formati audio (tipi MIME) in cui puoi richiedere l'audio s
       potrebbe non funzionare in tutti i lettori audio. In particolare,
       l'attributo <code>numSamples</code> nell'intestazione del file
       è impostato su <code>0</code> indipendentemente dalla lunghezza dell'audio.
-      Per ulteriori informazioni, vedi
-      <a target="_blank" href="https://en.wikipedia.org/wiki/WAV">en.wikipedia.org/wiki/WAV ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")</a>.
+      Per ulteriori informazioni, vedi [WAV](https://wikipedia.org/wiki/WAV).
     </td>
   </tr>
   <tr>
@@ -166,7 +160,7 @@ La Tabella 1 elenca i formati audio (tipi MIME) in cui puoi richiedere l'audio s
       aperto che fornisce supporto per i flussi audio compressi con
       i codec audio Opus e Vorbis. Se ometti il codec, il
       servizio restituisce l'audio in formato Opus. Per ulteriori informazioni, vedi
-      <a target="_blank" href="https://www.webmproject.org/">webmproject.org ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")</a>.
+      [webmproject.org](https://www.webmproject.org/).
     </td>
   </tr>
 </table>
@@ -176,7 +170,7 @@ La Tabella 1 elenca i formati audio (tipi MIME) in cui puoi richiedere l'audio s
 
 La specifica di un formato audio è facoltativa. Per impostazione predefinita, il servizio restituisce l'audio in formato `audio/ogg;codecs=opus`. Tuttavia, puoi specificare un formato per l'interfaccia HTTP o WebSocket:
 
--   Con i metodi HTTP `GET` e `POST /v1/synthesize`, specifica un formato utilizzando l'intestazione della richiesta `Accept` o il parametro di query `accept`. Per ricevere l'audio nel formato predefinito, ometti sia l'intestazione che il parametro di query. Per ulteriori informazioni, vedi [Sintetizzazione del testo in audio](/docs/services/text-to-speech/http.html#synthesize).
+-   Con i metodi HTTP `GET` e `POST /v1/synthesize`, specifica un formato utilizzando l'intestazione della richiesta `Accept` o il parametro di query `accept`. Per ricevere l'audio nel formato predefinito, ometti sia l'intestazione che il parametro di query. Per ulteriori informazioni, vedi [Sintetizzazione del testo in audio](/docs/services/text-to-speech-data?topic=text-to-speech-data-usingHTTP#synthesize).
 
     Se utilizzi il parametro di query `accept`, codifica in URL l'argomento nel parametro. Ad esempio, codifica in URL il seguente argomento
 
@@ -192,7 +186,7 @@ La specifica di un formato audio è facoltativa. Per impostazione predefinita, i
     ```
     {: codeblock}
 
--   Con l'interfaccia WebSocket, specifica un formato utilizzando il parametro `accept` del messaggio di testo che passi per avviare la sintesi. Per ricevere l'audio nel formato predefinito, specifica il valore `*/*` per il parametro. Per ulteriori informazioni, vedi [Invia il testo di input](/docs/services/text-to-speech/websockets.html#WSsend).
+-   Con l'interfaccia WebSocket, specifica un formato utilizzando il parametro `accept` del messaggio di testo che passi per avviare la sintesi. Per ricevere l'audio nel formato predefinito, specifica il valore `*/*` per il parametro. Per ulteriori informazioni, vedi [Invia il testo di input](/docs/services/text-to-speech-data?topic=text-to-speech-data-usingWebSocket#WSsend).
 
 ## Specifica di una velocità di campionamento
 {: #formatRate}
@@ -329,7 +323,7 @@ La Tabella 2 mostra la velocità di campionamento predefinita dell'audio che vie
 
 Il modo più affidabile per identificare la velocità di campionamento per qualsiasi flusso audio restituito dal servizio è estrarre le informazioni dal flusso stesso. Puoi determinare la velocità chiamando il metodo `/v1/synthesize` con un testo semplice (ad esempio, "hello world") e specificando il formato e il codec che prevedi di utilizzare. Puoi quindi ottenere il codec e la velocità di campionamento salvando il flusso audio in un file e aprendolo in un lettore audio.
 
-Lo standard Opus richiede che la velocità di campionamento in uscita corrisponda alle capacità del lettore audio. Per ulteriori informazioni, vedi la Sezione 5.1 dell'IETF (Internet Engineering Task Force) [Request for Comments (RFC) 7845 ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://tools.ietf.org/html/rfc6455){: new_window}. Per i lettori audio software, la tabella indica la velocità di campionamento in uscita tipica, ma la velocità di campionamento effettiva dell'audio varia con il tempo all'interno del flusso. Come accennato, il servizio sintetizza l'audio di origine a 22.050 Hz.
+Lo standard Opus richiede che la velocità di campionamento in uscita corrisponda alle capacità del lettore audio. Per ulteriori informazioni, vedi la Sezione 5.1 dell'IETF (Internet Engineering Task Force) [Request for Comments (RFC) 7845](http://tools.ietf.org/html/rfc6455){: external}. Per i lettori audio software, la tabella indica la velocità di campionamento in uscita tipica, ma la velocità di campionamento effettiva dell'audio varia con il tempo all'interno del flusso. Come accennato, il servizio sintetizza l'audio di origine a 22.050 Hz.
 {: note}
 
 ## Riproduzione di un file audio
@@ -338,4 +332,4 @@ Lo standard Opus richiede che la velocità di campionamento in uscita corrispond
 Per riprodurre un file audio generato dal servizio, utilizza uno dei seguenti strumenti:
 
 -   Un browser web come Google Chrome&trade;, Firefox&reg; o Microsoft&reg; Internet Explorer&reg;.
--   Un lettore audio come Audacity&reg; ([audacityteam.org ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://www.audacityteam.org/){: new_window}) o FFmpeg ([ffmpeg.org ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ffmpeg.org){: new_window}).
+-   Un lettore audio come Audacity&reg; ([audacityteam.org](http://www.audacityteam.org/){: external}) o FFmpeg ([ffmpeg.org](https://www.ffmpeg.org){: external}).
