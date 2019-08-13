@@ -1,8 +1,8 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="text-to-speech-data" audience="service" arm="343" href="/docs/services/text-to-speech-data?topic=text-to-speech-data-gettingStarted" path="services/text-to-speech-data"}
-IBM Watson Text to Speech for IBM Cloud Pak for Data
+{: .toc subcollection="text-to-speech" audience="service" arm="343" href="/docs/services/text-to-speech/getting-started.html" path="services/text-to-speech"}
+Text to Speech
 
     {: .navgroup id="learn"}
     getting-started.md
@@ -21,13 +21,6 @@ IBM Watson Text to Speech for IBM Cloud Pak for Data
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    {: .topicgroup}
-    Installazione
-        install-config.md
-        [Helm chart README.md](https://github.com/IBM-Bluemix-Docs/data-readmes/blob/master/speech-README.md)
-        manage.md
-
-    making-requests.md
     http.md
     websockets.md
     voices.md
@@ -46,6 +39,8 @@ IBM Watson Text to Speech for IBM Cloud Pak for Data
     SSML
         SSML.md
         SSML-elements.md
+        SSML-expressive.md
+        SSML-transformation.md
 
     {: topicgroup}
     IBM SPR
@@ -59,7 +54,7 @@ IBM Watson Text to Speech for IBM Cloud Pak for Data
         es-ES-SPRs.md
         en-US-SPRs.md
 
-    backup.md
+    ha-dr.md
 
     {: topicgroup}
     Background del servizio
@@ -68,7 +63,7 @@ IBM Watson Text to Speech for IBM Cloud Pak for Data
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [Riferimento API](https://cloud.ibm.com/apidocs/text-to-speech-data)
+    [Riferimento API](https://cloud.ibm.com/apidocs/text-to-speech)
     information-security.md
     /watson/watson-using-sdks
     [Repository GitHub Watson](https://github.com/watson-developer-cloud/)

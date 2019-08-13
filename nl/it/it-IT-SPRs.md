@@ -1,15 +1,15 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-06-11"
+  years: 2015, 2019
+lastupdated: "2019-04-03"
 
-subcollection: text-to-speech-data
+subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
+{:new_window: target="_blank"}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -34,7 +34,7 @@ Le seguenti sezioni descrivono i simboli validi per l'italiano.
   <caption>Tabella 1. Vocali regolari (italiano)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Italiano<br/>Simbolo SPR
+      Simbolo<br/>SPR per l'italiano
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Simbolo IPA
@@ -153,7 +153,7 @@ Le seguenti sezioni descrivono i simboli validi per l'italiano.
   <caption>Tabella 2. Consonanti (italiano)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Italiano<br/>Simbolo SPR
+      Simbolo<br/>SPR per l'italiano
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Simbolo IPA
@@ -523,7 +523,7 @@ Le seguenti sezioni descrivono i simboli validi per l'italiano.
   <caption>Tabella 3. Geminate (italiano)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Italiano<br/>Simbolo SPR
+      Simbolo<br/>SPR per l'italiano
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Simbolo IPA

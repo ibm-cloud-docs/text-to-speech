@@ -1,15 +1,15 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-06-04"
+  years: 2015, 2019
+lastupdated: "2019-04-03"
 
-subcollection: text-to-speech-data
+subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
+{:new_window: target="_blank"}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -34,7 +34,7 @@ Le seguenti sezioni descrivono i simboli validi per il giapponese.
   <caption>Tabella 1. Vocali e contrassegni (giapponese)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Giapponese<br/>Simbolo SPR
+      Simbolo<br/>SPR per il giapponese
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Simbolo IPA
@@ -189,7 +189,7 @@ Le seguenti sezioni descrivono i simboli validi per il giapponese.
   <caption>Tabella 2. Consonanti (giapponese)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Giapponese<br/>Simbolo SPR
+      Simbolo<br/>SPR per il giapponese
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Simbolo IPA

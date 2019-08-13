@@ -1,15 +1,15 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-06-04"
+  years: 2015, 2019
+lastupdated: "2019-04-03"
 
-subcollection: text-to-speech-data
+subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
+{:new_window: target="_blank"}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -34,7 +34,7 @@ Le seguenti sezioni descrivono i simboli validi per il francese.
   <caption>Tabella 1. Vocali (francese)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Francese<br/>Simbolo SPR
+      Simbolo<br/>SPR per il francese
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Simbolo IPA
@@ -296,7 +296,7 @@ Le seguenti sezioni descrivono i simboli validi per il francese.
   <caption>Tabella 2. Consonanti (francese)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Francese<br/>Simbolo SPR
+      Simbolo<br/>SPR per il francese
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Simbolo IPA
@@ -627,7 +627,7 @@ In francese, il simbolo `_` (carattere di sottolineatura) può essere utilizzato
   <caption>Tabella 3. Liaison (francese)</caption>
   <tr>
     <th style="width:33%; text-align:center; vertical-align:bottom">
-      Francese<br/>Simbolo SPR
+      Simbolo<br/>SPR per il francese
     </th>
     <th style="width:33%; text-align:center; vertical-align:bottom">
       Simbolo IPA
