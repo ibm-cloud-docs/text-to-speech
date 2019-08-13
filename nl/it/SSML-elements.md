@@ -1,15 +1,15 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-06-23"
+  years: 2015, 2019
+lastupdated: "2019-04-09"
 
-subcollection: text-to-speech-data
+subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
+{:new_window: target="_blank"}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -25,13 +25,13 @@ subcollection: text-to-speech-data
 # Elementi SSML
 {: #elements}
 
-Con {{site.data.keyword.texttospeechdatafull}} for {{site.data.keyword.icp4dfull}}, puoi utilizzare la maggior parte degli elementi SSML (Speech Synthesis Markup Language) per controllare la sintesi del tuo testo. Gli elementi sono disponibili per tutte le lingue supportate. La seguente tabella riepiloga il supporto del servizio per gli attributi e gli elementi SSML.
+Con il servizio {{site.data.keyword.texttospeechfull}}, puoi utilizzare la maggior parte degli elementi SSML (Speech Synthesis Markup Language) per controllare la sintesi del tuo testo. Gli elementi sono disponibili per tutte le lingue supportate. La seguente tabella riepiloga il supporto del servizio per gli attributi e gli elementi SSML. 
 
 -   *Completo* indica che il servizio supporta completamente l'elemento o l'attributo con le sue interfacce HTTP e WebSocket.
--   *Parziale* indica che il servizio non supporta tutti gli aspetti dell'elemento o dell'attributo. Indica anche che il servizio supporta l'elemento o l'attributo solamente con una delle sue interfacce oppure che l'elemento o l'attributo non è supportato con tutte le voci.
--   *Nessuno* indica che il servizio non supporta l'elemento o l'attributo.
+-   *Parziale* indica che il servizio non supporta tutti gli aspetti dell'elemento o dell'attributo. Indica anche che il servizio supporta l'elemento o l'attributo solamente con una delle sue interfacce oppure che l'elemento o l'attributo non è supportato con tutte le voci. 
+-   *Nessuno* indica che il servizio non supporta l'elemento o l'attributo. 
 
-Per ulteriori informazioni su un elemento o su un attributo, vedi la sua descrizione. Dove indicato, il supporto per alcuni attributi e valori è leggermente diverso dalla specifica SSML. Per ulteriori informazioni, vedi [W3C Speech Synthesis Markup Language (SSML) Version 1.0](http://www.w3.org/TR/speech-synthesis/){: external}.
+Per ulteriori informazioni su un elemento o su un attributo, vedi la sua descrizione. Dove indicato, il supporto per alcuni attributi e valori è leggermente diverso dalla specifica SSML. Per ulteriori informazioni, vedi [W3C Speech Synthesis Markup Language (SSML) Version 1.0 ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://www.w3.org/TR/speech-synthesis/){: new_window}.
 
 <table>
   <caption>Tabella 1. Elementi SSML</caption>
@@ -150,8 +150,8 @@ Per ulteriori informazioni su un elemento o su un attributo, vedi la sua descriz
     <td style="text-align:center">Completo</td>
   </tr>
   <tr>
-    <td style="padding-left:25px">volume</td>
-    <td style="text-align:center">Nessuno</td>
+    <td style="padding-left:25px">[volume](#prosody-volume)</td>
+    <td style="text-align:center">Parziale</td>
     <td style="padding-left:75px">[Sub](#sub_element)</td>
     <td style="text-align:center">Completo</td>
   </tr>
@@ -166,7 +166,7 @@ Per ulteriori informazioni su un elemento o su un attributo, vedi la sua descriz
 ## L'elemento audio
 {: #audio_element}
 
-Questo elemento `<audio>` inserisce gli elementi registrati nell'audio generato dal servizio. Non è supportato.
+Questo elemento `<audio>` inserisce gli elementi registrati nell'audio generato dal servizio. Non è supportato. 
 
 ## L'elemento break
 {: #break_element}
@@ -174,7 +174,7 @@ Questo elemento `<audio>` inserisce gli elementi registrati nell'audio generato 
 L'elemento`<break>` inserisce una pausa nel testo pronunciato. Presenta i seguenti attributi facoltativi:
 
 -   `strength` specifica la lunghezza della pausa in termini di variazione dei valori di intensità:
-    -   `none` elimina l'interruzione che potrebbe altrimenti essere eseguita durante l'elaborazione.
+    -   `none` elimina l'interruzione che potrebbe altrimenti essere eseguita durante l'elaborazione. 
     -   `x-weak`, `weak`, `medium`, `strong` o `x-strong` inseriscono interruzioni che diventano sempre più potenti.
 -   `time` specifica la lunghezza della pausa in termini di secondi o millisecondi. I formati di valore validi sono `{integer}s` per i secondi o `{integer}ms` per i millisecondi.
 
@@ -200,23 +200,22 @@ L'elemento `<desc>` può essere utilizzato solo all'interno di un elemento `<aud
 ## L'elemento emphasis
 {: #emphasis_element}
 
-L'elemento `<emphasis>` richiede che il testo racchiuso tra elementi di codice venga pronunciato con enfasi. Non è supportato.
+L'elemento `<emphasis>` richiede che il testo racchiuso tra elementi di codice venga pronunciato con enfasi. Non è supportato. 
 
 ## L'elemento lexicon
 {: #lexicon_element}
 
-Questo elemento `<lexicon>` introduce dizionari di pronuncia per il documento SSML fornito. Non è supportato.
+Questo elemento `<lexicon>` introduce dizionari di pronuncia per il documento SSML fornito. Non è supportato. 
 
-Puoi utilizzare l'interfaccia di personalizzazione del servizio per definire un dizionario di voci personalizzate (coppie di parole/traduzioni) da utilizzare durante la sintesi vocale. Per ulteriori informazioni, vedi
-      [Informazioni sulla personalizzazione](/docs/services/text-to-speech-data?topic=text-to-speech-data-customIntro).
+Puoi utilizzare l'interfaccia di personalizzazione del servizio per definire un dizionario di voci personalizzate (coppie di parole/traduzioni) da utilizzare durante la sintesi vocale. Per ulteriori informazioni, vedi [Informazioni sulla personalizzazione](/docs/services/text-to-speech/custom-intro.html). 
 
 ## L'elemento mark
 {: #mark_element}
 
-L'elemento `<mark>` è supportato solo dall'interfaccia WebSocket del servizio, non dalla sua interfaccia HTTP che ignora l'elemento. Per ulteriori informazioni, vedi [Specifica di un contrassegno SSML](/docs/services/text-to-speech-data?topic=text-to-speech-data-timing#mark).
+L'elemento `<mark>` è supportato solo dall'interfaccia WebSocket del servizio, non dalla sua interfaccia HTTP che ignora l'elemento. Per ulteriori informazioni, vedi [Specifica di un contrassegno SSML](/docs/services/text-to-speech/word-timing.html#mark).
 {: note}
 
-L'elemento `<mark>` è un elemento vuoto che inserisce un contrassegno nel testo da sintetizzare. Il client viene informato quando tutto il testo che precede l'elemento `<mark>` è stato sintetizzato. L'elemento accetta un singolo attributo `name` che specifica una stringa che identifica in modo univoco il contrassegno; il nome deve iniziare con un carattere alfanumerico. Il nome viene restituito insieme al tempo in cui si presenta il contrassegno nell'audio sintetizzato.
+L'elemento `<mark>` è un elemento vuoto che inserisce un contrassegno nel testo da sintetizzare. Il client viene informato quando tutto il testo che precede l'elemento `<mark>` è stato sintetizzato. L'elemento accetta un singolo attributo `name` che specifica una stringa che identifica in modo univoco il contrassegno; il nome deve iniziare con un carattere alfanumerico. Il nome viene restituito insieme al tempo in cui si presenta il contrassegno nell'audio sintetizzato. 
 
 ```xml
 <speak version="1.0">
@@ -233,9 +232,9 @@ Gli elementi `<meta>` e `<metadata>` sono contenitori in cui puoi inserire le in
 ## Gli elementi paragraph e sentence
 {: #ps_element}
 
-Gli elementi `<paragraph>` (o `<p>`) e `<sentence>` (o `<s>`) sono elementi facoltativi che possono essere utilizzati per fornire suggerimenti sulla struttura del testo. Se il testo che è racchiuso in un elemento `<paragraph>` o `<sentence>` non termina con carattere di punteggiatura di fine frase (come un punto), il servizio aggiunge una pausa più lunga del normale all'audio sintetizzato.
+Gli elementi `<paragraph>` (o `<p>`) e `<sentence>` (o `<s>`) sono elementi facoltativi che possono essere utilizzati per fornire suggerimenti sulla struttura del testo. Se il testo che è racchiuso in un elemento `<paragraph>` o `<sentence>` non termina con carattere di punteggiatura di fine frase (come un punto), il servizio aggiunge una pausa più lunga del normale all'audio sintetizzato. 
 
-L'unico attributo valido per l'elemento è `xml:lang`, che consente di passare da una lingua all'altra. L'attributo non è supportato.
+L'unico attributo valido per l'elemento è `xml:lang`, che consente di passare da una lingua all'altra. L'attributo non è supportato. 
 
 ```xml
 <speak version="1.0">
@@ -250,9 +249,9 @@ L'unico attributo valido per l'elemento è `xml:lang`, che consente di passare d
 ## L'elemento phoneme
 {: #phoneme_element}
 
-L'elemento `<phoneme>` fornisce una pronuncia fonetica per il testo racchiuso tra elementi di codice. L'ortografia fonetica rappresenta il suono di una parola, in che modo viene sillabato e su quali sillabe viene utilizzato l'accento (stress). L'elemento ha due attributi:
+L'elemento `<phoneme>` fornisce una pronuncia fonetica per il testo racchiuso tra elementi di codice. L'ortografia fonetica rappresenta il suono di una parola, in che modo viene sillabato e su quali sillabe viene utilizzato l'accento (stress). L'elemento ha due attributi: 
 
--   `alphabet` è un attributo facoltativo che specifica la fonologia da utilizzare. Gli alfabeti supportati sono:
+-   `alphabet` è un attributo facoltativo che specifica la fonologia da utilizzare. Gli alfabeti supportati sono: 
     -   IPA (International Phonetic Alphabet - Alfabeto fonetico internazionale) standard: `alphabet="ipa"`
     -   {{site.data.keyword.IBM_notm}} SPR (Symbolic Phonetic Representation): `alphabet="ibm"`
 
@@ -277,27 +276,27 @@ L'elemento `<phoneme>` fornisce una pronuncia fonetica per il testo racchiuso tr
           &lt;phoneme alphabet="ibm" ph=".0tx.1me.0Fo"&gt;tomato&lt;/phoneme&gt;
         &lt;/speak&gt;</code></pre>
 
-Per ulteriori informazioni sull'utilizzo delle notazioni SPR e IPA con l'elemento `<phoneme>`, vedi [Utilizzo di IBM SPR](/docs/services/text-to-speech-data?topic=text-to-speech-data-sprs).
+Per ulteriori informazioni sull'utilizzo delle notazioni SPR e IPA con l'elemento `<phoneme>`, vedi [Utilizzo di IBM SPR](/docs/services/text-to-speech/SPRs.html).
 
 ## L'elemento prosody
 {: #prosody_element}
 
-L'elemento `<prosody>` controlla il tono e la velocità di pronuncia del testo. Tutti gli attributi sono facoltativi, ma si verifica un errore se non ne viene specificato nessuno. La specifica SSML consente quattro attributi che il servizio non supporta: `volume`, `contour`, `range` e `duration`. Il servizio supporta gli attributi `pitch` e `rate`.
+L'elemento `<prosody>` controlla il tono, la velocità di pronuncia e il volume del testo. Tutti gli attributi sono facoltativi, ma si verifica un errore se non ne viene specificato nessuno. La specifica SSML consente tre attributi che il servizio non supporta: `contour`, `range` e `duration`. Il servizio supporta gli attributi `pitch`, `rate` e `volume`.
 
 ### L'attributo pitch
 {: #prosody-pitch}
 
-L'attributo `pitch` modifica il tono di riferimento per il testo all'interno dell'elemento. I valori accettati sono:
+L'attributo `pitch` modifica il tono di riferimento per il testo all'interno dell'elemento. I valori accettati sono: 
 
 -   Un numero seguito dalla designazione `Hz` (Hertz): il tono di riferimento viene trasposto (in alto o in basso) nel valore specificato.
 -   Un valore di modifica relativa (in semitoni): un numero che causa un cambiamento assoluto dal riferimento corrente. Il numero è preceduto dal simbolo `+` (un incremento) o dal simbolo `-` (un decremento) ed è seguito da `st` (semitoni), ad esempio, `+5st`.
 -   Una modifica relativa in percentuale: un numero che causa un cambiamento relativo dal riferimento corrente. Il numero è preceduto dal simbolo `+` (un incremento) o dal simbolo `-` (un decremento) ed è seguito da `%` (segno di percentuale), ad esempio, `-10%`.
--   Una delle sei parole chiave riportate di seguito che modificano il tono con i valori predefiniti corrispondenti:
-    -   `default` utilizza il tono di riferimento predefinito del servizio.
+-   Una delle sei parole chiave riportate di seguito che modificano il tono con i valori predefiniti corrispondenti: 
+    -   `default` utilizza il tono di riferimento predefinito del servizio. 
     -   `x-low` abbassa il riferimento del tono di 12 semitoni.
     -   `low` abbassa il riferimento del tono di sei semitoni.
     -   `medium` produce lo stesso comportamento di `default`.
-    -   `high` alza il riferimento del tono di sei semitoni.
+    -   `high` alza il riferimento del tono di sei semitoni. 
     -   `x-high` alza il riferimento del tono di 12 semitoni.
 
     ```xml
@@ -315,11 +314,11 @@ L'attributo `pitch` modifica il tono di riferimento per il testo all'interno del
 ### L'attributo rate
 {: #prosody-rate}
 
-L'attributo `rate` indica un cambiamento nella velocità di pronuncia del testo all'interno dell'elemento. La velocità viene specificata in termini di parole al minuto; se la velocità di pronuncia è di 50 parole al minuto, `rate` è uguale a `50`. Quando `rate` è impostato su un numero positivo, l'implementazione non è conforme alla specifica dell'attributo prosody rate W3C corrente. Inoltre, il servizio supporta i cambiamenti relativi in percentuale (ad esempio, `+15%`) ma non i cambiamenti relativi del valore (ad esempio, `+15`). I valori accettati sono:
+L'attributo `rate` indica un cambiamento nella velocità di pronuncia del testo all'interno dell'elemento. La velocità viene specificata in termini di parole al minuto; se la velocità di pronuncia è di 50 parole al minuto, `rate` è uguale a `50`. Quando `rate` è impostato su un numero positivo, l'implementazione non è conforme alla specifica dell'attributo prosody rate W3C corrente. Inoltre, il servizio supporta i cambiamenti relativi in percentuale (ad esempio, `+15%`) ma non i cambiamenti relativi del valore (ad esempio, `+15`). I valori accettati sono: 
 
 -   Un incremento o un decremento relativo in percentuale: `+10%`.
 -   Un numero di parole al minuto come un numero positivo: `75`.
--   `default` utilizza la velocità predefinita del servizio.
+-   `default` utilizza la velocità predefinita del servizio. 
 -   `x-slow` riduce la velocità del 50 percento.
 -   `slow` riduce la velocità del 25 percento.
 -   `medium` produce lo stesso comportamento di `default`.
@@ -335,20 +334,44 @@ L'attributo `rate` indica un cambiamento nella velocità di pronuncia del testo 
 ```
 {: codeblock}
 
+### L'attributo volume
+{: #prosody-volume}
+
+Il servizio non supporta l'attributo `volume` dell'elemento `<prosody>` con le sue voci basate su DNN (ad esempio, `en-US_AllisonV2Voice`). Per ulteriori informazioni su queste voci, vedi [Tecnologie di sintesi vocale](/docs/services/text-to-speech/voices.html#technologiesVoices).
+{: note}
+
+L'attributo `volume` modifica il volume per il testo all'interno dell'elemento. Puoi specificare un valore intero o decimale compreso nell'intervallo da 1,0 a 100,0 (volume massimo). Puoi anche utilizzare uno dei seguenti valori stringa che corrispondono alle impostazioni predefinite nell'intervallo da 0 a 100. (Il valore `silent` non è supportato.)
+
+-   `x-soft` ha valore 30.
+-   `soft` ha valore 50.
+-   `medium` ha valore 80.
+-   `loud` ha valore 90.
+-   `default` ha valore 92.
+-   `x-loud` ha valore 100.
+
+```xml
+<speak version="1.0">
+  <prosody volume="75">Modified volume is 75</prosody>
+  <prosody volume="88.9">Modified volume is 88.9</prosody>
+  <prosody volume="loud">Modified volume is 90</prosody>
+</speak>
+```
+{: codeblock}
+
 ## L'elemento say-as
 {: #say-as_element}
 
 L'elemento `<say-as>` è supportato solo parzialmente per la maggior parte delle lingue. Per le lingue diverse dall'inglese americano, di norma il servizio supporta solo gli attributi `digits` e `letters` dell'elemento.
 {: note}
 
-L'elemento `<say-as>` fornisce informazioni sul tipo di testo contenuto all'interno dell'elemento e specifica il livello di dettaglio per eseguire il rendering del testo. L'elemento ha un attributo obbligatorio, `interpret-as`, che indica in che modo deve essere interpretato il testo racchiuso tra elementi di codice. Ha due attributi facoltativi, `format` e `detail`, utilizzati solo con particolari valori all'interno dell'attributo `interpret-as`, come illustrato nei seguenti esempi.
+L'elemento `<say-as>` fornisce informazioni sul tipo di testo contenuto all'interno dell'elemento e specifica il livello di dettaglio per eseguire il rendering del testo. L'elemento ha un attributo obbligatorio, `interpret-as`, che indica in che modo deve essere interpretato il testo racchiuso tra elementi di codice. Ha due attributi facoltativi, `format` e `detail`, utilizzati solo con particolari valori all'interno dell'attributo `interpret-as`, come illustrato nei seguenti esempi. 
 
-Di seguito vengono riportati i valori accettabili per l'attributo `interpret-as` e gli esempi di ciascuno di essi.
+Di seguito vengono riportati i valori accettabili per l'attributo `interpret-as` e gli esempi di ciascuno di essi. 
 
 ### cardinal
 {: #sayAsCardinal}
 
-Il valore `cardinal` esprime il numero cardinale per il valore numerico all'interno dell'elemento. I seguenti esempi specificano *Super Bowl forty-nine*. Il primo è superfluo dal momento che non modifica il comportamento predefinito del servizio.
+Il valore `cardinal` esprime il numero cardinale per il valore numerico all'interno dell'elemento. I seguenti esempi specificano *Super Bowl forty-nine*. Il primo è superfluo dal momento che non modifica il comportamento predefinito del servizio. 
 
 ```xml
 <speak version="1.0">
@@ -361,7 +384,7 @@ Il valore `cardinal` esprime il numero cardinale per il valore numerico all'inte
 ### date
 {: #sayAsDate}
 
-Il valore `date` esprime la data all'interno dell'elemento in base al formato fornito nell'attributo `format` associato. L'attributo `format` è obbligatorio per il valore `date`. Se non è presente alcun `format`, il servizio tenterà ancora di pronunciare la data. I seguenti esempi esprimono le date indicate nei formati specificati, dove `d`, `m` e `y` rappresentano giorno, mese e anno.
+Il valore `date` esprime la data all'interno dell'elemento in base al formato fornito nell'attributo `format` associato. L'attributo `format` è obbligatorio per il valore `date`. Se non è presente alcun `format`, il servizio tenterà ancora di pronunciare la data. I seguenti esempi esprimono le date indicate nei formati specificati, dove `d`, `m` e `y` rappresentano giorno, mese e anno. 
 
 ```xml
 <speak version="1.0">
@@ -474,7 +497,7 @@ Se il numero specificato include più di due posizioni decimali, la quantità vi
 ### vxml:date
 {: #vxml-date}
 
-Il valore `vxml:date` funziona come il valore `date`, ma il formato è predefinito come `YYYYMMDD`. Se un valore di giorno, mese o anno è sconosciuto oppure se non vuoi che venga pronunciato, sostituisci il valore con un `?` (punto interrogativo). Il secondo e il terzo esempio includono punti interrogativi.
+Il valore `vxml:date` funziona come il valore `date`, ma il formato è predefinito come `YYYYMMDD`. Se un valore di giorno, mese o anno è sconosciuto oppure se non vuoi che venga pronunciato, sostituisci il valore con un `?` (punto interrogativo). Il secondo e il terzo esempio includono punti interrogativi. 
 
 ```xml
 <speak version="1.0">
@@ -505,11 +528,11 @@ Il valore `vxml:phone` esprime un numero di telefono che contiene sia cifre che 
 ## L'elemento speak
 {: #speak_element}
 
-L'elemento `<speak>` è l'elemento root dei documenti SSML. Gli attributi validi sono:
+L'elemento `<speak>` è l'elemento root dei documenti SSML. Gli attributi validi sono: 
 
 -   `version` è un attributo obbligatorio che specifica la specifica SSML. Il valore accettato è `1.0`.
--   `xml:lang` non è richiesto dal servizio. Ometti l'attributo quando utilizzi questo elemento.
--   `xml:base` non ha alcun effetto.
+-   `xml:lang` non è richiesto dal servizio. Ometti l'attributo quando utilizzi questo elemento. 
+-   `xml:base` non ha alcun effetto. 
 
 ```xml
 <speak version="1.0">
@@ -521,7 +544,7 @@ L'elemento `<speak>` è l'elemento root dei documenti SSML. Gli attributi validi
 ## L'elemento sub
 {: #sub_element}
 
-L'elemento `<sub>` indica che il testo specificato dall'attributo `alias` deve sostituire il testo racchiuso all'interno dell'elemento quando viene sintetizzato il discorso. L'attributo `alias` è l'unico attributo dell'elemento ed è obbligatorio.
+L'elemento `<sub>` indica che il testo specificato dall'attributo `alias` deve sostituire il testo racchiuso all'interno dell'elemento quando viene sintetizzato il discorso. L'attributo `alias` è l'unico attributo dell'elemento ed è obbligatorio. 
 
 ```xml
 <speak version="1.0">
@@ -533,4 +556,4 @@ L'elemento `<sub>` indica che il testo specificato dall'attributo `alias` deve s
 ## L'elemento voice
 {: #voice_element}
 
-Questo elemento `<voice>` richiede un cambiamento nella voce. Non è supportato.
+Questo elemento `<voice>` richiede un cambiamento nella voce. Non è supportato. 

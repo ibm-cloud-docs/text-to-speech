@@ -1,15 +1,15 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-06-04"
+  years: 2015, 2019
+lastupdated: "2019-04-03"
 
-subcollection: text-to-speech-data
+subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
+{:new_window: target="_blank"}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -34,7 +34,7 @@ Le seguenti sezioni descrivono i simboli validi per il tedesco.
   <caption>Tabella 1. Vocali regolari (tedesco)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Tedesco<br/>Simbolo SPR
+      Simbolo<br/>SPR per il tedesco
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Simbolo IPA
@@ -282,7 +282,7 @@ Le seguenti sezioni descrivono i simboli validi per il tedesco.
   <caption>Tabella 2. Vocali ridotte (tedesco)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Tedesco<br/>Simbolo SPR
+      Simbolo<br/>SPR per il tedesco
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Simbolo IPA
@@ -321,7 +321,7 @@ Le seguenti sezioni descrivono i simboli validi per il tedesco.
   <caption>Tabella 3. Dittonghi (tedesco)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Tedesco<br/>Simbolo SPR
+      Simbolo<br/>SPR per il tedesco
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Simbolo IPA
@@ -396,7 +396,7 @@ Le vocali nasali in francese si trovano per lo più nei prestiti linguistici.
   <caption>Tabella 4. Vocali nasali (tedesco)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Tedesco<br/>Simbolo SPR
+      Simbolo<br/>SPR per il tedesco
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Simbolo IPA
@@ -481,7 +481,7 @@ Le vocali nasali in francese si trovano per lo più nei prestiti linguistici.
   <caption>Tabella 5. Consonanti (tedesco)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Tedesco<br/>Simbolo SPR
+      Simbolo<br/>SPR per il tedesco
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Simbolo IPA

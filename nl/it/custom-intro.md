@@ -1,15 +1,15 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-06-23"
+  years: 2015, 2019
+lastupdated: "2019-04-09"
 
-subcollection: text-to-speech-data
+subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
+{:new_window: target="_blank"}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -25,7 +25,7 @@ subcollection: text-to-speech-data
 # Informazioni sulla personalizzazione
 {: #customIntro}
 
-Quando sintetizzi il testo con {{site.data.keyword.texttospeechdatafull}} for {{site.data.keyword.icp4dfull}}, il servizio applica regole di pronuncia dipendenti dalla lingua. Il servizio applica le regole per convertire l'ortografia ordinaria (ortografica) di ogni parola in una forma fonetica. La forma fonetica di una parola utilizza i simboli fonemi per definire come viene pronunciata la parola. Questi simboli sono le unità distinte del suono che distinguono le parole in una lingua, le sillabazioni e i segni di accento delle sillabe.
+Quando sintetizzi il testo con {{site.data.keyword.texttospeechfull}}, il servizio applica regole di pronuncia dipendenti dalla lingua. Il servizio applica le regole per convertire l'ortografia ordinaria (ortografica) di ogni parola in una forma fonetica. La forma fonetica di una parola utilizza i simboli fonemi per definire come viene pronunciata la parola. Questi simboli sono le unità distinte del suono che distinguono le parole in una lingua, le sillabazioni e i segni di accento delle sillabe.
 {: shortdesc}
 
 Le regole di pronuncia regolare del servizio funzionano bene per le parole comuni. Tuttavia, possono produrre risultati imperfetti per parole inusuali. Tali parole includono termini speciali con origini straniere, nomi personali o geografici e abbreviazioni o acronimi. Se il lessico della tua applicazione include parole come queste, puoi utilizzare l'interfaccia di personalizzazione per specificare in che modo il servizio pronuncia tali parole.
@@ -38,9 +38,9 @@ L'interfaccia di personalizzazione è una funzionalità beta disponibile per tut
 
 L'interfaccia di personalizzazione del servizio {{site.data.keyword.texttospeechshort}} crea un dizionario di parole e delle relative traduzioni per una lingua specifica. Questo dizionario viene definito come *modello vocale personalizzato* o semplicemente modello personalizzato. Ogni voce personalizzata in un modello vocale personalizzato è composta da una coppia di *parola*/*traduzione*. La traduzione di una parola indica al servizio come pronunciare la parola quando si presenta nel testo di input.
 
-L'interfaccia di personalizzazione fornisce dei metodi per creare e gestire i tuoi modelli vocali personalizzati, che il servizio memorizza in modo permanente. Dopo aver creato un modello personalizzato, puoi utilizzarlo durante la sintesi con qualsiasi versione del metodo `/v1/synthesize`. Quando il servizio sintetizza il testo di input, determina la pronuncia delle parole presenti nel modello personalizzato applicando le loro traduzioni direttamente o indirettamente. Poiché crei un modello vocale personalizzato per una specifica lingua, può essere utilizzato un modello personalizzato con qualsiasi voce disponibile in tale lingua.
+L'interfaccia di personalizzazione fornisce dei metodi per creare e gestire i tuoi modelli vocali personalizzati, che il servizio memorizza in modo permanente. Dopo aver creato un modello personalizzato, puoi utilizzarlo durante la sintesi con qualsiasi versione del metodo `/v1/synthesize`. Quando il servizio sintetizza il testo di input, determina la pronuncia delle parole presenti nel modello personalizzato applicando le loro traduzioni direttamente o indirettamente.
 
-Puoi specificare la traduzione di una parola in un modello vocale personalizzato sotto forma di *traduzione di suoni simili* o di *traduzione fonetica*. Puoi utilizzare entrambi i metodi per le voci nello stesso modello personalizzato e puoi combinare i due metodi all'interno della stessa traduzione. Alle voci personalizzate si applicano una serie di regole e linee guida. Per ulteriori informazioni, vedi [Regole per la creazione di voci personalizzate](/docs/services/text-to-speech-data?topic=text-to-speech-data-rules).
+Puoi specificare la traduzione di una parola in un modello vocale personalizzato sotto forma di *traduzione di suoni simili* o di *traduzione fonetica*. Puoi utilizzare entrambi i metodi per le voci nello stesso modello personalizzato e puoi combinare i due metodi all'interno della stessa traduzione. Alle voci personalizzate si applicano una serie di regole e linee guida. Per ulteriori informazioni, vedi [Regole per la creazione di voci personalizzate](/docs/services/text-to-speech/custom-rules.html).
 
 ## Traduzione di suoni simili
 {: #soundsLike}
@@ -107,7 +107,7 @@ Ad esempio, considera la parola `trinitroglycerin`. Le regole di pronuncia regol
 
 In questi esempi, la stringa di traduzione fonetica è composta da simboli fonemi e da un singolo segno di accento principale. Il segno di accento principale è rappresentato da <code>&#712;</code> in IPA e da `1` in SPR. In entrambi i casi, è posizionato appena prima del simbolo per la vocale accentata. Sebbene gli esempi non lo mostrino, in una traduzione fonetica puoi anche specificare sillabazioni e posizioni di accento secondario. Questi elementi non sono obbligatori e normalmente non sono necessari per ottenere una pronuncia. Come con le traduzioni di suoni simili, puoi comporre una traduzione fonetica da più stringhe delimitate da spazi.
 
-Puoi anche specificare le traduzioni IPA come valori Unicode IPA. Per ulteriori informazioni, vedi [Utilizzo di IBM SPR](/docs/services/text-to-speech-data?topic=text-to-speech-data-sprs) e le tabelle specifiche per le lingue nelle pagine a cui si fa riferimento in [Lingue supportate](/docs/services/text-to-speech-data?topic=text-to-speech-data-sprs#supportedLanguages). Per una traduzione di esempio che utilizza i valori Unicode IPA, vedi [L'elemento phoneme](/docs/services/text-to-speech-data?topic=text-to-speech-data-elements#phoneme_element).
+Puoi anche specificare le traduzioni IPA come valori Unicode IPA. Per ulteriori informazioni, vedi [Utilizzo di IBM SPR](/docs/services/text-to-speech/SPRs.html) e le tabelle specifiche per le lingue nelle pagine a cui si fa riferimento in [Lingue supportate](/docs/services/text-to-speech/SPRs.html#supportedLanguages). Per una traduzione di esempio che utilizza i valori Unicode IPA, vedi [L'elemento phoneme](/docs/services/text-to-speech/SSML-elements.html#phoneme_element).
 {: note}
 
 ### Utilizzo di una traduzione fonetica esistente
@@ -117,16 +117,16 @@ A meno che tu non sia un esperto di fonologia, la composizione di traduzioni fon
 
 Puoi utilizzare il metodo `/GET v/1/pronunciation` per ottenere una traduzione fonetica iniziale per una parola. Puoi quindi modificare la traduzione per ottenere la pronuncia che desideri. Con il metodo di suoni simili, segui un processo di prova ed errore. Inoltri la tua traduzione candidata al servizio, sintetizzi la parola come testo di input, ascolti l'audio risultante e modifichi la traduzione candidata. Puoi ripetere il processo finché non sei soddisfatto della pronuncia.
 
-Per ulteriori informazioni, vedi [Esecuzione di query di una parola da una lingua](/docs/services/text-to-speech-data?topic=text-to-speech-data-customWords#cuWordsQueryLanguage).
+Per ulteriori informazioni, vedi [Esecuzione di query di una parola da una lingua](/docs/services/text-to-speech/custom-entries.html#cuWordsQueryLanguage).
 
 ### Ulteriori informazioni sulla traduzione fonetica
 {: #phoneticInfo}
 
 Le seguenti risorse forniscono informazioni sulla traduzione fonetica:
 
--   Per ulteriori informazioni sull'utilizzo di SSML e i suoi elementi `<phoneme>`, vedi [Utilizzo di SSML](/docs/services/text-to-speech-data?topic=text-to-speech-data-ssml).
--   Per ulteriori informazioni sulla specifica delle traduzioni SPR e dei loro simboli IPA equivalenti, vedi [Utilizzo di IBM SPR](/docs/services/text-to-speech-data?topic=text-to-speech-data-sprs).
--   Per ulteriori informazioni sull'utilizzo dei simboli IPA e per campioni audio dei simboli, consulta le fonti sul web. Puoi trovare una discussione introduttiva dettagliata all'indirizzo [International Phonetic Alphabet](https://wikipedia.org/wiki/International_Phonetic_Alphabet){: external}.
+-   Per ulteriori informazioni sull'utilizzo di SSML e del suo elemento `<phoneme>`, vedi [Utilizzo di SSML](/docs/services/text-to-speech/SSML.html).
+-   Per ulteriori informazioni sulla specifica delle traduzioni SPR e dei loro simboli IPA equivalenti, vedi [Utilizzo di IBM SPR](/docs/services/text-to-speech/SPRs.html).
+-   Per ulteriori informazioni sull'utilizzo dei simboli IPA e per campioni audio dei simboli, consulta le fonti sul web. Puoi trovare una discussione introduttiva dettagliata all'indirizzo [en.wikipedia.org/wiki/International_Phonetic_Alphabet ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://en.wikipedia.org/wiki/International_Phonetic_Alphabet){: new_window}.
 
 ## Traduzione combinata di suoni simili e fonetica
 
