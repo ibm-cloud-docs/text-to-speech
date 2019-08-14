@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-06-04"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -22,19 +22,19 @@ subcollection: text-to-speech
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# Symboles anglais britanniques 
+# Symboles anglais britanniques
 {: #gbSymbols}
 
-Les sections suivantes décrivent les symboles valides pour l'anglais britannique. 
+Les sections suivantes décrivent les symboles valides pour l'anglais britannique.
 
-## Voyelles normales 
+## Voyelles normales
 {: #gbRegularVowels}
 
 <table style="width:90%">
-  <caption>Tableau 1. Voyelles normales (anglais britannique) </caption>
+  <caption>Tableau 1. Voyelles normales (anglais britannique)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Symbole anglais britannique<br/>SPR
+      Anglais britannique<br/>Symbole SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Symbole IPA
@@ -44,7 +44,7 @@ Les sections suivantes décrivent les symboles valides pour l'anglais britanniqu
     </th>
     <th style="text-align:left; vertical-align:bottom">
       Exemples de mots
-</th>
+    </th>
   </tr>
   <tr>
     <td style="text-align:center">
@@ -260,7 +260,7 @@ Les sections suivantes décrivent les symboles valides pour l'anglais britanniqu
   <caption>Tableau 2. Diphtongues (anglais britannique)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Symbole anglais britannique<br/>SPR
+      Anglais britannique<br/>Symbole SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Symbole IPA
@@ -270,7 +270,7 @@ Les sections suivantes décrivent les symboles valides pour l'anglais britanniqu
     </th>
     <th style="text-align:left; vertical-align:bottom">
       Exemples de mots
-</th>
+    </th>
   </tr>
   <tr>
     <td style="text-align:center">
@@ -316,14 +316,14 @@ Les sections suivantes décrivent les symboles valides pour l'anglais britanniqu
   </tr>
 </table>
 
-## Voyelles réduites 
+## Voyelles réduites
 {: #gbReducedVowels}
 
 <table style="width:90%">
-  <caption>Tableau 3. Voyelles réduites (anglais britannique) </caption>
+  <caption>Tableau 3. Voyelles réduites (anglais britannique)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Symbole anglais britannique<br/>SPR
+      Anglais britannique<br/>Symbole SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Symbole IPA
@@ -333,7 +333,7 @@ Les sections suivantes décrivent les symboles valides pour l'anglais britanniqu
     </th>
     <th style="text-align:left; vertical-align:bottom">
       Exemples de mots
-</th>
+    </th>
   </tr>
   <tr>
     <td style="text-align:center">
@@ -367,14 +367,14 @@ Les sections suivantes décrivent les symboles valides pour l'anglais britanniqu
   </tr>
 </table>
 
-## Consonnes 
+## Consonnes
 {: #gbConsonants}
 
 <table style="width:90%">
   <caption>Tableau 4. Consonnes (anglais britannique)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Symbole anglais britannique<br/>SPR
+      Anglais britannique<br/>Symbole SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Symbole IPA
@@ -384,7 +384,7 @@ Les sections suivantes décrivent les symboles valides pour l'anglais britanniqu
     </th>
     <th style="text-align:left; vertical-align:bottom">
       Exemples de mots
-</th>
+    </th>
   </tr>
   <tr>
     <td style="text-align:center">

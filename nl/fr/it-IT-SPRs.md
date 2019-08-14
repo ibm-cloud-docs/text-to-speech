@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-06-04"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -27,14 +27,14 @@ subcollection: text-to-speech
 
 Les sections suivantes décrivent les symboles valides pour l'italien.
 
-## Voyelles normales 
+## Voyelles normales
 {: #itRegularVowels}
 
 <table style="width:90%">
-  <caption>Tableau 1. Voyelles normales (italien) </caption>
+  <caption>Tableau 1. Voyelles normales (italien)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Symbole italien<br/>SPR
+      Italien<br/>Symbole SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Symbole IPA
@@ -44,7 +44,7 @@ Les sections suivantes décrivent les symboles valides pour l'italien.
     </th>
     <th style="text-align:left; vertical-align:bottom">
       Exemples de mots
-</th>
+    </th>
   </tr>
   <tr>
     <td style="text-align:center">
@@ -146,14 +146,14 @@ Les sections suivantes décrivent les symboles valides pour l'italien.
   </tr>
 </table>
 
-## Consonnes 
+## Consonnes
 {: #itConsonants}
 
 <table style="width:90%">
-  <caption>Tableau 2. Consonnes (italien)  </caption>
+  <caption>Tableau 2. Consonnes (italien)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Symbole italien<br/>SPR
+      Italien<br/>Symbole SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Symbole IPA
@@ -163,7 +163,7 @@ Les sections suivantes décrivent les symboles valides pour l'italien.
     </th>
     <th style="text-align:left; vertical-align:bottom">
       Exemples de mots
-</th>
+    </th>
   </tr>
   <tr>
     <td style="text-align:center">
@@ -516,14 +516,14 @@ Les sections suivantes décrivent les symboles valides pour l'italien.
   </tr>
 </table>
 
-## Consonnes géminées 
+## Consonnes géminées
 {: #itGeminates}
 
 <table style="width:90%">
   <caption>Tableau 3. Consonnes géminées (italien)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Symbole italien<br/>SPR
+      Italien<br/>Symbole SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Symbole IPA
@@ -533,7 +533,7 @@ Les sections suivantes décrivent les symboles valides pour l'italien.
     </th>
     <th style="text-align:left; vertical-align:bottom">
       Exemples de mots
-</th>
+    </th>
   </tr>
   <tr>
     <td style="text-align:center">
@@ -610,7 +610,7 @@ Si aucun allophone n'est utilisé dans SPR, le service {{site.data.keyword.textt
   <caption>Tableau 4. Allophones (italien)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Symbole italien<br/>SPR italien
+      Allophones italiens<br/>Symbole SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Symbole IPA
@@ -620,7 +620,7 @@ Si aucun allophone n'est utilisé dans SPR, le service {{site.data.keyword.textt
     </th>
     <th style="text-align:left; vertical-align:bottom">
       Exemples de mots
-</th>
+    </th>
   </tr>
   <tr>
     <td style="text-align:center">

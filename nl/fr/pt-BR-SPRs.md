@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-06-04"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -22,19 +22,19 @@ subcollection: text-to-speech
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# Symboles portugais brésiliens 
+# Symboles portugais brésiliens
 {: #ptSymbols}
 
-Les sections suivantes décrivent les symboles valides pour le portugais brésilien. 
+Les sections suivantes décrivent les symboles valides pour le portugais brésilien.
 
-## Voyelles normales 
+## Voyelles normales
 {: #ptRegularVowels}
 
 <table style="width:90%">
-  <caption>Tableau 1. Voyelles normales (portugais brésilien) </caption>
+  <caption>Tableau 1. Voyelles normales (portugais brésilien)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Symbole portugais brésilien<br/>SPR
+      Portugais brésilien<br/>Symbole SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Symbole IPA
@@ -44,7 +44,7 @@ Les sections suivantes décrivent les symboles valides pour le portugais brésil
     </th>
     <th style="text-align:left; vertical-align:bottom">
       Exemples de mots
-</th>
+    </th>
   </tr>
   <tr>
     <td style="text-align:center">
@@ -225,16 +225,16 @@ Les sections suivantes décrivent les symboles valides pour le portugais brésil
 
 **Remarque :**
 
-1.  Le symbole SPR `a` mappe deux symboles IPA différents avec des prononciations différentes : `a` et <code>&#592;</code>. En général, le symbole SPR correspond à `a` pour la synthèse des syllabes accentuées et à <code>&#592;</code> pour la synthèse des syllabes non accentuées. 
+1.  Le symbole SPR `a` mappe deux symboles IPA différents avec des prononciations différentes : `a` et <code>&#592;</code>. En général, le symbole SPR correspond à `a` pour la synthèse des syllabes accentuées et à <code>&#592;</code> pour la synthèse des syllabes non accentuées.
 
 ## Semi-voyelles
 {: #ptSemiVowels}
 
 <table style="width:90%">
-  <caption>Tableau 2. Semi-voyelles (portugais brésilien) </caption>
+  <caption>Tableau 2. Semi-voyelles (portugais brésilien)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Symbole portugais brésilien<br/>SPR
+      Portugais brésilien<br/>Symbole SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Symbole IPA
@@ -244,7 +244,7 @@ Les sections suivantes décrivent les symboles valides pour le portugais brésil
     </th>
     <th style="text-align:left; vertical-align:bottom">
       Exemples de mots
-</th>
+    </th>
   </tr>
   <tr>
     <td style="text-align:center">
@@ -304,14 +304,14 @@ Les sections suivantes décrivent les symboles valides pour le portugais brésil
   </tr>
 </table>
 
-## Consonnes 
+## Consonnes
 {: #ptConsonants}
 
 <table style="width:90%">
-  <caption>Tableau 3. Consonnes (portugais brésilien)  </caption>
+  <caption>Tableau 3. Consonnes (portugais brésilien)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Symbole portugais brésilien<br/>SPR
+      Portugais brésilien<br/>Symbole SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Symbole IPA
@@ -321,7 +321,7 @@ Les sections suivantes décrivent les symboles valides pour le portugais brésil
     </th>
     <th style="text-align:left; vertical-align:bottom">
       Exemples de mots
-</th>
+    </th>
   </tr>
   <tr>
     <td style="text-align:center">

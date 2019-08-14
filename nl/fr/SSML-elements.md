@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-09"
+lastupdated: "2019-06-21"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -25,16 +25,16 @@ subcollection: text-to-speech
 # Eléments SSML
 {: #elements}
 
-Avec le service {{site.data.keyword.texttospeechfull}}, vous pouvez utiliser la plupart des éléments SSML (Speech Synthesis Markup Language) pour contrôler la synthèse de votre texte. Les éléments sont disponibles pour toutes les langues prises en charge. Le tableau suivant récapitule la prise en charge des éléments et attributs SSML par le service. 
+Avec le service {{site.data.keyword.texttospeechfull}}, vous pouvez utiliser la plupart des éléments SSML (Speech Synthesis Markup Language) pour contrôler la synthèse de votre texte. Les éléments sont disponibles pour toutes les langues prises en charge. Le tableau suivant récapitule la prise en charge des éléments et attributs SSML par le service.
 
 -   *Complète* signifie que le service prend entièrement en charge l'élément ou l'attribut avec ses interfaces HTTP et WebSocket.
--   *Partielle* signifie que le service ne prend pas en charge tous les aspects de l'élément ou de l'attribut. Cela peut également signifier que le service prend en charge l'élément ou l'attribut avec une seule de ses interfaces ou que l'élément ou l'attribut n'est pas pris en charge avec toutes les voix. 
+-   *Partielle* signifie que le service ne prend pas en charge tous les aspects de l'élément ou de l'attribut. Cela peut également signifier que le service prend en charge l'élément ou l'attribut avec une seule de ses interfaces ou que l'élément ou l'attribut n'est pas pris en charge avec toutes les voix.
 -   *Aucune* signifie que le service ne prend pas en charge l'élément ou l'attribut.
 
-Pour plus d'informations sur un élément ou un attribut, consultez sa description. Lorsque cela est indiqué, la prise en charge de certains attributs et valeurs diffère légèrement de la spécification SSML. Pour plus d'informations, voir [W3C Speech Synthesis Markup Language (SSML) Version 1.0 ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://www.w3.org/TR/speech-synthesis/){: new_window}.
+Pour plus d'informations sur un élément ou un attribut, consultez sa description. Lorsque cela est indiqué, la prise en charge de certains attributs et valeurs diffère légèrement de la spécification SSML. Pour plus d'informations, voir [W3C - Speech Synthesis Markup Language (SSML) Version 1.1](http://www.w3.org/TR/speech-synthesis/){: external}.
 
 <table>
-  <caption>Tableau 1. Eléments SSML </caption>
+  <caption>Tableau 1. Eléments SSML</caption>
   <tr>
     <th style="text-align:left; width:30%">Elément ou attribut</th>
     <th style="text-align:center; width:12%">Prise en charge</th>
@@ -163,7 +163,7 @@ Pour plus d'informations sur un élément ou un attribut, consultez sa descripti
   </tr>
 </table>
 
-## L'élément audio 
+## L'élément audio
 {: #audio_element}
 
 L'élément `<audio>` insère des éléments enregistrés dans l'audio généré par le service. Il n'est pas pris en charge.
@@ -195,7 +195,7 @@ L'élément `<break>` insère une pause dans le texte parlé. Il possède les at
 ## L'élément desc
 {: #desc_element}
 
-L'élément `<desc>` ne peut apparaître que dans un élément `<audio>`. Dans la mesure où l'élément `<audio>` n'est pas pris en charge, l'élément `<desc>` ne l'est pas non plus. 
+L'élément `<desc>` ne peut apparaître que dans un élément `<audio>`. Dans la mesure où l'élément `<audio>` n'est pas pris en charge, l'élément `<desc>` ne l'est pas non plus.
 
 ## L'élément emphasis
 {: #emphasis_element}
@@ -207,15 +207,15 @@ L'élément `<emphasis>` demande que le texte inclus soit prononcé avec emphase
 
 L'élément `<lexicon>` introduit les dictionnaires de prononciation pour le document SSML donné. Il n'est pas pris en charge.
 
-Vous pouvez utiliser l'interface de personnalisation du service pour définir un dictionnaire d'entrées personnalisées (paires de mots/traductions) à utiliser lors de la synthèse vocale. Pour plus d'informations, voir [Compréhension de la personnalisation](/docs/services/text-to-speech/custom-intro.html).
+Vous pouvez utiliser l'interface de personnalisation du service pour définir un dictionnaire d'entrées personnalisées (paires de mots/traductions) à utiliser lors de la synthèse vocale. Pour plus d'informations, voir [Compréhension de la personnalisation](/docs/services/text-to-speech?topic=text-to-speech-customIntro).
 
 ## L'élément mark
 {: #mark_element}
 
-L'élément `<mark>` est pris en charge uniquement par l'interface WebSocket du service, et non par son interface HTTP, qui ignore l'élément. Pour plus d'informations, voir [Spécification d'une marque SSML](/docs/services/text-to-speech/word-timing.html#mark).
+L'élément `<mark>` est pris en charge uniquement par l'interface WebSocket du service, et non par son interface HTTP, qui ignore l'élément. Pour plus d'informations, voir [Spécification d'une marque SSML](/docs/services/text-to-speech?topic=text-to-speech-timing#mark).
 {: note}
 
-L'élément `<mark>` est un élément vide qui place un marqueur dans le texte à synthétiser. Le client est averti lorsque tout le texte qui précède l'élément `<mark>` a été synthétisé. L'élément accepte un attribut `name` unique qui spécifie une chaîne identifiant de manière unique la marque ; ce nom doit commencer par un caractère alphanumérique. Le nom est renvoyé avec l'heure à laquelle la marque apparaît dans l'audio synthétisé. 
+L'élément `<mark>` est un élément vide qui place un marqueur dans le texte à synthétiser. Le client est averti lorsque tout le texte qui précède l'élément `<mark>` a été synthétisé. L'élément accepte un attribut `name` unique qui spécifie une chaîne identifiant de manière unique la marque ; ce nom doit commencer par un caractère alphanumérique. Le nom est renvoyé avec l'heure à laquelle la marque apparaît dans l'audio synthétisé.
 
 ```xml
 <speak version="1.0">
@@ -232,7 +232,7 @@ Les éléments `<meta>` et `<metadata>` sont des conteneurs dans lesquels vous p
 ## Les éléments paragraph et sentence
 {: #ps_element}
 
-Les éléments `<paragraph>` (ou `<p>`) et `<sentence>` (ou `<s>`) sont des éléments facultatifs qui peuvent être utilisés pour donner des indications sur la structure textuelle. Si le texte inclus dans un élément `<paragraph>` ou `<sentence>` ne se termine pas par un caractère de ponctuation de fin de phrase (par exemple, un point), le service ajoute une pause plus longue que la normale à l'audio synthétisé. 
+Les éléments `<paragraph>` (ou `<p>`) et `<sentence>` (ou `<s>`) sont des éléments facultatifs qui peuvent être utilisés pour donner des indications sur la structure textuelle. Si le texte inclus dans un élément `<paragraph>` ou `<sentence>` ne se termine pas par un caractère de ponctuation de fin de phrase (par exemple, un point), le service ajoute une pause plus longue que la normale à l'audio synthétisé.
 
 Le seul attribut valide pour l'un ou l'autre élément est `xml:lang`, qui permet le changement de langue. L'attribut n'est pas pris en charge.
 
@@ -258,25 +258,25 @@ L'élément `<phoneme>` fournit une prononciation phonétique pour le texte incl
     Si aucun alphabet n'est spécifié, le service utilise IBM SPR par défaut.
 -   `ph` est un attribut requis qui fournit la prononciation dans l'alphabet indiqué. Les exemples suivants montrent la prononciation du mot *tomato* dans les deux formats :
 
-    -   Format IPA : 
+    -   Format IPA :
 
         <pre><code>&lt;speak version="1.0"&gt;
           &lt;phoneme alphabet="ipa" ph="t&#601;&#712;me&#618;.&#638;o&#650;"&gt;tomato&lt;/phoneme&gt;
         &lt;/speak&gt;</code></pre>
 
-    -   Format IPA avec symboles Unicode : 
+    -   Format IPA avec symboles Unicode :
 
         <pre><code>&lt;speak version="1.0"&gt;
           &lt;phoneme alphabet="ipa" ph="t&amp;&#35;x259;mei&amp;&#35;x027E;o&amp;&#035;x028A;"&gt;tomato&lt;/phoneme&gt;
         &lt;/speak&gt;</code></pre>
 
-    -   Format IBM SPR : 
+    -   Format IBM SPR :
 
         <pre><code>&lt;speak version="1.0"&gt;
           &lt;phoneme alphabet="ibm" ph=".0tx.1me.0Fo"&gt;tomato&lt;/phoneme&gt;
         &lt;/speak&gt;</code></pre>
 
-Pour plus d'informations sur l'utilisation des notations SPR et IPA avec l'élément `<phoneme>`, voir [Utilisation d'IBM SPR](/docs/services/text-to-speech/SPRs.html).
+Pour plus d'informations sur l'utilisation des notations SPR et IPA avec l'élément `<phoneme>`, voir [Utilisation d'IBM SPR](/docs/services/text-to-speech?topic=text-to-speech-sprs).
 
 ## L'élément prosody
 {: #prosody_element}
@@ -286,12 +286,12 @@ L'élément `<prosody>` contrôle la hauteur, le débit et le volume du texte. T
 ### L'attribut pitch
 {: #prosody-pitch}
 
-L'attribut `pitch` modifie la hauteur de la ligne de base du texte dans l'élément. Les valeurs acceptées sont 
+L'attribut `pitch` modifie la hauteur de la ligne de base du texte dans l'élément. Les valeurs acceptées sont
 
--   Nombre suivi de la désignation `Hz` (Hertz) : la hauteur de la ligne de base est transposée (vers le haut ou vers le bas) à la valeur spécifiée. 
+-   Nombre suivi de la désignation `Hz` (Hertz) : la hauteur de la ligne de base est transposée (vers le haut ou vers le bas) à la valeur spécifiée.
 -   Valeur de changement relatif (en demi-tons) : nombre qui provoque un décalage absolu par rapport à la ligne de base en cours. Le nombre est précédé de `+` (augmentation) ou `-` (diminution) et suivi de `st` (demi-tons), par exemple `+5st`.
 -   Changement relatif en pourcentage : nombre entraînant un décalage relatif par rapport à la ligne de base en cours. Le nombre est précédé de `+` (augmentation) ou `-` (diminution) et suivi de `%` (signe de pourcentage), par exemple `-10 %`.
--   L'un des six mots clés suivants, qui modifie la hauteur selon les valeurs prédéfinies correspondantes : 
+-   L'un des six mots clés suivants, qui modifie la hauteur selon les valeurs prédéfinies correspondantes :
     -   `default` utilise la hauteur de base par défaut du service.
     -   `x-low` réduit la base de la hauteur tonale de 12 demi-tons.
     -   `low` réduit la base de la hauteur tonale de six demi-tons.
@@ -314,7 +314,7 @@ L'attribut `pitch` modifie la hauteur de la ligne de base du texte dans l'élém
 ### L'attribut rate
 {: #prosody-rate}
 
-L'attribut `rate` indique une modification du débit de parole pour le texte contenu dans l'élément. Le débit est spécifié en termes de mots par minute ; si le débit de parole est de 50 mots par minute, `rate` est égal à `50`. Lorsque l'attribut `rate` est défini sur un nombre positif, la mise en oeuvre n'est pas conforme à la spécification d'attribut du débit de prosodie W3C en vigueur. En outre, le service prend en charge les changements en pourcentage relatif (par exemple, `+15 %`) mais pas les changements en valeur relative (par exemple, `+15`). Les valeurs acceptées sont 
+L'attribut `rate` indique une modification du débit de parole pour le texte contenu dans l'élément. Le débit est spécifié en termes de mots par minute ; si le débit de parole est de 50 mots par minute, `rate` est égal à `50`. Lorsque l'attribut `rate` est défini sur un nombre positif, la mise en oeuvre n'est pas conforme à la spécification d'attribut du débit de prosodie W3C en vigueur. En outre, le service prend en charge les changements en pourcentage relatif (par exemple, `+15 %`) mais pas les changements en valeur relative (par exemple, `+15`). Les valeurs acceptées sont
 
 -   Augmentation ou diminution en pourcentage relatif : `+10 %`.
 -   Nombre de mots par minute en tant que nombre positif : `75`.
@@ -337,7 +337,7 @@ L'attribut `rate` indique une modification du débit de parole pour le texte con
 ### L'attribut volume
 {: #prosody-volume}
 
-Le service ne prend pas en charge l'attribut `volume` de l'élément `<prosody>` avec ses voix basées sur DNN (par exemple, `en-US_AllisonV2Voice`). Pour plus d'informations sur ces voix, voir [Technologies de synthèse vocale](/docs/services/text-to-speech/voices.html#technologiesVoices).
+Le service ne prend pas en charge l'attribut `volume` de l'élément `<prosody>` avec ses voix neuronales (`en-US_AllisonV3Voice`, par exemple). Pour plus d'informations, voir [Voix neuronales](/docs/services/text-to-speech?topic=text-to-speech-voices#neuralVoices).
 {: note}
 
 L'attribut `volume` modifie le volume du texte dans l'élément. Vous pouvez spécifier un nombre entier ou décimal compris entre 1 et 100 (volume maximum). Vous pouvez également utiliser l'une des valeurs de chaîne suivantes, correspondant aux paramètres prédéfinis dans la plage de 0 à 100. (La valeur `silent` n'est pas prise en charge.)
@@ -497,7 +497,7 @@ Si le nombre spécifié comprend plus de deux décimales, le montant est synthé
 ### vxml:date
 {: #vxml-date}
 
-La valeur `vxml:date` fonctionne comme la valeur `date`, mais le format est prédéfini comme étant `AAAAMMJJ`. Si vous ne connaissez pas la valeur d'un jour, d'un mois ou d'une année ou si vous ne souhaitez pas qu'elle soit prononcée, remplacez la valeur par un point d'interrogation (`?`). Les deuxième et troisième exemples incluent des points d'interrogation. 
+La valeur `vxml:date` fonctionne comme la valeur `date`, mais le format est prédéfini comme étant `AAAAMMJJ`. Si vous ne connaissez pas la valeur d'un jour, d'un mois ou d'une année ou si vous ne souhaitez pas qu'elle soit prononcée, remplacez la valeur par un point d'interrogation (`?`). Les deuxième et troisième exemples incluent des points d'interrogation.
 
 ```xml
 <speak version="1.0">
@@ -544,7 +544,7 @@ L'élément `<speak>` est l'élément racine des documents SSML. Les attributs v
 ## L'élément sub
 {: #sub_element}
 
-L'élément `<sub>` indique que le texte spécifié par l'attribut `alias` doit remplacer le texte contenu dans l'élément lorsque la parole est synthétisée. L'attribut `alias` est le seul attribut de l'élément et est obligatoire. 
+L'élément `<sub>` indique que le texte spécifié par l'attribut `alias` doit remplacer le texte contenu dans l'élément lorsque la parole est synthétisée. L'attribut `alias` est le seul attribut de l'élément et est obligatoire.
 
 ```xml
 <speak version="1.0">

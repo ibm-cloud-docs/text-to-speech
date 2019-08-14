@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-06-04"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -34,7 +34,7 @@ Les sections suivantes décrivent les symboles valides pour le français.
   <caption>Tableau 1. Voyelles (français)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Symbole français<br/>SPR
+      Français<br/>Symbole SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Symbole IPA
@@ -44,7 +44,7 @@ Les sections suivantes décrivent les symboles valides pour le français.
     </th>
     <th style="text-align:left; vertical-align:bottom">
       Exemples de mots
-</th>
+    </th>
   </tr>
   <tr>
     <td style="text-align:center">
@@ -289,14 +289,14 @@ Les sections suivantes décrivent les symboles valides pour le français.
 
 1.  `x` est élidé dans certains contextes.
 
-## Consonnes 
+## Consonnes
 {: #frConsonants}
 
 <table style="width:90%">
   <caption>Tableau 2. Consonnes (français)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Symbole français<br/>SPR
+      Français<br/>Symbole SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Symbole IPA
@@ -306,7 +306,7 @@ Les sections suivantes décrivent les symboles valides pour le français.
     </th>
     <th style="text-align:left; vertical-align:bottom">
       Exemples de mots
-</th>
+    </th>
   </tr>
   <tr>
     <td style="text-align:center">
@@ -621,13 +621,13 @@ Les sections suivantes décrivent les symboles valides pour le français.
 ## Liaison
 {: #frLiaison}
 
-En français, le signe `_` (trait de soulignement) peut être utilisé après une consonne finale dans un mot (mais entre doubles guillemets qui entourent le SPR) pour indiquer qu'il s'agit d'une consonne de liaison. Une consonne de liaison n'est prononcée que si le mot suivant commence par une voyelle. 
+En français, le signe `_` (trait de soulignement) peut être utilisé après une consonne finale dans un mot (mais entre doubles guillemets qui entourent le SPR) pour indiquer qu'il s'agit d'une consonne de liaison. Une consonne de liaison n'est prononcée que si le mot suivant commence par une voyelle.
 
 <table style="width:54%">
   <caption>Tableau 3. Liaison (français)</caption>
   <tr>
     <th style="width:33%; text-align:center; vertical-align:bottom">
-      Symbole français<br/>SPR
+      Français<br/>Symbole SPR
     </th>
     <th style="width:33%; text-align:center; vertical-align:bottom">
       Symbole IPA
@@ -649,9 +649,9 @@ En français, le signe `_` (trait de soulignement) peut être utilisé après un
   </tr>
 </table>
 
-Voici des exemples de mots avec et sans le symbole de liaison : 
+Voici des exemples de mots avec et sans le symbole de liaison :
 
 -   `"p0'oe't1it_"` : le `t` n'est prononcé que si le mot suivant commence par une voyelle.
 -   `"nEt"` : le `t` est toujours prononcé.
 
-Le dernier `t` de l'entrée de dictionnaire *petit* avec la valeur de traduction `"p'oe't1it_"` est prononcé dans la chaîne d'entrée *un petit ami* mais pas dans la chaîne d'entrée *un petit chien*. Le `t` final de l'entrée avec la valeur de traduction `"nEt"` est prononcé quel que soit le contexte. 
+Le dernier `t` de l'entrée de dictionnaire *petit* avec la valeur de traduction `"p'oe't1it_"` est prononcé dans la chaîne d'entrée *un petit ami* mais pas dans la chaîne d'entrée *un petit chien*. Le `t` final de l'entrée avec la valeur de traduction `"nEt"` est prononcé quel que soit le contexte.
