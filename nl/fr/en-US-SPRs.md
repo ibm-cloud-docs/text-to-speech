@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-06-04"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -22,19 +22,19 @@ subcollection: text-to-speech
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# Symboles anglais américains 
+# Symboles anglais américains
 {: #usSymbols}
 
-Les sections suivantes décrivent les symboles valides pour l'anglais américain. 
+Les sections suivantes décrivent les symboles valides pour l'anglais américain.
 
-## Voyelles normales 
+## Voyelles normales
 {: #usRegularVowels}
 
 <table style="width:90%">
-  <caption>Tableau 1. Voyelles normales (anglais américain) </caption>
+  <caption>Tableau 1. Voyelles normales (anglais américain)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Symbole anglais américain<br/>SPR
+      Anglais américain<br/>Symbole SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Symbole IPA
@@ -44,7 +44,7 @@ Les sections suivantes décrivent les symboles valides pour l'anglais américain
     </th>
     <th style="text-align:left; vertical-align:bottom">
       Exemples de mots
-</th>
+    </th>
   </tr>
   <tr>
     <td style="text-align:center">
@@ -78,7 +78,7 @@ Les sections suivantes décrivent les symboles valides pour l'anglais américain
     <td style="text-align:center">
       00E6
     </td>
-    <td>      b<u>a</u>ck, h<u>a</u>d
+    <td>b<u>a</u>ck, h<u>a</u>d
     </td>
   </tr>
   <tr>
@@ -250,7 +250,7 @@ Les sections suivantes décrivent les symboles valides pour l'anglais américain
   <caption>Tableau 2. Diphtongues (anglais américain)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Symbole anglais américain<br/>SPR
+      Anglais américain<br/>Symbole SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Symbole IPA
@@ -260,7 +260,7 @@ Les sections suivantes décrivent les symboles valides pour l'anglais américain
     </th>
     <th style="text-align:left; vertical-align:bottom">
       Exemples de mots
-</th>
+    </th>
   </tr>
   <tr>
     <td style="text-align:center">
@@ -306,14 +306,14 @@ Les sections suivantes décrivent les symboles valides pour l'anglais américain
   </tr>
 </table>
 
-## Voyelles réduites 
+## Voyelles réduites
 {: #usReducedVowels}
 
 <table style="width:90%">
-  <caption>Tableau 3. Voyelles réduites (anglais américain) </caption>
+  <caption>Tableau 3. Voyelles réduites (anglais américain)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Symbole anglais américain<br/>SPR
+      Anglais américain<br/>Symbole SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Symbole IPA
@@ -323,7 +323,7 @@ Les sections suivantes décrivent les symboles valides pour l'anglais américain
     </th>
     <th style="text-align:left; vertical-align:bottom">
       Exemples de mots
-</th>
+    </th>
   </tr>
   <tr>
     <td style="text-align:center">
@@ -359,14 +359,14 @@ Les sections suivantes décrivent les symboles valides pour l'anglais américain
   </tr>
 </table>
 
-## Consonnes 
+## Consonnes
 {: #usConsonants}
 
 <table style="width:90%">
   <caption>Tableau 4. Consonnes (anglais américain)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Symbole anglais américain<br/>SPR
+      Anglais américain<br/>Symbole SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Symbole IPA
@@ -376,7 +376,7 @@ Les sections suivantes décrivent les symboles valides pour l'anglais américain
     </th>
     <th style="text-align:left; vertical-align:bottom">
       Exemples de mots
-</th>
+    </th>
   </tr>
   <tr>
     <td style="text-align:center">
@@ -386,7 +386,7 @@ Les sections suivantes décrivent les symboles valides pour l'anglais américain
       b
     </td>
     <td style="text-align:center">
-      0062
+        0062
     </td>
     <td>
       <u>b</u>ad, so<u>b</u>

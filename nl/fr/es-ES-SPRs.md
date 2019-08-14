@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-06-04"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -22,16 +22,16 @@ subcollection: text-to-speech
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# Symboles espagnols 
+# Symboles espagnols
 {: #esSymbols}
 
-Les sections suivantes décrivent les symboles valides pour l'espagnol. Les dialectes d'Amérique latine et d'Amérique du Nord sont identiques en termes de support SPR. Sauf indication contraire, les deux dialectes sont les mêmes que l’espagnol castillan. 
+Les sections suivantes décrivent les symboles valides pour l'espagnol. Les dialectes d'Amérique latine et d'Amérique du Nord sont identiques en termes de support SPR. Sauf indication contraire, les deux dialectes sont les mêmes que l’espagnol castillan.
 
-## Voyelles normales 
+## Voyelles normales
 {: #esReducedVowels}
 
 <table style="width:90%">
-  <caption>Tableau 1. Voyelles normales (espagnol) </caption>
+  <caption>Tableau 1. Voyelles normales (espagnol)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Symbole espagnol<br/>SPR
@@ -44,7 +44,7 @@ Les sections suivantes décrivent les symboles valides pour l'espagnol. Les dial
     </th>
     <th style="text-align:left; vertical-align:bottom">
       Exemples de mots
-</th>
+    </th>
   </tr>
   <tr>
     <td style="text-align:center">
@@ -118,7 +118,7 @@ Les sections suivantes décrivent les symboles valides pour l'espagnol. Les dial
   </tr>
 </table>
 
-## Consonnes 
+## Consonnes
 {: #esConsonants}
 
 <table style="width:90%">
@@ -135,7 +135,7 @@ Les sections suivantes décrivent les symboles valides pour l'espagnol. Les dial
     </th>
     <th style="text-align:left; vertical-align:bottom">
       Exemples de mots
-</th>
+    </th>
   </tr>
   <tr>
     <td style="text-align:center">
@@ -443,17 +443,17 @@ Les sections suivantes décrivent les symboles valides pour l'espagnol. Les dial
 
 **Remarques :**
 
-1.  Le symbole SPR `T` n’est réalisé qu’en espagnol castillan. Il est remplacé en interne par le symbole phonétique `s` en espagnol nord-américain et latino-américain, même lorsqu'il est présent dans l'entrée SPR. 
-1.  Le symbole IPA `h` s'applique uniquement à l'espagnol d'Amérique du Nord et d'Amérique latine. 
-1.  Le symbole IPA `x` s'applique uniquement à l'espagnol castillan. 
-1.  Le symbole SPR `L` correspond à deux symboles IPA différents avec des prononciations différentes pour l'espagnol d'Amérique du Nord et d'Amérique latine : <code>&#654;</code> et <code>&#669;</code>. La spécification de ce symbole SPR avec ces dialectes peut générer l'une ou l'autre des deux variantes. La différence entre les prononciations est souvent impossible à distinguer pour les locuteurs natifs. 
+1.  Le symbole SPR `T` n’est réalisé qu’en espagnol castillan. Il est remplacé en interne par le symbole phonétique `s` en espagnol nord-américain et latino-américain, même lorsqu'il est présent dans l'entrée SPR.
+1.  Le symbole IPA `h` s'applique uniquement à l'espagnol d'Amérique du Nord et d'Amérique latine.
+1.  Le symbole IPA `x` s'applique uniquement à l'espagnol castillan.
+1.  Le symbole SPR `L` correspond à deux symboles IPA différents avec des prononciations différentes pour l'espagnol d'Amérique du Nord et d'Amérique latine : <code>&#654;</code> et <code>&#669;</code>. La spécification de ce symbole SPR avec ces dialectes peut générer l'une ou l'autre des deux variantes. La différence entre les prononciations est souvent impossible à distinguer pour les locuteurs natifs.
 1.  Le symbole IPA <code>&#669;</code> correspond au symbole SPR `L` en espagnol nord-américain et latino-américain.
 1.  Le symbole IPA <code>&#669;</code> correspond au symbole SPR `Y` en espagnol castillan.
 
 ## Allophones
 {: #esAllophones}
 
-Chaque allophone est une variante du phonème indiquée entre parenthèses. Si aucun allophone n'est utilisé dans SPR, le service {{site.data.keyword.texttospeechshort}} génère automatiquement la variante appropriée pour le contexte donné. 
+Chaque allophone est une variante du phonème indiquée entre parenthèses. Si aucun allophone n'est utilisé dans SPR, le service {{site.data.keyword.texttospeechshort}} génère automatiquement la variante appropriée pour le contexte donné.
 
 <table style="width:90%">
   <caption>Tableau 3. Allophones (espagnol)</caption>
@@ -469,7 +469,7 @@ Chaque allophone est une variante du phonème indiquée entre parenthèses. Si a
     </th>
     <th style="text-align:left; vertical-align:bottom">
       Exemples de mots
-</th>
+    </th>
   </tr>
   <tr>
     <td style="text-align:center">

@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-06-04"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -25,16 +25,16 @@ subcollection: text-to-speech
 # Symboles allemands
 {: #deSymbols}
 
-Les sections suivantes décrivent les symboles valides pour l'allemand. 
+Les sections suivantes décrivent les symboles valides pour l'allemand.
 
-## Voyelles normales 
+## Voyelles normales
 {: #deRegularVowels}
 
 <table style="width:90%">
-  <caption>Tableau 1. Voyelles normales (allemand) </caption>
+  <caption>Tableau 1. Voyelles normales (allemand)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Symbole allemand<br/>SPR
+      Allemand<br/>Symbole SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Symbole IPA
@@ -44,7 +44,7 @@ Les sections suivantes décrivent les symboles valides pour l'allemand.
     </th>
     <th style="text-align:left; vertical-align:bottom">
       Exemples de mots
-</th>
+    </th>
   </tr>
   <tr>
     <td style="text-align:center">
@@ -275,14 +275,14 @@ Les sections suivantes décrivent les symboles valides pour l'allemand.
   </tr>
 </table>
 
-## Voyelles réduites 
+## Voyelles réduites
 {: #deReducedVowels}
 
 <table style="width:90%">
-  <caption>Tableau 2. Voyelles réduites (allemand) </caption>
+  <caption>Tableau 2. Voyelles réduites (allemand)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Symbole allemand<br/>SPR
+      Allemand<br/>Symbole SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Symbole IPA
@@ -292,7 +292,7 @@ Les sections suivantes décrivent les symboles valides pour l'allemand.
     </th>
     <th style="text-align:left; vertical-align:bottom">
       Exemples de mots
-</th>
+    </th>
   </tr>
   <tr>
     <td style="text-align:center">
@@ -318,10 +318,10 @@ Les sections suivantes décrivent les symboles valides pour l'allemand.
 {: #deDiphthongs}
 
 <table style="width:90%">
-  <caption>Tableau 3. Diphtongues (allemand) </caption>
+  <caption>Tableau 3. Diphtongues (allemand)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Symbole allemand<br/>SPR
+      Allemand<br/>Symbole SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Symbole IPA
@@ -331,7 +331,7 @@ Les sections suivantes décrivent les symboles valides pour l'allemand.
     </th>
     <th style="text-align:left; vertical-align:bottom">
       Exemples de mots
-</th>
+    </th>
   </tr>
   <tr>
     <td style="text-align:center">
@@ -387,16 +387,16 @@ Les sections suivantes décrivent les symboles valides pour l'allemand.
   </tr>
 </table>
 
-## Voyelles nasalisées 
+## Voyelles nasalisées
 {: #deNasalizedVowels}
 
-Les voyelles nasalisées en français apparaissent principalement dans des mots d'emprunt étrangers. 
+Les voyelles nasalisées en français apparaissent principalement dans des mots d'emprunt étrangers.
 
 <table style="width:90%">
-  <caption>Tableau 4. Voyelles nasalisées (allemand) </caption>
+  <caption>Tableau 4. Voyelles nasalisées (allemand)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Symbole allemand<br/>SPR
+      Allemand<br/>Symbole SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Symbole IPA
@@ -406,7 +406,7 @@ Les voyelles nasalisées en français apparaissent principalement dans des mots 
     </th>
     <th style="text-align:left; vertical-align:bottom">
       Exemples de mots
-</th>
+    </th>
   </tr>
   <tr>
     <td style="text-align:center">
@@ -474,14 +474,14 @@ Les voyelles nasalisées en français apparaissent principalement dans des mots 
   </tr>
 </table>
 
-## Consonnes 
+## Consonnes
 {: #deConsonants}
 
 <table style="width:90%">
-  <caption>Tableau 5. Consonnes (allemand) </caption>
+  <caption>Tableau 5. Consonnes (allemand)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Symbole allemand<br/>SPR
+      Allemand<br/>Symbole SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Symbole IPA
@@ -491,7 +491,7 @@ Les voyelles nasalisées en français apparaissent principalement dans des mots 
     </th>
     <th style="text-align:left; vertical-align:bottom">
       Exemples de mots
-</th>
+    </th>
   </tr>
   <tr>
     <td style="text-align:center">
@@ -501,7 +501,7 @@ Les voyelles nasalisées en français apparaissent principalement dans des mots 
       b
     </td>
     <td style="text-align:center">
-      0062
+        0062
     </td>
     <td>
       <u>B</u>oden, <u>B</u>ett, o<u>b</u>en
@@ -929,5 +929,5 @@ Les voyelles nasalisées en français apparaissent principalement dans des mots 
 
 **Remarques :**
 
-1.  Le symbole IPA <code>&#240;</code> (Unicode IPA `00F0`) apparaît uniquement dans les emprunts issus de langues étrangères, principalement l'anglais (par exemple, *The New York Times*). Cependant, le service réalise ce son en tant que symbole IPA `d` (Unicode IPA `0064`). 
-1.  Le symbole IPA <code>&#952;</code> (Unicode IPA `03B8`) apparaît uniquement dans les emprunts issus de langues étrangères, principalement l'anglais (par exemple,*thriller*). Cependant, le service réalise ce son en tant que symbole IPA <code>&#678;</code> (Unicode IPA `02A6`). 
+1.  Le symbole IPA <code>&#240;</code> (Unicode IPA `00F0`) apparaît uniquement dans les emprunts issus de langues étrangères, principalement l'anglais (par exemple, *The New York Times*). Cependant, le service réalise ce son en tant que symbole IPA `d` (Unicode IPA `0064`).
+1.  Le symbole IPA <code>&#952;</code> (Unicode IPA `03B8`) apparaît uniquement dans les emprunts issus de langues étrangères, principalement l'anglais (par exemple,*thriller*). Cependant, le service réalise ce son en tant que symbole IPA <code>&#678;</code> (Unicode IPA `02A6`).

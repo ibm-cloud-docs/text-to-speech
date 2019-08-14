@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-06-24"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -22,13 +22,13 @@ subcollection: text-to-speech
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# Utilisation d'un modèle vocal personnalisé 
+# Utilisation d'un modèle vocal personnalisé
 {: #customUsing}
 
-Une fois que vous avez créé un modèle personnalisé et que vous l'avez rempli avec des entrées personnalisées, vous l'utilisez en transmettant son ID de personnalisation (GUID) avec le paramètre de requête `customization_id` de la méthode HTTP `GET` ou `POST /v1/synthesize` ou de la méthode WebSocket `/v1/synthesize`. Les données d'identification de service du propriétaire d'un modèle doivent être utilisées pour appeler une méthode `synthesize` qui utilise le modèle personnalisé.
+Une fois que vous avez créé un modèle personnalisé et que vous l'avez rempli avec des entrées personnalisées, vous l'utilisez en transmettant son ID de personnalisation (GUID) avec le paramètre de requête `customization_id` de la méthode HTTP `GET` ou `POST /v1/synthesize` ou de la méthode WebSocket `/v1/synthesize`. Si vous incluez un ID de personnalisation, vous devez appeler une méthode `synthesize` avec les données d'identification pour l'instance du service propriétaire du modèle personnalisé.
 {: shortdesc}
 
-Les deux premiers exemples génèrent une prononciation personnalisée pour `IEEE` basée sur les entrées du modèle personnalisé indiqué. La prononciation personnalisée est utilisée à la place de la prononciation par défaut des règles de prononciation habituelles du service. 
+Les deux premiers exemples génèrent une prononciation personnalisée pour `IEEE` basée sur les entrées du modèle personnalisé indiqué. La prononciation personnalisée est utilisée à la place de la prononciation par défaut des règles de prononciation habituelles du service.
 
 -   Méthode HTTP `GET /v1/synthesize` :
 

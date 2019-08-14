@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-06-04"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -27,14 +27,14 @@ subcollection: text-to-speech
 
 Les sections suivantes décrivent les symboles valides pour le japonais.
 
-## Voyelles et marques 
+## Voyelles et marques
 {: #jaVowelsMarks}
 
 <table style="width:90%">
-  <caption>Tableau 1. Voyelles et marques (japonais) </caption>
+  <caption>Tableau 1. Voyelles et marques (japonais)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Symbole japonais<br/>SPR
+      Japonais<br/>Symbole SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Symbole IPA
@@ -44,7 +44,7 @@ Les sections suivantes décrivent les symboles valides pour le japonais.
     </th>
     <th style="text-align:left; vertical-align:bottom">
       Exemples de mots
-</th>
+    </th>
   </tr>
   <tr>
     <td style="text-align:center">
@@ -182,14 +182,14 @@ Les sections suivantes décrivent les symboles valides pour le japonais.
 
 1.  Le symbole `:` doit être suivi d'une voyelle, éventuellement avec d'autres symboles, tels que la limite de syllabe, entre les deux.
 
-## Consonnes 
+## Consonnes
 {: #jaConsonants}
 
 <table style="width:90%">
-  <caption>Tableau 2. Consonnes (japonais)  </caption>
+  <caption>Tableau 2. Consonnes (japonais)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Symbole japonais<br/>SPR
+      Japonais<br/>Symbole SPR
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       Symbole IPA
@@ -199,7 +199,7 @@ Les sections suivantes décrivent les symboles valides pour le japonais.
     </th>
     <th style="text-align:left; vertical-align:bottom">
       Exemples de mots
-</th>
+    </th>
   </tr>
   <tr>
     <td style="text-align:center">

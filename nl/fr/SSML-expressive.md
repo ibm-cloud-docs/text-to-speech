@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-09"
+lastupdated: "2019-06-21"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -22,18 +22,19 @@ subcollection: text-to-speech
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# SSML d'expressivité 
+# SSML d'expressivité
 {: #expressive}
 
 Par défaut, le service {{site.data.keyword.texttospeechfull}} synthétise le texte dans un style déclaratif neutre. Le service étend SSML avec un élément `<express-as>` qui produit une expressivité en convertissant du texte en parole synthétisée dans divers styles de conversation. L'élément est analogue à l'élément SSML `<say-as>`, qui spécifie la normalisation de texte pour le texte mis en forme, tel que les dates, les heures et les nombres.
 {: shortdesc}
 
-## Support de langue 
+## Support de langue
 {: #languages-expressive}
 
-Le service prend en charge l’expressivité uniquement pour la voix en anglais américain Allison (`en-US_AllisonVoice`). L'expressivité n'est pas prise en charge avec la voix `en-US_AllisonV2Voice`. L'utilisation de l'élément avec une voix non prise en charge renvoie une erreur. 
+Le service prend en charge l’expressivité uniquement pour la voix standard Allison en anglais américain (`en-US_AllisonVoice`). L'expressivité n'est pas prise en charge avec la voix neuronale `en-US_AllisonV3Voice`. L'utilisation de l'élément avec une voix non prise en charge renvoie une erreur.
 
 ## L'élément express-as
+{: #ssml-express-as}
 
 Vous pouvez appliquer l'élément `<express-as>` à la totalité du texte, à une phrase ou à un fragment, tel qu'une phrase ou un mot. L'élément accepte un attribut obligatoire, `type`, qui décrit le type d'expression à utiliser pour le texte spécifié : `GoodNews`, `Apology` ou `Uncertainty`.
 
@@ -111,7 +112,7 @@ Vous pouvez appliquer l'élément `<express-as>` à la totalité du texte, à un
 
 ## Exemples d'expressivité
 
-Les exemples suivants illustrent l'utilisation des trois formes d'expressivité dans l'attribut `text` de la méthode `POST /v1/synthesize`. Le texte à synthétiser est situé dans la plage de l'élément `<speak>` racine SSML. 
+Les exemples suivants illustrent l'utilisation des trois formes d'expressivité dans l'attribut `text` de la méthode `POST /v1/synthesize`. Le texte à synthétiser est situé dans la plage de l'élément `<speak>` racine SSML.
 
 ```xml
 {
@@ -122,8 +123,7 @@ Les exemples suivants illustrent l'utilisation des trois formes d'expressivité 
       Nous vous prions de nous excuser pour la gêne occasionnée.
     </express-as>
     <express-as type=\"Uncertainty\">
-       Nous ne savons pas quand les articles seront disponibles.
-       Peut-être la semaine prochaine, mais nous n'en sommes pas sûrs pour le moment.
+       Nous ne savons pas quand les articles seront disponibles. Peut-être la semaine prochaine, mais nous n'en sommes pas sûrs pour le moment.
     </express-as>
     <express-as type=\"GoodNews\">
        Mais nous tenons à votre satisfaction, nous vous offrons donc une remise de 50 % sur votre commande !
