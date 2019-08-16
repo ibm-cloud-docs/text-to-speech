@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-09"
+lastupdated: "2019-06-21"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -22,25 +22,26 @@ subcollection: text-to-speech
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# 表示 SSML
+# 表達 SSML
 {: #expressive}
 
-依預設，{{site.data.keyword.texttospeechfull}} 服務會以中性宣告樣式來合成文字。此服務會使用 `<express-as>` 元素來擴充 SSML，以各種說話樣式將文字轉換為合成語音來產生表示式。此元素類似於 SSML 元素 `<say-as>`，其會指定格式化文字（例如日期、時間及數字）的文字正規化。
+依預設，{{site.data.keyword.texttospeechfull}} 服務會以中立宣告性的風格來合成文字。此服務會使用 `<express-as>` 元素來擴充 SSML，以各種說話風格將文字轉換為合成語音來產生表達。此元素類似於 SSML 元素 `<say-as>`，其會指定格式化文字（例如日期、時間及數字）的文字正規化。
 {: shortdesc}
 
 ## 語言支援
 {: #languages-expressive}
 
-服務僅支援美式英文 Allison 語音 (`en-US_AllisonVoice`) 的表示式。不支援表示式與 `en-US_AllisonV2Voice` 語音搭配使用。使用元素與不受支援的語音搭配會傳回錯誤。
+服務僅支援對標準美式英文 Allison 語音 (`en-US_AllisonVoice`) 的表達。神經 `en-US_AllisonV3Voice` 語音不支援表達。使用元素與不受支援的語音搭配會傳回錯誤。
 
 ## express-as 元素
+{: #ssml-express-as}
 
-您可以將 `<express-as>` 元素套用至整個文字內文、句子，或詞組或字組這類的片段。此元素接受一個必要屬性 `type`，其說明要用於指定文字的表示式類型：`GoodNews`、`Apology` 或 `Uncertainty`。
+您可以將 `<express-as>` 元素套用至整個文字內文、句子，或詞組或字組這類的片段。此元素接受一個必要屬性 `type`，它說明要用於指定文字的表達類型：`GoodNews`、`Apology` 或 `Uncertainty`。
 
 ### GoodNews
 {: #goodnews}
 
-`GoodNews` 表示正面的樂觀訊息。
+`GoodNews` 表達正面的樂觀訊息。
 
 ```xml
 <express-as type="GoodNews">
@@ -54,7 +55,6 @@ subcollection: text-to-speech
 <express-as type="GoodNews">
   Congratulations on your engagement! You two are perfect for each other!
 </express-as>
-
 <express-as type="GoodNews">
   Wow, good job on your promotion! That&apos;s a really prestigious position!
 </express-as>
@@ -64,7 +64,7 @@ subcollection: text-to-speech
 ### Apology
 {: #apology}
 
-`Apology` 表示遺憾訊息。
+`Apology` 表達遺憾訊息。
 
 ```xml
 <express-as type="Apology">
@@ -78,7 +78,6 @@ subcollection: text-to-speech
 <express-as type="Apology">
   Please forgive me for deleting your files. It was an accident.
 </express-as>
-
 <express-as type="Apology">
   Is there any way I can make this up to you?
 </express-as>
@@ -102,16 +101,15 @@ subcollection: text-to-speech
 <express-as type="Uncertainty">
   Can you please explain it again? I&apos;m not sure I understand.
 </express-as>
-
 <express-as type="Uncertainty">
   I&apos;m sorry, but I didn&apos;t catch your name. Could you please repeat it?
 </express-as>
 ```
 {: codeblock}
 
-## 表示範例
+## 表達範例
 
-下列範例示範如何在 `POST /v1/synthesize` 方法的 `text` 屬性中使用這三種格式的表示式。要合成的文字位於 SSML 根 `<speak>` 元素的文字段內。
+下列範例示範如何在 `POST /v1/synthesize` 方法的 `text` 屬性中使用這三種形式的表達。要合成的文字位於 SSML 根 `<speak>` 元素的文字段內。
 
 ```xml
 {

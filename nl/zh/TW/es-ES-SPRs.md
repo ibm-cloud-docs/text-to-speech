@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-06-04"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -43,7 +43,7 @@ subcollection: text-to-speech
       IPA Unicode
     </th>
     <th style="text-align:left; vertical-align:bottom">
-      範例單字
+      範例字組
     </th>
   </tr>
   <tr>
@@ -134,7 +134,7 @@ subcollection: text-to-speech
       IPA Unicode
     </th>
     <th style="text-align:left; vertical-align:bottom">
-      範例單字
+      範例字組
     </th>
   </tr>
   <tr>
@@ -303,7 +303,8 @@ subcollection: text-to-speech
       x [<strong>3</strong>]
     </td>
     <td style="text-align:center">
-      0068<br/><br/>
+      0068
+    <br/><br/>
       0078
     </td>
     <td>
@@ -385,15 +386,17 @@ subcollection: text-to-speech
       L [<strong>4</strong>]
     </td>
     <td style="text-align:center">
-      &#654;<br/><br/>
+      &#654;
+    <br/><br/>
       &#669; [<strong>5</strong>]
     </td>
     <td style="text-align:center">
-      028E<br/><br/>
+      028E
+    <br/><br/>
       029D
     </td>
     <td>
-      <u>ll</u>over, po<u>ll</u>o<br/><br/>
+      <u>ll</u> over、po <u>ll</u> o<br/><br/>
       <u>y</u>egua, pla<u>y</u>a
     </td>
   </tr>
@@ -453,7 +456,7 @@ subcollection: text-to-speech
 ## 同位異音
 {: #esAllophones}
 
-每個同位異音都是括弧中所指出音位的變化。如果 SPR 中未使用同位異音，{{site.data.keyword.texttospeechshort}} 服務會為給定的上下文自動產生適當的變式。
+每個同位異音都是括弧中所指出標音的變化。如果 SPR 中未使用同位異音，{{site.data.keyword.texttospeechshort}} 服務會為給定的上下文自動產生適當的變式。
 
 <table style="width:90%">
   <caption>表 3. 同位異音（西班牙文）</caption>
@@ -468,7 +471,7 @@ subcollection: text-to-speech
       IPA Unicode
     </th>
     <th style="text-align:left; vertical-align:bottom">
-      範例單字
+      範例字組
     </th>
   </tr>
   <tr>

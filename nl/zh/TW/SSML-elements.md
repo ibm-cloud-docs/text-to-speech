@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-09"
+lastupdated: "2019-06-21"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -31,7 +31,7 @@ subcollection: text-to-speech
 -   *局部* 表示服務不支援元素或屬性的所有層面。它也可以表示服務支援元素或屬性只與它的其中一個介面搭配使用，或表示並非所有語音都支援元素或屬性。
 -   *無* 表示服務不支援元素或屬性。
 
-如需元素或屬性的相關資訊，請參閱其說明。注意，部分屬性和值的支援，與 SSML 規格略有不同。如需相關資訊，請參閱 [W3C Speech Synthesis Markup Language (SSML) 1.0 版 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://www.w3.org/TR/speech-synthesis/){: new_window}。
+如需元素或屬性的相關資訊，請參閱其說明。注意，部分屬性和值的支援，與 SSML 規格略有不同。如需相關資訊，請參閱 [W3C Speech Synthesis Markup Language (SSML) Version 1.0](http://www.w3.org/TR/speech-synthesis/){: external}。
 
 <table>
   <caption>表 1. SSML 元素</caption>
@@ -166,7 +166,7 @@ subcollection: text-to-speech
 ## audio 元素
 {: #audio_element}
 
-此 `<audio>` 元素會將記錄的元素插入至服務產生的音訊。不支援此元素。
+此 `<audio>` 元素會將錄製的元素插入至服務產生的音訊。不支援此元素。
 
 ## break 元素
 {: #break_element}
@@ -195,7 +195,7 @@ subcollection: text-to-speech
 ## desc 元素
 {: #desc_element}
 
-`<desc>` 元素只能出現在 `<audio>` 元素內。因為不支援 `<audio>` 元素，所以也不支援 `<desc>` 元素。
+`<desc>` 元素只能在 `<audio>` 元素中出現。因為不支援 `<audio>` 元素，所以也不支援 `<desc>` 元素。
 
 ## emphasis 元素
 {: #emphasis_element}
@@ -207,12 +207,12 @@ subcollection: text-to-speech
 
 此 `<lexicon>` 元素針對給定的 SSML 文件引進發音字典。不支援此元素。
 
-您可以使用服務的自訂作業介面來定義自訂項目（字組/轉換配對）的字典，以在語音合成期間使用。如需相關資訊，請參閱[瞭解自訂作業](/docs/services/text-to-speech/custom-intro.html)。
+您可以使用服務的自訂作業介面來定義自訂項目（字組/轉換配對）的字典，以在語音合成期間使用。如需相關資訊，請參閱[瞭解自訂作業](/docs/services/text-to-speech?topic=text-to-speech-customIntro)。
 
 ## mark 元素
 {: #mark_element}
 
-只有服務的 WebSocket 介面才支援 `<mark>` 元素，而其 HTTP 介面不支援且會忽略此元素。如需相關資訊，請參閱[指定 SSML 標記](/docs/services/text-to-speech/word-timing.html#mark)。
+只有服務的 WebSocket 介面才支援 `<mark>` 元素，而其 HTTP 介面不支援且會忽略此元素。如需相關資訊，請參閱[指定 SSML 標記](/docs/services/text-to-speech?topic=text-to-speech-timing#mark)。
 {: note}
 
 `<mark>` 元素是一個空白元素，可將標記放置在要合成的文字中。在 `<mark>` 元素之前的所有文字都已完成合成時，即會通知用戶端。此元素接受單一 `name` 屬性，此屬性指定用來唯一識別標記的字串；名稱必須以英數字元開頭。傳回的名稱隨附標記在合成音訊中出現的時間。
@@ -251,7 +251,7 @@ subcollection: text-to-speech
 
 `<phoneme>` 元素提供括住文字的語音發音。語音拼字代表字組的聲音、這些聲音如何分成多個音節，以及哪些音節接收重音。此元素有兩個屬性：
 
--   `alphabet` 是選用屬性，指定要使用的語音。支援的 alphabet 包含：
+-   `alphabet` 是選用屬性，用來指定要使用的語音。支援的 alphabet 包含：
     -   標準國際音標 (IPA)：`alphabet="ipa"`
     -   {{site.data.keyword.IBM_notm}} 符號語音表示法 (SPR)：`alphabet="ibm"`
 
@@ -276,7 +276,7 @@ subcollection: text-to-speech
           &lt;phoneme alphabet="ibm" ph=".0tx.1me.0Fo"&gt;tomato&lt;/phoneme&gt;
         &lt;/speak&gt;</code></pre>
 
-如需使用 SPR 及 IPA 表示法與 `<phoneme>` 元素搭配的相關資訊，請參閱[使用 IBM SPR](/docs/services/text-to-speech/SPRs.html)。
+如需使用 SPR 及 IPA 表示法與 `<phoneme>` 元素搭配的相關資訊，請參閱[使用 IBM SPR](/docs/services/text-to-speech?topic=text-to-speech-sprs)。
 
 ## prosody 元素
 {: #prosody_element}
@@ -288,7 +288,7 @@ subcollection: text-to-speech
 
 `pitch` 屬性可修改元素內文字的基準線音高。接受值為：
 
--   後面接著 `Hz`（赫茲）指定的數字：基準線音高會移轉（向上或向下）至指定的值。
+-   後面接著 `Hz`（赫茲）指定的數字：基準線音高會變調（向上或向下）至指定的值。
 -   相對變更值（以半音為單位）：導致從現行基準線絕對移位的數字。數字前面會加上 `+`（增加）或 `-`（減少），後面接著 `st`（半音），例如 `+5st`。
 -   相對變更（以百分比為單位）：導致從現行基準線相對移位的數字。數字前面會加上 `+`（增加）或 `-`（減少），後面接著 `%`（百分比符號），例如，`-10%`。
 -   下列六個關鍵字的其中一個，可將音高修改為對應的預定值：
@@ -337,7 +337,7 @@ subcollection: text-to-speech
 ### volume 屬性
 {: #prosody-volume}
 
-服務不支援將 `<prosody>` 元素的 `volume` 屬性與其 DNN 型語音（例如，`en-US_AllisonV2Voice`）搭配使用。如需這些語音的相關資訊，請參閱[語音合成技術](/docs/services/text-to-speech/voices.html#technologiesVoices)。
+服務不支援 `<prosody>` 元素的 `volume` 屬性用於其神經語音（例如，`en-US_AllisonV3Voice`）。如需相關資訊，請參閱[神經語音](/docs/services/text-to-speech?topic=text-to-speech-voices#neuralVoices)。
 {: note}
 
 `volume` 屬性可修改元素內文字的音量。您可以指定在 1.0 到 100.0（最大音量）範圍內的整數或小數值。您也可以使用下列其中一個字串值，這些字串值對應於在 0 到 100 範圍內的預先定義設定。（不支援 `silent` 值。）
@@ -371,7 +371,7 @@ subcollection: text-to-speech
 ### cardinal
 {: #sayAsCardinal}
 
-`cardinal` 值說出元素內數字的基數。下列範例會說出 *Super Bowl forty-nine*。第一個是多餘的，因為它不會變更服務的預設行為。
+`cardinal` 值會說出元素內數字的基數。下列範例會說出 *Super Bowl forty-nine*。第一個是多餘的，因為它不會變更服務的預設行為。
 
 ```xml
 <speak version="1.0">
@@ -450,7 +450,7 @@ subcollection: text-to-speech
 ### ordinal
 {: #sayAsOrdinal}
 
-`ordinal` 值說出元素內數字的序數值。下列範例會說出 *second first*。
+`ordinal` 值會說出元素內數字的序數值。下列範例會說出 *second first*。
 
 ```xml
 <speak version="1.0">
@@ -463,7 +463,7 @@ subcollection: text-to-speech
 ### vxml:boolean
 {: #vxml-boolean}
 
-`vxml:boolean` 值說出 *yes* 或 *no*，視元素內的 `true` 或 `false` 值而定。
+`vxml:boolean` 值會說出 *yes* 或 *no*，視元素內的 `true` 或 `false` 值而定。
 
 ```xml
 <speak version="1.0">
@@ -497,7 +497,7 @@ subcollection: text-to-speech
 ### vxml:date
 {: #vxml-date}
 
-`vxml:date` 值的作用類似於 `date` 值，但格式預先定義為 `YYYYMMDD`。如果不知道日、月或年值，或如果不想要說出它，請將此值取代為 `?`（問號）。第二個和第三個範例包括問號。
+`vxml:date` 值的作用類似於 `date` 值，但格式預先定義為 `YYYYMMDD`。如果日、月或年值未知，或者您不希望值發音，請將值取代為 `?`（問號）。第二個和第三個範例包括問號。
 
 ```xml
 <speak version="1.0">
@@ -544,7 +544,7 @@ subcollection: text-to-speech
 ## sub 元素
 {: #sub_element}
 
-`<sub>` 元素指出，當合成語音時，`alias` 屬性指定的文字將取代元素內括住的文字。`alias` 屬性是元素的唯一屬性，且是必要屬性。
+`<sub>` 元素指出，當合成語音時，`alias` 屬性所指定的文字，將取代此元素內括住的文字。`alias` 屬性是元素的唯一屬性，且是必要屬性。
 
 ```xml
 <speak version="1.0">

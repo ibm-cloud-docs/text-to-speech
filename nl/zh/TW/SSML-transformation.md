@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-09"
+lastupdated: "2019-06-21"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -28,7 +28,7 @@ subcollection: text-to-speech
 {{site.data.keyword.texttospeechfull}} 服務（例如大部分語音合成系統）只能說出有限數目的語音。此外，部分語言只提供一個或兩種語音。為了擴大可能的語音範圍，此服務使用 `<voice-transformation>` 元素來擴充 SSML。您可以使用此元素，藉由控制預設語音的各個層面，來實現不同的虛擬語音。特性的應用程式包括：
 {: shortdesc}
 
--   *將另一個特性提供給語音。* 您想要語音在一般情況下或針對特定應用程序聽起來有一點不同。
+-   *將另一個特性提供給語音。* 您想要語音在一般情況下或針對特定應用程式聽起來有一點不同。
 -   *語音品牌。* 您想要使用獨特語音來區分您的應用程式。
 -   *多重角色應用程式。* 您需要多個語音來代表不同的角色。
 
@@ -43,9 +43,10 @@ subcollection: text-to-speech
 -   `en-US_LisaVoice`
 -   `en-US_MichaelVoice`
 
-不支援使用 `V2`（這些語音的 DNN 型版本，例如 `en-US_AllisonV2Voice`）進行語音轉換。使用元素與不受支援的語音搭配會傳回錯誤。
+這些語音的神經版本（例如，`en-US_AllisonV3Voice`）不支援語音轉換。使用元素與不受支援的語音搭配會傳回錯誤。
 
 ## 內建轉換
+{: #ssml-built-in}
 
 內建轉換會將預先配置的變更套用至語音屬性。將它們想像成可供服務使用的虛擬語音。服務提供兩個內建轉換。若要使用它們，請使用 `type` 屬性來指定內建轉換的區分大小寫名稱：
 
@@ -58,6 +59,7 @@ subcollection: text-to-speech
 {: note}
 
 ## 內建轉換範例
+{: #ssml-built-in-examples}
 
 下列範例將兩個內建轉換套用至強度不同的相同句子：
 
@@ -73,6 +75,7 @@ subcollection: text-to-speech
 {: codeblock}
 
 ## 自訂轉換
+{: #ssml-custom-transforms}
 
 自訂轉換可讓您更細部控制語音轉換的不同層面。若要使用自訂轉換，請針對 `type` 屬性指定 `Custom`。然後，您可以使用下列一個以上選用屬性來控制轉換。
 
@@ -98,7 +101,7 @@ subcollection: text-to-speech
       [<code>x-narrow</code>, <code>narrow</code>, <code>default</code>,
       <code>wide</code>, <code>x-wide</code>]</td>
     <td>
-      音高輪廓動態範圍的正規化相對變更在安全限制內。增加或減少音高範圍可讓語音樣式更易或不易表示。此屬性是從 SSML <code>&lt;prosody&gt;</code> 元素的 <code>range</code> 屬性借來的。</td>
+      音高輪廓動態範圍的正規化相對變更在安全限制內。增加或減少音高範圍可讓說話風格更具表達力或較不具表達力。此屬性是從 SSML <code>&lt;prosody&gt;</code> 元素的 <code>range</code> 屬性借來的。</td>
   </tr>
   <tr>
     <td><code>glottal_tension</code></td>
@@ -177,15 +180,16 @@ subcollection: text-to-speech
     -   高聲門張力、高音高及低速度，每個都可能導致發出嗡嗡聲。請增加呼吸聲來緩解此效果。
     -   極低聲門張力可能會產生嘈雜的語音。請降低呼吸聲來減少噪音。
     -   同時將音高範圍及速度升高或降低至極端程度，可能會讓語音聽起來非常不自然。
--   如上所述，部分屬性是從 SSML `<prosody>` 元素借來的。如需相關資訊，請參閱 [prosody 元素](/docs/services/text-to-speech/SSML-elements.html#prosody_element)。若要啟用虛擬語音的精細韻律控制，您可以：
+-   如上所述，部分屬性是從 SSML `<prosody>` 元素借來的。如需相關資訊，請參閱 [prosody 元素](/docs/services/text-to-speech?topic=text-to-speech-elements#prosody_element)。若要啟用虛擬語音的精細韻律控制，您可以：
     -   將 `<prosody>` 元素放在 `<voice-transformation>` 元素內以巢狀化。
     -   將 `<voice-transformation>` 元素放在 `<prosody>` 元素內以巢狀化。
 
     您*無法* 將 `<voice-transformation>` 元素巢狀化。
 
 ## 自訂轉換範例
+{: #ssml-custom-transforms-examples}
 
-下列範例會套用不同屬性，來示範自訂轉換的可能應用。第一個範例會降低聲門張力，讓語音聽起來較為柔和。它也會適度地增加音高範圍及速度，以引進較動態的說話樣式。
+下列範例會套用不同屬性，來示範自訂轉換的可能應用。第一個範例會降低聲門張力，讓語音聽起來較為柔和。它也會適度地增加音高範圍及速度，以引進較動態的說話風格。
 
 ```xml
 <voice-transformation type="Custom" glottal_tension="-50%"
@@ -195,7 +199,7 @@ subcollection: text-to-speech
 ```
 {: codeblock}
 
-第二個範例使用最大聲門張力和最高音高，以及最低速度。這類組合通常不是偏好的，而且可能會產生嗡嗡聲。此範例會增加呼吸聲來緩解此效果。
+第二個範例使用最大聲門張力和最高音高，以及最低速度。這類組合通常不受青睞，而且可能會產生嗡嗡聲。此範例會增加呼吸聲來緩解此效果。
 
 ```xml
 <voice-transformation type="Custom" glottal_tension="100%" pitch="100%"
@@ -211,7 +215,6 @@ subcollection: text-to-speech
 <voice-transformation type="Custom" timbre="Sunrise" pitch="40%">
   Do you have more information?
 </voice-transformation>
-
 <voice-transformation type="Custom" timbre="Breeze" timbre_extent="30%"
   pitch="-30%">
   Do you have more information?
