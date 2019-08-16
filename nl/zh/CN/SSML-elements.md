@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-09"
+lastupdated: "2019-06-21"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -31,7 +31,7 @@ subcollection: text-to-speech
 -   *部分*表示服务不支持该元素或属性的所有方面。此外，还可能意味着服务仅支持通过其中一个接口使用该元素或属性，或者并非所有声音都支持该元素或属性。
 -   *无*表示服务不支持该元素或属性。
 
-有关某个元素或属性的更多信息，请参阅其描述。在特别说明之处，对某些属性和值的支持与 SSML 规范略有不同。有关更多信息，请参阅 [W3C Speech Synthesis Markup Language (SSML) Version 1.0 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://www.w3.org/TR/speech-synthesis/){: new_window}。
+有关某个元素或属性的更多信息，请参阅其描述。在特别说明之处，对某些属性和值的支持与 SSML 规范略有不同。有关更多信息，请参阅 [W3C Speech Synthesis Markup Language (SSML) Version 1.0](http://www.w3.org/TR/speech-synthesis/){: external}。
 
 <table>
   <caption>表 1. SSML 元素</caption>
@@ -207,12 +207,12 @@ subcollection: text-to-speech
 
 `<lexicon>` 元素用于引入给定 SSML 文档的发音字典。不支持此元素。
 
-可以使用服务的定制接口来定义在语音合成期间使用的定制条目（词/转换项对）字典。有关更多信息，请参阅[了解定制](/docs/services/text-to-speech/custom-intro.html)。
+可以使用服务的定制接口来定义在语音合成期间使用的定制条目（词/转换项对）字典。有关更多信息，请参阅[了解定制](/docs/services/text-to-speech?topic=text-to-speech-customIntro)。
 
 ## mark 元素
 {: #mark_element}
 
-仅服务的 WebSocket 接口支持 `<mark>` 元素，服务的 HTTP 接口不支持此元素，会将其忽略。有关更多信息，请参阅[指定 SSML 标记](/docs/services/text-to-speech/word-timing.html#mark)。
+仅服务的 WebSocket 接口支持 `<mark>` 元素，服务的 HTTP 接口不支持此元素，会将其忽略。有关更多信息，请参阅[指定 SSML 标记](/docs/services/text-to-speech?topic=text-to-speech-timing#mark)。
 {: note}
 
 `<mark>` 元素是一个空元素，用于在要合成的文本中放入标记。在合成了 `<mark>` 元素前面的所有文本后，系统会通知客户机。此元素接受单个 `name` 属性，用于指定唯一标识 mark 的字符串；名称必须以字母数字字符开头。名称会与在合成音频中遇到 mark 的时间一起返回。
@@ -276,7 +276,7 @@ subcollection: text-to-speech
           &lt;phoneme alphabet="ibm" ph=".0tx.1me.0Fo"&gt;tomato&lt;/phoneme&gt;
         &lt;/speak&gt;</code></pre>
 
-有关将 SPR 和 IPA 表示法用于 `<phoneme>` 元素的更多信息，请参阅[使用 IBM SPR](/docs/services/text-to-speech/SPRs.html)。
+有关将 SPR 和 IPA 表示法用于 `<phoneme>` 元素的更多信息，请参阅[使用 IBM SPR](/docs/services/text-to-speech?topic=text-to-speech-sprs)。
 
 ## prosody 元素
 {: #prosody_element}
@@ -337,7 +337,7 @@ subcollection: text-to-speech
 ### volume 属性
 {: #prosody-volume}
 
-服务不支持 `<prosody>` 元素的 `volume` 属性用于其基于 DNN 的声音（例如，`en-US_AllisonV2Voice`）。有关这些声音的更多信息，请参阅[语音合成技术](/docs/services/text-to-speech/voices.html#technologiesVoices)。
+服务不支持 `<prosody>` 元素的 `volume` 属性用于其神经声音（例如，`en-US_AllisonV3Voice`）。有关更多信息，请参阅[神经声音](/docs/services/text-to-speech?topic=text-to-speech-voices#neuralVoices)。
 {: note}
 
 `volume` 属性用于修改 prosody 元素内文本的音量。可以指定范围在 1.0 到 100.0（最大音量）之间的整数或小数值。此外，还可以使用下列其中一个字符串值，这些值对应于范围在 0 到 100 之间的预定义设置。（不支持 `silent` 值。）

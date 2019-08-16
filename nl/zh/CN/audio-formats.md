@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-09"
+lastupdated: "2019-06-06"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -31,7 +31,7 @@ subcollection: text-to-speech
 ## 支持的音频格式
 {: #formatsSupported}
 
-表 1 列出了可以请求合成音频的音频格式（MIME 类型）。缺省情况下，服务使用 Opus 编码解码器 (`audio/ogg;codecs=opus`) 返回 Ogg 格式的音频。
+表 1 列出了请求合成音频时可用的音频格式（MIME 类型）。缺省情况下，服务会返回使用 Opus 编码解码器的 Ogg 格式的音频 (`audio/ogg;codecs=opus`)。
 
 <table>
   <caption>表 1. 支持的音频格式</caption>
@@ -44,7 +44,9 @@ subcollection: text-to-speech
       <code>audio/basic</code>
     </td>
     <td>
-      <em>基本音频</em>，一种单声道有损音频格式，使用 8 位 u-law（或 mu-law）数据进行编码，采样率为 8 千赫兹。此格式提供了最大众化的媒体类型。有关更多信息，请参阅 IETF 的 <a target="_blank" href="https://tools.ietf.org/html/rfc2046">Request for Comments (RFC) 2046 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")</a> 和 <a target="_blank" href="http://www.iana.org/assignments/media-types/audio/basic">iana.org/assignments/media-types/audio/basic ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")</a>。
+      <em>基本音频</em>，一种单声道有损音频格式，使用 8 位 u-law（或 mu-law）数据进行编码，采样率为 8 千赫兹。此格式提供了最大众化的媒体类型。有关更多信息，请参阅 IETF
+      [Request for Comment (RFC) 2046](https://tools.ietf.org/html/rfc2046) 和
+      [iana.org/assignments/media-types/audio/basic](http://www.iana.org/assignments/media-types/audio/basic)。
     </td>
   </tr>
   <tr>
@@ -52,7 +54,7 @@ subcollection: text-to-speech
       <code>audio/flac</code>
     </td>
     <td>
-      <em>自由无损音频编码解码器 (FLAC)</em> (<code>.flac</code>)，一种无损压缩音频编码格式。有关更多信息，请参阅 <a target="_blank" href="https://en.wikipedia.org/wiki/FLAC">en.wikipedia.org/wiki/FLAC ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")</a>。
+      <em>自由无损音频编码解码器 (FLAC)</em> (<code>.flac</code>)，一种无损压缩音频编码格式。有关更多信息，请参阅 [FLAC](https://wikipedia.org/wiki/FLAC)。
     </td>
   </tr>
   <tr>
@@ -60,8 +62,10 @@ subcollection: text-to-speech
       <code>audio/l16;rate={rate}</code>
     </td>
     <td>
-      <em>线性 16 位脉冲编码调制 (PCM)</em>，一种未压缩的音频数据格式（通常为 <code>.raw</code> 或 <code>.pcm</code>）。有关更多信息，请参阅因特网工程任务组织 (IETF) 的 <a target="_blank" href="https://tools.ietf.org/html/rfc2586">Request for Comments (RFC) 2586 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")</a> 和 <a target="_blank" href="https://en.wikipedia.org/wiki/Pulse-code_modulation">en.wikipedia.org/wiki/Pulse-code_modulation ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")</a>。<br/><br/>
-      对于此音频格式，必须指定采样率。例如，指定 <code>audio/l16;rate=16000</code> 表示采样率为 16 千赫兹的音频。还可以选择将字节序指定为 <code>audio/l16;rate={rate};endianness=big-endian</code> 或 <code>audio/l16;rate={rate};endianness=little-endian</code>。
+      <em>线性 16 位脉冲编码调制 (PCM)</em>，一种未压缩的音频数据格式（通常为 <code>.raw</code> 或 <code>.pcm</code>）。有关更多信息，请参阅因特网工程任务组织 (IETF) 的
+      [Request for Comment (RFC) 2586](https://tools.ietf.org/html/rfc2586) 和
+      [Pulse-code modulation](https://wikipedia.org/wiki/Pulse-code_modulation)。<br/><br/>
+对于此音频格式，必须指定采样率。例如，指定 <code>audio/l16;rate=16000</code> 表示采样率为 16 千赫兹的音频。还可以选择将字节序指定为 <code>audio/l16;rate={rate};endianness=big-endian</code> 或 <code>audio/l16;rate={rate};endianness=little-endian</code>。
       缺省值为小尾数法。
     </td>
   </tr>
@@ -71,7 +75,7 @@ subcollection: text-to-speech
       <code>audio/mpeg</code>
     </td>
     <td>
-      <em>MP3</em> 或<em>运动图像专家组 (MPEG)</em>，一种有损数据压缩格式（MP3 和 MPEG 指的是同一格式）。有关更多信息，请参阅 <a target="_blank" href="https://en.wikipedia.org/wiki/MP3">en.wikipedia.org/wiki/MP3 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")</a>。
+      <em>MP3</em> 或<em>运动图像专家组 (MPEG)</em>，一种有损数据压缩格式（MP3 和 MPEG 指的是同一格式）。有关更多信息，请参阅 [MP3](https://wikipedia.org/wiki/MP3)。
     </td>
   </tr>
   <tr>
@@ -79,7 +83,7 @@ subcollection: text-to-speech
       <code>audio/mulaw;rate={rate}</code>
     </td>
     <td>
-      <em>8 位 u-law（或 mu-law）音频</em>，一种单声道有损音频格式，使用 8 位 u-law（或 mu-law）数据进行编码。对于此音频格式，必须指定采样率。有关更多信息，请参阅 <a target="_blank" href="https://en.wikipedia.org/wiki/M-law_algorithm">en.wikipedia.org/wiki/M-law_algorithm ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")</a>。
+      <em>8 位 u-law（或 mu-law）音频</em>，一种单声道有损音频格式，使用 8 位 u-law（或 mu-law）数据进行编码。对于此音频格式，必须指定采样率。有关更多信息，请参阅 [M-law algorithm](https://wikipedia.org/wiki/M-law_algorithm)。
     </td>
   </tr>
   <tr>
@@ -89,16 +93,22 @@ subcollection: text-to-speech
       <code>audio/ogg;codecs=vorbis</code>
     </td>
     <td>
-      <em>Ogg 格式</em> (<code>.ogg</code>)，这是由 Xiph.org Foundation 维护的免费开放式容器格式。有关更多信息，请参阅 <a target="_blank" href="https://www.xiph.org/ogg/">xiph.org/ogg/ ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")</a>。您可以请求使用以下编码解码器压缩的音频流：
+      <em>Ogg 格式</em> (<code>.ogg</code>)，这是由 Xiph.org Foundation 维护的免费开放式容器格式。有关更多信息，请参阅 [xiph.org/ogg](https://www.xiph.org/ogg/)。
+    您可以请求使用以下编码解码器压缩的音频流：
       <ul style="margin-left:20px; padding:0px;">
         <li style="margin:10px 0px; line-height:120%;">
-          <em>Opus</em>。有关更多信息，请参阅 <a target="_blank" href="https://www.opus-codec.org/">opus-codec.org ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")</a> 和 <a target="_blank" href="https://en.wikipedia.org/wiki/Opus">en.wikipedia.org/wiki/Opus (audio format) ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")</a>。在 <em>Opus (audio format)</em> 页面上，请特别查看 <em>Containers</em> 部分。
+          <em>Opus</em>。有关更多信息，请参阅
+	  [opus-codec.org](https://www.opus-codec.org/) 和
+	  [Opus (audio format)](https://wikipedia.org/wiki/Opus_%28audio_format%29)。
+          请特别查看 <em>Containers</em> 部分。
         </li>
         <li style="margin:10px 0px; line-height:120%;">
-          <em>Vorbis</em>。有关更多信息，请参阅 <a target="_blank" href="https://xiph.org/vorbis/">xiph.org/vorbis ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")</a> 和 <a target="_blank" href="https://en.wikipedia.org/wiki/Vorbis">en.wikipedia.org/wiki/Vorbis ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")</a>。
+          <em>Vorbis</em>。有关更多信息，请参阅
+	  [xiph.org/vorbis](https://xiph.org/vorbis/) 和
+	  [Vorbis](https://wikipedia.org/wiki/Vorbis)。
         </li>
       </ul>
-      这两种编码解码器都是免费开放式有损音频压缩格式。Opus 是首选编码解码器，但根据 Ogg 规范，如果省略编码解码器，服务将返回 Vorbis 格式的音频。如果完全省略音频格式，那么缺省情况下，服务会返回使用 Opus 编码解码器的 Ogg 格式音频。
+      这两种编码解码器都是免费开放式有损音频压缩格式。Opus 是首选编码解码器，但根据 Ogg 规范，如果您省略了编码解码器，服务将返回 Vorbis 格式的音频。如果完全省略了音频格式，缺省情况下，服务会返回使用 Opus 编码解码器的 Ogg 格式音频。
     </td>
   </tr>
   <tr>
@@ -106,17 +116,17 @@ subcollection: text-to-speech
       <code>audio/wav</code>
     </td>
     <td>
-      <em>波形音频文件格式 (WAV)</em> (<code>.wav</code>) 是一种标准容器格式，通常用于未压缩的音频位流，但也可以包含压缩音频。由于所返回音频的流式性质，生成的 WAV 文件可能无法在所有音频播放器中正常使用。具体来说，文件头中的 <code>numSamples</code> 属性会设置为 <code>0</code>，而不考虑音频的长度。有关更多信息，请参阅 <a target="_blank" href="https://en.wikipedia.org/wiki/WAV">en.wikipedia.org/wiki/WAV ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")</a>。
+      <em>波形音频文件格式 (WAV)</em> (<code>.wav</code>) 是一种标准容器格式，通常用于未压缩的音频位流，但也可以包含压缩音频。由于所返回音频的流式性质，生成的 WAV 文件可能无法在所有音频播放器中正常使用。具体来说，文件头中的 <code>numSamples</code> 属性会设置为 <code>0</code>，而不考虑音频的长度。有关更多信息，请参阅 [WAV](https://wikipedia.org/wiki/WAV)。
     </td>
   </tr>
   <tr>
     <td>
       <code>audio/webm</code><br/>
       <code>audio/webm;codecs=opus</code><br/>
-      <code>audio/webm;codecs=vorbis</code>
+    <code>audio/webm;codecs=vorbis</code>
     </td>
     <td>
-      <em>Web 媒体 (WebM)</em> (<code>.webm</code>)，一种开放式媒体文件格式，用于支持使用 Opus 和 Vorbis 音频编码解码器压缩的音频流。如果省略编码解码器，那么服务会返回 Opus 格式的音频。有关更多信息，请参阅 <a target="_blank" href="https://www.webmproject.org/">webmproject.org ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")</a>。
+      <em>Web 媒体 (WebM)</em> (<code>.webm</code>)，一种开放式媒体文件格式，用于支持使用 Opus 和 Vorbis 音频编码解码器压缩的音频流。如果省略编码解码器，那么服务会返回 Opus 格式的音频。有关更多信息，请参阅 [webmproject.org](https://www.webmproject.org/)。
     </td>
   </tr>
 </table>
@@ -126,9 +136,9 @@ subcollection: text-to-speech
 
 指定音频格式是可选的。缺省情况下，服务会返回 `audio/ogg;codecs=opus` 格式的音频。但是，您可以为 HTTP 或 WebSocket 接口指定格式：
 
--   采用 HTTP `GET` 和 `POST /v1/synthesize` 方法时，可使用 `Accept` 请求头或 `accept` 查询参数来指定格式。要接收缺省格式的音频，请省略该头和查询参数。有关更多信息，请参阅[将文本合成为音频](/docs/services/text-to-speech/http.html#synthesize)。
+-   采用 HTTP `GET` 和 `POST /v1/synthesize` 方法时，可使用 `Accept` 请求头或 `accept` 查询参数来指定格式。要接收缺省格式的音频，请省略该头和查询参数。有关更多信息，请参阅[将文本合成为音频](/docs/services/text-to-speech?topic=text-to-speech-usingHTTP#synthesize)。
 
-    如果使用 `accept` 查询参数，请对自变量进行 URL 编码，使其成为参数。例如，对以下自变量进行 URL 编码：
+    如果使用 `accept` 查询参数，请对自变量进行 URL 编码，以转入该参数。例如，对以下自变量进行 URL 编码：
 
     ```
     audio/l16;rate=16000;endianness=little-endian
@@ -142,7 +152,7 @@ subcollection: text-to-speech
     ```
     {: codeblock}
 
--   通过 WebSocket 接口，可以使用传递的文本消息中的 `accept` 参数来指定格式以启动合成。要接收缺省格式的音频，请将该参数的值指定为 `*/*`。有关更多信息，请参阅[发送输入文本](/docs/services/text-to-speech/websockets.html#WSsend)。
+-   通过 WebSocket 接口，可以使用传递的文本消息中的 `accept` 参数来指定格式以启动合成。要接收缺省格式的音频，请将该参数的值指定为 `*/*`。有关更多信息，请参阅[发送输入文本](/docs/services/text-to-speech?topic=text-to-speech-usingWebSocket#WSsend)。
 
 ## 指定采样率
 {: #formatRate}
@@ -279,7 +289,7 @@ subcollection: text-to-speech
 
 要确定服务返回的任何音频流的采样率，最可靠方法是从流本身中抽取信息。可以通过调用带有一些简单文本（例如，“hello world”）的 `/v1/synthesize` 方法，并指定计划使用的格式和编码解码器来确定采样率。然后，可以通过将音频流保存到文件并在音频播放器中打开，获取编码解码器和采样率。
 
-Opus 标准需要输出采样率与音频播放器能力相匹配。有关更多信息，请参阅因特网工程任务组织 (IETF) 的 [Request for Comments (RFC) 7845 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://tools.ietf.org/html/rfc6455){: new_window} 的第 5.1 部分。对于软件音频播放器，该表指示的是典型输出采样率，但音频的实际采样率在流中随时间而变化。如上所述，服务会合成 22,050 赫兹的源音频。
+Opus 标准需要输出采样率与音频播放器能力相匹配。有关更多信息，请参阅因特网工程任务组织 (IETF) 的 [Request for Comments (RFC) 7845](http://tools.ietf.org/html/rfc6455){: external} 的第 5.1 部分。对于软件音频播放器，该表指示的是典型输出采样率，但音频的实际采样率在流中随时间而变化。如上所述，服务会合成 22,050 赫兹的源音频。
 {: note}
 
 ## 播放音频文件
@@ -288,4 +298,4 @@ Opus 标准需要输出采样率与音频播放器能力相匹配。有关更多
 要播放服务生成的音频文件，请使用下列其中一个工具：
 
 -   Web 浏览器，例如 Google Chrome&trade;、Firefox&reg; 或 Microsoft&reg; Internet Explorer&reg;。
--   音频播放器，例如 Audacity&reg; ([audacityteam.org ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://www.audacityteam.org/){: new_window}) 或 FFmpeg ([ffmpeg.org ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ffmpeg.org){: new_window})。
+-   音频播放器，例如 Audacity&reg; ([audacityteam.org](http://www.audacityteam.org/){: external}) 或 FFmpeg ([ffmpeg.org](https://www.ffmpeg.org){: external})。

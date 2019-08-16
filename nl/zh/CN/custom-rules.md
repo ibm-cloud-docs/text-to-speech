@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-03-07"
+lastupdated: "2018-06-04"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -46,7 +46,7 @@ subcollection: text-to-speech
 
 ## 上下文相关
 
-一些词的发音是上下文相关的。例如，假设有以下示例输入语句：
+一些词的发音是上下文相关的。例如，假设有以下输入句子的示例：
 
 ```
 St. Anthony lives on Henry St.
@@ -60,7 +60,7 @@ Saint Anthony lives on Henry Street
 ```
 {: codeblock}
 
-但是，如果覆盖字符串 `St.` 的缺省发音规则，以将其转换为 `saint`，那么服务就无法再根据上下文对该词发音。应用包含此类转换项的定制声音模型会导致服务将上述输入语句发音为：
+但是，如果覆盖字符串 `St.` 的缺省发音规则，以将其转换为 `saint`，那么服务就无法再根据上下文对该词发音。应用包含此类转换项的定制声音模型会导致服务将上述输入的句子发音为：
 
 ```
 Saint Anthony lives on Henry saint
@@ -76,7 +76,7 @@ Saint Anthony lives on Henry saint
 -   *没有结尾句点的词*几乎可以包含任何字符。字符包括字母、数字、标点（非尾部句点）、非字母符号（例如，%、&amp; 和 @）、引号、圆括号、方括号等。该词的*转换项*可以包含对服务的任何合法输入，包括 SSML 格式的空格和拼音表示法。
 -   *具有尾部句点的词*只能包含字母、句点和内部撇号（不作为第一个或最后一个字符）。该词的*转换项*只能包含用空格或连字符分隔的正常拼写的普通词。不能包含拼音表示法。
 
-具有尾部句点的词的示例为“`div.`”。假定定制模型包含条目 `{word='div.', translation='division'}`。服务不会将转换项应用于字符串“`div`”，因为它不包含尾部句点，因此与该条目不匹配。
+具有尾部句点的词的示例为“`div.`”. 假定定制模型包含条目 `{word='div.', translation='division'}`。服务不会将转换项应用于字符串“`div`”，因为它不包含尾部句点，因此与该条目不匹配。
 
 ## 使用 IBM SPR 条目
 {: #sprNotes}
@@ -94,7 +94,7 @@ Saint Anthony lives on Henry saint
 -   可以使用句点来指示转换项中音节的开头，但句点是可选的，不会影响词的发音。仅当在词的转换项中包含句点时，句点才会出现在词的发音中。不要使用空格来指示音节边界。
 -   {{site.data.keyword.IBM_notm}} 建议您在词的主重读元音前面添加 `1` 符号，但这并不是严格必需的。如果未使用该符号指示，服务会自行确定出现重音的位置。您还可以使用 `2` 符号来指示每个次重音位置，但 `2` 符号的使用也是可选的。仅当在词的转换项中包含这些符号时，这些符号才会出现在词的发音中。
 
-有关使用 SPR 的更多信息，请参阅[使用 IBM SPR](/docs/services/text-to-speech/SPRs.html)。
+有关使用 SPR 的更多信息，请参阅[使用 IBM SPR](/docs/services/text-to-speech?topic=text-to-speech-sprs)。
 
 ## 使用日语条目
 {: #jaNotes}
@@ -131,7 +131,7 @@ Saint Anthony lives on Henry saint
 ### 日语词性
 {: #partsOfSpeech}
 
-下表列出了日语定制条目支持的词性。有关指定日语定制条目词性的更多信息，请参阅[向日语定制模型添加词](/docs/services/text-to-speech/custom-entries.html#cuJapaneseAdd)。
+下表列出了日语定制条目支持的词性。有关指定日语定制条目词性的更多信息，请参阅[向日语定制模型添加词](/docs/services/text-to-speech?topic=text-to-speech-customWords#cuJapaneseAdd)。
 
 <table style="width:75%">
   <caption>表 1. 日语词性</caption>

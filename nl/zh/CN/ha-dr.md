@@ -2,14 +2,14 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-03-19"
+lastupdated: "2019-06-04"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -44,7 +44,7 @@ subcollection: text-to-speech
 
 对于灾难性故障，{{site.data.keyword.IBM_notm}} 可能无法从数据库备份恢复数据。在这种情况下，您需要复原数据，以将服务实例恢复为其最新状态。您可以将数据复原到同一位置，也可以复原到其他位置。
 
-对于 {{site.data.keyword.texttospeechshort}} 服务，只有定制声音模型的数据会存储在 {{site.data.keyword.cloud_notm}} 上。因此，您的灾难恢复计划应包括了解、保留和准备好复原定制声音模型。
+对于 {{site.data.keyword.texttospeechshort}} 服务，只有定制声音模型的数据会存储在 {{site.data.keyword.cloud_notm}} 上。因此，您的灾难恢复计划应包括了解和保留定制声音模型的相关信息，并准备好复原定制声音模型。
 
 ### 备份定制声音模型
 {: #disaster-recovery-backup}
@@ -52,11 +52,11 @@ subcollection: text-to-speech
 保留有关定制声音模型及其定制条目的以下信息：
 
 -   所有定制声音模型及其定义的列表。要列出有关定制模型的信息：
-    -   使用 `GET /v1/customizations` 方法可列出有关所有定制模型的信息。有关更多信息，请参阅[查询所有定制模型](/docs/services/text-to-speech/custom-models.html#cuModelsQueryAll)。
-    -   使用 `GET /v1/customizations/{customization_id}` 方法可列出有关指定定制模型的信息。有关更多信息，请参阅[查询定制模型](/docs/services/text-to-speech/custom-models.html#cuModelsQuery)。
+    -   使用 `GET /v1/customizations` 方法可列出有关所有定制模型的信息。有关更多信息，请参阅[查询所有定制模型](/docs/services/text-to-speech?topic=text-to-speech-customModels#cuModelsQueryAll)。
+    -   使用 `GET /v1/customizations/{customization_id}` 方法可列出有关指定定制模型的信息。有关更多信息，请参阅[查询定制模型](/docs/services/text-to-speech?topic=text-to-speech-customModels#cuModelsQuery)。
 -   有关定制声音模型中所有定制条目（词/转换项对）的信息：
-    -   使用 `GET /v1/customizations/{customization_id}/words` 方法可列出有关定制模型中所有词/转换项对的信息。有关更多信息，请参阅[查询定制模型中的所有词](/docs/services/text-to-speech/custom-entries.html#cuWordsQueryModel)。
-    -   使用 `GET /v1/customizations/{customization_id}/words/{word}` 方法可列出有关定制模型中指定词/转换项对的信息。有关更多信息，请参阅[查询定制模型中的单个词](/docs/services/text-to-speech/custom-entries.html#cuWordQueryModel)。
+    -   使用 `GET /v1/customizations/{customization_id}/words` 方法可列出有关定制模型中所有词/转换项对的信息。有关更多信息，请参阅[查询定制模型中的所有词](/docs/services/text-to-speech?topic=text-to-speech-customWords#cuWordsQueryModel)。
+    -   使用 `GET /v1/customizations/{customization_id}/words/{word}` 方法可列出有关定制模型中指定词/转换项对的信息。有关更多信息，请参阅[查询定制模型中的单个词](/docs/services/text-to-speech?topic=text-to-speech-customWords#cuWordQueryModel)。
 
 保留这些信息时，最好采用在发生故障时可以用于重新创建定制声音模型的格式。主动维护有关定制模型和定制条目的信息，并提前准备以下部分中列出的调用，能使您尽快实现恢复。
 
@@ -65,8 +65,8 @@ subcollection: text-to-speech
 
 如果需要从灾难恢复，您可以使用备份信息来重新创建定制声音模型及其定制条目：
 
-1.  要重新创建定制声音模型，请使用 `POST /v1/customizations` 方法。有关更多信息，请参阅[创建定制模型](/docs/services/text-to-speech/custom-models.html#cuModelsCreate)。
-1.  要向定制声音模型添加多个词/转换项对，请使用 `POST /v1/customizations/{customization_id}/words` 方法。有关更多信息，请参阅[向定制模型添加多个词](/docs/services/text-to-speech/custom-entries.html#cuWordsAdd)。
-1.  要向定制声音模型添加单个词/转换项对，请使用 `POST /v1/customizations/{customization_id}/words/{word}` 方法。 有关更多信息，请参阅[向定制模型添加单个词](/docs/services/text-to-speech/custom-entries.html#cuWordAdd)。
+1.  要重新创建定制声音模型，请使用 `POST /v1/customizations` 方法。有关更多信息，请参阅[创建定制模型](/docs/services/text-to-speech?topic=text-to-speech-customModels#cuModelsCreate)。
+1.  要向定制声音模型添加多个词/转换项对，请使用 `POST /v1/customizations/{customization_id}/words` 方法。有关更多信息，请参阅[向定制模型添加多个词](/docs/services/text-to-speech?topic=text-to-speech-customWords#cuWordsAdd)。
+1.  要向定制声音模型添加单个词/转换项对，请使用 `POST /v1/customizations/{customization_id}/words/{word}` 方法。 有关更多信息，请参阅[向定制模型添加单个词](/docs/services/text-to-speech?topic=text-to-speech-customWords#cuWordAdd)。
 
 您可以一次性添加所有定制条目，也可以分组添加定制条目，或一次添加一个定制条目。

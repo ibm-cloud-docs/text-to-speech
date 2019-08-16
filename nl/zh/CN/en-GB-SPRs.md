@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-06-04"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -51,16 +51,20 @@ subcollection: text-to-speech
       a
     </td>
     <td style="text-align:center">
-      a<br/><br/>
+      a
+    <br/><br/>
       &#97;&#720;<br/><br/>
-      &#593;<br/><br/>
+      &#593;
+    <br/><br/>
       &#593;&#720;<br/><br/>
       &#592;
     </td>
     <td style="text-align:center">
-      0061<br/><br/>
+      0061
+    <br/><br/>
       0061+02D0<br/><br/>
-      0251<br/><br/>
+      0251
+    <br/><br/>
       0251+02D0<br/><br/>
       0250
     </td>
@@ -87,11 +91,13 @@ subcollection: text-to-speech
       e
     </td>
     <td style="text-align:center">
-      e<br/><br/>
+      e
+    <br/><br/>
       &#101;&#618;
     </td>
     <td style="text-align:center">
-      0065<br/><br/>
+      0065
+    <br/><br/>
       0065+026A
     </td>
     <td>
@@ -145,12 +151,14 @@ subcollection: text-to-speech
       o
     </td>
     <td style="text-align:center">
-      o<br/><br/>
+      o
+    <br/><br/>
       &#111;&#650;<br/><br/>
       &#601;&#650;
     </td>
     <td style="text-align:center">
-      006F<br/><br/>
+      006F
+    <br/><br/>
       006F+028A<br/><br/>
       0259+028A
     </td>
@@ -163,11 +171,13 @@ subcollection: text-to-speech
       c
     </td>
     <td style="text-align:center">
-      &#596;<br/><br/>
+      &#596;
+    <br/><br/>
       &#596;&#720;
     </td>
     <td style="text-align:center">
-      0254<br/><br/>
+      0254
+    <br/><br/>
       0254+02D0
     </td>
     <td>
@@ -192,11 +202,13 @@ subcollection: text-to-speech
       u
     </td>
     <td style="text-align:center">
-      u<br/><br/>
+      u
+    <br/><br/>
       &#117;&#720;
     </td>
     <td style="text-align:center">
-      0075<br/><br/>
+      0075
+    <br/><br/>
       0075+02D0
     </td>
     <td>
@@ -354,11 +366,13 @@ subcollection: text-to-speech
       X
     </td>
     <td style="text-align:center">
-      i<br/><br/>
+      i
+    <br/><br/>
       &#616;
     </td>
     <td style="text-align:center">
-      0069<br/><br/>
+      0069
+    <br/><br/>
       0268
     </td>
     <td>
@@ -447,7 +461,8 @@ subcollection: text-to-speech
       g
     </td>
     <td style="text-align:center">
-      g<br/><br/>
+      g
+    <br/><br/>
       &#609;
     </td>
     <td style="text-align:center">
@@ -621,15 +636,19 @@ subcollection: text-to-speech
       h
     </td>
     <td style="text-align:center">
-      h<br/><br/>
-      x<br/><br/>
+      h
+    <br/><br/>
+      x
+    <br/><br/>
       &#967;<br/><br/>
       &#614;
     </td>
     <td style="text-align:center">
-      0068<br/><br/>
+      0068
+    <br/><br/>
       0078<br/><br/>
-      03C7<br/><br/>
+      03C7
+    <br/><br/>
       0266
     </td>
     <td>
@@ -683,12 +702,14 @@ subcollection: text-to-speech
       r
     </td>
     <td style="text-align:center">
-      r<br/><br/>
+      r
+    <br/><br/>
       &#633;<br/><br/>
       &#638;
     </td>
     <td style="text-align:center">
-      0072<br/><br/>
+      0072
+    <br/><br/>
       0279<br/><br/>
       027E
     </td>

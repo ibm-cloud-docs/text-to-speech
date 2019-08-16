@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-06-04"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -303,7 +303,8 @@ subcollection: text-to-speech
       x [<strong>3</strong>]
     </td>
     <td style="text-align:center">
-      0068<br/><br/>
+      0068
+    <br/><br/>
       0078
     </td>
     <td>
@@ -385,11 +386,13 @@ subcollection: text-to-speech
       L [<strong>4</strong>]
     </td>
     <td style="text-align:center">
-      &#654;<br/><br/>
+      &#654;
+    <br/><br/>
       &#669; [<strong>5</strong>]
     </td>
     <td style="text-align:center">
-      028E<br/><br/>
+      028E
+    <br/><br/>
       029D
     </td>
     <td>

@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-06-04"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -34,7 +34,7 @@ subcollection: text-to-speech
   <caption>表 1. 规则元音（意大利语）</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      意大利语<br/>SPR 音标符号
+意大利语<br/>SPR 音标符号
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA 音标符号
@@ -153,7 +153,7 @@ subcollection: text-to-speech
   <caption>表 2. 辅音（意大利语）</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      意大利语<br/>SPR 音标符号
+意大利语<br/>SPR 音标符号
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA 音标符号
@@ -431,11 +431,13 @@ subcollection: text-to-speech
       r
     </td>
     <td style="text-align:center">
-      r<br/><br/>
+      r
+    <br/><br/>
       &#638;
     </td>
     <td style="text-align:center">
-      0072<br/><br/>
+      0072
+    <br/><br/>
       027E
     </td>
     <td>
@@ -523,7 +525,7 @@ subcollection: text-to-speech
   <caption>表 3. 叠音（意大利语）</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      意大利语<br/>SPR 音标符号
+意大利语<br/>SPR 音标符号
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA 音标符号
@@ -630,7 +632,8 @@ subcollection: text-to-speech
       &#331;g
     </td>
     <td style="text-align:center">
-      014B+0067<br/>
+      014B+0067
+    <br/>
       014B+0261
     </td>
     <td>

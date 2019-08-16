@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-06-24"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -36,11 +36,11 @@ subcollection: text-to-speech
 ### 定制声音模型的所有权
 {: #customOwner}
 
-定制声音模型由使用其凭证来创建该模型的 {{site.data.keyword.texttospeechshort}} 服务实例所拥有。要以任何方式使用定制模型，您必须使用为该服务实例创建的服务凭证以及定制接口的各种方法。
+定制声音模型由使用其凭证来创建该模型的 {{site.data.keyword.texttospeechshort}} 服务实例所拥有。要以任何方式使用定制模型，您必须使用该服务实例的凭证以及定制接口的各种方法。
 
-针对同一 {{site.data.keyword.texttospeechshort}} 服务实例获取的所有服务凭证将共享对为该服务实例创建的所有定制模型的访问权。要限制对定制模型的访问权，请创建单独的服务实例，并仅使用该服务实例的凭证来创建和使用该模型。这样，其他服务实例的凭证就无法影响该定制模型。
+针对同一 {{site.data.keyword.texttospeechshort}} 服务实例获取的所有凭证将共享对为该服务实例创建的所有定制模型的访问权。要限制对定制模型的访问权，请创建单独的服务实例，并仅使用该服务实例的凭证来创建和使用该模型。这样，其他服务实例的凭证就无法影响该定制模型。
 
-在服务凭证之间共享所有权的优点是可以取消一组凭证（例如，如果凭证泄露）。然后，可以为同一服务实例创建新凭证，并仍保持对使用原始凭证创建的定制模型的所有权和访问权。
+在凭证之间共享所有权的优点是可以取消一组凭证（例如，如果凭证泄露）。然后，可以为同一服务实例创建新凭证，并仍保持对使用原始凭证创建的定制模型的所有权和访问权。
 
 ### 请求日志记录和数据隐私
 {: #customLogging}
@@ -50,7 +50,7 @@ subcollection: text-to-speech
 -   服务*不会*记录用于构建定制声音模型的数据（词和转换项）。使用定制接口来管理定制模型中的词和转换项时，无需设置 `X-Watson-Learning-Opt-Out` 请求头。您的训练数据绝不会用于改进服务的基本模型。
 -   定制模型用于合成请求时，服务*会*记录数据。您必须将 `X-Watson-Learning-Opt-Out` 请求头设置为 `true`，以阻止对合成请求进行日志记录。
 
-有关更多信息，请参阅[控制 {{site.data.keyword.watson}} 服务的请求日志记录](/docs/services/watson/getting-started-logging.html)。
+有关更多信息，请参阅[控制 {{site.data.keyword.watson}} 服务的请求日志记录](/docs/services/watson?topic=watson-gs-logging-overview)。
 
 ### 信息安全
 {: #customSecurity}
@@ -61,12 +61,12 @@ subcollection: text-to-speech
 -   `POST /v1/customizations/{customization_id}/words`
 -   `PUT /v1/customizations/{customization_id}/words/{word}`
 
-如果需要，可以使用 `DELETE /v1/user_data` 方法来删除与客户标识关联的数据。有关更多信息，请参阅[信息安全](/docs/services/text-to-speech/information-security.html)。
+然后，可以在需要时使用 `DELETE /v1/user_data` 方法来删除与客户标识关联的数据。有关更多信息，请参阅[信息安全](/docs/services/text-to-speech?topic=text-to-speech-information-security)。
 
 ## 创建定制模型
 {: #cuModelsCreate}
 
-要创建新的定制模型，请使用 `POST /v1/customizations` 方法。新模型在刚创建时始终为空；您必须使用其他方法向其填充词/转换项对。如果新的定制模型是使用某个用户的服务凭证创建的，那么模型由该用户所拥有。有关更多信息，请参阅[定制声音模型的所有权](#customOwner)。
+要创建新的定制模型，请使用 `POST /v1/customizations` 方法。新模型在刚创建时始终为空。您必须使用其他方法向其填充词/转换项对。如果新的定制模型是使用某个服务实例的凭证创建的，那么该模型由该服务实例所拥有。有关更多信息，请参阅[定制声音模型的所有权](#customOwner)。
 
 可在请求主体中将以下属性作为 JSON 对象传递。
 
@@ -85,14 +85,16 @@ subcollection: text-to-speech
     </td>
   </tr>
   <tr>
-    <td><code>language</code><br/><em>可选</em></td>
+    <td><code>language</code><br/><em>      可选
+    </em></td>
     <td style="text-align:center">String</td>
     <td>
       定制模型语言的标识。对于美国英语，缺省值为 <code>en-US</code>。
-    </td>
+    定制模型可与指定语言中可用的任何声音（标准或神经）一起使用。</td>
   </tr>
   <tr>
-    <td><code>description</code><br/><em>可选</em></td>
+    <td><code>description</code><br/><em>      可选
+    </em></td>
     <td style="text-align:center">String</td>
     <td>
       新模型的描述。虽然描述是可选的，但强烈建议使用描述。
@@ -146,7 +148,7 @@ curl -X GET -u "apikey:{apikey}"
 ```
 {: codeblock}
 
-输出中除了包含在创建模型时输入的信息外，还包含模型所有者的服务凭证、模型的语言以及模型的创建时间和上次修改时间。由于模型自创建以来尚未进行修改，因此在示例中这两个时间相同。
+输出中除了包含在创建模型时输入的信息外，还包含模型所有者的凭证、模型的语言以及模型的创建时间和上次修改时间。由于模型自创建以来尚未进行修改，因此在示例中这两个时间相同。
 
 输出还包含 `words` 数组，用于列出模型的定制条目。由于模型尚未更新，因此示例中的该数组为空。
 
@@ -161,7 +163,7 @@ curl -X GET -u "apikey:{apikey}"
 ```
 {: pre}
 
-此方法将返回一个 JSON 数组，其中包含请求者拥有的每个定制模型的对象。所有者的服务凭证会显示在 `owner` 字段中。
+此方法将返回一个 JSON 数组，其中包含请求者拥有的每个定制模型的对象。所有者的凭证会显示在 `owner` 字段中。
 
 ```javascript
 {
@@ -206,7 +208,7 @@ curl -X POST -u "apikey:{apikey}"
 ```
 {: pre}
 
-有关更新模型中词的信息，请参阅[向定制模型添加多个词](/docs/services/text-to-speech/custom-entries.html#cuWordsAdd)。
+有关更新模型中词的信息，请参阅[向定制模型添加多个词](/docs/services/text-to-speech?topic=text-to-speech-customWords#cuWordsAdd)。
 
 ## 删除定制模型
 {: #cuModelsDelete}
