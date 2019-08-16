@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-06-04"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -34,7 +34,7 @@ subcollection: text-to-speech
   <caption>表 1. 规则元音（巴西葡萄牙语）</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      巴西葡萄牙语<br/>SPR 音标符号
+巴西葡萄牙语<br/>SPR 音标符号
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA 音标符号
@@ -51,11 +51,13 @@ subcollection: text-to-speech
       a [<strong>1</strong>]
     </td>
     <td style="text-align:center">
-      a<br/><br/>
+      a
+    <br/><br/>
       &#592;
     </td>
     <td style="text-align:center">
-      0061<br/><br/>
+      0061
+    <br/><br/>
       0250
     </td>
     <td>
@@ -234,7 +236,7 @@ subcollection: text-to-speech
   <caption>表 2. 半元音（巴西葡萄牙语）</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      巴西葡萄牙语<br/>SPR 音标符号
+巴西葡萄牙语<br/>SPR 音标符号
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA 音标符号
@@ -311,7 +313,7 @@ subcollection: text-to-speech
   <caption>表 3. 辅音（巴西葡萄牙语）</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      巴西葡萄牙语<br/>SPR 音标符号
+巴西葡萄牙语<br/>SPR 音标符号
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA 音标符号

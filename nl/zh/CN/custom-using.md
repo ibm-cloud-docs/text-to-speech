@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-06-24"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -25,7 +25,7 @@ subcollection: text-to-speech
 # 使用定制声音模型
 {: #customUsing}
 
-创建定制模型并使用定制条目填充该模型后，通过使用 HTTP `GET` 或 `POST /v1/synthesize` 方法或者 WebSocket `/v1/synthesize` 方法的 `customization_id` 查询参数来传递其定制标识 (GUID)，可使用该模型。必须通过模型所有者的服务凭证来调用使用定制模型的 `synthesize` 方法。
+创建定制模型并使用定制条目填充该模型后，通过使用 HTTP `GET` 或 `POST /v1/synthesize` 方法或者 WebSocket `/v1/synthesize` 方法的 `customization_id` 查询参数来传递其定制标识 (GUID)，可使用该模型。如果包含定制标识，那么必须使用拥有指定定制模型的服务实例的凭证来调用 `synthesize` 方法。
 {: shortdesc}
 
 前两个示例根据指示的定制模型中的条目生成 `IEEE` 的定制发音。这将使用定制发音，而不使用服务的常规发音规则中的缺省发音。

@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-09"
+lastupdated: "2019-06-21"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -31,6 +31,7 @@ subcollection: text-to-speech
 服务的常规发音规则对于普通词非常适用。但是，对于异常词，这些规则生成的结果可能并不理想。此类词包括特殊外来词、人名或地名，以及缩写或首字母缩略词。如果应用程序的词汇中包含此类词，那么可以使用定制接口来指定服务如何对此类词发音。
 
 定制接口是 Beta 功能，可用于所有语言。
+您必须具有标准价格套餐，才能使用声音模型定制。轻量套餐的用户无法使用定制接口。有关更多信息，请参阅 {{site.data.keyword.texttospeechshort}} 服务的[定价页面](https://www.ibm.com/cloud/watson-text-to-speech/pricing){: external}。
 {: note}
 
 ## 定制工作方式
@@ -38,9 +39,9 @@ subcollection: text-to-speech
 
 通过 {{site.data.keyword.texttospeechshort}} 服务的定制接口，可为特定语言创建词及其转换项的字典。此字典称为*定制声音模型*，或简单称为定制模型。定制声音模型中的每个定制条目都由一个*词*/*转换项*对组成。词的转换项会指示服务在输入文本中出现该词时如何发音。
 
-定制接口提供了多种方法，用于创建和管理由服务永久存储的定制声音模型。创建定制模型后，可以在使用任何版本的 `/v1/synthesize` 方法进行合成期间使用该模型。服务合成输入文本时，对于出现在定制模型中的词，会通过直接或间接应用其转换项来确定这些词的发音。
+定制接口提供了多种方法，用于创建和管理由服务永久存储的定制声音模型。创建定制模型后，可以在使用任何版本的 `/v1/synthesize` 方法进行合成期间使用该模型。服务合成输入文本时，对于出现在定制模型中的词，会通过直接或间接应用其转换项来确定这些词的发音。由于您为特定语言创建了定制声音模型，因此定制模型可与该语言中可用的任何声音（标准或神经）一起使用。
 
-可以将定制声音模型中词的转换项指定为*近似读音转换项*或*拼音转换项*。可以将这两种方法用于同一定制模型中的条目，并且可以在同一转换项中混合使用这两种方法。对于定制条目，有若干规则和准则适用。有关更多信息，请参阅[用于创建定制条目的规则](/docs/services/text-to-speech/custom-rules.html)。
+可以将定制声音模型中词的转换项指定为*近似读音转换项*或*拼音转换项*。可以将这两种方法用于同一定制模型中的条目，并且可以在同一转换项中混合使用这两种方法。对于定制条目，有若干规则和准则适用。有关更多信息，请参阅[用于创建定制条目的规则](/docs/services/text-to-speech?topic=text-to-speech-rules)。
 
 ## 近似读音转换项
 {: #soundsLike}
@@ -105,9 +106,9 @@ subcollection: text-to-speech
   </tr>
 </table>
 
-在这些示例中，拼音转换项字符串由音位符号和一个主重音标记组成。主重音标记在 IPA 中用 <code>&#712;</code> 表示，在 SPR 中用 `1` 表示。对于这两种表示法，主重音标记都会放在重读元音的符号正前方。虽然这些示例并未在拼音转换项中显示音节边界和次重音位置，但您也可以指定这两项。这两个元素不是必需元素，并且通常不需要这些元素来获得发音。与近似读音转换项一样，可以通过多个字符串来编写一个拼音转换项，各字符串之间用空格定界。
+在这些示例中，拼音转换项字符串由音位符号和一个主重音标记组成。主重音标记在 IPA 中用 <code>&#712;</code> 表示，在 SPR 中用 `1` 表示。对于这两种表示法，主重音标记都会紧挨在重读元音符号之前。虽然这些示例并未在拼音转换项中显示音节边界和次重音位置，但您也可以指定这两项。这两个元素不是必需元素，并且通常不需要这些元素来获得发音。与近似读音转换项一样，可以通过多个字符串来编写一个拼音转换项，各字符串之间用空格定界。
 
-您还可以将 IPA 转换项指定为 IPA Unicode 值。有关更多信息，请参阅[使用 IBM SPR](/docs/services/text-to-speech/SPRs.html) 以及在[支持的语言](/docs/services/text-to-speech/SPRs.html#supportedLanguages)中所引用页面上特定于语言的表。有关使用 IPA Unicode 值的示例转换项，请参阅 [phoneme 元素](/docs/services/text-to-speech/SSML-elements.html#phoneme_element)。
+您还可以将 IPA 转换项指定为 IPA Unicode 值。有关更多信息，请参阅[使用 IBM SPR](/docs/services/text-to-speech?topic=text-to-speech-sprs) 以及在[支持的语言](/docs/services/text-to-speech?topic=text-to-speech-sprs#supportedLanguages)中所引用页面上特定于语言的表。有关使用 IPA Unicode 值的示例转换项，请参阅 [phoneme 元素](/docs/services/text-to-speech?topic=text-to-speech-elements#phoneme_element)。
 {: note}
 
 ### 使用现有拼音转换项
@@ -117,16 +118,16 @@ subcollection: text-to-speech
 
 可以使用 `/GET v/1/pronunciation` 方法来获取词的初始拼音转换项。然后，可以修改转换项以获得所需的发音。与近似读音方法一样，您遵循的也是试错过程。您将候选转换项提交给服务，将词合成为输入文本，听取生成的音频，然后编辑该候选转换项。您可以重复此过程，直到对发音满意为止。
 
-有关更多信息，请参阅[查询某种语言的词](/docs/services/text-to-speech/custom-entries.html#cuWordsQueryLanguage)。
+有关更多信息，请参阅[查询某种语言的词](/docs/services/text-to-speech?topic=text-to-speech-customWords#cuWordsQueryLanguage)。
 
 ### 有关拼音转换项的更多信息
 {: #phoneticInfo}
 
 以下资源提供了有关拼音转换项的信息：
 
--   有关使用 SSML 及其 `<phoneme>` 元素的更多信息，请参阅[使用 SSML](/docs/services/text-to-speech/SSML.html)。
--   有关指定 SPR 转换项及其等效 IPA 符号的更多信息，请参阅[使用 IBM SPR](/docs/services/text-to-speech/SPRs.html)。
--   有关使用 IPA 符号的更多信息以及要获取符号的音频样本，请查阅 Web 上的源。您可以在 [en.wikipedia.org/wiki/International_Phonetic_Alphabet ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://en.wikipedia.org/wiki/International_Phonetic_Alphabet){: new_window} 中找到详细的介绍性讨论。
+-   有关使用 SSML 及其 `<phoneme>` 元素的更多信息，请参阅[使用 SSML](/docs/services/text-to-speech?topic=text-to-speech-ssml)。
+-   有关指定 SPR 转换项及其等效 IPA 音标符号的更多信息，请参阅[使用 IBM SPR](/docs/services/text-to-speech?topic=text-to-speech-sprs)。
+-   有关使用 IPA 音标符号的更多信息，以及要获取音标符号的音频样本，请查阅 Web 上的源。您可以在 [International Phonetic Alphabet](https://wikipedia.org/wiki/International_Phonetic_Alphabet){: external} 中找到详细的介绍性讨论。
 
 ## 混合的近似读音和拼音转换项
 

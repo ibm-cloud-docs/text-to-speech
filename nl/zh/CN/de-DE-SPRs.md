@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-06-04"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -34,7 +34,7 @@ subcollection: text-to-speech
   <caption>表 1. 规则元音（德语）</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      德语<br/>SPR 音标符号
+德语<br/>SPR 音标符号
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA 音标符号
@@ -51,11 +51,13 @@ subcollection: text-to-speech
       i
     </td>
     <td style="text-align:center">
-      i<br/><br/>
+      i
+    <br/><br/>
       &#105;&#720;
     </td>
     <td style="text-align:center">
-      0069<br/><br/>
+      0069
+    <br/><br/>
       0069+02D0
     </td>
     <td>
@@ -81,11 +83,13 @@ subcollection: text-to-speech
       e
     </td>
     <td style="text-align:center">
-      e<br/><br/>
+      e
+    <br/><br/>
       &#101;&#720;
     </td>
     <td style="text-align:center">
-      0065<br/><br/>
+      0065
+    <br/><br/>
       0065+02D0
     </td>
     <td>
@@ -155,11 +159,13 @@ subcollection: text-to-speech
       u
     </td>
     <td style="text-align:center">
-      u<br/><br/>
+      u
+    <br/><br/>
       &#117;&#720;
     </td>
     <td style="text-align:center">
-      0075<br/><br/>
+      0075
+    <br/><br/>
       0075+02D0
     </td>
     <td>
@@ -185,11 +191,13 @@ subcollection: text-to-speech
       o
     </td>
     <td style="text-align:center">
-      o<br/><br/>
+      o
+    <br/><br/>
       &#111;&#720;
     </td>
     <td style="text-align:center">
-      006F<br/><br/>
+      006F
+    <br/><br/>
       006F+02D0
     </td>
     <td>
@@ -215,7 +223,8 @@ subcollection: text-to-speech
       y
     </td>
     <td style="text-align:center">
-      y<br/><br/>
+      y
+    <br/><br/>
       &#121;&#720;
     </td>
     <td style="text-align:center">
@@ -281,7 +290,7 @@ subcollection: text-to-speech
   <caption>表 2. 弱化元音（德语）</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      德语<br/>SPR 音标符号
+德语<br/>SPR 音标符号
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA 音标符号
@@ -298,12 +307,14 @@ subcollection: text-to-speech
       @
     </td>
     <td style="text-align:center">
-      &#601;<br/><br/>
+      &#601;
+    <br/><br/>
       &#629;<br/><br/>
       &#600;
     </td>
     <td style="text-align:center">
-      0259<br/><br/>
+      0259
+    <br/><br/>
       0275<br/><br/>
       0258
     </td>
@@ -320,7 +331,7 @@ subcollection: text-to-speech
   <caption>表 3. 双元音（德语）</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      德语<br/>SPR 音标符号
+德语<br/>SPR 音标符号
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA 音标符号
@@ -371,13 +382,15 @@ subcollection: text-to-speech
     <td style="text-align:center">
       &#596;&#105;<br/><br/>
       &#596;&#121;<br/><br/>
-      &#596;&#618;<br/><br/>
+      &#596;&#618;
+    <br/><br/>
       &#596;&#655;
     </td>
     <td style="text-align:center">
       0254+0069<br/><br/>
       0254+0079<br/><br/>
-      0254+026A<br/><br/>
+      0254+026A
+    <br/><br/>
       0254+028F
     </td>
     <td>
@@ -395,7 +408,7 @@ subcollection: text-to-speech
   <caption>表 4. 鼻化元音（德语）</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      德语<br/>SPR 音标符号
+德语<br/>SPR 音标符号
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA 音标符号
@@ -428,7 +441,8 @@ subcollection: text-to-speech
       'E~'
     </td>
     <td style="text-align:center">
-      &#101;&#771;<br/><br/>
+      &#101;&#771;
+    <br/><br/>
       &#603;&#771;
     </td>
     <td style="text-align:center">
@@ -444,7 +458,8 @@ subcollection: text-to-speech
       'o~'
     </td>
     <td style="text-align:center">
-      &#111;&#771;<br/><br/>
+      &#111;&#771;
+    <br/><br/>
       &#596;&#771;
     </td>
     <td style="text-align:center">
@@ -480,7 +495,7 @@ subcollection: text-to-speech
   <caption>表 5. 辅音（德语）</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      德语<br/>SPR 音标符号
+德语<br/>SPR 音标符号
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA 音标符号
@@ -525,11 +540,13 @@ subcollection: text-to-speech
       d
     </td>
     <td style="text-align:center">
-      d<br/><br/>
+      d
+    <br/><br/>
       &#240; [<strong>1</strong>]
     </td>
     <td style="text-align:center">
-      0064<br/><br/>
+      0064
+    <br/><br/>
       00F0
     </td>
     <td>
@@ -555,13 +572,15 @@ subcollection: text-to-speech
       g
     </td>
     <td style="text-align:center">
-      g<br/><br/>
+      g
+    <br/><br/>
       &#609;<br/><br/>
       &#611;
     </td>
     <td style="text-align:center">
-      0067<br/><br/>
-      0261<br/><br/>
+0067<br/><br/>
+      0261
+    <br/><br/>
       0263
     </td>
     <td>
@@ -685,7 +704,8 @@ subcollection: text-to-speech
       x
     </td>
     <td style="text-align:center">
-      x<br/><br/>
+      x
+    <br/><br/>
       &#967;
     </td>
     <td style="text-align:center">
@@ -716,13 +736,15 @@ subcollection: text-to-speech
     </td>
     <td style="text-align:center">
       &#592;<br/><br/>
-      &#652;<br/><br/>
+      &#652;
+    <br/><br/>
       &#602;<br/><br/>
       &#605;
     </td>
     <td style="text-align:center">
       0250<br/><br/>
-      028C<br/><br/>
+      028C
+    <br/><br/>
       025A<br/><br/>
       025D
     </td>
@@ -736,12 +758,14 @@ subcollection: text-to-speech
     </td>
     <td style="text-align:center">
       &#116;&#115;<br/><br/>
-      &#678;<br/><br/>
+      &#678;
+    <br/><br/>
       &#952; [<strong>2</strong>]
     </td>
     <td style="text-align:center">
       0074+0073<br/><br/>
-      02A6<br/><br/>
+      02A6
+    <br/><br/>
       03B8
     </td>
     <td>
@@ -841,17 +865,21 @@ subcollection: text-to-speech
       r
     </td>
     <td style="text-align:center">
-      r<br/><br/>
+      r
+    <br/><br/>
       &#633;<br/><br/>
       &#640;<br/><br/>
-      &#641;<br/><br/>
+      &#641;
+    <br/><br/>
       &#638;
     </td>
     <td style="text-align:center">
-      0072<br/><br/>
+      0072
+    <br/><br/>
       0279<br/><br/>
       0280<br/><br/>
-      0281<br/><br/>
+      0281
+    <br/><br/>
       027E
     </td>
     <td>
@@ -863,11 +891,13 @@ subcollection: text-to-speech
       j
     </td>
     <td style="text-align:center">
-      j<br/><br/>
+      j
+    <br/><br/>
       &#669;
     </td>
     <td style="text-align:center">
-      006A<br/><br/>
+      006A
+    <br/><br/>
       029D
     </td>
     <td>
@@ -879,11 +909,13 @@ subcollection: text-to-speech
       w
     </td>
     <td style="text-align:center">
-      w<br/><br/>
+      w
+    <br/><br/>
       &#651;
     </td>
     <td style="text-align:center">
-      0077<br/><br/>
+      0077
+    <br/><br/>
       028B
     </td>
     <td>
@@ -895,11 +927,13 @@ subcollection: text-to-speech
       h
     </td>
     <td style="text-align:center">
-      h<br/><br/>
+      h
+    <br/><br/>
       &#614;
     </td>
     <td style="text-align:center">
-      0068<br/><br/>
+      0068
+    <br/><br/>
       0266
     </td>
     <td>

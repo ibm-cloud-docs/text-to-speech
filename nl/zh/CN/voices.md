@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-07-25"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -25,98 +25,191 @@ subcollection: text-to-speech
 # 语言和声音
 {: #voices}
 
-{{site.data.keyword.texttospeechfull}} 服务支持各种语言、声音和方言。对于每种语言，服务至少提供一个男声或女声，有时会同时提供这两者。每种声音会针对其方言使用相应的节奏和语调。
+{{site.data.keyword.texttospeechfull}} 服务支持各种语言、声音和方言。对于每种语言，服务至少提供一个女声。对于某些语言，服务提供多个声音，同时包含男声和女声。每种声音会针对其方言使用相应的节奏和语调。
 {: shortdesc}
+
+先前随服务提供的 `V2` 声音已停止使用。如果您的应用程序中使用的是 `V2` 声音，那么服务会自动改为使用等效的 `V3` 声音。
+{: note}
 
 ## 支持的语言和声音
 {: #languageVoices}
 
-表 1 列出了可用于每种语言和方言的声音，包括其性别。如果在请求中省略可选的 `voice` 参数，那么缺省情况下，服务会使用 `en-US_MichaelVoice` 声音。要了解为什么服务会为一些声音提供两个版本，请参阅[语音合成技术](#technologiesVoices)。
+表 1 列出了可用于每种语言和方言的声音，包括其类型和性别。所有声音都提供了[标准声音](#standardVoices)和[神经声音](#neuralVoices)。如果在请求中省略可选的 `voice` 参数，那么缺省情况下，服务会使用标准 `en-US_MichaelVoice` 声音。
 
-部署 `V2` 声音时的某个问题目前会导致合成语音中有背景噪声。有关更多信息，请参阅[已知限制](/docs/services/text-to-speech/release-notes.html#limitations)。
-{: note}
-
-<table style="width:90%">
+<table style="width:100%">
   <caption>表 1. 支持的语言和声音</caption>
   <tr>
     <th style="text-align:left">语言</th>
+    <th style="text-align:center">类型</th>
     <th style="text-align:center">声音</th>
     <th style="text-align:center">性别</th>
   </tr>
   <tr>
     <td style="text-align:left">巴西葡萄牙语</td>
+    <td style="text-align:center">标准</td>
     <td style="text-align:center"><code>pt-BR_IsabelaVoice</code></td>
     <td style="text-align:center">女声</td>
   </tr>
   <tr>
+    <td style="text-align:left"></td>
+    <td style="text-align:center">神经</td>
+    <td style="text-align:center"><code>pt-BR_IsabelaV3Voice</code></td>
+    <td style="text-align:center">女声</td>
+  </tr>
+  <tr>
     <td style="text-align:left">卡斯蒂利亚西班牙语</td>
+    <td style="text-align:center">标准</td>
     <td style="text-align:center"><code>es-ES_EnriqueVoice</code></td>
     <td style="text-align:center">男声</td>
   </tr>
   <tr>
+    <td style="text-align:left"></td>
+    <td style="text-align:center">神经</td>
+    <td style="text-align:center"><code>es-ES_EnriqueV3Voice</code></td>
+    <td style="text-align:center">男声</td>
+  </tr>
+  <tr>
     <td></td>
+    <td style="text-align:center">标准</td>
     <td style="text-align:center"><code>es-ES_LauraVoice</code></td>
     <td style="text-align:center">女声</td>
   </tr>
   <tr>
+    <td></td>
+    <td style="text-align:center">神经</td>
+    <td style="text-align:center"><code>es-ES_LauraV3Voice</code></td>
+    <td style="text-align:center">女声</td>
+  </tr>
+  <tr>
     <td style="text-align:left">法语</td>
+    <td style="text-align:center">标准</td>
     <td style="text-align:center"><code>fr-FR_ReneeVoice</code></td>
     <td style="text-align:center">女声</td>
   </tr>
   <tr>
+    <td style="text-align:left"></td>
+    <td style="text-align:center">神经</td>
+    <td style="text-align:center"><code>fr-FR_ReneeV3Voice</code></td>
+    <td style="text-align:center">女声</td>
+  </tr>
+  <tr>
     <td style="text-align:left">德语</td>
-    <td style="text-align:center"><code>de-DE_BirgitVoice</code><br/>
-      <code>de-DE_BirgitV2Voice</code></td>
+    <td style="text-align:center">标准</td>
+    <td style="text-align:center"><code>de-DE_BirgitVoice</code></td>
+    <td style="text-align:center">女声</td>
+  </tr>
+  <tr>
+    <td style="text-align:left"></td>
+    <td style="text-align:center">神经</td>
+    <td style="text-align:center"><code>de-DE_BirgitV3Voice</code></td>
     <td style="text-align:center">女声</td>
   </tr>
   <tr>
     <td></td>
-    <td style="text-align:center"><code>de-DE_DieterVoice</code><br/>
-      <code>de-DE_DieterV2Voice</code></td>
+    <td style="text-align:center">标准</td>
+    <td style="text-align:center"><code>de-DE_DieterVoice</code></td>
+    <td style="text-align:center">男声</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td style="text-align:center">神经</td>
+    <td style="text-align:center"><code>de-DE_DieterV3Voice</code></td>
     <td style="text-align:center">男声</td>
   </tr>
   <tr>
     <td style="text-align:left">意大利语</td>
-    <td style="text-align:center"><code>it-IT_FrancescaVoice</code><br/>
-      <code>it-IT_FrancescaV2Voice</code></td>
+    <td style="text-align:center">标准</td>
+    <td style="text-align:center"><code>it-IT_FrancescaVoice</code></td>
+    <td style="text-align:center">女声</td>
+  </tr>
+  <tr>
+    <td style="text-align:left"></td>
+    <td style="text-align:center">神经</td>
+    <td style="text-align:center"><code>it-IT_FrancescaV3Voice</code></td>
     <td style="text-align:center">女声</td>
   </tr>
   <tr>
     <td style="text-align:left">日语</td>
+    <td style="text-align:center">标准</td>
     <td style="text-align:center"><code>ja-JP_EmiVoice</code></td>
     <td style="text-align:center">女声</td>
   </tr>
   <tr>
+    <td style="text-align:left"></td>
+    <td style="text-align:center">神经</td>
+    <td style="text-align:center"><code>ja-JP_EmiV3Voice</code></td>
+    <td style="text-align:center">女声</td>
+  </tr>
+  <tr>
     <td style="text-align:left">拉丁美洲西班牙语</td>
+    <td style="text-align:center">标准</td>
     <td style="text-align:center"><code>es-LA_SofiaVoice</code></td>
     <td style="text-align:center">女声</td>
   </tr>
   <tr>
+    <td style="text-align:left"></td>
+    <td style="text-align:center">神经</td>
+    <td style="text-align:center"><code>es-LA_SofiaV3Voice</code></td>
+    <td style="text-align:center">女声</td>
+  </tr>
+  <tr>
     <td style="text-align:left">北美西班牙语</td>
+    <td style="text-align:center">标准</td>
     <td style="text-align:center"><code>es-US_SofiaVoice</code></td>
     <td style="text-align:center">女声</td>
   </tr>
   <tr>
+    <td style="text-align:left"></td>
+    <td style="text-align:center">神经</td>
+    <td style="text-align:center"><code>es-US_SofiaV3Voice</code></td>
+    <td style="text-align:center">女声</td>
+  </tr>
+  <tr>
     <td style="text-align:left">英国英语</td>
+    <td style="text-align:center">标准</td>
     <td style="text-align:center"><code>en-GB_KateVoice</code></td>
     <td style="text-align:center">女声</td>
   </tr>
   <tr>
+    <td style="text-align:left"></td>
+    <td style="text-align:center">神经</td>
+    <td style="text-align:center"><code>en-GB_KateV3Voice</code></td>
+    <td style="text-align:center">女声</td>
+  </tr>
+  <tr>
     <td style="text-align:left">美国英语</td>
-    <td style="text-align:center"><code>en-US_AllisonVoice</code><br/>
-      <code>en-US_AllisonV2Voice</code></td>
+    <td style="text-align:center">标准</td>
+    <td style="text-align:center"><code>en-US_AllisonVoice</code></td>
+    <td style="text-align:center">女声</td>
+  </tr>
+  <tr>
+    <td style="text-align:left"></td>
+    <td style="text-align:center">神经</td>
+    <td style="text-align:center"><code>en-US_AllisonV3Voice</code></td>
     <td style="text-align:center">女声</td>
   </tr>
   <tr>
     <td></td>
-    <td style="text-align:center"><code>en-US_LisaVoice</code><br/>
-      <code>en-US_LisaV2Voice</code></td>
+    <td style="text-align:center">标准</td>
+    <td style="text-align:center"><code>en-US_LisaVoice</code></td>
     <td style="text-align:center">女声</td>
   </tr>
   <tr>
     <td></td>
-    <td style="text-align:center"><code>en-US_MichaelVoice</code><br/>
-      <code>en-US_MichaelV2Voice</code></td>
+    <td style="text-align:center">神经</td>
+    <td style="text-align:center"><code>en-US_LisaV3Voice</code></td>
+    <td style="text-align:center">女声</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td style="text-align:center">标准</td>
+    <td style="text-align:center"><code>en-US_MichaelVoice</code></td>
+    <td style="text-align:center">男声</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td style="text-align:center">神经</td>
+    <td style="text-align:center"><code>en-US_MichaelV3Voice</code></td>
     <td style="text-align:center">男声</td>
   </tr>
 </table>
@@ -124,37 +217,44 @@ subcollection: text-to-speech
 声音 `es-LA_SofiaVoice` 和 `es-US_SofiaVoice` 本质上是相同的声音。这两种声音最重要的差异是如何解释 $（美元符号）。拉丁美洲版本使用词汇 *pesos*，而北美版本使用词汇 *d&oacute;lares*。除此之外，这两个声音之间还可能存在其他较小的差异。
 {: note}
 
-### 语音合成技术
-{: #technologiesVoices}
+### 标准声音
+{: #standardVoices}
 
-服务为某些声音提供了两个版本，例如 `en-US_AllisonVoice` 和 `en-US_AllisonV2Voice`。这两个版本之间的主要差异反映在服务用于合成语音的技术：
+标准声音的名称（例如，`pt-BR_IsabelaVoice` 和 `en-US_AllisonVoice`）中不包含版本字符串 (`V3`)。标准声音使用拼接合成技术来组合记录的语音段（或单元），以生成请求的音频。所记录音段的拼接点有时会导致语音中断，由此降低所生成语音的质量和自然性。
 
--   *拼接合成*技术用于组合记录的语音段（或单元），以生成请求的音频。此技术生成的音频可能被视为更清脆的声音，但所记录音段的拼接点有时会导致语音失真。
+### 神经声音
+{: #neuralVoices}
 
-    名称中不包含字符串 `V2` 的声音（例如，`en-US_AllisonVoice`）即为基于拼接合成技术的声音。
--   *深度学习合成*技术使用深度神经网络 (DNN) 来针对指定的文本合成语音。这种方法并不是将记录的音频段串接在一起，而是依赖机器学习对记录的语音数据进行 DNN 训练。基于深度学习（或 DNN）的合成所生成的音频在韵律方面更自然，总体质量更一致。
+神经声音的名称（例如，`pt-BR_IsabelaV3Voice` 和 `en-US_AllisonV3Voice`）中包含版本字符串 (`V3`)。与依赖于音段选择和拼接不同，神经声音技术使用多个深度神经网络 (DNN) 来预测语音的声学（谱）特征。DNN 通过自然的人声进行训练，并根据预测的声学特征生成相应的音频。
 
-    名称中包含字符串 `V2` 的声音（例如，`en-US_AllisonV2Voice`）是更新的声音，使用的是基于 DNN 的合成。
+在合成期间，DNN 会预测语音的音高和音位持续时间（韵律）、谱结构和波形。神经声音生成的语音既清脆又清晰，具有非常自然且流畅的音频质量。因此，神经声音在整体质量上比标准声音具有更高的一致性。
 
-在对您的应用采用新声音之前，您需要对这些声音进行试验。这两种技术会生成具有不同信号质量的音频，因此新声音可能并不是对于所有应用都更好。此外，基于 DNN 的声音不支持以下 SSML 元素或属性：
+有关服务的神经声音技术的更多信息，请参阅
+
+-   博客帖子 [IBM Watson Text to Speech: Neural Voices Generally Available](https://medium.com/ibm-watson/ibm-watson-text-to-speech-neural-voices-added-to-service-e562106ff9c7){: external}
+-   研究论文 [High quality, lightweight and adaptable Text to Speech using LPCNet](https://arxiv.org/abs/1905.00590){: external}
+
+神经声音不支持以下 SSML 元素或属性：
 
 -   `<prosody>` 元素的 `volume` 属性
 -   `<express-as>` 元素
 -   `<voice-transformation>` 元素
 
-如果您的应用使用了这些元素，请继续使用基于拼接合成的声音。
+但是，您可能发现在使用神经声音时，不再需要这些 SSML 功能。此外，您可以通过使用 `<prosody>` 元素替换 `<voice-transformation>` 元素，对神经声音进行音高和语速修改。有关更多信息，请参阅 [prosody 元素](/docs/services/text-to-speech?topic=text-to-speech-elements#prosody_element)。
 
 ### 声音定制
 {: #customizeVoice}
 
 合成文本时，服务会应用与语言相关的发音规则，以将每个词的普通拼写转换为拼音拼写。服务的发音规则对于普通词非常适用，但是对于异常词（例如，外来词、人名、缩写或首字母缩略词），这些规则生成的结果可能并不理想。
 
-如果您的应用的词汇中包含此类词，那么可以使用定制接口来指定服务如何对此类词发音。有关更多信息，请参阅[了解定制](/docs/services/text-to-speech/custom-intro.html)。
+如果您的应用的词汇中包含此类词，那么可以使用定制接口来指定服务如何对此类词发音。有关更多信息，请参阅[了解定制](/docs/services/text-to-speech?topic=text-to-speech-customIntro)。
+
+您为特定语言而非特定声音创建了定制声音模型。因此，定制模型可与其指定语言中的任何声音（标准或神经）一起使用。
 
 ## 指定声音
 {: #specifyVoice}
 
-HTTP `GET` 和 `POST /v1/synthesize` 方法以及 WebSocket `/v1/synthesize` 方法都接受可选的 `voice` 查询参数来指定用于合成音频的声音。有关更多信息，请参阅 [HTTP 接口](/docs/services/text-to-speech/http.html)和 [WebSocket 接口](/docs/services/text-to-speech/websockets.html)。
+HTTP `GET` 和 `POST /v1/synthesize` 方法以及 WebSocket `/v1/synthesize` 方法都接受可选的 `voice` 查询参数来指定用于合成音频的声音。有关更多信息，请参阅 [HTTP 接口](/docs/services/text-to-speech?topic=text-to-speech-usingHTTP)和 [WebSocket 接口](/docs/services/text-to-speech?topic=text-to-speech-usingWebSocket)。
 
 服务对输入文本语言的理解基于指定的声音。请确保指定与输入文本的语言相匹配的声音。例如，如果指定法语声音 (`fr-FR_ReneeVoice`)，服务会假定输入文本是用法语编写的。如果传递的文本不是用该声音的语言编写的（例如，对于法语声音，传递了英语文本），那么服务可能无法生成有意义的结果。
 
@@ -218,12 +318,12 @@ HTTP `GET` 和 `POST /v1/synthesize` 方法以及 WebSocket `/v1/synthesize` 方
     </td>
   </tr>
   <tr>
-    <td><code>customization_id</code><br/><em>可选</em></td>
+    <td><code>customization_id</code><br/><em>      可选
+    </em></td>
     <td style="text-align:center">查询</td>
     <td style="text-align:center">String</td>
     <td>
-      提供为指定声音定义的定制声音模型的全局唯一标识 (GUID)。如果包含定制标识，那么必须使用定制模型所有者的服务凭证来调用此方法。
-    </td>
+      针对为指定声音的语言定义的定制声音模型，提供全局唯一标识 (GUID)。如果包含定制标识，那么必须使用拥有定制模型的服务实例的凭证来发出请求。</td>
   </tr>
 </table>
 
@@ -254,4 +354,4 @@ HTTP `GET` 和 `POST /v1/synthesize` 方法以及 WebSocket `/v1/synthesize` 方
 ```
 {: codeblock}
 
-其他 `customization` 字段的属性提供定制声音模型的 GUID、名称、语言和描述等信息。此外，还会显示模型所有者的服务凭证、创建模型的日期和时间，以及上次修改模型的日期和时间。
+其他 `customization` 字段的属性提供定制声音模型的 GUID、名称、语言和描述等信息。此外，还会显示模型所有者的凭证、创建模型的日期和时间，以及上次修改模型的日期和时间。

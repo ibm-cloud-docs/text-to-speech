@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-06-04"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -173,7 +173,7 @@ If it is sunny, I will go to the beach.
     ```
     {: codeblock}
 
-    服务会返回字符串 "*Hello.*" 的计时信息。服务在规范化步骤中，将逐字母拼读该词。响应中的词计时信息反映的开始时间是读字母 "*h*" 的时间，结束时间是读字母 "*o*" 的时间。
+    服务会返回字符串 "*Hello.*" 的计时信息. 服务在规范化步骤中，将逐字母拼读该词。响应中的词计时信息反映的开始时间是读字母 "*h*" 的时间，结束时间是读字母 "*o*" 的时间。
 -   `<phoneme>` 用于对开始和结束 `<phoneme>` 标记之间所含的文本提供发音。但文本和结束标记都是可选的。以下示例包括嵌入文本和结束标记：
 
     ```xml
@@ -198,12 +198,12 @@ If it is sunny, I will go to the beach.
     ```
     {: codeblock}
 
-    服务会生成以下字符串的计时信息："*I*"、"*work*"、"*at*" 和 "*{{site.data.keyword.IBM_notm}}.*"。服务会将字符串 "*{{site.data.keyword.IBM_notm}}*" 规范化为 "*International Business Machines*"。该字符串的词计时信息反映的开始时间是读 "*International*" 的时间，结束时间是读 "*Machines*" 的时间。
+    服务会生成以下字符串的计时信息："*I*"、"*work*"、"*at*" 和 "*{{site.data.keyword.IBM_notm}}.*". 服务会将字符串 "*{{site.data.keyword.IBM_notm}}*" 规范化为 "*International Business Machines*"。该字符串的词计时信息反映的开始时间是读 "*International*" 的时间，结束时间是读 "*Machines*" 的时间。
 -   `<break>` 用于在语音文本中插入停顿。服务将词计时中生成的静默反映为在 `<break>` 元素之前词的结束时间与该元素之后词的开始时间之间的间隔。
 - `<paragraph>`（或 `<p>`）可以在音频中插入静默。服务不会返回静默的计时信息。
 - `<sentence>`（或 `<s>`）可以在音频中插入静默。服务不会返回静默的计时信息。
 
-列表中未提及的 SSML 元素不会影响词计时信息。有关服务对 SSML 的支持的更多信息，请参阅[使用 SSML](/docs/services/text-to-speech/SSML.html)。
+列表中未提及的 SSML 元素不会影响词计时信息。有关服务对 SSML 的支持的更多信息，请参阅[使用 SSML](/docs/services/text-to-speech?topic=text-to-speech-ssml)。
 
 ## 使用 mark 元素的示例
 {: #timingExample}

@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-06-04"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -34,7 +34,7 @@ subcollection: text-to-speech
   <caption>表 1. 元音和标记（日语）</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      日语<br/>SPR 音标符号
+日语<br/>SPR 音标符号
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA 音标符号
@@ -51,12 +51,14 @@ subcollection: text-to-speech
       a
     </td>
     <td style="text-align:center">
-      a<br/><br/>
+      a
+    <br/><br/>
       &#592;<br/><br/>
       &#593;
     </td>
     <td style="text-align:center">
-      0061<br/><br/>
+      0061
+    <br/><br/>
       0250<br/><br/>
       0251
     </td>
@@ -69,11 +71,13 @@ subcollection: text-to-speech
       i
     </td>
     <td style="text-align:center">
-      i<br/><br/>
+      i
+    <br/><br/>
       &#618;
     </td>
     <td style="text-align:center">
-      0069<br/><br/>
+      0069
+    <br/><br/>
       026A
     </td>
     <td>
@@ -101,11 +105,13 @@ subcollection: text-to-speech
       e
     </td>
     <td style="text-align:center">
-      e<br/><br/>
+      e
+    <br/><br/>
       &#603;
     </td>
     <td style="text-align:center">
-      0065<br/><br/>
+      0065
+    <br/><br/>
       025B
     </td>
     <td>
@@ -117,13 +123,17 @@ subcollection: text-to-speech
       o
     </td>
     <td style="text-align:center">
-      o<br/><br/>
-      &#594;<br/><br/>
+      o
+    <br/><br/>
+      &#594;
+    <br/><br/>
       &#596;
     </td>
     <td style="text-align:center">
-      006F<br/><br/>
-      0252<br/><br/>
+      006F
+    <br/><br/>
+      0252
+    <br/><br/>
       0254
     </td>
     <td>
@@ -189,7 +199,7 @@ subcollection: text-to-speech
   <caption>表 2. 辅音（日语）</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      日语<br/>SPR 音标符号
+日语<br/>SPR 音标符号
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA 音标符号
@@ -366,17 +376,23 @@ subcollection: text-to-speech
       r
     </td>
     <td style="text-align:center">
-      &#638;<br/><br/>
-      r<br/><br/>
+      &#638;
+    <br/><br/>
+      r
+    <br/><br/>
       &#633;<br/><br/>
-      l<br/><br/>
+      l
+    <br/><br/>
       &#637;
     </td>
     <td style="text-align:center">
-      027E<br/><br/>
-      0072<br/><br/>
+      027E
+    <br/><br/>
+      0072
+    <br/><br/>
       0279<br/><br/>
-      006C<br/><br/>
+      006C
+    <br/><br/>
       027D
     </td>
     <td>
@@ -388,11 +404,13 @@ subcollection: text-to-speech
       w
     </td>
     <td style="text-align:center">
-      w<br/><br/>
+      w
+    <br/><br/>
       &#624;
     </td>
     <td style="text-align:center">
-      0077<br/><br/>
+      0077
+    <br/><br/>
       0270
     </td>
     <td>
@@ -466,11 +484,13 @@ subcollection: text-to-speech
       b
     </td>
     <td style="text-align:center">
-      b<br/><br/>
+      b
+    <br/><br/>
       v
     </td>
     <td style="text-align:center">
-      0062<br/><br/>
+      0062
+    <br/><br/>
       0076
     </td>
     <td>

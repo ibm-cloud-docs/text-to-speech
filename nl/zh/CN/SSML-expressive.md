@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-09"
+lastupdated: "2019-06-21"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -22,20 +22,21 @@ subcollection: text-to-speech
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# 表达性 SSML
+# 表现力 SSML
 {: #expressive}
 
-缺省情况下，{{site.data.keyword.texttospeechfull}} 服务会以中性陈述风格来合成文本。服务扩展了 SSML，增加了 `<express-as>` 元素，用于通过将文本转换为各种说话风格的合成语音来实现表达性。此元素类似于 SSML 元素 `<say-as>`，后者用于为日期、时间和数字等格式化文本指定文本规范化。
+缺省情况下，{{site.data.keyword.texttospeechfull}} 服务会以中性陈述风格来合成文本。服务扩展了 SSML：增加了 `<express-as>` 元素，通过将文本转换为各种说话风格的合成语音来提供表现力。此元素类似于 SSML 元素 `<say-as>`，后者用于为日期、时间和数字等格式化文本指定文本规范化。
 {: shortdesc}
 
 ## 语言支持
 {: #languages-expressive}
 
-服务仅支持对美国英语 Allison 声音 (`en-US_AllisonVoice`) 使用表达性。`en-US_AllisonV2Voice` 声音不支持表达性。将此元素用于不支持的声音会返回错误。
+服务仅支持对标准美国英语 Allison 声音 (`en-US_AllisonVoice`) 使用表现力。神经 `en-US_AllisonV3Voice` 声音不支持表现力。将此元素用于不支持的声音会返回错误。
 
 ## express-as 元素
+{: #ssml-express-as}
 
-可以将 `<express-as>` 元素应用于文本的整个主体，也可应用于句子或者片段，如短语或词。此元素接受一个必需属性 `type`，描述要用于指定文本的表达的类型：`GoodNews`、`Apology` 或 `Uncertainty`。
+可以将 `<express-as>` 元素应用于整个文本、一个句子或片段（如短语或词）。此元素接受一个必需属性 `type`，描述要用于指定文本的表达的类型：`GoodNews`、`Apology` 或 `Uncertainty`。
 
 ### GoodNews
 {: #goodnews}
@@ -54,7 +55,6 @@ subcollection: text-to-speech
 <express-as type="GoodNews">
   恭喜订婚！你们真是天造地设的一对！
 </express-as>
-
 <express-as type="GoodNews">
   哇，祝贺您升职！这真是重要的职位！
 </express-as>
@@ -78,7 +78,6 @@ subcollection: text-to-speech
 <express-as type="Apology">
   请原谅我删除了您的文件。这是意外。
 </express-as>
-
 <express-as type="Apology">
   有什么办法能让我弥补我的过失吗？
 </express-as>
@@ -102,16 +101,15 @@ subcollection: text-to-speech
 <express-as type="Uncertainty">
   您能再解释一遍吗？我不确定是否理解了。
 </express-as>
-
 <express-as type="Uncertainty">
   很抱歉，我没听清您的姓名。请您再重复一遍好吗？
 </express-as>
 ```
 {: codeblock}
 
-## 表达性示例
+## 表现力示例
 
-以下示例说明了如何在 `POST /v1/synthesize` 方法的 `text` 属性中使用所有三种形式的表达性。要合成的文本位于 SSML 根 `<speak>` 元素范围内。
+以下示例说明了如何在 `POST /v1/synthesize` 方法的 `text` 属性中使用所有三种形式的表现力。要合成的文本位于 SSML 根 `<speak>` 元素范围内。
 
 ```xml
 {

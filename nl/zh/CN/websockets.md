@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-09"
+lastupdated: "2019-06-24"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -34,9 +34,9 @@ subcollection: text-to-speech
 1.  [发送输入文本](#WSsend)。
 1.  [接收响应](#WSreceive)。
 
-WebSocket 接口接受的输入和生成的结果与 HTTP 接口的 `GET` 和 `POST /v1/synthesize` 方法完全相同。但是，WebSocket 接口支持使用 SSML `<mark>` 元素来标识用户指定的标记在音频中的位置。此接口还可以返回输入文本中所有字符串的计时信息。有关更多信息，请参阅[获取词计时](/docs/services/text-to-speech/word-timing.html)。
+WebSocket 接口接受的输入和生成的结果与 HTTP 接口的 `GET` 和 `POST /v1/synthesize` 方法完全相同。但是，WebSocket 接口支持使用 SSML `<mark>` 元素来标识用户指定的标记在音频中的位置。此接口还可以返回输入文本中所有字符串的计时信息。有关更多信息，请参阅[获取词计时](/docs/services/text-to-speech?topic=text-to-speech-timing)。
 
-以下示例代码片段是用 JavaScript 编写的，并基于 HTML5 WebSocket API。有关 WebSocket 协议的更多信息，请参阅因特网工程任务组织 (IETF) 的 [Request for Comments (RFC) 6455 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://tools.ietf.org/html/rfc6455){: new_window}。
+以下示例代码片段是用 JavaScript 编写的，并基于 HTML5 WebSocket API。有关 WebSocket 协议的更多信息，请参阅因特网工程任务组织 (IETF) 的 [Request for Comments (RFC) 6455](http://tools.ietf.org/html/rfc6455){: external}。
 {: note}
 
 ## 打开连接
@@ -69,47 +69,53 @@ WebSocket 客户机调用此方法并使用以下查询参数来建立与服务�
   </tr>
   <tr>
     <td style="text-align:left"><code>access_token</code>
-      <br/><em>可选</em></td>
+      <br/><em>      可选
+    </em></td>
     <td style="text-align:center">String</td>
     <td style="text-align:left">
-      <em>如果使用的是 IAM 认证</em>，请传递有效的 IAM 访问令牌向服务进行认证。通过调用传递的是 IAM 访问令牌，而不是传递 API 密钥。必须使用未到期的访问令牌。有关获取访问令牌的信息，请参阅[使用 IAM 令牌进行认证](/docs/services/watson/getting-started-iam.html)。
+      <em>如果使用的是 IAM 认证</em>，请传递有效的 IAM 访问令牌向服务进行认证。通过调用传递的是 IAM 访问令牌，而不是传递 API 密钥。必须使用未到期的访问令牌。有关获取访问令牌的信息，请参阅[使用 IAM 令牌进行认证](/docs/services/watson?topic=watson-iam)。
     </td>
   </tr>
   <tr>
     <td style="text-align:left"><code>watson-token</code>
-      <br/><em>可选</em></td>
+      <br/><em>      可选
+    </em></td>
     <td style="text-align:center">String</td>
     <td style="text-align:left">
-      <em>如果使用的是 Cloud Foundry 服务凭证</em>，请传递有效的 {{site.data.keyword.watson}} 认证令牌向服务进行认证。通过调用传递的是 {{site.data.keyword.watson}} 令牌，而不是传递服务凭证。{{site.data.keyword.watson}} 令牌基于 Cloud Foundry 服务凭证，该凭证使用 `username` 和 `password` 进行 HTTP 基本认证。有关获取 {{site.data.keyword.watson}} 令牌的信息，请参阅 [{{site.data.keyword.watson}} 令牌](/docs/services/watson/getting-started-tokens.html)。
+      <em>如果使用的是 Cloud Foundry 服务凭证</em>，请传递有效的 {{site.data.keyword.watson}} 认证令牌向服务进行认证。通过调用传递的是 {{site.data.keyword.watson}} 令牌，而不是传递服务凭证。{{site.data.keyword.watson}} 令牌基于 Cloud Foundry 服务凭证，该凭证使用 `username` 和 `password` 进行 HTTP 基本认证。有关获取 {{site.data.keyword.watson}} 令牌的信息，请参阅 [{{site.data.keyword.watson}} 令牌](/docs/services/watson?topic=watson-gs-tokens-watson-tokens)。
     </td>
   </tr>
   <tr>
-    <td><code>voice</code><br/><em>可选</em></td>
+    <td><code>voice</code><br/><em>      可选
+    </em></td>
     <td style="text-align:center">String</td>
     <td>
-      指定音频中读文本的声音。省略此参数将使用缺省声音 `en-US_MichaelVoice`。有关更多信息，请参阅[语言和声音](/docs/services/text-to-speech/voices.html)。
+      指定音频中读文本的声音。省略此参数将使用缺省声音 `en-US_MichaelVoice`。有关更多信息，请参阅[语言和声音](/docs/services/text-to-speech?topic=text-to-speech-voices)。
     </td>
   </tr>
   <tr>
-    <td><code>customization_id</code><br/><em>可选</em></td>
+    <td><code>customization_id</code><br/><em>      可选
+    </em></td>
     <td style="text-align:center">String</td>
     <td>
-      指定用于合成的定制声音模型的全局唯一标识 (GUID)。仅当定制声音模型与用于合成的声音的语言相匹配时，才可保证该模型正常工作。如果包含定制标识，那么必须使用定制模型所有者的服务凭证来调用此方法。省略此参数可使用没有任何定制的指定声音。有关更多信息，请参阅[了解定制](/docs/services/text-to-speech/custom-intro.html)。
+      指定用于合成的定制声音模型的全局唯一标识 (GUID)。仅当定制声音模型与用于合成的声音的语言相匹配时，才可保证该模型正常工作。如果包含定制标识，那么必须使用拥有定制模型的服务实例的凭证来发出请求。省略此参数可使用没有任何定制的指定声音。有关更多信息，请参阅[了解定制](/docs/services/text-to-speech?topic=text-to-speech-customIntro)。
     </td>
   </tr>
   <tr>
-    <td><code>x-watson-learning-opt-out</code><br/><em>可选</em></td>
+    <td><code>x-watson-learning-opt-out</code><br/><em>      可选
+    </em></td>
     <td style="text-align:center">Boolean</td>
     <td>
-      指示服务是否记录通过连接发送的请求和结果。要阻止 IBM 访问您的数据以进行常规服务改进，请为此参数指定 <code>true</code>。有关更多信息，请参阅[控制 Watson 服务的请求日志记录](/docs/services/watson/getting-started-logging.html)。
+      指示服务是否记录通过连接发送的请求和结果。要阻止 IBM 访问您的数据以进行常规服务改进，请为此参数指定 <code>true</code>。有关更多信息，请参阅[控制 Watson 服务的请求日志记录](/docs/services/watson?topic=watson-gs-logging-overview)。
     </td>
   </tr>
   <tr>
     <td style="text-align:left"><code>x-watson-metadata</code>
-      <br/><em>可选</em></td>
+      <br/><em>      可选
+    </em></td>
     <td style="text-align:center">String</td>
     <td style="text-align:left">
-      将客户标识与通过连接传递的数据相关联。此参数接受自变量 <code>customer_id={id}</code>，其中 <code>id</code> 是要与数据关联的随机或通用字符串。必须对该自变量进行 URL 编码，使其成为参数，例如 `customer_id%3dmy_ID`。缺省情况下，没有客户标识与数据相关联。有关更多信息，请参阅[信息安全](/docs/services/text-to-speech/information-security.html)。
+      将客户标识与通过连接传递的数据相关联。此参数接受自变量 <code>customer_id={id}</code>，其中 <code>id</code> 是要与数据关联的随机或通用字符串。必须对该自变量进行 URL 编码，以转入该参数，例如 `customer_id%3dmy_ID`。缺省情况下，没有客户标识与数据相关联。有关更多信息，请参阅[信息安全](/docs/services/text-to-speech?topic=text-to-speech-information-security)。
     </td>
   </tr>
 </table>
@@ -121,7 +127,6 @@ var IAM_access_token = '{access_token}';
 var wsURI = 'wss://stream.watsonplatform.net/text-to-speech/api/v1/synthesize'
   + '?access_token=' + IAM_access_token
   + '&voice=en-US_AllisonVoice';
-
 var websocket = new WebSocket(wsURI);
 websocket.onopen = function(evt) { onOpen(evt) };
 websocket.onclose = function(evt) { onClose(evt) };
@@ -146,22 +151,23 @@ websocket.onerror = function(evt) { onError(evt) };
     <td><code>text</code><br/><em>必需</em></td>
     <td style="text-align:center">String</td>
     <td>
-      提供要合成的文本。客户机可以传递纯文本或使用语音合成标记语言 (SSML) 进行注释的文本。客户机在请求中最多可传递 5 KB 的输入文本。此限制包括指定的任何 SSML。有关更多信息，请参阅[指定输入文本](/docs/services/text-to-speech/http.html#input)及其后面的各部分内容。<br/><br/>
-      SSML 输入还可以包含 <code>&lt;mark&gt;</code> 元素。有关更多信息，请参阅[指定 SSML 标记](/docs/services/text-to-speech/word-timing.html#mark)。
+      提供要合成的文本。客户机可以传递纯文本或使用语音合成标记语言 (SSML) 进行注释的文本。客户机在请求中最多可传递 5 KB 的输入文本。此限制包括指定的任何 SSML。有关更多信息，请参阅[指定输入文本](/docs/services/text-to-speech?topic=text-to-speech-usingHTTP#input)及其后面的各部分内容。<br/><br/>
+      SSML 输入还可以包含 <code>&lt;mark&gt;</code> 元素。有关更多信息，请参阅[指定 SSML 标记](/docs/services/text-to-speech?topic=text-to-speech-timing#mark)。
     </td>
   </tr>
   <tr>
     <td><code>accept</code><br/><em>必需</em></td>
     <td style="text-align:center">String</td>
     <td>
-      指定请求的音频格式（MIME 类型）。使用 `*/*` 可请求缺省音频格式 <code>audio/ogg;codecs=opus</code>。有关更多信息，请参阅[音频格式](/docs/services/text-to-speech/audio-formats.html)。
+      指定请求的音频格式（MIME 类型）。使用 `*/*` 可请求缺省音频格式 <code>audio/ogg;codecs=opus</code>。有关更多信息，请参阅[音频格式](/docs/services/text-to-speech?topic=text-to-speech-audioFormats)。
     </td>
   </tr>
   <tr>
-    <td><code>timings</code><br/><em>可选</em></td>
+    <td><code>timings</code><br/><em>      可选
+    </em></td>
     <td style="text-align:center">String[ ]</td>
     <td>
-      指定服务将返回输入文本中所有字符串的词计时信息。服务会返回输入中每个标记的开始时间和结束时间。将 <code>words</code> 指定为数组的唯一元素，以请求词计时。指定空数组或省略此参数时，不会收到任何词计时信息。有关更多信息，请参阅[获取词计时](/docs/services/text-to-speech/word-timing.html#timing)。<em>日语输入文本不支持此参数。</em>
+      指定服务将返回输入文本中所有字符串的词计时信息。服务会返回输入中每个标记的开始时间和结束时间。将 <code>words</code> 指定为数组的唯一元素，以请求词计时。指定空数组或省略此参数时，不会收到任何词计时信息。有关更多信息，请参阅[获取词计时](/docs/services/text-to-speech?topic=text-to-speech-timing#timing)。<em>日语输入文本不支持此参数。</em>
     </td>
   </tr>
 </table>
@@ -202,7 +208,7 @@ function onOpen(evt) {
 
 服务还可以发送包含警告或错误的文本消息。服务完成输入文本的合成后，会自动关闭 WebSocket 连接。
 
-客户机需要将来自服务的二进制响应附加到通过连接收到的音频结果。客户机可以通过响应或显示文本消息，或者捕获文本消息供应用程序使用（例如，如果消息包含标记位置），从而对这些消息进行处理。以下 `onMessage` 函数的简单示例将从服务收到的文本和二进制消息，根据其类型附加到相应的变量。`onClose()` 函数执行时，已收到整个音频流。
+客户机需要将来自服务的二进制响应附加到通过连接收到的音频结果。客户机可以通过响应或显示文本消息，或者通过捕获文本消息供应用程序使用（例如，如果消息包含标记位置），对这些消息进行处理。以下 `onMessage` 函数的简单示例将从服务收到的文本和二进制消息，根据其类型附加到相应的变量。`onClose()` 函数执行时，已收到整个音频流。
 
 ```javascript
 var messages;
@@ -270,4 +276,4 @@ function onClose(evt) {
 ```
 {: codeblock}
 
-有关 WebSocket 返回码的更多信息，请参阅因特网工程任务组织 (IETF) 的 [Request for Comments (RFC) 6455 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://tools.ietf.org/html/rfc6455){: new_window}。
+有关 WebSocket 返回码的更多信息，请参阅因特网工程任务组织 (IETF) 的 [Request for Comments (RFC) 6455](http://tools.ietf.org/html/rfc6455){: external}。

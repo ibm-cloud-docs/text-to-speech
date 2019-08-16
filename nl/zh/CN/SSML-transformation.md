@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-09"
+lastupdated: "2019-06-21"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -25,7 +25,7 @@ subcollection: text-to-speech
 # 声音变换 SSML
 {: #transformation}
 
-像大多数语音合成系统一样，{{site.data.keyword.texttospeechfull}} 服务也只能使用有限数量的声音来发音。此外，某些语言仅提供一种或两种声音。为了扩展可能的声音的范围，服务通过 `<voice-transformation>` 元素来扩展 SSML。您可以使用此元素通过控制缺省声音的各个方面来实现不同的虚拟声音。此功能的应用包括：
+像大多数语音合成系统一样，{{site.data.keyword.texttospeechfull}} 服务也只能使用有限数量的声音来发音。此外，某些语言仅提供一种或两种声音。为了扩展可能的声音的范围，服务增加了 `<voice-transformation>` 元素以扩展 SSML。您可以使用此元素来控制缺省声音的各个方面，以实现不同的虚拟声音。此功能的应用包括：
 {: shortdesc}
 
 -   *为声音提供另一种风格*。您希望声音在一般情况下或针对特定应用听起来有一点不同。
@@ -43,9 +43,10 @@ subcollection: text-to-speech
 -   `en-US_LisaVoice`
 -   `en-US_MichaelVoice`
 
-这些声音的基于 DNN 的 `V2` 版本（例如，`en-US_AllisonV2Voice`）不支持声音变换。将此元素用于不支持的声音会返回错误。
+这些声音的神经版本（例如，`en-US_AllisonV3Voice`）不支持声音变换。将此元素用于不支持的声音会返回错误。
 
 ## 内置变换
+{: #ssml-built-in}
 
 内置变换会将预配置的更改应用于声音的各个属性。请将其视为服务提供的虚拟声音。服务提供了两种内置变换。要使用这两种变换，请使用 `type` 属性指定内置变换的区分大小写名称：
 
@@ -58,6 +59,7 @@ subcollection: text-to-speech
 {: note}
 
 ## 内置变换示例
+{: #ssml-built-in-examples}
 
 以下示例使用不同的 strength 将两个内置变换应用于同一句子：
 
@@ -73,6 +75,7 @@ subcollection: text-to-speech
 {: codeblock}
 
 ## 定制变换
+{: #ssml-custom-transforms}
 
 通过定制变换，可以对声音变换的不同方面进行更细颗粒度的控制。要使用定制变换，请为 `type` 属性指定 `Custom`。然后，可以使用下列一个或多个可选属性来控制变换。
 
@@ -98,7 +101,7 @@ subcollection: text-to-speech
       [<code>x-narrow</code>, <code>narrow</code>, <code>default</code>,
       <code>wide</code>, <code>x-wide</code>]</td>
     <td>
-      在安全限制内，经过规范化的音高轮廓动态范围相对变化。增大或减小音高范围可提高或降低语音风格的表达性。此属性是从 SSML <code>&lt;prosody&gt;</code> 元素的 <code>range</code> 属性借用的。</td>
+      在安全限制内，经过规范化的音高轮廓动态范围相对变化。增大或减小音高范围可增加或减少语音风格的表现力。此属性是从 SSML <code>&lt;prosody&gt;</code> 元素的 <code>range</code> 属性借用的。</td>
   </tr>
   <tr>
     <td><code>glottal_tension</code></td>
@@ -174,13 +177,14 @@ subcollection: text-to-speech
     -   喉音张力高、音高大、语速低，都会产生嗡嗡声。增大气息声可减轻此影响。
     -   极低的喉音张力可能会产生有噪声的语音。减小气息声可降低噪声。
     -   同时将音高范围和语速增大或减小到极值，会使语音听起来不自然。
--   请注意，某些属性是从 SSML `<prosody>` 元素中借用的。有关更多信息，请参阅 [prosody 元素](/docs/services/text-to-speech/SSML-elements.html#prosody_element)。要实现对虚拟声音的精细韵律控制，您可以：
+-   请注意，某些属性是从 SSML `<prosody>` 元素中借用的。有关更多信息，请参阅 [prosody 元素](/docs/services/text-to-speech?topic=text-to-speech-elements#prosody_element)。要实现对虚拟声音的精细韵律控制，您可以：
     -   在 `<voice-transformation>` 元素内嵌套 `<prosody>` 元素
     -   在 `<prosody>` 元素内嵌套 `<voice-transformation>` 元素
 
     *不能*嵌套 `<voice-transformation>` 元素。
 
 ## 定制变换示例
+{: #ssml-custom-transforms-examples}
 
 以下示例应用不同的属性来演示定制变换的可能应用。第一个示例降低了喉音张力，使声音更柔和。此示例还适度增大了音调范围和语速，从而引入了更有活力的说话风格。
 
@@ -208,7 +212,6 @@ subcollection: text-to-speech
 <voice-transformation type="Custom" timbre="Sunrise" pitch="40%">
   Do you have more information?
 </voice-transformation>
-
 <voice-transformation type="Custom" timbre="Breeze" timbre_extent="30%"
   pitch="-30%">
   Do you have more information?
