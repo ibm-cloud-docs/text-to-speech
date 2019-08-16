@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-09"
+lastupdated: "2019-06-06"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -31,7 +31,7 @@ subcollection: text-to-speech
 ## 支援的音訊格式
 {: #formatsSupported}
 
-表 1 列出您可以在其中要求合成音訊的音訊格式（MIME 類型）。依預設，服務會以 Ogg 格式傳回音訊，並搭配使用 Opus 轉碼器（`audio/ogg;codecs=opus`）。
+表 1 列出您可以在其中要求合成音訊的音訊格式（MIME 類型）。依預設，服務會以 Ogg 格式傳回音訊，並搭配使用 Opus 轉碼器 (`audio/ogg;codecs=opus`)。
 
 <table>
   <caption>表 1. 支援的音訊格式</caption>
@@ -45,9 +45,9 @@ subcollection: text-to-speech
     </td>
     <td>
       <em>基本音訊</em> 是一種單一頻道的有損音訊格式，它是使用取樣率為 8 kHz 的 8 位元 u-law（或 mu-law）資料進行編碼的。
-      此格式提供最低共同分母媒體類型。如需相關資訊，請參閱 IETF 的 <a target="_blank" href="https://tools.ietf.org/html/rfc2046">Request
-        for Comment (RFC) 2046 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")</a> 及
-      <a target="_blank" href="http://www.iana.org/assignments/media-types/audio/basic">iana.org/assignments/media-types/audio/basic ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")</a>。
+      此格式提供最低共同分母媒體類型。如需相關資訊，請參閱 IETF
+      [Request for Comment (RFC) 2046](https://tools.ietf.org/html/rfc2046) 和
+      [iana.org/assignments/media-types/audio/basic](http://www.iana.org/assignments/media-types/audio/basic)。
     </td>
   </tr>
   <tr>
@@ -56,7 +56,7 @@ subcollection: text-to-speech
     </td>
     <td>
       <em>自由無損音訊轉碼器 (FLAC)</em> (<code>.flac</code>)，這是一種無損壓縮音訊編碼格式。如需相關資訊，請參閱
-      <a target="_blank" href="https://en.wikipedia.org/wiki/FLAC">en.wikipedia.org/wiki/FLAC ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")</a>。
+      [FLAC](https://wikipedia.org/wiki/FLAC)。
     </td>
   </tr>
   <tr>
@@ -64,7 +64,9 @@ subcollection: text-to-speech
       <code>audio/l16;rate={rate}</code>
     </td>
     <td>
-      <em>線性 16 位元脈衝編碼調變 (PCM)</em>，這是一種未經壓縮的音訊資料格式（通常指的是 <code>.raw</code> 或 <code>.pcm</code>）。如需相關資訊，請參閱「網際網路工程任務小組 (IETF)」的 <a target="_blank" href="https://tools.ietf.org/html/rfc2586">Request for Comment (RFC) 2586 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")</a> 及 <a target="_blank" href="https://en.wikipedia.org/wiki/Pulse-code_modulation">en.wikipedia.org/wiki/Pulse-code_modulation ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")</a>。<br/><br/>
+      <em>線性 16 位元脈衝編碼調變 (PCM)</em>，這是一種未經壓縮的音訊資料格式（通常指的是 <code>.raw</code> 或 <code>.pcm</code>）。如需相關資訊，請參閱網際網路工程工作小組 (IETF) 的
+      [Request for Comment (RFC) 2586](https://tools.ietf.org/html/rfc2586) 和
+      [Pulse-code modulation](https://wikipedia.org/wiki/Pulse-code_modulation)。<br/><br/>
       您必須使用此音訊格式來指定取樣率。例如，對於取樣率為 16 kHz 的音訊指定 <code>audio/l16;rate=16000</code>。您也可以選擇性地將排列法指定為 <code>audio/l16;rate={rate};endianness=big-endian</code> 或 <code>audio/l16;rate={rate};endianness=little-endian</code>。
       預設值為小序排列法。
     </td>
@@ -75,7 +77,8 @@ subcollection: text-to-speech
       <code>audio/mpeg</code>
     </td>
     <td>
-      <em>MP3</em> 或 <em>Motion Picture Experts Group (MPEG)</em>，這是一種有損資料壓縮格式（MP3 及 MPEG 指的是相同的格式）。如需相關資訊，請參閱 <a target="_blank" href="https://en.wikipedia.org/wiki/MP3">en.wikipedia.org/wiki/MP3 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")</a>。
+      <em>MP3</em> 或 <em>Motion Picture Experts Group (MPEG)</em>，這是一種有損資料壓縮格式（MP3 及 MPEG 指的是相同的格式）。如需相關資訊，請參閱
+      [MP3](https://wikipedia.org/wiki/MP3)。
     </td>
   </tr>
   <tr>
@@ -83,7 +86,7 @@ subcollection: text-to-speech
       <code>audio/mulaw;rate={rate}</code>
     </td>
     <td>
-      <em>8 位元 mu-law（或 u-law）音訊</em> 是一種單一頻道的有損音訊格式，它是使用 8 位元 u-law（或 mu-law）資料進行編碼的。您必須使用此音訊格式來指定取樣率。如需相關資訊，請參閱 <a target="_blank" href="https://en.wikipedia.org/wiki/M-law_algorithm">en.wikipedia.org/wiki/M-law_algorithm ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")</a>。
+      <em>8 位元 mu-law（或 u-law）音訊</em> 是一種單一頻道的有損音訊格式，它是使用 8 位元 u-law（或 mu-law）資料進行編碼的。您必須使用此音訊格式來指定取樣率。如需相關資訊，請參閱 [M-law algorithm](https://wikipedia.org/wiki/M-law_algorithm)。
     </td>
   </tr>
   <tr>
@@ -93,15 +96,17 @@ subcollection: text-to-speech
       <code>audio/ogg;codecs=vorbis</code>
     </td>
     <td>
-      <em>Ogg 格式</em> (<code>.ogg</code>) 是一種自由且開放的容器格式，由 Xiph.org Foundation 維護。如需相關資訊，請參閱 <a target="_blank" href="https://www.xiph.org/ogg/">xiph.org/ogg/ ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")</a>。
-      您可以要求使用下列轉碼器壓縮的音訊串流：
+      <em>Ogg 格式</em> (<code>.ogg</code>) 是一種自由且開放的容器格式，由 Xiph.org Foundation 維護。如需相關資訊，請參閱 [xiph.org/ogg/](https://www.xiph.org/ogg/)。您可以要求使用下列轉碼器壓縮的音訊串流：
       <ul style="margin-left:20px; padding:0px;">
         <li style="margin:10px 0px; line-height:120%;">
-          <em>Opus</em>。如需相關資訊，請參閱 <a target="_blank" href="https://www.opus-codec.org/">opus-codec.org ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")</a> 及 <a target="_blank" href="https://en.wikipedia.org/wiki/Opus">en.wikipedia.org/wiki/Opus（音訊格式）![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")</a>。
-          在 <em>Opus（音訊格式）</em>頁面上，請特別查看<em>容器</em> 區段。
+          <em>Opus</em>。如需相關資訊，請參閱
+	  [opus-codec.org](https://www.opus-codec.org/) 和
+	  [Opus (audio format)](https://wikipedia.org/wiki/Opus_%28audio_format%29)。請特別查看 <em>Containers</em> 部分。
         </li>
         <li style="margin:10px 0px; line-height:120%;">
-          <em>Vorbis</em>。如需相關資訊，請參閱 <a target="_blank" href="https://xiph.org/vorbis/">xiph.org/vorbis ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")</a> 及 <a target="_blank" href="https://en.wikipedia.org/wiki/Vorbis">en.wikipedia.org/wiki/Vorbis ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")</a>。
+          <em>Vorbis</em>。如需相關資訊，請參閱
+	  [xiph.org/vorbis](https://xiph.org/vorbis/) 和
+	  [Vorbis](https://wikipedia.org/wiki/Vorbis)。
         </li>
       </ul>
       這兩個轉碼器都是自由且開放的有損音訊壓縮格式。Opus 是偏好的轉碼器，但根據 Ogg 規格，如果您省略轉碼器，則服務會以 Vorbis 格式傳回音訊。如果您完全省略音訊格式，則依預設服務會以 Ogg 格式傳回音訊，並搭配使用 Opus 轉碼器。</td>
@@ -111,18 +116,19 @@ subcollection: text-to-speech
       <code>audio/wav</code>
     </td>
     <td>
-      <em>Waveform Audio File Format (WAV)</em> (<code>.wav</code>) 是一種標準容器格式，通常用於未經壓縮的音訊位元串流，但也可以包含壓縮音訊。由於所傳回音訊的串流本質，產生的 WAV 檔可能無法在所有音訊播放程式中運作。尤其，無論音訊的長度為何，檔案標頭中的 <code>numSamples</code> 屬性都會設為 <code>0</code>。如需相關資訊，請參閱 <a target="_blank" href="https://en.wikipedia.org/wiki/WAV">en.wikipedia.org/wiki/WAV ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")</a>。
+      <em>Waveform Audio File Format (WAV)</em> (<code>.wav</code>) 是一種標準容器格式，通常用於未經壓縮的音訊位元串流，但也可以包含壓縮音訊。由於所傳回音訊的串流本質，產生的 WAV 檔可能無法在所有音訊播放程式中運作。尤其，無論音訊的長度為何，檔案標頭中的 <code>numSamples</code> 屬性都會設為 <code>0</code>。如需相關資訊，請參閱
+      [WAV](https://wikipedia.org/wiki/WAV)。
     </td>
   </tr>
   <tr>
     <td>
       <code>audio/webm</code><br/>
       <code>audio/webm;codecs=opus</code><br/>
-      <code>audio/webm;codecs=vorbis</code>
+    <code>audio/webm;codecs=vorbis</code>
     </td>
     <td>
       <em>Web 媒體 (WebM)</em> (<code>.webm</code>) 是一種開放式媒體檔案格式，支援使用 Osp 及 Vorbis 音訊轉碼器來壓縮的音訊串流。如果您省略轉碼器，服務會以 Opus 格式傳回音訊。如需相關資訊，請參閱
-      <a target="_blank" href="https://www.webmproject.org/">webmproject.org ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")</a>。
+      [webmproject.org](https://www.webmproject.org/)。
     </td>
   </tr>
 </table>
@@ -132,7 +138,7 @@ subcollection: text-to-speech
 
 指定音訊格式是選用的。依預設，服務會以 `audio/ogg;codecs=opus` 格式傳回音訊。但是，您可以指定 HTTP 或 WebSocket 介面的格式：
 
--   利用 HTTP `GET` 及 `POST /v1/synthesize` 方法，您可以使用 `Accept` 要求標頭或 `accept` 查詢參數來指定格式。若要以預設格式接收音訊，請同時省略標頭和查詢參數。如需相關資訊，請參閱[將文字合成為音訊](/docs/services/text-to-speech/http.html#synthesize)。
+-   利用 HTTP `GET` 及 `POST /v1/synthesize` 方法，您可以使用 `Accept` 要求標頭或 `accept` 查詢參數來指定格式。若要以預設格式接收音訊，請同時省略標頭和查詢參數。如需相關資訊，請參閱[將文字合成為音訊](/docs/services/text-to-speech?topic=text-to-speech-usingHTTP#synthesize)。
 
     如果您使用 `accept` 查詢參數，請將引數以 URL 編碼為參數。例如，會將下列引數：
 
@@ -148,7 +154,7 @@ subcollection: text-to-speech
     ```
     {: codeblock}
 
--   利用 WebSocket 介面，您可以使用為了起始合成而傳遞之文字訊息的 `accept` 參數來指定格式。若要以預設格式接收音訊，請為參數指定 `*/*` 值。如需相關資訊，請參閱[傳送輸入文字](/docs/services/text-to-speech/websockets.html#WSsend)。
+-   利用 WebSocket 介面，您可以使用為了起始合成而傳遞之文字訊息的 `accept` 參數來指定格式。若要以預設格式接收音訊，請為參數指定 `*/*` 值。如需相關資訊，請參閱[傳送輸入文字](/docs/services/text-to-speech?topic=text-to-speech-usingWebSocket#WSsend)。
 
 ## 指定取樣率
 {: #formatRate}
@@ -285,7 +291,7 @@ subcollection: text-to-speech
 
 識別服務傳回之任何音訊串流取樣率的最可靠方法是從串流本身擷取資訊。您可以藉由使用一些簡單文字（例如，"hello world"）呼叫 `/v1/synthesize` 方法，並指定您計劃使用的格式和轉碼器，來判定取樣率。然後，您可以將音訊串流儲存至檔案並在音訊播放程式中開啟，以取得轉碼器及取樣率。
 
-Opus 標準需要輸出取樣率符合音訊播放程式的功能。如需相關資訊，請參閱「網際網路工程任務小組 (IETF)」的 5.1 小節 [Request for Comments (RFC) 7845 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://tools.ietf.org/html/rfc6455){: new_window}。對於軟體音訊播放程式，此表格指出一般輸出取樣率，但實際的音訊取樣率隨串流內的時間而有所不同。如前所述，服務會合成 22,050 Hz 的來源音訊。
+Opus 標準需要輸出取樣率符合音訊播放程式的功能。如需相關資訊，請參閱網際網路工程工作小組 (IETF) 的 [Request for Comments (RFC) 7845](http://tools.ietf.org/html/rfc6455){: external} 的第 5.1 節。對於軟體音訊播放程式，此表格指出一般輸出取樣率，但實際的音訊取樣率隨串流內的時間而有所不同。如前所述，服務會合成 22,050 Hz 的來源音訊。
 {: note}
 
 ## 播放音訊檔
@@ -294,4 +300,4 @@ Opus 標準需要輸出取樣率符合音訊播放程式的功能。如需相關
 若要播放服務產生的音訊檔，請使用下列其中一種工具：
 
 -   Web 瀏覽器，例如 Google Chrome&trade;、Firefox&reg; 或 Microsoft&reg; Internet Explorer&reg;。
--   音訊播放程式，例如 Audacity&reg; ([audacityteam.org ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://www.audacityteam.org/){: new_window}) 或 FFmpeg ([ffmpeg.org ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ffmpeg.org){: new_window})。
+-   音訊播放程式，例如 Audacity&reg; ([audacityteam.org](http://www.audacityteam.org/){: external}) 或 FFmpeg ([ffmpeg.org](https://www.ffmpeg.org){: external})。

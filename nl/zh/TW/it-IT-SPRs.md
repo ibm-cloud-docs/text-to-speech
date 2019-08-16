@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-06-04"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -34,7 +34,7 @@ subcollection: text-to-speech
   <caption>表 1. 一般母音（義大利文）</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      義大利文<br/>SPR 符號
+義大利文<br/>SPR 符號
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA 符號
@@ -43,7 +43,7 @@ subcollection: text-to-speech
       IPA Unicode
     </th>
     <th style="text-align:left; vertical-align:bottom">
-      範例單字
+      範例字組
     </th>
   </tr>
   <tr>
@@ -153,7 +153,7 @@ subcollection: text-to-speech
   <caption>表 2. 輔音（義大利文）</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      義大利文<br/>SPR 符號
+義大利文<br/>SPR 符號
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA 符號
@@ -162,7 +162,7 @@ subcollection: text-to-speech
       IPA Unicode
     </th>
     <th style="text-align:left; vertical-align:bottom">
-      範例單字
+      範例字組
     </th>
   </tr>
   <tr>
@@ -358,12 +358,10 @@ subcollection: text-to-speech
     </td>
     <td style="text-align:center">
       dz<br/><br/>
-      &#675;
-    </td>
+      &#675;</td>
     <td style="text-align:center">
       0064+007A<br/><br/>
-      02A3
-    </td>
+      02A3</td>
     <td>
       <u>z</u>abaione, <u>z</u>ero, <u>z</u>ona
     </td>
@@ -431,11 +429,13 @@ subcollection: text-to-speech
       r
     </td>
     <td style="text-align:center">
-      r<br/><br/>
+      r
+    <br/><br/>
       &#638;
     </td>
     <td style="text-align:center">
-      0072<br/><br/>
+      0072
+    <br/><br/>
       027E
     </td>
     <td>
@@ -523,7 +523,7 @@ subcollection: text-to-speech
   <caption>表 3. 輔音延長（義大利文）</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      義大利文<br/>SPR 符號
+義大利文<br/>SPR 符號
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA 符號
@@ -532,7 +532,7 @@ subcollection: text-to-speech
       IPA Unicode
     </th>
     <th style="text-align:left; vertical-align:bottom">
-      範例單字
+      範例字組
     </th>
   </tr>
   <tr>
@@ -619,7 +619,7 @@ subcollection: text-to-speech
       IPA Unicode
     </th>
     <th style="text-align:left; vertical-align:bottom">
-      範例單字
+      範例字組
     </th>
   </tr>
   <tr>
@@ -630,7 +630,8 @@ subcollection: text-to-speech
       &#331;g
     </td>
     <td style="text-align:center">
-      014B+0067<br/>
+      014B+0067
+    <br/>
       014B+0261
     </td>
     <td>

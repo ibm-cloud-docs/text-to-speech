@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-06-04"
 
 subcollection: text-to-speech
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -34,7 +34,7 @@ subcollection: text-to-speech
   <caption>表 1. 母音（法文）</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      法文<br/>SPR 符號
+法文<br/>SPR 符號
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA 符號
@@ -43,7 +43,7 @@ subcollection: text-to-speech
       IPA Unicode
     </th>
     <th style="text-align:left; vertical-align:bottom">
-      範例單字
+      範例字組
     </th>
   </tr>
   <tr>
@@ -51,12 +51,15 @@ subcollection: text-to-speech
       a
     </td>
     <td style="text-align:center">
-      a<br/><br/>
-      &#593;<br/><br/>
+      a
+    <br/><br/>
+      &#593;
+    <br/><br/>
       &#592;
     </td>
     <td style="text-align:center">
-      0061<br/><br/>
+      0061
+    <br/><br/>
       0251<br/><br/>
       0250
     </td>
@@ -84,11 +87,13 @@ subcollection: text-to-speech
       E
     </td>
     <td style="text-align:center">
-      &#603;<br/><br/>
+      &#603;
+    <br/><br/>
       &#604;
     </td>
     <td style="text-align:center">
-      025B<br/><br/>
+      025B
+    <br/><br/>
       025C
     </td>
     <td>
@@ -100,11 +105,13 @@ subcollection: text-to-speech
       i
     </td>
     <td style="text-align:center">
-      i<br/><br/>
+      i
+    <br/><br/>
       &#618;
     </td>
     <td style="text-align:center">
-      0069<br/><br/>
+      0069
+    <br/><br/>
       026A
     </td>
     <td>
@@ -130,11 +137,13 @@ subcollection: text-to-speech
       c
     </td>
     <td style="text-align:center">
-      &#596;<br/><br/>
+      &#596;
+    <br/><br/>
       &#594;
     </td>
     <td style="text-align:center">
-      0254<br/><br/>
+      0254
+    <br/><br/>
       0252
     </td>
     <td>
@@ -146,11 +155,13 @@ subcollection: text-to-speech
       u
     </td>
     <td style="text-align:center">
-      u<br/><br/>
+      u
+    <br/><br/>
       &#650;
     </td>
     <td style="text-align:center">
-      0075<br/><br/>
+      0075
+    <br/><br/>
       028A
     </td>
     <td>
@@ -193,12 +204,10 @@ subcollection: text-to-speech
     </td>
     <td style="text-align:center">
       &#248;<br/><br/>
-      &#629;
-    </td>
+      &#629;</td>
     <td style="text-align:center">
       00F8<br/><br/>
-      0275
-    </td>
+      0275</td>
     <td>
       m<u>eu</u>gle, p<u>eu</u>, joy<u>eu</u>x
     </td>
@@ -240,13 +249,16 @@ subcollection: text-to-speech
       'E~'
     </td>
     <td style="text-align:center">
-      &#101;&#771;<br/><br/>
-      &#603;&#771;<br/><br/>
+      &#101;&#771;
+    <br/><br/>
+      &#603;&#771;
+    <br/><br/>
       &#230;&#771;
     </td>
     <td style="text-align:center">
       0065+0303<br/><br/>
-      025B+0303<br/><br/>
+      025B+0303
+    <br/><br/>
       00E6+0303
     </td>
     <td>
@@ -258,7 +270,8 @@ subcollection: text-to-speech
       'o~'
     </td>
     <td style="text-align:center">
-      &#111;&#771;<br/><br/>
+      &#111;&#771;
+    <br/><br/>
       &#596;&#771;
     </td>
     <td style="text-align:center">
@@ -296,7 +309,7 @@ subcollection: text-to-speech
   <caption>表 2. 輔音（法文）</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      法文<br/>SPR 符號
+法文<br/>SPR 符號
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA 符號
@@ -305,7 +318,7 @@ subcollection: text-to-speech
       IPA Unicode
     </th>
     <th style="text-align:left; vertical-align:bottom">
-      範例單字
+      範例字組
     </th>
   </tr>
   <tr>
@@ -369,7 +382,8 @@ subcollection: text-to-speech
       g
     </td>
     <td style="text-align:center">
-      g<br/><br/>
+      g
+    <br/><br/>
       &#609;
     </td>
     <td style="text-align:center">
@@ -539,19 +553,25 @@ subcollection: text-to-speech
       r
     </td>
     <td style="text-align:center">
-      r<br/><br/>
+      r
+    <br/><br/>
       &#633;<br/><br/>
       &#640;<br/><br/>
-      &#641;<br/><br/>
-      x<br/><br/>
+      &#641;
+    <br/><br/>
+      x
+    <br/><br/>
       &#967;
     </td>
     <td style="text-align:center">
-      0072<br/><br/>
+      0072
+    <br/><br/>
       0279<br/><br/>
       0280<br/><br/>
-      0281<br/><br/>
-      0078<br/><br/>
+      0281
+    <br/><br/>
+      0078
+    <br/><br/>
       03C7
     </td>
     <td>
@@ -577,11 +597,13 @@ subcollection: text-to-speech
       j
     </td>
     <td style="text-align:center">
-      j<br/><br/>
+      j
+    <br/><br/>
       &#654;
     </td>
     <td style="text-align:center">
-      006A<br/><br/>
+      006A
+    <br/><br/>
       028E
     </td>
     <td>
@@ -621,13 +643,13 @@ subcollection: text-to-speech
 ## 連音
 {: #frLiaison}
 
-在法文中，`_`（底線）可用於字尾子音之後（但在含括 SPR 的雙引號內），以指出它是一個連音子音。連音子音只有在接下來的單字以母音開頭時才會發音。
+在法文中，`_`（底線）可用於字尾子音之後（但在含括 SPR 的雙引號內），以指出它是一個連音子音。連音子音只有在接下來的字組以母音開頭時才會發音。
 
 <table style="width:54%">
   <caption>表 3. 連音（法文）</caption>
   <tr>
     <th style="width:33%; text-align:center; vertical-align:bottom">
-      法文<br/>SPR 符號
+法文<br/>SPR 符號
     </th>
     <th style="width:33%; text-align:center; vertical-align:bottom">
       IPA 符號
@@ -649,9 +671,9 @@ subcollection: text-to-speech
   </tr>
 </table>
 
-包含及不包含連音符號的單字範例如下：
+包含及不包含連音符號的字組範例如下：
 
--   `"p0'oe't1it_"`：`t` 只有在接下來的單字以母音開頭時才會發音。
+-   `"p0'oe't1it_"`：`t` 只有在接下來的字組以母音開頭時才會發音。
 -   `"nEt"`：`t` 一律發音。
 
-具有翻譯值 `"p'oe't1it_"` 的字典項目 *petit*，在輸入字串 *un petit ami* 中最後的 `t` 會發音，但在輸入字串 *un petit chien* 中不發音。具有翻譯值 `"nEt"` 的項目，不論上下文，最後的 `t` 都會發音。
+具有轉換值 `"p'oe't1it_"` 的字典項目 *petit*，在輸入字串 *un petit ami* 中最後的 `t` 會發音，但在輸入字串 *un petit chien* 中不發音。具有轉換值 `"nEt"` 的項目，不論上下文，最後的 `t` 都會發音。
