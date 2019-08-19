@@ -27,7 +27,7 @@ subcollection: text-to-speech
 {:url: data-credential-placeholder='url'}
 {:hide-dashboard: .hide-dashboard}
 
-# Getting started with Text to Speech
+# Getting started with {{site.data.keyword.texttospeechshort}}
 {: #gettingStarted}
 
 The {{site.data.keyword.texttospeechfull}} service converts written text to natural-sounding speech to provide speech-synthesis capabilities for applications. This curl-based tutorial can help you get started quickly with the service. The examples show you how to call the service's `POST` and `GET /v1/synthesize` methods to request an audio stream.
