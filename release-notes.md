@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-08-24"
+lastupdated: "2019-09-14"
 
 subcollection: text-to-speech
 
@@ -31,7 +31,9 @@ The following sections document the new features and changes that were included 
 ## Known limitations
 {: #limitations}
 
-No known limitations at this time.
+The service has the following known limitation:
+
+-   When you specify the `audio/ogg;codecs=opus` audio format, you can optionally specify a sampling rate other than the default 48,000 Hz. However, while the service accepts `48000`, `24000`, `16000`, `12000`, or `8000` as a valid sampling rate, it currently disregards a specified value and always returns the audio with a sampling rate of 48 kHz.
 
 ## 22 August 2019
 {: #August2019}
