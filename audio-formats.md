@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-09-14"
+lastupdated: "2019-09-17"
 
 subcollection: text-to-speech
 
@@ -238,7 +238,7 @@ You can optionally specify the endianness for the audio by using the `endianness
 -   Big-endian (`endianness=big-endian`) orders data by most-significant bit.
 -   Little-endian (`endianness=little-endian`) orders data by least-significant bit.
 
-For example, specify `audio/l16;rate=16000;endianness=big-endian` to obtain audio that is sampled at 16 kHz and returned in big-endian order. If you omit the endianness, the default is little-endian.
+For example, specify `audio/l16;rate=16000;endianness=big-endian` to obtain audio that is sampled at 16 kHz and returned in big-endian order. If you omit the endianness, the default is little-endian. (Specifying the endianness is an issue only for the `audio/l16` format, which does not include a header. Endianness is not a concern for the other formats.)
 
 For more information, see
 
