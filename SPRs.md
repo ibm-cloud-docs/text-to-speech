@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-06"
+lastupdated: "2019-10-01"
 
 subcollection: text-to-speech
 
@@ -155,10 +155,10 @@ To learn more, see the following:
 The following pages document the SPR symbols, IPA symbols, and equivalent IPA Unicode values for each language. They show examples of each symbol in words from the language. Because of dialectal differences, the examples might not always match your pronunciation.
 
 -   [Brazilian Portuguese symbols](/docs/services/text-to-speech?topic=text-to-speech-ptSymbols)
--   [British English symbols](/docs/services/text-to-speech?topic=text-to-speech-gbSymbols)
 -   [French symbols](/docs/services/text-to-speech?topic=text-to-speech-frSymbols)
 -   [German symbols](/docs/services/text-to-speech?topic=text-to-speech-deSymbols)
 -   [Italian symbols](/docs/services/text-to-speech?topic=text-to-speech-itSymbols)
 -   [Japanese symbols](/docs/services/text-to-speech?topic=text-to-speech-jaSymbols)
 -   [Spanish symbols](/docs/services/text-to-speech?topic=text-to-speech-esSymbols)
+-   [UK English symbols](/docs/services/text-to-speech?topic=text-to-speech-gbSymbols)
 -   [US English symbols](/docs/services/text-to-speech?topic=text-to-speech-usSymbols)
