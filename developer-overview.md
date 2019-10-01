@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-07-06"
+lastupdated: "2019-10-01"
 
 subcollection: text-to-speech
 
@@ -40,7 +40,7 @@ To synthesize text with the HTTP API, you call the `GET` or `POST` version of th
     You can pass the service plain text or text that is annotated with the Speech Synthesis Markup Language (SSML). SSML is an XML-based markup language that provides annotations of text for speech synthesis applications such as the {{site.data.keyword.texttospeechshort}} service. The service augments SSML with service-specific expressive and voice-transformation elements, which are available for some standard US English voices.
 
     For more information, see [Specifying input text](/docs/services/text-to-speech?topic=text-to-speech-usingHTTP#input).
--   *Voices:* The service accepts text and produces audio in various languages, voices, and dialects. The service offers at least one female voice for each language. For some languages the service offers multiple voices, which can include both male and female voices. The service also offers different dialects such as US and British English. It offers both standard (concatenative) and enhanced neural versions of most voices.
+-   *Voices:* The service accepts text and produces audio in various languages, voices, and dialects. The service offers at least one female voice for each language. For some languages the service offers multiple voices, which can include both male and female voices. The service also offers different dialects such as US and UK English. It offers both standard (concatenative) and enhanced neural versions of most voices.
 
     You can use the service's `GET /v1/voices` or `GET /v1/voices/{voice}` methods to learn more about the supported voices. The service synthesizes the text into the language of the specified voice. Be sure to match the voice to the input text.
 

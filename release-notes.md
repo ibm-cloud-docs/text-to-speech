@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-09-14"
+lastupdated: "2019-10-01"
 
 subcollection: text-to-speech
 
@@ -229,7 +229,7 @@ The service now supports the MP3 or Motion Picture Experts Group (MPEG) audio fo
 {: #June2016}
 
 -   The service now offers a WebSocket interface for synthesizing text to speech. The interface offers the same features as the `/v1/synthesize` method of the HTTP interface. It accepts plain text or text that is marked up with SSML. In addition, it also supports use of the SSML `<mark>` element to identify the time in the audio at which it finishes synthesizing all text that precedes the mark. For more information, see [The WebSocket interface](/docs/services/text-to-speech?topic=text-to-speech-usingWebSocket).
--   The service now offers support for text that is annotated with SSML for the languages Castilian and North American Spanish, Italian, and Brazilian Portuquese. The service already supported the use of SSML for US and British English, French, and German. As of this update, the service supports SSML for all languages but Japanese. Moreover, you can use both {{site.data.keyword.IBM_notm}} SPR and IPA notations to define word pronunciations with the SSML `<phoneme>` element. For more information, see [Using SSML](/docs/services/text-to-speech?topic=text-to-speech-ssml) and [Using IBM SPR](/docs/services/text-to-speech?topic=text-to-speech-sprs).
+-   The service now offers support for text that is annotated with SSML for the languages Castilian and North American Spanish, Italian, and Brazilian Portuquese. The service already supported the use of SSML for US and UK English, French, and German. As of this update, the service supports SSML for all languages but Japanese. Moreover, you can use both {{site.data.keyword.IBM_notm}} SPR and IPA notations to define word pronunciations with the SSML `<phoneme>` element. For more information, see [Using SSML](/docs/services/text-to-speech?topic=text-to-speech-ssml) and [Using IBM SPR](/docs/services/text-to-speech?topic=text-to-speech-sprs).
 
     For US English, you can also use the SSML `<phoneme>` element to create word entries in a custom voice model; customization is supported only for US English. For more information, see [Understanding customization](/docs/services/text-to-speech?topic=text-to-speech-customIntro).
 -   The service features improved expressiveness and naturalness for the most frequently used voices. The improvements are based on Recursive Neural Network (RNN)-based prosody prediction from input text. They are made available as a new service engine and voice-model updates for the following languages:
@@ -301,7 +301,7 @@ The service moved from beta to general availability (GA) on July 1, 2015. The fo
     The service continues to support the old programming model that relied on a server-side proxy to relay communications and data between the client and the service. But the new model is more efficient and provides higher throughput.
 -   You can now pass Speech Synthesis Markup Language (SSML) to the HTTP `GET` and `POST` versions of the `/v1/synthesize` method. SSML is an XML-based markup language that is designed to provide annotations of text for speech synthesis applications such as the {{site.data.keyword.texttospeechshort}} service. For more information about passing SSML input to the service, see [Specifying input text](/docs/services/text-to-speech?topic=text-to-speech-usingHTTP#input).
 
-    The service initially supports the use of SSML only for the British and US English, French, and German languages. The service does not support SSML for use with Italian and Spanish. When you use SSML, make sure that you do not select a voice for the audio in one of the unsupported languages. Results in this case are not meaningful.
+    The service initially supports the use of SSML only for the UK and US English, French, and German languages. The service does not support SSML for use with Italian and Spanish. When you use SSML, make sure that you do not select a voice for the audio in one of the unsupported languages. Results in this case are not meaningful.
 -   The voices that are supported for synthesized speech changed and expanded. The service now supports a number of additional voices, languages, and dialects with the `/v1/synthesize` methods. For more information about supported voices, see [Languages and voices](/docs/services/text-to-speech?topic=text-to-speech-voices).
 
     The three voices that were available at beta are renamed for GA:

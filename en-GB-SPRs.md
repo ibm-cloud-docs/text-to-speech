@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-04"
+lastupdated: "2019-10-01"
 
 subcollection: text-to-speech
 
@@ -22,19 +22,19 @@ subcollection: text-to-speech
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# British English symbols
+# UK English symbols
 {: #gbSymbols}
 
-The following sections describe the valid symbols for British English.
+The following sections describe the valid symbols for UK English.
 
 ## Regular vowels
 {: #gbRegularVowels}
 
 <table style="width:90%">
-  <caption>Table 1. Regular vowels (British English)</caption>
+  <caption>Table 1. Regular vowels (UK English)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      British English<br/>SPR symbol
+      UK English<br/>SPR symbol
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA symbol
@@ -257,10 +257,10 @@ The following sections describe the valid symbols for British English.
 {: #gbDiphthongs}
 
 <table style="width:90%">
-  <caption>Table 2. Diphthongs (British English)</caption>
+  <caption>Table 2. Diphthongs (UK English)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      British English<br/>SPR symbol
+      UK English<br/>SPR symbol
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA symbol
@@ -320,10 +320,10 @@ The following sections describe the valid symbols for British English.
 {: #gbReducedVowels}
 
 <table style="width:90%">
-  <caption>Table 3. Reduced vowels (British English)</caption>
+  <caption>Table 3. Reduced vowels (UK English)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      British English<br/>SPR symbol
+      UK English<br/>SPR symbol
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA symbol
@@ -371,10 +371,10 @@ The following sections describe the valid symbols for British English.
 {: #gbConsonants}
 
 <table style="width:90%">
-  <caption>Table 4. Consonants (British English)</caption>
+  <caption>Table 4. Consonants (UK English)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      British English<br/>SPR symbol
+      UK English<br/>SPR symbol
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA symbol

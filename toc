@@ -46,12 +46,12 @@ Text to Speech
     IBM SPR
         SPRs.md
         pt-BR-SPRs.md
-        en-GB-SPRs.md
         fr-FR-SPRs.md
         de-DE-SPRs.md
         it-IT-SPRs.md
         ja-JP-SPRs.md
         es-ES-SPRs.md
+        en-GB-SPRs.md
         en-US-SPRs.md
 
     ha-dr.md
