@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-24"
+lastupdated: "2019-10-04"
 
 subcollection: text-to-speech
 
@@ -36,7 +36,7 @@ The first two examples generate a custom pronunciation for `IEEE` that is based 
     curl -X GET -u "apikey:{apikey}"
     --header "Accept: audio/flac"
     --output ieee.flac
-    "https://stream.watsonplatform.net/text-to-speech/api/v1/synthesize?text=IEEE&customization_id={customization_id}"
+    "{url}/v1/synthesize?text=IEEE&customization_id={customization_id}"
     ```
     {: pre}
 
@@ -48,7 +48,7 @@ The first two examples generate a custom pronunciation for `IEEE` that is based 
     --header "Accept: audio/flac"
     --data "{\"text\":\"IEEE\"}"
     --output ieee.flac
-    "https://stream.watsonplatform.net/text-to-speech/api/v1/synthesize?customization_id={customization_id}"
+    "{url}/v1/synthesize?customization_id={customization_id}"
     ```
     {: pre}
 
@@ -56,7 +56,7 @@ The third example establishes a WebSocket connection with the `/v1/synthesize` m
 
 ```javascript
 var token = {authentication-token};
-var wsURI = 'wss://stream.watsonplatform.net/text-to-speech/api/v1/synthesize'
+var wsURI = '{ws_url}/v1/synthesize'
   + '?access_token=' + IAM_access_token
   + '&customization_id={customization_id}';
 var websocket = new WebSocket(wsURI);

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-10-01"
+lastupdated: "2019-10-04"
 
 subcollection: text-to-speech
 
@@ -179,6 +179,14 @@ The service bases its understanding of the language for the input text on the sp
 
 The `GET /v1/voices` method lists information about all available voices. It takes no arguments and returns a JSON array that is named `voices`. The array includes a separate object for each voice.
 
+The following example lists all voices that are supported by the service:
+
+```bash
+curl -X GET -u "apikey:{apikey}"
+"{url}/v1/voices"
+```
+{: pre}
+
 ```javascript
 {
   "voices": [
@@ -249,6 +257,14 @@ The `GET /v1/voices/{voice}` method lists information about a specific voice. It
 </table>
 
 If you omit the `customization_id` parameter, the method returns JSON output for the specified voice that is identical to the information returned for a voice by the `GET /v1/voices` method. If you specify a `customization_id`, the output includes a `customization` field that provides information about the specified custom voice model.
+
+The following example returns information about the `en-US_LisaVoice` and the specified custom voice model:
+
+```bash
+curl -X GET -u "apikey:{apikey}"
+"{url}/v1/voices/en-US_LisaVoice?customization_id=64f4807f-a5f1-5867-924f-7bba1a84fe97"
+```
+{: pre}
 
 ```javascript
 {

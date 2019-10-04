@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-04"
+lastupdated: "2019-10-04"
 
 subcollection: text-to-speech
 
@@ -70,7 +70,7 @@ curl -X POST -u "apikey:{apikey}"
 --header "Accept: audio/wav"
 --data "{\"text\":\"hello world\"}"
 --output hello_world.wav
-"https://stream.watsonplatform.net/text-to-speech/api/v1/synthesize"
+"{url}/v1/synthesize"
 ```
 
 A customer ID can include any characters except for the `;` (semicolon) and `=` (equals sign). Specify a random or generic string for the customer ID; do not specify a personally identifiable string, such as an email address or Twitter ID. You can specify different customer IDs with different requests. A customer ID that you specify is associated with the instance of the service whose credentials are used with the request; only credentials for that instance of the service can delete data associated with the ID.
@@ -102,7 +102,7 @@ To delete all data that is associated with a customer ID, use the `DELETE /v1/us
 
 ```bash
 curl -X DELETE -u "apikey:{apikey}"
-"https://stream.watsonplatform.net/text-to-speech/api/v1/user_data?customer_id=my_ID"
+"{url}/v1/user_data?customer_id=my_ID"
 ```
 
 The `/v1/user_data` method deletes all data that is associated with the specified customer ID, regardless of the method by which the information was added. The method has no effect if no data is associated with the customer ID. You must issue the request with credentials for the same instance of the service that was used to associate the customer ID with the data.
