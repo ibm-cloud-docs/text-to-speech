@@ -194,7 +194,7 @@ curl -X GET -u "apikey:{apikey}"
       "name": "en-US_LisaVoice",
       "language": "en-US",
       "gender": "female",
-      "url": "https://stream.watsonplatform.net/text-to-speech/api/v1/voices/en-US_LisaVoice",
+      "url": "{url}/v1/voices/en-US_LisaVoice",
       "description": "Lisa: American English female voice.",
       "customizable": true,
       "supported_features": {
@@ -271,7 +271,7 @@ curl -X GET -u "apikey:{apikey}"
   "name": "en-US_LisaVoice",
   "language": "en-US",
   "gender": "female",
-  "url": "https://stream.watsonplatform.net/text-to-speech/api/v1/voices/en-US_LisaVoice",
+  "url": "{url}/v1/voices/en-US_LisaVoice",
   "description": "Lisa: American English female voice.",
   "customizable": true,
   "supported_features": {
