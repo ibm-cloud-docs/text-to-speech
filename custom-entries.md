@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-24"
+lastupdated: "2019-10-04"
 
 subcollection: text-to-speech
 
@@ -41,7 +41,7 @@ You can provide a translation by using the sounds-like or the phonetic method (o
     curl -X PUT -u "apikey:{apikey}"
     --header "Content-Type: application/json"
     --data "{\"translation\":\"I triple E\"}"
-    "https://stream.watsonplatform.net/text-to-speech/api/v1/customizations/{customization_id}/words/IEEE"
+    "{url}/v1/customizations/{customization_id}/words/IEEE"
     ```
     {: pre}
 
@@ -50,7 +50,7 @@ You can provide a translation by using the sounds-like or the phonetic method (o
     <pre><code class="language-bash">  curl -X PUT -u "apikey:{apikey}"
     --header "Content-Type: application/json"
     --data "{\"translation\":\"&lt;phoneme alphabet=\\\"ipa\\\" ph=\\\"&#712;a&#618;.t&#633;&#712;&#616;p&#601;l.&#712;i\\\"&gt;&lt;/phoneme&gt;\"}"
-    "https://stream.watsonplatform.net/text-to-speech/api/v1/customizations/{customization_id}/words/IEEE"</code></pre>
+    "{url}/v1/customizations/{customization_id}/words/IEEE"</code></pre>
 
 -   **Phonetic {{site.data.keyword.IBM_notm}} SPR:** SPR uses the `<phoneme>` element with the `alphabet` attribute set to `ibm` and the `ph` attribute defined in SPR format:
 
@@ -58,7 +58,7 @@ You can provide a translation by using the sounds-like or the phonetic method (o
     curl -X PUT -u "apikey:{apikey}"
     --header "Content-Type: application/json"
     --data "{\"translation\":\"<phoneme alphabet=\\\"ibm\\\" ph=\\\"1Y.tr1Ipxl.1i\\\"></phoneme>\"}"
-    "https://stream.watsonplatform.net/text-to-speech/api/v1/customizations/{customization_id}/words/IEEE"
+    "{url}/v1/customizations/{customization_id}/words/IEEE"
     ```
     {: pre}
 
@@ -71,7 +71,7 @@ To add one or more words to a custom model at one time, use the `POST /v1/custom
 curl -X POST -u "apikey:{apikey}"
 --header "Content-Type: application/json"
 --data "{\"words\": [{\"word\":\"NCAA\", \"translation\":\"N C double A\"}, {\"word\":\"iPhone\", \"translation\":\"I phone\"}]}"
-"https://stream.watsonplatform.net/text-to-speech/api/v1/customizations/{customization_id}/words"
+"{url}/v1/customizations/{customization_id}/words"
 ```
 {: pre}
 
@@ -93,7 +93,7 @@ As mentioned in [Updating a custom model](/docs/services/text-to-speech?topic=te
 curl -X POST -u "apikey:{apikey}"
 --header "Content-Type: application/json"
 --data "{\"words\": [{\"word\":\"NCAA\", \"translation\":\"N C double A\"}, {\"word\":\"iPhone\", \"translation\":\"I phone\"}]}"
-"https://stream.watsonplatform.net/text-to-speech/api/v1/customizations/{customization_id}"
+"{url}/v1/customizations/{customization_id}"
 ```
 {: pre}
 
@@ -135,21 +135,21 @@ The following examples of the `PUT /v1/customizations/{customization_id}/words/{
     <pre><code>curl -X PUT -u "apikey:{apikey}"
     --header "Content-Type: application/json"
     --data "{\"translation\":\"&#12491;&#12517;&#12540;&#12520;&#12540;&#12463;\", \"part_of_speech\":\"Mesi\"}"
-    "https://stream.watsonplatform.net/text-to-speech/api/v1/customizations/{customization_id}/words/%EF%BC%AE%EF%BC%B9"</code></pre>
+    "{url}/v1/customizations/{customization_id}/words/%EF%BC%AE%EF%BC%B9"</code></pre>
 
 -   **Phonetic IPA:**
 
     <pre><code>curl -X PUT -u "apikey:{apikey}"
     --header "Content-Type: application/json"
     --data "{\"translation\":\"&lt;phoneme alphabet=\\\"ipa\\\" ph=\\\"&#626;&#623;&#720;&#106;&#111;&#720;&#107;&#623;\\\"&gt;&lt;/phoneme&gt;\", \"part_of_speech\":\"Mesi\"}"
-    "https://stream.watsonplatform.net/text-to-speech/api/v1/customizations/{customization_id}/words/%EF%BC%AE%EF%BC%B9"</code></pre>
+    "{url}/v1/customizations/{customization_id}/words/%EF%BC%AE%EF%BC%B9"</code></pre>
 
 -   **Phonetic {{site.data.keyword.IBM_notm}} SPR:**
 
     <pre><code>curl -X PUT -u "apikey:{apikey}"
     --header "Content-Type: application/json"
     --data "{\"translation\":\"&lt;phoneme alphabet=\\\"ibm\\\" ph=\\\"nyu:yo:ku\\\"&gt;&lt;/phoneme&gt;\", \"part_of_speech\":\"Mesi\"}"
-    "https://stream.watsonplatform.net/text-to-speech/api/v1/customizations/{customization_id}/words/%EF%BC%AE%EF%BC%B9"</code></pre>
+    "{url}/v1/customizations/{customization_id}/words/%EF%BC%AE%EF%BC%B9"</code></pre>
 
 ## Querying a single word from a custom model
 {: #cuWordQueryModel}
@@ -160,7 +160,7 @@ The following example queries a custom model for the translation of the word `IE
 
 ```bash
 curl -X GET -u "apikey:{apikey}"
-"https://stream.watsonplatform.net/text-to-speech/api/v1/customizations/{customization_id}/words/IEEE"
+"{url}/v1/customizations/{customization_id}/words/IEEE"
 ```
 {: pre}
 
@@ -180,7 +180,7 @@ To see the translations for all of the words defined in a custom model, use the 
 
 ```bash
 curl -X GET -u "apikey:{apikey}"
-"https://stream.watsonplatform.net/text-to-speech/api/v1/customizations/{customization_id}/words"
+"{url}/v1/customizations/{customization_id}/words"
 ```
 {: pre}
 
@@ -210,7 +210,7 @@ As described in [Querying a custom model](/docs/services/text-to-speech?topic=te
 
 ```bash
 curl -X GET -u "apikey:{apikey}"
-"https://stream.watsonplatform.net/text-to-speech/api/v1/customizations/{customization_id}"
+"{url}/v1/customizations/{customization_id}"
 ```
 {: pre}
 
@@ -259,7 +259,7 @@ The following example obtains the pronunciation for the word `IEEE` in the defau
 
 ```bash
 curl -X GET -u "apikey:{apikey}"
-"https://stream.watsonplatform.net/text-to-speech/api/v1/pronunciation?text=IEEE"
+"{url}/v1/pronunciation?text=IEEE"
 ```
 {: pre}
 
@@ -271,7 +271,7 @@ The following example enters a sounds-like translation for the word `IEEE` and o
 
 ```bash
 curl -X GET -u "apikey:{apikey}"
-"https://stream.watsonplatform.net/text-to-speech/api/v1/pronunciation?text=i%20triple%20e&format=ibm"
+"{url}/v1/pronunciation?text=i%20triple%20e&format=ibm"
 ```
 {: pre}
 
@@ -291,6 +291,6 @@ The following example deletes the word `IEEE` from the specified custom model:
 
 ```bash
 curl -X DELETE -u "apikey:{apikey}"
-"https://stream.watsonplatform.net/text-to-speech/api/v1/customizations/{customization_id}/words/IEEE"
+"{url}/v1/customizations/{customization_id}/words/IEEE"
 ```
 {: pre}

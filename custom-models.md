@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-24"
+lastupdated: "2019-10-04"
 
 subcollection: text-to-speech
 
@@ -113,7 +113,7 @@ The following example `curl` command creates a new custom model named `curl Test
 curl -X POST -u "apikey:{apikey}"
 --header "Content-Type: application/json"
 --data "{\"name\":\"curl Test\", \"language\":\"en-US\", \"description\":\"Customization test via curl\"}"
-"https://stream.watsonplatform.net/text-to-speech/api/v1/customizations"
+"{url}/v1/customizations"
 ```
 {: pre}
 
@@ -133,7 +133,7 @@ To query information about an existing custom model, use the `GET /v1/customizat
 
 ```bash
 curl -X GET -u "apikey:{apikey}"
-"https://stream.watsonplatform.net/text-to-speech/api/v1/customizations/{customization_id}"
+"{url}/v1/customizations/{customization_id}"
 ```
 {: pre}
 
@@ -164,7 +164,7 @@ To see information about all of the custom models that you own, use the `GET /v1
 
 ```bash
 curl -X GET -u "apikey:{apikey}"
-"https://stream.watsonplatform.net/text-to-speech/api/v1/customizations"
+"{url}/v1/customizations"
 ```
 {: pre}
 
@@ -209,7 +209,7 @@ The following example updates the name and description of a custom model. An emp
 curl -X POST -u "apikey:{apikey}"
 --header "Content-Type: application/json"
 --data "{\"name\":\"curl Test Update\", \"description\":\"Customization test update via curl\", \"words\":[]}"
-"https://stream.watsonplatform.net/text-to-speech/api/v1/customizations/{customization_id}"
+"{url}/v1/customizations/{customization_id}"
 ```
 {: pre}
 
@@ -222,6 +222,6 @@ To discard a custom model that you no longer need, use the `DELETE /v1/customiza
 
 ```bash
 curl -X DELETE -u "apikey:{apikey}"
-"https://stream.watsonplatform.net/text-to-speech/api/v1/customizations/{customization_id}"
+"{url}/v1/customizations/{customization_id}"
 ```
 {: pre}
