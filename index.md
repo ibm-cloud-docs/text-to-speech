@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-07-31"
+lastupdated: "2019-10-18"
 
 subcollection: text-to-speech
 
@@ -25,7 +25,7 @@ subcollection: text-to-speech
 # About
 {: #about}
 
-> ** Service update:** *The {{site.data.keyword.texttospeechshort}} service was updated on July 30, 2019. The service now supports a neural voice in Japanese: `ja-JP_EmiV3Voice`. For more information, see the [30 July 2019 service update](/docs/services/text-to-speech?topic=text-to-speech-release-notes#July2019) in the release notes*.
+**Service update:** *The {{site.data.keyword.texttospeechshort}} service is frequently updated with new features and fixes. For more information, see the [Release notes](/docs/services/text-to-speech?topic=text-to-speech-release-notes).*
 
 The {{site.data.keyword.texttospeechfull}} service provides an application programming interface (API) that uses {{site.data.keyword.IBM_notm}}'s speech-synthesis capabilities to convert written text to natural-sounding speech. The service streams the results back to the client with minimal delay. The service offers both [HTTP](/docs/services/text-to-speech?topic=text-to-speech-usingHTTP) and [WebSocket](/docs/services/text-to-speech?topic=text-to-speech-usingWebSocket) interfaces.
 

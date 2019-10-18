@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-10-01"
+lastupdated: "2019-10-18"
 
 subcollection: text-to-speech
 
@@ -35,6 +35,11 @@ The service has the following known limitation:
 
 -   When you specify the `audio/ogg;codecs=opus` audio format, you can optionally specify a sampling rate other than the default 48,000 Hz. However, while the service accepts `48000`, `24000`, `16000`, `12000`, or `8000` as a valid sampling rate, it currently disregards a specified value and always returns the audio with a sampling rate of 48 kHz.
 
+## 1 October 2019
+{: #October2019}
+
+US HIPAA support is available for Premium plans that are hosted in the Washington, DC, location and are created on or after 1 April 2019. For more information, see [US Health Insurance Portability and Accountability Act (HIPAA)](/docs/services/text-to-speech?topic=text-to-speech-information-security#hipaa).
+
 ## 22 August 2019
 {: #August2019}
 
@@ -45,21 +50,10 @@ The service was updated for small defect fixes and improvements.
 
 The service now offers a neural voice in Japanese: `ja-JP_EmiV3Voice`. Both standard and neural versions of all available voices in all supported languages are now available. For more information, see [Languages and voices](/docs/services/text-to-speech?topic=text-to-speech-voices).
 
-## 24 June 2019
-{: #June2019}
-
--   The service now offers two versions of most of its available voices:
-    -   [Standard voices](/docs/services/text-to-speech?topic=text-to-speech-voices#standardVoices) that use concatenative synthesis to assemble segments of recorded speech to generate audio. Standard voices do not include a version string in their name (for example, `en-US_AllisonVoice`).
-    -   [Neural voices](/docs/services/text-to-speech?topic=text-to-speech-voices#neuralVoices) that use Deep Neural Networks (DNNs) to predict the acoustic (spectral) features of the speech. Neural voices include a version string (`V3`) in their name (for example, `en-US_AllisonV3Voice`).
-
-    Enhanced neural versions are available for all standard voices except for the `ja-JP_EmiVoice` voice, which is pending and will be available soon. You cannot use the SSML `<express-as>` and `<voice-transformation>` elements with the neural voices, and you cannot use the `volume` attribute of the `<prosody>` element with the neural voices.
-
-    For more information about all available voices, see [Languages and voices](/docs/services/text-to-speech?topic=text-to-speech-voices).
--   The service no longer includes the `V2` DNN voices that were previously available. If you use a `V2` voice in your application, the service automatically uses the equivalent `V3` voice instead.
-
 ## Older releases
 {: #older}
 
+-   [24 June 2019](#June2019)
 -   [24 March 2019](#March2019c)
 -   [21 March 2019](#March2019b)
 -   [4 March 2019](#March2019a)
@@ -80,6 +74,18 @@ The service now offers a neural voice in Japanese: `ja-JP_EmiV3Voice`. Both stan
 -   [17 December 2015](#December2015)
 -   [21 September 2015](#September2015)
 -   [1 July 2015](#July2015)
+
+### 24 June 2019
+{: #June2019}
+
+-   The service now offers two versions of most of its available voices:
+    -   [Standard voices](/docs/services/text-to-speech?topic=text-to-speech-voices#standardVoices) that use concatenative synthesis to assemble segments of recorded speech to generate audio. Standard voices do not include a version string in their name (for example, `en-US_AllisonVoice`).
+    -   [Neural voices](/docs/services/text-to-speech?topic=text-to-speech-voices#neuralVoices) that use Deep Neural Networks (DNNs) to predict the acoustic (spectral) features of the speech. Neural voices include a version string (`V3`) in their name (for example, `en-US_AllisonV3Voice`).
+
+    Enhanced neural versions are available for all standard voices except for the `ja-JP_EmiVoice` voice, which is pending and will be available soon. You cannot use the SSML `<express-as>` and `<voice-transformation>` elements with the neural voices, and you cannot use the `volume` attribute of the `<prosody>` element with the neural voices.
+
+    For more information about all available voices, see [Languages and voices](/docs/services/text-to-speech?topic=text-to-speech-voices).
+-   The service no longer includes the `V2` DNN voices that were previously available. If you use a `V2` voice in your application, the service automatically uses the equivalent `V3` voice instead.
 
 ### 24 March 2019
 {: #March2019c}
