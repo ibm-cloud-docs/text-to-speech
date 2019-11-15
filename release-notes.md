@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-10-18"
+lastupdated: "2019-11-15"
 
 subcollection: text-to-speech
 
@@ -34,6 +34,11 @@ The following sections document the new features and changes that were included 
 The service has the following known limitation:
 
 -   When you specify the `audio/ogg;codecs=opus` audio format, you can optionally specify a sampling rate other than the default 48,000 Hz. However, while the service accepts `48000`, `24000`, `16000`, `12000`, or `8000` as a valid sampling rate, it currently disregards a specified value and always returns the audio with a sampling rate of 48 kHz.
+
+## 12 November 2019
+{: #November 2019}
+
+You can now create {{site.data.keyword.texttospeechshort}} instances in the Seoul location. As with other locations, the {{site.data.keyword.cloud_notm}} Seoul location uses token-based Identity and Access Management (IAM) authentication.
 
 ## 1 October 2019
 {: #October2019}
