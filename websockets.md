@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-11-13"
+lastupdated: "2019-12-12"
 
 subcollection: text-to-speech
 
@@ -45,21 +45,24 @@ The snippets of example code that follow are written in JavaScript and are based
 You call the `/v1/synthesize` method over the WebSocket Secure (WSS) protocol to open a connection to the service. The method is available at the following endpoint:
 
 ```
-wss://{host_name}/text-to-speech/api/v1/synthesize
+wss://api.{location}.text-to-speech.watson.cloud.ibm.com/instances/{instance_id}/v1/synthesize
 ```
 {: codeblock}
 
-where `{host_name}` is the location in which your application is hosted:
+where `{location}` indicates where your application is hosted:
 
--   `stream.watsonplatform.net` for Dallas (the following examples use this host name)
--   `stream-fra.watsonplatform.net` for Frankfurt
--   `gateway-syd.watsonplatform.net` for Sydney
--   `gateway-wdc.watsonplatform.net` for Washington, DC
--   `gateway-tok.watsonplatform.net` for Tokyo
--   `gateway-lon.watsonplatform.net` for London
--   `gateway-seo.watsonplatform.net` for Seoul
 
-The examples in the documentation abbreviate `wss://{host_name}/text-to-speech/api` to `{ws_url}`. So all WebSocket examples call the method as `{ws_url}/v1/synthesize`.
+-   `us-south` for Dallas
+-   `us-east` for Washington, DC
+-   `eu-de` for Frankfurt
+-   `au-syd` for Sydney
+-   `jp-tok` for Tokyo
+-   `eu-gb` for London
+-   `kr-seo` for Seoul
+
+And `{instance_id}` is the unique identifier of the service instance.
+
+The examples in the documentation abbreviate `wss://api.{location}.text-to-speech.watson.cloud.ibm.com/instances/{instance_id}` to `{ws_url}`. So all WebSocket examples call the method as `{ws_url}/v1/synthesize`.
 {: note}
 
 A WebSocket client calls this method with the following query parameters to establish an authenticated connection with the service. If you use Identity and Access Management (IAM) authentication, use the `access_token` query parameter. If you use Cloud Foundry service credentials, use the `watson-token` query parameter.
@@ -82,7 +85,7 @@ A WebSocket client calls this method with the following query parameters to esta
       token instead of passing an API key with the call. You must use
       the access token before it expires. For information about obtaining
       an access token, see
-      [Authenticating with IAM tokens](/docs/services/watson?topic=watson-iam).
+      [Authenticating to Watson services](/docs/services/watson?topic=watson-iam).
     </td>
   </tr>
   <tr>

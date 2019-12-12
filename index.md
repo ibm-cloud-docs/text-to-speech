@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-10-18"
+lastupdated: "2019-12-12"
 
 subcollection: text-to-speech
 
@@ -25,7 +25,7 @@ subcollection: text-to-speech
 # About
 {: #about}
 
-**Service update:** *The {{site.data.keyword.texttospeechshort}} service is frequently updated with new features and fixes. For more information, see the [Release notes](/docs/services/text-to-speech?topic=text-to-speech-release-notes).*
+**Service update:** *The {{site.data.keyword.texttospeechshort}} service was updated on 12 December 2019. The service now offers full support for IBM Cloud Identity and Access Management (IAM) and, for users of Premium plans, new network and data security features. For more information, see the [12 December 2019 service update](/docs/services/text-to-speech?topic=text-to-speech-release-notes#December2019) in the release notes.*
 
 The {{site.data.keyword.texttospeechfull}} service provides an application programming interface (API) that uses {{site.data.keyword.IBM_notm}}'s speech-synthesis capabilities to convert written text to natural-sounding speech. The service streams the results back to the client with minimal delay. The service offers both [HTTP](/docs/services/text-to-speech?topic=text-to-speech-usingHTTP) and [WebSocket](/docs/services/text-to-speech?topic=text-to-speech-usingWebSocket) interfaces.
 
@@ -46,7 +46,15 @@ For more information about the pricing plans for the service, see the {{site.dat
 ## Language support
 {: #languages-index}
 
-The service supports voices in the following languages: Brazilian Portuguese, English (UK and US dialects), French, German, Italian, Japanese, and Spanish (Castilian, Latin American, and North American dialects).
+The service supports voices in the following languages:
+
+-   Brazilian Portuguese
+-   English (United Kingdom and United States dialects)
+-   French
+-   German
+-   Italian
+-   Japanese
+-   Spanish (Castilian, Latin American, and North American dialects)
 
 The service offers at least one female voice for each language. For some languages the service offers multiple voices, including both male and female voices. Each voice uses appropriate cadence and intonation for its dialect. The service offers both standard and neural versions of most voices.
 
