@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-10-01"
+lastupdated: "2019-12-12"
 
 subcollection: text-to-speech
 
@@ -89,5 +89,5 @@ SDKs are available for the {{site.data.keyword.texttospeechshort}} service to si
 For more information about working with {{site.data.keyword.watson}} services and {{site.data.keyword.cloud_notm}}, see
 
 -   For an introduction to working with {{site.data.keyword.watson}} services and {{site.data.keyword.cloud_notm}}, see [Getting started with {{site.data.keyword.watson}} and {{site.data.keyword.cloud_notm}}](/docs/services/watson?topic=watson-about).
--   All new service instances use {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) for authentication. Older service instances might continue to use the `{username}` and `{password}` from their existing Cloud Foundry service credentials for authentication. For more information about authenticating to the service, see the [30 October 2018 service update](/docs/services/text-to-speech?topic=text-to-speech-release-notes#October2018) in the release notes.
+-   For information about using {{site.data.keyword.cloud_notm}} Identity and Access Management, see [Authenticating to Watson services](/docs/services/watson?topic=watson-iam).
 -   For information about controlling the default request logging that is performed for all {{site.data.keyword.watson}} services, see [Controlling request logging for {{site.data.keyword.watson}} services](/docs/services/watson?topic=watson-gs-logging-overview).

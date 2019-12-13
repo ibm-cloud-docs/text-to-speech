@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-11-15"
+lastupdated: "2019-12-12"
 
 subcollection: text-to-speech
 
@@ -35,29 +35,45 @@ The service has the following known limitation:
 
 -   When you specify the `audio/ogg;codecs=opus` audio format, you can optionally specify a sampling rate other than the default 48,000 Hz. However, while the service accepts `48000`, `24000`, `16000`, `12000`, or `8000` as a valid sampling rate, it currently disregards a specified value and always returns the audio with a sampling rate of 48 kHz.
 
-## 12 November 2019
-{: #November 2019}
+## 12 December 2019
+{: #December2019}
 
-You can now create {{site.data.keyword.texttospeechshort}} instances in the Seoul location. As with other locations, the {{site.data.keyword.cloud_notm}} Seoul location uses token-based Identity and Access Management (IAM) authentication.
+-   **Full support for IBM Cloud IAM**
+    -   The {{site.data.keyword.texttospeechshort}} service now supports the full implementation of {{site.data.keyword.cloud}} Identity and Access Management (IAM). API keys for Watson services are no longer limited to a single service instance. You can create access policies and API keys that apply to more than one service, and you can grant access between services. For more information about IAM, see [Authenticating to Watson services](/docs/services/watson?topic=watson-iam).
+    -   To support this change, the API service endpoints use a different domain and include the service instance ID. The pattern is `api.{location}.text-to-speech.watson.cloud.ibm.com/instances/{instance_id}`.
+
+        -   Example HTTP URL for an instance hosted in the Dallas location:
+
+            `https://api.us-south.text-to-speech.watson.cloud.ibm.com/instances/6bbda3b3-d572-45e1-8c54-22d6ed9e52c2`
+
+        -   Example WebSocket URL for an instance hosted in the Dallas location:
+
+            `wss://api.us-south.text-to-speech.watson.cloud.ibm.com/instances/6bbda3b3-d572-45e1-8c54-22d6ed9e52c2`
+
+        For more information about the URLs, see the [API reference](https://{DomainName}/apidocs/text-to-speech/text-to-speech#service-endpoint){: external}.
+
+        These URLs do not constitute a breaking change. The new URLs work for both your existing service instances and for new instances. The original URLs continue to work on your existing service instances for at least one year, until December 2020.
+-   **New network and data security features** for users of Premium plans:
+    -   *Support for data encryption with customer-managed keys*
+        -   You can integrate {{site.data.keyword.keymanagementservicefull}} with the {{site.data.keyword.texttospeechshort}} service to encrypt your data and manage encryption keys. For more information, see [Protecting sensitive information in your Watson service](/docs/services/watson?topic=watson-keyservice).
+    -   *Support for private network endpoints*
+        -   You can create private network endpoints to connect to the {{site.data.keyword.texttospeechshort}} service over a private network. Connections to private network endpoints do not require public internet access. For more information, see [Public and private network endpoints](/docs/text-to-speech/?topic=watson-public-private-endpoints).
+
+## 12 November 2019
+{: #November2019}
+
+The service is now available in the {{site.data.keyword.cloud_notm}} Seoul location (**kr-seo**). As with other locations, the {{site.data.keyword.cloud_notm}} location uses token-based IAM authentication. All new services instances that you create in this location use IAM authentication.
 
 ## 1 October 2019
 {: #October2019}
 
 US HIPAA support is available for Premium plans that are hosted in the Washington, DC, location and are created on or after 1 April 2019. For more information, see [US Health Insurance Portability and Accountability Act (HIPAA)](/docs/services/text-to-speech?topic=text-to-speech-information-security#hipaa).
 
-## 22 August 2019
-{: #August2019}
-
-The service was updated for small defect fixes and improvements.
-
-## 30 July 2019
-{: #July2019}
-
-The service now offers a neural voice in Japanese: `ja-JP_EmiV3Voice`. Both standard and neural versions of all available voices in all supported languages are now available. For more information, see [Languages and voices](/docs/services/text-to-speech?topic=text-to-speech-voices).
-
 ## Older releases
 {: #older}
 
+-   [22 August 2019](#August2019)
+-   [30 July 2019](#July2019)
 -   [24 June 2019](#June2019)
 -   [24 March 2019](#March2019c)
 -   [21 March 2019](#March2019b)
@@ -79,6 +95,16 @@ The service now offers a neural voice in Japanese: `ja-JP_EmiV3Voice`. Both stan
 -   [17 December 2015](#December2015)
 -   [21 September 2015](#September2015)
 -   [1 July 2015](#July2015)
+
+### 22 August 2019
+{: #August2019}
+
+The service was updated for small defect fixes and improvements.
+
+### 30 July 2019
+{: #July2019}
+
+The service now offers a neural voice in Japanese: `ja-JP_EmiV3Voice`. Both standard and neural versions of all available voices in all supported languages are now available. For more information, see [Languages and voices](/docs/services/text-to-speech?topic=text-to-speech-voices).
 
 ### 24 June 2019
 {: #June2019}
@@ -108,8 +134,6 @@ The service now offers a neural voice in Japanese: `ja-JP_EmiV3Voice`. Both stan
 Users can now see only service credential information that is associated with the role that has been assigned to their {{site.data.keyword.cloud_notm}} account. For example, if you are assigned a `reader` role, any `writer` or higher levels of service credentials are no longer visible.
 
 This change does not affect API access for users or applications with existing service credentials. The change affects only the viewing of credentials within {{site.data.keyword.cloud_notm}}.
-
-For more information about service keys and user roles, see [IAM service API keys](/docs/services/watson?topic=watson-api-key-bp#api-key-bp).
 
 ### 4 March 2019
 {: #March2019a}
@@ -165,8 +189,7 @@ The migration to IAM authentication affects new and existing service instances d
 For more information, see the following documentation:
 
 -   To learn which authentication mechanism your service instance uses, view your service credentials by clicking the instance on the [{{site.data.keyword.cloud_notm}} dashboard](https://{DomainName}/dashboard/apps){: external}.
--   For more information about using IAM tokens with {{site.data.keyword.watson}} services, see [Authenticating with IAM tokens](/docs/services/watson?topic=watson-iam).
--   For more information about using IAM API keys with {{site.data.keyword.watson}} services, see [IAM service API keys](/docs/services/watson?topic=watson-api-key-bp).
+-   For more information about using IAM tokens with {{site.data.keyword.watson}} services, see [Authenticating to Watson services](/docs/services/watson?topic=watson-iam).
 -   For examples that use IAM authentication, see the [API reference](https://{DomainName}/apidocs/text-to-speech){: external}.
 
 ### 12 June 2018
