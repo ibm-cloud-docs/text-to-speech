@@ -1,8 +1,8 @@
 ---
 
-copyright:
+Copyright:
   years: 2015, 2019
-lastupdated: "2019-10-01"
+lastupdated: "2019-12-13"
 
 subcollection: text-to-speech
 
@@ -152,7 +152,9 @@ To learn more, see the following:
 ## Supported languages
 {: #supportedLanguages}
 
-The following pages document the SPR symbols, IPA symbols, and equivalent IPA Unicode values for each language. They show examples of each symbol in words from the language. Because of dialectal differences, the examples might not always match your pronunciation.
+The following pages document the SPR symbols, IPA symbols, and equivalent IPA Unicode values for each supported language. Examples show the use of each symbol in words from the language. Because of dialectal differences, the examples might not always match your pronunciation.
+
+The following languages support both IPA and SPR:
 
 -   [Brazilian Portuguese symbols](/docs/services/text-to-speech?topic=text-to-speech-ptSymbols)
 -   [French symbols](/docs/services/text-to-speech?topic=text-to-speech-frSymbols)
@@ -162,3 +164,12 @@ The following pages document the SPR symbols, IPA symbols, and equivalent IPA Un
 -   [Spanish symbols](/docs/services/text-to-speech?topic=text-to-speech-esSymbols)
 -   [UK English symbols](/docs/services/text-to-speech?topic=text-to-speech-gbSymbols)
 -   [US English symbols](/docs/services/text-to-speech?topic=text-to-speech-usSymbols)
+
+The following languages support only IPA:
+
+-   Arabic
+-   Chinese
+-   Dutch
+
+The IPA symbols for these three languages are not yet documented. Documentation will be made available for a future release.
+{: note}

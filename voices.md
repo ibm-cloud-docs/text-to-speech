@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-10-11"
+lastupdated: "2019-12-13"
 
 subcollection: text-to-speech
 
@@ -34,7 +34,9 @@ The `V2` voices that were previously available with the service have been discon
 ## Supported languages and voices
 {: #languageVoices}
 
-Table 1 lists and provides audio samples for the voices that are available for each language and dialect. All voices are available as both [Standard voices](#standardVoices) and [Neural voices](#neuralVoices). If you omit the optional `voice` parameter from a synthesis request, the service uses the standard `en-US_MichaelVoice` by default.
+Table 1 lists and provides audio samples for the voices that are available for each language and dialect. Voices are available as [Standard voices](#standardVoices), [Neural voices](#neuralVoices), or both. If you omit the optional `voice` parameter from a synthesis request, the service uses the standard `en-US_MichaelVoice` by default.
+
+Voices labeled *Beta* are currently beta functionality. Beta voices might not be ready for production use and are subject to change. They are initial offerings that are expected to improve in quality with time and usage. All other voices are generally available (GA) for production use.
 
 <table style="border-spacing:0px;border-collapse:separate">
   <caption>Table 1. Supported languages and voices</caption>
@@ -44,6 +46,17 @@ Table 1 lists and provides audio samples for the voices that are available for e
     <th width="28%" style="text-align:center; padding:2px">Voice</th>
     <th width="10%" style="text-align:center; padding:2px">Type</th>
     <th style="text-align:center; padding:2px">Sample</th>
+  </tr>
+  <tr>
+    <td style="text-align:left;vertical-align:middle;padding:2px">Arabic<br/>(Beta)</td>
+    <td style="text-align:center;vertical-align:middle;padding:2px">Male</td>
+    <td style="text-align:center;vertical-align:middle;padding:2px"><code>ar-AR_OmarVoice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:2px">Standard</td>
+    <td style="text-align:center;vertical-align:middle;padding:2px">
+      <audio controls style="width:250px;height:30px">
+      <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Omar.wav" type="audio/wav">
+      </audio>
+    </td>
   </tr>
   <tr>
     <td style="text-align:left;vertical-align:middle;padding:2px">Brazilian Portuguese</td>
@@ -65,6 +78,61 @@ Table 1 lists and provides audio samples for the voices that are available for e
       <audio controls style="width:250px;height:30px">
       <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/IsabelaV3.wav" type="audio/wav">
        </audio>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:left;vertical-align:middle;padding:2px">Chinese<br/>(Mandarin, Beta)</td>
+    <td style="text-align:center;vertical-align:middle;padding:2px">Female</td>
+    <td style="text-align:center;vertical-align:middle;padding:2px"><code>zh-CN_LiNaVoice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:2px">Standard</td>
+    <td style="text-align:center;vertical-align:middle;padding:2px">
+      <audio controls style="width:250px;height:30px">
+      <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/LiNa.wav" type="audio/wav">
+      </audio>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:left;vertical-align:middle;padding:2px"></td>
+    <td style="text-align:center;vertical-align:middle;padding:2px">Male</td>
+    <td style="text-align:center;vertical-align:middle;padding:2px"><code>zh-CN_WangWeiVoice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:2px">Standard</td>
+    <td style="text-align:center;vertical-align:middle;padding:2px">
+      <audio controls style="width:250px;height:30px">
+      <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/WangWei.wav" type="audio/wav">
+      </audio>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:left;vertical-align:middle;padding:2px"></td>
+    <td style="text-align:center;vertical-align:middle;padding:2px">Female</td>
+    <td style="text-align:center;vertical-align:middle;padding:2px"><code>zh-CN_ZhangJingVoice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:2px">Standard</td>
+    <td style="text-align:center;vertical-align:middle;padding:2px">
+      <audio controls style="width:250px;height:30px">
+      <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/ZhangJing.wav" type="audio/wav">
+      </audio>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:left;vertical-align:middle;padding:2px">Dutch<br/>(Beta)</td>
+    <td style="text-align:center;vertical-align:middle;padding:2px">Female</td>
+    <td style="text-align:center;vertical-align:middle;padding:2px"><code>nl-NL_EmmaVoice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:2px">Standard</td>
+    <td style="text-align:center;vertical-align:middle;padding:2px">
+      <audio controls style="width:250px;height:30px">
+      <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Emma.wav" type="audio/wav">
+      </audio>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:left;vertical-align:middle;padding:2px"></td>
+    <td style="text-align:center;vertical-align:middle;padding:2px">Male</td>
+    <td style="text-align:center;vertical-align:middle;padding:2px"><code>nl-NL_LiamVoice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:2px">Standard</td>
+    <td style="text-align:center;vertical-align:middle;padding:2px">
+      <audio controls style="width:250px;height:30px">
+      <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Liam.wav" type="audio/wav">
+      </audio>
     </td>
   </tr>
   <tr>
@@ -385,6 +453,9 @@ However, you might find that these SSML features are no longer needed when using
 
 ### Voice customization
 {: #customizeVoice}
+
+Voice customization is not available for the Arabic, Chinese, and Dutch voices.
+{: note}
 
 When you synthesize text, the service applies language-dependent pronunciation rules to convert the ordinary spelling of each word to a phonetic spelling. The service's pronunciation rules work well for common words, but they can yield imperfect results for unusual words, such as terms with foreign origins, personal names, and abbreviations or acronyms.
 

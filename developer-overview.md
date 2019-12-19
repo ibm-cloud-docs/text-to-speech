@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-12-12"
+lastupdated: "2019-12-13"
 
 subcollection: text-to-speech
 
@@ -54,7 +54,7 @@ To synthesize text with the HTTP API, you call the `GET` or `POST` version of th
 
 The service offers a WebSocket interface that you can use to synthesize text. The interface provides a single version of the `/v1/synthesize` method that accepts a maximum of 5 KB of input text. You specify the text to be synthesized, the voice to be used, and the format for the audio. You can provide plain text or text that is annotated with SSML. For more information, see [The WebSocket interface](/docs/services/text-to-speech?topic=text-to-speech-usingWebSocket).
 
-The WebSocket interface supports use of the SSML `<mark>` element to identify specific locations in audio. You can also request word timing information for all words of the input text. For more information, see [Obtaining word timings](/docs/services/text-to-speech?topic=text-to-speech-timing).
+For most languages, the WebSocket interface supports use of the SSML `<mark>` element to identify specific locations in audio. For most languages, you can also request word timing information for all words of the input text. For more information, see [Obtaining word timings](/docs/services/text-to-speech?topic=text-to-speech-timing).
 
 ## Customization interface
 {: #overview-customization}
@@ -63,10 +63,11 @@ The service includes a customization interface that you can use to create custom
 
 You can use custom voice models to create application-specific translations for unusual words for which the service's regular pronunciation rules might yield imperfect pronunciations. You can define the custom entry for a word/translation pair in the standard International Phonetic Alphabet (IPA) representation or in the proprietary {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR).
 
-For example, your application might routinely encounter special terms with foreign origins, personal or geographic names, or abbreviations and acronyms. By using customization, you can define translations that tell the service how you want such terms to be pronounced. For more information, see [Understanding customization](/docs/services/text-to-speech?topic=text-to-speech-customIntro).
+For example, your application might routinely encounter special terms with foreign origins, personal or geographic names, or abbreviations and acronyms. By using customization, you can define translations that tell the service how you want such terms to be pronounced.
 
-The customization interface is a beta release. Also, you must have the Standard pricing plan to use voice model customization. Users of the Lite plan cannot use the customization interface. For more information, see the [pricing page](https://www.ibm.com/cloud/watson-text-to-speech/pricing){: external} for the {{site.data.keyword.texttospeechshort}} service.
-{: note}
+The customization interface is a beta release. Customization is available for most languages; it is not supported for use with the Arabic, Chinese, and Dutch voices. You must have the Standard pricing plan to use voice model customization. Users of the Lite plan cannot use the customization interface.
+
+For more information, see [Understanding customization](/docs/services/text-to-speech?topic=text-to-speech-customIntro).
 
 ## CORS support
 {: #cors}
