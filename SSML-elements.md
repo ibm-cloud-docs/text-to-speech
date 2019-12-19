@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-21"
+lastupdated: "2019-12-13"
 
 subcollection: text-to-speech
 
@@ -212,7 +212,7 @@ You can use the service's customization interface to define a dictionary of cust
 ## The mark element
 {: #mark_element}
 
-The `<mark>` element is supported only by the service's WebSocket interface, not by its HTTP interface, which ignores the element. For more information, see [Specifying an SSML mark](/docs/services/text-to-speech?topic=text-to-speech-timing#mark).
+The `<mark>` element is supported only by the service's WebSocket interface, not by its HTTP interface, which ignores the element. The element is not supported for use with the Arabic, Chinese, and Dutch voices. For more information, see [Specifying an SSML mark](/docs/services/text-to-speech?topic=text-to-speech-timing#mark).
 {: note}
 
 The `<mark>` element is an empty element that places a marker into the text to be synthesized. The client is notified when all of the text that precedes the `<mark>` element has been synthesized. The element accepts a single `name` attribute that specifies a string that uniquely identifies the mark; the name must begin with an alphanumeric character. The name is returned along with the time at which the mark occurs in the synthesized audio.
@@ -255,7 +255,10 @@ The `<phoneme>` element provides a phonetic pronunciation for the enclosed text.
     -   The standard International Phonetic Alphabet (IPA): `alphabet="ipa"`
     -   The {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR): `alphabet="ibm"`
 
-    If no alphabet is specified, the service uses IBM SPR by default.
+    If no alphabet is specified, the service uses {{site.data.keyword.IBM_notm}} SPR by default.
+
+    The Arabic, Chinese, and Dutch voices support only IPA, not SPR.
+    {: note}
 -   `ph` is a required attribute that provides the pronunciation in the indicated alphabet. The following examples show the pronunciation for the word *tomato* in both formats:
 
     -   IPA format:
@@ -270,7 +273,7 @@ The `<phoneme>` element provides a phonetic pronunciation for the enclosed text.
           &lt;phoneme alphabet="ipa" ph="t&amp;&#35;x259;mei&amp;&#35;x027E;o&amp;&#035;x028A;"&gt;tomato&lt;/phoneme&gt;
         &lt;/speak&gt;</code></pre>
 
-    -   IBM SPR format:
+    -   {{site.data.keyword.IBM_notm}} SPR format:
 
         <pre><code>&lt;speak version="1.0"&gt;
           &lt;phoneme alphabet="ibm" ph=".0tx.1me.0Fo"&gt;tomato&lt;/phoneme&gt;

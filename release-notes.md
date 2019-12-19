@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-12-12"
+lastupdated: "2019-12-17"
 
 subcollection: text-to-speech
 
@@ -35,8 +35,30 @@ The service has the following known limitation:
 
 -   When you specify the `audio/ogg;codecs=opus` audio format, you can optionally specify a sampling rate other than the default 48,000 Hz. However, while the service accepts `48000`, `24000`, `16000`, `12000`, or `8000` as a valid sampling rate, it currently disregards a specified value and always returns the audio with a sampling rate of 48 kHz.
 
+## 18 December 2019
+{: #December2019b}
+
+The service now supports six new standard voices in three new languages:
+
+-   *Arabic:* `ar-AR_OmarVoice`
+-   *Chinese (Mandarin):* `zh-CN_LiNaVoice`, `zh-CN_WangWeiVoice`, and `zh-CN_ZhangJingVoice`
+-   *Dutch:* `nl-NL_EmmaVoice` and `nl-NL_LiamVoice`
+
+The following information applies to these new standard voices:
+
+-   The new voices are beta functionality. The voices might not be ready for production use and are subject to change. They are initial offerings that are expected to improve in quality with time and usage.
+-   The voices do not support the `<mark>` element and `timings` parameter that are available with the WebSocket interface.
+-   The voices do not support voice customization or the `/v1/pronunciation` method.
+-   The voices do not support expressive Speech Synthesis Markup Language (SSML) or voice transformation SSML.
+-   The voices do support all other SSML elements. However, they support only the International Phonetic Alphabet (IPA), not {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR), with the `<phoneme>` element.
+
+    The IPA symbols for these languages are not yet documented. Documentation will be made available with a future release.
+    {: note}
+
+For more information about these and all available voices, see [Languages and voices](/docs/services/text-to-speech?topic=text-to-speech-voices).
+
 ## 12 December 2019
-{: #December2019}
+{: #December2019a}
 
 -   **Full support for IBM Cloud IAM**
     -   The {{site.data.keyword.texttospeechshort}} service now supports the full implementation of {{site.data.keyword.cloud}} Identity and Access Management (IAM). API keys for Watson services are no longer limited to a single service instance. You can create access policies and API keys that apply to more than one service, and you can grant access between services. For more information about IAM, see [Authenticating to Watson services](/docs/services/watson?topic=watson-iam).
@@ -64,14 +86,10 @@ The service has the following known limitation:
 
 The service is now available in the {{site.data.keyword.cloud_notm}} Seoul location (**kr-seo**). As with other locations, the {{site.data.keyword.cloud_notm}} location uses token-based IAM authentication. All new services instances that you create in this location use IAM authentication.
 
-## 1 October 2019
-{: #October2019}
-
-US HIPAA support is available for Premium plans that are hosted in the Washington, DC, location and are created on or after 1 April 2019. For more information, see [US Health Insurance Portability and Accountability Act (HIPAA)](/docs/services/text-to-speech?topic=text-to-speech-information-security#hipaa).
-
 ## Older releases
 {: #older}
 
+-   [1 October 2019](#October2019)
 -   [22 August 2019](#August2019)
 -   [30 July 2019](#July2019)
 -   [24 June 2019](#June2019)
@@ -95,6 +113,11 @@ US HIPAA support is available for Premium plans that are hosted in the Washingto
 -   [17 December 2015](#December2015)
 -   [21 September 2015](#September2015)
 -   [1 July 2015](#July2015)
+
+### 1 October 2019
+{: #October2019}
+
+US HIPAA support is available for Premium plans that are hosted in the Washington, DC, location and are created on or after 1 April 2019. For more information, see [US Health Insurance Portability and Accountability Act (HIPAA)](/docs/services/text-to-speech?topic=text-to-speech-information-security#hipaa).
 
 ### 22 August 2019
 {: #August2019}
@@ -251,11 +274,11 @@ The service now supports the MP3 or Motion Picture Experts Group (MPEG) audio fo
 {: #September2016}
 
 -   The customization interface, which includes the customization and `GET /v1/pronunciation` methods, is now available for all languages that are supported by the service. The interface remains a beta release. For more information, see [Understanding customization](/docs/services/text-to-speech?topic=text-to-speech-customIntro).
--   The service now supports the Speech Synthesis Markup Language (SSML) for Japanese. For general information about SSML support, see [Using SSML](/docs/services/text-to-speech?topic=text-to-speech-ssml). For information about Japanese SPR and IPA symbols, see [Japanese symbols](/docs/services/text-to-speech?topic=text-to-speech-jaSymbols). Extra considerations and a `part_of_speech` field apply when creating entries for words in a Japanese custom voice model. For more information, see [Working with Japanese entries](/docs/services/text-to-speech?topic=text-to-speech-rules#jaNotes).
+-   The service now supports SSML for Japanese. For general information about SSML support, see [Using SSML](/docs/services/text-to-speech?topic=text-to-speech-ssml). For information about Japanese SPR and IPA symbols, see [Japanese symbols](/docs/services/text-to-speech?topic=text-to-speech-jaSymbols). Extra considerations and a `part_of_speech` field apply when creating entries for words in a Japanese custom voice model. For more information, see [Working with Japanese entries](/docs/services/text-to-speech?topic=text-to-speech-rules#jaNotes).
 -   The service now offers SSML voice transformation via the new `<voice-transformation>` element. You can expand the range of possible voices by creating custom voice transformations that modify the pitch, pitch range, glottal tension, breathiness, rate, and timbre of a voice. The service also offers two built-in virtual voices, *Young* and *Soft*. The service currently supports voice transformation only for the US English Allison voice. For more information, see [Voice transformation SSML](/docs/services/text-to-speech?topic=text-to-speech-transformation).
 -   The service can now return word timing information for all strings of the input text that you pass to the WebSocket interface. To receive the start and end time of every string in the input, specify an array that includes the string `words` for the optional `timings` parameter of the JSON object that you pass to the service. The feature is not currently available for Japanese input text. For more information, see [Obtaining word timings](/docs/services/text-to-speech?topic=text-to-speech-timing).
 -   The service now validates all SSML elements that you submit in any context. If it finds an invalid tag, the service reports an HTTP 400 response code with a descriptive message, and the method fails. In previous releases, the service handled errors inconsistently; specifying an invalid word pronunciation, for example, could lead to unpredictable or inconsistent behavior. For more information, see [SSML validation](/docs/services/text-to-speech?topic=text-to-speech-ssml#errors).
--   The use of `spr` is deprecated as an argument to the `format` option of the `GET /v1/pronunciation` method and for use with the `alphabet` attribute of an SSML `<phoneme>` element. To use {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR) notation, use the `ibm` argument instead of `spr` in all cases.
+-   The use of `spr` is deprecated as an argument to the `format` option of the `GET /v1/pronunciation` method and for use with the `alphabet` attribute of an SSML `<phoneme>` element. To use {{site.data.keyword.IBM_notm}} SPR notation, use the `ibm` argument instead of `spr` in all cases.
 -   The list of supported audio formats now includes `audio/mulaw;rate=8000`. Like `audio/basic`, this format provides single-channel audio that is encoded by using 8-bit u-law (or mu-law) data that is sampled at 8 kHz. For more information, see [Audio formats](/docs/services/text-to-speech?topic=text-to-speech-audioFormats).
 -   The `GET /v1/voices` and `GET /v1/voices/{voice}` methods now return a `supported_features` object as part of their output for each voice. The object describes whether the voice supports customization and the SSML `<voice_transformation>` element. For more information, see [Languages and voices](/docs/services/text-to-speech?topic=text-to-speech-voices).
 
@@ -295,14 +318,14 @@ The service now supports the MP3 or Motion Picture Experts Group (MPEG) audio fo
 ### 22 February 2016
 {: #February2016}
 
-The service was updated with a new expressive SSML feature. The service extends the Speech Synthesis Markup Language (SSML) with an `<express-as>` element that you can use to indicate expressiveness in one of three speaking styles: `GoodNews`, `Apology`, or `Uncertainty`. You can apply the element to the entire body of the text, a sentence, a phrase, or a word. The service currently supports expressiveness only for the US English Allison voice (`en-US_AllisonVoice`). For more information, see [Expressive SSML](/docs/services/text-to-speech?topic=text-to-speech-expressive).
+The service was updated with a new expressive SSML feature. The service extends SSML with an `<express-as>` element that you can use to indicate expressiveness in one of three speaking styles: `GoodNews`, `Apology`, or `Uncertainty`. You can apply the element to the entire body of the text, a sentence, a phrase, or a word. The service currently supports expressiveness only for the US English Allison voice (`en-US_AllisonVoice`). For more information, see [Expressive SSML](/docs/services/text-to-speech?topic=text-to-speech-expressive).
 
 ### 17 December 2015
 {: #December2015}
 
 -   The service offers a new customization interface that you can use to specify how it pronounces unusual words that occur in your input. The interface includes a number of new methods that you can use to create and manage custom voice models and the word/translation pairs that they contain. You can then use your custom models when synthesizing text to audio.
 
-    The service supports sounds-like translations and phonetic translations. Phonetic translations can use either the standard International Phonetic Alphabet (IPA) representation or the proprietary {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR). You use the Speech Synthesis Markup Language (SSML) to specify phonetic translations.
+    The service supports sounds-like translations and phonetic translations. Phonetic translations can use either the standard International Phonetic Alphabet (IPA) representation or the proprietary {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR). You use SSML to specify phonetic translations.
 
     The customization interface includes a collection of new HTTP methods that have the names `POST /v1/customizations`, `POST /v1/customizations/{customization_id}`, `POST /v1/customizations/{customization_id}/words`, and `PUT /v1/customizations/{customization_id}/words/{word}`. The service also provides a new `GET /v1/pronunciation` method that returns the pronunciation for any word and a new `GET /v1/voices/{voice}` method that returns detailed information about a specific voice. In addition, existing methods of the service's interface now accept custom voice model parameters as needed.
 

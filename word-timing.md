@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-04"
+lastupdated: "2019-12-13"
 
 subcollection: text-to-speech
 
@@ -33,8 +33,15 @@ The WebSocket interface provides the same functionality as the HTTP `GET` and `P
 
 Timing information is useful for synchronizing the audio and the input text. For example, you can coordinate a robot's gestures with the content of the synthesized speech.
 
-The `timings` parameter is not supported for Japanese input text.
-{: note}
+## Language support
+{: #languages-timing}
+
+The service does not support word timings for the following languages:
+
+-   The `<mark>` element is not supported for Arabic, Chinese, and Dutch input text.
+-   The `timings` parameter is not supported for Arabic, Chinese, Dutch, and Japanese input text.
+
+Word timings are supported for all other languages.
 
 ## How the service returns word timings
 {: #timingHow}

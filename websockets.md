@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-12-12"
+lastupdated: "2019-12-13"
 
 subcollection: text-to-speech
 
@@ -220,7 +220,8 @@ To synthesize text, the client passes a simple JSON text message to the service 
       as the lone element of the array to request word timings. Specify
       an empty array or omit the parameter to receive no word timings.
       For more information, see
-      [Obtaining word timings](/docs/services/text-to-speech?topic=text-to-speech-timing#timing). <em>Not supported for Japanese input text.</em>
+      [Obtaining word timings](/docs/services/text-to-speech?topic=text-to-speech-timing#timing).<br/><br/>
+      <em>Not supported for Arabic, Chinese, Dutch, and Japanese input text.</em>
     </td>
   </tr>
 </table>
