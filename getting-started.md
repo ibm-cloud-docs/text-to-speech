@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-08-21"
+  years: 2015, 2020
+lastupdated: "2020-01-17"
 
 keywords: text to speech,IBM cloud,getting started,tutorial,synthesize audio,speech synthesis
 
@@ -44,7 +44,7 @@ The {{site.data.keyword.texttospeechfull}} service converts written text to natu
     1.  {: hide-dashboard} Click **Create**.
 -   Copy the credentials to authenticate to your service instance:
     1.  {: hide-dashboard} From the [{{site.data.keyword.cloud_notm}} Resource list](https://{DomainName}/resources){: external}, click on your {{site.data.keyword.texttospeechshort}} service instance to go to the {{site.data.keyword.texttospeechshort}} service dashboard page.
-    1.  On the **Manage** page, click **Show** to view your credentials.
+    1.  On the **Manage** page, click **Show Credentials** to view your credentials.
     1.  Copy the `API Key` and `URL` values.
 
 ### Using the curl examples
