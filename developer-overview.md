@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-12-13"
+  years: 2015, 2020
+lastupdated: "2020-02-04"
 
 subcollection: text-to-speech
 
@@ -39,22 +39,22 @@ To synthesize text with the HTTP API, you call the `GET` or `POST` version of th
 
     You can pass the service plain text or text that is annotated with the Speech Synthesis Markup Language (SSML). SSML is an XML-based markup language that provides annotations of text for speech synthesis applications such as the {{site.data.keyword.texttospeechshort}} service. The service augments SSML with service-specific expressive and voice-transformation elements, which are available for some standard US English voices.
 
-    For more information, see [Specifying input text](/docs/services/text-to-speech?topic=text-to-speech-usingHTTP#input).
+    For more information, see [Specifying input text](/docs/text-to-speech?topic=text-to-speech-usingHTTP#input).
 -   *Voices:* The service accepts text and produces audio in various languages, voices, and dialects. The service offers at least one female voice for each language. For some languages the service offers multiple voices, which can include both male and female voices. The service also offers different dialects such as US and UK English. It offers both standard (concatenative) and enhanced neural versions of most voices.
 
     You can use the service's `GET /v1/voices` or `GET /v1/voices/{voice}` methods to learn more about the supported voices. The service synthesizes the text into the language of the specified voice. Be sure to match the voice to the input text.
 
-    For more information, see [Languages and voices](/docs/services/text-to-speech?topic=text-to-speech-voices).
+    For more information, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
 -   *Audio formats:* The service can produce audio in the following formats: Ogg or Web Media (WebM) format with the Opus (default) or Vorbis codec, MP3 (Motion Picture Experts Group, or MPEG) format, Waveform Audio File Format (WAV), Free Lossless Audio Codec (FLAC), Linear 16-bit Pulse-Code Modulation (PCM), 8-bit mu-law (u-law), or basic audio.
 
-    For more information, see [Audio formats](/docs/services/text-to-speech?topic=text-to-speech-audioFormats).
+    For more information, see [Audio formats](/docs/text-to-speech?topic=text-to-speech-audioFormats).
 
 ## WebSocket interface
 {: #overview-websocket}
 
-The service offers a WebSocket interface that you can use to synthesize text. The interface provides a single version of the `/v1/synthesize` method that accepts a maximum of 5 KB of input text. You specify the text to be synthesized, the voice to be used, and the format for the audio. You can provide plain text or text that is annotated with SSML. For more information, see [The WebSocket interface](/docs/services/text-to-speech?topic=text-to-speech-usingWebSocket).
+The service offers a WebSocket interface that you can use to synthesize text. The interface provides a single version of the `/v1/synthesize` method that accepts a maximum of 5 KB of input text. You specify the text to be synthesized, the voice to be used, and the format for the audio. You can provide plain text or text that is annotated with SSML. For more information, see [The WebSocket interface](/docs/text-to-speech?topic=text-to-speech-usingWebSocket).
 
-For most languages, the WebSocket interface supports use of the SSML `<mark>` element to identify specific locations in audio. For most languages, you can also request word timing information for all words of the input text. For more information, see [Obtaining word timings](/docs/services/text-to-speech?topic=text-to-speech-timing).
+For most languages, the WebSocket interface supports use of the SSML `<mark>` element to identify specific locations in audio. For most languages, you can also request word timing information for all words of the input text. For more information, see [Obtaining word timings](/docs/text-to-speech?topic=text-to-speech-timing).
 
 ## Customization interface
 {: #overview-customization}
@@ -67,7 +67,7 @@ For example, your application might routinely encounter special terms with forei
 
 The customization interface is a beta release. Customization is available for most languages; it is not supported for use with the Arabic, Chinese, and Dutch voices. You must have the Standard pricing plan to use voice model customization. Users of the Lite plan cannot use the customization interface.
 
-For more information, see [Understanding customization](/docs/services/text-to-speech?topic=text-to-speech-customIntro).
+For more information, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
 
 ## CORS support
 {: #cors}
@@ -81,7 +81,7 @@ For instance, a web page that is loaded from a server in {{site.data.keyword.clo
 
 SDKs are available for the {{site.data.keyword.texttospeechshort}} service to simplify the development of speech applications. {{site.data.keyword.ibmwatson}} SDKs are available for many popular programming languages and platforms.
 
--   For a complete list of SDKs and links to the SDKs on GitHub, see [Using SDKs](/docs/services/watson?topic=watson-using-sdks).
+-   For a complete list of SDKs and links to the SDKs on GitHub, see [Using SDKs](/docs/text-to-speech?topic=watson-using-sdks).
 -   For detailed information about all methods of the Node, Java&trade;, Python, Ruby, Swift, and Go SDKs for the {{site.data.keyword.texttospeechshort}} service, see the [API reference](https://{DomainName}/apidocs/text-to-speech){: external}.
 
 ## Learning more about application development
@@ -89,6 +89,6 @@ SDKs are available for the {{site.data.keyword.texttospeechshort}} service to si
 
 For more information about working with {{site.data.keyword.watson}} services and {{site.data.keyword.cloud_notm}}, see
 
--   For an introduction to working with {{site.data.keyword.watson}} services and {{site.data.keyword.cloud_notm}}, see [Getting started with {{site.data.keyword.watson}} and {{site.data.keyword.cloud_notm}}](/docs/services/watson?topic=watson-about).
--   For information about using {{site.data.keyword.cloud_notm}} Identity and Access Management, see [Authenticating to Watson services](/docs/services/watson?topic=watson-iam).
--   For information about controlling the default request logging that is performed for all {{site.data.keyword.watson}} services, see [Controlling request logging for {{site.data.keyword.watson}} services](/docs/services/watson?topic=watson-gs-logging-overview).
+-   For an introduction to working with {{site.data.keyword.watson}} services and {{site.data.keyword.cloud_notm}}, see [Getting started with {{site.data.keyword.watson}} and {{site.data.keyword.cloud_notm}}](/docs/watson?topic=watson-about).
+-   For information about using {{site.data.keyword.cloud_notm}} Identity and Access Management, see [Authenticating to Watson services](/docs/watson?topic=watson-iam).
+-   For information about controlling the default request logging that is performed for all {{site.data.keyword.watson}} services, see [Controlling request logging for {{site.data.keyword.watson}} services](/docs/watson?topic=watson-gs-logging-overview).

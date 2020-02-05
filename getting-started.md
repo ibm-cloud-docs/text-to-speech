@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-01-17"
+lastupdated: "2020-02-04"
 
 keywords: text to speech,IBM cloud,getting started,tutorial,synthesize audio,speech synthesis
 
@@ -97,7 +97,7 @@ The following commands use the `POST /v1/synthesize` method to synthesize US Eng
     ```
     {: pre}
 
-You can use a browser or other tools to play the audio files that are produced by the examples in this tutorial. For more information, see [Playing an audio file](/docs/services/text-to-speech?topic=text-to-speech-audioFormats#formatsPlay).
+You can use a browser or other tools to play the audio files that are produced by the examples in this tutorial. For more information, see [Playing an audio file](/docs/text-to-speech?topic=text-to-speech-audioFormats#formatsPlay).
 {: note}
 
 ## Step 2: Synthesize text in Spanish
@@ -117,6 +117,6 @@ The following command uses the `GET /v1/synthesize` method to synthesize Spanish
 
 ## Next steps
 
--   Learn more about the service's HTTP interface in [The HTTP interface](/docs/services/text-to-speech?topic=text-to-speech-usingHTTP).
--   Learn about the service's WebSocket interface in [The WebSocket interface](/docs/services/text-to-speech?topic=text-to-speech-usingWebSocket).
+-   Learn more about the service's HTTP interface in [The HTTP interface](/docs/text-to-speech?topic=text-to-speech-usingHTTP).
+-   Learn about the service's WebSocket interface in [The WebSocket interface](/docs/text-to-speech?topic=text-to-speech-usingWebSocket).
 -   Get detailed information about the methods of the service's interface in the [API reference](https://{DomainName}/apidocs/text-to-speech){: external}.

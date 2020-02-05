@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-10-04"
+  years: 2015, 2020
+lastupdated: "2020-02-04"
 
 subcollection: text-to-speech
 
@@ -50,7 +50,7 @@ How the service handles request logging for calls to the customization interface
 -   The service *does not* log data (words and translations) that are used to build custom voice models. You do not need to set the `X-Watson-Learning-Opt-Out` request header when using the customization interface to manage the words and translations in a custom model. Your training data is never used to improve the service's base models.
 -   The service *does* log data when a custom model is used with a synthesize request. You must set the `X-Watson-Learning-Opt-Out` request header to `true` to prevent logging for synthesize requests.
 
-For more information, see [Controlling request logging for {{site.data.keyword.watson}} services](/docs/services/watson?topic=watson-gs-logging-overview).
+For more information, see [Controlling request logging for {{site.data.keyword.watson}} services](/docs/watson?topic=watson-gs-logging-overview).
 
 ### Information security
 {: #customSecurity}
@@ -61,7 +61,7 @@ The service allows you to associate a customer ID with data that is added or upd
 -   `POST /v1/customizations/{customization_id}/words`
 -   `PUT /v1/customizations/{customization_id}/words/{word}`
 
-If necessary, you can then delete the data associated with the customer ID by using the `DELETE /v1/user_data` method. For more information, see [Information security](/docs/services/text-to-speech?topic=text-to-speech-information-security).
+If necessary, you can then delete the data associated with the customer ID by using the `DELETE /v1/user_data` method. For more information, see [Information security](/docs/text-to-speech?topic=text-to-speech-information-security).
 
 ## Creating a custom model
 {: #cuModelsCreate}
@@ -213,7 +213,7 @@ curl -X POST -u "apikey:{apikey}"
 ```
 {: pre}
 
-For information about updating the words in a model, see [Adding multiple words to a custom model](/docs/services/text-to-speech?topic=text-to-speech-customWords#cuWordsAdd).
+For information about updating the words in a model, see [Adding multiple words to a custom model](/docs/text-to-speech?topic=text-to-speech-customWords#cuWordsAdd).
 
 ## Deleting a custom model
 {: #cuModelsDelete}

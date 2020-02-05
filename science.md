@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-07-08"
+  years: 2015, 2020
+lastupdated: "2020-02-04"
 
 subcollection: text-to-speech
 
@@ -28,7 +28,7 @@ subcollection: text-to-speech
 The {{site.data.keyword.texttospeechfull}} service offers voices that rely on two types of technology: [neural voice technology](#science-neural) and [concatenative synthesis](#science-concatenative). Both technologies synthesize speech from input text, but they use different approaches to produce audio with different characteristics. Neural (`V3`) voices are enhanced versions of the service's original concatenative voices.
 {: shortdesc}
 
-The topic of synthesizing text to speech is inherently complex. For more information about the scientific research behind the service's speech technology, see the documents that are listed in [Research references](/docs/services/text-to-speech?topic=text-to-speech-references).
+The topic of synthesizing text to speech is inherently complex. For more information about the scientific research behind the service's speech technology, see the documents that are listed in [Research references](/docs/text-to-speech?topic=text-to-speech-references).
 
 ## Neural voice technology
 {: #science-neural}
