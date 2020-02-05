@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-06-24"
+  years: 2015, 2020
+lastupdated: "2020-02-04"
 
 subcollection: text-to-speech
 
@@ -58,7 +58,7 @@ The two versions of the `/v1/synthesize` method have the following parameters in
       service is to return the audio. You can also specify this value with
       the HTTP <code>Accept</code> request header. URL-encode the argument
       to the `accept` query parameter. For more information, see
-      [Audio formats](/docs/services/text-to-speech?topic=text-to-speech-audioFormats).
+      [Audio formats](/docs/text-to-speech?topic=text-to-speech-audioFormats).
     </td>
   </tr>
   <tr>
@@ -70,7 +70,7 @@ The two versions of the `/v1/synthesize` method have the following parameters in
       the audio. Use the <code>/v1/voices</code> method to get the
       current list of supported voices. The default voice is
       <code>en-US_MichaelVoice</code>. For more information, see
-      [Languages and voices](/docs/services/text-to-speech?topic=text-to-speech-voices).
+      [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
     </td>
   </tr>
   <tr>
@@ -85,15 +85,15 @@ The two versions of the `/v1/synthesize` method have the following parameters in
       ID, you must make the request with credentials for the instance of
       the service that owns the custom model. Omit the parameter to use
       the specified voice with no customization. For more information, see
-      [Understanding customization](/docs/services/text-to-speech?topic=text-to-speech-customIntro).
+      [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
     </td>
   </tr>
 </table>
 
 You can also use the following request headers, which are available for all {{site.data.keyword.watson}} services, with a synthesize request:
 
--   `X-Watson-Learning-Opt-Out` indicates whether the service logs request and response data to improve the service for future users. To prevent IBM from accessing your data for general service improvements, specify <code>true</code> for the parameter. For more information, see [Controlling request logging for {{site.data.keyword.watson}} services](/docs/services/watson?topic=watson-gs-logging-overview).
--   `X-Watson-Metadata` associates a customer ID with data that is passed with a request. For more information, see [Information security](/docs/services/text-to-speech?topic=text-to-speech-information-security).
+-   `X-Watson-Learning-Opt-Out` indicates whether the service logs request and response data to improve the service for future users. To prevent IBM from accessing your data for general service improvements, specify <code>true</code> for the parameter. For more information, see [Controlling request logging for {{site.data.keyword.watson}} services](/docs/watson?topic=watson-gs-logging-overview).
+-   `X-Watson-Metadata` associates a customer ID with data that is passed with a request. For more information, see [Information security](/docs/text-to-speech?topic=text-to-speech-information-security).
 
 If you specify an invalid query parameter or JSON field as part of the input to the `/v1/synthesize` method, the service returns a `Warnings` response header that describes and lists each invalid argument. The request succeeds despite the warnings.
 {: note}
@@ -120,7 +120,7 @@ Although the `GET` and `POST` methods offer equivalent functionality, it is alwa
 
 The Speech Synthesis Markup Language (SSML) is an XML-based markup language that is designed to provide annotations of text for speech synthesis applications such as the {{site.data.keyword.texttospeechshort}} service. You can use SSML elements and their attributes to gain greater control over the synthesis and resulting audio output.
 
-For more information about using SSML to annotate input text, see [Using SSML](/docs/services/text-to-speech?topic=text-to-speech-ssml). The documentation inventories the SSML elements and attributes that are supported by the service. It also documents the service's expressive and voice-transformation extensions.
+For more information about using SSML to annotate input text, see [Using SSML](/docs/text-to-speech?topic=text-to-speech-ssml). The documentation inventories the SSML elements and attributes that are supported by the service. It also documents the service's expressive and voice-transformation extensions.
 
 ## Escaping XML control characters
 {: #escape}
@@ -161,7 +161,7 @@ Because you can submit input text that includes XML-based SSML annotations, the 
   </tr>
 </table>
 
-For more information about how the service validates input text, see [SSML validation](/docs/services/text-to-speech?topic=text-to-speech-ssml#errors).
+For more information about how the service validates input text, see [SSML validation](/docs/text-to-speech?topic=text-to-speech-ssml#errors).
 
 ## Examples of input text
 {: #httpExamples}

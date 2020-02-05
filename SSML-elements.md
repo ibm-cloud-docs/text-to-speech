@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-12-13"
+  years: 2015, 2020
+lastupdated: "2020-02-04"
 
 subcollection: text-to-speech
 
@@ -207,12 +207,12 @@ The `<emphasis>` element requests that the enclosed text is spoken with emphasis
 
 This `<lexicon>` element introduces pronunciation dictionaries for the given SSML document. It is not supported.
 
-You can use the service's customization interface to define a dictionary of custom entries (word/translation pairs) for use during speech synthesis. For more information, see [Understanding customization](/docs/services/text-to-speech?topic=text-to-speech-customIntro).
+You can use the service's customization interface to define a dictionary of custom entries (word/translation pairs) for use during speech synthesis. For more information, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
 
 ## The mark element
 {: #mark_element}
 
-The `<mark>` element is supported only by the service's WebSocket interface, not by its HTTP interface, which ignores the element. The element is not supported for use with the Arabic, Chinese, and Dutch voices. For more information, see [Specifying an SSML mark](/docs/services/text-to-speech?topic=text-to-speech-timing#mark).
+The `<mark>` element is supported only by the service's WebSocket interface, not by its HTTP interface, which ignores the element. The element is not supported for use with the Arabic, Chinese, and Dutch voices. For more information, see [Specifying an SSML mark](/docs/text-to-speech?topic=text-to-speech-timing#mark).
 {: note}
 
 The `<mark>` element is an empty element that places a marker into the text to be synthesized. The client is notified when all of the text that precedes the `<mark>` element has been synthesized. The element accepts a single `name` attribute that specifies a string that uniquely identifies the mark; the name must begin with an alphanumeric character. The name is returned along with the time at which the mark occurs in the synthesized audio.
@@ -279,7 +279,7 @@ The `<phoneme>` element provides a phonetic pronunciation for the enclosed text.
           &lt;phoneme alphabet="ibm" ph=".0tx.1me.0Fo"&gt;tomato&lt;/phoneme&gt;
         &lt;/speak&gt;</code></pre>
 
-For more information about using SPR and IPA notations with the `<phoneme>` element, see [Using IBM SPR](/docs/services/text-to-speech?topic=text-to-speech-sprs).
+For more information about using SPR and IPA notations with the `<phoneme>` element, see [Using IBM SPR](/docs/text-to-speech?topic=text-to-speech-sprs).
 
 ## The prosody element
 {: #prosody_element}
@@ -340,7 +340,7 @@ The `rate` attribute indicates a change in the speaking rate for the text within
 ### The volume attribute
 {: #prosody-volume}
 
-The service does not support the `volume` attribute of the `<prosody>` element with its neural voices (for example, `en-US_AllisonV3Voice`). For more information, see [Neural voices](/docs/services/text-to-speech?topic=text-to-speech-voices#neuralVoices).
+The service does not support the `volume` attribute of the `<prosody>` element with its neural voices (for example, `en-US_AllisonV3Voice`). For more information, see [Neural voices](/docs/text-to-speech?topic=text-to-speech-voices#neuralVoices).
 {: note}
 
 The `volume` attribute modifies the volume for the text within the element. You can specify an integer or decimal value in the range of 1.0 to 100.0 (maximum volume). You can also use one of the following string values, which correspond to predefined settings in the range of 0 to 100. (The `silent` value is not supported.)

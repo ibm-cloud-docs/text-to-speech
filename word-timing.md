@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-12-13"
+  years: 2015, 2020
+lastupdated: "2020-02-04"
 
 subcollection: text-to-speech
 
@@ -210,7 +210,7 @@ When the service synthesizes plain text, it returns all input characters except 
 - `<paragraph>` (or `<p>`) can add silence to the audio. The service does not return timing information for the silence.
 - `<sentence>` (or `<s>`) can add silence to the audio. The service does not return timing information for the silence.
 
-SSML elements that are not mentioned in the list do not impact word timing information. For more information about the service's support for SSML, see [Using SSML](/docs/services/text-to-speech?topic=text-to-speech-ssml).
+SSML elements that are not mentioned in the list do not impact word timing information. For more information about the service's support for SSML, see [Using SSML](/docs/text-to-speech?topic=text-to-speech-ssml).
 
 ## Examples with mark elements
 {: #timingExample}

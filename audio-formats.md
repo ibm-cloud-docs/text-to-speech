@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-09-17"
+  years: 2015, 2020
+lastupdated: "2020-02-04"
 
 subcollection: text-to-speech
 
@@ -328,8 +328,8 @@ By default, the service returns audio in the format `audio/ogg;codecs=opus`. You
         ```
         {: codeblock}
 
-    To receive audio in the default format, omit both the header and the query parameter. For more information, see [Synthesizing text to audio](/docs/services/text-to-speech?topic=text-to-speech-usingHTTP#synthesize).
--   With the WebSocket `/v1/synthesize` method, you must specify a format by using the required `accept` parameter of the text message that you pass to initiate synthesis. To receive audio in the default format, specify the value `*/*` for the parameter. For more information, see [Send input text](/docs/services/text-to-speech?topic=text-to-speech-usingWebSocket#WSsend).
+    To receive audio in the default format, omit both the header and the query parameter. For more information, see [Synthesizing text to audio](/docs/text-to-speech?topic=text-to-speech-usingHTTP#synthesize).
+-   With the WebSocket `/v1/synthesize` method, you must specify a format by using the required `accept` parameter of the text message that you pass to initiate synthesis. To receive audio in the default format, specify the value `*/*` for the parameter. For more information, see [Send input text](/docs/text-to-speech?topic=text-to-speech-usingWebSocket#WSsend).
 
 ## Playing an audio file
 {: #formatsPlay}
