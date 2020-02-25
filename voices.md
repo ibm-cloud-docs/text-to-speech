@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-02-04"
+lastupdated: "2020-02-22"
 
 subcollection: text-to-speech
 
@@ -54,7 +54,7 @@ Voices labeled *Beta* are currently beta functionality. Beta voices might not be
     <td style="text-align:center;vertical-align:middle;padding:2px">Standard</td>
     <td style="text-align:center;vertical-align:middle;padding:2px">
       <audio controls style="width:250px;height:30px">
-      <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Omar.wav" type="audio/wav">
+        <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Omar.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
@@ -65,7 +65,7 @@ Voices labeled *Beta* are currently beta functionality. Beta voices might not be
     <td style="text-align:center;vertical-align:middle;padding:2px">Standard</td>
     <td style="text-align:center;vertical-align:middle;padding:2px">
       <audio controls style="width:250px;height:30px">
-      <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Isabela.wav" type="audio/wav">
+        <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Isabela.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
@@ -76,8 +76,8 @@ Voices labeled *Beta* are currently beta functionality. Beta voices might not be
     <td style="text-align:center;vertical-align:middle;padding:2px">Neural</td>
     <td style="text-align:center;vertical-align:middle;padding:2px">
       <audio controls style="width:250px;height:30px">
-      <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/IsabelaV3.wav" type="audio/wav">
-       </audio>
+        <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/IsabelaV3.wav" type="audio/wav">
+      </audio>
     </td>
   </tr>
   <tr>
@@ -87,7 +87,7 @@ Voices labeled *Beta* are currently beta functionality. Beta voices might not be
     <td style="text-align:center;vertical-align:middle;padding:2px">Standard</td>
     <td style="text-align:center;vertical-align:middle;padding:2px">
       <audio controls style="width:250px;height:30px">
-      <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/LiNa.wav" type="audio/wav">
+        <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/LiNa.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
@@ -98,7 +98,7 @@ Voices labeled *Beta* are currently beta functionality. Beta voices might not be
     <td style="text-align:center;vertical-align:middle;padding:2px">Standard</td>
     <td style="text-align:center;vertical-align:middle;padding:2px">
       <audio controls style="width:250px;height:30px">
-      <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/WangWei.wav" type="audio/wav">
+        <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/WangWei.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
@@ -109,7 +109,7 @@ Voices labeled *Beta* are currently beta functionality. Beta voices might not be
     <td style="text-align:center;vertical-align:middle;padding:2px">Standard</td>
     <td style="text-align:center;vertical-align:middle;padding:2px">
       <audio controls style="width:250px;height:30px">
-      <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/ZhangJing.wav" type="audio/wav">
+        <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/ZhangJing.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
@@ -120,7 +120,7 @@ Voices labeled *Beta* are currently beta functionality. Beta voices might not be
     <td style="text-align:center;vertical-align:middle;padding:2px">Standard</td>
     <td style="text-align:center;vertical-align:middle;padding:2px">
       <audio controls style="width:250px;height:30px">
-      <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Emma.wav" type="audio/wav">
+        <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Emma.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
@@ -131,7 +131,7 @@ Voices labeled *Beta* are currently beta functionality. Beta voices might not be
     <td style="text-align:center;vertical-align:middle;padding:2px">Standard</td>
     <td style="text-align:center;vertical-align:middle;padding:2px">
       <audio controls style="width:250px;height:30px">
-      <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Liam.wav" type="audio/wav">
+        <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Liam.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
@@ -142,7 +142,7 @@ Voices labeled *Beta* are currently beta functionality. Beta voices might not be
     <td style="text-align:center;vertical-align:middle;padding:2px">Standard</td>
     <td style="text-align:center;vertical-align:middle;padding:2px">
       <audio controls style="width:250px;height:30px">
-      <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Kate.wav" type="audio/wav">
+        <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Kate.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
@@ -153,8 +153,8 @@ Voices labeled *Beta* are currently beta functionality. Beta voices might not be
     <td style="text-align:center;vertical-align:middle;padding:2px">Neural</td>
     <td style="text-align:center;vertical-align:middle;padding:2px">
       <audio controls style="width:250px;height:30px">
-      <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/KateV3.wav" type="audio/wav">
-       </audio>
+        <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/KateV3.wav" type="audio/wav">
+      </audio>
     </td>
   </tr>
   <tr>
@@ -164,7 +164,7 @@ Voices labeled *Beta* are currently beta functionality. Beta voices might not be
     <td style="text-align:center;vertical-align:middle;padding:2px">Standard</td>
     <td style="text-align:center;vertical-align:middle;padding:2px">
       <audio controls style="width:250px;height:30px">
-      <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Allison.wav" type="audio/wav">
+        <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Allison.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
@@ -175,8 +175,41 @@ Voices labeled *Beta* are currently beta functionality. Beta voices might not be
     <td style="text-align:center;vertical-align:middle;padding:2px">Neural</td>
     <td style="text-align:center;vertical-align:middle;padding:2px">
       <audio controls style="width:250px;height:30px">
-      <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/AllisonV3.wav" type="audio/wav">
-       </audio>
+        <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/AllisonV3.wav" type="audio/wav">
+      </audio>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:left;vertical-align:middle;padding:2px"></td>
+    <td style="text-align:center;vertical-align:middle;padding:2px">Female</td>
+    <td style="text-align:center;vertical-align:middle;padding:2px"><code>en-US_EmilyV3Voice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:2px">Neural</td>
+    <td style="text-align:center;vertical-align:middle;padding:2px">
+      <audio controls style="width:250px;height:30px">
+        <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/EmilyV3.wav" type="audio/wav">
+      </audio>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:left;vertical-align:middle;padding:2px"></td>
+    <td style="text-align:center;vertical-align:middle;padding:2px">Male</td>
+    <td style="text-align:center;vertical-align:middle;padding:2px"><code>en-US_HenryV3Voice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:2px">Neural</td>
+    <td style="text-align:center;vertical-align:middle;padding:2px">
+      <audio controls style="width:250px;height:30px">
+        <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/HenryV3.wav" type="audio/wav">
+      </audio>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:left;vertical-align:middle;padding:2px"></td>
+    <td style="text-align:center;vertical-align:middle;padding:2px">Male</td>
+    <td style="text-align:center;vertical-align:middle;padding:2px"><code>en-US_KevinV3Voice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:2px">Neural</td>
+    <td style="text-align:center;vertical-align:middle;padding:2px">
+      <audio controls style="width:250px;height:30px">
+        <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/KevinV3.wav" type="audio/wav">
+      </audio>
     </td>
   </tr>
   <tr>
@@ -186,7 +219,7 @@ Voices labeled *Beta* are currently beta functionality. Beta voices might not be
     <td style="text-align:center;vertical-align:middle;padding:2px">Standard</td>
     <td style="text-align:center;vertical-align:middle;padding:2px">
       <audio controls style="width:250px;height:30px">
-      <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Lisa.wav" type="audio/wav">
+        <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Lisa.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
@@ -197,8 +230,8 @@ Voices labeled *Beta* are currently beta functionality. Beta voices might not be
     <td style="text-align:center;vertical-align:middle;padding:2px">Neural</td>
     <td style="text-align:center;vertical-align:middle;padding:2px">
       <audio controls style="width:250px;height:30px">
-      <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/LisaV3.wav" type="audio/wav">
-       </audio>
+        <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/LisaV3.wav" type="audio/wav">
+      </audio>
     </td>
   </tr>
   <tr>
@@ -208,7 +241,7 @@ Voices labeled *Beta* are currently beta functionality. Beta voices might not be
     <td style="text-align:center;vertical-align:middle;padding:2px">Standard</td>
     <td style="text-align:center;vertical-align:middle;padding:2px">
       <audio controls style="width:250px;height:30px">
-      <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Michael.wav" type="audio/wav">
+        <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Michael.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
@@ -219,8 +252,19 @@ Voices labeled *Beta* are currently beta functionality. Beta voices might not be
     <td style="text-align:center;vertical-align:middle;padding:2px">Neural</td>
     <td style="text-align:center;vertical-align:middle;padding:2px">
       <audio controls style="width:250px;height:30px">
-      <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/MichaelV3.wav" type="audio/wav">
-       </audio>
+        <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/MichaelV3.wav" type="audio/wav">
+      </audio>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:left;vertical-align:middle;padding:2px"></td>
+    <td style="text-align:center;vertical-align:middle;padding:2px">Female</td>
+    <td style="text-align:center;vertical-align:middle;padding:2px"><code>en-US_OliviaV3Voice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:2px">Neural</td>
+    <td style="text-align:center;vertical-align:middle;padding:2px">
+      <audio controls style="width:250px;height:30px">
+        <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/OliviaV3.wav" type="audio/wav">
+      </audio>
     </td>
   </tr>
   <tr>
@@ -230,7 +274,7 @@ Voices labeled *Beta* are currently beta functionality. Beta voices might not be
     <td style="text-align:center;vertical-align:middle;padding:2px">Standard</td>
     <td style="text-align:center;vertical-align:middle;padding:2px">
       <audio controls style="width:250px;height:30px">
-      <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Renee.wav" type="audio/wav">
+        <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Renee.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
@@ -241,8 +285,8 @@ Voices labeled *Beta* are currently beta functionality. Beta voices might not be
     <td style="text-align:center;vertical-align:middle;padding:2px">Neural</td>
     <td style="text-align:center;vertical-align:middle;padding:2px">
       <audio controls style="width:250px;height:30px">
-      <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/ReneeV3.wav" type="audio/wav">
-       </audio>
+        <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/ReneeV3.wav" type="audio/wav">
+      </audio>
     </td>
   </tr>
   <tr>
@@ -252,7 +296,7 @@ Voices labeled *Beta* are currently beta functionality. Beta voices might not be
     <td style="text-align:center;vertical-align:middle;padding:2px">Standard</td>
     <td style="text-align:center;vertical-align:middle;padding:2px">
       <audio controls style="width:250px;height:30px">
-      <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Birgit.wav" type="audio/wav">
+        <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Birgit.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
@@ -263,8 +307,8 @@ Voices labeled *Beta* are currently beta functionality. Beta voices might not be
     <td style="text-align:center;vertical-align:middle;padding:2px">Neural</td>
     <td style="text-align:center;vertical-align:middle;padding:2px">
       <audio controls style="width:250px;height:30px">
-      <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/BirgitV3.wav" type="audio/wav">
-       </audio>
+        <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/BirgitV3.wav" type="audio/wav">
+      </audio>
     </td>
   </tr>
   <tr>
@@ -274,7 +318,7 @@ Voices labeled *Beta* are currently beta functionality. Beta voices might not be
     <td style="text-align:center;vertical-align:middle;padding:2px">Standard</td>
     <td style="text-align:center;vertical-align:middle;padding:2px">
       <audio controls style="width:250px;height:30px">
-      <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Dieter.wav" type="audio/wav">
+        <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Dieter.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
@@ -285,8 +329,19 @@ Voices labeled *Beta* are currently beta functionality. Beta voices might not be
     <td style="text-align:center;vertical-align:middle;padding:2px">Neural</td>
     <td style="text-align:center;vertical-align:middle;padding:2px">
       <audio controls style="width:250px;height:30px">
-      <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/DieterV3.wav" type="audio/wav">
-       </audio>
+        <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/DieterV3.wav" type="audio/wav">
+      </audio>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:left;vertical-align:middle;padding:2px"></td>
+    <td style="text-align:center;vertical-align:middle;padding:2px">Female</td>
+    <td style="text-align:center;vertical-align:middle;padding:2px"><code>de-DE_ErikaV3Voice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:2px">Neural</td>
+    <td style="text-align:center;vertical-align:middle;padding:2px">
+      <audio controls style="width:250px;height:30px">
+        <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/ErikaV3.wav" type="audio/wav">
+      </audio>
     </td>
   </tr>
   <tr>
@@ -296,7 +351,7 @@ Voices labeled *Beta* are currently beta functionality. Beta voices might not be
     <td style="text-align:center;vertical-align:middle;padding:2px">Standard</td>
     <td style="text-align:center;vertical-align:middle;padding:2px">
       <audio controls style="width:250px;height:30px">
-      <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Francesca.wav" type="audio/wav">
+        <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Francesca.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
@@ -307,8 +362,8 @@ Voices labeled *Beta* are currently beta functionality. Beta voices might not be
     <td style="text-align:center;vertical-align:middle;padding:2px">Neural</td>
     <td style="text-align:center;vertical-align:middle;padding:2px">
       <audio controls style="width:250px;height:30px">
-      <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/FrancescaV3.wav" type="audio/wav">
-       </audio>
+        <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/FrancescaV3.wav" type="audio/wav">
+      </audio>
     </td>
   </tr>
   <tr>
@@ -318,7 +373,7 @@ Voices labeled *Beta* are currently beta functionality. Beta voices might not be
     <td style="text-align:center;vertical-align:middle;padding:2px">Standard</td>
     <td style="text-align:center;vertical-align:middle;padding:2px">
       <audio controls style="width:250px;height:30px">
-      <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Emi.wav" type="audio/wav">
+        <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Emi.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
@@ -329,8 +384,8 @@ Voices labeled *Beta* are currently beta functionality. Beta voices might not be
     <td style="text-align:center;vertical-align:middle;padding:2px">Neural</td>
     <td style="text-align:center;vertical-align:middle;padding:2px">
       <audio controls style="width:250px;height:30px">
-      <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/EmiV3.wav" type="audio/wav">
-       </audio>
+        <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/EmiV3.wav" type="audio/wav">
+      </audio>
     </td>
   </tr>
   <tr>
@@ -340,7 +395,7 @@ Voices labeled *Beta* are currently beta functionality. Beta voices might not be
     <td style="text-align:center;vertical-align:middle;padding:2px">Standard</td>
     <td style="text-align:center;vertical-align:middle;padding:2px">
       <audio controls style="width:250px;height:30px">
-      <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Enrique.wav" type="audio/wav">
+        <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Enrique.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
@@ -351,8 +406,8 @@ Voices labeled *Beta* are currently beta functionality. Beta voices might not be
     <td style="text-align:center;vertical-align:middle;padding:2px">Neural</td>
     <td style="text-align:center;vertical-align:middle;padding:2px">
       <audio controls style="width:250px;height:30px">
-      <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/EnriqueV3.wav" type="audio/wav">
-       </audio>
+        <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/EnriqueV3.wav" type="audio/wav">
+      </audio>
     </td>
   </tr>
   <tr>
@@ -362,7 +417,7 @@ Voices labeled *Beta* are currently beta functionality. Beta voices might not be
     <td style="text-align:center;vertical-align:middle;padding:2px">Standard</td>
     <td style="text-align:center;vertical-align:middle;padding:2px">
       <audio controls style="width:250px;height:30px">
-      <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Laura.wav" type="audio/wav">
+        <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Laura.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
@@ -373,8 +428,8 @@ Voices labeled *Beta* are currently beta functionality. Beta voices might not be
     <td style="text-align:center;vertical-align:middle;padding:2px">Neural</td>
     <td style="text-align:center;vertical-align:middle;padding:2px">
       <audio controls style="width:250px;height:30px">
-      <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/LauraV3.wav" type="audio/wav">
-       </audio>
+        <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/LauraV3.wav" type="audio/wav">
+      </audio>
     </td>
   </tr>
   <tr>
@@ -384,7 +439,7 @@ Voices labeled *Beta* are currently beta functionality. Beta voices might not be
     <td style="text-align:center;vertical-align:middle;padding:2px">Standard</td>
     <td style="text-align:center;vertical-align:middle;padding:2px">
       <audio controls style="width:250px;height:30px">
-      <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Sofia.wav" type="audio/wav">
+        <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Sofia.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
@@ -395,8 +450,8 @@ Voices labeled *Beta* are currently beta functionality. Beta voices might not be
     <td style="text-align:center;vertical-align:middle;padding:2px">Neural</td>
     <td style="text-align:center;vertical-align:middle;padding:2px">
       <audio controls style="width:250px;height:30px">
-      <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/SofiaV3.wav" type="audio/wav">
-       </audio>
+        <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/SofiaV3.wav" type="audio/wav">
+      </audio>
     </td>
   </tr>
   <tr>
@@ -406,7 +461,7 @@ Voices labeled *Beta* are currently beta functionality. Beta voices might not be
     <td style="text-align:center;vertical-align:middle;padding:2px">Standard</td>
     <td style="text-align:center;vertical-align:middle;padding:2px">
       <audio controls style="width:250px;height:30px">
-      <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Sofia.wav" type="audio/wav">
+        <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Sofia.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
@@ -417,8 +472,8 @@ Voices labeled *Beta* are currently beta functionality. Beta voices might not be
     <td style="text-align:center;vertical-align:middle;padding:2px">Neural</td>
     <td style="text-align:center;vertical-align:middle;padding:2px">
       <audio controls style="width:250px;height:30px">
-      <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/SofiaV3.wav" type="audio/wav">
-       </audio>
+        <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/SofiaV3.wav" type="audio/wav">
+      </audio>
     </td>
   </tr>
 </table>
