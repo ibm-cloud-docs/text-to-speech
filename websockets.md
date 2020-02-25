@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-02-04"
+lastupdated: "2020-02-19"
 
 subcollection: text-to-speech
 
@@ -255,14 +255,16 @@ The service responds to this message by sending a text message that confirms the
 ## Receive a response
 {: #WSreceive}
 
-After it confirms the audio format, the service sends the synthesized audio as a binary stream of data in the indicated format. The service sends timing information as one or more text messages if
+After it confirms the audio format, the service sends the synthesized audio as a binary stream of data in the indicated format. For audio formats that include a header (for example, `audio/wav` and `audio/ogg`), the service returns the header before it sends the audio data. The header can span multiple binary responses. For all audio formats, the client needs to append all binary responses from the service to assemble the complete audio response.
+
+In addition to sending a text message that confirms the requested audio format, the service can also send text messages with warnings or errors. The service also sends one or more text messages that include timing information if
 
 -   The input text includes one or more SSML `<mark>` elements.
 -   You specify the `timings` parameter with the request.
 
-The service can also send text messages with warnings or errors. When it finishes synthesizing the input text, the service automatically closes the WebSocket connection.
+The client can handle text messages by responding to them, displaying them, or capturing them for use by the application (for example, if they contain mark locations).
 
-The client needs to append binary responses from the service to the audio results received over the connection. It can handle text messages by responding to them, displaying them, or capturing them for use by the application (for example, if they contain mark locations). The following simple example of an `onMessage` function appends text and binary messages that are received from the service to the appropriate variable based on their type. When the `onClose()` function executes, the entire audio stream has been received.
+When it finishes synthesizing the input text and sending all binary and text messages, the service automatically closes the WebSocket connection. The following simple `onMessage` function appends text and binary messages that are received from the service to the appropriate variables based on their type. When the `onClose()` function executes, the entire audio stream has been received and the service sends no further binary or text messages.
 
 ```javascript
 var messages;
@@ -278,7 +280,7 @@ function onMessage(evt) {
 }
 
 function onClose(evt) {
-  // The audio stream is complete.
+  // The service's response is complete.
 }
 ```
 {: codeblock}
