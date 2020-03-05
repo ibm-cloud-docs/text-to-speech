@@ -2,12 +2,15 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-02-04"
+lastupdated: "2020-03-05"
 
 subcollection: text-to-speech
 
 ---
 
+{:help: data-hd-content-type='help'}
+{:troubleshoot: data-hd-content-type='troubleshoot'}
+{:support: data-reuse='support'}
 {:shortdesc: .shortdesc}
 {:external: target="_blank" .external}
 {:tip: .tip}
@@ -32,6 +35,8 @@ With the {{site.data.keyword.texttospeechfull}} service, you can use SSML to con
 
 ## Introduction to SSML
 {: #introduction-SSML}
+{: help}
+{: support}
 
 SSML operates by augmenting the plain text that is passed to a synthesizer with a predefined set of elements, or tags. An XML parser first separates the plain input text from the markup specifications. The specifications are then processed and sent as a set of instructions in a form that can be understood by the synthesizer to produce the desired effects. For the XML parser to carry out this job, the markup needs to be well formed; for example, elements must be closed and multiple elements must be properly nested. For an introduction to basic XML concepts, see [w3schools.com/xml/xml_whatis.asp](http://www.w3schools.com/xml/xml_whatis.asp){: external}.
 
@@ -65,6 +70,8 @@ The service supports SSML fragments, which are SSML elements that do not include
 
 ## SSML support
 {: #ssmlSupport}
+{: troubleshoot}
+{: support}
 
 The {{site.data.keyword.texttospeechshort}} service bases its support on SSML Version 1.0, which was recommended by W3C on September 7, 2004. For more information about the W3C SSML recommendation, see [W3C Speech Synthesis Markup Language (SSML) Version 1.0](http://www.w3.org/TR/speech-synthesis/){: external}.
 
@@ -79,6 +86,8 @@ For more information about using SSML with the service, see the following:
 
 ## SSML validation
 {: #errors}
+{: troubleshoot}
+{: support}
 
 The service validates all SSML elements that you submit in any content, either as input text for synthesis or as the definition of a word's translation for customization. The service cannot determine ahead of time whether text submitted for synthesis contains SSML elements. Therefore, it performs the same validation for all input text, regardless of whether it contains SSML.
 

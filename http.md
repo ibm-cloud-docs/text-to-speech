@@ -2,12 +2,15 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-02-04"
+lastupdated: "2020-03-05"
 
 subcollection: text-to-speech
 
 ---
 
+{:help: data-hd-content-type='help'}
+{:troubleshoot: data-hd-content-type='troubleshoot'}
+{:support: data-reuse='support'}
 {:shortdesc: .shortdesc}
 {:external: target="_blank" .external}
 {:tip: .tip}
@@ -32,6 +35,8 @@ For more information about the HTTP interface, see the [API reference](https://{
 
 ## Synthesizing text to audio
 {: #synthesize}
+{: help}
+{: support}
 
 To synthesize text to audio, you call one of the two versions of the service's `/v1/synthesize` method:
 
@@ -100,6 +105,8 @@ If you specify an invalid query parameter or JSON field as part of the input to 
 
 ## Specifying input text
 {: #input}
+{: help}
+{: support}
 
 Both the `GET` and `POST /v1/synthesize` methods accept plain input text or text that is annotated with SSML. The two versions differ primarily in how you specify the text that is to be synthesized:
 
@@ -124,6 +131,8 @@ For more information about using SSML to annotate input text, see [Using SSML](/
 
 ## Escaping XML control characters
 {: #escape}
+{: troubleshoot}
+{: support}
 
 Because you can submit input text that includes XML-based SSML annotations, the service validates all input to ensure that any SSML is correct and well formed. Therefore, you must escape any XML control characters that are present in the input text, regardless of whether the input includes SSML. Use the equivalent escape strings or character encodings from Table 2 instead of the indicated characters.
 

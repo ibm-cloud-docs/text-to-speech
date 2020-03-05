@@ -2,12 +2,15 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-02-19"
+lastupdated: "2020-03-05"
 
 subcollection: text-to-speech
 
 ---
 
+{:help: data-hd-content-type='help'}
+{:troubleshoot: data-hd-content-type='troubleshoot'}
+{:support: data-reuse='support'}
 {:shortdesc: .shortdesc}
 {:external: target="_blank" .external}
 {:tip: .tip}
@@ -41,6 +44,8 @@ The snippets of example code that follow are written in JavaScript and are based
 
 ## Open a connection
 {: #WSopen}
+{: help}
+{: support}
 
 You call the `/v1/synthesize` method over the WebSocket Secure (WSS) protocol to open a connection to the service. The method is available at the following endpoint:
 
@@ -174,6 +179,8 @@ websocket.onerror = function(evt) { onError(evt) };
 
 ## Send input text
 {: #WSsend}
+{: help}
+{: support}
 
 To synthesize text, the client passes a simple JSON text message to the service with the following parameters.
 
@@ -254,6 +261,8 @@ The service responds to this message by sending a text message that confirms the
 
 ## Receive a response
 {: #WSreceive}
+{: help}
+{: support}
 
 After it confirms the audio format, the service sends the synthesized audio as a binary stream of data in the indicated format. For audio formats that include a header (for example, `audio/wav` and `audio/ogg`), the service returns the header before it sends the audio data. The header can span multiple binary responses. For all audio formats, the client needs to append all binary responses from the service to assemble the complete audio response.
 
@@ -287,6 +296,8 @@ function onClose(evt) {
 
 ## WebSocket return codes
 {: #returnCodes}
+{: troubleshoot}
+{: support}
 
 The service can send the following return codes to the client over the WebSocket connection:
 
@@ -300,6 +311,8 @@ If the socket closes with an error, the service sends the client an informative 
 
 ## Example error and warning messages
 {: #returnErrors}
+{: troubleshoot}
+{: support}
 
 The following examples show error responses. They include a JSON text message and a formatted message from the client's `onClose` callback method. The formatted messages begin with the boolean `true` because the connection is closed. They also include the WebSocket error code that caused the closure.
 

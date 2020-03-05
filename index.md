@@ -2,12 +2,14 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-02-25"
+lastupdated: "2020-03-05"
 
 subcollection: text-to-speech
 
 ---
 
+{:help: data-hd-content-type='help'}
+{:support: data-reuse='support'}
 {:shortdesc: .shortdesc}
 {:external: target="_blank" .external}
 {:tip: .tip}
@@ -30,6 +32,7 @@ subcollection: text-to-speech
 The {{site.data.keyword.texttospeechfull}} service provides an application programming interface (API) that uses {{site.data.keyword.IBM_notm}}'s speech-synthesis capabilities to convert written text to natural-sounding speech. The service streams the results back to the client with minimal delay. The service offers both [HTTP](/docs/text-to-speech?topic=text-to-speech-usingHTTP) and [WebSocket](/docs/text-to-speech?topic=text-to-speech-usingWebSocket) interfaces.
 
 ## Features and capabilities
+{: #features-index}
 
 The {{site.data.keyword.texttospeechshort}} service offers the following features and capabilities:
 
@@ -45,6 +48,8 @@ For more information about the pricing plans for the service, see the {{site.dat
 
 ## Language support
 {: #languages-index}
+{: help}
+{: support}
 
 The service supports voices in the following languages:
 
