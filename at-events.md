@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-02-25"
+lastupdated: "2020-03-12"
 
 keywords: IBM,activity tracker,LogDNA,event,security,text to speech
 
@@ -26,20 +26,23 @@ As a security officer, auditor, or manager, you can use the Activity Tracker ser
 
 {{site.data.keyword.at_full_notm}} records user-initiated activities that change the state of a service in {{site.data.keyword.cloud_notm}}. You can use this service to investigate abnormal activity and critical actions and to comply with regulatory audit requirements. In addition, you can be alerted about actions as they happen. The events that are collected comply with the Cloud Auditing Data Federation (CADF) standard. For more information, see the getting started tutorial for [{{site.data.keyword.at_full_notm}}](/docs/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started#getting-started).
 
+## Voice model customization events
+{: #at_events}
 
-## List of events
-{: #at_actions}
+The following tables list the {{site.data.keyword.texttospeechshort}} actions for voice model customization that generate events.
 
-The following table lists the {{site.data.keyword.texttospeechshort}} `.create` actions that generate an event.
+### Create events
+{: #at_events_create}
 
 | Action                                         | Description                                                                                  |
 |------------------------------------------------|----------------------------------------------------------------------------------------------|
 | `text-to-speech.custom-voice.create`           | Create a custom voice (`POST /v1/customizations`).                                           |
 | `text-to-speech.custom-voice-word-list.create` | Create a word list for a custom voice (`POST /v1/customizations/{customization_id}/words`).  |
 | `text-to-speech.custom-voice-word.create`      | Create a word for a custom voice (`PUT /v1/customizations/{customization_id}/words/{word}`). |
-{: caption="Table 1. Customization .create actions that generate events" caption-side="top"}
+{: caption="Table 1. Voice model customization .create actions that generate events" caption-side="top"}
 
-The following table lists the {{site.data.keyword.texttospeechshort}} `.read` actions that generate an event.
+### Read events
+{: #at_events_read}
 
 | Action                                       | Description                                                                                |
 |----------------------------------------------|--------------------------------------------------------------------------------------------|
@@ -47,27 +50,28 @@ The following table lists the {{site.data.keyword.texttospeechshort}} `.read` ac
 | `text-to-speech.custom-voice.read`           | Read a custom voice (`GET /v1/customizations/{customization_id}`).                         |
 | `text-to-speech.custom-voice-word-list.read` | Read a word list for a custom voice (`GET /v1/customizations/{customization_id}/words`).   |
 | `text-to-speech.custom-voice-word.read`      | Read a word for a custom voice (`GET /v1/customizations/{customization_id}/words/{word}`). |
-{: caption="Table 2. Customization .read actions that generate events" caption-side="top"}
+{: caption="Table 2. Voice model customization .read actions that generate events" caption-side="top"}
 
-The following table lists the {{site.data.keyword.texttospeechshort}} `.update` action that generates an event.
+### Update event
+{: #at_events_update}
 
 | Action                               | Description                                                           |
 |--------------------------------------|-----------------------------------------------------------------------|
 | `text-to-speech.custom-voice.update` | Update a custom voice (`POST /v1/customizations/{customization_id}`). |
-{: caption="Table 3. Customization .update action that generates an event" caption-side="top"}
+{: caption="Table 3. Voice model customization .update action that generates an event" caption-side="top"}
 
-The following table lists the {{site.data.keyword.texttospeechshort}} `.delete` actions that generate an event.
+### Delete events
+{: #at_events_delete}
 
 | Action                                    | Description                                                                                      |
 |-------------------------------------------|--------------------------------------------------------------------------------------------------|
 | `text-to-speech.custom-voice.delete`      | Delete a custom voice (`DELETE /v1/customizations/{customization_id}`).                          |
 | `text-to-speech.custom-voice-word.delete` | Delete a word from a custom voice (`DELETE /v1/customizations/{customization_id}/words/{word}`). |
-{: caption="Table 4. Customization .delete actions that generate events" caption-side="top"}
-
+{: caption="Table 4. Voice model customization .delete actions that generate events" caption-side="top"}
 
 ## Where to view events
 {: #at_ui}
 
 Events that are generated by an instance of the {{site.data.keyword.texttospeechshort}} service are automatically forwarded to the {{site.data.keyword.at_full_notm}} service instance that is available in the same location.
 
-{{site.data.keyword.at_full_notm}} can have only one instance per location. To view events, you must access the web user interface (UI) of the {{site.data.keyword.at_full_notm}} service in the same location where your service instance is available. For more information, see [Launching the web UI through the IBM Cloud UI](/docs/Activity-Tracker-with-LogDNA?topic=logdnaat-launch#launch_step2).
+{{site.data.keyword.at_full_notm}} can have only one instance per location. To view events, you must access the web user interface (UI) of the {{site.data.keyword.at_full_notm}} service in the same location where your service instance is available. For more information, see [Launching the web UI through the {{site.data.keyword.cloud_notm}} UI](/docs/Activity-Tracker-with-LogDNA?topic=logdnaat-launch#launch_step2).
