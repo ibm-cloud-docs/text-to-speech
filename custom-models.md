@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-02-04"
+lastupdated: "2020-03-16"
 
 subcollection: text-to-speech
 
@@ -94,7 +94,9 @@ You pass the following attributes as a JSON object with the body of the request.
       An identifier for the language of the custom model. The default
       is <code>en-US</code> for US English. The custom model can be used
       with any voice, standard or neural, that is available in the specified
-      language.
+      language. For example, a custom model that is created for the `en-US`
+      language can be used with any US English voice. It cannot, however,
+      be used with an `en-GB` voice.
     </td>
   </tr>
   <tr>

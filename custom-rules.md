@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-02-04"
+lastupdated: "2020-03-16"
 
 subcollection: text-to-speech
 
@@ -43,6 +43,7 @@ A *word* cannot include white space. The service uses white space to delineate i
 
 A *word* is case-sensitive. For example, assume that a custom model contains the entry `{word='Sun', translation='Sunday'}`. The service applies its default pronunciation to the word `sun` but the custom translation to the word `Sun`, since only the latter has an initial capital letter.
 
+To apply a custom translation to a word that might appear with or without initial capitalization, create two entries for both possible occurrences. Include both entries only if the translation is to be applied to both forms of the word.
 
 ## Context sensitivity
 

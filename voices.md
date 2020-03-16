@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-02-22"
+lastupdated: "2020-03-16"
 
 subcollection: text-to-speech
 
@@ -516,7 +516,7 @@ When you synthesize text, the service applies language-dependent pronunciation r
 
 If your application's lexicon includes such words, you can use the customization interface to specify how the service pronounces them. For more information, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
 
-You create a custom voice model for a specific language, not for a specific voice. So a custom model can be used with any voice, standard or neural, for its specified language.
+You create a custom voice model for a specific language, not for a specific voice. So a custom model can be used with any voice, standard or neural, for its specified language. For example, a custom model that you create for the `en-US` language can be used with any US English voice. It cannot, however, be used with an `en-GB` voice.
 
 ## Specifying a voice
 {: #specifyVoice}
