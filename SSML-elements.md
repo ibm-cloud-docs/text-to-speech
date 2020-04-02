@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-02-04"
+lastupdated: "2020-04-01"
 
 subcollection: text-to-speech
 
@@ -212,7 +212,7 @@ You can use the service's customization interface to define a dictionary of cust
 ## The mark element
 {: #mark_element}
 
-The `<mark>` element is supported only by the service's WebSocket interface, not by its HTTP interface, which ignores the element. The element is not supported for use with the Arabic, Chinese, and Dutch voices. For more information, see [Specifying an SSML mark](/docs/text-to-speech?topic=text-to-speech-timing#mark).
+The `<mark>` element is supported only by the service's WebSocket interface, not by its HTTP interface, which ignores the element. For more information, see [Specifying an SSML mark](/docs/text-to-speech?topic=text-to-speech-timing#mark).
 {: note}
 
 The `<mark>` element is an empty element that places a marker into the text to be synthesized. The client is notified when all of the text that precedes the `<mark>` element has been synthesized. The element accepts a single `name` attribute that specifies a string that uniquely identifies the mark; the name must begin with an alphanumeric character. The name is returned along with the time at which the mark occurs in the synthesized audio.

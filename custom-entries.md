@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-02-04"
+lastupdated: "2020-04-01"
 
 subcollection: text-to-speech
 
@@ -27,6 +27,9 @@ subcollection: text-to-speech
 
 Once a custom model exists, the next step is to add custom entries in the form of word/translation pairs to define how specified words are to be pronounced during synthesis. The definitions override the service's default regular pronunciation rules. You can add and query translations for one or more words at a time, and you can delete individual words that you no longer need. Once you are familiar with the customization interface, manipulating multiple words at once can be more convenient than working on a word-by-word basis. You must use credentials for the instance of the service that owns a custom model to use any method that requires its customization ID.
 {: shortdesc}
+
+For more information about the rules and limits that apply to custom entries, see [Rules for creating custom entries](/docs/text-to-speech?topic=text-to-speech-rules).
+{: note}
 
 ## Adding a single word to a custom model
 {: #cuWordAdd}

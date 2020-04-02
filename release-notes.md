@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-02-25"
+lastupdated: "2020-04-01"
 
 subcollection: text-to-speech
 
@@ -34,6 +34,28 @@ The following sections document the new features and changes that were included 
 The service has the following known limitation:
 
 -   When you specify the `audio/ogg;codecs=opus` audio format, you can optionally specify a sampling rate other than the default 48,000 Hz. However, while the service accepts `48000`, `24000`, `16000`, `12000`, or `8000` as a valid sampling rate, it currently disregards a specified value and always returns the audio with a sampling rate of 48 kHz.
+
+## 1 April 2020
+{: #April2020}
+
+-   The service now supports two standard female Korean voices: `ko-KR_YoungmiVoice` and `ko-KR_YunaVoice`. The following information applies to both Korean voices:
+    -   The voices are beta functionality. They might not be ready for production use and are subject to change. They are initial offerings that are expected to improve in quality with time and usage.
+    -   The voices support voice model customization and the `/v1/pronunciation` method.
+    -   The voices support the `<mark>` element and the `timings` parameter that are available with the WebSocket interface.
+    -   The voices support all SSML elements except for expressive SSML and voice transformation SSML.
+    -   The voices support only the International Phonetic Alphabet (IPA), not {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR), with the `<phoneme>` element.
+-   The beta Arabic, Chinese, and Dutch voices now support the following features:
+    -   Voice model customization and the `/v1/pronunciation` method.
+    -   The `<mark>` element and the `timings` parameter that are available with the WebSocket interface.
+
+See the following sections for additional information:
+
+-   For more information about all available voices, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
+-   For more information about voice model customization, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
+-   For more information about the use of IPA and SPR with voice customization, see [Using IBM SPR](/docs/text-to-speech?topic=text-to-speech-sprs).
+
+The IPA symbols for the Arabic, Chinese, Dutch, and Korean languages are not yet documented. This documentation will be made available soon.
+{: note}
 
 ## 24 February 2020
 {: #February2020}
@@ -69,38 +91,12 @@ The following information applies to these new standard voices:
 -   The voices do not support expressive SSML or voice transformation SSML.
 -   The voices do support all other SSML elements. However, they support only the International Phonetic Alphabet (IPA), not {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR), with the `<phoneme>` element.
 
-    The IPA symbols for these languages are not yet documented. Documentation will be made available with a future release.
-    {: note}
-
 For more information about these and all available voices, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
-
-## 12 December 2019
-{: #December2019a}
-
--   **Full support for IBM Cloud IAM**
-    -   The {{site.data.keyword.texttospeechshort}} service now supports the full implementation of {{site.data.keyword.cloud}} Identity and Access Management (IAM). API keys for Watson services are no longer limited to a single service instance. You can create access policies and API keys that apply to more than one service, and you can grant access between services. For more information about IAM, see [Authenticating to Watson services](/docs/watson?topic=watson-iam).
-    -   To support this change, the API service endpoints use a different domain and include the service instance ID. The pattern is `api.{location}.text-to-speech.watson.cloud.ibm.com/instances/{instance_id}`.
-
-        -   Example HTTP URL for an instance hosted in the Dallas location:
-
-            `https://api.us-south.text-to-speech.watson.cloud.ibm.com/instances/6bbda3b3-d572-45e1-8c54-22d6ed9e52c2`
-
-        -   Example WebSocket URL for an instance hosted in the Dallas location:
-
-            `wss://api.us-south.text-to-speech.watson.cloud.ibm.com/instances/6bbda3b3-d572-45e1-8c54-22d6ed9e52c2`
-
-        For more information about the URLs, see the [API reference](https://{DomainName}/apidocs/text-to-speech/text-to-speech#service-endpoint){: external}.
-
-        These URLs do not constitute a breaking change. The new URLs work for both your existing service instances and for new instances. The original URLs continue to work on your existing service instances for at least one year, until December 2020.
--   **New network and data security features** for users of Premium plans:
-    -   *Support for data encryption with customer-managed keys*
-        -   You can integrate {{site.data.keyword.keymanagementservicefull}} with the {{site.data.keyword.texttospeechshort}} service to encrypt your data and manage encryption keys. For more information, see [Protecting sensitive information in your Watson service](/docs/watson?topic=watson-keyservice).
-    -   *Support for private network endpoints*
-        -   You can create private network endpoints to connect to the {{site.data.keyword.texttospeechshort}} service over a private network. Connections to private network endpoints do not require public internet access. For more information, see [Public and private network endpoints](/docs/text-to-speech/?topic=watson-public-private-endpoints).
 
 ## Older releases
 {: #older}
 
+-   [12 December 2019](#December2019a)
 -   [12 November 2019](#November2019)
 -   [1 October 2019](#October2019)
 -   [22 August 2019](#August2019)
@@ -126,6 +122,30 @@ For more information about these and all available voices, see [Languages and vo
 -   [17 December 2015](#December2015)
 -   [21 September 2015](#September2015)
 -   [1 July 2015](#July2015)
+
+### 12 December 2019
+{: #December2019a}
+
+-   **Full support for IBM Cloud IAM**
+    -   The {{site.data.keyword.texttospeechshort}} service now supports the full implementation of {{site.data.keyword.cloud}} Identity and Access Management (IAM). API keys for Watson services are no longer limited to a single service instance. You can create access policies and API keys that apply to more than one service, and you can grant access between services. For more information about IAM, see [Authenticating to Watson services](/docs/watson?topic=watson-iam).
+    -   To support this change, the API service endpoints use a different domain and include the service instance ID. The pattern is `api.{location}.text-to-speech.watson.cloud.ibm.com/instances/{instance_id}`.
+
+        -   Example HTTP URL for an instance hosted in the Dallas location:
+
+            `https://api.us-south.text-to-speech.watson.cloud.ibm.com/instances/6bbda3b3-d572-45e1-8c54-22d6ed9e52c2`
+
+        -   Example WebSocket URL for an instance hosted in the Dallas location:
+
+            `wss://api.us-south.text-to-speech.watson.cloud.ibm.com/instances/6bbda3b3-d572-45e1-8c54-22d6ed9e52c2`
+
+        For more information about the URLs, see the [API reference](https://{DomainName}/apidocs/text-to-speech/text-to-speech#service-endpoint){: external}.
+
+        These URLs do not constitute a breaking change. The new URLs work for both your existing service instances and for new instances. The original URLs continue to work on your existing service instances for at least one year, until December 2020.
+-   **New network and data security features** for users of Premium plans:
+    -   *Support for data encryption with customer-managed keys*
+        -   You can integrate {{site.data.keyword.keymanagementservicefull}} with the {{site.data.keyword.texttospeechshort}} service to encrypt your data and manage encryption keys. For more information, see [Protecting sensitive information in your Watson service](/docs/watson?topic=watson-keyservice).
+    -   *Support for private network endpoints*
+        -   You can create private network endpoints to connect to the {{site.data.keyword.texttospeechshort}} service over a private network. Connections to private network endpoints do not require public internet access. For more information, see [Public and private network endpoints](/docs/text-to-speech/?topic=watson-public-private-endpoints).
 
 ### 12 November 2019
 {: #November2019}

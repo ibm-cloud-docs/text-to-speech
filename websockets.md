@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-03-05"
+lastupdated: "2020-04-01"
 
 subcollection: text-to-speech
 
@@ -124,12 +124,12 @@ A WebSocket client calls this method with the following query parameters to esta
     <td style="text-align:center">String</td>
     <td>
       Specifies the globally unique identifier (GUID) for a custom voice
-      model that is to be used for the synthesis. A custom voice model is
-      guaranteed to work only if it matches the language of the voice that
-      is used for the synthesis. If you include a customization ID, you must
-      make the request with credentials for the instance of the service that
-      owns the custom model. Omit the parameter to use the specified voice
-      with no customization. For more information, see
+      model that is to be used for the synthesis. A specified custom voice
+      model must match the language of the voice that is used for the
+      synthesis. If you include a customization ID, you must make the
+      request with credentials for the instance of the service that owns
+      the custom model. Omit the parameter to use the specified voice with
+      no customization. For more information, see
       [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
     </td>
   </tr>
@@ -228,7 +228,7 @@ To synthesize text, the client passes a simple JSON text message to the service 
       an empty array or omit the parameter to receive no word timings.
       For more information, see
       [Obtaining word timings](/docs/text-to-speech?topic=text-to-speech-timing#timing).<br/><br/>
-      <em>Not supported for Arabic, Chinese, Dutch, and Japanese input text.</em>
+      <em>Not supported for Japanese input text.</em>
     </td>
   </tr>
 </table>

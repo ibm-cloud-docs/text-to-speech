@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2015, 2020
-lastupdated: "2020-03-05"
+lastupdated: "2020-04-01"
 
 subcollection: text-to-speech
 
@@ -174,6 +174,7 @@ The following languages support only IPA:
 -   Arabic
 -   Chinese
 -   Dutch
+-   Korean
 
-The IPA symbols for these three languages are not yet documented. Documentation will be made available for a future release.
+The IPA symbols for these four languages are not yet documented. Documentation will be made available soon.
 {: note}

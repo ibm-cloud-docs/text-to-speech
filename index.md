@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-03-05"
+lastupdated: "2020-04-01"
 
 subcollection: text-to-speech
 
@@ -27,7 +27,7 @@ subcollection: text-to-speech
 # About
 {: #about}
 
-**Service update:** *The {{site.data.keyword.texttospeechshort}} service was updated on 24 February 2020. The service offers five new neural voices: four new US English voices and one new German voice. It also supports the use of Activity Tracker for all customization operations. For more information, see the [24 February 2020 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#February2020) in the release notes.*
+**Service update:** *The {{site.data.keyword.texttospeechshort}} service was updated on 1 April 2020. The service now offers two standard female voices in Korean as beta functionality. In addition, voice model customization, the `/v1/pronunciation` method, and word timing are now available for the beta Arabic, Chinese, Dutch, and Korean voices. Voice models in Arabic, Chinese, Dutch, and Korean support only IPA. For more information, see the [1 April 2020 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#April2020) in the release notes.*
 
 The {{site.data.keyword.texttospeechfull}} service provides an application programming interface (API) that uses {{site.data.keyword.IBM_notm}}'s speech-synthesis capabilities to convert written text to natural-sounding speech. The service streams the results back to the client with minimal delay. The service offers both [HTTP](/docs/text-to-speech?topic=text-to-speech-usingHTTP) and [WebSocket](/docs/text-to-speech?topic=text-to-speech-usingWebSocket) interfaces.
 
@@ -62,6 +62,7 @@ The service supports voices in the following languages:
 -   German
 -   Italian
 -   Japanese
+-   Korean (beta)
 -   Spanish (Castilian, Latin American, and North American dialects)
 
 The service offers neural, standard, or both versions of each voice. The service offers at least one female voice for each language. For some languages the service offers multiple voices, including both male and female voices. Each voice uses appropriate cadence and intonation for its dialect.
