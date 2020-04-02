@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-03-16"
+lastupdated: "2020-04-01"
 
 subcollection: text-to-speech
 
@@ -27,25 +27,34 @@ subcollection: text-to-speech
 
 The following rules and guidelines apply to populating a custom model with custom entries (word/translation pairs).
 
-## Maximum custom entries
+## Maximum custom entries and limits
+{: #rulesMaxEntries}
 
-A single custom model can include no more than 20,000 custom entries.
+The following limits apply to all custom models and entries:
+
+-   A custom model can include a maximum of 20,000 custom entries.
+-   A word in a custom entry can contain a maximum of 49 characters.
+-   A translation in a custom entry can contain a maximum of 499 characters.
 
 ## Character encoding
+{: #rulesCharEncoding}
 
 The service accepts ASCII and UTF-8 character encoding for *word* and *translation* entries. For translations, use ASCII encoding for SPR notations and UTF-8 encoding for IPA notations.
 
 ## White space
+{: #rulesWhitespace}
 
 A *word* cannot include white space. The service uses white space to delineate individual words in the input text.
 
 ## Case-sensitivity
+{: #rulesCase}
 
 A *word* is case-sensitive. For example, assume that a custom model contains the entry `{word='Sun', translation='Sunday'}`. The service applies its default pronunciation to the word `sun` but the custom translation to the word `Sun`, since only the latter has an initial capital letter.
 
 To apply a custom translation to a word that might appear with or without initial capitalization, create two entries for both possible occurrences. Include both entries only if the translation is to be applied to both forms of the word.
 
 ## Context sensitivity
+{: #rulesContext}
 
 The pronunciations of some words are context-sensitive. For example, consider the following example input sentence:
 
@@ -71,6 +80,7 @@ Saint Anthony lives on Henry saint
 Consider such cases when you develop word/translation pairs.
 
 ## Trailing periods
+{: #rulesPeriods}
 
 The service applies a word from a custom model only to those strings in the input text that match the word exactly. A trailing `.` (period) in a word entry changes how the word is synthesized:
 
@@ -142,54 +152,9 @@ The following table lists the parts of speech that are supported for Japanese cu
     <th style="text-align:center; width:35%">English meaning</th>
   </tr>
   <tr>
-    <td style="text-align:center"><code>Josi</code></td>
-    <td style="text-align:center"><em>Joshi</em></td>
-    <td style="text-align:center">Participle</td>
-  </tr>
-  <tr>
-    <td style="text-align:center"><code>Mesi</code></td>
-    <td style="text-align:center"><em>Meishi</em></td>
-    <td style="text-align:center">Noun</td>
-  </tr>
-  <tr>
-    <td style="text-align:center"><code>Kigo</code></td>
-    <td style="text-align:center"><em>Kigou</em></td>
-    <td style="text-align:center">Symbol</td>
-  </tr>
-  <tr>
-    <td style="text-align:center"><code>Gobi</code></td>
-    <td style="text-align:center"><em>Gobi</em></td>
-    <td style="text-align:center">Inflection</td>
-  </tr>
-  <tr>
     <td style="text-align:center"><code>Dosi</code></td>
     <td style="text-align:center"><em>Doushi</em></td>
     <td style="text-align:center">Verb</td>
-  </tr>
-  <tr>
-    <td style="text-align:center"><code>Jodo</code></td>
-    <td style="text-align:center"><em>Jodoushi</em></td>
-    <td style="text-align:center">Auxiliary verb</td>
-  </tr>
-  <tr>
-    <td style="text-align:center"><code>Koyu</code></td>
-    <td style="text-align:center"><em>Koyuumeishi</em></td>
-    <td style="text-align:center">Proper noun</td>
-  </tr>
-  <tr>
-    <td style="text-align:center"><code>Stbi</code></td>
-    <td style="text-align:center"><em>Setsubiji</em></td>
-    <td style="text-align:center">Suffix</td>
-  </tr>
-  <tr>
-    <td style="text-align:center"><code>Suji</code></td>
-    <td style="text-align:center"><em>Suuji</em></td>
-    <td style="text-align:center">Numeral</td>
-  </tr>
-  <tr>
-    <td style="text-align:center"><code>Kedo</code></td>
-    <td style="text-align:center"><em>Keiyodoushi</em></td>
-    <td style="text-align:center">Adjective verb</td>
   </tr>
   <tr>
     <td style="text-align:center"><code>Fuku</code></td>
@@ -197,24 +162,24 @@ The following table lists the parts of speech that are supported for Japanese cu
     <td style="text-align:center">Adverb</td>
   </tr>
   <tr>
-    <td style="text-align:center"><code>Keyo</code></td>
-    <td style="text-align:center"><em>Keiyoshi</em></td>
-    <td style="text-align:center">Adjective verb</td>
+    <td style="text-align:center"><code>Gobi</code></td>
+    <td style="text-align:center"><em>Gobi</em></td>
+    <td style="text-align:center">Inflection</td>
   </tr>
   <tr>
-    <td style="text-align:center"><code>Stto</code></td>
-    <td style="text-align:center"><em>Settoji</em></td>
-    <td style="text-align:center">Prefix</td>
+    <td style="text-align:center"><code>Hoka</code></td>
+    <td style="text-align:center"><em>Hoka</em></td>
+    <td style="text-align:center">Other</td>
   </tr>
   <tr>
-    <td style="text-align:center"><code>Reta</code></td>
-    <td style="text-align:center"><em>Rentaishi</em></td>
-    <td style="text-align:center">Determiner</td>
+    <td style="text-align:center"><code>Jodo</code></td>
+    <td style="text-align:center"><em>Jodoushi</em></td>
+    <td style="text-align:center">Auxiliary verb</td>
   </tr>
   <tr>
-    <td style="text-align:center"><code>Stzo</code></td>
-    <td style="text-align:center"><em>Setsuzokushi</em></td>
-    <td style="text-align:center">Conjunction</td>
+    <td style="text-align:center"><code>Josi</code></td>
+    <td style="text-align:center"><em>Joshi</em></td>
+    <td style="text-align:center">Participle</td>
   </tr>
   <tr>
     <td style="text-align:center"><code>Kato</code></td>
@@ -222,8 +187,53 @@ The following table lists the parts of speech that are supported for Japanese cu
     <td style="text-align:center">Interjection</td>
   </tr>
   <tr>
-    <td style="text-align:center"><code>Hoka</code></td>
-    <td style="text-align:center"><em>Hoka</em></td>
-    <td style="text-align:center">Other</td>
+    <td style="text-align:center"><code>Kedo</code></td>
+    <td style="text-align:center"><em>Keiyodoushi</em></td>
+    <td style="text-align:center">Adjective verb</td>
+  </tr>
+  <tr>
+    <td style="text-align:center"><code>Keyo</code></td>
+    <td style="text-align:center"><em>Keiyoshi</em></td>
+    <td style="text-align:center">Adjective verb</td>
+  </tr>
+  <tr>
+    <td style="text-align:center"><code>Kigo</code></td>
+    <td style="text-align:center"><em>Kigou</em></td>
+    <td style="text-align:center">Symbol</td>
+  </tr>
+  <tr>
+    <td style="text-align:center"><code>Koyu</code></td>
+    <td style="text-align:center"><em>Koyuumeishi</em></td>
+    <td style="text-align:center">Proper noun</td>
+  </tr>
+  <tr>
+    <td style="text-align:center"><code>Mesi</code></td>
+    <td style="text-align:center"><em>Meishi</em></td>
+    <td style="text-align:center">Noun</td>
+  </tr>
+  <tr>
+    <td style="text-align:center"><code>Reta</code></td>
+    <td style="text-align:center"><em>Rentaishi</em></td>
+    <td style="text-align:center">Determiner</td>
+  </tr>
+  <tr>
+    <td style="text-align:center"><code>Stbi</code></td>
+    <td style="text-align:center"><em>Setsubiji</em></td>
+    <td style="text-align:center">Suffix</td>
+  </tr>
+  <tr>
+    <td style="text-align:center"><code>Stto</code></td>
+    <td style="text-align:center"><em>Settoji</em></td>
+    <td style="text-align:center">Prefix</td>
+  </tr>
+  <tr>
+    <td style="text-align:center"><code>Stzo</code></td>
+    <td style="text-align:center"><em>Setsuzokushi</em></td>
+    <td style="text-align:center">Conjunction</td>
+  </tr>
+  <tr>
+    <td style="text-align:center"><code>Suji</code></td>
+    <td style="text-align:center"><em>Suuji</em></td>
+    <td style="text-align:center">Numeral</td>
   </tr>
 </table>

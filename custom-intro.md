@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-02-04"
+lastupdated: "2020-04-01"
 
 subcollection: text-to-speech
 
@@ -36,7 +36,7 @@ The service's regular pronunciation rules work well for common words. However, t
 The following status and support information applies to voice model customization:
 
 -   Customization is beta functionality.
--   Customization is available for most languages. It is not supported for use with the Arabic, Chinese, and Dutch voices.
+-   Customization is available for all languages.
 -   You must have the Standard pricing plan to use customization. Users of the Lite plan cannot use the customization interface. For more information, see the [pricing page](https://www.ibm.com/cloud/watson-text-to-speech/pricing){: external} for the {{site.data.keyword.texttospeechshort}} service.
 
 ## How customization works

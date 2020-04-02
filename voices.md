@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-03-16"
+lastupdated: "2020-04-01"
 
 subcollection: text-to-speech
 
@@ -389,6 +389,28 @@ Voices labeled *Beta* are currently beta functionality. Beta voices might not be
     </td>
   </tr>
   <tr>
+    <td style="text-align:left;vertical-align:middle;padding:2px">Korean<br/>(Beta)</td>
+    <td style="text-align:center;vertical-align:middle;padding:2px">Female</td>
+    <td style="text-align:center;vertical-align:middle;padding:2px"><code>ko-KR_YoungmiVoice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:2px">Standard</td>
+    <td style="text-align:center;vertical-align:middle;padding:2px">
+      <audio controls style="width:250px;height:30px">
+        <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Youngmi.wav" type="audio/wav">
+      </audio>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:left;vertical-align:middle;padding:2px"></td>
+    <td style="text-align:center;vertical-align:middle;padding:2px">Female</td>
+    <td style="text-align:center;vertical-align:middle;padding:2px"><code>ko-KR_YunaVoice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:2px">Standard</td>
+    <td style="text-align:center;vertical-align:middle;padding:2px">
+      <audio controls style="width:250px;height:30px">
+        <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Yuna.wav" type="audio/wav">
+      </audio>
+    </td>
+  </tr>
+  <tr>
     <td style="text-align:left;vertical-align:middle;padding:2px">Spanish<br/>(Castilian)</td>
     <td style="text-align:center;vertical-align:middle;padding:2px">Male</td>
     <td style="text-align:center;vertical-align:middle;padding:2px"><code>es-ES_EnriqueVoice</code></td>
@@ -508,9 +530,6 @@ However, you might find that these SSML features are no longer needed when using
 
 ### Voice customization
 {: #customizeVoice}
-
-Voice customization is not available for the Arabic, Chinese, and Dutch voices.
-{: note}
 
 When you synthesize text, the service applies language-dependent pronunciation rules to convert the ordinary spelling of each word to a phonetic spelling. The service's pronunciation rules work well for common words, but they can yield imperfect results for unusual words, such as terms with foreign origins, personal names, and abbreviations or acronyms.
 
