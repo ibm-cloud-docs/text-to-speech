@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-04-01"
+lastupdated: "2020-04-13"
 
 subcollection: text-to-speech
 
@@ -536,6 +536,93 @@ When you synthesize text, the service applies language-dependent pronunciation r
 If your application's lexicon includes such words, you can use the customization interface to specify how the service pronounces them. For more information, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
 
 You create a custom voice model for a specific language, not for a specific voice. So a custom model can be used with any voice, standard or neural, for its specified language. For example, a custom model that you create for the `en-US` language can be used with any US English voice. It cannot, however, be used with an `en-GB` voice.
+
+## Migrating from standard to neural voices
+{: #migrateVoice}
+
+Many voices are available as both standard and neural voices. To optimize the audio quality and naturalness of synthesized speech, {{site.data.keyword.IBM_notm}} recommends that you migrate from standard to neural voices whenever possible.
+
+To migrate from a standard voice to a neural voice, complete these steps:
+
+1.  Modify calls to the `/v1/synthesize` method.
+
+    Change the `voice` query parameter of the `/v1/synthesize` method to specify the neural voice instead of the standard voice. For example, change
+
+    ```xml
+    voice=en-US_AllisonVoice
+    ```
+    {: codeblock}
+
+    to
+
+    ```xml
+    voice=en-US_AllisonV3Voice
+    ```
+    {: codeblock}
+
+1.  Eliminate the use of [Expressive SSML](/docs/services/text-to-speech?topic=text-to-speech-expressive).
+
+    The `<express-as>` SSML element is supported only with the standard `en-US_AllisonVoice` voice. You must remove any instances of the element from input text when using neural voices. For example, change
+
+    ```xml
+    <express-as type="GoodNews">
+      I have your results!
+    </express-as>
+    ```
+    {: codeblock}
+
+    to
+
+    ```xml
+    I have your results.
+    ```
+    {: codeblock}
+
+    Because neural voices are more natural sounding, you might find that you no longer need this SSML extension.
+
+1.  Eliminate the use of [Voice transformation SSML](/docs/services/text-to-speech?topic=text-to-speech-transformation).
+
+    The `<voice-transformation>` SSML element is supported only for the standard `en-US_AllisonVoice`, `en-US_LisaVoice`, and `en-US_MichaelVoice` voices. You must remove all instances of the element from input text when using neural voices.
+
+    -  *For built-in transformations* of `type` equals `Young` or `Soft`, with or without the optional `strength` attribute, remove the `<voice-transformation>` element from the input text. For example, change
+
+        ```xml
+        <voice-transformation type="Young" strength="80%">
+          Could you provide us with new information?
+        </voice-transformation>
+        ```
+        {: codeblock}
+
+        to
+
+        ```xml
+        Could you provide us with new information?
+        ```
+        {: codeblock}
+
+    -   *For custom transformations* of `type` equals `Custom`:
+
+        -   Remove instances of the `<voice-transformation>` element that use the `glottal_tension`, `breathiness`, `timbre`, or `timbre_extent` attributes.
+
+        -   Change instances of the `<voice-transformation>` element that use the `pitch`, `pitch_rate`, or `rate` attributes to use the SSML `<prosody>` element instead. For more information, see [The prosody element](/docs/text-to-speech?topic=text-to-speech-elements#prosody_element).
+
+    For example, change
+
+    ```xml
+    <voice-transformation type="Custom" glottal_tension="-50%" rate="10%">
+      Do you have more information?
+    </voice-transformation>
+    ```
+    {: codeblock}
+
+    to
+
+    ```xml
+    <prosody rate="10%">
+      Do you have more information?
+    </prosody>
+    ```
+    {: codeblock}
 
 ## Specifying a voice
 {: #specifyVoice}
