@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-06-04"
+  years: 2015, 2020
+lastupdated: "2020-04-23"
 
 subcollection: text-to-speech
 
@@ -22,19 +22,19 @@ subcollection: text-to-speech
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# Japanese symbols
-{: #jaSymbols}
+# German symbols
+{: #deSymbols}
 
-The following sections describe the valid symbols for Japanese.
+The following sections describe the valid symbols for German.
 
-## Vowels and marks
-{: #jaVowelsMarks}
+## Regular vowels
+{: #deRegularVowels}
 
 <table style="width:90%">
-  <caption>Table 1. Vowels and marks (Japanese)</caption>
+  <caption>Table 1. Regular vowels (German)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Japanese<br/>SPR symbol
+      SPR symbol
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA symbol
@@ -48,52 +48,32 @@ The following sections describe the valid symbols for Japanese.
   </tr>
   <tr>
     <td style="text-align:center">
-      a
-    </td>
-    <td style="text-align:center">
-      a<br/><br/>
-      &#592;<br/><br/>
-      &#593;
-    </td>
-    <td style="text-align:center">
-      0061<br/><br/>
-      0250<br/><br/>
-      0251
-    </td>
-    <td>
-      &#30456;&#25163;(<u>&#12450;</u>&#12452;&#12486;)
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
       i
     </td>
     <td style="text-align:center">
       i<br/><br/>
-      &#618;
+      &#105;&#720;
     </td>
     <td style="text-align:center">
       0069<br/><br/>
-      026A
+      0069+02D0
     </td>
     <td>
-      &#12356;&#12383;&#12378;&#12425;(<u>&#12452;</u>&#12479;&#12474;&#12521;)
+      l<u>ie</u>ben, T<u>i</u>tel, t<u>ie</u>f
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      u
+      I
     </td>
     <td style="text-align:center">
-      &#623;<br/><br/>
-      u
+      &#618;
     </td>
     <td style="text-align:center">
-      026F<br/><br/>
-      0075
+      026A
     </td>
     <td>
-      &#23431;&#23449;(<u>&#12454;</u>&#12481;&#12517;&#12454;)
+      b<u>i</u>tte, T<u>i</u>sch, L<u>i</u>cht
     </td>
   </tr>
   <tr>
@@ -102,14 +82,102 @@ The following sections describe the valid symbols for Japanese.
     </td>
     <td style="text-align:center">
       e<br/><br/>
-      &#603;
+      &#101;&#720;
     </td>
     <td style="text-align:center">
       0065<br/><br/>
+      0065+02D0
+    </td>
+    <td>
+      g<u>e</u>ben, <u>Eh</u>re, S<u>ee</u>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      E
+    </td>
+    <td style="text-align:center">
+      &#603;
+    </td>
+    <td style="text-align:center">
       025B
     </td>
     <td>
-      &#32117;&#26412;(<u>&#12456;</u>&#12507;&#12531;)
+      tr<u>e</u>ffen, G<u>e</u>ld, k<u>&auml;</u>mmen
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      'E:'
+    </td>
+    <td style="text-align:center">
+      &#603;&#720;
+    </td>
+    <td style="text-align:center">
+      025B+02D0
+    </td>
+    <td>
+      K<u>&auml;</u>se, M<u>&auml;</u>dchen, w<u>&auml;</u>gen
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      a
+    </td>
+    <td style="text-align:center">
+      &#97;&#720;<br/><br/>
+      &#593;
+    </td>
+    <td style="text-align:center">
+      0061+02D0<br/><br/>
+      0251
+    </td>
+    <td>
+      H<u>aa</u>r, h<u>a</u>ben, f<u>a</u>hren
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      A
+    </td>
+    <td style="text-align:center">
+      a
+    </td>
+    <td style="text-align:center">
+      0061
+    </td>
+    <td>
+      l<u>a</u>ssen, m<u>a</u>tt, <u>A</u>pfel
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      u
+    </td>
+    <td style="text-align:center">
+      u<br/><br/>
+      &#117;&#720;
+    </td>
+    <td style="text-align:center">
+      0075<br/><br/>
+      0075+02D0
+    </td>
+    <td>
+      g<u>u</u>t, <u>Uh</u>r, <u>U</u>we
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      U
+    </td>
+    <td style="text-align:center">
+      &#650;
+    </td>
+    <td style="text-align:center">
+      028A
+    </td>
+    <td>
+      H<u>u</u>nd, Fl<u>u</u>ss, M<u>u</u>tter
     </td>
   </tr>
   <tr>
@@ -118,78 +186,103 @@ The following sections describe the valid symbols for Japanese.
     </td>
     <td style="text-align:center">
       o<br/><br/>
-      &#594;<br/><br/>
-      &#596;
+      &#111;&#720;
     </td>
     <td style="text-align:center">
       006F<br/><br/>
-      0252<br/><br/>
+      006F+02D0
+    </td>
+    <td>
+      <u>O</u>ber, <u>oh</u>ne, B<u>oo</u>t
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      O
+    </td>
+    <td style="text-align:center">
+      &#596;
+    </td>
+    <td style="text-align:center">
       0254
     </td>
     <td>
-      &#12362;&#33747;&#23376;(<u>&#12458;</u>&#12459;&#12471;)
+      K<u>o</u>pf, St<u>o</u>pp
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      : [<strong>1</strong>]
+      y
     </td>
     <td style="text-align:center">
-      &#720;
+      y<br/><br/>
+      &#121;&#720;
     </td>
     <td style="text-align:center">
-      02D0
+      0079<br/><br/>
+      0079+02D0
     </td>
     <td>
-      &#12524;<u>&#12540;</u>&#12473;
+      B<u>&uuml;</u>cher, f<u>&uuml;h</u>len, T<u>&uuml;</u>r,
+      k<u>&uuml;</u>hn
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      ^
+      Y
     </td>
     <td style="text-align:center">
-      &#42780;<br/><br/>
-      ^
+      &#655;
     </td>
     <td style="text-align:center">
-      A71C<br/><br/>
-      005E
+      028F
     </td>
     <td>
-      &#12467;&#12464;<u>&#42780;</u>&#12491;&#12486;&#12451;&#12502;
+      f<u>&uuml;</u>nf, f<u>&uuml;</u>llen, K<u>&uuml;</u>nstler
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      '_n'
+      'oe'
     </td>
     <td style="text-align:center">
-      &#628;<br/><br/>
-      &#331;
+      &#248;<br/><br/>
+      &#248;&#720;
     </td>
     <td style="text-align:center">
-      0274<br/><br/>
-      014B
+      00F8<br/><br/>
+      00F8+02D0
     </td>
     <td>
-      &#28288;&#26376;(&#12510;<u>&#12531;</u>&#12466;&#12484;)
+      L<u>&ouml;</u>we, h<u>&ouml;</u>ren, S<u>&ouml;h</u>ne
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      'OE'
+    </td>
+    <td style="text-align:center">
+      &#339;<br/><br/>
+      &#630;
+    </td>
+    <td style="text-align:center">
+      0153<br/><br/>
+      0276
+    </td>
+    <td>
+      k<u>&ouml;</u>nnen, h<u>&ouml;</u>lzern, <u>&ouml;</u>stlich
     </td>
   </tr>
 </table>
 
-**Note:**
-
-1.  The `:` symbol must be followed by a vowel, possibly with other symbols, such as syllable boundary, in between.
-
-## Consonants
-{: #jaConsonants}
+## Reduced vowels
+{: #deReducedVowels}
 
 <table style="width:90%">
-  <caption>Table 2. Consonants (Japanese)</caption>
+  <caption>Table 2. Reduced vowels (German)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Japanese<br/>SPR symbol
+      SPR symbol
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA symbol
@@ -203,278 +296,215 @@ The following sections describe the valid symbols for Japanese.
   </tr>
   <tr>
     <td style="text-align:center">
-      k
+      @
     </td>
     <td style="text-align:center">
-      k
+      &#601;<br/><br/>
+      &#629;<br/><br/>
+      &#600;
     </td>
     <td style="text-align:center">
-      006B
+      0259<br/><br/>
+      0275<br/><br/>
+      0258
     </td>
     <td>
-      &#20844;&#22290;(<u>&#12467;</u>&#12454;&#12456;&#12531;)
+      bitt<u>e</u>, Kam<u>e</u>ra, Bod<u>e</u>n
+    </td>
+  </tr>
+</table>
+
+## Diphthongs
+{: #deDiphthongs}
+
+<table style="width:90%">
+  <caption>Table 3. Diphthongs (German)</caption>
+  <tr>
+    <th style="width:20%; text-align:center; vertical-align:bottom">
+      SPR symbol
+    </th>
+    <th style="width:20%; text-align:center; vertical-align:bottom">
+      IPA symbol
+    </th>
+    <th style="width:20%; text-align:center; vertical-align:bottom">
+      IPA Unicode
+    </th>
+    <th style="text-align:left; vertical-align:bottom">
+      Example words
+    </th>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      'aj'
+    </td>
+    <td style="text-align:center">
+      &#97;&#105;<br/><br/>
+      &#97;&#618;
+    </td>
+    <td style="text-align:center">
+      0061+0069<br/><br/>
+      0061+026A
+    </td>
+    <td>
+      h<u>ei</u>m, W<u>ai</u>se, M<u>ai</u>
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      s
+      'aw'
     </td>
     <td style="text-align:center">
-      s
+      &#97;&#117;<br/><br/>
+      &#97;&#650;
     </td>
     <td style="text-align:center">
-      0073
+      0061+0075<br/><br/>
+      0061+028A
     </td>
     <td>
-      &#23551;&#21496;(<u>&#12473;</u>&#12471;)
+      H<u>au</u>s, M<u>au</u>l, Fr<u>au</u>
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      'sh'
+      'oj'
     </td>
     <td style="text-align:center">
-      &#597;<br/><br/>
-      &#643;
+      &#596;&#105;<br/><br/>
+      &#596;&#121;<br/><br/>
+      &#596;&#618;<br/><br/>
+      &#596;&#655;
     </td>
     <td style="text-align:center">
-      0255<br/><br/>
-      0283
+      0254+0069<br/><br/>
+      0254+0079<br/><br/>
+      0254+026A<br/><br/>
+      0254+028F
     </td>
     <td>
-      &#22235;&#23395;(<u>&#12471;</u>&#12461;)
+      h<u>eu</u>te, Geb<u>&auml;u</u>de, H<u>&auml;u</u>ser
+    </td>
+  </tr>
+</table>
+
+## Nasalized vowels
+{: #deNasalizedVowels}
+
+Nasalized vowels in French occur mostly in foreign loan words.
+
+<table style="width:90%">
+  <caption>Table 4. Nasalized vowels (German)</caption>
+  <tr>
+    <th style="width:20%; text-align:center; vertical-align:bottom">
+      SPR symbol
+    </th>
+    <th style="width:20%; text-align:center; vertical-align:bottom">
+      IPA symbol
+    </th>
+    <th style="width:20%; text-align:center; vertical-align:bottom">
+      IPA Unicode
+    </th>
+    <th style="text-align:left; vertical-align:bottom">
+      Example words
+    </th>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      'a~'
+    </td>
+    <td style="text-align:center">
+      &#97;&#771;<br/><br/>
+      &#592;&#771;
+    </td>
+    <td style="text-align:center">
+      0061+0303<br/><br/>
+      0250+0303
+    </td>
+    <td>
+      Ch<u>an</u>ce
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      t
+      'E~'
     </td>
     <td style="text-align:center">
-      t
+      &#101;&#771;<br/><br/>
+      &#603;&#771;
     </td>
     <td style="text-align:center">
-      0074
+      0065+0303<br/><br/>
+      025B+0303
     </td>
     <td>
-      &#22823;&#27827;(<u>&#12479;</u>&#12452;&#12460;)
+      T<u>ein</u>t
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      'ch'
+      'o~'
     </td>
     <td style="text-align:center">
-      &#679;<br/><br/>
-      &#680;
+      &#111;&#771;<br/><br/>
+      &#596;&#771;
     </td>
     <td style="text-align:center">
-      02A7<br/><br/>
-      02A8
+      006F+0303<br/><br/>
+      0254+0303
     </td>
     <td>
-      &#22320;&#22259;(<u>&#12481;</u>&#12474;)
+      Pard<u>on</u>
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      'ts'
+      'oe~'
     </td>
     <td style="text-align:center">
-      &#678;
+      &#248;&#771;<br/><br/>
+      &#339;&#771;
     </td>
     <td style="text-align:center">
-      02A6
+      00F8+0303<br/><br/>
+      0153+0303
     </td>
     <td>
-      &#37347;&#12426;(<u>&#12484;</u>&#12522;)
+      Parf<u>um</u>
     </td>
   </tr>
+</table>
+
+## Consonants
+{: #deConsonants}
+
+<table style="width:90%">
+  <caption>Table 5. Consonants (German)</caption>
   <tr>
-    <td style="text-align:center">
-      n
-    </td>
-    <td style="text-align:center">
-      n
-    </td>
-    <td style="text-align:center">
-      006E
-    </td>
-    <td>
-      &#20108;&#36650;&#36554;(<u>&#12491;</u>&#12522;&#12531;&#12471;&#12515;)
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      h
-    </td>
-    <td style="text-align:center">
-      h
-    </td>
-    <td style="text-align:center">
-      0068
-    </td>
-    <td>
-      &#33457;&#26564;(<u>&#12495;</u>&#12490;&#12460;&#12521;)
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      f
-    </td>
-    <td style="text-align:center">
-      &#632;<br/><br/>
-      f
-    </td>
-    <td style="text-align:center">
-      0278<br/><br/>
-      066
-    </td>
-    <td>
-      &#19981;&#22812;&#22478;(<u>&#12501;</u>&#12516;&#12472;&#12519;&#12454;)
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      m
-    </td>
-    <td style="text-align:center">
-      m
-    </td>
-    <td style="text-align:center">
-      006D
-    </td>
-    <td>
-      &#39764;&#27861;(<u>&#12510;</u>&#12507;&#12454;)
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      y
-    </td>
-    <td style="text-align:center">
-      j
-    </td>
-    <td style="text-align:center">
-      006A
-    </td>
-    <td>
-      &#38525;&#27671;(<u>&#12520;</u>&#12454;&#12461;)
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      r
-    </td>
-    <td style="text-align:center">
-      &#638;<br/><br/>
-      r<br/><br/>
-      &#633;<br/><br/>
-      l<br/><br/>
-      &#637;
-    </td>
-    <td style="text-align:center">
-      027E<br/><br/>
-      0072<br/><br/>
-      0279<br/><br/>
-      006C<br/><br/>
-      027D
-    </td>
-    <td>
-      &#12521;&#12452;&#40614;(<u>&#12521;</u>&#12452;&#12512;&#12462;)
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      w
-    </td>
-    <td style="text-align:center">
-      w<br/><br/>
-      &#624;
-    </td>
-    <td style="text-align:center">
-      0077<br/><br/>
-      0270
-    </td>
-    <td>
-      &#24746;&#12384;&#12367;&#12415;(<u>&#12527;</u>&#12523;&#12480;&#12463;&#12511;)
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      g
-    </td>
-    <td style="text-align:center">
-      &#609;<br/><br/>
-      &#611;
-    </td>
-    <td style="text-align:center">
-      0067<br/><br/>
-      0263
-    </td>
-    <td>
-      &#32676;&#38738;(<u>&#12464;</u>&#12531;&#12472;&#12519;&#12454;)
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      z
-    </td>
-    <td style="text-align:center">
-      &#675;<br/><br/>
-      z
-    </td>
-    <td style="text-align:center">
-      02A3<br/><br/>
-      007A
-    </td>
-    <td>
-      &#20840;&#37096;(<u>&#12476;</u>&#12531;&#12502;)
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      j
-    </td>
-    <td style="text-align:center">
-      &#676;<br/><br/>
-      &#677;
-    </td>
-    <td style="text-align:center">
-      02A4<br/><br/>
-      02A5
-    </td>
-    <td>
-      &#12472;&#12517;&#12468;&#12531;(<u>&#12472;&#12517;</u>&#12468;&#12531;)
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      d
-    </td>
-    <td style="text-align:center">
-      d
-    </td>
-    <td style="text-align:center">
-      0064
-    </td>
-    <td>
-      &#22243;&#23376;(<u>&#12480;</u>&#12531;&#12468;)
-    </td>
+    <th style="width:20%; text-align:center; vertical-align:bottom">
+      SPR symbol
+    </th>
+    <th style="width:20%; text-align:center; vertical-align:bottom">
+      IPA symbol
+    </th>
+    <th style="width:20%; text-align:center; vertical-align:bottom">
+      IPA Unicode
+    </th>
+    <th style="text-align:left; vertical-align:bottom">
+      Example words
+    </th>
   </tr>
   <tr>
     <td style="text-align:center">
       b
     </td>
     <td style="text-align:center">
-      b<br/><br/>
-      v
+      b
     </td>
     <td style="text-align:center">
-      0062<br/><br/>
-      0076
+        0062
     </td>
     <td>
-      <u>&#12496;</u>&#12490;&#12490;
+      <u>B</u>oden, <u>B</u>ett, o<u>b</u>en
     </td>
   </tr>
   <tr>
@@ -488,54 +518,159 @@ The following sections describe the valid symbols for Japanese.
       0070
     </td>
     <td>
-      <u>&#12497;</u>&#12531;&#12480;
+      <u>P</u>apier, Li<u>pp</u>e, Gra<u>b</u>
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      'ky'
+      d
     </td>
     <td style="text-align:center">
-      kj
+      d<br/><br/>
+      &#240; [<strong>1</strong>]
     </td>
     <td style="text-align:center">
-      02B7+006A
+      0064<br/><br/>
+      00F0
     </td>
     <td>
-      &#20241;&#26085;(<u>&#12461;&#12517;</u>&#12454;&#12472;&#12484;)
+      <u>d</u>unkel, kin<u>d</u>isch, Hel<u>d</u>en
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      'dy'
+      t
     </td>
     <td style="text-align:center">
-      dj
+      t
     </td>
     <td style="text-align:center">
-      0064+006A
+      0074
     </td>
     <td>
-      <u>&#12487;&#12517;</u>&#12456;&#12483;&#12488;
+      <u>T</u>ag, bi<u>tt</u>e, Ra<u>d</u>
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      'ny'
+      g
     </td>
     <td style="text-align:center">
-      &#626;
+      g<br/><br/>
+      &#609;<br/><br/>
+      &#611;
     </td>
     <td style="text-align:center">
-      0272
+      0067<br/><br/>
+      0261<br/><br/>
+      0263
     </td>
     <td>
-      &#29275;&#20083;(<u>&#12462;&#12517;</u>&#12454;&#12491;&#12517;&#12454;)
+      <u>g</u>eben, <u>g</u>rau, Ta<u>g</u>e
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      'hy'
+      k
+    </td>
+    <td style="text-align:center">
+      k
+    </td>
+    <td style="text-align:center">
+      006B
+    </td>
+    <td>
+      <u>K</u>atze, E<u>ck</u>e, S<u>k</u>ulptur, la<u>g</u>,
+      <u>q</u>uitt
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      v
+    </td>
+    <td style="text-align:center">
+      v
+    </td>
+    <td style="text-align:center">
+      0076
+    </td>
+    <td>
+      <u>W</u>agen, <u>v</u>isk&ouml;s, <u>V</u>olum, o<u>v</u>al
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      f
+    </td>
+    <td style="text-align:center">
+      f
+    </td>
+    <td style="text-align:center">
+      0066
+    </td>
+    <td>
+      <u>f</u>ast, ho<u>ff</u>en, <u>V</u>ater
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      z
+    </td>
+    <td style="text-align:center">
+      z
+    </td>
+    <td style="text-align:center">
+      007A
+    </td>
+    <td>
+      <u>S</u>ee, <u>S</u>atz, le<u>s</u>en
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      s
+    </td>
+    <td style="text-align:center">
+      s
+    </td>
+    <td style="text-align:center">
+      0073
+    </td>
+    <td>
+      Ma<u>&szlig;</u>, la<u>ss</u>en, La<u>s</u>t, H<u>au</u>s
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      Z
+    </td>
+    <td style="text-align:center">
+      &#658;
+    </td>
+    <td style="text-align:center">
+      0292
+    </td>
+    <td>
+      Gara<u>g</u>e, <u>G</u>enie
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      S
+    </td>
+    <td style="text-align:center">
+      &#643;
+    </td>
+    <td style="text-align:center">
+      0283
+    </td>
+    <td>
+      <u>sch</u>on, <u>s</u>pielen, <u>S</u>til, w&auml;<u>sch</u>t
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      X
     </td>
     <td style="text-align:center">
       &#231;
@@ -544,301 +679,255 @@ The following sections describe the valid symbols for Japanese.
       00E7
     </td>
     <td>
-      &#30334;&#24180;(<u>&#12498;&#12515;</u>&#12463;&#12493;&#12531;)
+      i<u>ch</u>, <u>Ch</u>emie, Kel<u>ch</u>, man<u>ch</u>er
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      'my'
+      x
     </td>
     <td style="text-align:center">
-      mj
+      x<br/><br/>
+      &#967;
     </td>
     <td style="text-align:center">
-      006D+006A
+      0078<br/><br/>
+      03C7
     </td>
     <td>
-      &#38512;&#38525;&#24107;(&#12458;&#12531;<u>&#12511;&#12519;</u>&#12454;&#12472;)
+      Bu<u>ch</u>, Ba<u>ch</u>, Wo<u>ch</u>en
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      'ry'
+      P
     </td>
     <td style="text-align:center">
-      &#638;j
+      &#112;&#102;
     </td>
     <td style="text-align:center">
-      027E+006A
+      0070+0066
     </td>
     <td>
-      &#27969;&#26143;&#32676;(<u>&#12522;&#12517;</u>&#12454;&#12475;&#12452;&#12464;&#12531;)
+      <u>Pf</u>lanze, Stum<u>pf</u>en
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      'gy'
+      R
     </td>
     <td style="text-align:center">
-      &#609;j
+      &#592;<br/><br/>
+      &#652;<br/><br/>
+      &#602;<br/><br/>
+      &#605;
     </td>
     <td style="text-align:center">
-      0067+006A
+      0250<br/><br/>
+      028C<br/><br/>
+      025A<br/><br/>
+      025D
     </td>
     <td>
-      &#29275;&#20028;(<u>&#12462;&#12517;</u>&#12454;&#12489;&#12531;)
+      Wied<u>er</u>, &uuml;b<u>er</u>
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      'by'
+      T
     </td>
     <td style="text-align:center">
-      bj
+      &#116;&#115;<br/><br/>
+      &#678;<br/><br/>
+      &#952; [<strong>2</strong>]
     </td>
     <td style="text-align:center">
-      0062+006A
+      0074+0073<br/><br/>
+      02A6<br/><br/>
+      03B8
     </td>
     <td>
-      &#30333;&#22812;(<u>&#12499;&#12515;</u>&#12463;&#12516;)
+      <u>Z</u>auber, Poli<u>z</u>ei, Glan<u>z</u>
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      'py'
+      J
     </td>
     <td style="text-align:center">
-      pj
+      &#100;&#658;<br/><br/>
+      &#676;
     </td>
     <td style="text-align:center">
-      0070+006A
+      0064+0292<br/><br/>
+      02A4
     </td>
     <td>
-      &#12404;&#12423;&#12371;&#12435;(<u>&#12500;&#12519;</u>&#12467;&#12531;)
+      <u>J</u>ob, <u>Dsch</u>ungel
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      'Qk'
+      C
     </td>
     <td style="text-align:center">
-      kk
+      &#116;&#643;<br/><br/>
+      &#116;&#643;
     </td>
     <td style="text-align:center">
-      02B7+02B7
+      0074+0283<br/><br/>
+      02A7
     </td>
     <td>
-      &#26376;&#20809;(&#12466;<u>&#12483;&#12467;</u>&#12454;)
+      deuts<u>ch</u>, <u>Ch</u>ile, <u>C</u>ello
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      'Qs'
+      m
     </td>
     <td style="text-align:center">
-      ss
+      m
     </td>
     <td style="text-align:center">
-      0073+0073
+      006D
     </td>
     <td>
-      &#30142;&#36208;(&#12471;<u>&#12483;&#12477;</u>&#12454;)
+      <u>M</u>ann, ko<u>mm</u>en, Ate<u>m</u>
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      'Qsh'
+      n
     </td>
     <td style="text-align:center">
-      &#597;&#597;
+      n
     </td>
     <td style="text-align:center">
-      0255+0255
+      006E
     </td>
     <td>
-      &#20843;&#23610;(&#12495;<u>&#12483;&#12471;&#12515;</u>&#12463;)
+      <u>N</u>acht, k&ouml;<u>nn</u>en, Ki<u>n</u>d
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      'Qt'
+      G
     </td>
     <td style="text-align:center">
-      tt
+      &#331;
     </td>
     <td style="text-align:center">
-      0074+0074
+      014B
     </td>
     <td>
-      &#38634;&#39364;(&#12475;<u>&#12483;&#12479;</u>)
+      Fi<u>ng</u>er, l&auml;<u>ng</u>s, Anfa<u>ng</u>
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      'Qch'
+      l
     </td>
     <td style="text-align:center">
-      &#679;&#679;
+      l
     </td>
     <td style="text-align:center">
-      02A7+02A7
+      006C
     </td>
     <td>
-      &#12362;&#12387;&#12385;&#12419;&#12435;(&#12458;<u>&#12483;&#12481;&#12515;</u>&#12531;)
+      <u>l</u>esen, fa<u>ll</u>en, Pu<u>l</u>t
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      'Qts'
+      r
     </td>
     <td style="text-align:center">
-      &#678;&#678;
+      r<br/><br/>
+      &#633;<br/><br/>
+      &#640;<br/><br/>
+      &#641;<br/><br/>
+      &#638;
     </td>
     <td style="text-align:center">
-      02A6+02A6
+      0072<br/><br/>
+      0279<br/><br/>
+      0280<br/><br/>
+      0281<br/><br/>
+      027E
     </td>
     <td>
-      &#37444;&#27084;(&#12486;<u>&#12483;&#12484;</u>&#12452;)
+      <u>R</u>ad, f&uuml;h<u>r</u>en
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      'Qh'
+      j
     </td>
     <td style="text-align:center">
-      hh
+      j<br/><br/>
+      &#669;
     </td>
     <td style="text-align:center">
-      0068+0068
+      006A<br/><br/>
+      029D
     </td>
     <td>
-      &#12467;&#12483;&#12504;&#12523;(&#12467;<u>&#12483;&#12504;</u>&#12523;)
+      <u>J</u>unge, <u>j</u>a, <u>J</u>ahr, Minister<u>i</u>um
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      'Qf'
+      w
     </td>
     <td style="text-align:center">
-      &#632;&#632;
+      w<br/><br/>
+      &#651;
     </td>
     <td style="text-align:center">
-      0278+0278
+      0077<br/><br/>
+      028B
     </td>
     <td>
-      &#12501;<u>&#12483;&#12501;</u>&#12540;&#12523;
+      Ed<u>u</u>ard, akt<u>u</u>ell, Jan<u>u</u>ar
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      'Qg'
+      h
     </td>
     <td style="text-align:center">
-      &#609;&#609;
+      h<br/><br/>
+      &#614;
     </td>
     <td style="text-align:center">
-      0067+0067
+      0068<br/><br/>
+      0266
     </td>
     <td>
-      &#12479;<u>&#12483;&#12464;</u>&#12510;&#12483;&#12481;
+      <u>h</u>och, <u>H</u>and, A<u>h</u>orn
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      'Qz'
+      ? (glottal stop)
     </td>
     <td style="text-align:center">
-      &#675;&#675;
+      &#660;
     </td>
     <td style="text-align:center">
-      02A3+02A3
+      0294
     </td>
     <td>
-      &#12461;<u>&#12483;&#12474;</u>
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      'Qj'
-    </td>
-    <td style="text-align:center">
-      &#676;&#676;
-    </td>
-    <td style="text-align:center">
-      02A4+02A4
-    </td>
-    <td>
-      &#12376;&#12419;&#12387;&#12376;&#12419;&#12417;(&#12472;&#12515;<u>&#12483;&#12472;&#12515;</u>&#12513;)
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      'Qd'
-    </td>
-    <td style="text-align:center">
-      dd
-    </td>
-    <td style="text-align:center">
-      0064+0064
-    </td>
-    <td>
-      &#12505;<u>&#12483;&#12489;</u>
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      'Qb'
-    </td>
-    <td style="text-align:center">
-      bb
-    </td>
-    <td style="text-align:center">
-      0062+0062
-    </td>
-    <td>
-      &#12400;&#12387;&#12400;&#12540;&#12435;(&#12496;<u>&#12483;&#12496;</u>&#12540;&#12531;)
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      'Qp'
-    </td>
-    <td style="text-align:center">
-      pp
-    </td>
-    <td style="text-align:center">
-      0070+0070
-    </td>
-    <td>
-      &#12495;<u>&#12483;&#12500;</u>&#12540;
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      'Qky'
-    </td>
-    <td style="text-align:center">
-      kkj
-    </td>
-    <td style="text-align:center">
-      02B7+02B7+006A
-    </td>
-    <td>
-      &#29305;&#35377;(&#12488;<u>&#12483;&#12461;&#12519;</u>)
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      'Qpy'
-    </td>
-    <td style="text-align:center">
-      ppj
-    </td>
-    <td style="text-align:center">
-      0070+0070+006A
-    </td>
-    <td>
-      &#31361;&#25293;&#23376;(&#12488;<u>&#12483;&#12500;&#12519;</u>&#12454;&#12471;)
+      _er_obern (IPA <code>&#660;&#603;&#592;&#712;&#660;&#111;&#720;&#98;&#592;&#110;</code>)<br/>_erinnern (IPA <code>&#660;&#603;&#592;&#712;&#641;&#618;&#110;&#592;&#110;</code>)
+<!--
+      <u>e</u>r<u>o</u>bern (IPA &#660;&#603;&#592;&#712;&#660;&#111;&#720;&#98;&#592;&#110;)<br/><u>e</u>rinnern (IPA &#660;&#603;&#592;&#712;&#641;&#618;&#110;&#592;&#110;)
+-->
     </td>
   </tr>
 </table>
+
+**Notes:**
+
+1.  The IPA symbol <code>&#240;</code> (IPA Unicode `00F0`) occurs only in loanwords from foreign languages, mostly English (for example, *The New York Times*). However, the service realizes that sound as IPA symbol `d` (IPA Unicode `0064`).
+1.  The IPA symbol <code>&#952;</code> (IPA Unicode `03B8`) occurs only in loanwords from foreign languages, mostly English (for example, *thriller*). However, the service realizes that sound as IPA symbol <code>&#678;</code> (IPA Unicode `02A6`).

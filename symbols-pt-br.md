@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-06-04"
+  years: 2015, 2020
+lastupdated: "2020-04-23"
 
 subcollection: text-to-speech
 
@@ -34,7 +34,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
   <caption>Table 1. Regular vowels (Brazilian Portuguese)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Brazilian Portuguese<br/>SPR symbol
+      SPR symbol
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA symbol
@@ -234,7 +234,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
   <caption>Table 2. Semi-vowels (Brazilian Portuguese)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Brazilian Portuguese<br/>SPR symbol
+      SPR symbol
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA symbol
@@ -311,7 +311,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
   <caption>Table 3. Consonants (Brazilian Portuguese)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Brazilian Portuguese<br/>SPR symbol
+      SPR symbol
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA symbol
@@ -461,7 +461,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       0073
     </td>
     <td>
-      <u>c</u>erto, avan<u>&ccedil</u>ar, <u>s</u>ete
+      <u>c</u>erto, avan<u>&ccedil;</u>ar, <u>s</u>ete
     </td>
   </tr>
   <tr>

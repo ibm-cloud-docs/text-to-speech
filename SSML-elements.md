@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-04-01"
+lastupdated: "2020-04-22"
 
 subcollection: text-to-speech
 
@@ -257,7 +257,7 @@ The `<phoneme>` element provides a phonetic pronunciation for the enclosed text.
 
     If no alphabet is specified, the service uses {{site.data.keyword.IBM_notm}} SPR by default.
 
-    The Arabic, Chinese, and Dutch voices support only IPA, not SPR.
+    The Arabic, Chinese, Dutch, and Korean voices support only IPA, not SPR.
     {: note}
 -   `ph` is a required attribute that provides the pronunciation in the indicated alphabet. The following examples show the pronunciation for the word *tomato* in both formats:
 
@@ -279,7 +279,7 @@ The `<phoneme>` element provides a phonetic pronunciation for the enclosed text.
           &lt;phoneme alphabet="ibm" ph=".0tx.1me.0Fo"&gt;tomato&lt;/phoneme&gt;
         &lt;/speak&gt;</code></pre>
 
-For more information about using SPR and IPA notations with the `<phoneme>` element, see [Using IBM SPR](/docs/text-to-speech?topic=text-to-speech-sprs).
+For more information about using SPR and IPA notations with the `<phoneme>` element, see [Using phonetic symbols](/docs/text-to-speech?topic=text-to-speech-sprs).
 
 ## The prosody element
 {: #prosody_element}

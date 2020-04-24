@@ -43,16 +43,16 @@ Text to Speech
         SSML-transformation.md
 
     {: topicgroup}
-    IBM SPR
-        SPRs.md
-        pt-BR-SPRs.md
-        fr-FR-SPRs.md
-        de-DE-SPRs.md
-        it-IT-SPRs.md
-        ja-JP-SPRs.md
-        es-ES-SPRs.md
-        en-GB-SPRs.md
-        en-US-SPRs.md
+    Phonetic symbols
+        symbols.md
+        symbols-pt-br.md
+        symbols-fr-fr.md
+        symbols-de-de.md
+        symbols-it-it.md
+        symbols-ja-jp.md
+        symbols-es-es.md
+        symbols-en-gb.md
+        symbols-en-us.md
 
     ha-dr.md
     /watson/watson-migrate

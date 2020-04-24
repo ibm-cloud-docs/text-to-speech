@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-06-04"
+  years: 2015, 2020
+lastupdated: "2020-04-23"
 
 subcollection: text-to-speech
 
@@ -25,7 +25,7 @@ subcollection: text-to-speech
 # Spanish symbols
 {: #esSymbols}
 
-The following sections describe the valid symbols for Spanish. The Latin American and North American dialects are identical in terms of SPR support. Except where noted, the two dialects are the same as Castilian Spanish.
+The following sections describe the valid symbols for Spanish. The information applies to the Castilian, Latin American, and North American dialects. Except where noted, the dialects are identical.
 
 ## Regular vowels
 {: #esReducedVowels}
@@ -34,7 +34,7 @@ The following sections describe the valid symbols for Spanish. The Latin America
   <caption>Table 1. Regular vowels (Spanish)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Spanish<br/>SPR symbol
+      SPR symbol
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA symbol
@@ -125,7 +125,7 @@ The following sections describe the valid symbols for Spanish. The Latin America
   <caption>Table 2. Consonants (Spanish)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Spanish<br/>SPR symbol
+      SPR symbol
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA symbol
@@ -459,7 +459,7 @@ Each allophone is a variation of the phoneme indicated in parentheses. If an all
   <caption>Table 3. Allophones (Spanish)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Spanish allophone<br/>SPR symbol
+      SPR symbol
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA symbol

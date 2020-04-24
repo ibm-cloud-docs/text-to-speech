@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-04-01"
+lastupdated: "2020-04-21"
 
 subcollection: text-to-speech
 
@@ -52,7 +52,7 @@ See the following sections for additional information:
 
 -   For more information about all available voices, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
 -   For more information about voice model customization, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
--   For more information about the use of IPA and SPR with voice customization, see [Using IBM SPR](/docs/text-to-speech?topic=text-to-speech-sprs).
+-   For more information about the use of IPA and SPR with voice customization, see [Using phonetic symbols](/docs/text-to-speech?topic=text-to-speech-sprs).
 
 The IPA symbols for the Arabic, Chinese, Dutch, and Korean languages are not yet documented. This documentation will be made available soon.
 {: note}
@@ -324,7 +324,7 @@ The service now supports the MP3 or Motion Picture Experts Group (MPEG) audio fo
 {: #June2016}
 
 -   The service now offers a WebSocket interface for synthesizing text to speech. The interface offers the same features as the `/v1/synthesize` method of the HTTP interface. It accepts plain text or text that is marked up with SSML. In addition, it also supports use of the SSML `<mark>` element to identify the time in the audio at which it finishes synthesizing all text that precedes the mark. For more information, see [The WebSocket interface](/docs/text-to-speech?topic=text-to-speech-usingWebSocket).
--   The service now offers support for text that is annotated with SSML for the languages Castilian and North American Spanish, Italian, and Brazilian Portuquese. The service already supported the use of SSML for US and UK English, French, and German. As of this update, the service supports SSML for all languages but Japanese. Moreover, you can use both {{site.data.keyword.IBM_notm}} SPR and IPA notations to define word pronunciations with the SSML `<phoneme>` element. For more information, see [Using SSML](/docs/text-to-speech?topic=text-to-speech-ssml) and [Using IBM SPR](/docs/text-to-speech?topic=text-to-speech-sprs).
+-   The service now offers support for text that is annotated with SSML for the languages Castilian and North American Spanish, Italian, and Brazilian Portuguese. The service already supported the use of SSML for US and UK English, French, and German. As of this update, the service supports SSML for all languages but Japanese. Moreover, you can use both {{site.data.keyword.IBM_notm}} SPR and IPA notations to define word pronunciations with the SSML `<phoneme>` element. For more information, see [Using SSML](/docs/text-to-speech?topic=text-to-speech-ssml) and [Using phonetic symbols](/docs/text-to-speech?topic=text-to-speech-sprs).
 
     For US English, you can also use the SSML `<phoneme>` element to create word entries in a custom voice model; customization is supported only for US English. For more information, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
 -   The service features improved expressiveness and naturalness for the most frequently used voices. The improvements are based on Recursive Neural Network (RNN)-based prosody prediction from input text. They are made available as a new service engine and voice-model updates for the following languages:
