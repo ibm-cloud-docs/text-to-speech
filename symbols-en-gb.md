@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-06-04"
+  years: 2015, 2020
+lastupdated: "2020-04-23"
 
 subcollection: text-to-speech
 
@@ -22,19 +22,19 @@ subcollection: text-to-speech
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# French symbols
-{: #frSymbols}
+# UK English symbols
+{: #gbSymbols}
 
-The following sections describe the valid symbols for French.
+The following sections describe the valid symbols for UK English.
 
-## Vowels
-{: #frVowels}
+## Regular vowels
+{: #gbRegularVowels}
 
 <table style="width:90%">
-  <caption>Table 1. Vowels (French)</caption>
+  <caption>Table 1. Regular vowels (UK English)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      French<br/>SPR symbol
+      SPR symbol
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA symbol
@@ -52,16 +52,34 @@ The following sections describe the valid symbols for French.
     </td>
     <td style="text-align:center">
       a<br/><br/>
+      &#97;&#720;<br/><br/>
       &#593;<br/><br/>
+      &#593;&#720;<br/><br/>
       &#592;
     </td>
     <td style="text-align:center">
       0061<br/><br/>
+      0061+02D0<br/><br/>
       0251<br/><br/>
+      0251+02D0<br/><br/>
       0250
     </td>
     <td>
-      p<u>a</u>ttes, l<u>a</u>c, c<u>a</u>ve
+      p<u>a</u>th, f<u>a</u>ther, ch<u>a</u>nt
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      A
+    </td>
+    <td style="text-align:center">
+      &#230;
+    </td>
+    <td style="text-align:center">
+      00E6
+    </td>
+    <td>
+      b<u>a</u>ck, h<u>a</u>d
     </td>
   </tr>
   <tr>
@@ -69,14 +87,15 @@ The following sections describe the valid symbols for French.
       e
     </td>
     <td style="text-align:center">
-      e
+      e<br/><br/>
+      &#101;&#618;
     </td>
     <td style="text-align:center">
-      0065
+      0065<br/><br/>
+      0065+026A
     </td>
     <td>
-      caf<u>&egrave;</u>, d<u>&egrave;</u>form<u>e</u>r,
-      <u>&egrave;</u>t<u>&egrave;</u>
+      c<u>a</u>ke, p<u>ai</u>n
     </td>
   </tr>
   <tr>
@@ -84,15 +103,13 @@ The following sections describe the valid symbols for French.
       E
     </td>
     <td style="text-align:center">
-      &#603;<br/><br/>
-      &#604;
+      &#603;
     </td>
     <td style="text-align:center">
-      025B<br/><br/>
-      025C
+      025B
     </td>
     <td>
-      f<u>ai</u>te, m<u>ai</u>, h<u>e</u>rb
+      h<u>e</u>dge, l<u>e</u>t
     </td>
   </tr>
   <tr>
@@ -100,15 +117,27 @@ The following sections describe the valid symbols for French.
       i
     </td>
     <td style="text-align:center">
-      i<br/><br/>
+      &#105;&#720;
+    </td>
+    <td style="text-align:center">
+      0069+02D0
+    </td>
+    <td>
+      s<u>ee</u>, sp<u>ea</u>k, bel<u>ie</u>ve
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      I
+    </td>
+    <td style="text-align:center">
       &#618;
     </td>
     <td style="text-align:center">
-      0069<br/><br/>
       026A
     </td>
     <td>
-      f<u>i</u>lm, t<u>y</u>p<u>i</u>que
+      p<u>i</u>ck, <u>i</u>ll
     </td>
   </tr>
   <tr>
@@ -116,13 +145,17 @@ The following sections describe the valid symbols for French.
       o
     </td>
     <td style="text-align:center">
-      o
+      o<br/><br/>
+      &#111;&#650;<br/><br/>
+      &#601;&#650;
     </td>
     <td style="text-align:center">
-      006F
+      006F<br/><br/>
+      006F+028A<br/><br/>
+      0259+028A
     </td>
     <td>
-      <u>eau</u>, <u>au</u>x, g<u>au</u>che
+      b<u>o</u>th, <u>oa</u>k
     </td>
   </tr>
   <tr>
@@ -131,14 +164,27 @@ The following sections describe the valid symbols for French.
     </td>
     <td style="text-align:center">
       &#596;<br/><br/>
-      &#594;
+      &#596;&#720;
     </td>
     <td style="text-align:center">
       0254<br/><br/>
-      0252
+      0254+02D0
     </td>
     <td>
-      P<u>au</u>l, n<u>o</u>te, &egrave;chal<u>o</u>tte
+      l<u>a</u>w, c<u>ou</u>rt, h<u>a</u>ll, w<u>a</u>ter
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      @
+    </td>
+    <td style="text-align:center">
+      &#594;
+    </td>
+    <td style="text-align:center">
+      0252
+    </td>
+    <td>r<u>o</u>d, c<u>ou</u>gh
     </td>
   </tr>
   <tr>
@@ -147,35 +193,151 @@ The following sections describe the valid symbols for French.
     </td>
     <td style="text-align:center">
       u<br/><br/>
-      &#650;
+      &#117;&#720;
     </td>
     <td style="text-align:center">
       0075<br/><br/>
+      0075+02D0
+    </td>
+    <td>
+      z<u>oo</u>, tr<u>u</u>th
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      U
+    </td>
+    <td style="text-align:center">
+      &#650;
+    </td>
+    <td style="text-align:center">
       028A
     </td>
     <td>
-      r<u>ou</u>e, <u>o&ugrave;</u>, t<u>ou</u>r
+      t<u>oo</u>k, p<u>u</u>t
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      y
+      H
     </td>
     <td style="text-align:center">
-      &#121;<br/><br/>
-      &#655;
+      &#652;
     </td>
     <td style="text-align:center">
-      0079<br/><br/>
-      028F
+      028C
     </td>
     <td>
-      <u>u</u>tile, p<u>u</u>re, Br<u>u</u>no
+      b<u>u</u>t, m<u>u</u>g, s<u>o</u>n
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      x [<strong>1</strong>]
+      R
+    </td>
+    <td style="text-align:center">
+      &#604;<br/><br/>
+      &#604;&#720;<br/><br/>
+      &#602;<br/><br/>
+      &#605;
+    </td>
+    <td style="text-align:center">
+      025C<br/><br/>
+      025C+02D0<br/><br/>
+      025A<br/><br/>
+      025D
+    </td>
+    <td>
+      butt<u>er</u>, h<u>u</u>rt
+    </td>
+  </tr>
+</table>
+
+## Diphthongs
+{: #gbDiphthongs}
+
+<table style="width:90%">
+  <caption>Table 2. Diphthongs (UK English)</caption>
+  <tr>
+    <th style="width:20%; text-align:center; vertical-align:bottom">
+      SPR symbol
+    </th>
+    <th style="width:20%; text-align:center; vertical-align:bottom">
+      IPA symbol
+    </th>
+    <th style="width:20%; text-align:center; vertical-align:bottom">
+      IPA Unicode
+    </th>
+    <th style="text-align:left; vertical-align:bottom">
+      Example words
+    </th>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      O
+    </td>
+    <td style="text-align:center">
+      &#596;&#618;
+    </td>
+    <td style="text-align:center">
+      0254+026A
+    </td>
+    <td>
+      t<u>oi</u>l, b<u>oy</u>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      W
+    </td>
+    <td style="text-align:center">
+      &#97;&#650;
+    </td>
+    <td style="text-align:center">
+      0061+028A
+    </td>
+    <td>
+      <u>ou</u>t, c<u>ow</u>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      Y
+    </td>
+    <td style="text-align:center">
+      &#97;&#618;
+    </td>
+    <td style="text-align:center">
+      0061+026A
+    </td>
+    <td>
+      l<u>i</u>fe, f<u>i</u>ne
+    </td>
+  </tr>
+</table>
+
+## Reduced vowels
+{: #gbReducedVowels}
+
+<table style="width:90%">
+  <caption>Table 3. Reduced vowels (UK English)</caption>
+  <tr>
+    <th style="width:20%; text-align:center; vertical-align:bottom">
+      SPR symbol
+    </th>
+    <th style="width:20%; text-align:center; vertical-align:bottom">
+      IPA symbol
+    </th>
+    <th style="width:20%; text-align:center; vertical-align:bottom">
+      IPA Unicode
+    </th>
+    <th style="text-align:left; vertical-align:bottom">
+      Example words
+    </th>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      x
     </td>
     <td style="text-align:center">
       &#601;
@@ -184,119 +346,35 @@ The following sections describe the valid symbols for French.
       0259
     </td>
     <td>
-      litr<u>e</u>s, marbr<u>e</u>
+      sof<u>a</u>, <u>a</u>lone, s<u>u</u>ppose, <u>A</u>meric<u>a</u>
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      'eu'
+      X
     </td>
     <td style="text-align:center">
-      &#248;<br/><br/>
-      &#629;
+      i<br/><br/>
+      &#616;
     </td>
     <td style="text-align:center">
-      00F8<br/><br/>
-      0275
+      0069<br/><br/>
+      0268
     </td>
     <td>
-      m<u>eu</u>gle, p<u>eu</u>, joy<u>eu</u>x
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      'oe'
-    </td>
-    <td style="text-align:center">
-      &#339;<br/><br/>
-      &#630;
-    </td>
-    <td style="text-align:center">
-      0153<br/><br/>
-      0276
-    </td>
-    <td>
-      p<u>eu</u>r, c<u>oeu</u>r, j<u>eu</u>ne
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      'a~'
-    </td>
-    <td style="text-align:center">
-      &#97;&#771;<br/><br/>
-      &#593;&#771;
-    </td>
-    <td style="text-align:center">
-      0061+0303<br/><br/>
-      0251+0303
-    </td>
-    <td>
-      b<u>an</u>c, <u>en</u>, t<u>em</u>ps
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      'E~'
-    </td>
-    <td style="text-align:center">
-      &#101;&#771;<br/><br/>
-      &#603;&#771;<br/><br/>
-      &#230;&#771;
-    </td>
-    <td style="text-align:center">
-      0065+0303<br/><br/>
-      025B+0303<br/><br/>
-      00E6+0303
-    </td>
-    <td>
-      f<u>i</u>n, pl<u>e</u>in, f<u>ai</u>m
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      'o~'
-    </td>
-    <td style="text-align:center">
-      &#111;&#771;<br/><br/>
-      &#596;&#771;
-    </td>
-    <td style="text-align:center">
-      006F+0303<br/><br/>
-      0254+0303
-    </td>
-    <td>
-      b<u>on</u>, p<u>on</u>t, m<u>on</u>
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      'oe~'
-    </td>
-    <td style="text-align:center">
-      &#339;&#771;
-    </td>
-    <td style="text-align:center">
-      0153+0303
-    </td>
-    <td>
-      <u>un</u>, auc<u>un</u>, br<u>un</u>
+      ros<u>e</u>s, hint<u>e</u>d
     </td>
   </tr>
 </table>
 
-**Note:**
-
-1.  The `x` is elided in certain contexts.
-
 ## Consonants
-{: #frConsonants}
+{: #gbConsonants}
 
 <table style="width:90%">
-  <caption>Table 2. Consonants (French)</caption>
+  <caption>Table 4. Consonants (UK English)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      French<br/>SPR symbol
+      SPR symbol
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA symbol
@@ -319,7 +397,7 @@ The following sections describe the valid symbols for French.
       0062
     </td>
     <td>
-      <u>b</u>&egrave;<u>b</u>&egrave;, <u>b</u>alle, ro<u>b</u>e
+      <u>b</u>ad, so<u>b</u>
     </td>
   </tr>
   <tr>
@@ -333,7 +411,7 @@ The following sections describe the valid symbols for French.
       0070
     </td>
     <td>
-      <u>p</u>orte, <u>p</u>r&ecirc;t, gu&ecirc;<u>p</u>e
+      <u>p</u>it, ri<u>p</u>
     </td>
   </tr>
   <tr>
@@ -347,7 +425,7 @@ The following sections describe the valid symbols for French.
       0064
     </td>
     <td>
-      <u>d</u>ort, <u>d</u>olmen
+      <u>d</u>ip, ha<u>d</u>
     </td>
   </tr>
   <tr>
@@ -361,7 +439,7 @@ The following sections describe the valid symbols for French.
       0074
     </td>
     <td>
-      <u>t</u>on, pa<u>tt</u>e, th&egrave;&acirc;<u>t</u>re
+      <u>t</u>ip, pe<u>t</u>
     </td>
   </tr>
   <tr>
@@ -377,7 +455,7 @@ The following sections describe the valid symbols for French.
       0261
     </td>
     <td>
-      <u>gu</u>erre, ba<u>gu</u>e, <u>g</u>arer
+      <u>g</u>ood, bu<u>g</u>
     </td>
   </tr>
   <tr>
@@ -391,7 +469,35 @@ The following sections describe the valid symbols for French.
       006B
     </td>
     <td>
-      <u>k</u>ilo, <u>c</u>aler, <u>qu</u>ai
+      <u>k</u>ill, ma<u>k</u>e, ba<u>ck</u>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      D
+    </td>
+    <td style="text-align:center">
+      &#240;
+    </td>
+    <td style="text-align:center">
+      00F0
+    </td>
+    <td>
+      <u>th</u>is, brea<u>th</u>e
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      T
+    </td>
+    <td style="text-align:center">
+      &#952;
+    </td>
+    <td style="text-align:center">
+      03B8
+    </td>
+    <td>
+      <u>th</u>ing, Be<u>th</u>
     </td>
   </tr>
   <tr>
@@ -405,7 +511,7 @@ The following sections describe the valid symbols for French.
       0076
     </td>
     <td>
-      la<u>v</u>er, <u>w</u>agon, <u>v</u>isiter
+      <u>v</u>ase, sa<u>v</u>e
     </td>
   </tr>
   <tr>
@@ -419,7 +525,7 @@ The following sections describe the valid symbols for French.
       0066
     </td>
     <td>
-      che<u>f</u>, <u>f</u>aim, <u>ph</u>are
+      <u>f</u>ield, i<u>f</u>, gra<u>ph</u>
     </td>
   </tr>
   <tr>
@@ -433,7 +539,7 @@ The following sections describe the valid symbols for French.
       007A
     </td>
     <td>
-      ja<u>s</u>er, r&egrave;<u>s</u>eau, <u>z</u>ig<u>z</u>aguer
+      <u>z</u>ip, pha<u>s</u>e
     </td>
   </tr>
   <tr>
@@ -447,7 +553,7 @@ The following sections describe the valid symbols for French.
       0073
     </td>
     <td>
-      <u>s</u>ans, ambi<u>t</u>ion, fa<u>&ccedil;</u>on
+      <u>s</u>eal, mi<u>ss</u>, <u>c</u>eiling
     </td>
   </tr>
   <tr>
@@ -461,7 +567,7 @@ The following sections describe the valid symbols for French.
       0292
     </td>
     <td>
-      ra<u>g</u>e, <u>g</u>&icirc;te, <u>j</u>ouer
+      trea<u>s</u>ure, gara<u>g</u>e
     </td>
   </tr>
   <tr>
@@ -475,7 +581,59 @@ The following sections describe the valid symbols for French.
       0283
     </td>
     <td>
-      <u>ch</u>eval, l&acirc;<u>ch</u>e, <u>sch</u>&egrave;ma
+      <u>sh</u>ip, wi<u>sh</u>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      J
+    </td>
+    <td style="text-align:center">
+      &#100;&#658;<br/><br/>
+      &#676;
+    </td>
+    <td style="text-align:center">
+      0064+0292<br/><br/>
+      02A4
+    </td>
+    <td>
+      <u>J</u>ane, hu<u>g</u>e
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      C
+    </td>
+    <td style="text-align:center">
+      &#116;&#643;<br/><br/>
+      &#679;
+    </td>
+    <td style="text-align:center">
+      0074+0283<br/><br/>
+      02A7
+    </td>
+    <td>
+      <u>ch</u>ip, wit<u>ch</u>, na<u>t</u>ure
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      h
+    </td>
+    <td style="text-align:center">
+      h<br/><br/>
+      x<br/><br/>
+      &#967;<br/><br/>
+      &#614;
+    </td>
+    <td style="text-align:center">
+      0068<br/><br/>
+      0078<br/><br/>
+      03C7<br/><br/>
+      0266
+    </td>
+    <td>
+      <u>h</u>ot, <u>h</u>ero
     </td>
   </tr>
   <tr>
@@ -489,7 +647,7 @@ The following sections describe the valid symbols for French.
       006D
     </td>
     <td>
-      <u>m</u>a<u>m</u>an, fe<u>mm</u>e, <u>m</u>iser
+      <u>m</u>an, hu<u>m</u>, su<u>mm</u>er
     </td>
   </tr>
   <tr>
@@ -503,26 +661,12 @@ The following sections describe the valid symbols for French.
       006E
     </td>
     <td>
-      A<u>nn</u>e, <u>n</u>i, ma<u>n</u>iaque
+      <u>n</u>ever, su<u>n</u>, wi<u>nn</u>er
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      'nj'
-    </td>
-    <td style="text-align:center">
-      &#626;
-    </td>
-    <td style="text-align:center">
-      0272
-    </td>
-    <td>
-      a<u>gn</u>eau, campa<u>gn</u>e
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      'ng'
+      G
     </td>
     <td style="text-align:center">
       &#331;
@@ -531,7 +675,7 @@ The following sections describe the valid symbols for French.
       014B
     </td>
     <td>
-      parki<u>ng</u>, campi<u>ng</u>
+      si<u>ng</u>, fi<u>ng</u>er
     </td>
   </tr>
   <tr>
@@ -541,21 +685,15 @@ The following sections describe the valid symbols for French.
     <td style="text-align:center">
       r<br/><br/>
       &#633;<br/><br/>
-      &#640;<br/><br/>
-      &#641;<br/><br/>
-      x<br/><br/>
-      &#967;
+      &#638;
     </td>
     <td style="text-align:center">
       0072<br/><br/>
       0279<br/><br/>
-      0280<br/><br/>
-      0281<br/><br/>
-      0078<br/><br/>
-      03C7
+      027E
     </td>
     <td>
-      pa<u>r</u>er, <u>r</u>a<u>r</u>e, ca<u>rr</u>eau
+      bo<u>rr</u>ow, <u>r</u>ake
     </td>
   </tr>
   <tr>
@@ -569,23 +707,21 @@ The following sections describe the valid symbols for French.
       006C
     </td>
     <td>
-      <u>l</u>itre, i<u>ll</u>isible, p&acirc;<u>l</u>e
+      <u>l</u>ow, ha<u>ll</u>
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      j
+      L
     </td>
     <td style="text-align:center">
-      j<br/><br/>
-      &#654;
+      &#108;&#809;
     </td>
     <td style="text-align:center">
-      006A<br/><br/>
-      028E
+      006C+0329
     </td>
     <td>
-      h<u>i</u>&egrave;rarchie, pa<u>ill</u>e, <u>y</u>oga
+      cand<u>l</u>e
     </td>
   </tr>
   <tr>
@@ -599,59 +735,21 @@ The following sections describe the valid symbols for French.
       0077
     </td>
     <td>
-      <u>ou</u>i, b<u>ou</u>&egrave;e, <u>w</u>att
+      <u>w</u>ear, q<u>u</u>ick
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      H
+      y
     </td>
     <td style="text-align:center">
-      &#613;
+      j
     </td>
     <td style="text-align:center">
-      0265
+      006A
     </td>
     <td>
-      s<u>u</u>is, l<u>u</u>i, n<u>u</u>&egrave;e
+      <u>y</u>es, Virgin<u>i</u>a
     </td>
   </tr>
 </table>
-
-## Liaison
-{: #frLiaison}
-
-In French, the `_` (underscore) can be used following a word-final consonant (but within the double-quotes that enclose the SPR) to indicate that it is a liaison consonant. A liaison consonant is pronounced only if the following word begins with a vowel.
-
-<table style="width:54%">
-  <caption>Table 3. Liaison (French)</caption>
-  <tr>
-    <th style="width:33%; text-align:center; vertical-align:bottom">
-      French<br/>SPR symbol
-    </th>
-    <th style="width:33%; text-align:center; vertical-align:bottom">
-      IPA symbol
-    </th>
-    <th style="width:34%; text-align:center; vertical-align:bottom">
-      IPA Unicode
-    </th>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      _
-    </td>
-    <td style="text-align:center">
-      &#8255;
-    </td>
-    <td style="text-align:center">
-      0203F
-    </td>
-  </tr>
-</table>
-
-Examples of words with and without the liaison symbol follow:
-
--   `"p0'oe't1it_"`: The `t` is pronounced only if the following word begins with a vowel.
--   `"nEt"`: The `t` is always pronounced.
-
-A dictionary entry *petit* with the translation value `"p'oe't1it_"` has the final `t` pronounced in the input string *un petit ami* but not in the input string *un petit chien*. An entry with the translation value `"nEt"` has the final `t` pronounced regardless of context.

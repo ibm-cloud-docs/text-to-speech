@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-04-01"
+lastupdated: "2020-04-22"
 
 subcollection: text-to-speech
 
@@ -113,7 +113,7 @@ For example, consider the word `trinitroglycerin`. The service's regular pronunc
 
 In these examples, the phonetic translation string is composed of phoneme symbols and a single primary stress mark. The primary stress mark is represented by <code>&#712;</code> in IPA and by `1` in SPR. It is placed just before the symbol for the stressed vowel in both cases. Although the examples do not show it, you can also specify syllable boundaries and secondary stress positions in a phonetic translation. These elements are not required and normally are not needed to achieve a pronunciation. As with sounds-like translations, you can compose a phonetic translation from multiple strings that are delimited by spaces.
 
-You can also specify IPA translations as IPA Unicode values. For more information, see [Using IBM SPR](/docs/text-to-speech?topic=text-to-speech-sprs) and the language-specific tables on the pages that are referred to in [Supported languages](/docs/text-to-speech?topic=text-to-speech-sprs#supportedLanguages). For an example translation that uses IPA Unicode values, see [The phoneme element](/docs/text-to-speech?topic=text-to-speech-elements#phoneme_element).
+You can also specify IPA translations as IPA Unicode values. For more information, see [Using phonetic symbols](/docs/text-to-speech?topic=text-to-speech-sprs) and the language-specific tables on the pages that are referred to in [Language support for SPR and IPA](/docs/text-to-speech?topic=text-to-speech-sprs#supportedLanguages). For an example translation that uses IPA Unicode values, see [The phoneme element](/docs/text-to-speech?topic=text-to-speech-elements#phoneme_element).
 {: note}
 
 ### Working with an existing phonetic translation
@@ -131,8 +131,7 @@ For more information, see [Querying a word from a language](/docs/text-to-speech
 The following resources provide information about phonetic translation:
 
 -   For more information about using SSML and its `<phoneme>` element, see [Using SSML](/docs/text-to-speech?topic=text-to-speech-ssml).
--   For more information about specifying SPR translations and their equivalent IPA symbols, see [Using IBM SPR](/docs/text-to-speech?topic=text-to-speech-sprs).
--   For more information about using IPA symbols and for audio samples of the symbols, consult sources on the web. You can find a detailed introductory discussion at [International Phonetic Alphabet](https://wikipedia.org/wiki/International_Phonetic_Alphabet){: external}.
+-   For more information about specifying SPR and IPA symbols and translations, see [Using phonetic symbols](/docs/text-to-speech?topic=text-to-speech-sprs).
 
 ## Mixed sounds-like and phonetic translation
 
