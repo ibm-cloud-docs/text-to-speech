@@ -25,7 +25,7 @@ subcollection: text-to-speech
 # Obtaining word timings
 {: #timing}
 
-You can use the WebSocket interface of the {{site.data.keyword.texttospeechfull}} service to obtain timing information for user-specified locations such as word boundaries or for all words of the input:
+You can use the WebSocket interface of the {{site.data.keyword.texttospeechfull}} service to obtain timing information for user-specified locations such as word boundaries or for all words of the input text:
 {: shortdesc}
 
 -   Include the SSML `<mark>` element in input text to identify the time at which the marker occurs in the audio.
