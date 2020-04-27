@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-04-01"
+lastupdated: "2020-04-27"
 
 subcollection: text-to-speech
 
@@ -54,7 +54,7 @@ To synthesize text with the HTTP API, you call the `GET` or `POST` version of th
 
 The service offers a WebSocket interface that you can use to synthesize text. The interface provides a single version of the `/v1/synthesize` method that accepts a maximum of 5 KB of input text. You specify the text to be synthesized, the voice to be used, and the format for the audio. You can provide plain text or text that is annotated with SSML. For more information, see [The WebSocket interface](/docs/text-to-speech?topic=text-to-speech-usingWebSocket).
 
-The WebSocket interface supports use of the SSML `<mark>` element to identify specific locations in audio. For languages other than Japanese, you can also request word timing information for all words of the input text. For more information, see [Obtaining word timings](/docs/text-to-speech?topic=text-to-speech-timing).
+The WebSocket interface supports use of the SSML `<mark>` element to identify specific locations in audio. For languages other than Japanese, you can also request word timing information for all words of the input text. (The `<mark>` element and word timings are available only with the WebSocket interface.) For more information, see [Obtaining word timings](/docs/text-to-speech?topic=text-to-speech-timing).
 
 ## Customization interface
 {: #overview-customization}

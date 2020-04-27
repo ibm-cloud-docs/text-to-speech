@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-04-01"
+lastupdated: "2020-04-27"
 
 subcollection: text-to-speech
 
@@ -25,7 +25,7 @@ subcollection: text-to-speech
 # Obtaining word timings
 {: #timing}
 
-The WebSocket interface provides the same functionality as the HTTP `GET` and `POST /v1/synthesize` methods. You can also use the WebSocket interface to obtain timing information for specific locations or for all words of the input:
+You can use the WebSocket interface of the {{site.data.keyword.texttospeechfull}} service to obtain timing information for user-specified locations such as word boundaries or for all words of the input:
 {: shortdesc}
 
 -   Include the SSML `<mark>` element in input text to identify the time at which the marker occurs in the audio.
@@ -33,7 +33,7 @@ The WebSocket interface provides the same functionality as the HTTP `GET` and `P
 
 Timing information is useful for synchronizing the audio and the input text. For example, you can coordinate a robot's gestures with the content of the synthesized speech.
 
-The `timings` parameter is not supported for Japanese input text.
+The `<mark>` element and the `timings` parameter are available only with the WebSocket interface, not with the HTTP interface. Also, the `timings` parameter is not supported for Japanese input text.
 {: note}
 
 ## How the service returns word timings
