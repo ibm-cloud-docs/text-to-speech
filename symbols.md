@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-04-24"
+lastupdated: "2020-04-28"
 
 subcollection: text-to-speech
 
@@ -38,15 +38,16 @@ To define the phonetic pronunciation for a word, either within input text or for
 -   The `alphabet` attribute specifies the notation of the pronunciation. Use the value `ibm` to indicate that the pronunciation is defined in SPR. Use the value `ipa` to indicate that the pronunciation is defined in IPA.
 -   The `ph` attribute defines the pronunciation. It consists of a sequence of allowable symbols for a given language. The symbols define how the word that is enclosed in the `<phoneme>` element is to be pronounced.
 
-For more information, see
-
--   [The phoneme element](/docs/text-to-speech?topic=text-to-speech-elements#phoneme_element)
--   [Creating and managing custom entries](/docs/text-to-speech?topic=text-to-speech-customWords)
-
 Follow these rules when you define a pronunciation:
 
 -   Use only the documented SPR or IPA symbols. The service considers invalid any definition that contains phonetic symbols that are not allowed in a language. An SPR or IPA entry that does not conform to the required specification is invalid.
 -   When multiple IPA symbols (or symbol combinations) are documented for an SPR symbol, all of the IPA symbols are equivalent to the single SPR symbol. The service treats all of these IPA symbols the same and does not realize the subtle or regional differences that IPA is meant to describe.
+
+For more information, see
+
+-   [The phoneme element](/docs/text-to-speech?topic=text-to-speech-elements#phoneme_element)
+-   [Rules for creating custom entries](/docs/text-to-speech?topic=text-to-speech-rules)
+-   [Creating and managing custom entries](/docs/text-to-speech?topic=text-to-speech-customWords)
 
 ## Working with IBM SPR
 {: #intro-SPRs}
