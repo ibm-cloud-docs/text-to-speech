@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-04-23"
+lastupdated: "2020-04-29"
 
 subcollection: text-to-speech
 
@@ -61,7 +61,7 @@ The following sections describe the valid symbols for French.
       0250
     </td>
     <td>
-      p<u>a</u>ttes, l<u>a</u>c, c<u>a</u>ve
+      p**a**ttes, l**a**c, c**a**ve
     </td>
   </tr>
   <tr>
@@ -75,8 +75,8 @@ The following sections describe the valid symbols for French.
       0065
     </td>
     <td>
-      caf<u>&egrave;</u>, d<u>&egrave;</u>form<u>e</u>r,
-      <u>&egrave;</u>t<u>&egrave;</u>
+      caf**&egrave;**, d**&egrave;**form**e**r,
+      **&egrave;**t**&egrave;**
     </td>
   </tr>
   <tr>
@@ -92,7 +92,7 @@ The following sections describe the valid symbols for French.
       025C
     </td>
     <td>
-      f<u>ai</u>te, m<u>ai</u>, h<u>e</u>rb
+      f**ai**te, m**ai**, h**e**rb
     </td>
   </tr>
   <tr>
@@ -108,7 +108,7 @@ The following sections describe the valid symbols for French.
       026A
     </td>
     <td>
-      f<u>i</u>lm, t<u>y</u>p<u>i</u>que
+      f**i**lm, t**y**p**i**que
     </td>
   </tr>
   <tr>
@@ -122,7 +122,7 @@ The following sections describe the valid symbols for French.
       006F
     </td>
     <td>
-      <u>eau</u>, <u>au</u>x, g<u>au</u>che
+      **eau**, **au**x, g**au**che
     </td>
   </tr>
   <tr>
@@ -138,7 +138,7 @@ The following sections describe the valid symbols for French.
       0252
     </td>
     <td>
-      P<u>au</u>l, n<u>o</u>te, &egrave;chal<u>o</u>tte
+      P**au**l, n**o**te, &egrave;chal**o**tte
     </td>
   </tr>
   <tr>
@@ -154,7 +154,7 @@ The following sections describe the valid symbols for French.
       028A
     </td>
     <td>
-      r<u>ou</u>e, <u>o&ugrave;</u>, t<u>ou</u>r
+      r**ou**e, **o&ugrave;**, t**ou**r
     </td>
   </tr>
   <tr>
@@ -170,7 +170,7 @@ The following sections describe the valid symbols for French.
       028F
     </td>
     <td>
-      <u>u</u>tile, p<u>u</u>re, Br<u>u</u>no
+      **u**tile, p**u**re, Br**u**no
     </td>
   </tr>
   <tr>
@@ -184,7 +184,7 @@ The following sections describe the valid symbols for French.
       0259
     </td>
     <td>
-      litr<u>e</u>s, marbr<u>e</u>
+      litr**e**s, marbr**e**
     </td>
   </tr>
   <tr>
@@ -200,7 +200,7 @@ The following sections describe the valid symbols for French.
       0275
     </td>
     <td>
-      m<u>eu</u>gle, p<u>eu</u>, joy<u>eu</u>x
+      m**eu**gle, p**eu**, joy**eu**x
     </td>
   </tr>
   <tr>
@@ -216,7 +216,7 @@ The following sections describe the valid symbols for French.
       0276
     </td>
     <td>
-      p<u>eu</u>r, c<u>oeu</u>r, j<u>eu</u>ne
+      p**eu**r, c**oeu**r, j**eu**ne
     </td>
   </tr>
   <tr>
@@ -232,7 +232,7 @@ The following sections describe the valid symbols for French.
       0251+0303
     </td>
     <td>
-      b<u>an</u>c, <u>en</u>, t<u>em</u>ps
+      b**an**c, **en**, t**em**ps
     </td>
   </tr>
   <tr>
@@ -250,7 +250,7 @@ The following sections describe the valid symbols for French.
       00E6+0303
     </td>
     <td>
-      f<u>i</u>n, pl<u>e</u>in, f<u>ai</u>m
+      f**i**n, pl**e**in, f**ai**m
     </td>
   </tr>
   <tr>
@@ -266,7 +266,7 @@ The following sections describe the valid symbols for French.
       0254+0303
     </td>
     <td>
-      b<u>on</u>, p<u>on</u>t, m<u>on</u>
+      b**on**, p**on**t, m**on**
     </td>
   </tr>
   <tr>
@@ -280,7 +280,7 @@ The following sections describe the valid symbols for French.
       0153+0303
     </td>
     <td>
-      <u>un</u>, auc<u>un</u>, br<u>un</u>
+      **un**, auc**un**, br**un**
     </td>
   </tr>
 </table>
@@ -319,7 +319,7 @@ The following sections describe the valid symbols for French.
       0062
     </td>
     <td>
-      <u>b</u>&egrave;<u>b</u>&egrave;, <u>b</u>alle, ro<u>b</u>e
+      **b**&egrave;**b**&egrave;, **b**alle, ro**b**e
     </td>
   </tr>
   <tr>
@@ -333,7 +333,7 @@ The following sections describe the valid symbols for French.
       0070
     </td>
     <td>
-      <u>p</u>orte, <u>p</u>r&ecirc;t, gu&ecirc;<u>p</u>e
+      **p**orte, **p**r&ecirc;t, gu&ecirc;**p**e
     </td>
   </tr>
   <tr>
@@ -347,7 +347,7 @@ The following sections describe the valid symbols for French.
       0064
     </td>
     <td>
-      <u>d</u>ort, <u>d</u>olmen
+      **d**ort, **d**olmen
     </td>
   </tr>
   <tr>
@@ -361,7 +361,7 @@ The following sections describe the valid symbols for French.
       0074
     </td>
     <td>
-      <u>t</u>on, pa<u>tt</u>e, th&egrave;&acirc;<u>t</u>re
+      **t**on, pa**tt**e, th&egrave;&acirc;**t**re
     </td>
   </tr>
   <tr>
@@ -377,7 +377,7 @@ The following sections describe the valid symbols for French.
       0261
     </td>
     <td>
-      <u>gu</u>erre, ba<u>gu</u>e, <u>g</u>arer
+      **gu**erre, ba**gu**e, **g**arer
     </td>
   </tr>
   <tr>
@@ -391,7 +391,7 @@ The following sections describe the valid symbols for French.
       006B
     </td>
     <td>
-      <u>k</u>ilo, <u>c</u>aler, <u>qu</u>ai
+      **k**ilo, **c**aler, **qu**ai
     </td>
   </tr>
   <tr>
@@ -405,7 +405,7 @@ The following sections describe the valid symbols for French.
       0076
     </td>
     <td>
-      la<u>v</u>er, <u>w</u>agon, <u>v</u>isiter
+      la**v**er, **w**agon, **v**isiter
     </td>
   </tr>
   <tr>
@@ -419,7 +419,7 @@ The following sections describe the valid symbols for French.
       0066
     </td>
     <td>
-      che<u>f</u>, <u>f</u>aim, <u>ph</u>are
+      che**f**, **f**aim, **ph**are
     </td>
   </tr>
   <tr>
@@ -433,7 +433,7 @@ The following sections describe the valid symbols for French.
       007A
     </td>
     <td>
-      ja<u>s</u>er, r&egrave;<u>s</u>eau, <u>z</u>ig<u>z</u>aguer
+      ja**s**er, r&egrave;**s**eau, **z**ig**z**aguer
     </td>
   </tr>
   <tr>
@@ -447,7 +447,7 @@ The following sections describe the valid symbols for French.
       0073
     </td>
     <td>
-      <u>s</u>ans, ambi<u>t</u>ion, fa<u>&ccedil;</u>on
+      **s**ans, ambi**t**ion, fa**&ccedil;**on
     </td>
   </tr>
   <tr>
@@ -461,7 +461,7 @@ The following sections describe the valid symbols for French.
       0292
     </td>
     <td>
-      ra<u>g</u>e, <u>g</u>&icirc;te, <u>j</u>ouer
+      ra**g**e, **g**&icirc;te, **j**ouer
     </td>
   </tr>
   <tr>
@@ -475,7 +475,7 @@ The following sections describe the valid symbols for French.
       0283
     </td>
     <td>
-      <u>ch</u>eval, l&acirc;<u>ch</u>e, <u>sch</u>&egrave;ma
+      **ch**eval, l&acirc;**ch**e, **sch**&egrave;ma
     </td>
   </tr>
   <tr>
@@ -489,7 +489,7 @@ The following sections describe the valid symbols for French.
       006D
     </td>
     <td>
-      <u>m</u>a<u>m</u>an, fe<u>mm</u>e, <u>m</u>iser
+      **m**a**m**an, fe**mm**e, **m**iser
     </td>
   </tr>
   <tr>
@@ -503,7 +503,7 @@ The following sections describe the valid symbols for French.
       006E
     </td>
     <td>
-      A<u>nn</u>e, <u>n</u>i, ma<u>n</u>iaque
+      A**nn**e, **n**i, ma**n**iaque
     </td>
   </tr>
   <tr>
@@ -517,7 +517,7 @@ The following sections describe the valid symbols for French.
       0272
     </td>
     <td>
-      a<u>gn</u>eau, campa<u>gn</u>e
+      a**gn**eau, campa**gn**e
     </td>
   </tr>
   <tr>
@@ -531,7 +531,7 @@ The following sections describe the valid symbols for French.
       014B
     </td>
     <td>
-      parki<u>ng</u>, campi<u>ng</u>
+      parki**ng**, campi**ng**
     </td>
   </tr>
   <tr>
@@ -555,7 +555,7 @@ The following sections describe the valid symbols for French.
       03C7
     </td>
     <td>
-      pa<u>r</u>er, <u>r</u>a<u>r</u>e, ca<u>rr</u>eau
+      pa**r**er, **r**a**r**e, ca**rr**eau
     </td>
   </tr>
   <tr>
@@ -569,7 +569,7 @@ The following sections describe the valid symbols for French.
       006C
     </td>
     <td>
-      <u>l</u>itre, i<u>ll</u>isible, p&acirc;<u>l</u>e
+      **l**itre, i**ll**isible, p&acirc;**l**e
     </td>
   </tr>
   <tr>
@@ -585,7 +585,7 @@ The following sections describe the valid symbols for French.
       028E
     </td>
     <td>
-      h<u>i</u>&egrave;rarchie, pa<u>ill</u>e, <u>y</u>oga
+      h**i**&egrave;rarchie, pa**ill**e, **y**oga
     </td>
   </tr>
   <tr>
@@ -599,7 +599,7 @@ The following sections describe the valid symbols for French.
       0077
     </td>
     <td>
-      <u>ou</u>i, b<u>ou</u>&egrave;e, <u>w</u>att
+      **ou**i, b**ou**&egrave;e, **w**att
     </td>
   </tr>
   <tr>
@@ -613,7 +613,7 @@ The following sections describe the valid symbols for French.
       0265
     </td>
     <td>
-      s<u>u</u>is, l<u>u</u>i, n<u>u</u>&egrave;e
+      s**u**is, l**u**i, n**u**&egrave;e
     </td>
   </tr>
 </table>

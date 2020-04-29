@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-04-23"
+lastupdated: "2020-04-29"
 
 subcollection: text-to-speech
 
@@ -57,7 +57,7 @@ The following sections describe the valid symbols for Spanish. The information a
       0061
     </td>
     <td>
-      <u>a</u>gua, c<u>a</u>s<u>a</u>
+      **a**gua, c**a**s**a**
     </td>
   </tr>
   <tr>
@@ -71,7 +71,7 @@ The following sections describe the valid symbols for Spanish. The information a
       0065
     </td>
     <td>
-      <u>e</u>st<u>e</u>, b<u>e</u>so
+      **e**st**e**, b**e**so
     </td>
   </tr>
   <tr>
@@ -85,7 +85,7 @@ The following sections describe the valid symbols for Spanish. The information a
       0069
     </td>
     <td>
-      <u>i</u>gual, h<u>i</u>jo
+      **i**gual, h**i**jo
     </td>
   </tr>
   <tr>
@@ -99,7 +99,7 @@ The following sections describe the valid symbols for Spanish. The information a
       006F
     </td>
     <td>
-      <u>o</u>s<u>o</u>, cant<u>o</u>
+      **o**s**o**, cant**o**
     </td>
   </tr>
   <tr>
@@ -113,7 +113,7 @@ The following sections describe the valid symbols for Spanish. The information a
       0075
     </td>
     <td>
-      <u>u</u>va, l<u>u</u>gar
+      **u**va, l**u**gar
     </td>
   </tr>
 </table>
@@ -148,7 +148,7 @@ The following sections describe the valid symbols for Spanish. The information a
       0062
     </td>
     <td>
-      <u>b</u>asta, <u>b</u>eber, <u>v</u>aca
+      **b**asta, **b**eber, **v**aca
     </td>
   </tr>
   <tr>
@@ -162,7 +162,7 @@ The following sections describe the valid symbols for Spanish. The information a
       0070
     </td>
     <td>
-      <u>p</u>arte, a<u>p</u>agar
+      **p**arte, a**p**agar
     </td>
   </tr>
   <tr>
@@ -176,7 +176,7 @@ The following sections describe the valid symbols for Spanish. The information a
       0064
     </td>
     <td>
-      <u>d</u>ar, <u>d</u>edo
+      **d**ar, **d**edo
     </td>
   </tr>
   <tr>
@@ -190,7 +190,7 @@ The following sections describe the valid symbols for Spanish. The information a
       0074
     </td>
     <td>
-      <u>t</u>oma, a<u>t</u>ar
+      **t**oma, a**t**ar
     </td>
   </tr>
   <tr>
@@ -205,7 +205,7 @@ The following sections describe the valid symbols for Spanish. The information a
       0261
     </td>
     <td>
-      <u>g</u>oma, <u>g</u>orra
+      **g**oma, **g**orra
     </td>
   </tr>
   <tr>
@@ -219,7 +219,7 @@ The following sections describe the valid symbols for Spanish. The information a
       006B
     </td>
     <td>
-      <u>c</u>uen<u>c</u>o, <u>c</u>anto
+      **c**uen**c**o, **c**anto
     </td>
   </tr>
   <tr>
@@ -233,7 +233,7 @@ The following sections describe the valid symbols for Spanish. The information a
       0066
     </td>
     <td>
-      <u>f</u>laco, a<u>f</u>uera
+      **f**laco, a**f**uera
     </td>
   </tr>
   <tr>
@@ -247,7 +247,7 @@ The following sections describe the valid symbols for Spanish. The information a
       0073
     </td>
     <td>
-      <u>s</u>illa, ca<u>s</u>a
+      **s**illa, ca**s**a
     </td>
   </tr>
   <tr>
@@ -261,7 +261,7 @@ The following sections describe the valid symbols for Spanish. The information a
       0072
     </td>
     <td>
-      <u>r</u>opa, pe<u>rr</u>o
+      **r**opa, pe**rr**o
     </td>
   </tr>
   <tr>
@@ -275,7 +275,7 @@ The following sections describe the valid symbols for Spanish. The information a
       03B8
     </td>
     <td>
-      <u>z</u>apato, so<u>c</u>io
+      **z**apato, so**c**io
     </td>
   </tr>
   <tr>
@@ -291,7 +291,7 @@ The following sections describe the valid symbols for Spanish. The information a
       0074+0283
     </td>
     <td>
-      <u>ch</u>alupa, mu<u>ch</u>o
+      **ch**alupa, mu**ch**o
     </td>
   </tr>
   <tr>
@@ -307,7 +307,7 @@ The following sections describe the valid symbols for Spanish. The information a
       0078
     </td>
     <td>
-      <u>j</u>unco, re<u>j</u>a, <u>g</u>ente
+      **j**unco, re**j**a, **g**ente
     </td>
   </tr>
   <tr>
@@ -321,7 +321,7 @@ The following sections describe the valid symbols for Spanish. The information a
       006D
     </td>
     <td>
-      <u>m</u>ano, a<u>m</u>or
+      **m**ano, a**m**or
     </td>
   </tr>
   <tr>
@@ -335,7 +335,7 @@ The following sections describe the valid symbols for Spanish. The information a
       006E
     </td>
     <td>
-      <u>n</u>ada, ma<u>n</u>o
+      **n**ada, ma**n**o
     </td>
   </tr>
   <tr>
@@ -349,7 +349,7 @@ The following sections describe the valid symbols for Spanish. The information a
       0272
     </td>
     <td>
-      pi<u>&ntilde;</u>a, ni<u>&ntilde;</u>o
+      pi**&ntilde;**a, ni**&ntilde;**o
     </td>
   </tr>
   <tr>
@@ -363,7 +363,7 @@ The following sections describe the valid symbols for Spanish. The information a
       027E
     </td>
     <td>
-      pa<u>r</u>a, pe<u>r</u>o
+      pa**r**a, pe**r**o
     </td>
   </tr>
   <tr>
@@ -377,7 +377,7 @@ The following sections describe the valid symbols for Spanish. The information a
       006C
     </td>
     <td>
-      <u>l</u>oco, a<u>l</u>go
+      **l**oco, a**l**go
     </td>
   </tr>
   <tr>
@@ -393,8 +393,8 @@ The following sections describe the valid symbols for Spanish. The information a
       029D
     </td>
     <td>
-      <u>ll</u>over, po<u>ll</u>o<br/><br/>
-      <u>y</u>egua, pla<u>y</u>a
+      **ll**over, po**ll**o<br/><br/>
+      **y**egua, pla**y**a
     </td>
   </tr>
   <tr>
@@ -408,7 +408,7 @@ The following sections describe the valid symbols for Spanish. The information a
       029D
     </td>
     <td>
-      <u>y</u>egua, pla<u>y</u>a
+      **y**egua, pla**y**a
     </td>
   </tr>
   <tr>
@@ -422,7 +422,7 @@ The following sections describe the valid symbols for Spanish. The information a
       006A
     </td>
     <td>
-      med<u>i</u>o, o<u>i</u>go
+      med**i**o, o**i**go
     </td>
   </tr>
   <tr>
@@ -436,7 +436,7 @@ The following sections describe the valid symbols for Spanish. The information a
       0077
     </td>
     <td>
-      f<u>u</u>era, de<u>u</u>da
+      f**u**era, de**u**da
     </td>
   </tr>
 </table>
@@ -482,7 +482,7 @@ Each allophone is a variation of the phoneme indicated in parentheses. If an all
       03B2
     </td>
     <td>
-      bo<u>b</u>o, nue<u>v</u>e
+      bo**b**o, nue**v**e
     </td>
   </tr>
   <tr>
@@ -496,7 +496,7 @@ Each allophone is a variation of the phoneme indicated in parentheses. If an all
       00F0
     </td>
     <td>
-      ha<u>d</u>a, de<u>d</u>o
+      ha**d**a, de**d**o
     </td>
   </tr>
   <tr>
@@ -510,7 +510,7 @@ Each allophone is a variation of the phoneme indicated in parentheses. If an all
       0263
     </td>
     <td>
-      se<u>g</u>ar, lu<u>g</u>ar
+      se**g**ar, lu**g**ar
     </td>
   </tr>
   <tr>
@@ -524,7 +524,7 @@ Each allophone is a variation of the phoneme indicated in parentheses. If an all
       007A
     </td>
     <td>
-      mi<u>s</u>mo, de<u>s</u>de
+      mi**s**mo, de**s**de
     </td>
   </tr>
   <tr>
@@ -538,7 +538,7 @@ Each allophone is a variation of the phoneme indicated in parentheses. If an all
       014B+0067
     </td>
     <td>
-      ta<u>n</u>go, e<u>n</u>ga&ntilde;o
+      ta**n**go, e**n**ga&ntilde;o
     </td>
   </tr>
   <tr>
@@ -552,7 +552,7 @@ Each allophone is a variation of the phoneme indicated in parentheses. If an all
       014B+006B
     </td>
     <td>
-      a<u>n</u>cla, ci<u>n</u>co
+      a**n**cla, ci**n**co
     </td>
   </tr>
 </table>
