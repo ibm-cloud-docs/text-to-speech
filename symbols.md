@@ -176,8 +176,10 @@ The following language-specific considerations apply to specifying syllable stre
 
 -   *In IPA for French,* syllable stress symbols are ignored.
 -   *In SPR for French,* syllable stress symbols are honored. If specified, syllable stress must immediately precede the vowel of the syllable. In SPR, syllable stress for French is much stricter than for other languages; an error occurs if the stress symbol is in an invalid location.
--   *In SPR for Spanish and Italian,* you can specify only `1` (primary stress). An error occurs if you specify secondary or no stress.
+-   *In SPR for Italian,* you can specify only `1` (primary stress). An error occurs if you specify secondary or no stress.
 -   *In SPR for Japanese,* only `1` (primary stress) and `0` (no stress) are supported. An error occurs if you specify secondary stress.
+-   *In IPA for Korean,* syllable stress symbols are ignored.
+-   *In SPR for Spanish,* you can specify only `1` (primary stress). An error occurs if you specify secondary or no stress.
 
 ## Language support for SPR and IPA
 {: #supportedLanguages}
@@ -244,7 +246,7 @@ Table 2 shows the service's language support for SPR and IPA symbols. The table 
     <td style="text-align:center">Yes</th>
   </tr>
   <tr>
-    <td style="text-align:left">Korean symbols</th>
+    <td style="text-align:left">[Korean symbols](/docs/text-to-speech?topic=text-to-speech-koSymbols)</th>
     <td style="text-align:center">No</th>
     <td style="text-align:center">Yes</th>
   </tr>
@@ -255,5 +257,5 @@ Table 2 shows the service's language support for SPR and IPA symbols. The table 
   </tr>
 </table>
 
-The IPA symbols for Arabic, Chinese, and Korean will be documented soon.
+The IPA symbols for Arabic and Chinese will be documented soon.
 {: note}

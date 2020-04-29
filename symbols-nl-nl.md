@@ -51,7 +51,7 @@ The following sections describe the valid symbols for Dutch.
       0251
     </td>
     <td>
-      b<u>a</u>d
+      b**a**d
     </td>
   </tr>
   <tr>
@@ -62,7 +62,7 @@ The following sections describe the valid symbols for Dutch.
       0258
     </td>
     <td>
-      b<u>e</u>d
+      b**e**d
     </td>
   </tr>
   <tr>
@@ -73,7 +73,7 @@ The following sections describe the valid symbols for Dutch.
       026A
     </td>
     <td>
-      v<u>i</u>s
+      v**i**s
     </td>
   </tr>
   <tr>
@@ -84,7 +84,7 @@ The following sections describe the valid symbols for Dutch.
       0254
     </td>
     <td>
-      p<u>o</u>t
+      p**o**t
     </td>
   </tr>
   <tr>
@@ -95,7 +95,7 @@ The following sections describe the valid symbols for Dutch.
       028F
     </td>
     <td>
-      h<u>u</u>t
+      h**u**t
     </td>
   </tr>
   <tr>
@@ -106,7 +106,7 @@ The following sections describe the valid symbols for Dutch.
       0075
     </td>
     <td>
-      h<u>oe</u>d
+      h**oe**d
     </td>
   </tr>
   <tr>
@@ -117,7 +117,7 @@ The following sections describe the valid symbols for Dutch.
       00F8
     </td>
     <td>
-      b<u>eu</u>k
+      b**eu**k
     </td>
   </tr>
   <tr>
@@ -128,7 +128,7 @@ The following sections describe the valid symbols for Dutch.
       0259
     </td>
     <td>
-      d<u>e</u>
+      d**e**
     </td>
   </tr>
   <tr>
@@ -139,7 +139,7 @@ The following sections describe the valid symbols for Dutch.
       028C
     </td>
     <td>
-      gl<u>o</u>ve
+      gl**o**ve
     </td>
   </tr>
 </table>
@@ -168,7 +168,7 @@ The following sections describe the valid symbols for Dutch.
       0061
     </td>
     <td>
-      n<u>aa</u>m
+      n**aa**m
     </td>
   </tr>
   <tr>
@@ -179,7 +179,7 @@ The following sections describe the valid symbols for Dutch.
       0065
     </td>
     <td>
-      h<u>ee</u>t
+      h**ee**t
     </td>
   </tr>
   <tr>
@@ -190,7 +190,7 @@ The following sections describe the valid symbols for Dutch.
       0069
     </td>
     <td>
-      d<u>ie</u>p
+      d**ie**p
     </td>
   </tr>
   <tr>
@@ -201,7 +201,7 @@ The following sections describe the valid symbols for Dutch.
       026A+02D0
     </td>
     <td>
-      k<u>ee</u>l
+      k**ee**l
     </td>
   </tr>
   <tr>
@@ -212,7 +212,7 @@ The following sections describe the valid symbols for Dutch.
       006F
     </td>
     <td>
-      p<u>oo</u>t
+      p**oo**t
     </td>
   </tr>
   <tr>
@@ -223,7 +223,7 @@ The following sections describe the valid symbols for Dutch.
       0079
     </td>
     <td>
-      <u>uu</u>r
+      **uu**r
     </td>
   </tr>
   <tr>
@@ -234,7 +234,7 @@ The following sections describe the valid symbols for Dutch.
       0069+02D0
     </td>
     <td>
-      ch<u>ea</u>p
+      ch**ea**p
     </td>
   </tr>
   <tr>
@@ -245,7 +245,7 @@ The following sections describe the valid symbols for Dutch.
       0258+02D0
     </td>
     <td>
-      g<u>&ecirc;</u>ne
+      g**&ecirc;**ne
     </td>
   </tr>
   <tr>
@@ -256,7 +256,7 @@ The following sections describe the valid symbols for Dutch.
       0254+02D0
     </td>
     <td>
-      r<u>o</u>ze
+      r**o**ze
     </td>
   </tr>
   <tr>
@@ -267,7 +267,7 @@ The following sections describe the valid symbols for Dutch.
       0075+02D0
     </td>
     <td>
-      bl<u>ue</u>
+      bl**ue**
     </td>
   </tr>
   <tr>
@@ -278,7 +278,7 @@ The following sections describe the valid symbols for Dutch.
       0079+02D0
     </td>
     <td>
-      b<u>&uuml;h</u>ne
+      b**&uuml;h**ne
     </td>
   </tr>
   <tr>
@@ -291,7 +291,7 @@ The following sections describe the valid symbols for Dutch.
       Not available
     </td>
     <td>
-      <u>oeu</u>vre
+      **oeu**vre
     </td>
   </tr>
 </table>
@@ -320,7 +320,7 @@ The following sections describe the valid symbols for Dutch.
       0251+0303
     </td>
     <td>
-      ch<u>an</u>son
+      ch**an**son
     </td>
   </tr>
   <tr>
@@ -331,7 +331,7 @@ The following sections describe the valid symbols for Dutch.
       025B+0303
     </td>
     <td>
-      t<u>im</u>bre
+      t**im**bre
     </td>
   </tr>
   <tr>
@@ -342,7 +342,7 @@ The following sections describe the valid symbols for Dutch.
       0254+0303
     </td>
     <td>
-      b<u>on</u>b<u>on</u>
+      b**on**b**on**
     </td>
   </tr>
   <tr>
@@ -353,7 +353,7 @@ The following sections describe the valid symbols for Dutch.
       0153+0303
     </td>
     <td>
-      parf<u>um</u>
+      parf**um**
     </td>
   </tr>
 </table>
@@ -382,7 +382,7 @@ The following sections describe the valid symbols for Dutch.
       025B+0069
     </td>
     <td>
-      f<u>ij</u>n
+      f**ij**n
     </td>
   </tr>
   <tr>
@@ -393,7 +393,7 @@ The following sections describe the valid symbols for Dutch.
       0251+0075
     </td>
     <td>
-      k<u>ou</u>
+      k**ou**
     </td>
   </tr>
   <tr>
@@ -404,7 +404,7 @@ The following sections describe the valid symbols for Dutch.
       0153+0079
     </td>
     <td>
-      h<u>ui</u>s
+      h**ui**s
     </td>
   </tr>
 </table>
@@ -433,7 +433,7 @@ The following sections describe the valid symbols for Dutch.
       0077
     </td>
     <td>
-      <u>w</u>indows
+      **w**indows
     </td>
   </tr>
   <tr>
@@ -444,7 +444,7 @@ The following sections describe the valid symbols for Dutch.
       006A
     </td>
     <td>
-      <u>j</u>as
+      **j**as
     </td>
   </tr>
 </table>
@@ -473,7 +473,7 @@ The following sections describe the valid symbols for Dutch.
       0070
     </td>
     <td>
-      <u>p</u>ad
+      **p**ad
     </td>
   </tr>
   <tr>
@@ -484,7 +484,7 @@ The following sections describe the valid symbols for Dutch.
       0062
     </td>
     <td>
-      <u>b</u>ad
+      **b**ad
     </td>
   </tr>
   <tr>
@@ -495,7 +495,7 @@ The following sections describe the valid symbols for Dutch.
       0074
     </td>
     <td>
-      <u>t</u>ak
+      **t**ak
     </td>
   </tr>
   <tr>
@@ -506,7 +506,7 @@ The following sections describe the valid symbols for Dutch.
       0064
     </td>
     <td>
-      <u>d</u>ak
+      **d**ak
     </td>
   </tr>
   <tr>
@@ -517,7 +517,7 @@ The following sections describe the valid symbols for Dutch.
       006B
     </td>
     <td>
-      <u>k</u>at
+      **k**at
     </td>
   </tr>
   <tr>
@@ -528,7 +528,7 @@ The following sections describe the valid symbols for Dutch.
       0067
     </td>
     <td>
-      <u>g</u>oal
+      **g**oal
     </td>
   </tr>
   <tr>
@@ -539,7 +539,7 @@ The following sections describe the valid symbols for Dutch.
       0066
     </td>
     <td>
-      <u>f</u>out
+      **f**out
     </td>
   </tr>
   <tr>
@@ -550,7 +550,7 @@ The following sections describe the valid symbols for Dutch.
       0073
     </td>
     <td>
-      <u>s</u>ap
+      **s**ap
     </td>
   </tr>
   <tr>
@@ -561,7 +561,7 @@ The following sections describe the valid symbols for Dutch.
       007A
     </td>
     <td>
-      <u>z</u>at
+      **z**at
     </td>
   </tr>
   <tr>
@@ -572,7 +572,7 @@ The following sections describe the valid symbols for Dutch.
       0283
     </td>
     <td>
-      <u>sj</u>aal
+      **sj**aal
     </td>
   </tr>
   <tr>
@@ -583,7 +583,7 @@ The following sections describe the valid symbols for Dutch.
       0292
     </td>
     <td>
-      baga<u>g</u>e
+      baga**g**e
     </td>
   </tr>
   <tr>
@@ -594,7 +594,7 @@ The following sections describe the valid symbols for Dutch.
       0078
     </td>
     <td>
-      <u>g</u>aan, to<u>ch</u>
+      **g**aan, to**ch**
     </td>
   </tr>
   <tr>
@@ -605,7 +605,7 @@ The following sections describe the valid symbols for Dutch.
       Not available
     </td>
     <td>
-      re<u>g</u>en
+      re**g**en
     </td>
   </tr>
   <tr>
@@ -616,7 +616,7 @@ The following sections describe the valid symbols for Dutch.
       0068
     </td>
     <td>
-      <u>h</u>and
+      **h**and
     </td>
   </tr>
   <tr>
@@ -627,7 +627,7 @@ The following sections describe the valid symbols for Dutch.
       0076
     </td>
     <td>
-      le<u>v</u>en
+      le**v**en
     </td>
   </tr>
   <tr>
@@ -638,7 +638,7 @@ The following sections describe the valid symbols for Dutch.
       028B
     </td>
     <td>
-      <u>w</u>ang
+      **w**ang
     </td>
   </tr>
   <tr>
@@ -649,7 +649,7 @@ The following sections describe the valid symbols for Dutch.
       0074+02B2
     </td>
     <td>
-      po<u>tj</u>e
+      po**tj**e
     </td>
   </tr>
   <tr>
@@ -660,7 +660,7 @@ The following sections describe the valid symbols for Dutch.
       006C
     </td>
     <td>
-      <u>l</u>and
+      **l**and
     </td>
   </tr>
   <tr>
@@ -671,7 +671,7 @@ The following sections describe the valid symbols for Dutch.
       0072
     </td>
     <td>
-      <u>r</u>and
+      **r**and
     </td>
   </tr>
   <tr>
@@ -682,7 +682,7 @@ The following sections describe the valid symbols for Dutch.
       0281
     </td>
     <td>
-      abbatoi<u>r</u>
+      abbatoi**r**
     </td>
   </tr>
   <tr>
@@ -693,7 +693,7 @@ The following sections describe the valid symbols for Dutch.
       0279
     </td>
     <td>
-      da<u>r</u>k
+      da**r**k
     </td>
   </tr>
   <tr>
@@ -704,7 +704,7 @@ The following sections describe the valid symbols for Dutch.
       006D
     </td>
     <td>
-      <u>m</u>at
+      **m**at
     </td>
   </tr>
   <tr>
@@ -715,7 +715,7 @@ The following sections describe the valid symbols for Dutch.
       006E
     </td>
     <td>
-      <u>n</u>ek
+      **n**ek
     </td>
   </tr>
   <tr>
@@ -726,7 +726,7 @@ The following sections describe the valid symbols for Dutch.
       014B
     </td>
     <td>
-      e<u>ng</u>
+      e**ng**
     </td>
   </tr>
   <tr>
@@ -737,7 +737,7 @@ The following sections describe the valid symbols for Dutch.
       0272
     </td>
     <td>
-      ora<u>nj</u>e
+      ora**nj**e
     </td>
   </tr>
   <tr>
@@ -748,7 +748,7 @@ The following sections describe the valid symbols for Dutch.
       02A7
     </td>
     <td>
-      <u>ch</u>eck
+      **ch**eck
     </td>
   </tr>
   <tr>
@@ -759,7 +759,7 @@ The following sections describe the valid symbols for Dutch.
       02A6
     </td>
     <td>
-      pa<u>ts</u>
+      pa**ts**
     </td>
   </tr>
   <tr>
@@ -770,7 +770,7 @@ The following sections describe the valid symbols for Dutch.
       02A4
     </td>
     <td>
-      <u>j</u>azz
+      **j**azz
     </td>
   </tr>
   <tr>
@@ -781,7 +781,7 @@ The following sections describe the valid symbols for Dutch.
       0294
     </td>
     <td>
-      <u>g</u>e&euml;erd
+      **g**e&euml;erd
     </td>
   </tr>
   <tr>
@@ -792,7 +792,7 @@ The following sections describe the valid symbols for Dutch.
       03B8
     </td>
     <td>
-      <u>th</u>umbnail
+      **th**umbnail
     </td>
   </tr>
   <tr>
@@ -803,7 +803,7 @@ The following sections describe the valid symbols for Dutch.
       00F0
     </td>
     <td>
-      bro<u>th</u>er
+      bro**th**er
     </td>
   </tr>
 </table>

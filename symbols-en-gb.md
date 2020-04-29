@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-04-23"
+lastupdated: "2020-04-29"
 
 subcollection: text-to-speech
 
@@ -25,7 +25,7 @@ subcollection: text-to-speech
 # UK English symbols
 {: #gbSymbols}
 
-The following sections describe the valid symbols for UK English.
+The following sections describe the valid symbols for United Kingdom (UK) English.
 
 ## Regular vowels
 {: #gbRegularVowels}
@@ -65,7 +65,7 @@ The following sections describe the valid symbols for UK English.
       0250
     </td>
     <td>
-      p<u>a</u>th, f<u>a</u>ther, ch<u>a</u>nt
+      p**a**th, f**a**ther, ch**a**nt
     </td>
   </tr>
   <tr>
@@ -79,7 +79,7 @@ The following sections describe the valid symbols for UK English.
       00E6
     </td>
     <td>
-      b<u>a</u>ck, h<u>a</u>d
+      b**a**ck, h**a**d
     </td>
   </tr>
   <tr>
@@ -95,7 +95,7 @@ The following sections describe the valid symbols for UK English.
       0065+026A
     </td>
     <td>
-      c<u>a</u>ke, p<u>ai</u>n
+      c**a**ke, p**ai**n
     </td>
   </tr>
   <tr>
@@ -109,7 +109,7 @@ The following sections describe the valid symbols for UK English.
       025B
     </td>
     <td>
-      h<u>e</u>dge, l<u>e</u>t
+      h**e**dge, l**e**t
     </td>
   </tr>
   <tr>
@@ -123,7 +123,7 @@ The following sections describe the valid symbols for UK English.
       0069+02D0
     </td>
     <td>
-      s<u>ee</u>, sp<u>ea</u>k, bel<u>ie</u>ve
+      s**ee**, sp**ea**k, bel**ie**ve
     </td>
   </tr>
   <tr>
@@ -137,7 +137,7 @@ The following sections describe the valid symbols for UK English.
       026A
     </td>
     <td>
-      p<u>i</u>ck, <u>i</u>ll
+      p**i**ck, **i**ll
     </td>
   </tr>
   <tr>
@@ -155,7 +155,7 @@ The following sections describe the valid symbols for UK English.
       0259+028A
     </td>
     <td>
-      b<u>o</u>th, <u>oa</u>k
+      b**o**th, **oa**k
     </td>
   </tr>
   <tr>
@@ -171,7 +171,7 @@ The following sections describe the valid symbols for UK English.
       0254+02D0
     </td>
     <td>
-      l<u>a</u>w, c<u>ou</u>rt, h<u>a</u>ll, w<u>a</u>ter
+      l**a**w, c**ou**rt, h**a**ll, w**a**ter
     </td>
   </tr>
   <tr>
@@ -184,7 +184,7 @@ The following sections describe the valid symbols for UK English.
     <td style="text-align:center">
       0252
     </td>
-    <td>r<u>o</u>d, c<u>ou</u>gh
+    <td>r**o**d, c**ou**gh
     </td>
   </tr>
   <tr>
@@ -200,7 +200,7 @@ The following sections describe the valid symbols for UK English.
       0075+02D0
     </td>
     <td>
-      z<u>oo</u>, tr<u>u</u>th
+      z**oo**, tr**u**th
     </td>
   </tr>
   <tr>
@@ -214,7 +214,7 @@ The following sections describe the valid symbols for UK English.
       028A
     </td>
     <td>
-      t<u>oo</u>k, p<u>u</u>t
+      t**oo**k, p**u**t
     </td>
   </tr>
   <tr>
@@ -228,7 +228,7 @@ The following sections describe the valid symbols for UK English.
       028C
     </td>
     <td>
-      b<u>u</u>t, m<u>u</u>g, s<u>o</u>n
+      b**u**t, m**u**g, s**o**n
     </td>
   </tr>
   <tr>
@@ -248,7 +248,7 @@ The following sections describe the valid symbols for UK English.
       025D
     </td>
     <td>
-      butt<u>er</u>, h<u>u</u>rt
+      butt**er**, h**u**rt
     </td>
   </tr>
 </table>
@@ -283,7 +283,7 @@ The following sections describe the valid symbols for UK English.
       0254+026A
     </td>
     <td>
-      t<u>oi</u>l, b<u>oy</u>
+      t**oi**l, b**oy**
     </td>
   </tr>
   <tr>
@@ -297,7 +297,7 @@ The following sections describe the valid symbols for UK English.
       0061+028A
     </td>
     <td>
-      <u>ou</u>t, c<u>ow</u>
+      **ou**t, c**ow**
     </td>
   </tr>
   <tr>
@@ -311,7 +311,7 @@ The following sections describe the valid symbols for UK English.
       0061+026A
     </td>
     <td>
-      l<u>i</u>fe, f<u>i</u>ne
+      l**i**fe, f**i**ne
     </td>
   </tr>
 </table>
@@ -346,7 +346,7 @@ The following sections describe the valid symbols for UK English.
       0259
     </td>
     <td>
-      sof<u>a</u>, <u>a</u>lone, s<u>u</u>ppose, <u>A</u>meric<u>a</u>
+      sof**a**, **a**lone, s**u**ppose, **A**meric**a**
     </td>
   </tr>
   <tr>
@@ -362,7 +362,7 @@ The following sections describe the valid symbols for UK English.
       0268
     </td>
     <td>
-      ros<u>e</u>s, hint<u>e</u>d
+      ros**e**s, hint**e**d
     </td>
   </tr>
 </table>
@@ -397,7 +397,7 @@ The following sections describe the valid symbols for UK English.
       0062
     </td>
     <td>
-      <u>b</u>ad, so<u>b</u>
+      **b**ad, so**b**
     </td>
   </tr>
   <tr>
@@ -411,7 +411,7 @@ The following sections describe the valid symbols for UK English.
       0070
     </td>
     <td>
-      <u>p</u>it, ri<u>p</u>
+      **p**it, ri**p**
     </td>
   </tr>
   <tr>
@@ -425,7 +425,7 @@ The following sections describe the valid symbols for UK English.
       0064
     </td>
     <td>
-      <u>d</u>ip, ha<u>d</u>
+      **d**ip, ha**d**
     </td>
   </tr>
   <tr>
@@ -439,7 +439,7 @@ The following sections describe the valid symbols for UK English.
       0074
     </td>
     <td>
-      <u>t</u>ip, pe<u>t</u>
+      **t**ip, pe**t**
     </td>
   </tr>
   <tr>
@@ -455,7 +455,7 @@ The following sections describe the valid symbols for UK English.
       0261
     </td>
     <td>
-      <u>g</u>ood, bu<u>g</u>
+      **g**ood, bu**g**
     </td>
   </tr>
   <tr>
@@ -469,7 +469,7 @@ The following sections describe the valid symbols for UK English.
       006B
     </td>
     <td>
-      <u>k</u>ill, ma<u>k</u>e, ba<u>ck</u>
+      **k**ill, ma**k**e, ba**ck**
     </td>
   </tr>
   <tr>
@@ -483,7 +483,7 @@ The following sections describe the valid symbols for UK English.
       00F0
     </td>
     <td>
-      <u>th</u>is, brea<u>th</u>e
+      **th**is, brea**th**e
     </td>
   </tr>
   <tr>
@@ -497,7 +497,7 @@ The following sections describe the valid symbols for UK English.
       03B8
     </td>
     <td>
-      <u>th</u>ing, Be<u>th</u>
+      **th**ing, Be**th**
     </td>
   </tr>
   <tr>
@@ -511,7 +511,7 @@ The following sections describe the valid symbols for UK English.
       0076
     </td>
     <td>
-      <u>v</u>ase, sa<u>v</u>e
+      **v**ase, sa**v**e
     </td>
   </tr>
   <tr>
@@ -525,7 +525,7 @@ The following sections describe the valid symbols for UK English.
       0066
     </td>
     <td>
-      <u>f</u>ield, i<u>f</u>, gra<u>ph</u>
+      **f**ield, i**f**, gra**ph**
     </td>
   </tr>
   <tr>
@@ -539,7 +539,7 @@ The following sections describe the valid symbols for UK English.
       007A
     </td>
     <td>
-      <u>z</u>ip, pha<u>s</u>e
+      **z**ip, pha**s**e
     </td>
   </tr>
   <tr>
@@ -553,7 +553,7 @@ The following sections describe the valid symbols for UK English.
       0073
     </td>
     <td>
-      <u>s</u>eal, mi<u>ss</u>, <u>c</u>eiling
+      **s**eal, mi**ss**, **c**eiling
     </td>
   </tr>
   <tr>
@@ -567,7 +567,7 @@ The following sections describe the valid symbols for UK English.
       0292
     </td>
     <td>
-      trea<u>s</u>ure, gara<u>g</u>e
+      trea**s**ure, gara**g**e
     </td>
   </tr>
   <tr>
@@ -581,7 +581,7 @@ The following sections describe the valid symbols for UK English.
       0283
     </td>
     <td>
-      <u>sh</u>ip, wi<u>sh</u>
+      **sh**ip, wi**sh**
     </td>
   </tr>
   <tr>
@@ -597,7 +597,7 @@ The following sections describe the valid symbols for UK English.
       02A4
     </td>
     <td>
-      <u>J</u>ane, hu<u>g</u>e
+      **J**ane, hu**g**e
     </td>
   </tr>
   <tr>
@@ -613,7 +613,7 @@ The following sections describe the valid symbols for UK English.
       02A7
     </td>
     <td>
-      <u>ch</u>ip, wit<u>ch</u>, na<u>t</u>ure
+      **ch**ip, wit**ch**, na**t**ure
     </td>
   </tr>
   <tr>
@@ -633,7 +633,7 @@ The following sections describe the valid symbols for UK English.
       0266
     </td>
     <td>
-      <u>h</u>ot, <u>h</u>ero
+      **h**ot, **h**ero
     </td>
   </tr>
   <tr>
@@ -647,7 +647,7 @@ The following sections describe the valid symbols for UK English.
       006D
     </td>
     <td>
-      <u>m</u>an, hu<u>m</u>, su<u>mm</u>er
+      **m**an, hu**m**, su**mm**er
     </td>
   </tr>
   <tr>
@@ -661,7 +661,7 @@ The following sections describe the valid symbols for UK English.
       006E
     </td>
     <td>
-      <u>n</u>ever, su<u>n</u>, wi<u>nn</u>er
+      **n**ever, su**n**, wi**nn**er
     </td>
   </tr>
   <tr>
@@ -675,7 +675,7 @@ The following sections describe the valid symbols for UK English.
       014B
     </td>
     <td>
-      si<u>ng</u>, fi<u>ng</u>er
+      si**ng**, fi**ng**er
     </td>
   </tr>
   <tr>
@@ -693,7 +693,7 @@ The following sections describe the valid symbols for UK English.
       027E
     </td>
     <td>
-      bo<u>rr</u>ow, <u>r</u>ake
+      bo**rr**ow, **r**ake
     </td>
   </tr>
   <tr>
@@ -707,7 +707,7 @@ The following sections describe the valid symbols for UK English.
       006C
     </td>
     <td>
-      <u>l</u>ow, ha<u>ll</u>
+      **l**ow, ha**ll**
     </td>
   </tr>
   <tr>
@@ -721,7 +721,7 @@ The following sections describe the valid symbols for UK English.
       006C+0329
     </td>
     <td>
-      cand<u>l</u>e
+      cand**l**e
     </td>
   </tr>
   <tr>
@@ -735,7 +735,7 @@ The following sections describe the valid symbols for UK English.
       0077
     </td>
     <td>
-      <u>w</u>ear, q<u>u</u>ick
+      **w**ear, q**u**ick
     </td>
   </tr>
   <tr>
@@ -749,7 +749,7 @@ The following sections describe the valid symbols for UK English.
       006A
     </td>
     <td>
-      <u>y</u>es, Virgin<u>i</u>a
+      **y**es, Virgin**i**a
     </td>
   </tr>
 </table>

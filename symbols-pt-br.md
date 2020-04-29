@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-04-23"
+lastupdated: "2020-04-29"
 
 subcollection: text-to-speech
 
@@ -59,8 +59,8 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       0250
     </td>
     <td>
-      vir<u>ar</u>, m<u>a</u>r<br/><br/>
-      Terr<u>a</u>, muit<u>a</u>
+      vir**ar**, m**a**r<br/><br/>
+      Terr**a**, muit**a**
     </td>
   </tr>
   <tr>
@@ -74,7 +74,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       0065
     </td>
     <td>
-      d<u>e</u>do, portugu<u>&ecirc;</u>s
+      d**e**do, portugu**&ecirc;**s
     </td>
   </tr>
   <tr>
@@ -88,7 +88,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       025B
     </td>
     <td>
-      <u>&eacute;</u>s, b<u>e</u>lo, <u>e</u>co
+      **&eacute;**s, b**e**lo, **e**co
     </td>
   </tr>
   <tr>
@@ -102,7 +102,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       0069
     </td>
     <td>
-      l<u>i</u>gar, bod<u>e</u>
+      l**i**gar, bod**e**
     </td>
   </tr>
   <tr>
@@ -116,7 +116,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       006F
     </td>
     <td>
-      c<u>o</u>r, b<u>o</u>lha
+      c**o**r, b**o**lha
     </td>
   </tr>
   <tr>
@@ -130,7 +130,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       0254
     </td>
     <td>
-      pr<u>&oacute;</u>ximo, p<u>o</u>rta
+      pr**&oacute;**ximo, p**o**rta
     </td>
   </tr>
   <tr>
@@ -144,7 +144,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       0075
     </td>
     <td>
-      l<u>u</u>gar, per<u>u</u>
+      l**u**gar, per**u**
     </td>
   </tr>
   <tr>
@@ -158,7 +158,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       0250+0303
     </td>
     <td>
-      b<u>a</u>nco, l<u>&atilde;</u>
+      b**a**nco, l**&atilde;**
     </td>
   </tr>
   <tr>
@@ -173,7 +173,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       1EBD
     </td>
     <td>
-      inc<u>en</u>so, ag<u>en</u>te
+      inc**en**so, ag**en**te
     </td>
   </tr>
   <tr>
@@ -188,7 +188,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       0129
     </td>
     <td>
-      ass<u>im</u>, <u>in</u>censo
+      ass**im**, **in**censo
     </td>
   </tr>
   <tr>
@@ -203,7 +203,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       00F5
     </td>
     <td>
-      c<u>&ocirc;n</u>sul, t<u>om</u>
+      c**&ocirc;n**sul, t**om**
     </td>
   </tr>
   <tr>
@@ -218,7 +218,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       0169
     </td>
     <td>
-      alg<u>un</u>s, <u>um</u>
+      alg**un**s, **um**
     </td>
   </tr>
 </table>
@@ -257,7 +257,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       006A
     </td>
     <td>
-      do<u>i</u>s, no<u>i</u>va
+      do**i**s, no**i**va
     </td>
   </tr>
   <tr>
@@ -271,7 +271,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       006A+0303
     </td>
     <td>
-      m&atilde;<u>e</u>, mu<u>i</u>to
+      m&atilde;**e**, mu**i**to
     </td>
   </tr>
   <tr>
@@ -285,7 +285,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       0077
     </td>
     <td>
-      me<u>u</u>, q<u>u</u>arto
+      me**u**, q**u**arto
     </td>
   </tr>
   <tr>
@@ -299,7 +299,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       0077+0303
     </td>
     <td>
-      capit&atilde;<u>o</u>, S&atilde;<u>o</u>
+      capit&atilde;**o**, S&atilde;**o**
     </td>
   </tr>
 </table>
@@ -334,7 +334,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       0062
     </td>
     <td>
-      a<u>b</u>ra&ccedil;o, <u>B</u>rasil
+      a**b**ra&ccedil;o, **B**rasil
     </td>
   </tr>
   <tr>
@@ -348,7 +348,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       0070
     </td>
     <td>
-      <u>p</u>luma, <u>p</u>rimo
+      **p**luma, **p**rimo
     </td>
   </tr>
   <tr>
@@ -362,7 +362,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       0064
     </td>
     <td>
-      <u>d</u>ar, <u>d</u>ente
+      **d**ar, **d**ente
     </td>
   </tr>
   <tr>
@@ -376,7 +376,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       0074
     </td>
     <td>
-      <u>t</u>rono, por<u>t</u>a
+      **t**rono, por**t**a
     </td>
   </tr>
   <tr>
@@ -391,7 +391,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       0261
     </td>
     <td>
-      <u>g</u>ato, <u>g</u>uarda
+      **g**ato, **g**uarda
     </td>
   </tr>
   <tr>
@@ -405,7 +405,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       006B
     </td>
     <td>
-      <u>c</u>ama, <u>qu</u>eda
+      **c**ama, **qu**eda
     </td>
   </tr>
   <tr>
@@ -419,7 +419,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       0076
     </td>
     <td>
-      <u>v</u>ila, bre<u>v</u>e
+      **v**ila, bre**v**e
     </td>
   </tr>
   <tr>
@@ -433,7 +433,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       0066
     </td>
     <td>
-      <u>f</u>lauta, <u>f</u>aixa
+      **f**lauta, **f**aixa
     </td>
   </tr>
   <tr>
@@ -447,7 +447,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       007A
     </td>
     <td>
-      <u>z</u>ero, ca<u>s</u>o
+      **z**ero, ca**s**o
     </td>
   </tr>
   <tr>
@@ -461,7 +461,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       0073
     </td>
     <td>
-      <u>c</u>erto, avan<u>&ccedil;</u>ar, <u>s</u>ete
+      **c**erto, avan**&ccedil;**ar, **s**ete
     </td>
   </tr>
   <tr>
@@ -475,7 +475,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       0292
     </td>
     <td>
-      <u>g</u>eral, <u>j</u>ogo
+      **g**eral, **j**ogo
     </td>
   </tr>
   <tr>
@@ -489,7 +489,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       0283
     </td>
     <td>
-      <u>ch</u>ave, bai<u>x</u>a
+      **ch**ave, bai**x**a
     </td>
   </tr>
   <tr>
@@ -505,7 +505,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       02A4
     </td>
     <td>
-      bo<u>d</u>e, <u>d</u>iz
+      bo**d**e, **d**iz
     </td>
   </tr>
   <tr>
@@ -521,7 +521,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       02A7
     </td>
     <td>
-      se<u>t</u>e, bo<u>t</u>e
+      se**t**e, bo**t**e
     </td>
   </tr>
   <tr>
@@ -535,7 +535,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       006D
     </td>
     <td>
-      for<u>m</u>a, <u>m</u>acaco
+      for**m**a, **m**acaco
     </td>
   </tr>
   <tr>
@@ -549,7 +549,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       006E
     </td>
     <td>
-      do<u>n</u>o, <u>n</u>ovo
+      do**n**o, **n**ovo
     </td>
   </tr>
   <tr>
@@ -563,7 +563,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       0272
     </td>
     <td>
-      cu<u>nh</u>a, ni<u>nh</u>o
+      cu**nh**a, ni**nh**o
     </td>
   </tr>
   <tr>
@@ -577,7 +577,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       027E
     </td>
     <td>
-      ca<u>r</u>o, t<u>r</u>em
+      ca**r**o, t**r**em
     </td>
   </tr>
   <tr>
@@ -591,7 +591,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       0281
     </td>
     <td>
-      ca<u>rr</u>o, <u>r</u>io
+      ca**rr**o, **r**io
     </td>
   </tr>
   <tr>
@@ -605,7 +605,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       006C
     </td>
     <td>
-      <u>l</u>eite, cava<u>l</u>o
+      **l**eite, cava**l**o
     </td>
   </tr>
   <tr>
@@ -619,7 +619,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       028E
     </td>
     <td>
-      <u>lh</u>e, bagu<u>lh</u>o
+      **lh**e, bagu**lh**o
     </td>
   </tr>
 </table>

@@ -53,6 +53,7 @@ Text to Speech
         symbols-de-de.md
         symbols-it-it.md
         symbols-ja-jp.md
+        symbols-ko-kr.md
         symbols-es-es.md
 
     ha-dr.md

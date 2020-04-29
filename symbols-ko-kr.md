@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2020
+  years: 2020
 lastupdated: "2020-04-29"
 
 subcollection: text-to-speech
@@ -22,24 +22,21 @@ subcollection: text-to-speech
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# Italian symbols
-{: #itSymbols}
+# Korean symbols
+{: #koSymbols}
 
-The following sections describe the valid symbols for Italian.
+The following sections describe the valid symbols for Korean.
 
-## Regular vowels
-{: #itRegularVowels}
+## Monophthongs
+{: #koMonophthongs}
 
-<table style="width:90%">
-  <caption>Table 1. Regular vowels (Italian)</caption>
+<table style="width:70%">
+  <caption>Table 1. Monophthongs (Korean)</caption>
   <tr>
-    <th style="width:20%; text-align:center; vertical-align:bottom">
-      SPR symbol
-    </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA symbol
     </th>
-    <th style="width:20%; text-align:center; vertical-align:bottom">
+    <th style="width:25%; text-align:center; vertical-align:bottom">
       IPA Unicode
     </th>
     <th style="text-align:left; vertical-align:bottom">
@@ -47,9 +44,6 @@ The following sections describe the valid symbols for Italian.
     </th>
   </tr>
   <tr>
-    <td style="text-align:center">
-      a
-    </td>
     <td style="text-align:center">
       a
     </td>
@@ -57,13 +51,10 @@ The following sections describe the valid symbols for Italian.
       0061
     </td>
     <td>
-      l**a**s**a**gn**a**, **a**llegro
+      **&#50500;**&#44592;
     </td>
   </tr>
   <tr>
-    <td style="text-align:center">
-      e
-    </td>
     <td style="text-align:center">
       e
     </td>
@@ -71,27 +62,10 @@ The following sections describe the valid symbols for Italian.
       0065
     </td>
     <td>
-      n**e**ro, du**e**tto
+      **&#50640;**&#45572;&#47532;
     </td>
   </tr>
   <tr>
-    <td style="text-align:center">
-      E
-    </td>
-    <td style="text-align:center">
-      &#603;
-    </td>
-    <td style="text-align:center">
-      025B
-    </td>
-    <td>
-      **e**cco, lic**e**o
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      i
-    </td>
     <td style="text-align:center">
       i
     </td>
@@ -99,13 +73,10 @@ The following sections describe the valid symbols for Italian.
       0069
     </td>
     <td>
-      **i**sola, form**i**ca
+      **&#51060;**&#48156;
     </td>
   </tr>
   <tr>
-    <td style="text-align:center">
-      o
-    </td>
     <td style="text-align:center">
       o
     </td>
@@ -113,27 +84,10 @@ The following sections describe the valid symbols for Italian.
       006F
     </td>
     <td>
-      padr**o**ne, att**o**re
+      **&#50724;**&#47532;
     </td>
   </tr>
   <tr>
-    <td style="text-align:center">
-      c
-    </td>
-    <td style="text-align:center">
-      &#596;
-    </td>
-    <td style="text-align:center">
-      0254
-    </td>
-    <td>
-      c**o**sta, m**o**sse
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      u
-    </td>
     <td style="text-align:center">
       u
     </td>
@@ -141,24 +95,65 @@ The following sections describe the valid symbols for Italian.
       0075
     </td>
     <td>
-      l**u**na, **u**fficio
+      **&#50864;**&#49328;
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      &#603;
+    </td>
+    <td style="text-align:center">
+      025B
+    </td>
+    <td>
+      **&#50528;**&#44368;
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      &#248;
+    </td>
+    <td style="text-align:center">
+      00F8
+    </td>
+    <td>
+      **&#50808;**&#44397;
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      &#652;
+    </td>
+    <td style="text-align:center">
+      028C
+    </td>
+    <td>
+      **&#50612;**&#47672;&#45768;
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      &#623;
+    </td>
+    <td style="text-align:center">
+      026F
+    </td>
+    <td>
+      **&#46300;**&#46356;&#50612;
     </td>
   </tr>
 </table>
 
-## Consonants
-{: #itConsonants}
+## Diphthongs
+{: #koDiphthongs}
 
-<table style="width:90%">
-  <caption>Table 2. Consonants (Italian)</caption>
+<table style="width:70%">
+  <caption>Table 2. Diphthongs (Korean)</caption>
   <tr>
-    <th style="width:20%; text-align:center; vertical-align:bottom">
-      SPR symbol
-    </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA symbol
     </th>
-    <th style="width:20%; text-align:center; vertical-align:bottom">
+    <th style="width:25%; text-align:center; vertical-align:bottom">
       IPA Unicode
     </th>
     <th style="text-align:left; vertical-align:bottom">
@@ -167,8 +162,177 @@ The following sections describe the valid symbols for Italian.
   </tr>
   <tr>
     <td style="text-align:center">
-      b
+      ja
     </td>
+    <td style="text-align:center">
+      006A+0061
+    </td>
+    <td>
+      **&#50556;**&#44396;
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      je
+    </td>
+    <td style="text-align:center">
+      006A+0065
+    </td>
+    <td>
+      **&#50696;**&#49696;
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      jo
+    </td>
+    <td style="text-align:center">
+      006A+006F
+    </td>
+    <td>
+      **&#50836;**&#47532;
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      ju
+    </td>
+    <td style="text-align:center">
+      006A+0075
+    </td>
+    <td>
+      **&#50976;**&#51088;
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      j&#603;
+    </td>
+    <td style="text-align:center">
+      006A+025B
+    </td>
+    <td>
+      **&#50584;**&#44592;
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      j&#652;
+    </td>
+    <td style="text-align:center">
+      006A+028C
+    </td>
+    <td>
+      **&#50668;**&#44592;
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      wa
+    </td>
+    <td style="text-align:center">
+      0077+0061
+    </td>
+    <td>
+      **&#50752;**&#50864;
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      we
+    </td>
+    <td style="text-align:center">
+      0077+0065
+    </td>
+    <td>
+      **&#50920;**&#46377;
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      wi
+    </td>
+    <td style="text-align:center">
+      0077+0069
+    </td>
+    <td>
+      **&#50948;**&#44592;
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      w&#603;
+    </td>
+    <td style="text-align:center">
+      0077+025B
+    </td>
+    <td>
+      **&#50780;**
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      w&#652;
+    </td>
+    <td style="text-align:center">
+      0077+028C
+    </td>
+    <td>
+      **&#50892;**&#45229;
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      &#623;i
+    </td>
+    <td style="text-align:center">
+      026F+0069
+    </td>
+    <td>
+      **&#51032;**&#49324;
+    </td>
+  </tr>
+</table>
+
+## Onset Consonants
+{: #koOnsetConsonants}
+
+<table style="width:70%">
+  <caption>Table 3. Onset Consonants (Korean)</caption>
+  <tr>
+    <th style="width:20%; text-align:center; vertical-align:bottom">
+      IPA symbol
+    </th>
+    <th style="width:25%; text-align:center; vertical-align:bottom">
+      IPA Unicode
+    </th>
+    <th style="text-align:left; vertical-align:bottom">
+      Example words
+    </th>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      P
+    </td>
+    <td style="text-align:center">
+      0070
+    </td>
+    <td>
+      **&#48148;**&#45796;
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      &#112;&#688;
+    </td>
+    <td style="text-align:center">
+      0070+02B0
+    </td>
+    <td>
+      **&#54252;**&#46020;
+    </td>
+  </tr>
+  <tr>
     <td style="text-align:center">
       b
     </td>
@@ -176,41 +340,10 @@ The following sections describe the valid symbols for Italian.
       0062
     </td>
     <td>
-      **b**occa, **b**ere
+      &#49884;**&#48708;**
     </td>
   </tr>
   <tr>
-    <td style="text-align:center">
-      p
-    </td>
-    <td style="text-align:center">
-      p
-    </td>
-    <td style="text-align:center">
-      0070
-    </td>
-    <td>
-      **p**artire, **p**oco
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      d
-    </td>
-    <td style="text-align:center">
-      d
-    </td>
-    <td style="text-align:center">
-      0064
-    </td>
-    <td>
-      **d**are, **d**ata
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      t
-    </td>
     <td style="text-align:center">
       t
     </td>
@@ -218,28 +351,65 @@ The following sections describe the valid symbols for Italian.
       0074
     </td>
     <td>
-      **t**occare, len**t**o
+      **&#45796;**&#51020;
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      g
+      &#116;&#688;
     </td>
     <td style="text-align:center">
-      g
-    </td>
-    <td style="text-align:center">
-      0067<br/>
-      0261
+      0074+02B0
     </td>
     <td>
-      **g**rande, re**g**alo
+      **&#53664;**&#50836;&#51068;
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      k
+      d
     </td>
+    <td style="text-align:center">
+      0064
+    </td>
+    <td>
+      &#44592;**&#46020;**
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      &#680;
+    </td>
+    <td style="text-align:center">
+      02AB
+    </td>
+    <td>
+      **&#51200;**&#50872;
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      &#680;&#688;
+    </td>
+    <td style="text-align:center">
+      02AB+02B0
+    </td>
+    <td>
+      **&#52824;**&#44284;
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      &#675;
+    </td>
+    <td style="text-align:center">
+      02A3
+    </td>
+    <td>
+      &#44592;**&#51088;**
+    </td>
+  </tr>
+  <tr>
     <td style="text-align:center">
       k
     </td>
@@ -247,55 +417,32 @@ The following sections describe the valid symbols for Italian.
       006B
     </td>
     <td>
-      **c**asa, ve**cch**io
+      **&#44396;**&#46160;
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      v
+      &#107;&#688;
     </td>
     <td style="text-align:center">
-      v
-    </td>
-    <td style="text-align:center">
-      0076
+      006B+02B0
     </td>
     <td>
-      **v**ano, **v**i**v**ere
+      **&#52852;**&#46300;
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      f
+      g
     </td>
     <td style="text-align:center">
-      f
-    </td>
-    <td style="text-align:center">
-      0066
+      0067
     </td>
     <td>
-      **f**are, **f**orte
+      &#51648;**&#44396;**
     </td>
   </tr>
   <tr>
-    <td style="text-align:center">
-      z
-    </td>
-    <td style="text-align:center">
-      z
-    </td>
-    <td style="text-align:center">
-      007A
-    </td>
-    <td>
-      pae**s**e, **s**baglio
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      s
-    </td>
     <td style="text-align:center">
       s
     </td>
@@ -303,91 +450,32 @@ The following sections describe the valid symbols for Italian.
       0073
     </td>
     <td>
-      pe**s**to, **s**tare
+      **&#49324;**&#44284;
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      S
+      h
     </td>
     <td style="text-align:center">
-      &#643;
-    </td>
-    <td style="text-align:center">
-      0283
+      0068
     </td>
     <td>
-      **sc**egliere, la**sc**iare
+      **&#54952;**&#44284;
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      J
+      x
     </td>
     <td style="text-align:center">
-      d&#658;<br/><br/>
-      &#676;
-    </td>
-    <td style="text-align:center">
-      0064+0292<br/><br/>
-      02A4
+      0078
     </td>
     <td>
-      **Gi**ovanni, con**g**elare
+      &#51060;**&#54644;**
     </td>
   </tr>
   <tr>
-    <td style="text-align:center">
-      C
-    </td>
-    <td style="text-align:center">
-      t&#643;<br/><br/>
-      &#679;
-    </td>
-    <td style="text-align:center">
-      0074+0283<br/><br/>
-      02A7
-    </td>
-    <td>
-      **c**e**c**e, **c**iao
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      D
-    </td>
-    <td style="text-align:center">
-      dz<br/><br/>
-      &#675;
-    </td>
-    <td style="text-align:center">
-      0064+007A<br/><br/>
-      02A3
-    </td>
-    <td>
-      **z**abaione, **z**ero, **z**ona
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      T
-    </td>
-    <td style="text-align:center">
-      ts<br/><br/>
-      &#678;
-    </td>
-    <td style="text-align:center">
-      0074+0073<br/><br/>
-      02A6
-    </td>
-    <td>
-      **z**ampa, **z**uppa
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      m
-    </td>
     <td style="text-align:center">
       m
     </td>
@@ -395,13 +483,10 @@ The following sections describe the valid symbols for Italian.
       006D
     </td>
     <td>
-      **m**a**mm**a, **m**ano
+      **&#47700;**&#44592;
     </td>
   </tr>
   <tr>
-    <td style="text-align:center">
-      n
-    </td>
     <td style="text-align:center">
       n
     </td>
@@ -409,59 +494,10 @@ The following sections describe the valid symbols for Italian.
       006E
     </td>
     <td>
-      **n**ie**n**te, **n**otte
+      **&#45208;**&#47924;
     </td>
   </tr>
   <tr>
-    <td style="text-align:center">
-      N
-    </td>
-    <td style="text-align:center">
-      &#626;
-    </td>
-    <td style="text-align:center">
-      0272
-    </td>
-    <td>
-      **gn**occhi, lasa**gn**a
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      r
-    </td>
-    <td style="text-align:center">
-      r<br/><br/>
-      &#638;
-    </td>
-    <td style="text-align:center">
-      0072<br/><br/>
-      027E
-    </td>
-    <td>
-      ca**r**o, se**r**eno
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      R
-    </td>
-    <td style="text-align:center">
-      rr<br/><br/>
-      r&#720;
-    </td>
-    <td style="text-align:center">
-      0072+0072<br/><br/>
-      0072+02D0
-    </td>
-    <td>
-      te**rr**a, to**rr**e
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      l
-    </td>
     <td style="text-align:center">
       l
     </td>
@@ -469,66 +505,32 @@ The following sections describe the valid symbols for Italian.
       006C
     </td>
     <td>
-      **l**ento, pa**l**ma
+      **&#46972;**&#47732;
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      L
+      r
     </td>
     <td style="text-align:center">
-      &#654;
-    </td>
-    <td style="text-align:center">
-      028E
+      0072
     </td>
     <td>
-      **gl**ielo, **gl**i
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      y
-    </td>
-    <td style="text-align:center">
-      j
-    </td>
-    <td style="text-align:center">
-      006A
-    </td>
-    <td>
-      **i**eri, raso**i**o
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      w
-    </td>
-    <td style="text-align:center">
-      w
-    </td>
-    <td style="text-align:center">
-      0077
-    </td>
-    <td>
-      n**u**ovo, q**u**ando
+      &#44256;**&#47532;**
     </td>
   </tr>
 </table>
 
-## Geminates
-{: #itGeminates}
+## Double Onset Consonants
+{: #koDoubleOnsetConsonants}
 
-<table style="width:90%">
-  <caption>Table 3. Geminates (Italian)</caption>
+<table style="width:70%">
+  <caption>Table 4. Double Onset Consonants (Korean)</caption>
   <tr>
-    <th style="width:20%; text-align:center; vertical-align:bottom">
-      SPR symbol
-    </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA symbol
     </th>
-    <th style="width:20%; text-align:center; vertical-align:bottom">
+    <th style="width:25%; text-align:center; vertical-align:bottom">
       IPA Unicode
     </th>
     <th style="text-align:left; vertical-align:bottom">
@@ -537,85 +539,71 @@ The following sections describe the valid symbols for Italian.
   </tr>
   <tr>
     <td style="text-align:center">
-      DD
+      bb
     </td>
     <td style="text-align:center">
-      d&#675;<br/><br/>
-      ddz
-    </td>
-    <td style="text-align:center">
-      0064+02A3<br/><br/>
-      0064+0064+007A
+      0062+0062
     </td>
     <td>
-      a**zz**urro, me**zz**o
+      **&#48848;**&#44984;&#44592;
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      JJ
+      dd
     </td>
     <td style="text-align:center">
-      dd&#658;<br/><br/>
-      d&#676;
-    </td>
-    <td style="text-align:center">
-      0064+0064+0292<br/><br/>
-      0064+02A4
+      0064+0064
     </td>
     <td>
-      Chio**gg**ia, ma**gg**io
+      **&#46392;**&#44592;
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      TT
+      &#680;&#680;
     </td>
     <td style="text-align:center">
-      tts<br/><br/>
-      t&#678;
-    </td>
-    <td style="text-align:center">
-      0074+0074+0073<br/><br/>
-      0074+02A6
+      02AB+02AB
     </td>
     <td>
-      ta**zz**a, chia**zz**a
+      **&#52040;**&#44984;&#48120;
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      CC
+      gg
     </td>
     <td style="text-align:center">
-      t&#679;<br/><br/>
-      tt&#643;
-    </td>
-    <td style="text-align:center">
-      0074+02A7<br/><br/>
-      0074+0074+0283
+      0067+0067
     </td>
     <td>
-      ghia**cc**io, fe**cc**ia
+      **&#44844;**&#47560;
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      ss
+    </td>
+    <td style="text-align:center">
+      0073+0073
+    </td>
+    <td>
+      **&#49912;**&#50880;
     </td>
   </tr>
 </table>
 
-## Allophones
-{: #itAllophones}
+## Coda Consonants
+{: #koCodaConsonants}
 
-If an allophone is not used in SPR, the {{site.data.keyword.texttospeechshort}} service automatically generates the appropriate variant for the given context.
-
-<table style="width:90%">
-  <caption>Table 4. Allophones (Italian)</caption>
+<table style="width:70%">
+  <caption>Table 5. Coda Consonants (Korean)</caption>
   <tr>
-    <th style="width:20%; text-align:center; vertical-align:bottom">
-      SPR symbol
-    </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA symbol
     </th>
-    <th style="width:20%; text-align:center; vertical-align:bottom">
+    <th style="width:25%; text-align:center; vertical-align:bottom">
       IPA Unicode
     </th>
     <th style="text-align:left; vertical-align:bottom">
@@ -624,35 +612,79 @@ If an allophone is not used in SPR, the {{site.data.keyword.texttospeechshort}} 
   </tr>
   <tr>
     <td style="text-align:center">
-      'ng' [<strong>1</strong>]
+      p
     </td>
     <td style="text-align:center">
-      &#331;g
-    </td>
-    <td style="text-align:center">
-      014B+0067<br/>
-      014B+0261
+      0070
     </td>
     <td>
-      a**ng**olo, lu**ng**o
+      **&#51665;**
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      'nk' [<strong>1</strong>]
+      t
     </td>
     <td style="text-align:center">
-      &#331;k
-    </td>
-    <td style="text-align:center">
-      014B+006B
+      0074
     </td>
     <td>
-      a**nc**ora, bia**nc**o
+      **&#48155;**&#52840;
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      k
+    </td>
+    <td style="text-align:center">
+      006B
+    </td>
+    <td>
+      **&#47785;**
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      m
+    </td>
+    <td style="text-align:center">
+      006D
+    </td>
+    <td>
+      **&#55192;**
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      n
+    </td>
+    <td style="text-align:center">
+      006E
+    </td>
+    <td>
+      **&#49552;**
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      &#331;
+    </td>
+    <td style="text-align:center">
+      014B
+    </td>
+    <td>
+      **&#51109;**&#44592;
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      l
+    </td>
+    <td style="text-align:center">
+      006C
+    </td>
+    <td>
+      **&#45216;**&#44060;
     </td>
   </tr>
 </table>
-
-**Note:**
-
-1.  The `ng` and `nk` allophones are supported in the IPA specification but cannot be used in SPR.

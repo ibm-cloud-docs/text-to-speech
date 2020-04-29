@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-04-23"
+lastupdated: "2020-04-29"
 
 subcollection: text-to-speech
 
@@ -59,7 +59,7 @@ The following sections describe the valid symbols for German.
       0069+02D0
     </td>
     <td>
-      l<u>ie</u>ben, T<u>i</u>tel, t<u>ie</u>f
+      l**ie**ben, T**i**tel, t**ie**f
     </td>
   </tr>
   <tr>
@@ -73,7 +73,7 @@ The following sections describe the valid symbols for German.
       026A
     </td>
     <td>
-      b<u>i</u>tte, T<u>i</u>sch, L<u>i</u>cht
+      b**i**tte, T**i**sch, L**i**cht
     </td>
   </tr>
   <tr>
@@ -89,7 +89,7 @@ The following sections describe the valid symbols for German.
       0065+02D0
     </td>
     <td>
-      g<u>e</u>ben, <u>Eh</u>re, S<u>ee</u>
+      g**e**ben, **Eh**re, S**ee**
     </td>
   </tr>
   <tr>
@@ -103,7 +103,7 @@ The following sections describe the valid symbols for German.
       025B
     </td>
     <td>
-      tr<u>e</u>ffen, G<u>e</u>ld, k<u>&auml;</u>mmen
+      tr**e**ffen, G**e**ld, k**&auml;**mmen
     </td>
   </tr>
   <tr>
@@ -117,7 +117,7 @@ The following sections describe the valid symbols for German.
       025B+02D0
     </td>
     <td>
-      K<u>&auml;</u>se, M<u>&auml;</u>dchen, w<u>&auml;</u>gen
+      K**&auml;**se, M**&auml;**dchen, w**&auml;**gen
     </td>
   </tr>
   <tr>
@@ -133,7 +133,7 @@ The following sections describe the valid symbols for German.
       0251
     </td>
     <td>
-      H<u>aa</u>r, h<u>a</u>ben, f<u>a</u>hren
+      H**aa**r, h**a**ben, f**a**hren
     </td>
   </tr>
   <tr>
@@ -147,7 +147,7 @@ The following sections describe the valid symbols for German.
       0061
     </td>
     <td>
-      l<u>a</u>ssen, m<u>a</u>tt, <u>A</u>pfel
+      l**a**ssen, m**a**tt, **A**pfel
     </td>
   </tr>
   <tr>
@@ -163,7 +163,7 @@ The following sections describe the valid symbols for German.
       0075+02D0
     </td>
     <td>
-      g<u>u</u>t, <u>Uh</u>r, <u>U</u>we
+      g**u**t, **Uh**r, **U**we
     </td>
   </tr>
   <tr>
@@ -177,7 +177,7 @@ The following sections describe the valid symbols for German.
       028A
     </td>
     <td>
-      H<u>u</u>nd, Fl<u>u</u>ss, M<u>u</u>tter
+      H**u**nd, Fl**u**ss, M**u**tter
     </td>
   </tr>
   <tr>
@@ -193,7 +193,7 @@ The following sections describe the valid symbols for German.
       006F+02D0
     </td>
     <td>
-      <u>O</u>ber, <u>oh</u>ne, B<u>oo</u>t
+      **O**ber, **oh**ne, B**oo**t
     </td>
   </tr>
   <tr>
@@ -207,7 +207,7 @@ The following sections describe the valid symbols for German.
       0254
     </td>
     <td>
-      K<u>o</u>pf, St<u>o</u>pp
+      K**o**pf, St**o**pp
     </td>
   </tr>
   <tr>
@@ -223,8 +223,8 @@ The following sections describe the valid symbols for German.
       0079+02D0
     </td>
     <td>
-      B<u>&uuml;</u>cher, f<u>&uuml;h</u>len, T<u>&uuml;</u>r,
-      k<u>&uuml;</u>hn
+      B**&uuml;**cher, f**&uuml;h**len, T**&uuml;**r,
+      k**&uuml;**hn
     </td>
   </tr>
   <tr>
@@ -238,7 +238,7 @@ The following sections describe the valid symbols for German.
       028F
     </td>
     <td>
-      f<u>&uuml;</u>nf, f<u>&uuml;</u>llen, K<u>&uuml;</u>nstler
+      f**&uuml;**nf, f**&uuml;**llen, K**&uuml;**nstler
     </td>
   </tr>
   <tr>
@@ -254,7 +254,7 @@ The following sections describe the valid symbols for German.
       00F8+02D0
     </td>
     <td>
-      L<u>&ouml;</u>we, h<u>&ouml;</u>ren, S<u>&ouml;h</u>ne
+      L**&ouml;**we, h**&ouml;**ren, S**&ouml;h**ne
     </td>
   </tr>
   <tr>
@@ -270,7 +270,7 @@ The following sections describe the valid symbols for German.
       0276
     </td>
     <td>
-      k<u>&ouml;</u>nnen, h<u>&ouml;</u>lzern, <u>&ouml;</u>stlich
+      k**&ouml;**nnen, h**&ouml;**lzern, **&ouml;**stlich
     </td>
   </tr>
 </table>
@@ -309,7 +309,7 @@ The following sections describe the valid symbols for German.
       0258
     </td>
     <td>
-      bitt<u>e</u>, Kam<u>e</u>ra, Bod<u>e</u>n
+      bitt**e**, Kam**e**ra, Bod**e**n
     </td>
   </tr>
 </table>
@@ -346,7 +346,7 @@ The following sections describe the valid symbols for German.
       0061+026A
     </td>
     <td>
-      h<u>ei</u>m, W<u>ai</u>se, M<u>ai</u>
+      h**ei**m, W**ai**se, M**ai**
     </td>
   </tr>
   <tr>
@@ -362,7 +362,7 @@ The following sections describe the valid symbols for German.
       0061+028A
     </td>
     <td>
-      H<u>au</u>s, M<u>au</u>l, Fr<u>au</u>
+      H**au**s, M**au**l, Fr**au**
     </td>
   </tr>
   <tr>
@@ -382,7 +382,7 @@ The following sections describe the valid symbols for German.
       0254+028F
     </td>
     <td>
-      h<u>eu</u>te, Geb<u>&auml;u</u>de, H<u>&auml;u</u>ser
+      h**eu**te, Geb**&auml;u**de, H**&auml;u**ser
     </td>
   </tr>
 </table>
@@ -421,7 +421,7 @@ Nasalized vowels in French occur mostly in foreign loan words.
       0250+0303
     </td>
     <td>
-      Ch<u>an</u>ce
+      Ch**an**ce
     </td>
   </tr>
   <tr>
@@ -437,7 +437,7 @@ Nasalized vowels in French occur mostly in foreign loan words.
       025B+0303
     </td>
     <td>
-      T<u>ein</u>t
+      T**ein**t
     </td>
   </tr>
   <tr>
@@ -453,7 +453,7 @@ Nasalized vowels in French occur mostly in foreign loan words.
       0254+0303
     </td>
     <td>
-      Pard<u>on</u>
+      Pard**on**
     </td>
   </tr>
   <tr>
@@ -469,7 +469,7 @@ Nasalized vowels in French occur mostly in foreign loan words.
       0153+0303
     </td>
     <td>
-      Parf<u>um</u>
+      Parf**um**
     </td>
   </tr>
 </table>
@@ -504,7 +504,7 @@ Nasalized vowels in French occur mostly in foreign loan words.
       0062
     </td>
     <td>
-      <u>B</u>oden, <u>B</u>ett, o<u>b</u>en
+      **B**oden, **B**ett, o**b**en
     </td>
   </tr>
   <tr>
@@ -518,7 +518,7 @@ Nasalized vowels in French occur mostly in foreign loan words.
       0070
     </td>
     <td>
-      <u>P</u>apier, Li<u>pp</u>e, Gra<u>b</u>
+      **P**apier, Li**pp**e, Gra**b**
     </td>
   </tr>
   <tr>
@@ -534,7 +534,7 @@ Nasalized vowels in French occur mostly in foreign loan words.
       00F0
     </td>
     <td>
-      <u>d</u>unkel, kin<u>d</u>isch, Hel<u>d</u>en
+      **d**unkel, kin**d**isch, Hel**d**en
     </td>
   </tr>
   <tr>
@@ -548,7 +548,7 @@ Nasalized vowels in French occur mostly in foreign loan words.
       0074
     </td>
     <td>
-      <u>T</u>ag, bi<u>tt</u>e, Ra<u>d</u>
+      **T**ag, bi**tt**e, Ra**d**
     </td>
   </tr>
   <tr>
@@ -566,7 +566,7 @@ Nasalized vowels in French occur mostly in foreign loan words.
       0263
     </td>
     <td>
-      <u>g</u>eben, <u>g</u>rau, Ta<u>g</u>e
+      **g**eben, **g**rau, Ta**g**e
     </td>
   </tr>
   <tr>
@@ -580,8 +580,8 @@ Nasalized vowels in French occur mostly in foreign loan words.
       006B
     </td>
     <td>
-      <u>K</u>atze, E<u>ck</u>e, S<u>k</u>ulptur, la<u>g</u>,
-      <u>q</u>uitt
+      **K**atze, E**ck**e, S**k**ulptur, la**g**,
+      **q**uitt
     </td>
   </tr>
   <tr>
@@ -595,7 +595,7 @@ Nasalized vowels in French occur mostly in foreign loan words.
       0076
     </td>
     <td>
-      <u>W</u>agen, <u>v</u>isk&ouml;s, <u>V</u>olum, o<u>v</u>al
+      **W**agen, **v**isk&ouml;s, **V**olum, o**v**al
     </td>
   </tr>
   <tr>
@@ -609,7 +609,7 @@ Nasalized vowels in French occur mostly in foreign loan words.
       0066
     </td>
     <td>
-      <u>f</u>ast, ho<u>ff</u>en, <u>V</u>ater
+      **f**ast, ho**ff**en, **V**ater
     </td>
   </tr>
   <tr>
@@ -623,7 +623,7 @@ Nasalized vowels in French occur mostly in foreign loan words.
       007A
     </td>
     <td>
-      <u>S</u>ee, <u>S</u>atz, le<u>s</u>en
+      **S**ee, **S**atz, le**s**en
     </td>
   </tr>
   <tr>
@@ -637,7 +637,7 @@ Nasalized vowels in French occur mostly in foreign loan words.
       0073
     </td>
     <td>
-      Ma<u>&szlig;</u>, la<u>ss</u>en, La<u>s</u>t, H<u>au</u>s
+      Ma**&szlig;**, la**ss**en, La**s**t, H**au**s
     </td>
   </tr>
   <tr>
@@ -651,7 +651,7 @@ Nasalized vowels in French occur mostly in foreign loan words.
       0292
     </td>
     <td>
-      Gara<u>g</u>e, <u>G</u>enie
+      Gara**g**e, **G**enie
     </td>
   </tr>
   <tr>
@@ -665,7 +665,7 @@ Nasalized vowels in French occur mostly in foreign loan words.
       0283
     </td>
     <td>
-      <u>sch</u>on, <u>s</u>pielen, <u>S</u>til, w&auml;<u>sch</u>t
+      **sch**on, **s**pielen, **S**til, w&auml;**sch**t
     </td>
   </tr>
   <tr>
@@ -679,7 +679,7 @@ Nasalized vowels in French occur mostly in foreign loan words.
       00E7
     </td>
     <td>
-      i<u>ch</u>, <u>Ch</u>emie, Kel<u>ch</u>, man<u>ch</u>er
+      i**ch**, **Ch**emie, Kel**ch**, man**ch**er
     </td>
   </tr>
   <tr>
@@ -695,7 +695,7 @@ Nasalized vowels in French occur mostly in foreign loan words.
       03C7
     </td>
     <td>
-      Bu<u>ch</u>, Ba<u>ch</u>, Wo<u>ch</u>en
+      Bu**ch**, Ba**ch**, Wo**ch**en
     </td>
   </tr>
   <tr>
@@ -709,7 +709,7 @@ Nasalized vowels in French occur mostly in foreign loan words.
       0070+0066
     </td>
     <td>
-      <u>Pf</u>lanze, Stum<u>pf</u>en
+      **Pf**lanze, Stum**pf**en
     </td>
   </tr>
   <tr>
@@ -729,7 +729,7 @@ Nasalized vowels in French occur mostly in foreign loan words.
       025D
     </td>
     <td>
-      Wied<u>er</u>, &uuml;b<u>er</u>
+      Wied**er**, &uuml;b**er**
     </td>
   </tr>
   <tr>
@@ -747,7 +747,7 @@ Nasalized vowels in French occur mostly in foreign loan words.
       03B8
     </td>
     <td>
-      <u>Z</u>auber, Poli<u>z</u>ei, Glan<u>z</u>
+      **Z**auber, Poli**z**ei, Glan**z**
     </td>
   </tr>
   <tr>
@@ -763,7 +763,7 @@ Nasalized vowels in French occur mostly in foreign loan words.
       02A4
     </td>
     <td>
-      <u>J</u>ob, <u>Dsch</u>ungel
+      **J**ob, **Dsch**ungel
     </td>
   </tr>
   <tr>
@@ -779,7 +779,7 @@ Nasalized vowels in French occur mostly in foreign loan words.
       02A7
     </td>
     <td>
-      deuts<u>ch</u>, <u>Ch</u>ile, <u>C</u>ello
+      deuts**ch**, **Ch**ile, **C**ello
     </td>
   </tr>
   <tr>
@@ -793,7 +793,7 @@ Nasalized vowels in French occur mostly in foreign loan words.
       006D
     </td>
     <td>
-      <u>M</u>ann, ko<u>mm</u>en, Ate<u>m</u>
+      **M**ann, ko**mm**en, Ate**m**
     </td>
   </tr>
   <tr>
@@ -807,7 +807,7 @@ Nasalized vowels in French occur mostly in foreign loan words.
       006E
     </td>
     <td>
-      <u>N</u>acht, k&ouml;<u>nn</u>en, Ki<u>n</u>d
+      **N**acht, k&ouml;**nn**en, Ki**n**d
     </td>
   </tr>
   <tr>
@@ -821,7 +821,7 @@ Nasalized vowels in French occur mostly in foreign loan words.
       014B
     </td>
     <td>
-      Fi<u>ng</u>er, l&auml;<u>ng</u>s, Anfa<u>ng</u>
+      Fi**ng**er, l&auml;**ng**s, Anfa**ng**
     </td>
   </tr>
   <tr>
@@ -835,7 +835,7 @@ Nasalized vowels in French occur mostly in foreign loan words.
       006C
     </td>
     <td>
-      <u>l</u>esen, fa<u>ll</u>en, Pu<u>l</u>t
+      **l**esen, fa**ll**en, Pu**l**t
     </td>
   </tr>
   <tr>
@@ -857,7 +857,7 @@ Nasalized vowels in French occur mostly in foreign loan words.
       027E
     </td>
     <td>
-      <u>R</u>ad, f&uuml;h<u>r</u>en
+      **R**ad, f&uuml;h**r**en
     </td>
   </tr>
   <tr>
@@ -873,7 +873,7 @@ Nasalized vowels in French occur mostly in foreign loan words.
       029D
     </td>
     <td>
-      <u>J</u>unge, <u>j</u>a, <u>J</u>ahr, Minister<u>i</u>um
+      **J**unge, **j**a, **J**ahr, Minister**i**um
     </td>
   </tr>
   <tr>
@@ -889,7 +889,7 @@ Nasalized vowels in French occur mostly in foreign loan words.
       028B
     </td>
     <td>
-      Ed<u>u</u>ard, akt<u>u</u>ell, Jan<u>u</u>ar
+      Ed**u**ard, akt**u**ell, Jan**u**ar
     </td>
   </tr>
   <tr>
@@ -905,7 +905,7 @@ Nasalized vowels in French occur mostly in foreign loan words.
       0266
     </td>
     <td>
-      <u>h</u>och, <u>H</u>and, A<u>h</u>orn
+      **h**och, **H**and, A**h**orn
     </td>
   </tr>
   <tr>
@@ -921,7 +921,7 @@ Nasalized vowels in French occur mostly in foreign loan words.
     <td>
       _er_obern (IPA <code>&#660;&#603;&#592;&#712;&#660;&#111;&#720;&#98;&#592;&#110;</code>)<br/>_erinnern (IPA <code>&#660;&#603;&#592;&#712;&#641;&#618;&#110;&#592;&#110;</code>)
 <!--
-      <u>e</u>r<u>o</u>bern (IPA &#660;&#603;&#592;&#712;&#660;&#111;&#720;&#98;&#592;&#110;)<br/><u>e</u>rinnern (IPA &#660;&#603;&#592;&#712;&#641;&#618;&#110;&#592;&#110;)
+      **e**r**o**bern (IPA &#660;&#603;&#592;&#712;&#660;&#111;&#720;&#98;&#592;&#110;)<br/>**e**rinnern (IPA &#660;&#603;&#592;&#712;&#641;&#618;&#110;&#592;&#110;)
 -->
     </td>
   </tr>
