@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-04-28"
+lastupdated: "2020-04-29"
 
 subcollection: text-to-speech
 
@@ -186,7 +186,7 @@ The following language-specific considerations apply to specifying syllable stre
 
 Table 2 shows the service's language support for SPR and IPA symbols. The table provides links to pages that document the supported SPR symbols, IPA symbols, and equivalent IPA Unicode values that can be used with all voices for each language. The pages provide examples of each symbol in words from the language. Because of dialectal differences, the examples might not always match your pronunciation.
 
-<table style="width:65%">
+<table style="width:80%">
   <caption>Table 2. Language support for phonetic symbols</caption>
   <tr>
     <th width="50" style="text-align:left">Language</th>
@@ -204,13 +204,23 @@ Table 2 shows the service's language support for SPR and IPA symbols. The table 
     <td style="text-align:center">Yes</th>
   </tr>
   <tr>
-    <td style="text-align:left">Chinese symbols</th>
+    <td style="text-align:left">Chinese (Mandarin) symbols</th>
     <td style="text-align:center">No</th>
     <td style="text-align:center">Yes</th>
   </tr>
   <tr>
     <td style="text-align:left">[Dutch symbols](/docs/text-to-speech?topic=text-to-speech-nlSymbols)</th>
     <td style="text-align:center">No</th>
+    <td style="text-align:center">Yes</th>
+  </tr>
+  <tr>
+    <td style="text-align:left">[English (United Kingdom) symbols](/docs/text-to-speech?topic=text-to-speech-gbSymbols)</th>
+    <td style="text-align:center">Yes</th>
+    <td style="text-align:center">Yes</th>
+  </tr>
+  <tr>
+    <td style="text-align:left">[English (United States) symbols](/docs/text-to-speech?topic=text-to-speech-usSymbols)</th>
+    <td style="text-align:center">Yes</th>
     <td style="text-align:center">Yes</th>
   </tr>
   <tr>
@@ -240,16 +250,6 @@ Table 2 shows the service's language support for SPR and IPA symbols. The table 
   </tr>
   <tr>
     <td style="text-align:left">[Spanish symbols](/docs/text-to-speech?topic=text-to-speech-esSymbols)</th>
-    <td style="text-align:center">Yes</th>
-    <td style="text-align:center">Yes</th>
-  </tr>
-  <tr>
-    <td style="text-align:left">[UK English symbols](/docs/text-to-speech?topic=text-to-speech-gbSymbols)</th>
-    <td style="text-align:center">Yes</th>
-    <td style="text-align:center">Yes</th>
-  </tr>
-  <tr>
-    <td style="text-align:left">[US English symbols](/docs/text-to-speech?topic=text-to-speech-usSymbols)</th>
     <td style="text-align:center">Yes</th>
     <td style="text-align:center">Yes</th>
   </tr>
