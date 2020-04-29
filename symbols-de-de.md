@@ -501,7 +501,7 @@ Nasalized vowels in French occur mostly in foreign loan words.
       b
     </td>
     <td style="text-align:center">
-        0062
+      0062
     </td>
     <td>
       <u>B</u>oden, <u>B</u>ett, o<u>b</u>en

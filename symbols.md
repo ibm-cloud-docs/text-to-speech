@@ -209,7 +209,7 @@ Table 2 shows the service's language support for SPR and IPA symbols. The table 
     <td style="text-align:center">Yes</th>
   </tr>
   <tr>
-    <td style="text-align:left">Dutch symbols</th>
+    <td style="text-align:left">[Dutch symbols](/docs/text-to-speech?topic=text-to-speech-nlSymbols)</th>
     <td style="text-align:center">No</th>
     <td style="text-align:center">Yes</th>
   </tr>
@@ -255,5 +255,5 @@ Table 2 shows the service's language support for SPR and IPA symbols. The table 
   </tr>
 </table>
 
-The IPA symbols for Arabic, Chinese, Dutch, and Korean will be documented soon.
+The IPA symbols for Arabic, Chinese, and Korean will be documented soon.
 {: note}

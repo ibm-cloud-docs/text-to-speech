@@ -46,6 +46,7 @@ Text to Speech
     Phonetic symbols
         symbols.md
         symbols-pt-br.md
+        symbols-nl-nl.md
         symbols-fr-fr.md
         symbols-de-de.md
         symbols-it-it.md
