@@ -47,13 +47,13 @@ Text to Speech
         symbols.md
         symbols-pt-br.md
         symbols-nl-nl.md
+        symbols-en-gb.md
+        symbols-en-us.md
         symbols-fr-fr.md
         symbols-de-de.md
         symbols-it-it.md
         symbols-ja-jp.md
         symbols-es-es.md
-        symbols-en-gb.md
-        symbols-en-us.md
 
     ha-dr.md
     /watson/watson-migrate
