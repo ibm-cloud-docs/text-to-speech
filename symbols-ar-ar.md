@@ -461,7 +461,7 @@ The following sections describe the valid symbols for Arabic. (Significant symbo
       026B
     </td>
     <td>
-      No example
+      &#1575;&#1604;&#1604;&#1607;
     </td>
   </tr>
   <tr>
