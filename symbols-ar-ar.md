@@ -22,16 +22,16 @@ subcollection: text-to-speech
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# Korean symbols
-{: #koSymbols}
+# Arabic symbols
+{: #arSymbols}
 
-The following sections describe the valid symbols for Korean.
+The following sections describe the valid symbols for Arabic. (Significant symbols in example Arabic words are not highlighted.)
 
-## Monophthongs
-{: #koMonophthongs}
+## Vowels
+{: #arVowels}
 
 <table style="width:70%">
-  <caption>Table 1. Monophthongs (Korean)</caption>
+  <caption>Table 1. Vowels (Arabic)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA symbol
@@ -51,18 +51,7 @@ The following sections describe the valid symbols for Korean.
       0061
     </td>
     <td>
-      **&#50500;**&#44592;
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      e
-    </td>
-    <td style="text-align:center">
-      0065
-    </td>
-    <td>
-      **&#50640;**&#45572;&#47532;
+      &#1590;&#1594;&#1591;
     </td>
   </tr>
   <tr>
@@ -73,18 +62,7 @@ The following sections describe the valid symbols for Korean.
       0069
     </td>
     <td>
-      **&#51060;**&#48156;
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      o
-    </td>
-    <td style="text-align:center">
-      006F
-    </td>
-    <td>
-      **&#50724;**&#47532;
+      &#1601;&#1591;&#1585;
     </td>
   </tr>
   <tr>
@@ -95,60 +73,38 @@ The following sections describe the valid symbols for Korean.
       0075
     </td>
     <td>
-      **&#50864;**&#49328;
+      &#1588;&#1603;&#1585;&#1575;
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      &#603;
+      o
     </td>
     <td style="text-align:center">
-      025B
+      006F
     </td>
     <td>
-      **&#50528;**&#44368;
+      &#1580;&#1608;&#1604;&#1601;
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      &#248;
+      e
     </td>
     <td style="text-align:center">
-      00F8
+      0065
     </td>
     <td>
-      **&#50808;**&#44397;
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      &#652;
-    </td>
-    <td style="text-align:center">
-      028C
-    </td>
-    <td>
-      **&#50612;**&#47672;&#45768;
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      &#623;
-    </td>
-    <td style="text-align:center">
-      026F
-    </td>
-    <td>
-      **&#46300;**&#46356;&#50612;
+      &#1576;&#1585;&#1604;&#1610;&#1606;
     </td>
   </tr>
 </table>
 
-## Diphthongs
-{: #koDiphthongs}
+## Long vowels
+{: #arLongVowels}
 
 <table style="width:70%">
-  <caption>Table 2. Diphthongs (Korean)</caption>
+  <caption>Table 2. Long vowels (Arabic)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA symbol
@@ -162,143 +118,44 @@ The following sections describe the valid symbols for Korean.
   </tr>
   <tr>
     <td style="text-align:center">
-      ja
+      a&#720;
     </td>
     <td style="text-align:center">
-      006A+0061
+      0061+02D0
     </td>
     <td>
-      **&#50556;**&#44396;
+      &#1605;&#1575;&#1604;
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      je
+      i&#720;
     </td>
     <td style="text-align:center">
-      006A+0065
+      0069+02D0
     </td>
     <td>
-      **&#50696;**&#49696;
+      &#1593;&#1610;&#1583;
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      jo
+      u&#720;
     </td>
     <td style="text-align:center">
-      006A+006F
+      0075+02D0
     </td>
     <td>
-      **&#50836;**&#47532;
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      ju
-    </td>
-    <td style="text-align:center">
-      006A+0075
-    </td>
-    <td>
-      **&#50976;**&#51088;
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      j&#603;
-    </td>
-    <td style="text-align:center">
-      006A+025B
-    </td>
-    <td>
-      **&#50584;**&#44592;
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      j&#652;
-    </td>
-    <td style="text-align:center">
-      006A+028C
-    </td>
-    <td>
-      **&#50668;**&#44592;
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      wa
-    </td>
-    <td style="text-align:center">
-      0077+0061
-    </td>
-    <td>
-      **&#50752;**&#50864;
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      we
-    </td>
-    <td style="text-align:center">
-      0077+0065
-    </td>
-    <td>
-      **&#50920;**&#46377;
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      wi
-    </td>
-    <td style="text-align:center">
-      0077+0069
-    </td>
-    <td>
-      **&#50948;**&#44592;
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      w&#603;
-    </td>
-    <td style="text-align:center">
-      0077+025B
-    </td>
-    <td>
-      **&#50780;**
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      w&#652;
-    </td>
-    <td style="text-align:center">
-      0077+028C
-    </td>
-    <td>
-      **&#50892;**&#45229;
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      &#623;i
-    </td>
-    <td style="text-align:center">
-      026F+0069
-    </td>
-    <td>
-      **&#51032;**&#49324;
+      &#1601;&#1608;&#1604;
     </td>
   </tr>
 </table>
 
-## Onset consonants
-{: #koOnsetConsonants}
+## Consonants
+{: #arConsonants}
 
 <table style="width:70%">
-  <caption>Table 3. Onset consonants (Korean)</caption>
+  <caption>Table 3. Consonants (Arabic)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA symbol
@@ -309,28 +166,6 @@ The following sections describe the valid symbols for Korean.
     <th style="text-align:left; vertical-align:bottom">
       Example words
     </th>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      P
-    </td>
-    <td style="text-align:center">
-      0070
-    </td>
-    <td>
-      **&#48148;**&#45796;
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      &#112;&#688;
-    </td>
-    <td style="text-align:center">
-      0070+02B0
-    </td>
-    <td>
-      **&#54252;**&#46020;
-    </td>
   </tr>
   <tr>
     <td style="text-align:center">
@@ -340,7 +175,7 @@ The following sections describe the valid symbols for Korean.
       0062
     </td>
     <td>
-      &#49884;**&#48708;**
+      &#1614;&#1614;&#1576;&#1575;&#1576;
     </td>
   </tr>
   <tr>
@@ -351,18 +186,18 @@ The following sections describe the valid symbols for Korean.
       0074
     </td>
     <td>
-      **&#45796;**&#51020;
+      &#1614;&#1614;&#1578;&#1587;&#1593;
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      &#116;&#688;
+      t&#740;
     </td>
     <td style="text-align:center">
-      0074+02B0
+      0074+02E4
     </td>
     <td>
-      **&#53664;**&#50836;&#51068;
+      &#1614;&#1614;&#1591;&#1575;&#1610;&#1620;&#1585;
     </td>
   </tr>
   <tr>
@@ -373,40 +208,40 @@ The following sections describe the valid symbols for Korean.
       0064
     </td>
     <td>
-      &#44592;**&#46020;**
+      &#1614;&#1614;&#1583;&#1575;&#1585;
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      &#680;
+      d&#740;
     </td>
     <td style="text-align:center">
-      02AB
+      0064+02E4
     </td>
     <td>
-      **&#51200;**&#50872;
+      &#1614;&#1614;&#1590;&#1594;&#1591;
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      &#680;&#688;
+      m
     </td>
     <td style="text-align:center">
-      02AB+02B0
+      006D
     </td>
     <td>
-      **&#52824;**&#44284;
+      &#1614;&#1614;&#1605;&#1575;
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      &#675;
+      n
     </td>
     <td style="text-align:center">
-      02A3
+      006E
     </td>
     <td>
-      &#44592;**&#51088;**
+      &#1614;&#1614;&#1606;&#1575;&#1585;
     </td>
   </tr>
   <tr>
@@ -417,29 +252,84 @@ The following sections describe the valid symbols for Korean.
       006B
     </td>
     <td>
-      **&#44396;**&#46160;
+      &#1614;&#1614;&#1603;&#1604;
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      &#107;&#688;
+      q
     </td>
     <td style="text-align:center">
-      006B+02B0
+      0071
     </td>
     <td>
-      **&#52852;**&#46300;
+      &#1614;&#1614;&#1602;&#1604;&#1576;
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      g
+      &#660;
     </td>
     <td style="text-align:center">
-      0067
+      0294
     </td>
     <td>
-      &#51648;**&#44396;**
+      &#1614;&#1614;&#1605;&#1575;&#1569;
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      &#658;
+    </td>
+    <td style="text-align:center">
+      0292
+    </td>
+    <td>
+      &#1614;&#1614;&#1580;&#1610;&#1583;
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      f
+    </td>
+    <td style="text-align:center">
+      0066
+    </td>
+    <td>
+      &#1614;&#1614;&#1601;&#1591;&#1585;
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      &#952;
+    </td>
+    <td style="text-align:center">
+      03B8
+    </td>
+    <td>
+      &#1614;&#1614;&#1579;&#1608;&#1576;
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      &#240;
+    </td>
+    <td style="text-align:center">
+      00F0
+    </td>
+    <td>
+      &#1614;&#1614;&#1584;&#1604;&#1603;
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      &#240;&#740;
+    </td>
+    <td style="text-align:center">
+      00F0+02E4
+    </td>
+    <td>
+      &#1614;&#1614;&#1606;&#1592;&#1585;
     </td>
   </tr>
   <tr>
@@ -450,18 +340,40 @@ The following sections describe the valid symbols for Korean.
       0073
     </td>
     <td>
-      **&#49324;**&#44284;
+      &#1614;&#1614;&#1587;&#1578;&#1577;
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      h
+      s&#740;
     </td>
     <td style="text-align:center">
-      0068
+      0073+02E4
     </td>
     <td>
-      **&#54952;**&#44284;
+      &#1614;&#1614;&#1589;&#1581;&#1577;
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      z
+    </td>
+    <td style="text-align:center">
+      007A
+    </td>
+    <td>
+      &#1614;&#1614;&#1586;&#1607;&#1585;&#1577;
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      &#643;
+    </td>
+    <td style="text-align:center">
+      0283
+    </td>
+    <td>
+      &#1614;&#1614;&#1588;&#1603;&#1585;&#1575;
     </td>
   </tr>
   <tr>
@@ -472,40 +384,51 @@ The following sections describe the valid symbols for Korean.
       0078
     </td>
     <td>
-      &#51060;**&#54644;**
+      &#1614;&#1614;&#1582;&#1575;&#1589;&#1577;
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      m
+      &#295;
     </td>
     <td style="text-align:center">
-      006D
+      0127
     </td>
     <td>
-      **&#47700;**&#44592;
+      &#1614;&#1614;&#1581;&#1610;&#1575;&#1577;
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      n
+      h
     </td>
     <td style="text-align:center">
-      006E
+      0068
     </td>
     <td>
-      **&#45208;**&#47924;
+      &#1607;&#1608;&#1575;&#1569;
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      l
+      &#611;
     </td>
     <td style="text-align:center">
-      006C
+      0263
     </td>
     <td>
-      **&#46972;**&#47732;
+      &#1614;&#1594;&#1584;&#1575;&#1569;
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      &#661;
+    </td>
+    <td style="text-align:center">
+      0295
+    </td>
+    <td>
+      &#1614;&#1593;&#1610;&#1606;
     </td>
   </tr>
   <tr>
@@ -516,164 +439,7 @@ The following sections describe the valid symbols for Korean.
       0072
     </td>
     <td>
-      &#44256;**&#47532;**
-    </td>
-  </tr>
-</table>
-
-## Double onset consonants
-{: #koDoubleOnsetConsonants}
-
-<table style="width:70%">
-  <caption>Table 4. Double onset consonants (Korean)</caption>
-  <tr>
-    <th style="width:20%; text-align:center; vertical-align:bottom">
-      IPA symbol
-    </th>
-    <th style="width:25%; text-align:center; vertical-align:bottom">
-      IPA Unicode
-    </th>
-    <th style="text-align:left; vertical-align:bottom">
-      Example words
-    </th>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      bb
-    </td>
-    <td style="text-align:center">
-      0062+0062
-    </td>
-    <td>
-      **&#48848;**&#44984;&#44592;
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      dd
-    </td>
-    <td style="text-align:center">
-      0064+0064
-    </td>
-    <td>
-      **&#46392;**&#44592;
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      &#680;&#680;
-    </td>
-    <td style="text-align:center">
-      02AB+02AB
-    </td>
-    <td>
-      **&#52040;**&#44984;&#48120;
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      gg
-    </td>
-    <td style="text-align:center">
-      0067+0067
-    </td>
-    <td>
-      **&#44844;**&#47560;
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      ss
-    </td>
-    <td style="text-align:center">
-      0073+0073
-    </td>
-    <td>
-      **&#49912;**&#50880;
-    </td>
-  </tr>
-</table>
-
-## Coda consonants
-{: #koCodaConsonants}
-
-<table style="width:70%">
-  <caption>Table 5. Coda consonants (Korean)</caption>
-  <tr>
-    <th style="width:20%; text-align:center; vertical-align:bottom">
-      IPA symbol
-    </th>
-    <th style="width:25%; text-align:center; vertical-align:bottom">
-      IPA Unicode
-    </th>
-    <th style="text-align:left; vertical-align:bottom">
-      Example words
-    </th>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      p
-    </td>
-    <td style="text-align:center">
-      0070
-    </td>
-    <td>
-      **&#51665;**
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      t
-    </td>
-    <td style="text-align:center">
-      0074
-    </td>
-    <td>
-      **&#48155;**&#52840;
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      k
-    </td>
-    <td style="text-align:center">
-      006B
-    </td>
-    <td>
-      **&#47785;**
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      m
-    </td>
-    <td style="text-align:center">
-      006D
-    </td>
-    <td>
-      **&#55192;**
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      n
-    </td>
-    <td style="text-align:center">
-      006E
-    </td>
-    <td>
-      **&#49552;**
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      &#331;
-    </td>
-    <td style="text-align:center">
-      014B
-    </td>
-    <td>
-      **&#51109;**&#44592;
+      &#1614;&#1585;&#1575;&#1620;&#1587;
     </td>
   </tr>
   <tr>
@@ -684,7 +450,84 @@ The following sections describe the valid symbols for Korean.
       006C
     </td>
     <td>
-      **&#45216;**&#44060;
+      &#1614;&#1604;&#1576;
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      &#619;
+    </td>
+    <td style="text-align:center">
+      026B
+    </td>
+    <td>
+      No example
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      j
+    </td>
+    <td style="text-align:center">
+      006A
+    </td>
+    <td>
+      &#1610;&#1608;&#1605;
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      w
+    </td>
+    <td style="text-align:center">
+      0077
+    </td>
+    <td>
+      &#1608;&#1575;&#1581;&#1583;
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      p
+    </td>
+    <td style="text-align:center">
+      0070
+    </td>
+    <td>
+      &#1576;&#1575;&#1585;&#1610;&#1587;
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      v
+    </td>
+    <td style="text-align:center">
+      0076
+    </td>
+    <td>
+      &#1601;&#1610;&#1583;&#1610;&#1608;
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      g
+    </td>
+    <td style="text-align:center">
+      0067
+    </td>
+    <td>
+      &#1580;&#1608;&#1604;&#1601;
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      &#679;
+    </td>
+    <td style="text-align:center">
+      02A7
+    </td>
+    <td>
+      &#1605;&#1575;&#1606;&#1588;&#1610;&#1587;&#1578;&#1585;
     </td>
   </tr>
 </table>
