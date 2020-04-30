@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-04-29"
+lastupdated: "2020-04-30"
 
 subcollection: text-to-speech
 
@@ -25,7 +25,7 @@ subcollection: text-to-speech
 # Japanese symbols
 {: #jaSymbols}
 
-The following sections describe the valid symbols for Japanese. (For better clarity, the significant symbols in example Japanese words are underlined rather than shown in bold.)
+The following sections describe the valid symbols for Japanese. (For better clarity, the significant symbols in example Japanese words are both <u>underlined</u> and shown in **bold**.)
 
 ## Vowels and marks
 {: #jaVowelsMarks}
@@ -61,7 +61,7 @@ The following sections describe the valid symbols for Japanese. (For better clar
       0251
     </td>
     <td>
-      &#30456;&#25163;(<u>&#12450;</u>&#12452;&#12486;)
+      &#30456;&#25163;(**<u>&#12450;</u>**&#12452;&#12486;)
     </td>
   </tr>
   <tr>
@@ -77,7 +77,7 @@ The following sections describe the valid symbols for Japanese. (For better clar
       026A
     </td>
     <td>
-      &#12356;&#12383;&#12378;&#12425;(<u>&#12452;</u>&#12479;&#12474;&#12521;)
+      &#12356;&#12383;&#12378;&#12425;(**<u>&#12452;</u>**&#12479;&#12474;&#12521;)
     </td>
   </tr>
   <tr>
@@ -93,7 +93,7 @@ The following sections describe the valid symbols for Japanese. (For better clar
       0075
     </td>
     <td>
-      &#23431;&#23449;(<u>&#12454;</u>&#12481;&#12517;&#12454;)
+      &#23431;&#23449;(**<u>&#12454;</u>**&#12481;&#12517;&#12454;)
     </td>
   </tr>
   <tr>
@@ -109,7 +109,7 @@ The following sections describe the valid symbols for Japanese. (For better clar
       025B
     </td>
     <td>
-      &#32117;&#26412;(<u>&#12456;</u>&#12507;&#12531;)
+      &#32117;&#26412;(**<u>&#12456;</u>**&#12507;&#12531;)
     </td>
   </tr>
   <tr>
@@ -127,7 +127,7 @@ The following sections describe the valid symbols for Japanese. (For better clar
       0254
     </td>
     <td>
-      &#12362;&#33747;&#23376;(<u>&#12458;</u>&#12459;&#12471;)
+      &#12362;&#33747;&#23376;(**<u>&#12458;</u>**&#12459;&#12471;)
     </td>
   </tr>
   <tr>
@@ -141,7 +141,7 @@ The following sections describe the valid symbols for Japanese. (For better clar
       02D0
     </td>
     <td>
-      &#12524;<u>&#12540;</u>&#12473;
+      &#12524;**<u>&#12540;</u>**&#12473;
     </td>
   </tr>
   <tr>
@@ -157,7 +157,7 @@ The following sections describe the valid symbols for Japanese. (For better clar
       005E
     </td>
     <td>
-      &#12467;&#12464;<u>&#42780;</u>&#12491;&#12486;&#12451;&#12502;
+      &#12467;&#12464;**<u>&#42780;</u>**&#12491;&#12486;&#12451;&#12502;
     </td>
   </tr>
   <tr>
@@ -173,7 +173,7 @@ The following sections describe the valid symbols for Japanese. (For better clar
       014B
     </td>
     <td>
-      &#28288;&#26376;(&#12510;<u>&#12531;</u>&#12466;&#12484;)
+      &#28288;&#26376;(&#12510;**<u>&#12531;</u>**&#12466;&#12484;)
     </td>
   </tr>
 </table>
@@ -212,7 +212,7 @@ The following sections describe the valid symbols for Japanese. (For better clar
       006B
     </td>
     <td>
-      &#20844;&#22290;(<u>&#12467;</u>&#12454;&#12456;&#12531;)
+      &#20844;&#22290;(**<u>&#12467;</u>**&#12454;&#12456;&#12531;)
     </td>
   </tr>
   <tr>
@@ -226,7 +226,7 @@ The following sections describe the valid symbols for Japanese. (For better clar
       0073
     </td>
     <td>
-      &#23551;&#21496;(<u>&#12473;</u>&#12471;)
+      &#23551;&#21496;(**<u>&#12473;</u>**&#12471;)
     </td>
   </tr>
   <tr>
@@ -242,7 +242,7 @@ The following sections describe the valid symbols for Japanese. (For better clar
       0283
     </td>
     <td>
-      &#22235;&#23395;(<u>&#12471;</u>&#12461;)
+      &#22235;&#23395;(**<u>&#12471;</u>**&#12461;)
     </td>
   </tr>
   <tr>
@@ -256,7 +256,7 @@ The following sections describe the valid symbols for Japanese. (For better clar
       0074
     </td>
     <td>
-      &#22823;&#27827;(<u>&#12479;</u>&#12452;&#12460;)
+      &#22823;&#27827;(**<u>&#12479;</u>**&#12452;&#12460;)
     </td>
   </tr>
   <tr>
@@ -272,7 +272,7 @@ The following sections describe the valid symbols for Japanese. (For better clar
       02A8
     </td>
     <td>
-      &#22320;&#22259;(<u>&#12481;</u>&#12474;)
+      &#22320;&#22259;(**<u>&#12481;</u>**&#12474;)
     </td>
   </tr>
   <tr>
@@ -286,7 +286,7 @@ The following sections describe the valid symbols for Japanese. (For better clar
       02A6
     </td>
     <td>
-      &#37347;&#12426;(<u>&#12484;</u>&#12522;)
+      &#37347;&#12426;(**<u>&#12484;</u>**&#12522;)
     </td>
   </tr>
   <tr>
@@ -300,7 +300,7 @@ The following sections describe the valid symbols for Japanese. (For better clar
       006E
     </td>
     <td>
-      &#20108;&#36650;&#36554;(<u>&#12491;</u>&#12522;&#12531;&#12471;&#12515;)
+      &#20108;&#36650;&#36554;(**<u>&#12491;</u>**&#12522;&#12531;&#12471;&#12515;)
     </td>
   </tr>
   <tr>
@@ -314,7 +314,7 @@ The following sections describe the valid symbols for Japanese. (For better clar
       0068
     </td>
     <td>
-      &#33457;&#26564;(<u>&#12495;</u>&#12490;&#12460;&#12521;)
+      &#33457;&#26564;(**<u>&#12495;</u>**&#12490;&#12460;&#12521;)
     </td>
   </tr>
   <tr>
@@ -330,7 +330,7 @@ The following sections describe the valid symbols for Japanese. (For better clar
       066
     </td>
     <td>
-      &#19981;&#22812;&#22478;(<u>&#12501;</u>&#12516;&#12472;&#12519;&#12454;)
+      &#19981;&#22812;&#22478;(**<u>&#12501;</u>**&#12516;&#12472;&#12519;&#12454;)
     </td>
   </tr>
   <tr>
@@ -344,7 +344,7 @@ The following sections describe the valid symbols for Japanese. (For better clar
       006D
     </td>
     <td>
-      &#39764;&#27861;(<u>&#12510;</u>&#12507;&#12454;)
+      &#39764;&#27861;(**<u>&#12510;</u>**&#12507;&#12454;)
     </td>
   </tr>
   <tr>
@@ -358,7 +358,7 @@ The following sections describe the valid symbols for Japanese. (For better clar
       006A
     </td>
     <td>
-      &#38525;&#27671;(<u>&#12520;</u>&#12454;&#12461;)
+      &#38525;&#27671;(**<u>&#12520;</u>**&#12454;&#12461;)
     </td>
   </tr>
   <tr>
@@ -380,7 +380,7 @@ The following sections describe the valid symbols for Japanese. (For better clar
       027D
     </td>
     <td>
-      &#12521;&#12452;&#40614;(<u>&#12521;</u>&#12452;&#12512;&#12462;)
+      &#12521;&#12452;&#40614;(**<u>&#12521;</u>**&#12452;&#12512;&#12462;)
     </td>
   </tr>
   <tr>
@@ -396,7 +396,7 @@ The following sections describe the valid symbols for Japanese. (For better clar
       0270
     </td>
     <td>
-      &#24746;&#12384;&#12367;&#12415;(<u>&#12527;</u>&#12523;&#12480;&#12463;&#12511;)
+      &#24746;&#12384;&#12367;&#12415;(**<u>&#12527;</u>**&#12523;&#12480;&#12463;&#12511;)
     </td>
   </tr>
   <tr>
@@ -412,7 +412,7 @@ The following sections describe the valid symbols for Japanese. (For better clar
       0263
     </td>
     <td>
-      &#32676;&#38738;(<u>&#12464;</u>&#12531;&#12472;&#12519;&#12454;)
+      &#32676;&#38738;(**<u>&#12464;</u>**&#12531;&#12472;&#12519;&#12454;)
     </td>
   </tr>
   <tr>
@@ -428,7 +428,7 @@ The following sections describe the valid symbols for Japanese. (For better clar
       007A
     </td>
     <td>
-      &#20840;&#37096;(<u>&#12476;</u>&#12531;&#12502;)
+      &#20840;&#37096;(**<u>&#12476;</u>**&#12531;&#12502;)
     </td>
   </tr>
   <tr>
@@ -444,7 +444,7 @@ The following sections describe the valid symbols for Japanese. (For better clar
       02A5
     </td>
     <td>
-      &#12472;&#12517;&#12468;&#12531;(<u>&#12472;&#12517;</u>&#12468;&#12531;)
+      &#12472;&#12517;&#12468;&#12531;(**<u>&#12472;&#12517;</u>**&#12468;&#12531;)
     </td>
   </tr>
   <tr>
@@ -458,7 +458,7 @@ The following sections describe the valid symbols for Japanese. (For better clar
       0064
     </td>
     <td>
-      &#22243;&#23376;(<u>&#12480;</u>&#12531;&#12468;)
+      &#22243;&#23376;(**<u>&#12480;</u>**&#12531;&#12468;)
     </td>
   </tr>
   <tr>
@@ -474,7 +474,7 @@ The following sections describe the valid symbols for Japanese. (For better clar
       0076
     </td>
     <td>
-      <u>&#12496;</u>&#12490;&#12490;
+      **<u>&#12496;</u>**&#12490;&#12490;
     </td>
   </tr>
   <tr>
@@ -488,7 +488,7 @@ The following sections describe the valid symbols for Japanese. (For better clar
       0070
     </td>
     <td>
-      <u>&#12497;</u>&#12531;&#12480;
+      **<u>&#12497;</u>**&#12531;&#12480;
     </td>
   </tr>
   <tr>
@@ -502,7 +502,7 @@ The following sections describe the valid symbols for Japanese. (For better clar
       02B7+006A
     </td>
     <td>
-      &#20241;&#26085;(<u>&#12461;&#12517;</u>&#12454;&#12472;&#12484;)
+      &#20241;&#26085;(**<u>&#12461;&#12517;</u>**&#12454;&#12472;&#12484;)
     </td>
   </tr>
   <tr>
@@ -516,7 +516,7 @@ The following sections describe the valid symbols for Japanese. (For better clar
       0064+006A
     </td>
     <td>
-      <u>&#12487;&#12517;</u>&#12456;&#12483;&#12488;
+      **<u>&#12487;&#12517;</u>**&#12456;&#12483;&#12488;
     </td>
   </tr>
   <tr>
@@ -530,7 +530,7 @@ The following sections describe the valid symbols for Japanese. (For better clar
       0272
     </td>
     <td>
-      &#29275;&#20083;(<u>&#12462;&#12517;</u>&#12454;&#12491;&#12517;&#12454;)
+      &#29275;&#20083;(**<u>&#12462;&#12517;</u>**&#12454;&#12491;&#12517;&#12454;)
     </td>
   </tr>
   <tr>
@@ -544,7 +544,7 @@ The following sections describe the valid symbols for Japanese. (For better clar
       00E7
     </td>
     <td>
-      &#30334;&#24180;(<u>&#12498;&#12515;</u>&#12463;&#12493;&#12531;)
+      &#30334;&#24180;(**<u>&#12498;&#12515;</u>**&#12463;&#12493;&#12531;)
     </td>
   </tr>
   <tr>
@@ -558,7 +558,7 @@ The following sections describe the valid symbols for Japanese. (For better clar
       006D+006A
     </td>
     <td>
-      &#38512;&#38525;&#24107;(&#12458;&#12531;<u>&#12511;&#12519;</u>&#12454;&#12472;)
+      &#38512;&#38525;&#24107;(&#12458;&#12531;**<u>&#12511;&#12519;</u>**&#12454;&#12472;)
     </td>
   </tr>
   <tr>
@@ -572,7 +572,7 @@ The following sections describe the valid symbols for Japanese. (For better clar
       027E+006A
     </td>
     <td>
-      &#27969;&#26143;&#32676;(<u>&#12522;&#12517;</u>&#12454;&#12475;&#12452;&#12464;&#12531;)
+      &#27969;&#26143;&#32676;(**<u>&#12522;&#12517;</u>**&#12454;&#12475;&#12452;&#12464;&#12531;)
     </td>
   </tr>
   <tr>
@@ -586,7 +586,7 @@ The following sections describe the valid symbols for Japanese. (For better clar
       0067+006A
     </td>
     <td>
-      &#29275;&#20028;(<u>&#12462;&#12517;</u>&#12454;&#12489;&#12531;)
+      &#29275;&#20028;(**<u>&#12462;&#12517;</u>**&#12454;&#12489;&#12531;)
     </td>
   </tr>
   <tr>
@@ -600,7 +600,7 @@ The following sections describe the valid symbols for Japanese. (For better clar
       0062+006A
     </td>
     <td>
-      &#30333;&#22812;(<u>&#12499;&#12515;</u>&#12463;&#12516;)
+      &#30333;&#22812;(**<u>&#12499;&#12515;</u>**&#12463;&#12516;)
     </td>
   </tr>
   <tr>
@@ -614,7 +614,7 @@ The following sections describe the valid symbols for Japanese. (For better clar
       0070+006A
     </td>
     <td>
-      &#12404;&#12423;&#12371;&#12435;(<u>&#12500;&#12519;</u>&#12467;&#12531;)
+      &#12404;&#12423;&#12371;&#12435;(**<u>&#12500;&#12519;</u>**&#12467;&#12531;)
     </td>
   </tr>
   <tr>
@@ -628,7 +628,7 @@ The following sections describe the valid symbols for Japanese. (For better clar
       02B7+02B7
     </td>
     <td>
-      &#26376;&#20809;(&#12466;<u>&#12483;&#12467;</u>&#12454;)
+      &#26376;&#20809;(&#12466;**<u>&#12483;&#12467;</u>**&#12454;)
     </td>
   </tr>
   <tr>
@@ -642,7 +642,7 @@ The following sections describe the valid symbols for Japanese. (For better clar
       0073+0073
     </td>
     <td>
-      &#30142;&#36208;(&#12471;<u>&#12483;&#12477;</u>&#12454;)
+      &#30142;&#36208;(&#12471;**<u>&#12483;&#12477;</u>**&#12454;)
     </td>
   </tr>
   <tr>
@@ -656,7 +656,7 @@ The following sections describe the valid symbols for Japanese. (For better clar
       0255+0255
     </td>
     <td>
-      &#20843;&#23610;(&#12495;<u>&#12483;&#12471;&#12515;</u>&#12463;)
+      &#20843;&#23610;(&#12495;**<u>&#12483;&#12471;&#12515;</u>**&#12463;)
     </td>
   </tr>
   <tr>
@@ -670,7 +670,7 @@ The following sections describe the valid symbols for Japanese. (For better clar
       0074+0074
     </td>
     <td>
-      &#38634;&#39364;(&#12475;<u>&#12483;&#12479;</u>)
+      &#38634;&#39364;(&#12475;**<u>&#12483;&#12479;</u>**)
     </td>
   </tr>
   <tr>
@@ -684,7 +684,7 @@ The following sections describe the valid symbols for Japanese. (For better clar
       02A7+02A7
     </td>
     <td>
-      &#12362;&#12387;&#12385;&#12419;&#12435;(&#12458;<u>&#12483;&#12481;&#12515;</u>&#12531;)
+      &#12362;&#12387;&#12385;&#12419;&#12435;(&#12458;**<u>&#12483;&#12481;&#12515;</u>**&#12531;)
     </td>
   </tr>
   <tr>
@@ -698,7 +698,7 @@ The following sections describe the valid symbols for Japanese. (For better clar
       02A6+02A6
     </td>
     <td>
-      &#37444;&#27084;(&#12486;<u>&#12483;&#12484;</u>&#12452;)
+      &#37444;&#27084;(&#12486;**<u>&#12483;&#12484;</u>**&#12452;)
     </td>
   </tr>
   <tr>
@@ -712,7 +712,7 @@ The following sections describe the valid symbols for Japanese. (For better clar
       0068+0068
     </td>
     <td>
-      &#12467;&#12483;&#12504;&#12523;(&#12467;<u>&#12483;&#12504;</u>&#12523;)
+      &#12467;&#12483;&#12504;&#12523;(&#12467;**<u>&#12483;&#12504;</u>**&#12523;)
     </td>
   </tr>
   <tr>
@@ -726,7 +726,7 @@ The following sections describe the valid symbols for Japanese. (For better clar
       0278+0278
     </td>
     <td>
-      &#12501;<u>&#12483;&#12501;</u>&#12540;&#12523;
+      &#12501;**<u>&#12483;&#12501;</u>**&#12540;&#12523;
     </td>
   </tr>
   <tr>
@@ -740,7 +740,7 @@ The following sections describe the valid symbols for Japanese. (For better clar
       0067+0067
     </td>
     <td>
-      &#12479;<u>&#12483;&#12464;</u>&#12510;&#12483;&#12481;
+      &#12479;**<u>&#12483;&#12464;</u>**&#12510;&#12483;&#12481;
     </td>
   </tr>
   <tr>
@@ -754,7 +754,7 @@ The following sections describe the valid symbols for Japanese. (For better clar
       02A3+02A3
     </td>
     <td>
-      &#12461;<u>&#12483;&#12474;</u>
+      &#12461;**<u>&#12483;&#12474;</u>**
     </td>
   </tr>
   <tr>
@@ -768,7 +768,7 @@ The following sections describe the valid symbols for Japanese. (For better clar
       02A4+02A4
     </td>
     <td>
-      &#12376;&#12419;&#12387;&#12376;&#12419;&#12417;(&#12472;&#12515;<u>&#12483;&#12472;&#12515;</u>&#12513;)
+      &#12376;&#12419;&#12387;&#12376;&#12419;&#12417;(&#12472;&#12515;**<u>&#12483;&#12472;&#12515;</u>**&#12513;)
     </td>
   </tr>
   <tr>
@@ -782,7 +782,7 @@ The following sections describe the valid symbols for Japanese. (For better clar
       0064+0064
     </td>
     <td>
-      &#12505;<u>&#12483;&#12489;</u>
+      &#12505;**<u>&#12483;&#12489;</u>**
     </td>
   </tr>
   <tr>
@@ -796,7 +796,7 @@ The following sections describe the valid symbols for Japanese. (For better clar
       0062+0062
     </td>
     <td>
-      &#12400;&#12387;&#12400;&#12540;&#12435;(&#12496;<u>&#12483;&#12496;</u>&#12540;&#12531;)
+      &#12400;&#12387;&#12400;&#12540;&#12435;(&#12496;**<u>&#12483;&#12496;</u>**&#12540;&#12531;)
     </td>
   </tr>
   <tr>
@@ -810,7 +810,7 @@ The following sections describe the valid symbols for Japanese. (For better clar
       0070+0070
     </td>
     <td>
-      &#12495;<u>&#12483;&#12500;</u>&#12540;
+      &#12495;**<u>&#12483;&#12500;</u>**&#12540;
     </td>
   </tr>
   <tr>
@@ -824,7 +824,7 @@ The following sections describe the valid symbols for Japanese. (For better clar
       02B7+02B7+006A
     </td>
     <td>
-      &#29305;&#35377;(&#12488;<u>&#12483;&#12461;&#12519;</u>)
+      &#29305;&#35377;(&#12488;**<u>&#12483;&#12461;&#12519;</u>**)
     </td>
   </tr>
   <tr>
@@ -838,7 +838,7 @@ The following sections describe the valid symbols for Japanese. (For better clar
       0070+0070+006A
     </td>
     <td>
-      &#31361;&#25293;&#23376;(&#12488;<u>&#12483;&#12500;&#12519;</u>&#12454;&#12471;)
+      &#31361;&#25293;&#23376;(&#12488;**<u>&#12483;&#12500;&#12519;</u>**&#12454;&#12471;)
     </td>
   </tr>
 </table>

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-04-29"
+lastupdated: "2020-04-30"
 
 subcollection: text-to-speech
 
@@ -101,7 +101,7 @@ You can use a `.` (period) to mark the beginning of each syllable. However, to p
 ### Syllable stress
 {: #syllables-stress}
 
-You can use the symbols in the following table to mark syllable stress for a pronunciation. {{site.data.keyword.IBM_notm}} recommends that you indicate primary stress for pronunciations in either SPR or IPA. However, indicating syllable stress is optional for both formats; the service determines where stress occurs if you do not indicate it.
+Table 1 identifies the symbols that you can use to indicate syllable stress for a pronunciation. {{site.data.keyword.IBM_notm}} recommends that you indicate primary stress for pronunciations in either SPR or IPA. However, indicating syllable stress is optional for both formats; the service determines where stress occurs if you do not indicate it.
 
 <table style="width:80%">
   <caption>Table 1. Syllable stress</caption>
@@ -169,34 +169,125 @@ You must place a syllable stress marker within a syllable boundary but always to
 ```
 {: codeblock}
 
-### Language-specific considerations
+### Language-specific rules for using syllable stress
 {: #syllables-languages}
 
-The following language-specific considerations apply to specifying syllable stress:
+Table 2 lists language-specific considerations that apply to specifying syllable stress. Unless the table qualifies the rules for a language, you can use the syllable stress symbols described in the previous section.
 
--   *In IPA for French,* syllable stress symbols are ignored.
--   *In SPR for French,* syllable stress symbols are honored. If specified, syllable stress must immediately precede the vowel of the syllable. In SPR, syllable stress for French is much stricter than for other languages; an error occurs if the stress symbol is in an invalid location.
--   *In SPR for Italian,* you can specify only `1` (primary stress). An error occurs if you specify secondary or no stress.
--   *In SPR for Japanese,* only `1` (primary stress) and `0` (no stress) are supported. An error occurs if you specify secondary stress.
--   *In IPA for Korean,* syllable stress symbols are ignored.
--   *In SPR for Spanish,* you can specify only `1` (primary stress). An error occurs if you specify secondary or no stress.
+<table style="width:90%">
+  <caption>Table 2. Language-specific rules for using syllable stress</caption>
+  <tr>
+    <th style="width:20%; text-align:center; vertical-align:bottom">
+      Language
+    </th>
+    <th style="width:20%; text-align:center; vertical-align:bottom">
+      Notation
+    </th>
+    <th style="text-align:left; vertical-align:bottom">
+      Language-specific rules
+    </th>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      Arabic
+    </td>
+    <td style="text-align:center">
+      IPA
+    </td>
+    <td>
+      The secondary stress symbol is ignored.
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      French
+    </td>
+    <td style="text-align:center">
+      SPR
+    </td>
+    <td>
+      All syllable stress symbols are honored. But syllable stress must
+      immediately precede the vowel of the syllable. Syllable stress for
+      French is much stricter than for other languages. An error occurs
+      if you place the stress symbol in an invalid location.
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      French
+    </td>
+    <td style="text-align:center">
+      IPA
+    </td>
+    <td>
+      All syllable stress symbols are ignored.
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      Italian
+    </td>
+    <td style="text-align:center">
+      SPR
+    </td>
+    <td>
+      You can specify only `1` (primary stress). An error occurs if you
+      specify secondary or no stress.
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      Japanese
+    </td>
+    <td style="text-align:center">
+      SPR
+    </td>
+    <td>
+      You can specify only `1` (primary stress) and `0` (no stress). An
+      error occurs if you specify secondary stress.
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      Korean
+    </td>
+    <td style="text-align:center">
+      IPA
+    </td>
+    <td>
+      All syllable stress symbols are ignored.
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      Spanish
+    </td>
+    <td style="text-align:center">
+      SPR
+    </td>
+    <td>
+      You can specify only `1` (primary stress). An error occurs if you
+      specify secondary or no stress.
+    </td>
+  </tr>
+</table>
 
 ## Language support for SPR and IPA
 {: #supportedLanguages}
 {: help}
 {: support}
 
-Table 2 shows the service's language support for SPR and IPA symbols. The table provides links to pages that document the supported SPR symbols, IPA symbols, and equivalent IPA Unicode values that can be used with all voices for each language. The pages provide examples of each symbol in words from the language. Because of dialectal differences, the examples might not always match your pronunciation.
+Table 3 shows the service's language support for SPR and IPA symbols. The table provides links to pages that document the supported SPR symbols, IPA symbols, and equivalent IPA Unicode values that can be used with all voices for each language. The pages provide examples of each symbol in words from the language. Because of dialectal differences, the examples might not always match your pronunciation.
 
 <table style="width:80%">
-  <caption>Table 2. Language support for phonetic symbols</caption>
+  <caption>Table 3. Language support for phonetic symbols</caption>
   <tr>
     <th width="50" style="text-align:left">Language</th>
     <th width="25%" style="text-align:center">Supports SPR</th>
     <th width="25%" style="text-align:center">Supports IPA</th>
   </tr>
   <tr>
-    <td style="text-align:left">Arabic symbols</th>
+    <td style="text-align:left">[Arabic symbols](/docs/text-to-speech?topic=text-to-speech-arSymbols)</th>
     <td style="text-align:center">No</th>
     <td style="text-align:center">Yes</th>
   </tr>
@@ -257,5 +348,5 @@ Table 2 shows the service's language support for SPR and IPA symbols. The table 
   </tr>
 </table>
 
-The IPA symbols for Arabic and Chinese will be documented soon.
+The IPA symbols for Chinese are not yet documented.
 {: note}

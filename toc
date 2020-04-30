@@ -45,6 +45,7 @@ Text to Speech
     {: topicgroup}
     Phonetic symbols
         symbols.md
+        symbols-ar-ar.md
         symbols-pt-br.md
         symbols-nl-nl.md
         symbols-en-gb.md
