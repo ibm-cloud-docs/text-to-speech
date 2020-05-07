@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-04-30"
+lastupdated: "2020-05-07"
 
 subcollection: text-to-speech
 
@@ -195,7 +195,8 @@ Table 2 lists language-specific considerations that apply to specifying syllable
       IPA
     </td>
     <td>
-      The secondary stress symbol is ignored.
+      The secondary stress symbol is ignored, but including the symbol
+      may produce undesired results.
     </td>
   </tr>
   <tr>
@@ -255,7 +256,8 @@ Table 2 lists language-specific considerations that apply to specifying syllable
       IPA
     </td>
     <td>
-      All syllable stress symbols are ignored.
+      All syllable stress symbols are ignored, but including the symbols
+      may produce undesired results.
     </td>
   </tr>
   <tr>
