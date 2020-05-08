@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-04-21"
+lastupdated: "2020-05-08"
 
 subcollection: text-to-speech
 
@@ -31,8 +31,11 @@ The following sections document the new features and changes that were included 
 ## Known limitations
 {: #limitations}
 
-The service has the following known limitation:
+The service has the following known limitations:
 
+-   Use of the Speech Synthesis Markup Language (SSML) `<phoneme>` element and International Phonetic Alphabet (IPA) symbols or Unicode values with the Arabic voice `ar-AR_OmarVoice` is not currently supported. You cannot use the IPA phonetic symbols or Unicode values documented at [Arabic symbols](/docs/text-to-speech?topic=text-to-speech-arSymbols).
+
+    You can use only sounds-like translations for Arabic word pronunciation. For more information, see [Sounds-like translation](/docs/text-to-speech?topic=text-to-speech-customIntro#soundsLike).
 -   When you specify the `audio/ogg;codecs=opus` audio format, you can optionally specify a sampling rate other than the default 48,000 Hz. However, while the service accepts `48000`, `24000`, `16000`, `12000`, or `8000` as a valid sampling rate, it currently disregards a specified value and always returns the audio with a sampling rate of 48 kHz.
 
 ## 1 April 2020
@@ -42,7 +45,7 @@ The service has the following known limitation:
     -   The voices are beta functionality. They might not be ready for production use and are subject to change. They are initial offerings that are expected to improve in quality with time and usage.
     -   The voices support voice model customization and the `/v1/pronunciation` method.
     -   The voices support the `<mark>` element and the `timings` parameter that are available with the WebSocket interface.
-    -   The voices support all SSML elements except for expressive SSML and voice transformation SSML.
+    -   The voices support all Speech Synthesis Markup Language (SSML) elements except for expressive SSML and voice transformation SSML.
     -   The voices support only the International Phonetic Alphabet (IPA), not {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR), with the `<phoneme>` element.
 -   The beta Arabic, Chinese, and Dutch voices now support the following features:
     -   Voice model customization and the `/v1/pronunciation` method.
@@ -65,7 +68,7 @@ The IPA symbols for the Arabic, Chinese, Dutch, and Korean languages are not yet
     -   *US English:* `en-US_EmilyV3Voice`, `en-US_HenryV3Voice`, `en-US_KevinV3Voice`, and `en-US_OliviaV3Voice`
     -   *German:* `de-DE_ErikaV3Voice`
 
-    The new voices do not support the following Speech Synthesis Markup Language (SSML) elements:
+    The new voices do not support the following SSML elements:
 
     -   Expressive SSML with the `<express-as>` element
     -   Voice Transformation with the `<voice-transformation>` element
@@ -394,7 +397,7 @@ The service moved from beta to general availability (GA) on July 1, 2015. The fo
 -   A new programming model supports direct interaction between a client and the service. By using this model, a client can obtain an authentication token for communicating directly with the service. By using the token, the client can bypass the need for a server-side proxy application in {{site.data.keyword.cloud_notm}} to call the service on its behalf. Tokens are the preferred means for clients to interact with the service.
 
     The service continues to support the old programming model that relied on a server-side proxy to relay communications and data between the client and the service. But the new model is more efficient and provides higher throughput.
--   You can now pass Speech Synthesis Markup Language (SSML) to the HTTP `GET` and `POST` versions of the `/v1/synthesize` method. SSML is an XML-based markup language that is designed to provide annotations of text for speech synthesis applications such as the {{site.data.keyword.texttospeechshort}} service. For more information about passing SSML input to the service, see [Specifying input text](/docs/text-to-speech?topic=text-to-speech-usingHTTP#input).
+-   You can now pass SSML to the HTTP `GET` and `POST` versions of the `/v1/synthesize` method. SSML is an XML-based markup language that is designed to provide annotations of text for speech synthesis applications such as the {{site.data.keyword.texttospeechshort}} service. For more information about passing SSML input to the service, see [Specifying input text](/docs/text-to-speech?topic=text-to-speech-usingHTTP#input).
 
     The service initially supports the use of SSML only for the UK and US English, French, and German languages. The service does not support SSML for use with Italian and Spanish. When you use SSML, make sure that you do not select a voice for the audio in one of the unsupported languages. Results in this case are not meaningful.
 -   The voices that are supported for synthesized speech changed and expanded. The service now supports a number of additional voices, languages, and dialects with the `/v1/synthesize` methods. For more information about supported voices, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
