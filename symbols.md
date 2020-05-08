@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-05-07"
+lastupdated: "2020-05-08"
 
 subcollection: text-to-speech
 
@@ -279,7 +279,7 @@ Table 2 lists language-specific considerations that apply to specifying syllable
 {: help}
 {: support}
 
-Table 3 shows the service's language support for SPR and IPA symbols. The table provides links to pages that document the supported SPR symbols, IPA symbols, and equivalent IPA Unicode values that can be used with all voices for each language. The pages provide examples of each symbol in words from the language. Because of dialectal differences, the examples might not always match your pronunciation.
+Table 3 shows the service's language support for SPR and IPA symbols. The table provides links to pages that document the supported SPR symbols, IPA symbols, and equivalent IPA Unicode values that can be used with all voices for each language. The pages provide examples of each symbol in words from the language. Because of dialectal differences, the examples might not always match your pronunciation. (The IPA symbols for Chinese are not yet documented.)
 
 <table style="width:80%">
   <caption>Table 3. Language support for phonetic symbols</caption>
@@ -350,5 +350,5 @@ Table 3 shows the service's language support for SPR and IPA symbols. The table 
   </tr>
 </table>
 
-The IPA symbols for Chinese are not yet documented.
-{: note}
+Use of the Speech Synthesis Markup Language (SSML) `<phoneme>` element and International Phonetic Alphabet (IPA) symbols or Unicode values with the Arabic voice `ar-AR_OmarVoice` is not currently supported. For more information, see [Known limitations](/docs/text-to-speech?topic=text-to-speech-release-notes#limitations).
+{: important}

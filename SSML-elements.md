@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-04-22"
+lastupdated: "2020-05-08"
 
 subcollection: text-to-speech
 
@@ -257,8 +257,8 @@ The `<phoneme>` element provides a phonetic pronunciation for the enclosed text.
 
     If no alphabet is specified, the service uses {{site.data.keyword.IBM_notm}} SPR by default.
 
-    The Arabic, Chinese, Dutch, and Korean voices support only IPA, not SPR.
-    {: note}
+    The Chinese, Dutch, and Korean voices support only IPA, not SPR. Use of the `<phoneme>` element and IPA with the Arabic voice `ar-AR_OmarVoice` is not currently supported. For more information, see [Known limitations](/docs/text-to-speech?topic=text-to-speech-release-notes#limitations).
+    {: important}
 -   `ph` is a required attribute that provides the pronunciation in the indicated alphabet. The following examples show the pronunciation for the word *tomato* in both formats:
 
     -   IPA format:
