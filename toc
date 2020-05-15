@@ -47,6 +47,7 @@ Text to Speech
         symbols.md
         symbols-ar-ar.md
         symbols-pt-br.md
+        symbols-zh-cn.md
         symbols-nl-nl.md
         symbols-en-gb.md
         symbols-en-us.md
