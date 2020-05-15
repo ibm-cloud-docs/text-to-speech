@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-05-08"
+lastupdated: "2020-05-14"
 
 subcollection: text-to-speech
 
@@ -279,7 +279,7 @@ Table 2 lists language-specific considerations that apply to specifying syllable
 {: help}
 {: support}
 
-Table 3 shows the service's language support for SPR and IPA symbols. The table provides links to pages that document the supported SPR symbols, IPA symbols, and equivalent IPA Unicode values that can be used with all voices for each language. The pages provide examples of each symbol in words from the language. Because of dialectal differences, the examples might not always match your pronunciation. (The IPA symbols for Chinese are not yet documented.)
+Table 3 shows the service's language support for SPR and IPA symbols. The table provides links to pages that document the supported SPR symbols, IPA symbols, and equivalent IPA Unicode values that can be used with all voices for each language. The pages provide examples of each symbol in words from the language. Because of dialectal differences, the examples might not always match your pronunciation.
 
 <table style="width:80%">
   <caption>Table 3. Language support for phonetic symbols</caption>
@@ -299,7 +299,7 @@ Table 3 shows the service's language support for SPR and IPA symbols. The table 
     <td style="text-align:center">Yes</th>
   </tr>
   <tr>
-    <td style="text-align:left">Chinese (Mandarin) symbols</th>
+    <td style="text-align:left">[Chinese (Mandarin) symbols](/docs/text-to-speech?topic=text-to-speech-zhSymbols)</th>
     <td style="text-align:center">No</th>
     <td style="text-align:center">Yes</th>
   </tr>
