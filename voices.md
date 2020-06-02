@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-04-13"
+lastupdated: "2020-06-02"
 
 subcollection: text-to-speech
 
@@ -13,6 +13,7 @@ subcollection: text-to-speech
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
+{:beta: .beta}
 {:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
@@ -37,462 +38,421 @@ The `V2` voices that were previously available with the service have been discon
 Table 1 lists and provides audio samples for the voices that are available for each language and dialect. Voices are available as [Standard voices](#standardVoices), [Neural voices](#neuralVoices), or both. If you omit the optional `voice` parameter from a synthesis request, the service uses the standard `en-US_MichaelVoice` by default.
 
 Voices labeled *Beta* are currently beta functionality. Beta voices might not be ready for production use and are subject to change. They are initial offerings that are expected to improve in quality with time and usage. All other voices are generally available (GA) for production use.
+{: beta}
 
-<table style="border-spacing:0px;border-collapse:separate">
+<table>
   <caption>Table 1. Supported languages and voices</caption>
   <tr>
-    <th width="12%" style="text-align:left; padding:2px">Language</th>
-    <th width="10%" style="text-align:center; padding:2px">Gender</th>
-    <th width="28%" style="text-align:center; padding:2px">Voice</th>
-    <th width="10%" style="text-align:center; padding:2px">Type</th>
-    <th style="text-align:center; padding:2px">Sample</th>
+    <th style="text-align:left;vertical-align:bottom;padding-left:3px;padding-right:3px">Language</th>
+    <th style="text-align:center;vertical-align:bottom;padding-left:3px;padding-right:3px">Gender / Type</th>
+    <th style="text-align:center;vertical-align:bottom;padding-left:3px;padding-right:3px">Voice</th>
+    <th style="text-align:center;vertical-align:bottom;padding-left:3px;padding-right:3px">Sample</th>
   </tr>
   <tr>
-    <td style="text-align:left;vertical-align:middle;padding:2px">Arabic<br/>(Beta)</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Male</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"><code>ar-AR_OmarVoice</code></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Standard</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">
+    <td style="text-align:left;vertical-align:middle;padding:3px">Arabic<br/>(Beta)</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">Male<br/>Standard</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px"><code>ar-AR_OmarVoice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">
       <audio controls style="width:250px;height:30px">
         <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Omar.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
   <tr>
-    <td style="text-align:left;vertical-align:middle;padding:2px">Brazilian Portuguese</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Female</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"><code>pt-BR_IsabelaVoice</code></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Standard</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">
+    <td style="text-align:left;vertical-align:middle;padding:3px">Brazilian<br/>Portuguese</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">Female<br/>Standard</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px"><code>pt-BR_IsabelaVoice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">
       <audio controls style="width:250px;height:30px">
         <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Isabela.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
   <tr>
-    <td style="text-align:left;vertical-align:middle;padding:2px"></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"><code>pt-BR_IsabelaV3Voice</code></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Neural</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">
+    <td style="text-align:left;vertical-align:middle;padding:3px"></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">Female<br/>Neural</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px"><code>pt-BR_IsabelaV3Voice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">
       <audio controls style="width:250px;height:30px">
         <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/IsabelaV3.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
   <tr>
-    <td style="text-align:left;vertical-align:middle;padding:2px">Chinese<br/>(Mandarin, Beta)</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Female</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"><code>zh-CN_LiNaVoice</code></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Standard</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">
+    <td style="text-align:left;vertical-align:middle;padding:3px">Chinese<br/>(Mandarin, Beta)</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">Female<br/>Standard</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px"><code>zh-CN_LiNaVoice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">
       <audio controls style="width:250px;height:30px">
         <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/LiNa.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
   <tr>
-    <td style="text-align:left;vertical-align:middle;padding:2px"></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Male</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"><code>zh-CN_WangWeiVoice</code></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Standard</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">
+    <td style="text-align:left;vertical-align:middle;padding:3px"></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">Male<br/>Standard</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px"><code>zh-CN_WangWeiVoice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">
       <audio controls style="width:250px;height:30px">
         <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/WangWei.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
   <tr>
-    <td style="text-align:left;vertical-align:middle;padding:2px"></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Female</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"><code>zh-CN_ZhangJingVoice</code></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Standard</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">
+    <td style="text-align:left;vertical-align:middle;padding:3px"></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">Female<br/>Standard</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px"><code>zh-CN_ZhangJingVoice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">
       <audio controls style="width:250px;height:30px">
         <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/ZhangJing.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
   <tr>
-    <td style="text-align:left;vertical-align:middle;padding:2px">Dutch<br/>(Beta)</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Female</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"><code>nl-NL_EmmaVoice</code></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Standard</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">
+    <td style="text-align:left;vertical-align:middle;padding:3px">Dutch<br/>(Beta)</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">Female<br/>Standard</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px"><code>nl-NL_EmmaVoice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">
       <audio controls style="width:250px;height:30px">
         <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Emma.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
   <tr>
-    <td style="text-align:left;vertical-align:middle;padding:2px"></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Male</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"><code>nl-NL_LiamVoice</code></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Standard</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">
+    <td style="text-align:left;vertical-align:middle;padding:3px"></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">Male<br/>Standard</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px"><code>nl-NL_LiamVoice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">
       <audio controls style="width:250px;height:30px">
         <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Liam.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
   <tr>
-    <td style="text-align:left;vertical-align:middle;padding:2px">English<br/>(United Kingdom)</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Female</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"><code>en-GB_KateVoice</code></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Standard</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">
+    <td style="text-align:left;vertical-align:middle;padding:3px">English<br/>(United Kingdom)</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">Female<br/>Standard</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px"><code>en-GB_KateVoice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">
       <audio controls style="width:250px;height:30px">
         <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Kate.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
   <tr>
-    <td style="text-align:left;vertical-align:middle;padding:2px"></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"><code>en-GB_KateV3Voice</code></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Neural</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">
+    <td style="text-align:left;vertical-align:middle;padding:3px"></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">Female<br/>Neural</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px"><code>en-GB_KateV3Voice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">
       <audio controls style="width:250px;height:30px">
         <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/KateV3.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
   <tr>
-    <td style="text-align:left;vertical-align:middle;padding:2px">English<br/>(United States)</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Female</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"><code>en-US_AllisonVoice</code></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Standard</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">
+    <td style="text-align:left;vertical-align:middle;padding:3px">English<br/>(United States)</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">Female<br/>Standard</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px"><code>en-US_AllisonVoice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">
       <audio controls style="width:250px;height:30px">
         <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Allison.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
   <tr>
-    <td style="text-align:left;vertical-align:middle;padding:2px"></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"><code>en-US_AllisonV3Voice</code></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Neural</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">
+    <td style="text-align:left;vertical-align:middle;padding:3px"></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">Female<br/>Neural</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px"><code>en-US_AllisonV3Voice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">
       <audio controls style="width:250px;height:30px">
         <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/AllisonV3.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
   <tr>
-    <td style="text-align:left;vertical-align:middle;padding:2px"></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Female</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"><code>en-US_EmilyV3Voice</code></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Neural</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">
+    <td style="text-align:left;vertical-align:middle;padding:3px"></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">Female<br/>Neural</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px"><code>en-US_EmilyV3Voice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">
       <audio controls style="width:250px;height:30px">
         <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/EmilyV3.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
   <tr>
-    <td style="text-align:left;vertical-align:middle;padding:2px"></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Male</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"><code>en-US_HenryV3Voice</code></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Neural</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">
+    <td style="text-align:left;vertical-align:middle;padding:3px"></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">Male<br/>Neural</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px"><code>en-US_HenryV3Voice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">
       <audio controls style="width:250px;height:30px">
         <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/HenryV3.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
   <tr>
-    <td style="text-align:left;vertical-align:middle;padding:2px"></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Male</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"><code>en-US_KevinV3Voice</code></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Neural</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">
+    <td style="text-align:left;vertical-align:middle;padding:3px"></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">Male<br/>Neural</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px"><code>en-US_KevinV3Voice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">
       <audio controls style="width:250px;height:30px">
         <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/KevinV3.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
   <tr>
-    <td style="text-align:left;vertical-align:middle;padding:2px"></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Female</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"><code>en-US_LisaVoice</code></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Standard</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">
+    <td style="text-align:left;vertical-align:middle;padding:3px"></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">Female<br/>Standard</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px"><code>en-US_LisaVoice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">
       <audio controls style="width:250px;height:30px">
         <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Lisa.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
   <tr>
-    <td style="text-align:left;vertical-align:middle;padding:2px"></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"><code>en-US_LisaV3Voice</code></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Neural</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">
+    <td style="text-align:left;vertical-align:middle;padding:3px"></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">Female<br/>Neural</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px"><code>en-US_LisaV3Voice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">
       <audio controls style="width:250px;height:30px">
         <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/LisaV3.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
   <tr>
-    <td style="text-align:left;vertical-align:middle;padding:2px"></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Male</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"><code>en-US_MichaelVoice</code></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Standard</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">
+    <td style="text-align:left;vertical-align:middle;padding:3px"></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">Male<br/>Standard</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px"><code>en-US_MichaelVoice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">
       <audio controls style="width:250px;height:30px">
         <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Michael.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
   <tr>
-    <td style="text-align:left;vertical-align:middle;padding:2px"></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"><code>en-US_MichaelV3Voice</code></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Neural</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">
+    <td style="text-align:left;vertical-align:middle;padding:3px"></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">Male<br/>Neural</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px"><code>en-US_MichaelV3Voice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">
       <audio controls style="width:250px;height:30px">
         <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/MichaelV3.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
   <tr>
-    <td style="text-align:left;vertical-align:middle;padding:2px"></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Female</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"><code>en-US_OliviaV3Voice</code></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Neural</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">
+    <td style="text-align:left;vertical-align:middle;padding:3px"></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">Female<br/>Neural</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px"><code>en-US_OliviaV3Voice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">
       <audio controls style="width:250px;height:30px">
         <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/OliviaV3.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
   <tr>
-    <td style="text-align:left;vertical-align:middle;padding:2px">French</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Female</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"><code>fr-FR_ReneeVoice</code></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Standard</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">
+    <td style="text-align:left;vertical-align:middle;padding:3px">French</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">Female<br/>Standard</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px"><code>fr-FR_ReneeVoice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">
       <audio controls style="width:250px;height:30px">
         <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Renee.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
   <tr>
-    <td style="text-align:left;vertical-align:middle;padding:2px"></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"><code>fr-FR_ReneeV3Voice</code></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Neural</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">
+    <td style="text-align:left;vertical-align:middle;padding:3px"></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">Female<br/>Neural</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px"><code>fr-FR_ReneeV3Voice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">
       <audio controls style="width:250px;height:30px">
         <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/ReneeV3.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
   <tr>
-    <td style="text-align:left;vertical-align:middle;padding:2px">German</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Female</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"><code>de-DE_BirgitVoice</code></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Standard</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">
+    <td style="text-align:left;vertical-align:middle;padding:3px">German</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">Female<br/>Standard</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px"><code>de-DE_BirgitVoice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">
       <audio controls style="width:250px;height:30px">
         <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Birgit.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
   <tr>
-    <td style="text-align:left;vertical-align:middle;padding:2px"></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"><code>de-DE_BirgitV3Voice</code></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Neural</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">
+    <td style="text-align:left;vertical-align:middle;padding:3px"></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">Female<br/>Neural</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px"><code>de-DE_BirgitV3Voice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">
       <audio controls style="width:250px;height:30px">
         <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/BirgitV3.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
   <tr>
-    <td style="text-align:left;vertical-align:middle;padding:2px"></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Male</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"><code>de-DE_DieterVoice</code></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Standard</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">
+    <td style="text-align:left;vertical-align:middle;padding:3px"></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">Male<br/>Standard</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px"><code>de-DE_DieterVoice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">
       <audio controls style="width:250px;height:30px">
         <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Dieter.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
   <tr>
-    <td style="text-align:left;vertical-align:middle;padding:2px"></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"><code>de-DE_DieterV3Voice</code></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Neural</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">
+    <td style="text-align:left;vertical-align:middle;padding:3px"></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">Male<br/>Neural</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px"><code>de-DE_DieterV3Voice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">
       <audio controls style="width:250px;height:30px">
         <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/DieterV3.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
   <tr>
-    <td style="text-align:left;vertical-align:middle;padding:2px"></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Female</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"><code>de-DE_ErikaV3Voice</code></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Neural</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">
+    <td style="text-align:left;vertical-align:middle;padding:3px"></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">Female<br/>Neural</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px"><code>de-DE_ErikaV3Voice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">
       <audio controls style="width:250px;height:30px">
         <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/ErikaV3.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
   <tr>
-    <td style="text-align:left;vertical-align:middle;padding:2px">Italian</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Female</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"><code>it-IT_FrancescaVoice</code></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Standard</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">
+    <td style="text-align:left;vertical-align:middle;padding:3px">Italian</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">Female<br/>Standard</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px"><code>it-IT_FrancescaVoice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">
       <audio controls style="width:250px;height:30px">
         <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Francesca.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
   <tr>
-    <td style="text-align:left;vertical-align:middle;padding:2px"></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"><code>it-IT_FrancescaV3Voice</code></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Neural</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">
+    <td style="text-align:left;vertical-align:middle;padding:3px"></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">Female<br/>Neural</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px"><code>it-IT_FrancescaV3Voice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">
       <audio controls style="width:250px;height:30px">
         <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/FrancescaV3.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
   <tr>
-    <td style="text-align:left;vertical-align:middle;padding:2px">Japanese</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Female</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"><code>ja-JP_EmiVoice</code></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Standard</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">
+    <td style="text-align:left;vertical-align:middle;padding:3px">Japanese</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">Female<br/>Standard</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px"><code>ja-JP_EmiVoice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">
       <audio controls style="width:250px;height:30px">
         <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Emi.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
   <tr>
-    <td style="text-align:left;vertical-align:middle;padding:2px"></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"><code>ja-JP_EmiV3Voice</code></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Neural</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">
+    <td style="text-align:left;vertical-align:middle;padding:3px"></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">Female<br/>Neural</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px"><code>ja-JP_EmiV3Voice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">
       <audio controls style="width:250px;height:30px">
         <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/EmiV3.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
   <tr>
-    <td style="text-align:left;vertical-align:middle;padding:2px">Korean<br/>(Beta)</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Female</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"><code>ko-KR_YoungmiVoice</code></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Standard</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">
+    <td style="text-align:left;vertical-align:middle;padding:3px">Korean<br/>(Beta)</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">Female<br/>Standard</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px"><code>ko-KR_YoungmiVoice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">
       <audio controls style="width:250px;height:30px">
         <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Youngmi.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
   <tr>
-    <td style="text-align:left;vertical-align:middle;padding:2px"></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Female</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"><code>ko-KR_YunaVoice</code></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Standard</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">
+    <td style="text-align:left;vertical-align:middle;padding:3px"></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">Female<br/>Standard</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px"><code>ko-KR_YunaVoice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">
       <audio controls style="width:250px;height:30px">
         <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Yuna.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
   <tr>
-    <td style="text-align:left;vertical-align:middle;padding:2px">Spanish<br/>(Castilian)</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Male</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"><code>es-ES_EnriqueVoice</code></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Standard</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">
+    <td style="text-align:left;vertical-align:middle;padding:3px">Spanish<br/>(Castilian)</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">Male<br/>Standard</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px"><code>es-ES_EnriqueVoice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">
       <audio controls style="width:250px;height:30px">
         <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Enrique.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
   <tr>
-    <td style="text-align:left;vertical-align:middle;padding:2px"></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"><code>es-ES_EnriqueV3Voice</code></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Neural</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">
+    <td style="text-align:left;vertical-align:middle;padding:3px"></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">Male<br/>Neural</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px"><code>es-ES_EnriqueV3Voice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">
       <audio controls style="width:250px;height:30px">
         <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/EnriqueV3.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
   <tr>
-    <td style="text-align:left;vertical-align:middle;padding:2px"></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Female</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"><code>es-ES_LauraVoice</code></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Standard</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">
+    <td style="text-align:left;vertical-align:middle;padding:3px"></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">Female<br/>Standard</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px"><code>es-ES_LauraVoice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">
       <audio controls style="width:250px;height:30px">
         <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Laura.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
   <tr>
-    <td style="text-align:left;vertical-align:middle;padding:2px"></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"><code>es-ES_LauraV3Voice</code></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Neural</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">
+    <td style="text-align:left;vertical-align:middle;padding:3px"></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">Female<br/>Neural</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px"><code>es-ES_LauraV3Voice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">
       <audio controls style="width:250px;height:30px">
         <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/LauraV3.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
   <tr>
-    <td style="text-align:left;vertical-align:middle;padding:2px">Spanish<br/>(Latin American)</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Female</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"><code>es-LA_SofiaVoice</code></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Standard</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">
+    <td style="text-align:left;vertical-align:middle;padding:3px">Spanish<br/>(Latin American)</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">Female<br/>Standard</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px"><code>es-LA_SofiaVoice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">
       <audio controls style="width:250px;height:30px">
         <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Sofia.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
   <tr>
-    <td style="text-align:left;vertical-align:middle;padding:2px"></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"><code>es-LA_SofiaV3Voice</code></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Neural</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">
+    <td style="text-align:left;vertical-align:middle;padding:3px"></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">Female<br/>Neural</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px"><code>es-LA_SofiaV3Voice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">
       <audio controls style="width:250px;height:30px">
         <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/SofiaV3.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
   <tr>
-    <td style="text-align:left;vertical-align:middle;padding:2px">Spanish<br/>(North American)</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Female</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"><code>es-US_SofiaVoice</code></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Standard</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">
+    <td style="text-align:left;vertical-align:middle;padding:3px">Spanish<br/>(North American)</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">Female<br/>Standard</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px"><code>es-US_SofiaVoice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">
       <audio controls style="width:250px;height:30px">
         <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/Sofia.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
   <tr>
-    <td style="text-align:left;vertical-align:middle;padding:2px"></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px"><code>es-US_SofiaV3Voice</code></td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">Neural</td>
-    <td style="text-align:center;vertical-align:middle;padding:2px">
+    <td style="text-align:left;vertical-align:middle;padding:3px"></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">Female<br/>Neural</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px"><code>es-US_SofiaV3Voice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">
       <audio controls style="width:250px;height:30px">
         <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/SofiaV3.wav" type="audio/wav">
       </audio>
