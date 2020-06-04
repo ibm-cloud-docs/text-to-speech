@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-04-27"
+lastupdated: "2020-06-04"
 
 subcollection: text-to-speech
 
@@ -13,6 +13,7 @@ subcollection: text-to-speech
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
+{:beta: .beta}
 {:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
@@ -65,9 +66,26 @@ You can use custom voice models to create application-specific translations for 
 
 For example, your application might routinely encounter special terms with foreign origins, personal or geographic names, or abbreviations and acronyms. By using customization, you can define translations that tell the service how you want such terms to be pronounced.
 
-The customization interface is a beta release. Customization is available for all languages. You must have the Standard pricing plan to use voice model customization. Users of the Lite plan cannot use the customization interface.
+Customization is available for all languages. You must have the Standard pricing plan to use voice model customization. Users of the Lite plan cannot use the customization interface.
 
 For more information, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
+
+The customization interface is beta functionality.
+{: beta}
+
+## Data limits
+{: #data-limits}
+
+To summarize, the following data limits apply to the different speech synthesis methods:
+
+-   The HTTP `GET /v1/synthesize` method accepts a maximum of 8 KB of input, which includes the input text and the URL and headers.
+-   The HTTP `POST /v1/synthesize` method accepts a maximum of 8 KB for the URL and headers, and a maximum of 5 KB for the input text that is sent in the body of the request.
+-   The WebSocket `/v1/synthesize` method accepts a maximum of 5 KB of input text.
+
+These limits include all characters of the input, including whitespace.
+
+For billing purposes, whitespace characters are not counted. However, all other characters are counted, including those that are part of SSML elements.
+{: note}
 
 ## CORS support
 {: #cors}
