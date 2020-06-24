@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-10-04"
+  years: 2015, 2020
+lastupdated: "2020-06-22"
 
 subcollection: text-to-speech
 
@@ -33,9 +33,9 @@ The first two examples generate a custom pronunciation for `IEEE` that is based 
 -   The HTTP `GET /v1/synthesize` method:
 
     ```bash
-    curl -X GET -u "apikey:{apikey}"
-    --header "Accept: audio/flac"
-    --output ieee.flac
+    curl -X GET -u "apikey:{apikey}" \
+    --header "Accept: audio/flac" \
+    --output ieee.flac \
     "{url}/v1/synthesize?text=IEEE&customization_id={customization_id}"
     ```
     {: pre}
@@ -43,11 +43,11 @@ The first two examples generate a custom pronunciation for `IEEE` that is based 
 -   The HTTP `POST /v1/synthesize` method:
 
     ```bash
-    curl -X POST -u "apikey:{apikey}"
-    --header "Content-Type: application/json"
-    --header "Accept: audio/flac"
-    --data "{\"text\":\"IEEE\"}"
-    --output ieee.flac
+    curl -X POST -u "apikey:{apikey}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: audio/flac" \
+    --data "{\"text\":\"IEEE\"}" \
+    --output ieee.flac \
     "{url}/v1/synthesize?customization_id={customization_id}"
     ```
     {: pre}

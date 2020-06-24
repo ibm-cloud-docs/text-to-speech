@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-02-04"
+lastupdated: "2020-06-22"
 
 subcollection: text-to-speech
 
@@ -71,14 +71,15 @@ Experimental and beta features are not intended for use with a production enviro
 To associate a customer ID with data, include the `X-Watson-Metadata` header with the request that passes the information. You pass the string `customer_id={id}` as the argument of the header. The following example associates the customer ID `my_ID` with the data passed with a `POST /v1/synthesize` request:
 
 ```bash
-curl -X POST -u "apikey:{apikey}"
---header "X-Watson-Metadata: customer_id=my_ID"
---header "Content-Type: application/json"
---header "Accept: audio/wav"
---data "{\"text\":\"hello world\"}"
---output hello_world.wav
+curl -X POST -u "apikey:{apikey}" \
+--header "X-Watson-Metadata: customer_id=my_ID" \
+--header "Content-Type: application/json" \
+--header "Accept: audio/wav" \
+--data "{\"text\":\"hello world\"}" \
+--output hello_world.wav \
 "{url}/v1/synthesize"
 ```
+{: pre}
 
 A customer ID can include any characters except for the `;` (semicolon) and `=` (equals sign). Specify a random or generic string for the customer ID; do not specify a personally identifiable string, such as an email address or Twitter ID. You can specify different customer IDs with different requests. A customer ID that you specify is associated with the instance of the service whose credentials are used with the request; only credentials for that instance of the service can delete data associated with the ID.
 
@@ -108,8 +109,9 @@ Use the `X-Watson-Metadata` header with the following methods:
 To delete all data that is associated with a customer ID, use the `DELETE /v1/user_data` method. You pass the string `customer_id={id}` as a query parameter with the request. The following example deletes all data for the customer ID `my_ID`:
 
 ```bash
-curl -X DELETE -u "apikey:{apikey}"
+curl -X DELETE -u "apikey:{apikey}" \
 "{url}/v1/user_data?customer_id=my_ID"
 ```
+{: pre}
 
 The `/v1/user_data` method deletes all data that is associated with the specified customer ID, regardless of the method by which the information was added. The method has no effect if no data is associated with the customer ID. You must issue the request with credentials for the same instance of the service that was used to associate the customer ID with the data.

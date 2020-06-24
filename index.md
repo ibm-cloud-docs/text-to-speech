@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-04-01"
+lastupdated: "2020-06-24"
 
 subcollection: text-to-speech
 
@@ -27,7 +27,7 @@ subcollection: text-to-speech
 # About
 {: #about}
 
-**Service update:** *The {{site.data.keyword.texttospeechshort}} service was updated on 1 April 2020. The service now offers two standard female voices in Korean as beta functionality. In addition, voice model customization, the `/v1/pronunciation` method, and word timing are now available for the beta Arabic, Chinese, Dutch, and Korean voices. Voice models in Arabic, Chinese, Dutch, and Korean support only IPA. For more information, see the [1 April 2020 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#April2020) in the release notes.*
+**Service update:** *The {{site.data.keyword.texttospeechshort}} service was updated on 24 June 2020. The service now offers two new neural voices for UK English (`en-GB_CharlotteV3Voice` and `en-GB_JamesV3Voice`) and one new neural voice for French (`fr-FR_NicolasV3Voice`). Other voice improvements are also included. For more information about these and all recent updates, see the [24 June 2020 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#June2020) in the release notes.*
 
 The {{site.data.keyword.texttospeechfull}} service provides an application programming interface (API) that uses {{site.data.keyword.IBM_notm}}'s speech-synthesis capabilities to convert written text to natural-sounding speech. The service streams the results back to the client with minimal delay. The service offers both [HTTP](/docs/text-to-speech?topic=text-to-speech-usingHTTP) and [WebSocket](/docs/text-to-speech?topic=text-to-speech-usingWebSocket) interfaces.
 

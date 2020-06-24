@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-05-08"
+lastupdated: "2020-06-24"
 
 subcollection: text-to-speech
 
@@ -37,6 +37,16 @@ The service has the following known limitations:
 
     You can use only sounds-like translations for Arabic word pronunciation. For more information, see [Sounds-like translation](/docs/text-to-speech?topic=text-to-speech-customIntro#soundsLike).
 -   When you specify the `audio/ogg;codecs=opus` audio format, you can optionally specify a sampling rate other than the default 48,000 Hz. However, while the service accepts `48000`, `24000`, `16000`, `12000`, or `8000` as a valid sampling rate, it currently disregards a specified value and always returns the audio with a sampling rate of 48 kHz.
+
+## 24 June 2020
+{: #June2020}
+
+-   The service now offers three new neural voices:
+    -   UK English: `en-GB_CharlotteV3Voice` and `en-GB_JamesV3Voice`
+    -   French: `fr-FR_NicolasV3Voice`
+
+    It also offers an improved version of the existing UK neural voice, `en-KateV3Voice`. For more information about these and all available voices, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
+-   The service now fully supports the SSML `<say-as>` element with its Japanese voice. For more information, see [The say-as element](/docs/text-to-speech?topic=text-to-speech-elements#say-as_element).
 
 ## 1 April 2020
 {: #April2020}
@@ -77,28 +87,10 @@ The IPA symbols for the Arabic, Chinese, Dutch, and Korean languages are not yet
     For more information about these and all available voices, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
 -   The service now supports the use of Activity Tracker events for all customization operations. {{site.data.keyword.at_full_notm}} records user-initiated activities that change the state of a service in IBM Cloud. You can use this service to investigate abnormal activity and critical actions and to comply with regulatory audit requirements. In addition, you can be alerted about actions as they happen. For more information, see [Activity Tracker events](/docs/text-to-speech?topic=text-to-speech-atEvents).
 
-## 18 December 2019
-{: #December2019b}
-
-The service now supports six new standard voices in three new languages:
-
--   *Arabic:* `ar-AR_OmarVoice`
--   *Chinese (Mandarin):* `zh-CN_LiNaVoice`, `zh-CN_WangWeiVoice`, and `zh-CN_ZhangJingVoice`
--   *Dutch:* `nl-NL_EmmaVoice` and `nl-NL_LiamVoice`
-
-The following information applies to these new standard voices:
-
--   The new voices are beta functionality. The voices might not be ready for production use and are subject to change. They are initial offerings that are expected to improve in quality with time and usage.
--   The voices do not support the `<mark>` element and `timings` parameter that are available with the WebSocket interface.
--   The voices do not support voice customization or the `/v1/pronunciation` method.
--   The voices do not support expressive SSML or voice transformation SSML.
--   The voices do support all other SSML elements. However, they support only the International Phonetic Alphabet (IPA), not {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR), with the `<phoneme>` element.
-
-For more information about these and all available voices, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
-
 ## Older releases
 {: #older}
 
+-   [18 December 2019](#December2019b)
 -   [12 December 2019](#December2019a)
 -   [12 November 2019](#November2019)
 -   [1 October 2019](#October2019)
@@ -125,6 +117,25 @@ For more information about these and all available voices, see [Languages and vo
 -   [17 December 2015](#December2015)
 -   [21 September 2015](#September2015)
 -   [1 July 2015](#July2015)
+
+### 18 December 2019
+{: #December2019b}
+
+The service now supports six new standard voices in three new languages:
+
+-   *Arabic:* `ar-AR_OmarVoice`
+-   *Chinese (Mandarin):* `zh-CN_LiNaVoice`, `zh-CN_WangWeiVoice`, and `zh-CN_ZhangJingVoice`
+-   *Dutch:* `nl-NL_EmmaVoice` and `nl-NL_LiamVoice`
+
+The following information applies to these new standard voices:
+
+-   The new voices are beta functionality. The voices might not be ready for production use and are subject to change. They are initial offerings that are expected to improve in quality with time and usage.
+-   The voices do not support the `<mark>` element and `timings` parameter that are available with the WebSocket interface.
+-   The voices do not support voice customization or the `/v1/pronunciation` method.
+-   The voices do not support expressive SSML or voice transformation SSML.
+-   The voices do support all other SSML elements. However, they support only the International Phonetic Alphabet (IPA), not {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR), with the `<phoneme>` element.
+
+For more information about these and all available voices, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
 
 ### 12 December 2019
 {: #December2019a}

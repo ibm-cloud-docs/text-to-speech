@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-04-01"
+lastupdated: "2020-06-22"
 
 subcollection: text-to-speech
 
@@ -41,26 +41,26 @@ You can provide a translation by using the sounds-like or the phonetic method (o
 -   **Sounds-like:** For this example, the sounds-like method is the simplest approach:
 
     ```bash
-    curl -X PUT -u "apikey:{apikey}"
-    --header "Content-Type: application/json"
-    --data "{\"translation\":\"I triple E\"}"
+    curl -X PUT -u "apikey:{apikey}" \
+    --header "Content-Type: application/json" \
+    --data "{\"translation\":\"I triple E\"}" \
     "{url}/v1/customizations/{customization_id}/words/IEEE"
     ```
     {: pre}
 
 -   **Phonetic IPA:** IPA requires use of the `<phoneme>` element with the `alphabet` attribute set to `ipa` and the `ph` attribute defined in IPA format:
 
-    <pre><code class="language-bash">  curl -X PUT -u "apikey:{apikey}"
-    --header "Content-Type: application/json"
-    --data "{\"translation\":\"&lt;phoneme alphabet=\\\"ipa\\\" ph=\\\"&#712;a&#618;.t&#633;&#712;&#616;p&#601;l.&#712;i\\\"&gt;&lt;/phoneme&gt;\"}"
+    <pre><code class="language-bash">  curl -X PUT -u "apikey:{apikey}" \
+    --header "Content-Type: application/json" \
+    --data "{\"translation\":\"&lt;phoneme alphabet=\\\"ipa\\\" ph=\\\"&#712;a&#618;.t&#633;&#712;&#616;p&#601;l.&#712;i\\\"&gt;&lt;/phoneme&gt;\"}" \
     "{url}/v1/customizations/{customization_id}/words/IEEE"</code></pre>
 
 -   **Phonetic {{site.data.keyword.IBM_notm}} SPR:** SPR uses the `<phoneme>` element with the `alphabet` attribute set to `ibm` and the `ph` attribute defined in SPR format:
 
     ```bash
-    curl -X PUT -u "apikey:{apikey}"
-    --header "Content-Type: application/json"
-    --data "{\"translation\":\"<phoneme alphabet=\\\"ibm\\\" ph=\\\"1Y.tr1Ipxl.1i\\\"></phoneme>\"}"
+    curl -X PUT -u "apikey:{apikey}" \
+    --header "Content-Type: application/json" \
+    --data "{\"translation\":\"<phoneme alphabet=\\\"ibm\\\" ph=\\\"1Y.tr1Ipxl.1i\\\"></phoneme>\"}" \
     "{url}/v1/customizations/{customization_id}/words/IEEE"
     ```
     {: pre}
@@ -71,9 +71,9 @@ You can provide a translation by using the sounds-like or the phonetic method (o
 To add one or more words to a custom model at one time, use the `POST /v1/customizations/{customization_id}/words` method. You specify the entries to be added to the custom model as a JSON array of word/translation pairs. The following example adds common sounds-like translations for the words `NCAA` and `iPhone` to a custom model:
 
 ```bash
-curl -X POST -u "apikey:{apikey}"
---header "Content-Type: application/json"
---data "{\"words\": [{\"word\":\"NCAA\", \"translation\":\"N C double A\"}, {\"word\":\"iPhone\", \"translation\":\"I phone\"}]}"
+curl -X POST -u "apikey:{apikey}" \
+--header "Content-Type: application/json" \
+--data "{\"words\": [{\"word\":\"NCAA\", \"translation\":\"N C double A\"}, {\"word\":\"iPhone\", \"translation\":\"I phone\"}]}" \
 "{url}/v1/customizations/{customization_id}/words"
 ```
 {: pre}
@@ -93,9 +93,9 @@ The JSON content sent in the request body equates to the following:
 As mentioned in [Updating a custom model](/docs/text-to-speech?topic=text-to-speech-customModels#cuModelsUpdate), you can also use the `POST /v1/customizations/{customization_id}` method to add words to a custom model. The following example uses this method to add the same two words as the previous example; it makes no changes to the model's metadata. With the exception of the URL, the two methods are identical.
 
 ```bash
-curl -X POST -u "apikey:{apikey}"
---header "Content-Type: application/json"
---data "{\"words\": [{\"word\":\"NCAA\", \"translation\":\"N C double A\"}, {\"word\":\"iPhone\", \"translation\":\"I phone\"}]}"
+curl -X POST -u "apikey:{apikey}" \
+--header "Content-Type: application/json" \
+--data "{\"words\": [{\"word\":\"NCAA\", \"translation\":\"N C double A\"}, {\"word\":\"iPhone\", \"translation\":\"I phone\"}]}" \
 "{url}/v1/customizations/{customization_id}"
 ```
 {: pre}
@@ -135,23 +135,23 @@ The following examples of the `PUT /v1/customizations/{customization_id}/words/{
 
 -   **Sounds-like:**
 
-    <pre><code>curl -X PUT -u "apikey:{apikey}"
-    --header "Content-Type: application/json"
-    --data "{\"translation\":\"&#12491;&#12517;&#12540;&#12520;&#12540;&#12463;\", \"part_of_speech\":\"Mesi\"}"
+    <pre><code>curl -X PUT -u "apikey:{apikey}" \
+    --header "Content-Type: application/json" \
+    --data "{\"translation\":\"&#12491;&#12517;&#12540;&#12520;&#12540;&#12463;\", \"part_of_speech\":\"Mesi\"}" \
     "{url}/v1/customizations/{customization_id}/words/%EF%BC%AE%EF%BC%B9"</code></pre>
 
 -   **Phonetic IPA:**
 
-    <pre><code>curl -X PUT -u "apikey:{apikey}"
-    --header "Content-Type: application/json"
-    --data "{\"translation\":\"&lt;phoneme alphabet=\\\"ipa\\\" ph=\\\"&#626;&#623;&#720;&#106;&#111;&#720;&#107;&#623;\\\"&gt;&lt;/phoneme&gt;\", \"part_of_speech\":\"Mesi\"}"
+    <pre><code>curl -X PUT -u "apikey:{apikey}" \
+    --header "Content-Type: application/json" \
+    --data "{\"translation\":\"&lt;phoneme alphabet=\\\"ipa\\\" ph=\\\"&#626;&#623;&#720;&#106;&#111;&#720;&#107;&#623;\\\"&gt;&lt;/phoneme&gt;\", \"part_of_speech\":\"Mesi\"}" \
     "{url}/v1/customizations/{customization_id}/words/%EF%BC%AE%EF%BC%B9"</code></pre>
 
 -   **Phonetic {{site.data.keyword.IBM_notm}} SPR:**
 
-    <pre><code>curl -X PUT -u "apikey:{apikey}"
-    --header "Content-Type: application/json"
-    --data "{\"translation\":\"&lt;phoneme alphabet=\\\"ibm\\\" ph=\\\"nyu:yo:ku\\\"&gt;&lt;/phoneme&gt;\", \"part_of_speech\":\"Mesi\"}"
+    <pre><code>curl -X PUT -u "apikey:{apikey}" \
+    --header "Content-Type: application/json" \
+    --data "{\"translation\":\"&lt;phoneme alphabet=\\\"ibm\\\" ph=\\\"nyu:yo:ku\\\"&gt;&lt;/phoneme&gt;\", \"part_of_speech\":\"Mesi\"}" \
     "{url}/v1/customizations/{customization_id}/words/%EF%BC%AE%EF%BC%B9"</code></pre>
 
 ## Querying a single word from a custom model
@@ -162,7 +162,7 @@ To query the translation of a single word from a custom model, use the `GET /v1/
 The following example queries a custom model for the translation of the word `IEEE`:
 
 ```bash
-curl -X GET -u "apikey:{apikey}"
+curl -X GET -u "apikey:{apikey}" \
 "{url}/v1/customizations/{customization_id}/words/IEEE"
 ```
 {: pre}
@@ -182,7 +182,7 @@ If the word has the sounds-like translation in the model, the example returns th
 To see the translations for all of the words defined in a custom model, use the `GET /v1/customizations/{customization_id}/words` method. The following example uses the method to list the entries from a custom model that contains sounds-like translations for three words:
 
 ```bash
-curl -X GET -u "apikey:{apikey}"
+curl -X GET -u "apikey:{apikey}" \
 "{url}/v1/customizations/{customization_id}/words"
 ```
 {: pre}
@@ -212,7 +212,7 @@ The method returns a JSON array with the following data. For Japanese custom mod
 As described in [Querying a custom model](/docs/text-to-speech?topic=text-to-speech-customModels#cuModelsQuery), you can also use the `GET /v1/customizations/{customization_id}` method to see both the metadata and the words for a custom model:
 
 ```bash
-curl -X GET -u "apikey:{apikey}"
+curl -X GET -u "apikey:{apikey}" \
 "{url}/v1/customizations/{customization_id}"
 ```
 {: pre}
@@ -261,7 +261,7 @@ This method is useful because it allows you to query a word from any language an
 The following example obtains the pronunciation for the word `IEEE` in the default IPA format.
 
 ```bash
-curl -X GET -u "apikey:{apikey}"
+curl -X GET -u "apikey:{apikey}" \
 "{url}/v1/pronunciation?text=IEEE"
 ```
 {: pre}
@@ -273,7 +273,7 @@ curl -X GET -u "apikey:{apikey}"
 The following example enters a sounds-like translation for the word `IEEE` and obtains the phonetic equivalent in {{site.data.keyword.IBM_notm}} SPR format. Obtaining the phonetic pronunciation for a sounds-like translation is an especially interesting approach to composing a phonetic translation. The spaces of the word are URL-encoded in the example.
 
 ```bash
-curl -X GET -u "apikey:{apikey}"
+curl -X GET -u "apikey:{apikey}" \
 "{url}/v1/pronunciation?text=i%20triple%20e&format=ibm"
 ```
 {: pre}
@@ -293,7 +293,7 @@ To delete a word from a custom model, use the `DELETE /v1/customizations/{custom
 The following example deletes the word `IEEE` from the specified custom model:
 
 ```bash
-curl -X DELETE -u "apikey:{apikey}"
+curl -X DELETE -u "apikey:{apikey}" \
 "{url}/v1/customizations/{customization_id}/words/IEEE"
 ```
 {: pre}
