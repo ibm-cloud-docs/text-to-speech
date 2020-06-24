@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-06-02"
+lastupdated: "2020-06-23"
 
 subcollection: text-to-speech
 
@@ -130,6 +130,26 @@ Voices labeled *Beta* are currently beta functionality. Beta voices might not be
   </tr>
   <tr>
     <td style="text-align:left;vertical-align:middle;padding:3px">English<br/>(United Kingdom)</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">Female<br/>Neural</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px"><code>en-GB_CharlotteV3Voice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">
+      <audio controls style="width:250px;height:30px">
+        <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/CharlotteV3.wav" type="audio/wav">
+      </audio>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:left;vertical-align:middle;padding:3px"></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">Male<br/>Neural</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px"><code>en-GB_JamesV3Voice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">
+      <audio controls style="width:250px;height:30px">
+        <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/JamesV3.wav" type="audio/wav">
+      </audio>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:left;vertical-align:middle;padding:3px"></td>
     <td style="text-align:center;vertical-align:middle;padding:3px">Female<br/>Standard</td>
     <td style="text-align:center;vertical-align:middle;padding:3px"><code>en-GB_KateVoice</code></td>
     <td style="text-align:center;vertical-align:middle;padding:3px">
@@ -250,6 +270,16 @@ Voices labeled *Beta* are currently beta functionality. Beta voices might not be
   </tr>
   <tr>
     <td style="text-align:left;vertical-align:middle;padding:3px">French</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">Male<br/>Neural</td>
+    <td style="text-align:center;vertical-align:middle;padding:3px"><code>fr-FR_NicolasV3Voice</code></td>
+    <td style="text-align:center;vertical-align:middle;padding:3px">
+      <audio controls style="width:250px;height:30px">
+        <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/NicolasV3.wav" type="audio/wav">
+      </audio>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:left;vertical-align:middle;padding:3px"></td>
     <td style="text-align:center;vertical-align:middle;padding:3px">Female<br/>Standard</td>
     <td style="text-align:center;vertical-align:middle;padding:3px"><code>fr-FR_ReneeVoice</code></td>
     <td style="text-align:center;vertical-align:middle;padding:3px">
@@ -599,7 +629,7 @@ The `GET /v1/voices` method lists information about all available voices. It tak
 The following example lists all voices that are supported by the service:
 
 ```bash
-curl -X GET -u "apikey:{apikey}"
+curl -X GET -u "apikey:{apikey}" \
 "{url}/v1/voices"
 ```
 {: pre}
@@ -678,7 +708,7 @@ If you omit the `customization_id` parameter, the method returns JSON output for
 The following example returns information about the `en-US_LisaVoice` and the specified custom voice model:
 
 ```bash
-curl -X GET -u "apikey:{apikey}"
+curl -X GET -u "apikey:{apikey}" \
 "{url}/v1/voices/en-US_LisaVoice?customization_id=64f4807f-a5f1-5867-924f-7bba1a84fe97"
 ```
 {: pre}
