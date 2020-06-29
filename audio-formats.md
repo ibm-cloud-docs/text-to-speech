@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-02-04"
+lastupdated: "2020-06-29"
 
 subcollection: text-to-speech
 
@@ -219,7 +219,7 @@ As shown in the *Audio formats* column for those formats that accept a `codecs` 
 For more information, see
 
 -   Internet Engineering Task Force (IETF) [Request for Comment (RFC) 2046](https://tools.ietf.org/html/rfc2046){: external}
--   [iana.org/assignments/media-types/audio/basic](http://www.iana.org/assignments/media-types/audio/basic){: external}
+-   [iana.org/assignments/media-types/audio/basic](https://www.iana.org/assignments/media-types/audio/basic){: external}
 
 ### audio/flac format
 {: #audio-flac}
@@ -279,7 +279,7 @@ For more information, see
 -   [xiph.org/vorbis](https://xiph.org/vorbis/){: external}
 -   [Vorbis](https://wikipedia.org/wiki/Vorbis){: external}
 -   [opus-codec.org](https://www.opus-codec.org/){: external}
--   IETF [Request for Comments (RFC) 7845](http://tools.ietf.org/html/rfc7845){: external}
+-   IETF [Request for Comments (RFC) 7845](https://tools.ietf.org/html/rfc7845){: external}
 -   [Opus (audio format)](https://wikipedia.org/wiki/Opus_%28audio_format%29){: external} (look especially at the *Containers* section)
 
 ### audio/wav format
@@ -337,4 +337,4 @@ By default, the service returns audio in the format `audio/ogg;codecs=opus`. You
 To play an audio file that the service generates, use one of the following tools:
 
 -   A web browser such as Google Chrome&trade;, Firefox&reg;, or Microsoft&reg; Internet Explorer&reg;
--   An audio player such as Audacity&reg; ([audacityteam.org](http://www.audacityteam.org/){: external}) or FFmpeg ([ffmpeg.org](https://www.ffmpeg.org){: external})
+-   An audio player such as Audacity&reg; ([audacityteam.org](https://www.audacityteam.org/){: external}) or FFmpeg ([ffmpeg.org](https://www.ffmpeg.org){: external})
