@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-06-24"
+lastupdated: "2020-06-30"
 
 subcollection: text-to-speech
 
@@ -46,7 +46,7 @@ The service has the following known limitations:
     -   French: `fr-FR_NicolasV3Voice`
 
     It also offers an improved version of the existing UK neural voice, `en-KateV3Voice`. For more information about these and all available voices, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
--   The service now fully supports the SSML `<say-as>` element with its Japanese voice. For more information, see [The say-as element](/docs/text-to-speech?topic=text-to-speech-elements#say-as_element).
+-   The service now supports the `digits` attribute of the SSML `<say-as>` element with its Japanese voice. For more information, see [The say-as element](/docs/text-to-speech?topic=text-to-speech-elements#say-as_element).
 
 ## 1 April 2020
 {: #April2020}

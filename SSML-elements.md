@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-06-24"
+lastupdated: "2020-06-30"
 
 subcollection: text-to-speech
 
@@ -364,7 +364,7 @@ The `volume` attribute modifies the volume for the text within the element. You 
 ## The say-as element
 {: #say-as_element}
 
-The `<say-as>` element is only partially supported for most languages. For languages other than US English and Japanese, the service typically supports only the `digits` and `letters` attributes of the element.
+The `<say-as>` element is fully supported only for US English. For most other languages, the service supports only the `digits` and `letters` attributes of the element. For Japanese, the service supports only the `digits` attribute.
 {: note}
 
 The `<say-as>` element provides information about the type of text that is contained within the element and specifies the level of detail for rendering the text. The element has one required attribute, `interpret-as`, which indicates how the enclosed text is to be interpreted. It has two optional attributes, `format` and `detail`, which are used only with particular values within the `interpret-as` attribute, as illustrated in the following examples.
