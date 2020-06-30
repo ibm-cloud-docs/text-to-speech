@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-04-27"
+lastupdated: "2020-06-30"
 
 subcollection: text-to-speech
 
@@ -39,7 +39,7 @@ The synthesize request and response cycle includes the following steps:
 
 The WebSocket interface accepts identical input and produces identical results as the `GET` and `POST /v1/synthesize` methods of the HTTP interface. In addition, the WebSocket interface also supports use of the SSML `<mark>` element to identify the location of user-specified markers in the audio. It can also return timing information for all strings of the input text. (The `<mark>` element and word timings are available only with the WebSocket interface.) For more information, see [Obtaining word timings](/docs/text-to-speech?topic=text-to-speech-timing).
 
-The snippets of example code that follow are written in JavaScript and are based on the HTML5 WebSocket API. For more information about the WebSocket protocol, see the Internet Engineering Task Force (IETF) [Request for Comment (RFC) 6455](http://tools.ietf.org/html/rfc6455){: external}.
+The snippets of example code that follow are written in JavaScript and are based on the HTML5 WebSocket API. For more information about the WebSocket protocol, see the Internet Engineering Task Force (IETF) [Request for Comment (RFC) 6455](https://tools.ietf.org/html/rfc6455){: external}.
 {: note}
 
 ## Open a connection
@@ -345,4 +345,4 @@ The following example shows a warning response, in this case for an unknown para
 ```
 {: codeblock}
 
-For more information about WebSocket return codes, see the Internet Engineering Task Force (IETF) [Request for Comments (RFC) 6455](http://tools.ietf.org/html/rfc6455){: external}.
+For more information about WebSocket return codes, see the Internet Engineering Task Force (IETF) [Request for Comments (RFC) 6455](https://tools.ietf.org/html/rfc6455){: external}.
