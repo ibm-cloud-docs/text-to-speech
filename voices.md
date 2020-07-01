@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-06-23"
+lastupdated: "2020-07-01"
 
 subcollection: text-to-speech
 
@@ -626,6 +626,8 @@ The service bases its understanding of the language for the input text on the sp
 
 The `GET /v1/voices` method lists information about all available voices. It takes no arguments and returns a JSON array that is named `voices`. The array includes a separate object for each voice.
 
+The order in which the service returns voices can change from call to call. Do not rely on an alphabetized or static list of voices. Because the voices are returned as an array of JSON objects, the order has no bearing on programmatic uses of the response.
+
 The following example lists all voices that are supported by the service:
 
 ```bash
@@ -642,12 +644,36 @@ curl -X GET -u "apikey:{apikey}" \
       "language": "en-US",
       "gender": "female",
       "url": "{url}/v1/voices/en-US_LisaVoice",
-      "description": "Lisa: American English female voice.",
       "customizable": true,
       "supported_features": {
         "voice_transformation": true,
         "custom_pronunciation": true
-      }
+      },
+      "description": "Lisa: American English female voice.",
+    },
+    {
+      "name": "es-LA_SofiaV3Voice",
+      "language": "es-LA",
+      "customizable": true,
+      "gender": "female",
+      "url": "{url}/v1/voices/es-LA_SofiaV3Voice",
+      "supported_features": {
+        "voice_transformation": false,
+        "custom_pronunciation": true
+      },
+      "description": "Sofia: Latin American Spanish (español latinoamericano) female voice."
+    },
+    {
+      "name": "pt-BR_IsabelaV3Voice",
+      "language": "pt-BR",
+      "customizable": true,
+      "gender": "female",
+      "url": "{url}/v1/voices/pt-BR_IsabelaV3Voice",
+      "supported_features": {
+        "voice_transformation": false,
+        "custom_pronunciation": true
+      },
+      "description": "Isabela: Brazilian Portuguese (português brasileiro) female voice."
     },
     . . .
   ]
