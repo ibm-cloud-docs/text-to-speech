@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-06-30"
+lastupdated: "2020-07-01"
 
 subcollection: text-to-speech
 
@@ -626,7 +626,7 @@ The service bases its understanding of the language for the input text on the sp
 
 The `GET /v1/voices` method lists information about all available voices. It takes no arguments and returns a JSON array that is named `voices`. The array includes a separate object for each voice.
 
-The order in which the service returns voices is subject to change on any given request. Because the information is returned as an array of JSON objects, the order has no bearing on programmatic uses of the response.
+The order in which the service returns voices can change from call to call. Do not rely on an alphabetized or static list of voices. Because the voices are returned as an array of JSON objects, the order has no bearing on programmatic uses of the response.
 
 The following example lists all voices that are supported by the service:
 
