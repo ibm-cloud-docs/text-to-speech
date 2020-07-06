@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-06-24"
+lastupdated: "2020-07-06"
 
 subcollection: text-to-speech
 
@@ -65,7 +65,7 @@ The service supports voices in the following languages:
 -   Korean (beta)
 -   Spanish (Castilian, Latin American, and North American dialects)
 
-The service offers neural, standard, or both versions of each voice. The service offers at least one female voice for each language. For some languages the service offers multiple voices, including both male and female voices. Each voice uses appropriate cadence and intonation for its dialect.
+The service offers neural, standard, or both versions of each voice. The service offers at least one female voice for each language. For many languages the service offers multiple voices, including both male and female voices. Each voice uses appropriate cadence and intonation for its dialect.
 
 For more information about the voices that are available for each language, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
 
