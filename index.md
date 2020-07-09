@@ -29,7 +29,7 @@ subcollection: text-to-speech
 
 **Service update:** *The {{site.data.keyword.texttospeechshort}} service was updated on 24 June 2020. The service now offers two new neural voices for UK English (`en-GB_CharlotteV3Voice` and `en-GB_JamesV3Voice`) and one new neural voice for French (`fr-FR_NicolasV3Voice`). Other voice improvements are also included. For more information about these and all recent updates, see the [24 June 2020 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#June2020) in the release notes.*
 
-The {{site.data.keyword.texttospeechfull}} service provides an application programming interface (API) that uses {{site.data.keyword.IBM_notm}}'s speech-synthesis capabilities to convert written text to natural-sounding speech. The service streams the synthesized audio back to the client with minimal delay. The audio uses appropriate cadence and intonation for its language and dialect to provide voices that are smooth and natural.
+The {{site.data.keyword.texttospeechfull}} service provides application programming interfaces (APIs) that use {{site.data.keyword.IBM_notm}}'s speech-synthesis capabilities to convert written text to natural-sounding speech. The service streams the synthesized audio back to the client with minimal delay. The audio uses appropriate cadence and intonation for its language and dialect to provide voices that are smooth and natural.
 
 The service can be used in applications such as voice-automated chatbots, as well as a variety of voice-driven and screenless applications, such as tools for the disabled or visually impaired, video narration and voice over, and educational and home-automation solutions. It is appropriate for any application where audio is the preferred method of output.
 
