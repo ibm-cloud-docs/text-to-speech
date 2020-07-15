@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-07-06"
+lastupdated: "2020-07-15"
 
 subcollection: text-to-speech
 
@@ -41,6 +41,7 @@ The following status and support information applies to voice model customizatio
 
 -   Customization is available for all languages.
 -   You must have the Standard pricing plan to use customization. Users of the Lite plan cannot use the customization interface. For more information, see the [pricing page](https://www.ibm.com/cloud/watson-text-to-speech/pricing){: external} for the {{site.data.keyword.texttospeechshort}} service.
+-   Premium customers can work with {{site.data.keyword.IBM_notm}} to train a new voice for their specific use case and target market. {{site.data.keyword.IBM_notm}} can train a new voice with as little as one hour of training data. For more information, contact your {{site.data.keyword.IBM_notm}} Sales Representative.
 
 ## How customization works
 {: #ciHow}

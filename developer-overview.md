@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-07-09"
+lastupdated: "2020-07-15"
 
 subcollection: text-to-speech
 
@@ -60,6 +60,9 @@ The WebSocket interface supports use of the SSML `<mark>` element to identify sp
 ## Customization interface
 {: #overview-customization}
 
+The customization interface is beta functionality.
+{: beta}
+
 The service includes a customization interface that you can use to create custom voice models for use during speech synthesis. A custom voice model is a dictionary of words and their translations for a specific language. Each word/translation pair in a model tells the service how to pronounce the word when it occurs in input text.
 
 You can use custom voice models to create application-specific translations for unusual words for which the service's regular pronunciation rules might yield imperfect pronunciations. You can define the custom entry for a word/translation pair based on other words, or you can create pronunciations based on phoneme symbols in the standard International Phonetic Alphabet (IPA) or the proprietary {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR).
@@ -70,8 +73,8 @@ Voice customization is available for all languages. You must have the Standard p
 
 For more information, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
 
-The customization interface is beta functionality.
-{: beta}
+Premium customers can work with {{site.data.keyword.IBM_notm}} to train a new voice for their specific use case and target market. {{site.data.keyword.IBM_notm}} can train a new voice with as little as one hour of training data. For more information, contact your {{site.data.keyword.IBM_notm}} Sales Representative.
+{: note}
 
 ## Data limits
 {: #data-limits}
