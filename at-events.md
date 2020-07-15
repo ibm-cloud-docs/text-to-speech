@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-06-05"
+lastupdated: "2020-07-15"
 
 keywords: IBM,activity tracker,LogDNA,event,security,text to speech
 
@@ -39,7 +39,7 @@ The following tables list the {{site.data.keyword.texttospeechshort}} actions fo
 | `text-to-speech.custom-voice.create`           | Create a custom voice (`POST /v1/customizations`).                                           |
 | `text-to-speech.custom-voice-word-list.create` | Create a word list for a custom voice (`POST /v1/customizations/{customization_id}/words`).  |
 | `text-to-speech.custom-voice-word.create`      | Create a word for a custom voice (`PUT /v1/customizations/{customization_id}/words/{word}`). |
-{: caption="Table 1. Voice model customization .create actions that generate events" caption-side="top"}
+{: caption="Table 1. Voice model customization .create actions that generate events"}
 
 ### Read events
 {: #at_events_read}
@@ -50,7 +50,7 @@ The following tables list the {{site.data.keyword.texttospeechshort}} actions fo
 | `text-to-speech.custom-voice.read`           | Read a custom voice (`GET /v1/customizations/{customization_id}`).                         |
 | `text-to-speech.custom-voice-word-list.read` | Read a word list for a custom voice (`GET /v1/customizations/{customization_id}/words`).   |
 | `text-to-speech.custom-voice-word.read`      | Read a word for a custom voice (`GET /v1/customizations/{customization_id}/words/{word}`). |
-{: caption="Table 2. Voice model customization .read actions that generate events" caption-side="top"}
+{: caption="Table 2. Voice model customization .read actions that generate events"}
 
 ### Update event
 {: #at_events_update}
@@ -58,7 +58,7 @@ The following tables list the {{site.data.keyword.texttospeechshort}} actions fo
 | Action                               | Description                                                           |
 |--------------------------------------|-----------------------------------------------------------------------|
 | `text-to-speech.custom-voice.update` | Update a custom voice (`POST /v1/customizations/{customization_id}`). |
-{: caption="Table 3. Voice model customization .update action that generates an event" caption-side="top"}
+{: caption="Table 3. Voice model customization .update action that generates an event"}
 
 ### Delete events
 {: #at_events_delete}
@@ -67,7 +67,7 @@ The following tables list the {{site.data.keyword.texttospeechshort}} actions fo
 |-------------------------------------------|--------------------------------------------------------------------------------------------------|
 | `text-to-speech.custom-voice.delete`      | Delete a custom voice (`DELETE /v1/customizations/{customization_id}`).                          |
 | `text-to-speech.custom-voice-word.delete` | Delete a word from a custom voice (`DELETE /v1/customizations/{customization_id}/words/{word}`). |
-{: caption="Table 4. Voice model customization .delete actions that generate events" caption-side="top"}
+{: caption="Table 4. Voice model customization .delete actions that generate events"}
 
 ## Where to view events
 {: #at_ui}
