@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-06-22"
+lastupdated: "2020-07-20"
 
 subcollection: text-to-speech
 
@@ -55,13 +55,15 @@ For more information, see [Controlling request logging for {{site.data.keyword.w
 ### Information security
 {: #customSecurity}
 
-The service allows you to associate a customer ID with data that is added or updated for custom voice models. You can associate a customer ID with custom words by passing the `X-Watson-Metadata` header with the following methods:
+The service allows you to associate a customer ID with data that is added or updated for custom voice models. You can associate a customer ID with custom words by passing the `X-Watson-Metadata` header with the following methods. If necessary, you can then delete the data associated with the customer ID by using the `DELETE /v1/user_data` method.
 
 -   `POST /v1/customizations/{customization_id}`
 -   `POST /v1/customizations/{customization_id}/words`
 -   `PUT /v1/customizations/{customization_id}/words/{word}`
 
-If necessary, you can then delete the data associated with the customer ID by using the `DELETE /v1/user_data` method. For more information, see [Information security](/docs/text-to-speech?topic=text-to-speech-information-security).
+In addition, if you delete an instance of the {{site.data.keyword.texttospeechshort}} service from the {{site.data.keyword.cloud_notm}} console, all data associated with that service instance is automatically deleted. This includes all custom voice models and word/translation pairs. This data is purged automatically and regardless of whether a customer ID is associated with the data.
+
+For more information, see [Information security](/docs/text-to-speech?topic=text-to-speech-information-security).
 
 ## Creating a custom model
 {: #cuModelsCreate}

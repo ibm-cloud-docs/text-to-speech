@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-07-06"
+lastupdated: "2020-07-20"
 
 subcollection: text-to-speech
 
@@ -115,3 +115,10 @@ curl -X DELETE -u "apikey:{apikey}" \
 {: pre}
 
 The `/v1/user_data` method deletes all data that is associated with the specified customer ID, regardless of the method by which the information was added. The method has no effect if no data is associated with the customer ID. You must issue the request with credentials for the same instance of the service that was used to associate the customer ID with the data.
+
+## Deletion of all data for a {{site.data.keyword.texttospeechshort}} service instance
+{: #gdpr-text-to-speech-instance}
+
+If you delete an instance of the {{site.data.keyword.texttospeechshort}} service from the {{site.data.keyword.cloud_notm}} console, all data associated with that service instance is automatically deleted. This includes all custom voice models and word/translation pairs, and all data related to speech synthesis requests.
+
+This data is purged automatically and regardless of whether a customer ID is associated with the data. Once you delete a service instance, you can no longer restore any of the deleted data.
