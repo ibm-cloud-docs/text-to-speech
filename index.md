@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-07-09"
+lastupdated: "2020-07-30"
 
 subcollection: text-to-speech
 
@@ -32,6 +32,9 @@ subcollection: text-to-speech
 The {{site.data.keyword.texttospeechfull}} service provides application programming interfaces (APIs) that use {{site.data.keyword.IBM_notm}}'s speech-synthesis capabilities to convert written text to natural-sounding speech. The service streams the synthesized audio back to the client with minimal delay. The audio uses appropriate cadence and intonation for its language and dialect to provide voices that are smooth and natural.
 
 The service can be used in applications such as voice-automated chatbots, as well as a variety of voice-driven and screenless applications, such as tools for the disabled or visually impaired, video narration and voice over, and educational and home-automation solutions. It is appropriate for any application where audio is the preferred method of output.
+
+This documentation describes managed instances of {{site.data.keyword.texttospeechfull}} that are offered in {{site.data.keyword.cloud_notm}} or in {{site.data.keyword.icp4dfull_notm}} as a Service. If you are interested in on-premises or installed deployments of the service, see [About {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](https://{DomainName}/docs/text-to-speech-data?topic=text-to-speech-data-about#about){: external}.
+{: note}
 
 ## Features and capabilities
 {: #features-index}
