@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-07-06"
+  years: 2019, 2020
+lastupdated: "2020-09-02"
 
 subcollection: text-to-speech
 
@@ -36,7 +36,7 @@ For more information about the research behind the {{site.data.keyword.texttospe
 1.  <a id="fernandez2007" style="border-bottom:none">Fernandez, Raul, and Bhuvana Ramabhadran.</a> [*Automatic Exploration of Corpus-Specific Properties for Expressive Text-to-Speech: A Case Study in Emphasis.*](http://www.isca-speech.org/archive_open/archive_papers/ssw6/ssw6_034.pdf){: external} Proceedings of the Sixth ISCA Workshop on Speech Synthesis (August 2007): pp. 34-39.
 1.  <a id="fernandez2006" style="border-bottom:none">Fernandez, Raul, Raimo Bakis, Ellen Eide, Wael Hamza, John Pitrelli, and Michael A. Picheny.</a> [*The 2006 TC-STAR Evaluation of the {{site.data.keyword.IBM_notm}} Expressive Text-to-Speech Synthesis System.*](https://www.researchgate.net/publication/228787461_The_2006_TC-STAR_evaluation_of_the_IBM_text-to-speech_synthesis_system){: external} Speech-to-Speech Translation Workshop, Barcelona, Spain (2006), pp. 175-180.
 1.  <a id="kons2019" style="border-bottom:none">Kons, Zvi, Slava Shechtman, Alex Sorin, Carmel Rabinovitz, and Ron Hoory.</a> [*High quality, lightweight and adaptable TTS using LPCNet.*](https://arxiv.org/abs/1905.00590){: external} Submitted to Interspeech (2019).
-1.  <a id="pitrelli2006" style="border-bottom:none">Pitrelli, John F., Raimo Bakis, Ellen M. Eide, Raul Fernandez, Wael Hamza, and Michael A. Picheny.</a> [*The {{site.data.keyword.IBM_notm}} Expressive Text-to-Speech Synthesis System for American English.*](http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=1643639&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D1643639){: external} IEEE Transactions on Audio, Speech, and Language Processing, Vol. 14(4) (July 2006): pp. 1099-1108.
-1.  <a id="rendel2016" style="border-bottom:none">Rendel, Asaf, Raul Fernandez, Ron Hoory, and Bhuvana Ramabhadran.</a> [*Using Continuous Lexical Embeddings to Improve Symbolic-Prosody Prediction in a Text-to-Speech Front End.*](http://www.icassp2016.org/Papers/ViewPapers.asp?PaperNum=3425){: external} Proceedings ICASSP (2016), pp. 5655-5659.
+1.  <a id="pitrelli2006" style="border-bottom:none">Pitrelli, John F., Raimo Bakis, Ellen M. Eide, Raul Fernandez, Wael Hamza, and Michael A. Picheny.</a> [*The {{site.data.keyword.IBM_notm}} Expressive Text-to-Speech Synthesis System for American English.*](https://ieeexplore.ieee.org/document/1643639){: external} IEEE Transactions on Audio, Speech, and Language Processing, Vol. 14(4) (July 2006): pp. 1099-1108.
+1.  <a id="rendel2016" style="border-bottom:none">Rendel, Asaf, Raul Fernandez, Ron Hoory, and Bhuvana Ramabhadran.</a> [*Using Continuous Lexical Embeddings to Improve Symbolic-Prosody Prediction in a Text-to-Speech Front End.*](https://ieeexplore.ieee.org/document/7472760){: external} Proceedings ICASSP (2016), pp. 5655-5659.
 1.  <a id="slava2007" style="border-bottom:none">Shechtman, Slava.</a> [*Maximum-Likelihood Dynamic Intonation Model for Concatenative {{site.data.keyword.texttospeechshort}} System.*](http://www.isca-speech.org/archive_open/archive_papers/ssw6/ssw6_234.pdf){: external} Proceedings of the Sixth ISCA Workshop on Speech Synthesis (August 2007): pp. 234-239.
 1.  <a id="shuang2006" style="border-bottom:none">Shuang, Zhi-Wei, Raimo Bakis, Slava Shechtman, Dan Chazan, and Yong Qin.</a> [*Frequency warping based on mapping formant parameters.*](https://www.researchgate.net/profile/Slava_Shechtman/publication/221491579_Frequency_warping_based_on_mapping_formant_parameters/links/55d462dd08ae7fb244f60c61.pdf){: external} Proceedings of the Ninth International Conference on Spoken Language Processing (ICSLP), Interspeech (2006): pp. 2290-2293.
