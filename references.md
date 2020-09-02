@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-09-02"
+  years: 2019, 2020
+lastupdated: "2020-09-02"
 
 subcollection: text-to-speech
 
