@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-07-15"
+lastupdated: "2020-09-04"
 
 subcollection: text-to-speech
 
@@ -60,9 +60,6 @@ The WebSocket interface supports use of the SSML `<mark>` element to identify sp
 ## Customization interface
 {: #overview-customization}
 
-The customization interface is beta functionality.
-{: beta}
-
 The service includes a customization interface that you can use to create custom voice models for use during speech synthesis. A custom voice model is a dictionary of words and their translations for a specific language. Each word/translation pair in a model tells the service how to pronounce the word when it occurs in input text.
 
 You can use custom voice models to create application-specific translations for unusual words for which the service's regular pronunciation rules might yield imperfect pronunciations. You can define the custom entry for a word/translation pair based on other words, or you can create pronunciations based on phoneme symbols in the standard International Phonetic Alphabet (IPA) or the proprietary {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR).
@@ -103,13 +100,13 @@ For instance, a web page that is loaded from a server in {{site.data.keyword.clo
 SDKs are available for the {{site.data.keyword.texttospeechshort}} service to simplify the development of speech applications. {{site.data.keyword.ibmwatson}} SDKs are available for many popular programming languages and platforms.
 
 -   For a complete list of SDKs and links to the SDKs on GitHub, see [Using SDKs](/docs/text-to-speech?topic=watson-using-sdks).
--   For detailed information about all methods of the SDKs for the {{site.data.keyword.texttospeechshort}} service, see the [API reference](https://{DomainName}/apidocs/text-to-speech){: external}.
+-   For more information about all methods of the SDKs for the {{site.data.keyword.texttospeechshort}} service, see the [API reference](https://{DomainName}/apidocs/text-to-speech){: external}.
 
 ## Learning more about application development
 {: #learn}
 
 For more information about working with {{site.data.keyword.watson}} services and {{site.data.keyword.cloud_notm}}, see
 
--   For an introduction to working with {{site.data.keyword.watson}} services and {{site.data.keyword.cloud_notm}}, see [Getting started with {{site.data.keyword.watson}} and {{site.data.keyword.cloud_notm}}](/docs/watson?topic=watson-about).
--   For information about using {{site.data.keyword.cloud_notm}} Identity and Access Management, see [Authenticating to Watson services](/docs/watson?topic=watson-iam).
--   For information about controlling the default request logging that is performed for all {{site.data.keyword.watson}} services, see [Controlling request logging for {{site.data.keyword.watson}} services](/docs/watson?topic=watson-gs-logging-overview).
+-   [Getting started with {{site.data.keyword.watson}} and {{site.data.keyword.cloud_notm}}](/docs/watson?topic=watson-about) for an introduction to working with {{site.data.keyword.watson}} services and {{site.data.keyword.cloud_notm}}
+-   [Authenticating to Watson services](/docs/watson?topic=watson-iam) for information about using {{site.data.keyword.cloud_notm}} Identity and Access Management
+-   [Controlling request logging for {{site.data.keyword.watson}} services](/docs/watson?topic=watson-gs-logging-overview) for information about controlling the default request logging that is performed for all {{site.data.keyword.watson}} services

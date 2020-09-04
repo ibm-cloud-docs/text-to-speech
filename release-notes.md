@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-09-02"
+lastupdated: "2020-09-04"
 
 subcollection: text-to-speech
 
@@ -38,6 +38,13 @@ The service has the following known limitations:
     You can use only sounds-like translations for Arabic word pronunciation. For more information, see [Sounds-like translation](/docs/text-to-speech?topic=text-to-speech-customIntro#soundsLike).
 -   When you specify the `audio/ogg;codecs=opus` audio format, you can optionally specify a sampling rate other than the default 48,000 Hz. However, while the service accepts `48000`, `24000`, `16000`, `12000`, or `8000` as a valid sampling rate, it currently disregards a specified value and always returns the audio with a sampling rate of 48 kHz.
 
+## 4 September 2020
+{: #September2020}
+
+The customization interface is now generally available. Customization is no longer beta functionality.
+
+You can use the customization interface to specify how the service pronounces unusual words that occur in your input text by creating language-specific custom dictionaries. The functionality is also referred to as voice customization or voice model customization. It can be used with all generally available and beta voices. For more information, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
+
 ## 24 June 2020
 {: #June2020}
 
@@ -70,26 +77,10 @@ See the following sections for additional information:
 The IPA symbols for the Arabic, Chinese, Dutch, and Korean languages are not yet documented. This documentation will be made available soon.
 {: note}
 
-## 24 February 2020
-{: #February2020}
-
--   The service now supports five new neural voices:
-
-    -   *US English:* `en-US_EmilyV3Voice`, `en-US_HenryV3Voice`, `en-US_KevinV3Voice`, and `en-US_OliviaV3Voice`
-    -   *German:* `de-DE_ErikaV3Voice`
-
-    The new voices do not support the following SSML elements:
-
-    -   Expressive SSML with the `<express-as>` element
-    -   Voice Transformation with the `<voice-transformation>` element
-    -   The `volume` attribute of the `<prosody>` element
-
-    For more information about these and all available voices, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
--   The service now supports the use of Activity Tracker events for all customization operations. {{site.data.keyword.at_full_notm}} records user-initiated activities that change the state of a service in IBM Cloud. You can use this service to investigate abnormal activity and critical actions and to comply with regulatory audit requirements. In addition, you can be alerted about actions as they happen. For more information, see [Activity Tracker events](/docs/text-to-speech?topic=text-to-speech-atEvents).
-
 ## Older releases
 {: #older}
 
+-   [24 February 2020](#February2020)
 -   [18 December 2019](#December2019b)
 -   [12 December 2019](#December2019a)
 -   [12 November 2019](#November2019)
@@ -117,6 +108,23 @@ The IPA symbols for the Arabic, Chinese, Dutch, and Korean languages are not yet
 -   [17 December 2015](#December2015)
 -   [21 September 2015](#September2015)
 -   [1 July 2015](#July2015)
+
+### 24 February 2020
+{: #February2020}
+
+-   The service now supports five new neural voices:
+
+    -   *US English:* `en-US_EmilyV3Voice`, `en-US_HenryV3Voice`, `en-US_KevinV3Voice`, and `en-US_OliviaV3Voice`
+    -   *German:* `de-DE_ErikaV3Voice`
+
+    The new voices do not support the following SSML elements:
+
+    -   Expressive SSML with the `<express-as>` element
+    -   Voice Transformation with the `<voice-transformation>` element
+    -   The `volume` attribute of the `<prosody>` element
+
+    For more information about these and all available voices, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
+-   The service now supports the use of Activity Tracker events for all customization operations. {{site.data.keyword.at_full_notm}} records user-initiated activities that change the state of a service in IBM Cloud. You can use this service to investigate abnormal activity and critical actions and to comply with regulatory audit requirements. In addition, you can be alerted about actions as they happen. For more information, see [Activity Tracker events](/docs/text-to-speech?topic=text-to-speech-atEvents).
 
 ### 18 December 2019
 {: #December2019b}
