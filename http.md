@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-09-06"
+lastupdated: "2020-09-07"
 
 subcollection: text-to-speech
 
@@ -84,7 +84,7 @@ For more information about using SSML to annotate input text, see [Using SSML](/
 {: troubleshoot}
 {: support}
 
-Because you can submit input text that includes XML-based SSML annotations, the service validates all input to ensure that any SSML is correct and well formed. Therefore, you must escape any XML control characters that are present in the input text, regardless of whether the input includes SSML. Use the equivalent escape strings or character encodings from Table 2 instead of the indicated characters.
+Because you can submit input text that includes XML-based SSML annotations, the service validates all input to ensure that any SSML is correct and well formed. Therefore, you must escape any XML control characters that are present in the input text, regardless of whether the input includes SSML. Use the equivalent escape strings or character encodings from Table 1 instead of the indicated characters.
 
 | Character | Escape strings | Character encoding |
 |:---------:|:--------------:|:------------------:|
