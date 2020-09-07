@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-09-06"
+lastupdated: "2020-09-07"
 
 subcollection: text-to-speech
 
@@ -103,7 +103,7 @@ You can use a `.` (period) to mark the beginning of each syllable. However, to p
 
 Table 1 identifies the symbols that you can use to indicate syllable stress for a pronunciation. {{site.data.keyword.IBM_notm}} recommends that you indicate primary stress for pronunciations in either SPR or IPA. However, indicating syllable stress is optional for both formats; the service determines where stress occurs if you do not indicate it.
 
-| Meaning | SPR symbol | IPA symbol | IPA Unicode |
+| Stress | SPR symbol | IPA symbol | IPA Unicode |
 |---------|:----------:|:----------:|:-----------:|
 | Primary stress | `1` | <code>&#712;</code> | `02C8` |
 | Secondary stress | `2` | <code>&#716;</code> | `02CC` |
