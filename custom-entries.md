@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-06-22"
+lastupdated: "2020-09-07"
 
 subcollection: text-to-speech
 
@@ -50,7 +50,7 @@ You can provide a translation by using the sounds-like or the phonetic method (o
 
 -   **Phonetic IPA:** IPA requires use of the `<phoneme>` element with the `alphabet` attribute set to `ipa` and the `ph` attribute defined in IPA format:
 
-    <pre><code class="language-bash">  curl -X PUT -u "apikey:{apikey}" \
+    <pre><code>$ curl -X PUT -u "apikey:{apikey}" \
     --header "Content-Type: application/json" \
     --data "{\"translation\":\"&lt;phoneme alphabet=\\\"ipa\\\" ph=\\\"&#712;a&#618;.t&#633;&#712;&#616;p&#601;l.&#712;i\\\"&gt;&lt;/phoneme&gt;\"}" \
     "{url}/v1/customizations/{customization_id}/words/IEEE"</code></pre>
@@ -135,21 +135,21 @@ The following examples of the `PUT /v1/customizations/{customization_id}/words/{
 
 -   **Sounds-like:**
 
-    <pre><code>curl -X PUT -u "apikey:{apikey}" \
+    <pre><code>$ curl -X PUT -u "apikey:{apikey}" \
     --header "Content-Type: application/json" \
     --data "{\"translation\":\"&#12491;&#12517;&#12540;&#12520;&#12540;&#12463;\", \"part_of_speech\":\"Mesi\"}" \
     "{url}/v1/customizations/{customization_id}/words/%EF%BC%AE%EF%BC%B9"</code></pre>
 
 -   **Phonetic IPA:**
 
-    <pre><code>curl -X PUT -u "apikey:{apikey}" \
+    <pre><code>$ curl -X PUT -u "apikey:{apikey}" \
     --header "Content-Type: application/json" \
     --data "{\"translation\":\"&lt;phoneme alphabet=\\\"ipa\\\" ph=\\\"&#626;&#623;&#720;&#106;&#111;&#720;&#107;&#623;\\\"&gt;&lt;/phoneme&gt;\", \"part_of_speech\":\"Mesi\"}" \
     "{url}/v1/customizations/{customization_id}/words/%EF%BC%AE%EF%BC%B9"</code></pre>
 
 -   **Phonetic {{site.data.keyword.IBM_notm}} SPR:**
 
-    <pre><code>curl -X PUT -u "apikey:{apikey}" \
+    <pre><code>$ curl -X PUT -u "apikey:{apikey}" \
     --header "Content-Type: application/json" \
     --data "{\"translation\":\"&lt;phoneme alphabet=\\\"ibm\\\" ph=\\\"nyu:yo:ku\\\"&gt;&lt;/phoneme&gt;\", \"part_of_speech\":\"Mesi\"}" \
     "{url}/v1/customizations/{customization_id}/words/%EF%BC%AE%EF%BC%B9"</code></pre>

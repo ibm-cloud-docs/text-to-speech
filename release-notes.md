@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-09-04"
+lastupdated: "2020-09-07"
 
 subcollection: text-to-speech
 
@@ -33,7 +33,7 @@ The following sections document the new features and changes that were included 
 
 The service has the following known limitations:
 
--   Use of the Speech Synthesis Markup Language (SSML) `<phoneme>` element and International Phonetic Alphabet (IPA) symbols or Unicode values with the Arabic voice `ar-AR_OmarVoice` is not currently supported. You cannot use the IPA phonetic symbols or Unicode values documented at [Arabic symbols](/docs/text-to-speech?topic=text-to-speech-arSymbols).
+-   Use of the Speech Synthesis Markup Language (SSML) `<phoneme>` element and International Phonetic Alphabet (IPA) symbols or Unicode values with the Arabic voice, `ar-AR_OmarVoice`, is not currently supported. You cannot use the IPA phonetic symbols or Unicode values documented at [Arabic symbols](/docs/text-to-speech?topic=text-to-speech-arSymbols).
 
     You can use only sounds-like translations for Arabic word pronunciation. For more information, see [Sounds-like translation](/docs/text-to-speech?topic=text-to-speech-customIntro#soundsLike).
 -   When you specify the `audio/ogg;codecs=opus` audio format, you can optionally specify a sampling rate other than the default 48,000 Hz. However, while the service accepts `48000`, `24000`, `16000`, `12000`, or `8000` as a valid sampling rate, it currently disregards a specified value and always returns the audio with a sampling rate of 48 kHz.
@@ -321,7 +321,7 @@ The service now supports the MP3 or Motion Picture Experts Group (MPEG) audio fo
 -   In addition to the `en-US_AllisonVoice`, two more voices are now transformable with SSML voice transformation: `en-US_LisaVoice` and `en-US_MichaelVoice`. For more information about voice transformation, see [Voice transformation SSML](/docs/text-to-speech?topic=text-to-speech-transformation).
 -   When you use the customization interface with Japanese, the service now matches the longest word from the word/translation pairs that are defined for a custom voice model. For example, consider the following two entries for a custom voice:
 
-    <pre><code data-copy="false" class="language-javascript">  {
+    <pre><code>{
       "words": [
         {"word":"&#65326;&#65337;", "translation":"&#12491;&#12517;&#12540;&#12520;&#12540;&#12463;", "part_of_speech":"Mesi"},
         {"word":"&#65326;&#65337;&#65315;", "translation":"&#12491;&#12517;&#12540;&#12520;&#12540;&#12463;&#12471;&#12486;&#12451;", "part_of_speech":"Mesi"}

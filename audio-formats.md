@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-06-29"
+lastupdated: "2020-09-06"
 
 subcollection: text-to-speech
 
@@ -57,159 +57,19 @@ Table 1 lists the audio formats in which you can request synthesized audio. By d
 
 As shown in the *Audio formats* column for those formats that accept a `codecs` parameter, you separate all parameters of the format specification with a `;` (semicolon). For more information about the different formats, see the sections that follow the table.
 
-<table>
-  <caption>Table 1. Summary of supported audio formats</caption>
-  <tr>
-    <th style="text-align:left">Audio formats</th>
-    <th style="text-align:center">Default sampling rate</th>
-    <th style="text-align:center">Required parameters</th>
-    <th style="text-align:center">Optional parameters</th>
-  </tr>
-  <tr>
-    <td>
-      [audio/basic](#audio-basic)
-    </td>
-    <td style="text-align:center">
-      8000 Hz
-    </td>
-    <td style="text-align:center">
-      None
-    </td>
-    <td style="text-align:center">
-      None
-    </td>
-  </tr>
-  <tr>
-    <td>
-      [audio/flac](#audio-flac)
-    </td>
-    <td style="text-align:center">
-      22,050 Hz
-    </td>
-    <td style="text-align:center">
-      None
-    </td>
-    <td style="text-align:center">
-      <code>rate={integer}</code>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      [audio/l16](#audio-l16)
-    </td>
-    <td style="text-align:center">
-      None
-    </td>
-    <td style="text-align:center">
-      <code>rate={integer}</code>
-    </td>
-    <td style="text-align:center">
-      <code>endianness=big-endian</code><br/>
-      <code>endianness=little-endian</code>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      [audio/mp3](#audio-mp3)<br/>
-      [audio/mpeg](#audio-mp3)
-    </td>
-    <td style="text-align:center">
-      22,050 Hz
-    </td>
-    <td style="text-align:center">
-      None
-    </td>
-    <td style="text-align:center">
-      <code>rate={integer}</code>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      [audio/mulaw](#audio-mulaw)
-    </td>
-    <td style="text-align:center">
-      None
-    </td>
-    <td style="text-align:center">
-      <code>rate={integer}</code>
-    </td>
-    <td style="text-align:center">
-      None
-    </td>
-  </tr>
-  <tr>
-    <td>
-      [audio/ogg](#audio-ogg)<br/>
-      [audio/ogg;codecs=vorbis](#audio-ogg)
-    </td>
-    <td style="text-align:center">
-      22,050 Hz
-    </td>
-    <td style="text-align:center">
-      None
-    </td>
-    <td style="text-align:center">
-      <code>rate={integer}</code>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      [audio/ogg;codecs=opus](#audio-ogg)
-    </td>
-    <td style="text-align:center">
-      48,000 Hz
-    </td>
-    <td style="text-align:center">
-      None
-    </td>
-    <td style="text-align:center">
-      <code>rate={integer}</code>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      [audio/wav](#audio-wav)
-    </td>
-    <td style="text-align:center">
-      22,050 Hz
-    </td>
-    <td style="text-align:center">
-      None
-    </td>
-    <td style="text-align:center">
-      <code>rate={integer}</code>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      [audio/webm](#audio-webm)<br/>
-      [audio/webm;codecs=opus](#audio-webm)
-    </td>
-    <td style="text-align:center">
-      48,000 Hz
-    </td>
-    <td style="text-align:center">
-      None
-    </td>
-    <td style="text-align:center">
-      None
-    </td>
-  </tr>
-  <tr>
-    <td>
-      [audio/webm;codecs=vorbis](#audio-webm)
-    </td>
-    <td style="text-align:center">
-      22,050 Hz
-    </td>
-    <td style="text-align:center">
-      None
-    </td>
-    <td style="text-align:center">
-      <code>rate={integer}</code>
-    </td>
-  </tr>
-</table>
+| Audio formats | Default sampling rate | Required parameters | Optional parameters |
+|---------------|:---------------------:|:-------------------:|:-------------------:|
+| [audio/basic](#audio-basic) | 8000 Hz | None | None |
+| [audio/flac](#audio-flac) | 22,050 Hz | None | `rate={integer}` |
+| [audio/l16](#audio-l16) | None | `rate={integer}` | `endianness=big-endian`<br/>`endianness=little-endian` |
+| [audio/mp3](#audio-mp3)<br/>[audio/mpeg](#audio-mp3) | 22,050 Hz | None | `rate={integer}` |
+| [audio/mulaw](#audio-mulaw) | None | `rate={integer}` | None |
+| [audio/ogg](#audio-ogg)<br/>[audio/ogg;codecs=vorbis](#audio-ogg) | 22,050 Hz | None | `rate={integer}` |
+| [audio/ogg;codecs=opus](#audio-ogg) | 48,000 Hz | None | `rate={integer}` |
+| [audio/wav](#audio-wav) | 22,050 Hz | None | `rate={integer}` |
+| [audio/webm](#audio-webm)<br/>[audio/webm;codecs=opus](#audio-webm) | 48,000 Hz | None | None |
+| [audio/webm;codecs=vorbis](#audio-webm) | 22,050 Hz | None | `rate={integer}` |
+{: caption="Table 1. Summary of supported audio formats"}
 
 ### audio/basic format
 {: #audio-basic}

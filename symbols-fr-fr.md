@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-04-29"
+lastupdated: "2020-09-07"
 
 subcollection: text-to-speech
 
@@ -175,7 +175,7 @@ The following sections describe the valid symbols for French.
   </tr>
   <tr>
     <td style="text-align:center">
-      x [<strong>1</strong>]
+      x [**1**]
     </td>
     <td style="text-align:center">
       &#601;
@@ -623,7 +623,7 @@ The following sections describe the valid symbols for French.
 
 In French, the `_` (underscore) can be used following a word-final consonant (but within the double-quotes that enclose the SPR) to indicate that it is a liaison consonant. A liaison consonant is pronounced only if the following word begins with a vowel.
 
-<table style="width:54%">
+<table style="width:55%">
   <caption>Table 3. Liaison (French)</caption>
   <tr>
     <th style="width:33%; text-align:center; vertical-align:bottom">
@@ -632,7 +632,7 @@ In French, the `_` (underscore) can be used following a word-final consonant (bu
     <th style="width:33%; text-align:center; vertical-align:bottom">
       IPA symbol
     </th>
-    <th style="width:34%; text-align:center; vertical-align:bottom">
+    <th style="text-align:center; vertical-align:bottom">
       IPA Unicode
     </th>
   </tr>

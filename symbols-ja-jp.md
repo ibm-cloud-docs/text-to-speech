@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-04-30"
+lastupdated: "2020-09-07"
 
 subcollection: text-to-speech
 
@@ -132,7 +132,7 @@ The following sections describe the valid symbols for Japanese. (For better clar
   </tr>
   <tr>
     <td style="text-align:center">
-      : [<strong>1</strong>]
+      : [**1**]
     </td>
     <td style="text-align:center">
       &#720;

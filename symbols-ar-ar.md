@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-05-08"
+lastupdated: "2020-09-07"
 
 subcollection: text-to-speech
 
@@ -27,7 +27,7 @@ subcollection: text-to-speech
 
 The following sections describe the valid symbols for Arabic. (Significant symbols in example Arabic words are not highlighted.)
 
-Use of the Speech Synthesis Markup Language (SSML) `<phoneme>` element and International Phonetic Alphabet (IPA) symbols or Unicode values with the Arabic voice `ar-AR_OmarVoice` is not currently supported. You can use only sounds-like translations for Arabic word pronunciation. For more information, see [Sounds-like translation](/docs/text-to-speech?topic=text-to-speech-customIntro#soundsLike).
+Use of the Speech Synthesis Markup Language (SSML) `<phoneme>` element and International Phonetic Alphabet (IPA) symbols or Unicode values with the Arabic voice, `ar-AR_OmarVoice`, is not currently supported. You can use only sounds-like translations for Arabic word pronunciation. For more information, see [Sounds-like translation](/docs/text-to-speech?topic=text-to-speech-customIntro#soundsLike).
 {: important}
 
 ## Vowels

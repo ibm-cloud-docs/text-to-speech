@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-04-29"
+lastupdated: "2020-09-07"
 
 subcollection: text-to-speech
 
@@ -527,7 +527,7 @@ Nasalized vowels in French occur mostly in foreign loan words.
     </td>
     <td style="text-align:center">
       d<br/><br/>
-      &#240; [<strong>1</strong>]
+      &#240; [**1**]
     </td>
     <td style="text-align:center">
       0064<br/><br/>
@@ -739,7 +739,7 @@ Nasalized vowels in French occur mostly in foreign loan words.
     <td style="text-align:center">
       &#116;&#115;<br/><br/>
       &#678;<br/><br/>
-      &#952; [<strong>2</strong>]
+      &#952; [**2**]
     </td>
     <td style="text-align:center">
       0074+0073<br/><br/>

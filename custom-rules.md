@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-04-21"
+lastupdated: "2020-09-07"
 
 subcollection: text-to-speech
 
@@ -144,96 +144,23 @@ Extra rules and a `part_of_speech` field apply to the creation of entries for wo
 
 The following table lists the parts of speech that are supported for Japanese custom entries. For more information about specifying the part of speech for a Japanese custom entry, see [Adding words to a Japanese custom model](/docs/text-to-speech?topic=text-to-speech-customWords#cuJapaneseAdd).
 
-<table style="width:75%">
-  <caption>Table 1. Japanese parts of speech</caption>
-  <tr>
-    <th style="text-align:center"><code>part_of_speech</code> argument</th>
-    <th style="text-align:center; width:35%">Japanese meaning</th>
-    <th style="text-align:center; width:35%">English meaning</th>
-  </tr>
-  <tr>
-    <td style="text-align:center"><code>Dosi</code></td>
-    <td style="text-align:center"><em>Doushi</em></td>
-    <td style="text-align:center">Verb</td>
-  </tr>
-  <tr>
-    <td style="text-align:center"><code>Fuku</code></td>
-    <td style="text-align:center"><em>Fukishi</em></td>
-    <td style="text-align:center">Adverb</td>
-  </tr>
-  <tr>
-    <td style="text-align:center"><code>Gobi</code></td>
-    <td style="text-align:center"><em>Gobi</em></td>
-    <td style="text-align:center">Inflection</td>
-  </tr>
-  <tr>
-    <td style="text-align:center"><code>Hoka</code></td>
-    <td style="text-align:center"><em>Hoka</em></td>
-    <td style="text-align:center">Other</td>
-  </tr>
-  <tr>
-    <td style="text-align:center"><code>Jodo</code></td>
-    <td style="text-align:center"><em>Jodoushi</em></td>
-    <td style="text-align:center">Auxiliary verb</td>
-  </tr>
-  <tr>
-    <td style="text-align:center"><code>Josi</code></td>
-    <td style="text-align:center"><em>Joshi</em></td>
-    <td style="text-align:center">Participle</td>
-  </tr>
-  <tr>
-    <td style="text-align:center"><code>Kato</code></td>
-    <td style="text-align:center"><em>Kantoushi</em></td>
-    <td style="text-align:center">Interjection</td>
-  </tr>
-  <tr>
-    <td style="text-align:center"><code>Kedo</code></td>
-    <td style="text-align:center"><em>Keiyodoushi</em></td>
-    <td style="text-align:center">Adjective verb</td>
-  </tr>
-  <tr>
-    <td style="text-align:center"><code>Keyo</code></td>
-    <td style="text-align:center"><em>Keiyoshi</em></td>
-    <td style="text-align:center">Adjective verb</td>
-  </tr>
-  <tr>
-    <td style="text-align:center"><code>Kigo</code></td>
-    <td style="text-align:center"><em>Kigou</em></td>
-    <td style="text-align:center">Symbol</td>
-  </tr>
-  <tr>
-    <td style="text-align:center"><code>Koyu</code></td>
-    <td style="text-align:center"><em>Koyuumeishi</em></td>
-    <td style="text-align:center">Proper noun</td>
-  </tr>
-  <tr>
-    <td style="text-align:center"><code>Mesi</code></td>
-    <td style="text-align:center"><em>Meishi</em></td>
-    <td style="text-align:center">Noun</td>
-  </tr>
-  <tr>
-    <td style="text-align:center"><code>Reta</code></td>
-    <td style="text-align:center"><em>Rentaishi</em></td>
-    <td style="text-align:center">Determiner</td>
-  </tr>
-  <tr>
-    <td style="text-align:center"><code>Stbi</code></td>
-    <td style="text-align:center"><em>Setsubiji</em></td>
-    <td style="text-align:center">Suffix</td>
-  </tr>
-  <tr>
-    <td style="text-align:center"><code>Stto</code></td>
-    <td style="text-align:center"><em>Settoji</em></td>
-    <td style="text-align:center">Prefix</td>
-  </tr>
-  <tr>
-    <td style="text-align:center"><code>Stzo</code></td>
-    <td style="text-align:center"><em>Setsuzokushi</em></td>
-    <td style="text-align:center">Conjunction</td>
-  </tr>
-  <tr>
-    <td style="text-align:center"><code>Suji</code></td>
-    <td style="text-align:center"><em>Suuji</em></td>
-    <td style="text-align:center">Numeral</td>
-  </tr>
-</table>
+| `part_of_speech` argument | Japanese meaning | English meaning |
+|:-------------------------:|:----------------:|:---------------:|
+| `Dosi` | *Doushi* | Verb |
+| `Fuku` | *Fukishi* | Adverb |
+| `Gobi` | *Gobi* | Inflection |
+| `Hoka` | *Hoka* | Other |
+| `Jodo` | *Jodoushi* | Auxiliary verb |
+| `Josi` | *Joshi* | Participle |
+| `Kato` | *Kantoushi* | Interjection |
+| `Kedo` | *Keiyodoushi* | Adjective verb |
+| `Keyo` | *Keiyoshi* | Adjective verb |
+| `Kigo` | *Kigou* | Symbol |
+| `Koyu` | *Koyuumeishi* | Proper noun |
+| `Mesi` | *Meishi* | Noun |
+| `Reta` | *Rentaishi* | Determiner |
+| `Stbi` | *Setsubiji* | Suffix |
+| `Stto` | *Settoji* | Prefix |
+| `Stzo` | *Setsuzokushi* | Conjunction |
+| `Suji` | *Suuji* | Numeral |
+{: caption="Table 1. Japanese parts of speech"}
