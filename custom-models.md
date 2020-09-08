@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-07-20"
+lastupdated: "2020-09-06"
 
 subcollection: text-to-speech
 
@@ -70,46 +70,11 @@ For more information, see [Information security](/docs/text-to-speech?topic=text
 
 To create a new custom model, use the `POST /v1/customizations` method. A new model is always empty when you first create it. You must use other methods to populate it with word/translation pairs. The new custom model is owned by the service instance whose credentials are used to create it. For more information, see [Ownership of custom voice models](#customOwner).
 
-You pass the following attributes as a JSON object with the body of the request.
+You pass the following attributes as a JSON object with the body of a `POST /v1/customizations` request:
 
-<table>
-  <caption>Table 1. Parameters of the <code>POST /v1/customizations</code>
-    method</caption>
-  <tr>
-    <th style="text-align:left; width:18%">Parameter</th>
-    <th style="text-align:center; width:12%">Data type</th>
-    <th style="text-align:left">Description</th>
-  </tr>
-  <tr>
-    <td><code>name</code><br/><em>Required</em></td>
-    <td style="text-align:center">String</td>
-    <td>
-      A user-defined name for the new custom model. The name is used
-      to label the model for easy identification. The name must be unique
-      among all custom models that you own.
-    </td>
-  </tr>
-  <tr>
-    <td><code>language</code><br/><em>Optional</em></td>
-    <td style="text-align:center">String</td>
-    <td>
-      An identifier for the language of the custom model. The default
-      is <code>en-US</code> for US English. The custom model can be used
-      with any voice, standard or neural, that is available in the specified
-      language. For example, a custom model that is created for the `en-US`
-      language can be used with any US English voice. It cannot, however,
-      be used with an `en-GB` voice.
-    </td>
-  </tr>
-  <tr>
-    <td><code>description</code><br/><em>Optional</em></td>
-    <td style="text-align:center">String</td>
-    <td>
-      A description of the new model. Although it is optional, a
-      description is highly recommended.
-    </td>
-  </tr>
-</table>
+-   `name` (*required* string) - A user-defined name for the new custom model. The name is used to label the model for easy identification. The name must be unique among all custom models that you own.
+-   `language` (*optional* string) - An identifier for the language of the custom model. The default is `en-US` for US English. The custom model can be used with any voice, standard or neural, that is available in the specified language. For example, a custom model that is created for the `en-US` language can be used with any US English voice. It cannot, however, be used with an `en-GB` voice.
+-   `description` (*optional* string) - A description of the new model. Although it is optional, a description is highly recommended.
 
 The following example `curl` command creates a new custom model named `curl Test`. The `Content-Type` header identifies the type of the input as `application/json`.
 

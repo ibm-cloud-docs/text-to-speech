@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-04-29"
+lastupdated: "2020-09-07"
 
 subcollection: text-to-speech
 
@@ -266,7 +266,7 @@ The following sections describe the valid symbols for Spanish. The information a
   </tr>
   <tr>
     <td style="text-align:center">
-      T [<strong>1</strong>]
+      T [**1**]
     </td>
     <td style="text-align:center">
       &#952;
@@ -299,8 +299,8 @@ The following sections describe the valid symbols for Spanish. The information a
       j
     </td>
     <td style="text-align:center">
-      h [<strong>2</strong>]<br/><br/>
-      x [<strong>3</strong>]
+      h [**2**]<br/><br/>
+      x [**3**]
     </td>
     <td style="text-align:center">
       0068<br/><br/>
@@ -382,11 +382,11 @@ The following sections describe the valid symbols for Spanish. The information a
   </tr>
   <tr>
     <td style="text-align:center">
-      L [<strong>4</strong>]
+      L [**4**]
     </td>
     <td style="text-align:center">
       &#654;<br/><br/>
-      &#669; [<strong>5</strong>]
+      &#669; [**5**]
     </td>
     <td style="text-align:center">
       028E<br/><br/>
@@ -402,7 +402,7 @@ The following sections describe the valid symbols for Spanish. The information a
       Y
     </td>
     <td style="text-align:center">
-      &#669; [<strong>6</strong>]
+      &#669; [**6**]
     </td>
     <td style="text-align:center">
       029D
@@ -529,7 +529,7 @@ Each allophone is a variation of the phoneme indicated in parentheses. If an all
   </tr>
   <tr>
     <td style="text-align:center">
-      'ng' [<strong>1</strong>]
+      'ng' [**1**]
     </td>
     <td style="text-align:center">
       &#331;g
@@ -543,7 +543,7 @@ Each allophone is a variation of the phoneme indicated in parentheses. If an all
   </tr>
   <tr>
     <td style="text-align:center">
-      'nk' [<strong>1</strong>]
+      'nk' [**1**]
     </td>
     <td style="text-align:center">
       &#331;k

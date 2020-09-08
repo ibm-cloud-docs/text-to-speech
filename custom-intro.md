@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-09-04"
+lastupdated: "2020-09-07"
 
 subcollection: text-to-speech
 
@@ -58,23 +58,10 @@ For example, the service's regular pronunciation rules properly translate many c
 
 Another example of an acronym is the word *IEEE*, which stands for Institute of Electrical and Electronic Engineers. By default, the service pronounces this acronym as *I E E E*. But the acronym is commonly pronounced *I triple E*, which you can easily define by using the simple sounds-like translation *I triple E*. If the word *IEEE* appears in your custom model with this translation, the service substitutes each occurrence of the word with the translation. It then applies its regular pronunciation rules to the individual words *I*, *triple*, and *E* to yield the common pronunciation.
 
-You can apply the sounds-like method to more than just abbreviations and acronyms. It works equally well for complex or unusual words. For example, the following pair of sounds-like translations yields correct pronunciations for unusual words that are handled imperfectly by the service's regular pronunciation rules. Finding proper translations for such words can be more challenging than for simple abbreviations. The following translations use the regular pronunciation rules to alter the words' spelling.
+You can apply the sounds-like method to more than just abbreviations and acronyms. It works equally well for complex or unusual words. For example, the following pair of sounds-like translations yields correct pronunciations for unusual words that are handled imperfectly by the service's regular pronunciation rules. Finding proper translations for such words can be more challenging than for simple abbreviations. The following examples use the regular pronunciation rules to alter the words' spelling for translation:
 
-<table style="width:35%">
-  <caption>Table 1. Example sounds-like translations</caption>
-  <tr>
-    <th style="text-align:left">Word</th>
-    <th style="text-align:left">Translation</th>
-  </tr>
-  <tr>
-    <td>ayurvedic</td>
-    <td>aayervedic</td>
-  </tr>
-  <tr>
-    <td>gastroenteritis</td>
-    <td>gastro enteritis</td>
-  </tr>
-</table>
+-   *Word*: `ayurvedic`, *Translation*: `aayervedic`
+-   *Word*: `gastroenteritis`, *Translation*: `gastro enteritis`
 
 As these examples show, developing sounds-like translations can be more trial-and-error than formulaic. You create a candidate translation based on your intuition and experience with the service. You then synthesize the word for the candidate translation as input text and listen to the resulting audio. If you are satisfied with the pronunciation, you can use the translation in your custom model; otherwise, you modify the translation and test it again.
 
@@ -90,27 +77,14 @@ The sounds-like method is a relatively simple and useful way of achieving a pron
 
 In either case, you specify a translation by using a specific phoneme format that is based on the Speech Synthesis Markup Language (SSML). SSML is an XML-based markup language that provides annotations of text for speech-synthesis applications. You specify the phonetic translation for a word by using the SSML `<phoneme>` element:
 
-<pre><code>&lt;phoneme alphabet="{ipa | ibm}" ph="{translation}"&gt;&lt;/phoneme&gt;</code></pre>
+`<phoneme alphabet="{ipa | ibm}" ph="{translation}"></phoneme>`
 
 The `alphabet` attribute specifies the phonetic representation type: `ipa` or `ibm`. The `ph` attribute specifies the phonetic translation string.
 
-For example, consider the word `trinitroglycerin`. The service's regular pronunciation rules produce a pronunciation that differs from the one commonly used by chemists and physicians. The correct pronunciation can be achieved with a phonetic translation.
+For example, consider the word `trinitroglycerin`. The service's regular pronunciation rules produce a pronunciation that differs from the one commonly used by chemists and physicians. The correct pronunciation can be achieved with a phonetic translation:
 
-<table style="width:35%">
-  <caption>Table 2. Example phonetic translations</caption>
-  <tr>
-    <th style="text-align:left">Alphabet</th>
-    <th style="text-align:left">Translation</th>
-  </tr>
-  <tr>
-    <td>IPA</td>
-    <td>t&#633;a&#618;n&#712;a&#618;t&#633;&#601;gl&#618;s&#601;&#633;&#616;n</td>
-  </tr>
-  <tr>
-    <td>SPR</td>
-    <td>trYn1YtrxglIsxrXn</td>
-  </tr>
-</table>
+-   *IPA*: <code>t&#633;a&#618;n&#712;a&#618;t&#633;&#601;gl&#618;s&#601;&#633;&#616;n</code>
+-   *SPR*: `trYn1YtrxglIsxrXn`
 
 In these examples, the phonetic translation string is composed of phoneme symbols and a single primary stress mark. The primary stress mark is represented by <code>&#712;</code> in IPA and by `1` in SPR. It is placed just before the symbol for the stressed vowel in both cases. Although the examples do not show it, you can also specify syllable boundaries and secondary stress positions in a phonetic translation. These elements are not required and normally are not needed to achieve a pronunciation. As with sounds-like translations, you can compose a phonetic translation from multiple strings that are delimited by spaces.
 
@@ -140,4 +114,4 @@ You can mix the sounds-like and phonetic methods in the same translation. This f
 
 For instance, assume that you used the sounds-like method to get part of a word pronounced satisfactorily. But you now need to fine-tune the remaining elements of the word. You can use the phonetic method to specify the difficult aspects of the word. The following example applies mixed translation to the word `trinitroglycerin`:
 
-<pre><code>try&lt;phoneme alphabet="ipa" ph="n&#712;a&#618;t&#633;&#601;gl&#618;s&#601;&#633;&#616;n"&gt;&lt;/phoneme&gt;</code></pre>
+<code>try&lt;phoneme alphabet="ipa" ph="n&#712;a&#618;t&#633;&#601;gl&#618;s&#601;&#633;&#616;n"&gt;&lt;/phoneme&gt;</code>

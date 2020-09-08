@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-04-29"
+lastupdated: "2020-09-07"
 
 subcollection: text-to-speech
 
@@ -624,7 +624,7 @@ If an allophone is not used in SPR, the {{site.data.keyword.texttospeechshort}} 
   </tr>
   <tr>
     <td style="text-align:center">
-      'ng' [<strong>1</strong>]
+      'ng' [**1**]
     </td>
     <td style="text-align:center">
       &#331;g
@@ -639,7 +639,7 @@ If an allophone is not used in SPR, the {{site.data.keyword.texttospeechshort}} 
   </tr>
   <tr>
     <td style="text-align:center">
-      'nk' [<strong>1</strong>]
+      'nk' [**1**]
     </td>
     <td style="text-align:center">
       &#331;k

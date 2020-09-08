@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-07-01"
+lastupdated: "2020-09-07"
 
 subcollection: text-to-speech
 
@@ -45,6 +45,15 @@ You can download a PDF file that documents tables 1 through 4: <a target="_blank
 
 ## Pinyin characters (part 1)
 {: #zhPinyinPart1}
+
+<!--
+| Finals/<br/>Initials | a | o | e | i | u | v | er | ai | ao | ou | un |
+|:--------------------:|:-:|:-:|:-:|:-:|:-:|:-:|:--:|:--:|:--:|:--:|:--:|
+| **-** | a | o | e | - | - | - | er | ai | ao | ou | - |
+| **b** | ba | bo | - | bi | bu | - | - | bai | bao | - | - |
+| **p** | pa | po | - | pi | pu | - | - | pai | pao | pou | - |
+{: caption="Table 0. Pinyin characters (part 1)"}
+-->
 
 <table>
   <caption>Table 1. Pinyin characters (part 1)</caption>
@@ -2916,6 +2925,17 @@ You can download a PDF file that documents tables 1 through 4: <a target="_blank
 
 ## Pinyin tone symbols
 {: #zhPinyinTones}
+
+<!--
+| IPA symbol | IPA Unicode | Definition |
+|:----------:|:-----------:|:----------:|
+| &#741;&#741; | 02E5+02E5 | Tone 1 |
+| &#743;&#741; | 02E7+02E5 | Tone 2 |
+| &#744;&#745;&#742; | 02E8+02E9+02E6 | Tone 3 |
+| &#741;&#745; | 02E5+02E9 | Tone 4 |
+| &#743;&#743; | 02E7+02E7 | Neutral tone |
+{: caption="Table 0. Pinyin tone symbols"}
+-->
 
 <table style="width:70%">
   <caption>Table 4. Pinyin tone symbols</caption>

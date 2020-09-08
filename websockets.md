@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-06-30"
+lastupdated: "2020-09-06"
 
 subcollection: text-to-speech
 
@@ -56,7 +56,6 @@ wss://api.{location}.text-to-speech.watson.cloud.ibm.com/instances/{instance_id}
 
 where `{location}` indicates where your application is hosted:
 
-
 -   `us-south` for Dallas
 -   `us-east` for Washington, DC
 -   `eu-de` for Frankfurt
@@ -70,96 +69,14 @@ And `{instance_id}` is the unique identifier of the service instance.
 The examples in the documentation abbreviate `wss://api.{location}.text-to-speech.watson.cloud.ibm.com/instances/{instance_id}` to `{ws_url}`. So all WebSocket examples call the method as `{ws_url}/v1/synthesize`.
 {: note}
 
-A WebSocket client calls this method with the following query parameters to establish an authenticated connection with the service. If you use Identity and Access Management (IAM) authentication, use the `access_token` query parameter. If you use Cloud Foundry service credentials, use the `watson-token` query parameter.
+A WebSocket client calls the `/v1/synthesize` method with the following query parameters to establish an authenticated connection with the service.
 
-<table>
-  <caption>Table 1. Parameters of the <code>/v1/synthesize</code>
-    method</caption>
-  <tr>
-    <th style="text-align:left; width:23%">Parameter</th>
-    <th style="text-align:center; width:12%">Data type</th>
-    <th style="text-align:left">Description</th>
-  </tr>
-  <tr>
-    <td style="text-align:left"><code>access_token</code>
-      <br/><em>Optional</em></td>
-    <td style="text-align:center">String</td>
-    <td style="text-align:left">
-      <em>If you use IAM authentication,</em> pass a valid IAM access
-      token to authenticate with the service. You pass an IAM access
-      token instead of passing an API key with the call. You must use
-      the access token before it expires. For information about obtaining
-      an access token, see
-      [Authenticating to Watson services](/docs/watson?topic=watson-iam).
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:left"><code>watson-token</code>
-      <br/><em>Optional</em></td>
-    <td style="text-align:center">String</td>
-    <td style="text-align:left">
-      <em>If you use Cloud Foundry service credentials,</em> pass a valid
-      {{site.data.keyword.watson}} authentication token to authenticate
-      with the service. You pass a {{site.data.keyword.watson}} token
-      instead of passing service credentials with the call.
-      {{site.data.keyword.watson}} tokens are based on Cloud Foundry
-      service credentials, which use a `username` and `password` for
-      HTTP basic authentication. For information about obtaining a
-      {{site.data.keyword.watson}} token, see
-      [{{site.data.keyword.watson}} tokens](/docs/watson?topic=watson-gs-tokens-watson-tokens).
-    </td>
-  </tr>
-  <tr>
-    <td><code>voice</code><br/><em>Optional</em></td>
-    <td style="text-align:center">String</td>
-    <td>
-      Specifies the voice in which the text is to be spoken in the audio.
-      Omit the parameter to use the default voice, `en-US_MichaelVoice`.
-      For more information, see
-      [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
-    </td>
-  </tr>
-  <tr>
-    <td><code>customization_id</code><br/><em>Optional</em></td>
-    <td style="text-align:center">String</td>
-    <td>
-      Specifies the globally unique identifier (GUID) for a custom voice
-      model that is to be used for the synthesis. A specified custom voice
-      model must match the language of the voice that is used for the
-      synthesis. If you include a customization ID, you must make the
-      request with credentials for the instance of the service that owns
-      the custom model. Omit the parameter to use the specified voice with
-      no customization. For more information, see
-      [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
-    </td>
-  </tr>
-  <tr>
-    <td><code>x-watson-learning-opt-out</code><br/><em>Optional</em></td>
-    <td style="text-align:center">Boolean</td>
-    <td>
-      Indicates whether the service logs requests and results that are sent
-      over the connection. To prevent IBM from accessing your data for general
-      service improvements, specify <code>true</code> for the parameter. For
-      more information, see
-      [Controlling request logging for Watson services](/docs/watson?topic=watson-gs-logging-overview).
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:left"><code>x-watson-metadata</code>
-      <br/><em>Optional</em></td>
-    <td style="text-align:center">String</td>
-    <td style="text-align:left">
-      Associates a customer ID with data that is passed over the
-      connection. The parameter accepts the argument
-      <code>customer_id={id}</code>, where <code>id</code> is a random
-      or generic string that is to be associated with the data. You must
-      URL-encode the argument to the parameter, for example,
-      `customer_id%3dmy_ID`. By default, no customer ID is associated
-      with the data. For more information, see
-      [Information security](/docs/text-to-speech?topic=text-to-speech-information-security).
-    </td>
-  </tr>
-</table>
+-   `access_token` (*optional* string) - *If you use Identity and Access Management (IAM) authentication,* pass a valid IAM access token to authenticate with the service. You pass an IAM access token instead of passing an API key with the call. You must use the access token before it expires. For information about obtaining an access token, see [Authenticating to Watson services](/docs/watson?topic=watson-iam).
+-   `watson-token` (*optional* string) - *If you use Cloud Foundry service credentials,* pass a valid {{site.data.keyword.watson}} authentication token to authenticate with the service. You pass a {{site.data.keyword.watson}} token instead of passing service credentials with the call. {{site.data.keyword.watson}} tokens are based on Cloud Foundry service credentials, which use a `username` and `password` for HTTP basic authentication. For information about obtaining a {{site.data.keyword.watson}} token, see [{{site.data.keyword.watson}} tokens](/docs/watson?topic=watson-gs-tokens-watson-tokens).
+-   `voice` (*optional* string) - Specifies the voice in which the text is to be spoken in the audio. Omit the parameter to use the default voice, `en-US_MichaelVoice`. For more information, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
+-   `customization_id` (*optional* string) - Specifies the globally unique identifier (GUID) for a custom voice model that is to be used for the synthesis. A specified custom voice model must match the language of the voice that is used for the synthesis. If you include a customization ID, you must make the request with credentials for the instance of the service that owns the custom model. Omit the parameter to use the specified voice with no customization. For more information, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
+-   `x-watson-learning-opt-out` (*optional* boolean) - Indicates whether the service logs requests and results that are sent over the connection. To prevent IBM from accessing your data for general service improvements, specify `true` for the parameter. For more information, see [Controlling request logging for Watson services](/docs/watson?topic=watson-gs-logging-overview).
+-   `x-watson-metadata` (*optional* string) - Associates a customer ID with data that is passed over the connection. The parameter accepts the argument `customer_id={id}`, where `id` is a random or generic string that is to be associated with the data. You must URL-encode the argument to the parameter, for example, `customer_id%3dmy_ID`. By default, no customer ID is associated with the data. For more information, see [Information security](/docs/text-to-speech?topic=text-to-speech-information-security).
 
 The following snippet of JavaScript code opens a connection with the service. The call to the `/v1/synthesize` method passes the `voice` and `access_token` query parameters, the former to direct the service to use the US English Allison voice. Once the connection is established, the event listeners (`onOpen`, `onClose`, and so on) are defined to respond to events from the service.
 
@@ -184,54 +101,9 @@ websocket.onerror = function(evt) { onError(evt) };
 
 To synthesize text, the client passes a simple JSON text message to the service with the following parameters.
 
-<table>
-  <caption>Table 2. Parameters of the JSON text message</caption>
-  <tr>
-    <th style="text-align:left; width:23%">Parameter</th>
-    <th style="text-align:center; width:12%">Data type</th>
-    <th style="text-align:left">Description</th>
-  </tr>
-  <tr>
-    <td><code>text</code><br/><em>Required</em></td>
-    <td style="text-align:center">String</td>
-    <td>
-      Provides the text that is to be synthesized. The client can pass
-      plain text or text that is annotated with the Speech Synthesis
-      Markup Language (SSML). The client can pass a maximum of 5 KB of
-      input text with the request. The limit includes any SSML that you
-      specify. For more information, see
-      [Specifying input text](/docs/text-to-speech?topic=text-to-speech-usingHTTP#input)
-      and the sections that follow it.<br/><br/>
-      SSML input can also include the <code>&lt;mark&gt;</code> element.
-      For more information, see
-      [Specifying an SSML mark](/docs/text-to-speech?topic=text-to-speech-timing#mark).
-    </td>
-  </tr>
-  <tr>
-    <td><code>accept</code><br/><em>Required</em></td>
-    <td style="text-align:center">String</td>
-    <td>
-      Specifies the requested format (MIME type) of the audio. Use
-      `*/*` to request the default audio format,
-      <code>audio/ogg;codecs=opus</code>. For more information, see
-      [Audio formats](/docs/text-to-speech?topic=text-to-speech-audioFormats).
-    </td>
-  </tr>
-  <tr>
-    <td><code>timings</code><br/><em>Optional</em></td>
-    <td style="text-align:center">String[ ]</td>
-    <td>
-      Specifies that the service is to return word timing information
-      for all strings of the input text. The service returns the start
-      and end time of each token of the input. Specify <code>words</code>
-      as the lone element of the array to request word timings. Specify
-      an empty array or omit the parameter to receive no word timings.
-      For more information, see
-      [Obtaining word timings](/docs/text-to-speech?topic=text-to-speech-timing#timing).<br/><br/>
-      <em>Not supported for Japanese input text.</em>
-    </td>
-  </tr>
-</table>
+-   `text` (*required* string) - Provides the text that is to be synthesized. The client can pass plain text or text that is annotated with the Speech Synthesis Markup Language (SSML). The client can pass a maximum of 5 KB of input text with the request. The limit includes any SSML that you specify. For more information, see [Specifying input text](/docs/text-to-speech?topic=text-to-speech-usingHTTP#input) and the sections that follow it. (SSML input can also include the `&lt;mark&gt;` element. For more information, see [Specifying an SSML mark](/docs/text-to-speech?topic=text-to-speech-timing#mark).)
+-   `accept` (*required* string) - Specifies the requested format (MIME type) of the audio. Use `*/*` to request the default audio format, `audio/ogg;codecs=opus`. For more information, see [Audio formats](/docs/text-to-speech?topic=text-to-speech-audioFormats).
+-   `timings` (*optional* string[ ]) - Specifies that the service is to return word timing information for all strings of the input text. The service returns the start and end time of each token of the input. Specify `words` as the lone element of the array to request word timings. Specify an empty array or omit the parameter to receive no word timings. For more information, see [Obtaining word timings](/docs/text-to-speech?topic=text-to-speech-timing#timing). *Not supported for Japanese input text.*
 
 The following snippet of JavaScript code passes a simple "Hello world" message as the input text and requests the default format for the audio. The calls are included in the `onOpen` function that is defined for the client to ensure that they are sent only after the connection is established.
 

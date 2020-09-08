@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-02-04"
+lastupdated: "2020-09-06"
 
 subcollection: text-to-speech
 
@@ -79,105 +79,16 @@ The following examples apply the two built-in transformations to the same senten
 
 Custom transformations give you more fine-grained control over different aspects of the voice transformation. To use a custom transformation, you specify `Custom` for the `type` attribute. You can then use one or more of the following optional attributes to control the transformation.
 
-<table>
-  <caption>Table 1. Custom transformation attributes</caption>
-  <tr>
-    <th style="width:15%; text-align:left">Attribute</th>
-    <th style="width:25%; text-align:center">Range</th>
-    <th style="text-align:left">Description</th>
-  </tr>
-  <tr>
-    <td><code>pitch</code></td>
-    <td style="text-align:center">[-100%, 100%],<br/>
-      [<code>x-low</code>, <code>low</code>, <code>default</code>,
-      <code>high</code>, <code>x-high</code>]</td>
-    <td>
-      Normalized relative change of the average pitch contour
-      level within safe limits. The attribute controls the perceived
-      average tone level. It is borrowed from the <code>pitch</code>
-      attribute of the SSML <code>&lt;prosody&gt;</code> element. It
-      contributes to changing perceived speaker identity.
-    </td>
-  </tr>
-  <tr>
-    <td><code>pitch_range</code></td>
-    <td style="text-align:center">[-100%, 100%],<br/>
-      [<code>x-narrow</code>, <code>narrow</code>, <code>default</code>,
-      <code>wide</code>, <code>x-wide</code>]</td>
-    <td>
-      Normalized relative change of the pitch contour dynamic range
-      within safe limits. Increasing or decreasing the pitch range
-      makes the speech style more or less expressive. The attribute
-      is borrowed from the <code>range</code> attribute of the SSML
-      <code>&lt;prosody&gt;</code> element.</td>
-  </tr>
-  <tr>
-    <td><code>glottal_tension</code></td>
-    <td style="text-align:center">[-100%, 100%],<br/>
-      [<code>x-low</code>, <code>low</code>, <code>default</code>,
-      <code>high</code>, <code>x-high</code>]</td>
-    <td>
-      Normalized relative change of the glottal tension within safe
-      limits. Increasing or decreasing the glottal tension is perceived
-      as a more tense or lax speech quality. A positive value might
-      produce buzzing sounds, which you can alleviate by increasing
-      the value of the <code>breathiness</code> attribute. A negative
-      value is perceived as more breathy and generally more pleasant.
-    </td>
-  </tr>
-  <tr>
-    <td><code>breathiness</code></td>
-    <td style="text-align:center">[-100%, 100%],<br/>
-      [<code>x-low</code>, <code>low</code>, <code>default</code>,
-      <code>high</code>, <code>x-high</code>]</td>
-    <td>
-      Normalized relative change of the perceived level of the aspiration
-      noise within safe limits. Extreme values might produce either noisy
-      speech (for positive breathiness) or a buzzing sound (for negative
-      breathiness). Use this attribute to compensate for buzz or extra
-      noise that is produced as a side effect of other attributes.
-    </td>
-  </tr>
-  <tr>
-    <td><code>rate</code></td>
-    <td style="text-align:center">[-100%, 100%],<br/>
-      [<code>x-slow</code>, <code>slow</code>, <code>default</code>,
-      <code>fast</code>, <code>x-fast</code>]</td>
-    <td>
-      Normalized relative change of the speech rate within safe limits.
-      Increasing or decreasing the rate makes speech faster or slower.
-      A positive (faster) rate makes the perceived pitch range wider,
-      and a negative (slower) rate perceptually narrows the pitch range.
-      The attribute is borrowed from the <code>rate</code> attribute of
-      the SSML <code>&lt;prosody&gt;</code> element.</td>
-  </tr>
-  <tr>
-    <td><code>timbre</code></td>
-    <td style="text-align:center">[<code>Sunrise</code>,
-      <code>Breeze</code>]</td>
-    <td>
-      The case-sensitive name of one of the built-in vocal-tract
-      transformations: <code>Sunrise</code> or <code>Breeze</code>.
-      The names are symbolic. Experiment with the timbres to learn
-      how they impact voice transformation. The attribute contributes
-      to changing perceived speaker identity.
-    </td>
-  </tr>
-  <tr>
-    <td><code>timbre_extent</code></td>
-    <td style="text-align:center">[0%, 100%]</td>
-    <td>
-      The extent of the <code>timbre</code> vocal-tract transformation:
-      <code>0%</code> cancels the transformation; <code>100%</code>
-      represents full application of the transformation. The attribute
-      quantifies the difference between the transformed and original
-      voices. It enables blending of the selected timbre with the timbre
-      of the original voice. Even at moderate timbre extent values, the
-      <code>timbre</code> attribute contributes to changing perceived
-      speaker identity.
-    </td>
-  </tr>
-</table>
+| Attribute | Range | Description |
+|-----------|:-----:|-------------|
+| `pitch` | [-100%, 100%],<br/>[`x-low`, `low`,<br/>`default`,<br/>`high`, `x-high`] | Normalized relative change of the average pitch contour level within safe limits. The attribute controls the perceived average tone level. It is borrowed from the `pitch` attribute of the SSML `<prosody>` element. It contributes to changing perceived speaker identity. |
+| `pitch_range` | [-100%, 100%],<br/>[`x-narrow`, `narrow`,<br/>`default`,<br/>`wide`, `x-wide`] | Normalized relative change of the pitch contour dynamic range within safe limits. Increasing or decreasing the pitch range makes the speech style more or less expressive. The attribute is borrowed from the `range` attribute of the SSML `<prosody>` element. |
+| `glottal_tension` | [-100%, 100%],<br/>[`x-low`, `low`,<br/>`default`,<br/>`high`, `x-high`] | Normalized relative change of the glottal tension within safe limits. Increasing or decreasing the glottal tension is perceived as a more tense or lax speech quality. A positive value might produce buzzing sounds, which you can alleviate by increasing the value of the `breathiness` attribute. A negative value is perceived as more breathy and generally more pleasant. |
+| `breathiness` | [-100%, 100%],<br/>[`x-low`, `low`,<br/>`default`,<br/>`high`, `x-high`] | Normalized relative change of the perceived level of the aspiration noise within safe limits. Extreme values might produce either noisy speech (for positive breathiness) or a buzzing sound (for negative breathiness). Use this attribute to compensate for buzz or extra noise that is produced as a side effect of other attributes. |
+| `rate` | [-100%, 100%],<br/>[`x-slow`, `slow`,<br/>`default`,<br/>`fast`, `x-fast`] | Normalized relative change of the speech rate within safe limits. Increasing or decreasing the rate makes speech faster or slower. A positive (faster) rate makes the perceived pitch range wider, and a negative (slower) rate perceptually narrows the pitch range. The attribute is borrowed from the `rate` attribute of the SSML `<prosody>` element. |
+| `timbre` | [`Sunrise`, `Breeze`] | The case-sensitive name of one of the built-in vocal-tract transformations: `Sunrise` or `Breeze`. The names are symbolic. Experiment with the timbres to learn how they impact voice transformation. The attribute contributes to changing perceived speaker identity. |
+| `timbre_extent` | [0%, 100%] | The extent of the `timbre` vocal-tract transformation: `0%` cancels the transformation; `100%` represents full application of the transformation. The attribute quantifies the difference between the transformed and original voices. It enables blending of the selected timbre with the timbre of the original voice. Even at moderate timbre extent values, the `timbre` attribute contributes to changing perceived speaker identity.
+{: caption="Table 1. Custom transformation attributes"}
 
 ### Using ranges
 {: #ranges}
