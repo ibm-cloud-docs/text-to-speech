@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-09-07"
+lastupdated: "2020-09-10"
 
 subcollection: text-to-speech
 
@@ -60,8 +60,10 @@ Another example of an acronym is the word *IEEE*, which stands for Institute of 
 
 You can apply the sounds-like method to more than just abbreviations and acronyms. It works equally well for complex or unusual words. For example, the following pair of sounds-like translations yields correct pronunciations for unusual words that are handled imperfectly by the service's regular pronunciation rules. Finding proper translations for such words can be more challenging than for simple abbreviations. The following examples use the regular pronunciation rules to alter the words' spelling for translation:
 
--   *Word*: `ayurvedic`, *Translation*: `aayervedic`
--   *Word*: `gastroenteritis`, *Translation*: `gastro enteritis`
+-   *Word*: `ayurvedic`<br/>
+    *Translation*: `aayervedic`
+-   *Word*: `gastroenteritis`<br/>
+    *Translation*: `gastro enteritis`
 
 As these examples show, developing sounds-like translations can be more trial-and-error than formulaic. You create a candidate translation based on your intuition and experience with the service. You then synthesize the word for the candidate translation as input text and listen to the resulting audio. If you are satisfied with the pronunciation, you can use the translation in your custom model; otherwise, you modify the translation and test it again.
 
