@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-09-04"
+lastupdated: "2020-09-11"
 
 subcollection: text-to-speech
 
@@ -27,7 +27,7 @@ subcollection: text-to-speech
 # About
 {: #about}
 
-**Service update:** *As of 4 September 2020, the customization interface of the {{site.data.keyword.texttospeechshort}} service is generally available. Customization is no longer beta functionality. For more information, see the [4 September 2020 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#September2020) in the release notes.*
+**Service update:** *As of 4 September 2020, the customization interface of the {{site.data.keyword.texttospeechshort}} service is generally available. Customization is no longer beta functionality. Also, the service was updated on 10 September 2020 to address a defect with Japanese SSML. For more information, see the [10 September 2020 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#September2020b) in the release notes.*
 
 The {{site.data.keyword.texttospeechfull}} service provides application programming interfaces (APIs) that use {{site.data.keyword.IBM_notm}}'s speech-synthesis capabilities to convert written text to natural-sounding speech. The service streams the synthesized audio back to the client with minimal delay. The audio uses appropriate cadence and intonation for its language and dialect to provide voices that are smooth and natural.
 
