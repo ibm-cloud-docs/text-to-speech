@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-09-07"
+lastupdated: "2020-09-11"
 
 subcollection: text-to-speech
 
@@ -38,8 +38,21 @@ The service has the following known limitations:
     You can use only sounds-like translations for Arabic word pronunciation. For more information, see [Sounds-like translation](/docs/text-to-speech?topic=text-to-speech-customIntro#soundsLike).
 -   When you specify the `audio/ogg;codecs=opus` audio format, you can optionally specify a sampling rate other than the default 48,000 Hz. However, while the service accepts `48000`, `24000`, `16000`, `12000`, or `8000` as a valid sampling rate, it currently disregards a specified value and always returns the audio with a sampling rate of 48 kHz.
 
+## 10 September 2020
+{: #September2020b}
+
+**Defect fix:** For the `ja-JP_EmiV3Voice` voice, the service now correctly parses SSML input text that includes a prosody rate specification. Previously, the following use of the `<prosody>` element worked properly:
+
+<code>&lt;speak&gt;&#25104;&#21151;&#12377;&#12427;&#47;&#32321;&#26628;&#12377;&#12427;&lt;/speak&gt;</code>
+
+But the following use of the `rate` attribute with the `<prosody>` element caused the service to read and speak the embedded SSML notation:
+
+<code>&lt;speak rate="fast"&gt;&#25104;&#21151;&#12377;&#12427;&#47;&#32321;&#26628;&#12377;&#12427;&lt;/speak&gt;</code>
+
+The service now correctly parses and applies the `rate` attribute of the `<prosody>` element for Japanese input.
+
 ## 4 September 2020
-{: #September2020}
+{: #September2020a}
 
 The customization interface is now generally available. Customization is no longer beta functionality.
 
@@ -55,31 +68,10 @@ You can use the customization interface to specify how the service pronounces un
     It also offers an improved version of the existing UK neural voice, `en-KateV3Voice`. For more information about these and all available voices, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
 -   The service now supports the `digits` attribute of the SSML `<say-as>` element with its Japanese voice. For more information, see [The say-as element](/docs/text-to-speech?topic=text-to-speech-elements#say-as_element).
 
-## 1 April 2020
-{: #April2020}
-
--   The service now supports two standard female Korean voices: `ko-KR_YoungmiVoice` and `ko-KR_YunaVoice`. The following information applies to both Korean voices:
-    -   The voices are beta functionality. They might not be ready for production use and are subject to change. They are initial offerings that are expected to improve in quality with time and usage.
-    -   The voices support voice model customization and the `/v1/pronunciation` method.
-    -   The voices support the `<mark>` element and the `timings` parameter that are available with the WebSocket interface.
-    -   The voices support all Speech Synthesis Markup Language (SSML) elements except for expressive SSML and voice transformation SSML.
-    -   The voices support only the International Phonetic Alphabet (IPA), not {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR), with the `<phoneme>` element.
--   The beta Arabic, Chinese, and Dutch voices now support the following features:
-    -   Voice model customization and the `/v1/pronunciation` method.
-    -   The `<mark>` element and the `timings` parameter that are available with the WebSocket interface.
-
-See the following sections for additional information:
-
--   For more information about all available voices, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
--   For more information about voice model customization, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
--   For more information about the use of IPA and SPR with voice customization, see [Using phonetic symbols](/docs/text-to-speech?topic=text-to-speech-sprs).
-
-The IPA symbols for the Arabic, Chinese, Dutch, and Korean languages are not yet documented. This documentation will be made available soon.
-{: note}
-
 ## Older releases
 {: #older}
 
+-   [1 April 2020](#April2020)
 -   [24 February 2020](#February2020)
 -   [18 December 2019](#December2019b)
 -   [12 December 2019](#December2019a)
@@ -108,6 +100,28 @@ The IPA symbols for the Arabic, Chinese, Dutch, and Korean languages are not yet
 -   [17 December 2015](#December2015)
 -   [21 September 2015](#September2015)
 -   [1 July 2015](#July2015)
+
+### 1 April 2020
+{: #April2020}
+
+-   The service now supports two standard female Korean voices: `ko-KR_YoungmiVoice` and `ko-KR_YunaVoice`. The following information applies to both Korean voices:
+    -   The voices are beta functionality. They might not be ready for production use and are subject to change. They are initial offerings that are expected to improve in quality with time and usage.
+    -   The voices support voice model customization and the `/v1/pronunciation` method.
+    -   The voices support the `<mark>` element and the `timings` parameter that are available with the WebSocket interface.
+    -   The voices support all Speech Synthesis Markup Language (SSML) elements except for expressive SSML and voice transformation SSML.
+    -   The voices support only the International Phonetic Alphabet (IPA), not {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR), with the `<phoneme>` element.
+-   The beta Arabic, Chinese, and Dutch voices now support the following features:
+    -   Voice model customization and the `/v1/pronunciation` method.
+    -   The `<mark>` element and the `timings` parameter that are available with the WebSocket interface.
+
+See the following sections for additional information:
+
+-   For more information about all available voices, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
+-   For more information about voice model customization, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
+-   For more information about the use of IPA and SPR with voice customization, see [Using phonetic symbols](/docs/text-to-speech?topic=text-to-speech-sprs).
+
+The IPA symbols for the Arabic, Chinese, Dutch, and Korean languages are not yet documented. This documentation will be made available soon.
+{: note}
 
 ### 24 February 2020
 {: #February2020}
