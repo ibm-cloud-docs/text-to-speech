@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-09-10"
+lastupdated: "2020-09-16"
 
 subcollection: text-to-speech
 
@@ -41,7 +41,7 @@ In summary, a pinyin translation is expressed as: *Initial* + *Final* + *Tone*. 
 -   The top row shows the *final* characters, which change from table to table.
 -   The intersecting cells of the table show how the initial and final characters can be combined to produce a Chinese character. A dash (`-`) in a cell indicates that the combination of initial and final characters is not supported.
 
-You can download a PDF file that documents tables 1 through 4: <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/Text-to-Speech-Chinese-Pinyin.pdf" download="Text-to-Speech-Chinese-Pinyin.pdf">Text-to-Speech-Chinese-Pinyin.pdf <img src="../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a>. The information in the file matches the tables, but the file might be easier to work with.
+You can download a PDF file that documents tables 1 through 4: [Text-to-Speech-Chinese-Pinyin.pdf](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/Text-to-Speech-Chinese-Pinyin.pdf){: external}. The information in the file matches the tables, but the file might be easier to work with.
 
 ## Pinyin characters (part 1)
 {: #zhPinyinPart1}
