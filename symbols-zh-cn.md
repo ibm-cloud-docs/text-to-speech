@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-09-16"
+lastupdated: "2020-09-17"
 
 subcollection: text-to-speech
 
@@ -22,7 +22,7 @@ subcollection: text-to-speech
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# Mandarin Chinese symbols
+# Chinese (Mandarin) symbols
 {: #zhSymbols}
 
 The following sections describe the valid symbols for Mandarin (Simplified) Chinese. Chinese symbols are described by using [Pinyin](https://en.wikipedia.org/wiki/Pinyin){: external}, which is a system that uses Latin characters to express how Chinese characters sound.
@@ -46,7 +46,7 @@ You can download a PDF file that documents tables 1 through 4: [Text-to-Speech-C
 ## Pinyin characters (part 1)
 {: #zhPinyinPart1}
 
-| Finals /<br/>Initials | a | o | e | i | u | v | er | ai | ao | ou | un |
+| Finals /<br/>Initials | <br/>a | <br/>o | <br/>e | <br/>i | <br/>u | <br/>v | <br/>er | <br/>ai | <br/>ao | <br/>ou | <br/>un |
 |:---------------------:|:-:|:-:|:-:|:-:|:-:|:-:|:--:|:--:|:--:|:--:|:--:|
 | **-** | a | o | e | - | - | - | er | ai | ao | ou</tph>| - |
 | **b** | ba | bo | - | bi | bu | - | - | bai | bao | - | - |
@@ -77,7 +77,7 @@ You can download a PDF file that documents tables 1 through 4: [Text-to-Speech-C
 ## Pinyin characters (part 2)
 {: #zhPinyinPart2}
 
-| Finals /<br/>Initials | ei | ia | ie | iu | iao | ua | uo | ui | uai | ue | uan |
+| Finals /<br/>Initials | <br/>ei | <br/>ia | <br/>ie | <br/>iu | <br/>iao | <br/>ua | <br/>uo | <br/>ui | <br/>uai | <br/>ue | <br/>uan |
 |:---------------------:|:--:|:--:|:--:|:--:|:---:|:--:|:--:|:--:|:---:|:--:|:---:|
 | **-** | ei | - | - | - | - | - | - | - | - | -</tph>| - |
 | **b** | bei | - | bie | - | biao | - | - | - | - | - | - |
@@ -108,7 +108,7 @@ You can download a PDF file that documents tables 1 through 4: [Text-to-Speech-C
 ## Pinyin characters (part 3)
 {: #zhPinyinPart3}
 
-| Finals /<br/>Initials | an | ang | ong | en | eng | in | ing | ian | iang | iong | uang |
+| Finals /<br/>Initials | <br/>an | <br/>ang | <br/>ong | <br/>en | <br/>eng | <br/>in | <br/>ing | <br/>ian | <br/>iang | <br/>iong | <br/>uang |
 |:---------------------:|:--:|:---:|:---:|:--:|:---:|:--:|:---:|:---:|:----:|:----:|:----:|
 | **-** | an | ang | - | en | - | - | - | - | - | -</tph>| - |
 | **b** | ban | bang | - | ben | beng | bin | bing | bian | - | - | - |
