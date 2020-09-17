@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-09-10"
+lastupdated: "2020-09-17"
 
 subcollection: text-to-speech
 
@@ -22,7 +22,7 @@ subcollection: text-to-speech
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# UK English symbols
+# English (United Kingdom) symbols
 {: #gbSymbols}
 
 The following sections describe the valid symbols for United Kingdom (UK) English.
