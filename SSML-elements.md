@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-06-30"
+lastupdated: "2020-09-18"
 
 subcollection: text-to-speech
 
@@ -33,135 +33,29 @@ With the {{site.data.keyword.texttospeechfull}} service, you can use most Speech
 
 For more information about an element or attribute, see its description. Where noted, support for some attributes and values differs slightly from the SSML specification. For more information, see [W3C Speech Synthesis Markup Language (SSML) Version 1.0](http://www.w3.org/TR/speech-synthesis/){: external}.
 
-<table>
-  <caption>Table 1. SSML elements</caption>
-  <tr>
-    <th style="text-align:left; width:30%">Element or attribute</th>
-    <th style="text-align:center; width:12%">Support</th>
-    <th style="text-align:left; width:46%; padding-left:75px">Element or attribute</th>
-    <th style="text-align:center; width:12%">Support</th>
-  </tr>
-  <tr>
-    <td>[Audio](#audio_element)</td>
-    <td style="text-align:center">None</td>
-    <td style="padding-left:75px">[Say-as](#say-as_element)</td>
-    <td style="text-align:center">Partial</td>
-  </tr>
-  <tr>
-    <td>[Break](#break_element)</td>
-    <td style="text-align:center">Full</td>
-    <td style="padding-left:100px">[cardinal](#sayAsCardinal)</td>
-    <td style="text-align:center">Partial</td>
-  </tr>
-  <tr>
-    <td>[Desc](#desc_element)</td>
-    <td style="text-align:center">None</td>
-    <td style="padding-left:100px">[date](#sayAsDate)</td>
-    <td style="text-align:center">Partial</td>
-  </tr>
-  <tr>
-    <td>[Emphasis](#emphasis_element)</td>
-    <td style="text-align:center">None</td>
-    <td style="padding-left:100px">[digits](#sayAsDigits)</td>
-    <td style="text-align:center">Partial</td>
-  </tr>
-  <tr>
-    <td>[Lexicon](#lexicon_element)</td>
-    <td style="text-align:center">None</td>
-    <td style="padding-left:100px">[letters](#sayAsLetters)</td>
-    <td style="text-align:center">Partial</td>
-  </tr>
-  <tr>
-    <td>[Mark](#mark_element)</td>
-    <td style="text-align:center">Partial</td>
-    <td style="padding-left:100px">[number](#sayAsNumber)</td>
-    <td style="text-align:center">Partial</td>
-  </tr>
-  <tr>
-    <td>[Meta](#mm_element)</td>
-    <td style="text-align:center">None</td>
-    <td style="padding-left:125px">cardinal</td>
-    <td style="text-align:center">Partial</td>
-  </tr>
-  <tr>
-    <td>[Metadata](#mm_element)</td>
-    <td style="text-align:center">None</td>
-    <td style="padding-left:125px">ordinal</td>
-    <td style="text-align:center">Partial</td>
-  </tr>
-  <tr>
-    <td>[Paragraph](#ps_element)</td>
-    <td style="text-align:center">Full</td>
-    <td style="padding-left:125px">telephone</td>
-    <td style="text-align:center">Partial</td>
-  </tr>
-  <tr>
-    <td>[Phoneme](#phoneme_element)</td>
-    <td style="text-align:center">Full</td>
-    <td style="padding-left:150px">punctuation</td>
-    <td style="text-align:center">Partial</td>
-  </tr>
-  <tr>
-    <td style="padding-left:25px">IBM SPR</td>
-    <td style="text-align:center">Full</td>
-    <td style="padding-left:100px">[ordinal](#sayAsOrdinal)</td>
-    <td style="text-align:center">Partial</td>
-  </tr>
-  <tr>
-    <td style="padding-left:25px">IPA</td>
-    <td style="text-align:center">Full</td>
-    <td style="padding-left:100px">[vxml:boolean](#vxml-boolean)</td>
-    <td style="text-align:center">Partial</td>
-  </tr>
-  <tr>
-    <td>[Prosody](#prosody_element)</td>
-    <td style="text-align:center">Partial</td>
-    <td style="padding-left:100px">[vxml:currency](#vxml-currency)</td>
-    <td style="text-align:center">Partial</td>
-  </tr>
-  <tr>
-    <td style="padding-left:25px">contour</td>
-    <td style="text-align:center">None</td>
-    <td style="padding-left:100px">[vxml:date](#vxml-date)</td>
-    <td style="text-align:center">Partial</td>
-  </tr>
-  <tr>
-    <td style="padding-left:25px">duration</td>
-    <td style="text-align:center">None</td>
-    <td style="padding-left:100px">[vxml:digits](#vxml-digits)</td>
-    <td style="text-align:center">Partial</td>
-  </tr>
-  <tr>
-    <td style="padding-left:25px">[pitch](#prosody-pitch)</td>
-    <td style="text-align:center">Full</td>
-    <td style="padding-left:100px">[vxml:phone](#vxml-phone)</td>
-    <td style="text-align:center">Partial</td>
-  </tr>
-  <tr>
-    <td style="padding-left:25px">range</td>
-    <td style="text-align:center">None</td>
-    <td style="padding-left:75px">[Sentence](#ps_element)</td>
-    <td style="text-align:center">Full</td>
-  </tr>
-  <tr>
-    <td style="padding-left:25px">[rate](#prosody-rate)</td>
-    <td style="text-align:center">Full</td>
-    <td style="padding-left:75px">[Speak](#speak_element)</td>
-    <td style="text-align:center">Full</td>
-  </tr>
-  <tr>
-    <td style="padding-left:25px">[volume](#prosody-volume)</td>
-    <td style="text-align:center">Partial</td>
-    <td style="padding-left:75px">[Sub](#sub_element)</td>
-    <td style="text-align:center">Full</td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td style="padding-left:75px">[Voice](#voice_element)</td>
-    <td style="text-align:center">None</td>
-  </tr>
-</table>
+| Element or attribute | Support | &nbsp; &nbsp; &nbsp; Element or attribute | Support |
+|----------------------|:-------:|----------------------|:-------:|
+| [Audio](#audio_element) | None | &nbsp; &nbsp; &nbsp; [Say-as](#say-as_element) | Partial |
+| [Break](#break_element) | Full | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [cardinal](#sayAsCardinal) | Partial |
+| [Desc](#desc_element) | None | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [date](#sayAsDate) | Partial |
+| [Emphasis](#emphasis_element) | None | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [digits](#sayAsDigits) | Partial |
+| [Lexicon](#lexicon_element) | None | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [letters](#sayAsLetters) | Partial |
+| [Mark](#mark_element) | Partial | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [number](#sayAsNumber) | Partial |
+| [Meta](#mm_element) | None | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cardinal | Partial |
+| [Metadata](#mm_element) | None | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ordinal | Partial |
+| [Paragraph](#ps_element) | Full | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; telephone | Partial |
+| [Phoneme](#phoneme_element) | Full | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; punctuation | Partial |
+| IBM SPR | Full | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ordinal](#sayAsOrdinal) | Partial |
+| IPA | Full | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [vxml:boolean](#vxml-boolean) | Partial |
+| [Prosody](#prosody_element) | Partial | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [vxml:currency](#vxml-currency) | Partial |
+| &nbsp; &nbsp; &nbsp; contour | None | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [vxml:date](#vxml-date) | Partial |
+| &nbsp; &nbsp; &nbsp; duration | None | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [vxml:digits](#vxml-digits) | Partial |
+| &nbsp; &nbsp; &nbsp; [pitch](#prosody-pitch) | Full | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [vxml:phone](#vxml-phone) | Partial |
+| &nbsp; &nbsp; &nbsp; range | None | &nbsp; &nbsp; &nbsp; [Sentence](#ps_element) | Full |
+| &nbsp; &nbsp; &nbsp; [rate](#prosody-rate) | Full | &nbsp; &nbsp; &nbsp; [Speak](#speak_element) | Full |
+| &nbsp; &nbsp; &nbsp; [volume](#prosody-volume) | Partial | &nbsp; &nbsp; &nbsp; [Sub](#sub_element) | Full |
+| | | &nbsp; &nbsp; &nbsp; [Voice](#voice_element) | None |
+{: caption="Table 1. SSML elements"}
 
 ## The audio element
 {: #audio_element}
