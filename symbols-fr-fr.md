@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-09-10"
+lastupdated: "2020-09-20"
 
 subcollection: text-to-speech
 
@@ -33,7 +33,7 @@ The following sections describe the valid symbols for French.
 | SPR symbol | IPA symbol | IPA Unicode | Example words |
 |:----------:|:----------:|:-----------:|---------------|
 | a | a<br/><br/>&#593;<br/><br/>&#592; | 0061<br/><br/>0251<br/><br/>0250 | p**a**ttes, l**a**c, c**a**ve |
-| e | e | 0065 | caf**&egrave;**, d**&egrave;**form**e**r,**&egrave;**t**&egrave;** |
+| e | e | 0065 | caf**&egrave;**, d**&egrave;**form**e**r, **&egrave;**t**&egrave;** |
 | E | &#603;<br/><br/>&#604; | 025B<br/><br/>025C | f**ai**te, m**ai**, h**e**rb |
 | i | i<br/><br/>&#618; | 0069<br/><br/>026A | f**i**lm, t**y**p**i**que |
 | o | o | 006F | **eau**, **au**x, g**au**che |

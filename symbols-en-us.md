@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-09-17"
+lastupdated: "2020-09-20"
 
 subcollection: text-to-speech
 
@@ -61,8 +61,8 @@ The following sections describe the valid symbols for United States (US) English
 
 | SPR symbol | IPA symbol | IPA Unicode | Example words |
 |:----------:|:----------:|:-----------:|---------------|
-| x | &#601; | 0259 | sof**a**, **a**lone, s**u**ppose, tedi**ou**s,**A**meric**a** |
-| X | &#616;<br/><br/>&#305; | 0268<br/><br/>0131 | ros**e**s, c**o**nnect, mel**o**dy, symph**o**ny,hint**e**d |
+| x | &#601; | 0259 | sof**a**, **a**lone, s**u**ppose, tedi**ou**s, **A**meric**a** |
+| X | &#616;<br/><br/>&#305; | 0268<br/><br/>0131 | ros**e**s, c**o**nnect, mel**o**dy, symph**o**ny, hint**e**d |
 {: caption="Table 3. Reduced vowels (US English)"}
 
 ## Consonants

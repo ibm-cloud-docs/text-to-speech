@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-09-10"
+lastupdated: "2020-09-20"
 
 subcollection: text-to-speech
 
@@ -43,7 +43,7 @@ The following sections describe the valid symbols for German.
 | U | &#650; | 028A | H**u**nd, Fl**u**ss, M**u**tter |
 | o | o<br/><br/>&#111;&#720; | 006F<br/><br/>006F+02D0 | **O**ber, **oh**ne, B**oo**t |
 | O | &#596; | 0254 | K**o**pf, St**o**pp |
-| y | y<br/><br/>&#121;&#720; | 0079<br/><br/>0079+02D0 | B**&uuml;**cher, f**&uuml;h**len, T**&uuml;**r,k**&uuml;**hn |
+| y | y<br/><br/>&#121;&#720; | 0079<br/><br/>0079+02D0 | B**&uuml;**cher, f**&uuml;h**len, T**&uuml;**r, k**&uuml;**hn |
 | Y | &#655; | 028F | f**&uuml;**nf, f**&uuml;**llen, K**&uuml;**nstler |
 | 'oe' | &#248;<br/><br/>&#248;&#720; | 00F8<br/><br/>00F8+02D0 | L**&ouml;**we, h**&ouml;**ren, S**&ouml;h**ne |
 | 'OE' | &#339;<br/><br/>&#630; | 0153<br/><br/>0276 | k**&ouml;**nnen, h**&ouml;**lzern, **&ouml;**stlich |
@@ -90,7 +90,7 @@ Nasalized vowels in French occur mostly in foreign loan words.
 | d | d<br/><br/>&#240; [**1**] | 0064<br/><br/>00F0 | **d**unkel, kin**d**isch, Hel**d**en |
 | t | t | 0074 | **T**ag, bi**tt**e, Ra**d** |
 | g | g<br/><br/>&#609;<br/><br/>&#611; | 0067<br/><br/>0261<br/><br/>0263 | **g**eben, **g**rau, Ta**g**e |
-| k | k | 006B | **K**atze, E**ck**e, S**k**ulptur, la**g**,**q**uitt |
+| k | k | 006B | **K**atze, E**ck**e, S**k**ulptur, la**g**, **q**uitt |
 | v | v | 0076 | **W**agen, **v**isk&ouml;s, **V**olum, o**v**al |
 | f | f | 0066 | **f**ast, ho**ff**en, **V**ater |
 | z | z | 007A | **S**ee, **S**atz, le**s**en |
