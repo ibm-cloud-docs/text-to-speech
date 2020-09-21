@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-09-07"
+lastupdated: "2020-09-21"
 
 subcollection: text-to-speech
 
@@ -144,17 +144,17 @@ Extra rules and a `part_of_speech` field apply to the creation of entries for wo
 
 The following table lists the parts of speech that are supported for Japanese custom entries. For more information about specifying the part of speech for a Japanese custom entry, see [Adding words to a Japanese custom model](/docs/text-to-speech?topic=text-to-speech-customWords#cuJapaneseAdd).
 
-| `part_of_speech` argument | Japanese meaning | English meaning |
-|:-------------------------:|:----------------:|:---------------:|
+| `part_of_speech`<br/>argument | Japanese<br/>meaning | <br/>English meaning |
+|:-----------------------------:|:--------------------:|:--------------------:|
 | `Dosi` | *Doushi* | Verb |
 | `Fuku` | *Fukishi* | Adverb |
 | `Gobi` | *Gobi* | Inflection |
-| `Hoka` | *Hoka* | Other |
+| `Hoka` | *Hoka* | Other (Words that have a special grammatical meaning of their own that does not fit into any other part of speech. For example, <code>&#12354;&#12426;&#12364;&#12392;&#12358;</code> for "thank you.") |
 | `Jodo` | *Jodoushi* | Auxiliary verb |
-| `Josi` | *Joshi* | Participle |
+| `Josi` | *Joshi* | Postpositional particle (For example, <code>&#12364;&#32;&#12398;&#32;&#12434;</code> for "of.") |
 | `Kato` | *Kantoushi* | Interjection |
 | `Kedo` | *Keiyodoushi* | Adjective verb |
-| `Keyo` | *Keiyoshi* | Adjective verb |
+| `Keyo` | *Keiyoshi* | Adjective (For example, <code>&#32654;&#12375;</code> for "beautiful" or <code>&#26126;&#12427;</code> for "bright.") |
 | `Kigo` | *Kigou* | Symbol |
 | `Koyu` | *Koyuumeishi* | Proper noun |
 | `Mesi` | *Meishi* | Noun |
