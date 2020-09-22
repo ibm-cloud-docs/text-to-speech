@@ -51,6 +51,14 @@ The topic of synthesizing text to speech is inherently complex. For more informa
 
 By default, the {{site.data.keyword.texttospeechshort}} service returns audio in Ogg format with the Opus codec (`audio/ogg;codecs=opus`). The service supports many other audio formats to suit your application needs. For more information, see [Supported audio formats](/docs/text-to-speech?topic=text-to-speech-audioFormats#formatsSupported).
 
+## How do I convert my text to speech?
+{: #faq-convert}
+{: faq}
+
+To submit text to the service for synthesized audio output, you make an HTTP or WebSocket request. You can use the API directly or use one of the Watson SDKs. [Getting started](/docs/text-to-speech?topic=text-to-speech-gettingStarted) offers examples of both the HTTP `POST /v1/synthesize` and `GET /v1/synthesize` methods. The [API reference](/apidocs/text-to-speech){: external} shows examples of all interfaces and methods.
+
+There is no graphical user interface for submitting text. See the [Text to Speech Demo](https://text-to-speech-demo.ng.bluemix.net/){: external} to try an example of the service in action. The demo accepts a small amount of your text as input to generate speech with different voices.
+
 ## Can I change how the service interprets input text and produces synthesized audio?
 {: #faq-change-synthesis}
 {: faq}

@@ -46,6 +46,24 @@
         "types of audio files does TTS create",
         "text to speech audio format output options"
     ],
+    "faq-convert": [
+	"how do I convert my text to speech",
+	"convert text to speech",
+	"converting text to speech",
+	"want to start converting text to speech",
+	"how can I access watson text to speech",
+	"how do I access text to speech",
+	"trying to use the text to speech feature",
+	"how do I use the text to speech",
+	"help setting up text to speech",
+	"convert text to speech with a lite account",
+	"enter my own text to be converted to speech",
+	"trying to use the text to speech service",
+	"How can I access my account for text to speech",
+	"want to convert text to audio",
+	"convert text to speech and save as mp3",
+	"how to use the text to speech service"
+    ],
     "faq-change-synthesis": [
         "change output voice TTS",
         "changing text to speech synthesis voice",
