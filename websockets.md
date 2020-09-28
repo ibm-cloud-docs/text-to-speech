@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-09-06"
+lastupdated: "2020-09-28"
 
 subcollection: text-to-speech
 
@@ -71,8 +71,7 @@ The examples in the documentation abbreviate `wss://api.{location}.text-to-speec
 
 A WebSocket client calls the `/v1/synthesize` method with the following query parameters to establish an authenticated connection with the service.
 
--   `access_token` (*optional* string) - *If you use Identity and Access Management (IAM) authentication,* pass a valid IAM access token to authenticate with the service. You pass an IAM access token instead of passing an API key with the call. You must use the access token before it expires. For information about obtaining an access token, see [Authenticating to Watson services](/docs/watson?topic=watson-iam).
--   `watson-token` (*optional* string) - *If you use Cloud Foundry service credentials,* pass a valid {{site.data.keyword.watson}} authentication token to authenticate with the service. You pass a {{site.data.keyword.watson}} token instead of passing service credentials with the call. {{site.data.keyword.watson}} tokens are based on Cloud Foundry service credentials, which use a `username` and `password` for HTTP basic authentication. For information about obtaining a {{site.data.keyword.watson}} token, see [{{site.data.keyword.watson}} tokens](/docs/watson?topic=watson-gs-tokens-watson-tokens).
+-   `access_token` (*required* string) - A valid Identity and Access Management (IAM) access token to authenticate with the service. You pass an IAM access token instead of passing an API key with the call. You must use the access token before it expires. For information about obtaining an access token, see [Authenticating to Watson services](/docs/watson?topic=watson-iam).
 -   `voice` (*optional* string) - Specifies the voice in which the text is to be spoken in the audio. Omit the parameter to use the default voice, `en-US_MichaelVoice`. For more information, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
 -   `customization_id` (*optional* string) - Specifies the globally unique identifier (GUID) for a custom voice model that is to be used for the synthesis. A specified custom voice model must match the language of the voice that is used for the synthesis. If you include a customization ID, you must make the request with credentials for the instance of the service that owns the custom model. Omit the parameter to use the specified voice with no customization. For more information, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
 -   `x-watson-learning-opt-out` (*optional* boolean) - Indicates whether the service logs requests and results that are sent over the connection. To prevent IBM from accessing your data for general service improvements, specify `true` for the parameter. For more information, see [Controlling request logging for Watson services](/docs/watson?topic=watson-gs-logging-overview).
