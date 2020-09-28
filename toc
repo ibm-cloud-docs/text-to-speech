@@ -59,7 +59,6 @@ Text to Speech
         symbols-es-es.md
 
     ha-dr.md
-    /watson/watson-migrate
     /watson/watson-keyservice
     /watson/watson-public-private-endpoints
 
@@ -79,6 +78,7 @@ Text to Speech
 
     {: .navgroup id="help"}
     release-notes.md
+    faq-usage.md
 
     {: .topicgroup}
     Developer community
