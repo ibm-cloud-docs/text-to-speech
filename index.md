@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-09-11"
+lastupdated: "2020-09-29"
 
 subcollection: text-to-speech
 
@@ -76,7 +76,7 @@ For more information about the voices that are available for each language, see 
 
 ## Try out the service
 
-For examples of the service in action, see
+You can see examples of the {{site.data.keyword.texttospeechshort}} service in action:
 
 -   A [quick demo](https://text-to-speech-demo.ng.bluemix.net/){: external} of the {{site.data.keyword.texttospeechshort}} service that accepts text and generates speech with different voices. It offers expressiveness and transformation where supported.
 -   Applications in {{site.data.keyword.ibmwatson}} [Starter Kits](http://www.ibm.com/watson/developercloud/starter-kits.html){: external} that demonstrate the {{site.data.keyword.texttospeechshort}} service.
