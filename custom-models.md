@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-10-01"
+lastupdated: "2020-10-02"
 
 subcollection: text-to-speech
 
@@ -76,12 +76,12 @@ You pass the following attributes as a JSON object with the body of a `POST /v1/
 -   `language` (*optional* string) - An identifier for the language of the custom model. The default is `en-US` for US English. The custom model can be used with any voice, standard or neural, that is available in the specified language. For example, a custom model that is created for the `en-US` language can be used with any US English voice. It cannot, however, be used with an `en-GB` voice.
 -   `description` (*optional* string) - A description of the new model. Although it is optional, a description is highly recommended.
 
-The following example `curl` command creates a new custom model named `curl Test`. The `Content-Type` header identifies the type of the input as `application/json`.
+The following example `curl` command creates a new custom model named `Test`. The `Content-Type` header identifies the type of the input as `application/json`.
 
 ```bash
 curl -X POST -u "apikey:{apikey}" \
 --header "Content-Type: application/json" \
---data "{\"name\":\"curl Test\", \"language\":\"en-US\", \"description\":\"Customization test via curl\"}" \
+--data "{\"name\":\"Test\", \"language\":\"en-US\", \"description\":\"Customization test\"}" \
 "{url}/v1/customizations"
 ```
 {: pre}
@@ -113,9 +113,9 @@ The method returns its results as a JSON object of the following form:
   "customization_id": "64f4807f-a5f1-5867-924f-7bba1a84fe97",
   "owner": "297cfd08-330a-22ba-93ce-1a73f454dd98",
   "created": "2016-07-15T18:12:31.743Z",
-  "name": "curl Test",
+  "name": "Test",
   "language": "en-US",
-  "description": "Customization test via curl",
+  "description": "Customization test",
   "last_modified": "2016-07-15T18:12:31.743Z",
   "words": []
 }
@@ -146,18 +146,18 @@ The method returns a JSON array that includes an object for each custom model ow
       "customization_id": "64f4807f-a5f1-5867-924f-7bba1a84fe97",
       "owner": "297cfd08-330a-22ba-93ce-1a73f454dd98",
       "created": "2016-07-15T19:15:17.926Z",
-      "name": "curl Test",
+      "name": "Test",
       "language": "en-US",
-      "description": "Customization test via curl",
+      "description": "Customization test",
       "last_modified": "2016-07-15T19:15:17.926Z"
     },
     {
       "customization_id": "63f5807f-a4f2-5766-914e-7abb1a84fe97",
       "owner": "297cfd08-330a-22ba-93ce-1a73f454dd98",
       "created": "2016-07-15T18:12:31.743Z",
-      "name": "curl Test Two",
+      "name": "Test Two",
       "language": "en-US",
-      "description": "Second customization test via curl",
+      "description": "Second customization test",
       "last_modified": "2016-07-15T18:23:50.912Z"
     }
   ]
@@ -177,7 +177,7 @@ The following example updates the name and description of a custom model. An emp
 ```bash
 curl -X POST -u "apikey:{apikey}" \
 --header "Content-Type: application/json" \
---data "{\"name\":\"curl Test Update\", \"description\":\"Customization test update via curl\", \"words\":[]}" \
+--data "{\"name\":\"Test Update\", \"description\":\"Customization test update\", \"words\":[]}" \
 "{url}/v1/customizations/{customization_id}"
 ```
 {: pre}

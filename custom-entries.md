@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-10-01"
+lastupdated: "2020-10-02"
 
 subcollection: text-to-speech
 
@@ -224,9 +224,9 @@ The method returns JSON output of the following form. Because this and the previ
   "customization_id": "64f4807f-a5f1-5867-924f-7bba1a84fe97",
   "owner": "297cfd08-330a-22ba-93ce-1a73f454dd98",
   "created": "2016-07-15T19:15:17.926Z",
-  "name": "curl Test",
+  "name": "Test",
   "language": "en-US",
-  "description": "Customization test via curl",
+  "description": "Customization test",
   "last_modified": "2016-07-15T19:46:01.387Z",
   "words": [
     {
@@ -252,9 +252,9 @@ The method returns JSON output of the following form. Because this and the previ
 To query the pronunciation of a word, use the `GET /v1/pronunciation` method. Specify a voice to get the pronunciation in the language of that voice. By default, the method returns the pronunciation based on the service's regular pronunciation rules, but you can also request the pronunciation for a specified custom model. The method includes four query parameters that let you specify the information that is to be returned:
 
 -   The required `text` parameter specifies the word whose pronunciation is to be returned.
--   The optional `voice` parameter lets you specify the language of the pronunciation. You specify one of the voice models (for example, `en-US_LisaVoice`) to indicate the desired language; all voices for the same language (for example, `en-US`) return the same pronunciation. By default, the pronunciation is returned for US English.
+-   The optional `voice` parameter lets you specify the language of the pronunciation. You specify one of the voices (for example, `en-US_LisaVoice`) to indicate the desired language; all voices for the same language (for example, `en-US`) return the same pronunciation. By default, the pronunciation is returned for US English.
 -   The optional `format` parameter lets you specify the phonetic format of the pronunciation, either `ipa` or `ibm`. By default, the pronunciation is returned in IPA format.
--   The optional `customization_id` parameter lets you specify a custom model for which the pronunciation is to be returned. If the word is not defined in the specified voice model, the service returns the default pronunciation for the model's language. Omit the parameter to see the translation for the specified voice with no customization. Do not specify both a voice and a custom model.
+-   The optional `customization_id` parameter lets you specify a custom model for which the pronunciation is to be returned. If the word is not defined in the specified custom model, the service returns the default pronunciation for the model's language. Omit the parameter to see the translation for the specified voice with no customization. Do not specify both a voice and a custom model.
 
 This method is useful because it allows you to query a word from any language and, because it does not require a customization ID, places no restrictions on the words that you can see. It can prove especially helpful when composing a phonetic translation for a new word; you can use it to obtain the pronunciation for an existing word and then use that as the basis of your new translation, which is far more convenient than creating a translation from scratch.
 
