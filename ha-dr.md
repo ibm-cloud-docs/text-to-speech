@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-02-04"
+lastupdated: "2020-10-01"
 
 subcollection: text-to-speech
 
@@ -44,29 +44,29 @@ Disaster recovery can become an issue if an {{site.data.keyword.cloud_notm}} loc
 
 In the event of a catastrophic failure, {{site.data.keyword.IBM_notm}} might not be able to recover data from database backups. In this case, you need to restore your data to return your service instance to its most recent state. You can restore the data to the same or to a different location.
 
-For the {{site.data.keyword.texttospeechshort}} service, only data for custom voice models is stored on {{site.data.keyword.cloud_notm}}. Your disaster recovery plan includes knowing, preserving, and being prepared to restore your custom voice models.
+For the {{site.data.keyword.texttospeechshort}} service, only data for custom models is stored on {{site.data.keyword.cloud_notm}}. Your disaster recovery plan includes knowing, preserving, and being prepared to restore your custom models.
 
-### Backing up custom voice models
+### Backing up custom models
 {: #disaster-recovery-backup}
 
-Preserve the following information about your custom voice models and their custom entries:
+Preserve the following information about your custom models and their custom entries:
 
--   A list of all of your custom voice models and their definitions. To list information about your custom models:
+-   A list of all of your custom models and their definitions. To list information about your custom models:
     -   Use the `GET /v1/customizations` method to list information about all custom models. For more information, see [Querying all custom models](/docs/text-to-speech?topic=text-to-speech-customModels#cuModelsQueryAll).
     -   Use the `GET /v1/customizations/{customization_id}` method to list information about a specified custom model. For more information, see [Querying a custom model](/docs/text-to-speech?topic=text-to-speech-customModels#cuModelsQuery).
--   Information about all custom entries (word/translation pairs) in your custom voice models:
+-   Information about all custom entries (word/translation pairs) in your custom models:
     -   Use the `GET /v1/customizations/{customization_id}/words` method to list information about all word/translation pairs from a custom model. For more information, see [Querying all words from a custom model](/docs/text-to-speech?topic=text-to-speech-customWords#cuWordsQueryModel).
     -   Use the `GET /v1/customizations/{customization_id}/words/{word}` method to list information about a specified word/translation pair from a custom model. For more information, see [Querying a single word from a custom model](/docs/text-to-speech?topic=text-to-speech-customWords#cuWordQueryModel).
 
-It is a best practice to preserve this information in a format that you can use to re-create your custom voice models in the event of a failure. Actively maintaining the information about your custom models and custom entries, and preparing the calls listed in the following section ahead of time, can enable you to recover as quickly as possible.
+It is a best practice to preserve this information in a format that you can use to re-create your custom models in the event of a failure. Actively maintaining the information about your custom models and custom entries, and preparing the calls listed in the following section ahead of time, can enable you to recover as quickly as possible.
 
-### Restoring custom voice models
+### Restoring custom models
 {: #disaster-recovery-restore}
 
-If you need to recover from a disaster, you can use the backup information to re-create your custom voice models and their custom entries:
+If you need to recover from a disaster, you can use the backup information to re-create your custom models and their custom entries:
 
-1.  To re-create your custom voice models, use the `POST /v1/customizations` method. For more information, see [Creating a custom model](/docs/text-to-speech?topic=text-to-speech-customModels#cuModelsCreate).
-1.  To add multiple word/translation pairs to your custom voice models, use the `POST /v1/customizations/{customization_id}/words` method. For more information, see [Adding multiple words to a custom model](/docs/text-to-speech?topic=text-to-speech-customWords#cuWordsAdd).
-1.  To add single word/translation pair to your custom voice models, use the `POST /v1/customizations/{customization_id}/words/{word}` method. For more information, see [Adding a single word to a custom model](/docs/text-to-speech?topic=text-to-speech-customWords#cuWordAdd).
+1.  To re-create your custom models, use the `POST /v1/customizations` method. For more information, see [Creating a custom model](/docs/text-to-speech?topic=text-to-speech-customModels#cuModelsCreate).
+1.  To add multiple word/translation pairs to your custom models, use the `POST /v1/customizations/{customization_id}/words` method. For more information, see [Adding multiple words to a custom model](/docs/text-to-speech?topic=text-to-speech-customWords#cuWordsAdd).
+1.  To add single word/translation pair to your custom models, use the `POST /v1/customizations/{customization_id}/words/{word}` method. For more information, see [Adding a single word to a custom model](/docs/text-to-speech?topic=text-to-speech-customWords#cuWordAdd).
 
 You can add all of your custom entries at once, in groups, or one at a time.

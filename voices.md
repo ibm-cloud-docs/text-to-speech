@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-09-06"
+lastupdated: "2020-10-01"
 
 subcollection: text-to-speech
 
@@ -116,14 +116,14 @@ The neural voices do not support the following SSML elements or attributes:
 
 However, you might find that these SSML features are no longer needed when using the neural voices. Also, you can make pitch and rate modifications to neural voices by using the `<prosody>` element in place of the `<voice-transformation>` element. For more information, see [The prosody element](/docs/text-to-speech?topic=text-to-speech-elements#prosody_element).
 
-### Voice customization
+### Customization
 {: #customizeVoice}
 
 When you synthesize text, the service applies language-dependent pronunciation rules to convert the ordinary spelling of each word to a phonetic spelling. The service's pronunciation rules work well for common words, but they can yield imperfect results for unusual words, such as terms with foreign origins, personal names, and abbreviations or acronyms.
 
 If your application's lexicon includes such words, you can use the customization interface to specify how the service pronounces them. For more information, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
 
-You create a custom voice model for a specific language, not for a specific voice. So a custom model can be used with any voice, standard or neural, for its specified language. For example, a custom model that you create for the `en-US` language can be used with any US English voice. It cannot, however, be used with an `en-GB` voice.
+You create a custom model for a specific language, not for a specific voice. So a custom model can be used with any voice, standard or neural, for its specified language. For example, a custom model that you create for the `en-US` language can be used with any US English voice. It cannot, however, be used with an `en-GB` voice.
 
 ## Migrating from standard to neural voices
 {: #migrateVoice}
@@ -297,11 +297,11 @@ The fields of the voice objects provide the following information:
 The `GET /v1/voices/{voice}` method lists information about a specific voice. It accepts two parameters.
 
 -   `voice` (path parameter, *required* string) - Identifies the voice for which information is to be returned. You specify a voice by its name (for example, `en-US_LisaV3Voice`).
--   `customization_id` (query parameter, *optional* string) - Provides the globally unique identifier (GUID) of a custom voice model that is defined for the language of the specified voice. If you include a customization ID, you must make the request with credentials for the instance of the service that owns the custom model.
+-   `customization_id` (query parameter, *optional* string) - Provides the globally unique identifier (GUID) of a custom model that is defined for the language of the specified voice. If you include a customization ID, you must make the request with credentials for the instance of the service that owns the custom model.
 
-If you omit the `customization_id` parameter, the method returns JSON output for the specified voice that is identical to the information returned for a voice by the `GET /v1/voices` method. If you specify a `customization_id`, the output includes a `customization` field that provides information about the specified custom voice model.
+If you omit the `customization_id` parameter, the method returns JSON output for the specified voice that is identical to the information returned for a voice by the `GET /v1/voices` method. If you specify a `customization_id`, the output includes a `customization` field that provides information about the specified custom model.
 
-The following example returns information about the `en-US_LisaV3Voice` and the specified custom voice model:
+The following example returns information about the `en-US_LisaV3Voice` and the specified custom model:
 
 ```bash
 curl -X GET -u "apikey:{apikey}" \
@@ -334,4 +334,4 @@ curl -X GET -u "apikey:{apikey}" \
 ```
 {: codeblock}
 
-The attributes of the additional `customization` field provide information such as the GUID, name, language, and description of the custom voice model. They also show the credentials of the model's owner, the date and time at which the model was created, and the date and time of its last modification.
+The attributes of the additional `customization` field provide information such as the GUID, name, language, and description of the custom model. They also show the credentials of the model's owner, the date and time at which the model was created, and the date and time of its last modification.

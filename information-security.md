@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-07-20"
+lastupdated: "2020-10-01"
 
 subcollection: text-to-speech
 
@@ -50,12 +50,12 @@ Learn more about {{site.data.keyword.IBM_notm}}'s own GDPR readiness journey and
 
 US Health Insurance Portability and Accountability Act (HIPAA) support is available for Premium plans that are hosted in the Washington, DC, location and are created on or after 1 April 2019. For more information, see [Enabling EU and HIPAA supported settings](https://cloud.ibm.com/docs/account?topic=account-eu-hipaa-supported#eu-hipaa-supported){: external}.
 
-Do not include personal health information (PHI) in data that you pass to the service. In particular, be sure to remove any PHI from data that you use for custom voice models.
+Do not include personal health information (PHI) in data that you pass to the service. In particular, be sure to remove any PHI from data that you use for custom models.
 
 ## Labeling and deleting data in the {{site.data.keyword.texttospeechshort}} service
 {: #gdpr-text-to-speech}
 
-The {{site.data.keyword.texttospeechfull}} service enables you to delete all data that is associated with speech synthesis requests and with custom voice models. To delete data, you must do the following:
+The {{site.data.keyword.texttospeechfull}} service enables you to delete all data that is associated with speech synthesis requests and with custom models. To delete data, you must do the following:
 
 1.  Use the `X-Watson-Metadata` header to associate a customer ID with data that is passed by a request to the service; see [Specifying a customer ID](#specify-customer-id).
 1.  Use the `DELETE /v1/user_data` method to delete all data that is associated with a specified customer ID; see [Deleting data](#delete-pi).
@@ -96,7 +96,7 @@ Use the `X-Watson-Metadata` header with the following methods:
 
     You specify the customer ID with the `x-watson-metadata` query parameter to associate the ID with data that is sent with the request. You must URL-encode the argument to the query parameter, for example, `customer_id%3dmy_ID`.
 
--   With requests to add custom words to custom voice models:
+-   With requests to add custom words to custom models:
     -   `POST /v1/customizations/{customization_id}`
     -   `POST /v1/customizations/{customization_id}/words`
     -   `PUT /v1/customizations/{customization_id}/words/{word}`
@@ -119,6 +119,6 @@ The `/v1/user_data` method deletes all data that is associated with the specifie
 ## Deletion of all data for a {{site.data.keyword.texttospeechshort}} service instance
 {: #gdpr-text-to-speech-instance}
 
-If you delete an instance of the {{site.data.keyword.texttospeechshort}} service from the {{site.data.keyword.cloud_notm}} console, all data associated with that service instance is automatically deleted. This includes all custom voice models and word/translation pairs, and all data related to speech synthesis requests.
+If you delete an instance of the {{site.data.keyword.texttospeechshort}} service from the {{site.data.keyword.cloud_notm}} console, all data associated with that service instance is automatically deleted. This includes all custom models and word/translation pairs, and all data related to speech synthesis requests.
 
 This data is purged automatically and regardless of whether a customer ID is associated with the data. Once you delete a service instance, you can no longer restore any of the deleted data.

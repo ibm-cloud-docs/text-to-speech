@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-09-11"
+lastupdated: "2020-10-01"
 
 subcollection: text-to-speech
 
@@ -54,9 +54,7 @@ The service now correctly parses and applies the `rate` attribute of the `<proso
 ## 4 September 2020
 {: #September2020a}
 
-The customization interface is now generally available. Customization is no longer beta functionality.
-
-You can use the customization interface to specify how the service pronounces unusual words that occur in your input text by creating language-specific custom dictionaries. The functionality is also referred to as voice customization or voice model customization. It can be used with all generally available and beta voices. For more information, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
+The customization interface is now generally available. Customization is no longer beta functionality. You can use the customization interface to specify how the service pronounces unusual words that occur in your input text by creating language-specific custom dictionaries. It can be used with all generally available and beta voices. For more information, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
 
 ## 24 June 2020
 {: #June2020}
@@ -106,19 +104,19 @@ You can use the customization interface to specify how the service pronounces un
 
 -   The service now supports two standard female Korean voices: `ko-KR_YoungmiVoice` and `ko-KR_YunaVoice`. The following information applies to both Korean voices:
     -   The voices are beta functionality. They might not be ready for production use and are subject to change. They are initial offerings that are expected to improve in quality with time and usage.
-    -   The voices support voice model customization and the `/v1/pronunciation` method.
+    -   The voices support customization and the `/v1/pronunciation` method.
     -   The voices support the `<mark>` element and the `timings` parameter that are available with the WebSocket interface.
     -   The voices support all Speech Synthesis Markup Language (SSML) elements except for expressive SSML and voice transformation SSML.
     -   The voices support only the International Phonetic Alphabet (IPA), not {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR), with the `<phoneme>` element.
 -   The beta Arabic, Chinese, and Dutch voices now support the following features:
-    -   Voice model customization and the `/v1/pronunciation` method.
+    -   Customization and the `/v1/pronunciation` method.
     -   The `<mark>` element and the `timings` parameter that are available with the WebSocket interface.
 
 See the following sections for additional information:
 
 -   For more information about all available voices, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
--   For more information about voice model customization, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
--   For more information about the use of IPA and SPR with voice customization, see [Using phonetic symbols](/docs/text-to-speech?topic=text-to-speech-sprs).
+-   For more information about customization, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
+-   For more information about the use of IPA and SPR with customization, see [Using phonetic symbols](/docs/text-to-speech?topic=text-to-speech-sprs).
 
 The IPA symbols for the Arabic, Chinese, Dutch, and Korean languages are not yet documented. This documentation will be made available soon.
 {: note}
@@ -153,7 +151,7 @@ The following information applies to these new standard voices:
 
 -   The new voices are beta functionality. The voices might not be ready for production use and are subject to change. They are initial offerings that are expected to improve in quality with time and usage.
 -   The voices do not support the `<mark>` element and `timings` parameter that are available with the WebSocket interface.
--   The voices do not support voice customization or the `/v1/pronunciation` method.
+-   The voices do not support customization or the `/v1/pronunciation` method.
 -   The voices do not support expressive SSML or voice transformation SSML.
 -   The voices do support all other SSML elements. However, they support only the International Phonetic Alphabet (IPA), not {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR), with the `<phoneme>` element.
 
@@ -333,7 +331,7 @@ The service now supports the MP3 or Motion Picture Experts Group (MPEG) audio fo
 
 -   The service includes a new voice, `es-LA_SofiaVoice`, which is the Latin American equivalent of the `es-US_SofiaVoice` voice. The most significant difference between the two voices concerns how they interpret a `$` (dollar sign): The Latin American version uses the term *pesos*, while the North American version uses the term *dolares*. Other minor differences might also exist between the two voices.
 -   In addition to the `en-US_AllisonVoice`, two more voices are now transformable with SSML voice transformation: `en-US_LisaVoice` and `en-US_MichaelVoice`. For more information about voice transformation, see [Voice transformation SSML](/docs/text-to-speech?topic=text-to-speech-transformation).
--   When you use the customization interface with Japanese, the service now matches the longest word from the word/translation pairs that are defined for a custom voice model. For example, consider the following two entries for a custom voice:
+-   When you use the customization interface with Japanese, the service now matches the longest word from the word/translation pairs that are defined for a custom model. For example, consider the following two entries for a custom model:
 
     <pre><code>{
       "words": [
@@ -342,14 +340,14 @@ The service now supports the MP3 or Motion Picture Experts Group (MPEG) audio fo
       ]
     }</code></pre>
 
-    If the service finds the string <code>&#65326;&#65337;&#65315;</code> in the input text, it matches that word because it is a longer match than <code>&#65326;&#65337;</code>. Previously, the service would have matched the string <code>&#65326;&#65337;</code>. For more information about working with Japanese entries for a custom voice model, see [Working with Japanese entries](/docs/text-to-speech?topic=text-to-speech-rules#jaNotes).
+    If the service finds the string <code>&#65326;&#65337;&#65315;</code> in the input text, it matches that word because it is a longer match than <code>&#65326;&#65337;</code>. Previously, the service would have matched the string <code>&#65326;&#65337;</code>. For more information about working with Japanese entries for a custom model, see [Working with Japanese entries](/docs/text-to-speech?topic=text-to-speech-rules#jaNotes).
 
 ### 22 September 2016
 {: #September2016}
 
 -   The customization interface, which includes the customization and `GET /v1/pronunciation` methods, is now available for all languages that are supported by the service. The interface remains a beta release. For more information, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
--   The service now supports SSML for Japanese. For general information about SSML support, see [Using SSML](/docs/text-to-speech?topic=text-to-speech-ssml). For information about Japanese SPR and IPA symbols, see [Japanese symbols](/docs/text-to-speech?topic=text-to-speech-jaSymbols). Extra considerations and a `part_of_speech` field apply when creating entries for words in a Japanese custom voice model. For more information, see [Working with Japanese entries](/docs/text-to-speech?topic=text-to-speech-rules#jaNotes).
--   The service now offers SSML voice transformation via the new `<voice-transformation>` element. You can expand the range of possible voices by creating custom voice transformations that modify the pitch, pitch range, glottal tension, breathiness, rate, and timbre of a voice. The service also offers two built-in virtual voices, *Young* and *Soft*. The service currently supports voice transformation only for the US English Allison voice. For more information, see [Voice transformation SSML](/docs/text-to-speech?topic=text-to-speech-transformation).
+-   The service now supports SSML for Japanese. For general information about SSML support, see [Using SSML](/docs/text-to-speech?topic=text-to-speech-ssml). For information about Japanese SPR and IPA symbols, see [Japanese symbols](/docs/text-to-speech?topic=text-to-speech-jaSymbols). Extra considerations and a `part_of_speech` field apply when creating entries for words in a Japanese custom model. For more information, see [Working with Japanese entries](/docs/text-to-speech?topic=text-to-speech-rules#jaNotes).
+-   The service now offers SSML voice transformation via the new `<voice-transformation>` element. You can expand the range of possible voices by creating custom transformations that modify the pitch, pitch range, glottal tension, breathiness, rate, and timbre of a voice. The service also offers two built-in virtual voices, *Young* and *Soft*. The service currently supports voice transformation only for the US English Allison voice. For more information, see [Voice transformation SSML](/docs/text-to-speech?topic=text-to-speech-transformation).
 -   The service can now return word timing information for all strings of the input text that you pass to the WebSocket interface. To receive the start and end time of every string in the input, specify an array that includes the string `words` for the optional `timings` parameter of the JSON object that you pass to the service. The feature is not currently available for Japanese input text. For more information, see [Obtaining word timings](/docs/text-to-speech?topic=text-to-speech-timing).
 -   The service now validates all SSML elements that you submit in any context. If it finds an invalid tag, the service reports an HTTP 400 response code with a descriptive message, and the method fails. In previous releases, the service handled errors inconsistently; specifying an invalid word pronunciation, for example, could lead to unpredictable or inconsistent behavior. For more information, see [SSML validation](/docs/text-to-speech?topic=text-to-speech-ssml#errors).
 -   The use of `spr` is deprecated as an argument to the `format` option of the `GET /v1/pronunciation` method and for use with the `alphabet` attribute of an SSML `<phoneme>` element. To use {{site.data.keyword.IBM_notm}} SPR notation, use the `ibm` argument instead of `spr` in all cases.
@@ -362,7 +360,7 @@ The service now supports the MP3 or Motion Picture Experts Group (MPEG) audio fo
 -   The service now offers a WebSocket interface for synthesizing text to speech. The interface offers the same features as the `/v1/synthesize` method of the HTTP interface. It accepts plain text or text that is marked up with SSML. In addition, it also supports use of the SSML `<mark>` element to identify the time in the audio at which it finishes synthesizing all text that precedes the mark. For more information, see [The WebSocket interface](/docs/text-to-speech?topic=text-to-speech-usingWebSocket).
 -   The service now offers support for text that is annotated with SSML for the languages Castilian and North American Spanish, Italian, and Brazilian Portuguese. The service already supported the use of SSML for US and UK English, French, and German. As of this update, the service supports SSML for all languages but Japanese. Moreover, you can use both {{site.data.keyword.IBM_notm}} SPR and IPA notations to define word pronunciations with the SSML `<phoneme>` element. For more information, see [Using SSML](/docs/text-to-speech?topic=text-to-speech-ssml) and [Using phonetic symbols](/docs/text-to-speech?topic=text-to-speech-sprs).
 
-    For US English, you can also use the SSML `<phoneme>` element to create word entries in a custom voice model; customization is supported only for US English. For more information, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
+    For US English, you can also use the SSML `<phoneme>` element to create word entries in a custom model; customization is supported only for US English. For more information, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
 -   The service features improved expressiveness and naturalness for the most frequently used voices. The improvements are based on Recursive Neural Network (RNN)-based prosody prediction from input text. They are made available as a new service engine and voice-model updates for the following languages:
 
     -   `en-US_AllisonVoice`
@@ -370,7 +368,7 @@ The service now supports the MP3 or Motion Picture Experts Group (MPEG) audio fo
     -   `en-US_MichaelVoice`
     -   `es-ES_EnriqueVoice`
     -   `fr-FR_ReneeVoice`
--   The `GET /v1/pronunciation` method now accepts an optional `customization_id` query parameter. The parameter obtains a word translation from a specified custom voice model. If the voice model does not contain the word, the method returns the word's default pronunciation. For more information, see the [API reference](https://{DomainName}/apidocs/text-to-speech){: external}.
+-   The `GET /v1/pronunciation` method now accepts an optional `customization_id` query parameter. The parameter obtains a word translation from a specified custom model. If the voice model does not contain the word, the method returns the word's default pronunciation. For more information, see the [API reference](https://{DomainName}/apidocs/text-to-speech){: external}.
 
     When using the `GET /v1/pronunciation` method without a customization ID and for a language other than US English, you can request a word's pronunciation only in {{site.data.keyword.IBM_notm}} SPR notation. For a language other than US English, you must specify `spr` with the method's `format` option.
     {: note}
@@ -397,15 +395,15 @@ The service was updated with a new expressive SSML feature. The service extends 
 ### 17 December 2015
 {: #December2015}
 
--   The service offers a new customization interface that you can use to specify how it pronounces unusual words that occur in your input. The interface includes a number of new methods that you can use to create and manage custom voice models and the word/translation pairs that they contain. You can then use your custom models when synthesizing text to audio.
+-   The service offers a new customization interface that you can use to specify how it pronounces unusual words that occur in your input. The interface includes a number of new methods that you can use to create and manage custom models and the word/translation pairs that they contain. You can then use your custom models when synthesizing text to audio.
 
     The service supports sounds-like translations and phonetic translations. Phonetic translations can use either the standard International Phonetic Alphabet (IPA) representation or the proprietary {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR). You use SSML to specify phonetic translations.
 
-    The customization interface includes a collection of new HTTP methods that have the names `POST /v1/customizations`, `POST /v1/customizations/{customization_id}`, `POST /v1/customizations/{customization_id}/words`, and `PUT /v1/customizations/{customization_id}/words/{word}`. The service also provides a new `GET /v1/pronunciation` method that returns the pronunciation for any word and a new `GET /v1/voices/{voice}` method that returns detailed information about a specific voice. In addition, existing methods of the service's interface now accept custom voice model parameters as needed.
+    The customization interface includes a collection of new HTTP methods that have the names `POST /v1/customizations`, `POST /v1/customizations/{customization_id}`, `POST /v1/customizations/{customization_id}/words`, and `PUT /v1/customizations/{customization_id}/words/{word}`. The service also provides a new `GET /v1/pronunciation` method that returns the pronunciation for any word and a new `GET /v1/voices/{voice}` method that returns detailed information about a specific voice. In addition, existing methods of the service's interface now accept custom model parameters as needed.
 
     For more information about customization and its interface, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro) and the [API reference](https://{DomainName}/apidocs/text-to-speech){: external}.
 
-    The customization interface is a beta release that currently supports US English only. All customization methods and the `GET /v1/pronunciation` method can currently be used to create and manipulate custom voice models and word translations only in US English.
+    The customization interface is a beta release that currently supports US English only. All customization methods and the `GET /v1/pronunciation` method can currently be used to create and manipulate custom models and word translations only in US English.
     {: note}
 -   The service supports a new voice, `pt-BR_IsabelaVoice`, to synthesize audio in Brazilian Portuguese with a female voice. For more information, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
 

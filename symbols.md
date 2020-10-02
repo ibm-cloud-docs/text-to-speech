@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-09-07"
+lastupdated: "2020-10-01"
 
 subcollection: text-to-speech
 
@@ -33,7 +33,7 @@ The {{site.data.keyword.texttospeechfull}} service supports both the standard In
 ## Defining a word pronunciation
 {: #define-pronunciation}
 
-To define the phonetic pronunciation for a word, either within input text or for a custom voice model, you use the `<phoneme>` element of the Speech Synthesis Markup Language (SSML) or equivalent method parameters. The `<phoneme>` element has two attributes:
+To define the phonetic pronunciation for a word, either within input text or for a custom model, you use the `<phoneme>` element of the Speech Synthesis Markup Language (SSML) or equivalent method parameters. The `<phoneme>` element has two attributes:
 
 -   The `alphabet` attribute specifies the notation of the pronunciation. Use the value `ibm` to indicate that the pronunciation is defined in SPR. Use the value `ipa` to indicate that the pronunciation is defined in IPA.
 -   The `ph` attribute defines the pronunciation. It consists of a sequence of allowable symbols for a given language. The symbols define how the word that is enclosed in the `<phoneme>` element is to be pronounced.

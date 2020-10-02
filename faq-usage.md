@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-09-28"
+lastupdated: "2020-10-01"
 
 keywords: faqs,frequently asked questions,question,Text to Speech
 
@@ -95,23 +95,23 @@ You can submit the following maximum amount of text for a speech synthesis reque
 
 All characters of the input, including whitespace and those that are part of SSML elements, are counted toward the data maximum. For billing purposes, whitespace characters are not counted. For more information, see [Data limits](/docs/text-to-speech?topic=text-to-speech-overview#data-limits) in the overview for developers.
 
-## How does voice model customization work?
+## How does customization work?
 {: #faq-custom-understand}
 {: faq}
 
-The customization interface of the {{site.data.keyword.texttospeechshort}} service creates a dictionary of words and their translations for a specific language. This dictionary is referred to as a custom voice model, or just a custom model. For more information, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
+The customization interface of the {{site.data.keyword.texttospeechshort}} service creates a dictionary of words and their translations for a specific language. This dictionary is referred to as a custom model. For more information, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
 
-## How do I create a custom voice model?
+## How do I create a custom model?
 {: #faq-custom-create}
 {: faq}
 
-Review the guidelines for working with the customization interface before you begin. Then, see the steps and examples for creating, querying, updating, and deleting custom models in [Creating and managing custom voice models](/docs/text-to-speech?topic=text-to-speech-customModels). Also review [Creating and managing custom entries](/docs/text-to-speech?topic=text-to-speech-customWords) for examples and guidance about adding relevant training data.
+Review the guidelines for working with the customization interface before you begin. Then, see the steps and examples for creating, querying, updating, and deleting custom models in [Creating and managing custom models](/docs/text-to-speech?topic=text-to-speech-customModels). Also review [Creating and managing custom entries](/docs/text-to-speech?topic=text-to-speech-customWords) for examples and guidance about adding relevant training data.
 
-## What limits exist for a custom voice model?
+## What limits exist for a custom model?
 {: #faq-custom-limits}
 {: faq}
 
-The following limits apply to all custom voice models and entries:
+The following limits apply to all custom models and entries:
 
 -   A custom model can include a maximum of 20,000 custom entries.
 -   A word in a custom entry can contain a maximum of 49 characters.

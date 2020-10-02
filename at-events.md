@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-07-29"
+lastupdated: "2020-10-01"
 
 keywords: IBM,activity tracker,LogDNA,event,security,text to speech
 
@@ -26,7 +26,7 @@ As a security officer, auditor, or manager, you can use the Activity Tracker ser
 
 {{site.data.keyword.at_full_notm}} records user-initiated activities that change the state of a service in {{site.data.keyword.cloud_notm}}. You can use this service to investigate abnormal activity and critical actions and to comply with regulatory audit requirements. In addition, you can be alerted about actions as they happen. The events that are collected comply with the Cloud Auditing Data Federation (CADF) standard. For more information, see the getting started tutorial for [{{site.data.keyword.at_full_notm}}](/docs/Activity-Tracker-with-LogDNA?topic=Activity-Tracker-with-LogDNA-getting-started).
 
-## Voice model customization events
+## Customization events
 {: #at_events}
 
 The following tables list the {{site.data.keyword.texttospeechshort}} actions for voice model customization that generate events.
@@ -36,38 +36,38 @@ The following tables list the {{site.data.keyword.texttospeechshort}} actions fo
 
 | Action                                         | Description                                                                                  |
 |------------------------------------------------|----------------------------------------------------------------------------------------------|
-| `text-to-speech.custom-voice.create`           | Create a custom voice (`POST /v1/customizations`).                                           |
-| `text-to-speech.custom-voice-word-list.create` | Create a word list for a custom voice (`POST /v1/customizations/{customization_id}/words`).  |
-| `text-to-speech.custom-voice-word.create`      | Create a word for a custom voice (`PUT /v1/customizations/{customization_id}/words/{word}`). |
-{: caption="Table 1. Voice model customization .create actions that generate events"}
+| `text-to-speech.custom-voice.create`           | Create a custom model (`POST /v1/customizations`).                                           |
+| `text-to-speech.custom-voice-word-list.create` | Create a word list for a custom model (`POST /v1/customizations/{customization_id}/words`).  |
+| `text-to-speech.custom-voice-word.create`      | Create a word for a custom model (`PUT /v1/customizations/{customization_id}/words/{word}`). |
+{: caption="Table 1. Customization .create actions that generate events"}
 
 ### Read events
 {: #at_events_read}
 
 | Action                                       | Description                                                                                |
 |----------------------------------------------|--------------------------------------------------------------------------------------------|
-| `text-to-speech.custom-voice-list.read`      | Read a list of custom voices created by a user (`GET /v1/customizations`).                 |
-| `text-to-speech.custom-voice.read`           | Read a custom voice (`GET /v1/customizations/{customization_id}`).                         |
-| `text-to-speech.custom-voice-word-list.read` | Read a word list for a custom voice (`GET /v1/customizations/{customization_id}/words`).   |
-| `text-to-speech.custom-voice-word.read`      | Read a word for a custom voice (`GET /v1/customizations/{customization_id}/words/{word}`). |
-{: caption="Table 2. Voice model customization .read actions that generate events"}
+| `text-to-speech.custom-voice-list.read`      | Read a list of custom models created by a user (`GET /v1/customizations`).                 |
+| `text-to-speech.custom-voice.read`           | Read a custom model (`GET /v1/customizations/{customization_id}`).                         |
+| `text-to-speech.custom-voice-word-list.read` | Read a word list for a custom model (`GET /v1/customizations/{customization_id}/words`).   |
+| `text-to-speech.custom-voice-word.read`      | Read a word for a custom model (`GET /v1/customizations/{customization_id}/words/{word}`). |
+{: caption="Table 2. Customization .read actions that generate events"}
 
 ### Update event
 {: #at_events_update}
 
 | Action                               | Description                                                           |
 |--------------------------------------|-----------------------------------------------------------------------|
-| `text-to-speech.custom-voice.update` | Update a custom voice (`POST /v1/customizations/{customization_id}`). |
-{: caption="Table 3. Voice model customization .update action that generates an event"}
+| `text-to-speech.custom-voice.update` | Update a custom model (`POST /v1/customizations/{customization_id}`). |
+{: caption="Table 3. Customization .update action that generates an event"}
 
 ### Delete events
 {: #at_events_delete}
 
 | Action                                    | Description                                                                                      |
 |-------------------------------------------|--------------------------------------------------------------------------------------------------|
-| `text-to-speech.custom-voice.delete`      | Delete a custom voice (`DELETE /v1/customizations/{customization_id}`).                          |
-| `text-to-speech.custom-voice-word.delete` | Delete a word from a custom voice (`DELETE /v1/customizations/{customization_id}/words/{word}`). |
-{: caption="Table 4. Voice model customization .delete actions that generate events"}
+| `text-to-speech.custom-voice.delete`      | Delete a custom model (`DELETE /v1/customizations/{customization_id}`).                          |
+| `text-to-speech.custom-voice-word.delete` | Delete a word from a custom model (`DELETE /v1/customizations/{customization_id}/words/{word}`). |
+{: caption="Table 4. Customization .delete actions that generate events"}
 
 ## Where to view events
 {: #at_ui}
