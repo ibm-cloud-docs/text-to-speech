@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-09-21"
+lastupdated: "2020-10-01"
 
 subcollection: text-to-speech
 
@@ -70,7 +70,7 @@ Saint Anthony lives on Henry Street
 ```
 {: codeblock}
 
-However, if you override the default pronunciation rules for the string `St.` to translate it as `saint`, the service can no longer pronounce the word based on context. Applying a custom voice model that includes such a translation causes the service to pronounce the previous input sentence as
+However, if you override the default pronunciation rules for the string `St.` to translate it as `saint`, the service can no longer pronounce the word based on context. Applying a custom model that includes such a translation causes the service to pronounce the previous input sentence as
 
 ```
 Saint Anthony lives on Henry saint
@@ -110,12 +110,12 @@ For more information about working with SPR, see [Using phonetic symbols](/docs/
 ## Working with Japanese entries
 {: #jaNotes}
 
-Extra rules and a `part_of_speech` field apply to the creation of entries for words in a Japanese custom voice model:
+Extra rules and a `part_of_speech` field apply to the creation of entries for words in a Japanese custom model:
 
 -   A sounds-like translation can contain only *Katakana* characters. *Kanji* and *Hiragana* characters are not allowed.
 -   When you create a translation (sounds-like or phonetic) for a word, you can also specify an optional `part_of_speech` field to identify the word's part of speech. The service uses the part of speech to produce the correct intonation for the word. For a complete list, see [Japanese parts of speech](#partsOfSpeech).
 -   You can create only a single entry for any word, and you can specify only a single part of speech for any word. You cannot create multiple entries with different parts of speech (for instance, noun and verb) for the same word. Adding a translation for a word that exists in a model overwrites the word's existing translation, including its part of speech.
--   The service applies the longest matching word from the word/translation pairs that are defined for a custom voice model. For example, consider the following three entries for a custom model.
+-   The service applies the longest matching word from the word/translation pairs that are defined for a custom model. For example, consider the following three entries for a custom model.
 
     <pre><code>{
       "words": [

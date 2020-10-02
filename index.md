@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-09-29"
+lastupdated: "2020-10-01"
 
 subcollection: text-to-speech
 
@@ -44,7 +44,7 @@ The {{site.data.keyword.texttospeechshort}} service supports both [HTTP](/docs/t
 -   [Audio formats](/docs/text-to-speech?topic=text-to-speech-audioFormats) - Produces audio in Ogg or WebM with the Opus or Vorbis codec, WAV, FLAC, MP3 (MPEG), l16 (PCM), mulaw, or basic format.
 -   [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices) - Synthesizes text to audio in many different languages, voices, and dialects. The service offers both standard (concatenative) and neural versions of most voices.
 -   [Obtaining word timings](/docs/text-to-speech?topic=text-to-speech-timing) - With the WebSocket interface, supports the SSML `<mark>` element and optional word timing information for all strings of the input text. Timing information synchronizes the input text and the resulting audio.
--   [Voice customization](/docs/text-to-speech?topic=text-to-speech-customIntro) - Provides a customization interface that you can use to specify how the service pronounces unusual words that occur in your input text. You can define custom dictionaries for domain-specific terms, words with foreign origins, personal or geographic names, and abbreviations or acronyms in your application's lexicon. You can create pronunciations based on other words, on the International Phonetic Alphabet (IPA), or on the {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR).
+-   [Customization](/docs/text-to-speech?topic=text-to-speech-customIntro) - Provides a customization interface that you can use to specify how the service pronounces unusual words that occur in your input text. You can define custom models to include dictionaries of domain-specific terms, words with foreign origins, personal or geographic names, and abbreviations or acronyms in your application's lexicon. You can create pronunciations based on other words, on the International Phonetic Alphabet (IPA), or on the {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR).
 -   [SSML](/docs/text-to-speech?topic=text-to-speech-ssml) - Accepts plain text or text that is marked up with the XML-based Speech Synthesis Markup Language (SSML).
 -   [Expressive SSML](/docs/text-to-speech?topic=text-to-speech-expressive) - Extends SSML with an expressive element that you can use to indicate a speaking style of *GoodNews*, *Apology*, or *Uncertainty*. Available only for the standard US English Allison voice.
 -   [Voice transformation SSML](/docs/text-to-speech?topic=text-to-speech-transformation) - Extends SSML by adding a voice transformation element. You can use the element to expand the range of possible voices by controlling aspects such as pitch, rate, and timbre. Also offers two built-in virtual voices, *Young* and *Soft*. Available only for standard US English voices.
