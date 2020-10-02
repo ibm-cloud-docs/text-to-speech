@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-10-01"
+lastupdated: "2020-10-02"
 
 keywords: IBM,activity tracker,LogDNA,event,security,text to speech
 
@@ -29,7 +29,7 @@ As a security officer, auditor, or manager, you can use the Activity Tracker ser
 ## Customization events
 {: #at_events}
 
-The following tables list the {{site.data.keyword.texttospeechshort}} actions for voice model customization that generate events.
+The following tables list the {{site.data.keyword.texttospeechshort}} actions for model customization that generate events.
 
 ### Create events
 {: #at_events_create}

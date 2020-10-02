@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-10-01"
+lastupdated: "2020-10-02"
 
 subcollection: text-to-speech
 
@@ -368,7 +368,7 @@ The service now supports the MP3 or Motion Picture Experts Group (MPEG) audio fo
     -   `en-US_MichaelVoice`
     -   `es-ES_EnriqueVoice`
     -   `fr-FR_ReneeVoice`
--   The `GET /v1/pronunciation` method now accepts an optional `customization_id` query parameter. The parameter obtains a word translation from a specified custom model. If the voice model does not contain the word, the method returns the word's default pronunciation. For more information, see the [API reference](https://{DomainName}/apidocs/text-to-speech){: external}.
+-   The `GET /v1/pronunciation` method now accepts an optional `customization_id` query parameter. The parameter obtains a word translation from a specified custom model. If the custom model does not contain the word, the method returns the word's default pronunciation. For more information, see the [API reference](https://{DomainName}/apidocs/text-to-speech){: external}.
 
     When using the `GET /v1/pronunciation` method without a customization ID and for a language other than US English, you can request a word's pronunciation only in {{site.data.keyword.IBM_notm}} SPR notation. For a language other than US English, you must specify `spr` with the method's `format` option.
     {: note}
