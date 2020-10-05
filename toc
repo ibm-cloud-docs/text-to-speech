@@ -37,10 +37,10 @@ Text to Speech
 
     {: topicgroup}
     SSML
-        SSML.md
-        SSML-elements.md
-        SSML-expressive.md
-        SSML-transformation.md
+        ssml.md
+        ssml-elements.md
+        ssml-expressive.md
+        ssml-transformation.md
 
     {: topicgroup}
     Phonetic symbols
