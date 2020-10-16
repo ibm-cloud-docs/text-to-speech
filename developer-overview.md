@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-10-01"
+lastupdated: "2020-10-15"
 
 subcollection: text-to-speech
 
@@ -100,7 +100,7 @@ For instance, a web page that is loaded from a server in {{site.data.keyword.clo
 SDKs are available for the {{site.data.keyword.texttospeechshort}} service to simplify the development of speech applications. {{site.data.keyword.ibmwatson}} SDKs are available for many popular programming languages and platforms.
 
 -   For a complete list of SDKs and links to the SDKs on GitHub, see [Using SDKs](/docs/text-to-speech?topic=watson-using-sdks).
--   For more information about all methods of the SDKs for the {{site.data.keyword.texttospeechshort}} service, see the [API reference](https://{DomainName}/apidocs/text-to-speech){: external}.
+-   For more information about all methods of the SDKs for the {{site.data.keyword.texttospeechshort}} service, see the [API & SDK reference](https://{DomainName}/apidocs/text-to-speech){: external}.
 
 ## Learning more about application development
 {: #learn}
