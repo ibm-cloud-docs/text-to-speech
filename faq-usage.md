@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-10-01"
+lastupdated: "2020-10-15"
 
 keywords: faqs,frequently asked questions,question,Text to Speech
 
@@ -55,7 +55,7 @@ By default, the {{site.data.keyword.texttospeechshort}} service returns audio in
 {: #faq-convert}
 {: faq}
 
-To submit text to the service for synthesized audio output, you make an HTTP or WebSocket request. You can use the API directly or use one of the Watson SDKs. [Getting started](/docs/text-to-speech?topic=text-to-speech-gettingStarted) offers examples of both the HTTP `POST /v1/synthesize` and `GET /v1/synthesize` methods. The [API reference](/apidocs/text-to-speech){: external} shows examples of all interfaces and methods.
+To submit text to the service for synthesized audio output, you make an HTTP or WebSocket request. You can use the API directly or use one of the Watson SDKs. [Getting started](/docs/text-to-speech?topic=text-to-speech-gettingStarted) offers examples of both the HTTP `POST /v1/synthesize` and `GET /v1/synthesize` methods. The [API & SDK reference](/apidocs/text-to-speech){: external} shows examples of all interfaces and methods.
 
 There is no graphical user interface for submitting text. See the [Text to Speech Demo](https://text-to-speech-demo.ng.bluemix.net/){: external} to try an example of the service in action. The demo accepts a small amount of your text as input to generate speech with different voices.
 
@@ -75,7 +75,7 @@ You can use the Speech Synthesis Markup Language (SSML) to control aspects of th
 The service supports SDKs in many popular programming languages and platforms.
 
 -   For more information about the SDKs and links to them on GitHub, see [{{site.data.keyword.watson}} SDKs](/docs/text-to-speech?topic=watson-using-sdks).
--   For more information about all methods of the SDKs for the {{site.data.keyword.texttospeechshort}} service, see the [API reference](/apidocs/text-to-speech){: external}.
+-   For more information about all methods of the SDKs for the {{site.data.keyword.texttospeechshort}} service, see the [API & SDK reference](/apidocs/text-to-speech){: external}.
 
 ## How do I access my API key and URL endpoint?
 {: #faq-credentials}

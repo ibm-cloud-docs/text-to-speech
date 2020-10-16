@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-10-01"
+lastupdated: "2020-10-15"
 
 subcollection: text-to-speech
 
@@ -31,7 +31,7 @@ subcollection: text-to-speech
 To synthesize text to speech with the HTTP REST interface of the {{site.data.keyword.texttospeechfull}} service, you call the `GET` or `POST /v1/synthesize` method. You specify the text that is to be synthesized and the voice and format for the spoken audio. You can also specify a custom model that is to be used with the request.
 {: shortdesc}
 
-For more information about the HTTP interface, see the [API reference](https://{DomainName}/apidocs/text-to-speech){: external}.
+For more information about the HTTP interface, see the [API & SDK reference](https://{DomainName}/apidocs/text-to-speech){: external}.
 
 ## Synthesizing text to audio
 {: #synthesize}
