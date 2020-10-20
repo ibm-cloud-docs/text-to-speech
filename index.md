@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-10-16"
+lastupdated: "2020-10-20"
 
 subcollection: text-to-speech
 
@@ -29,34 +29,29 @@ subcollection: text-to-speech
 
 **Service update:** *As of 4 September 2020, the customization interface of the {{site.data.keyword.texttospeechshort}} service is generally available. Customization is no longer beta functionality. Also, the service was updated on 10 September 2020 to address a defect with Japanese SSML. For more information, see the [10 September 2020 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#September2020b) in the release notes.*
 
-The {{site.data.keyword.texttospeechfull}} service provides application programming interfaces (APIs) that use {{site.data.keyword.IBM_notm}}'s speech-synthesis capabilities to convert written text to natural-sounding speech. The service streams the synthesized audio back to the client with minimal delay. The audio uses appropriate cadence and intonation for its language and dialect to provide voices that are smooth and natural.
+The {{site.data.keyword.texttospeechfull}} service provides APIs that use {{site.data.keyword.IBM_notm}}'s speech-synthesis capabilities to convert written text to natural-sounding speech. The service streams the synthesized audio back to the client with minimal delay. The audio uses appropriate cadence and intonation for its language and dialect to provide voices that are smooth and natural.
 
 The service can be used in applications such as voice-automated chatbots, as well as a variety of voice-driven and screenless applications, such as tools for the disabled or visually impaired, video narration and voice over, and educational and home-automation solutions. It is appropriate for any application where audio is the preferred method of output.
 
 This documentation describes managed instances of {{site.data.keyword.texttospeechfull}} that are offered in {{site.data.keyword.cloud_notm}} or in {{site.data.keyword.icp4dfull_notm}} as a Service. If you are interested in on-premises or installed deployments of the service, see [About {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](https://{DomainName}/docs/text-to-speech-data?topic=text-to-speech-data-about#about){: external}.
 {: note}
 
-## Features and capabilities
-{: #features-index}
+## Speech synthesis
+{: #about-synthesis}
 
-The {{site.data.keyword.texttospeechshort}} service supports both [HTTP](/docs/text-to-speech?topic=text-to-speech-usingHTTP) and [WebSocket](/docs/text-to-speech?topic=text-to-speech-usingWebSocket) interfaces for speech synthesis. It offers the following features and capabilities:
+The {{site.data.keyword.texttospeechshort}} service supports both HTTP and WebSocket interfaces for speech synthesis. Both interfaces accept plain text and text that is marked up with the XML-based Speech Synthesis Markup Language (SSML). The WebSocket interface can also produce timing information about the words of the audio. For more information, see [Synthesizing speech with the service](/docs/text-to-speech?topic=text-to-speech-service-features#features-synthesis-interfaces) in the service features.
 
--   [Audio formats](/docs/text-to-speech?topic=text-to-speech-audioFormats) - Produces audio in Ogg or WebM with the Opus or Vorbis codec, WAV, FLAC, MP3 (MPEG), l16 (PCM), mulaw, or basic format.
--   [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices) - Synthesizes text to audio in many different languages, voices, and dialects. The service offers both standard (concatenative) and neural versions of most voices.
--   [Obtaining word timings](/docs/text-to-speech?topic=text-to-speech-timing) - With the WebSocket interface, supports the SSML `<mark>` element and optional word timing information for all strings of the input text. Timing information synchronizes the input text and the resulting audio.
--   [Customization](/docs/text-to-speech?topic=text-to-speech-customIntro) - Provides a customization interface that you can use to specify how the service pronounces unusual words that occur in your input text. You can define custom models to include dictionaries of domain-specific terms, words with foreign origins, personal or geographic names, and abbreviations or acronyms in your application's lexicon. You can create pronunciations based on other words, on the International Phonetic Alphabet (IPA), or on the {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR).
--   [SSML](/docs/text-to-speech?topic=text-to-speech-ssml) - Accepts plain text or text that is marked up with the XML-based Speech Synthesis Markup Language (SSML).
--   [Expressive SSML](/docs/text-to-speech?topic=text-to-speech-expressive) - Extends SSML with an expressive element that you can use to indicate a speaking style of *GoodNews*, *Apology*, or *Uncertainty*. Available only for the standard US English Allison voice.
--   [Voice transformation SSML](/docs/text-to-speech?topic=text-to-speech-transformation) - Extends SSML by adding a voice transformation element. You can use the element to expand the range of possible voices by controlling aspects such as pitch, rate, and timbre. Also offers two built-in virtual voices, *Young* and *Soft*. Available only for standard US English voices.
+## Customization
+{: #about-customization}
 
-For more information about the pricing plans for the service, see the {{site.data.keyword.texttospeechshort}} service in the [{{site.data.keyword.cloud_notm}} Catalog](https://{DomainName}/catalog/text-to-speech){: external}.
+The service provides a customization interface that you can use to specify how the service pronounces unusual words that occur in your input text. You can define custom models to include dictionaries of words for your application's lexicon. For more information, see [Customizing the service](/docs/text-to-speech?topic=text-to-speech-service-features#features-customization) in the service features.
 
 ## Language support
-{: #languages-index}
+{: #about-languages}
 {: help}
 {: support}
 
-The service supports voices in the following languages:
+The service synthesizes text to speech in many languages and dialects:
 
 -   Arabic (beta)
 -   Brazilian Portuguese
@@ -70,6 +65,26 @@ The service supports voices in the following languages:
 -   Korean (beta)
 -   Spanish (Castilian, Latin American, and North American dialects)
 
-The service offers neural, standard, or both versions of each voice. The service offers at least one female voice for each language. For many languages the service offers multiple voices, including both male and female voices. Each voice uses appropriate cadence and intonation for its dialect.
+The service offers both neural and standard (concatenative) voices, and it offers female and male voices for different languages. For more information, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
 
-For more information about the voices that are available for each language, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
+## Audio formats
+{: #about-formats}
+{: help}
+{: support}
+
+The service produces audio in many popular formats:
+
+-   Ogg or Web Media (WebM) audio with the Opus or Vorbis codec
+-   MP3 (or MPEG)
+-   Waveform Audio File Format (WAV)
+-   Free Lossless Audio Codec (FLAC)
+-   Linear 16-bit Pulse-Code Modulation (PCM)
+-   Mu-law (or u-law)
+-   Basic audio
+
+Different formats support different sampling rates and other characteristics. For more information, see [Audio formats](/docs/text-to-speech?topic=text-to-speech-audioFormats).
+
+## Pricing
+{: #about-pricing}
+
+The service offers multiple pricing plans to suit your usage and application needs. For more information about the pricing plans or to purchase a plan, see the {{site.data.keyword.texttospeechshort}} service in the [{{site.data.keyword.cloud}} Catalog](https://{DomainName}/catalog/text-to-speech){: external}.

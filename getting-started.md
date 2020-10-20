@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-10-16"
+lastupdated: "2020-10-20"
 
 keywords: text to speech,IBM cloud,getting started,tutorial,synthesize audio,speech synthesis
 
@@ -117,6 +117,5 @@ The following command uses the `GET /v1/synthesize` method to synthesize Spanish
 ## Next steps
 
 -   To try an example application that accepts text and generates speech with different voices, see the [{{site.data.keyword.texttospeechshort}} demo](https://text-to-speech-demo.ng.bluemix.net/){: external}.
--   Learn more about the service's HTTP interface in [The HTTP interface](/docs/text-to-speech?topic=text-to-speech-usingHTTP).
--   Learn about the service's WebSocket interface in [The WebSocket interface](/docs/text-to-speech?topic=text-to-speech-usingWebSocket).
--   Get detailed information about the methods of the service's interface in the [API & SDK reference](https://{DomainName}/apidocs/text-to-speech){: external}.
+-   For more information about the service's interfaces and features, see [Service features](/docs/text-to-speech?topic=text-to-speech-service-features).
+-   For more information about all methods of the service's interfaces, see the [API & SDK reference](https://{DomainName}/apidocs/text-to-speech){: external}.

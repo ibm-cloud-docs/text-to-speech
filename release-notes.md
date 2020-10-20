@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-10-15"
+lastupdated: "2020-10-19"
 
 subcollection: text-to-speech
 
@@ -317,7 +317,7 @@ The service now supports the MP3 or Motion Picture Experts Group (MPEG) audio fo
 {: #April2017}
 
 -   The service now supports the Web Media (WebM) audio format with the Opus or Vorbis codec. The service now also supports the Ogg audio format with the Vorbis codec in addition to the Opus codec. For more information about supported audio formats, see [Audio formats](/docs/text-to-speech?topic=text-to-speech-audioFormats).
--   The service now supports Cross-Origin Resource Sharing (CORS) to allow browser-based clients to call the service directly. For more information, see [CORS support](/docs/text-to-speech?topic=text-to-speech-overview#cors).
+-   The service now supports Cross-Origin Resource Sharing (CORS) to allow browser-based clients to call the service directly. For more information, see [Leveraging CORS support](/docs/text-to-speech?topic=text-to-speech-service-features#features-cors).
 -   The HTTP response codes for successful completion of some methods of the customization interface changed:
     -   The `POST /v1/customizations` method now returns 201 (instead of 200).
     -   The `POST /v1/customizations/{customization_id}` method now returns 200 (instead of 201).
