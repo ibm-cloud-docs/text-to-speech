@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-10-01"
+lastupdated: "2020-10-20"
 
 subcollection: text-to-speech
 
@@ -37,7 +37,7 @@ The service's regular pronunciation rules work well for common words. However, t
 The following status and support information applies to customization:
 
 -   Customization is available for all languages.
--   You must have the Standard pricing plan to use customization. Users of the Lite plan cannot use the customization interface. For more information, see the [pricing page](https://www.ibm.com/cloud/watson-text-to-speech/pricing){: external} for the {{site.data.keyword.texttospeechshort}} service.
+-   You must have the Standard or Premium pricing plan to use customization. Users of the Lite plan cannot use the customization interface. For more information, see the {{site.data.keyword.texttospeechshort}} service in the [{{site.data.keyword.cloud}} Catalog](https://{DomainName}/catalog/text-to-speech){: external}.
 -   Premium customers can work with {{site.data.keyword.IBM_notm}} to train a new custom voice for their specific use case and target market. {{site.data.keyword.IBM_notm}} can train a new voice with as little as one hour of training data. For more information, contact your {{site.data.keyword.IBM_notm}} Sales Representative.
 
 ## How customization works

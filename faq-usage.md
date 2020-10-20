@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-10-15"
+lastupdated: "2020-10-19"
 
 keywords: faqs,frequently asked questions,question,Text to Speech
 
@@ -93,7 +93,7 @@ You can submit the following maximum amount of text for a speech synthesis reque
 -   HTTP `POST /v1/synthesize` method - Maximum of 8 KB for the URL and headers. Maximum of 5 KB for the input text, including SSML.
 -   WebSocket `/v1/synthesize` method - Maximum of 5 KB of input text, including SSML.
 
-All characters of the input, including whitespace and those that are part of SSML elements, are counted toward the data maximum. For billing purposes, whitespace characters are not counted. For more information, see [Data limits](/docs/text-to-speech?topic=text-to-speech-overview#data-limits) in the overview for developers.
+All characters of the input, including whitespace and those that are part of SSML elements, are counted toward the data maximum. For billing purposes, whitespace characters are not counted. For more information, see [Data limits](/docs/text-to-speech?topic=text-to-speech-service-features#features-data-limits).
 
 ## How does customization work?
 {: #faq-custom-understand}

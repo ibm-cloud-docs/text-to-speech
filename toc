@@ -7,7 +7,7 @@ Text to Speech
     {: .navgroup id="learn"}
     getting-started.md
     index.md
-    developer-overview.md
+    features.md
     [Demo](https://text-to-speech-demo.ng.bluemix.net/)
 
     {: .topicgroup}
