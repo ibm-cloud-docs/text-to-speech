@@ -26,7 +26,7 @@ subcollection: text-to-speech
 # Service features
 {: #service-features}
 
-You can access the speech synthesis capabilities of the {{site.data.keyword.texttospeechfull}} service via an HTTP or WebSocket interface. Both interfaces provide additional features that let you submit and receive different information from the service. And as with all {{site.data.keyword.watson}} services, SDKs are available to simplify application development in many programming languages.
+You can access the speech synthesis capabilities of the {{site.data.keyword.texttospeechfull}} service via an HTTP or WebSocket interface. Both interfaces provide features that let you submit and receive different information from the service. And as with all {{site.data.keyword.watson}} services, SDKs are available to simplify application development in many programming languages.
 {: shortdesc}
 
 ## Synthesizing speech with the service
@@ -37,7 +37,7 @@ The {{site.data.keyword.texttospeechshort}} service offers an HTTP Representatio
 -   [The HTTP interface](/docs/text-to-speech?topic=text-to-speech-usingHTTP) provides both `GET` and `POST` versions of the service's `/v1/synthesize` method. The two versions of the method offer generally equivalent functionality. You pass the text that is to be synthesized as a query parameter with the `GET` method and as the body of the request with the `POST` method.
 -   [The WebSocket interface](/docs/text-to-speech?topic=text-to-speech-usingWebSocket) provides a `/v1/synthesize` method. You pass the text that is to be synthesized over an established WebSocket connection.
 
-With both the HTTP and WebSocket interfaces, you specify the language and voice that are to be used, and the format for the audio that is to be passed.
+With both the HTTP and WebSocket interfaces, you specify the language and voice that are to be used, and the format for the audio that is to be returned.
 
 -   For an overview of the features that are available for speech synthesis, see [Using speech synthesis features](#features-synthesis).
 -   For detailed descriptions and examples of the speech synthesis methods, see the [API & SDK reference](https://{DomainName}/apidocs/text-to-speech){: external}.
@@ -67,7 +67,7 @@ The service supports speech synthesis for many languages and audio formats.
 ## Using speech synthesis features
 {: #features-synthesis}
 
-The service provides additional features that you can use to tailor the text that you send and the audio that you receive. The following sections introduce the speech synthesis features.
+The service supports additional features that you can use to tailor the text that you send and the audio that you receive.
 
 ### SSML
 {: #features-ssml}
@@ -88,9 +88,6 @@ For some standard US English voices, the service augments SSML with service-spec
 With the WebSocket interface, you can obtain timing information about the location of words in the audio that the service returns. Timing information is useful for synchronizing the input text and the audio.
 
 You can use the SSML `<mark>` element to identify specific locations, such as word boundaries, in the audio. For languages other than Japanese, you can also request word timing information for all words of the input text. For more information, see [Obtaining word timings](/docs/text-to-speech?topic=text-to-speech-timing).
-
-The `<mark>` element and word timings are available only with the WebSocket interface.
-{: note}
 
 ## Customizing the service
 {: #features-customization}
@@ -125,5 +122,5 @@ For more information about working with {{site.data.keyword.watson}} services an
 
 SDKs are available for the {{site.data.keyword.texttospeechshort}} service to simplify the development of speech applications. The SDKs support many popular programming languages and platforms.
 
--   For a complete list of SDKs and links to the SDKs on GitHub, see [{{site.data.keyword.watson}} SDKs](/docs/speech-to-text?topic=watson-using-sdks).
+-   For a complete list of SDKs and links to the SDKs on GitHub, see [{{site.data.keyword.watson}} SDKs](/docs/text-to-speech?topic=watson-using-sdks).
 -   For more information about all methods of the SDKs for the {{site.data.keyword.texttospeechshort}} service, see the [API & SDK reference](https://{DomainName}/apidocs/text-to-speech){: external}.
