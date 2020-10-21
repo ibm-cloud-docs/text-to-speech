@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-10-19"
+lastupdated: "2020-10-21"
 
 keywords: faqs,frequently asked questions,question,Text to Speech
 
@@ -19,8 +19,6 @@ subcollection: text-to-speech
 {:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
-
----
 
 # Usage FAQs
 {: #faq-usage}
@@ -57,7 +55,7 @@ By default, the {{site.data.keyword.texttospeechshort}} service returns audio in
 
 To submit text to the service for synthesized audio output, you make an HTTP or WebSocket request. You can use the API directly or use one of the Watson SDKs. [Getting started](/docs/text-to-speech?topic=text-to-speech-gettingStarted) offers examples of both the HTTP `POST /v1/synthesize` and `GET /v1/synthesize` methods. The [API & SDK reference](/apidocs/text-to-speech){: external} shows examples of all interfaces and methods.
 
-There is no graphical user interface for submitting text. See the [Text to Speech Demo](https://text-to-speech-demo.ng.bluemix.net/){: external} to try an example of the service in action. The demo accepts a small amount of your text as input to generate speech with different voices.
+There is no graphical user interface for submitting text. See the [Text to Speech demo](https://text-to-speech-demo.ng.bluemix.net/){: external} to try an example of the service in action. The demo accepts a small amount of your text as input to generate speech with different voices.
 
 ## Can I change how the service interprets input text and produces synthesized audio?
 {: #faq-change-synthesis}
