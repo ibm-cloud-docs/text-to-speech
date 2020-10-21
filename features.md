@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-10-20"
+lastupdated: "2020-10-21"
 
 subcollection: text-to-speech
 
@@ -32,7 +32,7 @@ You can access the speech synthesis capabilities of the {{site.data.keyword.text
 ## Synthesizing speech with the service
 {: #features-synthesis-interfaces}
 
-The Speech to Text service offers an HTTP Representational State Transfer (REST) interface and a WebSocket interface:
+The {{site.data.keyword.texttospeechshort}} service offers an HTTP Representational State Transfer (REST) interface and a WebSocket interface:
 
 -   [The HTTP interface](/docs/text-to-speech?topic=text-to-speech-usingHTTP) provides both `GET` and `POST` versions of the service's `/v1/synthesize` method. The two versions of the method offer generally equivalent functionality. You pass the text that is to be synthesized as a query parameter with the `GET` method and as the body of the request with the `POST` method.
 -   [The WebSocket interface](/docs/text-to-speech?topic=text-to-speech-usingWebSocket) provides a `/v1/synthesize` method. You pass the text that is to be synthesized over an established WebSocket connection.
