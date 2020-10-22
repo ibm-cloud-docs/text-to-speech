@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-10-01"
+lastupdated: "2020-10-22"
 
 subcollection: text-to-speech
 
@@ -88,6 +88,13 @@ The service applies a word from a custom model only to those strings in the inpu
 -   *A word that has a trailing period* can contain only letters, periods, and internal apostrophes (not as the first or last character). The word's *translation* can contain only normal words with ordinary spelling that are separated by white space or hyphens. It cannot contain a phonetic representation.
 
 An example of a word with a trailing period is "`div.`". Assume that a custom model includes the entry `{word='div.', translation='division'}`. The service does not apply the translation to the string "`div`" because it does not include a trailing period and therefore does not match the entry.
+
+## Phonetic translation for foreign words
+{: #rulesForeignWords}
+
+One use of phonetic translation is to add pronunciations for words that are foreign to the base language of the custom model. For example, you might add a pronunciation for a French word to a custom model that is based on English. In this case, you must use the phonetic symbols for the language of the custom model, English.
+
+The same phonetic symbol can produce different sounds for different languages. Also, not all phonetic symbols are supported for all languages. Make sure to use the phonetic symbols for the base language of the custom model when defining a translation.
 
 ## Working with IBM SPR entries
 {: #sprNotes}
