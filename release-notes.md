@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-10-19"
+lastupdated: "2020-10-22"
 
 subcollection: text-to-speech
 
@@ -63,7 +63,7 @@ The customization interface is now generally available. Customization is no long
     -   UK English: `en-GB_CharlotteV3Voice` and `en-GB_JamesV3Voice`
     -   French: `fr-FR_NicolasV3Voice`
 
-    It also offers an improved version of the existing UK neural voice, `en-KateV3Voice`. For more information about these and all available voices, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
+    It also offers an improved version of the existing UK neural voice, `en-GB_KateV3Voice`. For more information about these and all available voices, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
 -   The service now supports the `digits` attribute of the SSML `<say-as>` element with its Japanese voice. For more information, see [The say-as element](/docs/text-to-speech?topic=text-to-speech-elements#say-as_element).
 
 ## Older releases
@@ -126,8 +126,8 @@ The IPA symbols for the Arabic, Chinese, Dutch, and Korean languages are not yet
 
 -   The service now supports five new neural voices:
 
-    -   *US English:* `en-US_EmilyV3Voice`, `en-US_HenryV3Voice`, `en-US_KevinV3Voice`, and `en-US_OliviaV3Voice`
-    -   *German:* `de-DE_ErikaV3Voice`
+    -   US English: `en-US_EmilyV3Voice`, `en-US_HenryV3Voice`, `en-US_KevinV3Voice`, and `en-US_OliviaV3Voice`
+    -   German: `de-DE_ErikaV3Voice`
 
     The new voices do not support the following SSML elements:
 
