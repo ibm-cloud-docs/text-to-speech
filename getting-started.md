@@ -2,13 +2,14 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-10-23"
+lastupdated: "2020-10-24"
 
 keywords: text to speech,IBM cloud,getting started,tutorial,synthesize audio,speech synthesis
 
 subcollection: text-to-speech
 
 content-type: tutorial
+account-plan: lite
 completion-time: 10m
 
 ---
