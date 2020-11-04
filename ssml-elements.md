@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-09-18"
+lastupdated: "2020-11-04"
 
 subcollection: text-to-speech
 
@@ -25,37 +25,42 @@ subcollection: text-to-speech
 # SSML elements
 {: #elements}
 
-With the {{site.data.keyword.texttospeechfull}} service, you can use most Speech Synthesis Markup Language (SSML) elements to control the synthesis of your text. The elements are available for all supported languages. The following table summarizes the service's support for SSML elements and attributes.
+With the {{site.data.keyword.texttospeechfull}} service, you can use most Speech Synthesis Markup Language (SSML) elements and attributes to control the synthesis of your text.
+{: shortdesc}
+
+## Supported elements and attributes
+{: #elements-summary-table}
+
+The following table summarizes the service's support for SSML elements (for example, `<phoneme>` and `<prosody>`) and attributes (for example, `rate` and `volume`):
 
 -   *Full* means that the service fully supports the element or attribute with its HTTP and WebSocket interfaces.
 -   *Partial* means that the service does not support all aspects of the element or attribute. It can also mean that the service supports the element or attribute with only one of its interfaces, or that the element or attribute is not supported with all voices.
 -   *None* means that the service does not support the element or attribute.
 
-For more information about an element or attribute, see its description. Where noted, support for some attributes and values differs slightly from the SSML specification. For more information, see [W3C Speech Synthesis Markup Language (SSML) Version 1.0](http://www.w3.org/TR/speech-synthesis/){: external}.
+Support for some attributes and values differs slightly from the SSML specification. For more information, see [W3C Speech Synthesis Markup Language (SSML) Version 1.0](http://www.w3.org/TR/speech-synthesis/){: external}.
+
+For more information about an element or attribute, including examples, restrictions, and whether the service's support differs from standard SSML, click on its name to see its description. In the table, attributes are indented on the rows that follow their element. For example, `contour`, `duration`, `pitch`, `range`, `rate`, and `volume` are attributes of the `<prosody>` element.
 
 | Element or attribute | Support | &nbsp; &nbsp; &nbsp; Element or attribute | Support |
 |----------------------|:-------:|----------------------|:-------:|
-| [Audio](#audio_element) | None | &nbsp; &nbsp; &nbsp; [Say-as](#say-as_element) | Partial |
-| [Break](#break_element) | Full | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [cardinal](#sayAsCardinal) | Partial |
-| [Desc](#desc_element) | None | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [date](#sayAsDate) | Partial |
-| [Emphasis](#emphasis_element) | None | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [digits](#sayAsDigits) | Partial |
-| [Lexicon](#lexicon_element) | None | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [letters](#sayAsLetters) | Partial |
-| [Mark](#mark_element) | Partial | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [number](#sayAsNumber) | Partial |
-| [Meta](#mm_element) | None | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cardinal | Partial |
-| [Metadata](#mm_element) | None | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ordinal | Partial |
-| [Paragraph](#ps_element) | Full | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; telephone | Partial |
-| [Phoneme](#phoneme_element) | Full | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; punctuation | Partial |
-| IBM SPR | Full | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ordinal](#sayAsOrdinal) | Partial |
-| IPA | Full | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [vxml:boolean](#vxml-boolean) | Partial |
-| [Prosody](#prosody_element) | Partial | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [vxml:currency](#vxml-currency) | Partial |
-| &nbsp; &nbsp; &nbsp; contour | None | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [vxml:date](#vxml-date) | Partial |
-| &nbsp; &nbsp; &nbsp; duration | None | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [vxml:digits](#vxml-digits) | Partial |
-| &nbsp; &nbsp; &nbsp; [pitch](#prosody-pitch) | Full | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [vxml:phone](#vxml-phone) | Partial |
-| &nbsp; &nbsp; &nbsp; range | None | &nbsp; &nbsp; &nbsp; [Sentence](#ps_element) | Full |
-| &nbsp; &nbsp; &nbsp; [rate](#prosody-rate) | Full | &nbsp; &nbsp; &nbsp; [Speak](#speak_element) | Full |
-| &nbsp; &nbsp; &nbsp; [volume](#prosody-volume) | Partial | &nbsp; &nbsp; &nbsp; [Sub](#sub_element) | Full |
-| | | &nbsp; &nbsp; &nbsp; [Voice](#voice_element) | None |
-{: caption="Table 1. SSML elements"}
+| [&lt;audio&gt;](#audio_element) | None | &nbsp; &nbsp; &nbsp; [&lt;say-as&gt;](#say-as_element) | Partial |
+| [&lt;break&gt;](#break_element) | Full | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [cardinal](#sayAsCardinal) | Partial |
+| [&lt;desc&gt;](#desc_element) | None | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [date](#sayAsDate) | Partial |
+| [&lt;emphasis&gt;](#emphasis_element) | None | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [digits](#sayAsDigits) | Partial |
+| [&lt;lexicon&gt;](#lexicon_element) | None | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [letters](#sayAsLetters) | Partial |
+| [&lt;mark&gt;](#mark_element) | Partial | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [number](#sayAsNumber) | Partial |
+| [&lt;meta&gt;](#mm_element) | None | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ordinal](#sayAsOrdinal) | Partial |
+| [&lt;metadata&gt;](#mm_element) | None | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [vxml:boolean](#vxml-boolean) | Partial |
+| [&lt;paragraph&gt;](#ps_element) | Full | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [vxml:currency](#vxml-currency) | Partial |
+| [&lt;phoneme&gt;](#phoneme_element) | Full | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [vxml:date](#vxml-date) | Partial |
+| [&lt;prosody&gt;](#prosody_element) | Partial | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [vxml:digits](#vxml-digits) | Partial |
+| &nbsp; &nbsp; &nbsp; contour | None | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [vxml:phone](#vxml-phone) | Partial |
+| &nbsp; &nbsp; &nbsp; duration | None | &nbsp; &nbsp; &nbsp; [&lt;sentence&gt;](#ps_element) | Full |
+| &nbsp; &nbsp; &nbsp; [pitch](#prosody-pitch) | Full | &nbsp; &nbsp; &nbsp; [&lt;speak&gt;](#speak_element) | Full |
+| &nbsp; &nbsp; &nbsp; range | None | &nbsp; &nbsp; &nbsp; [&lt;sub&gt;](#sub_element) | Full |
+| &nbsp; &nbsp; &nbsp; [rate](#prosody-rate) | Full | &nbsp; &nbsp; &nbsp; [&lt;voice&gt;](#voice_element) | None |
+| &nbsp; &nbsp; &nbsp; [volume](#prosody-volume) | Partial | | |
+{: caption="Table 1. SSML elements and attributes"}
 
 ## The audio element
 {: #audio_element}
@@ -151,7 +156,7 @@ The `<phoneme>` element provides a phonetic pronunciation for the enclosed text.
 
     If no alphabet is specified, the service uses {{site.data.keyword.IBM_notm}} SPR by default.
 
-    The Chinese, Dutch, and Korean voices support only IPA, not SPR. Use of the `<phoneme>` element and IPA with the Arabic voice `ar-AR_OmarVoice` is not currently supported. For more information, see [Known limitations](/docs/text-to-speech?topic=text-to-speech-release-notes#limitations).
+    The Arabic, Chinese, Dutch, and Korean voices support only IPA, not SPR, with the `<phoneme>` element; for more information, see [Language support for SPR and IPA](/docs/text-to-speech?topic=text-to-speech-sprs#supportedLanguages). For Arabic, however, use of the `<phoneme>` element with IPA is not currently supported; for more information, see [Known limitations](/docs/text-to-speech?topic=text-to-speech-release-notes#limitations).
     {: important}
 -   `ph` is a required attribute that provides the pronunciation in the indicated alphabet. The following examples show the pronunciation for the word *tomato* in both formats:
 
@@ -339,7 +344,8 @@ You can also specify the value `telephone` for the `format` attribute. The examp
 ```xml
 <speak version="1.0">
   <say-as interpret-as="number" format="telephone">555-555-5555</say-as>
-  <say-as interpret-as="number" format="telephone" detail="punctuation">555-555-5555</say-as>
+  <say-as interpret-as="number" format="telephone"
+    detail="punctuation">555-555-5555</say-as>
 </speak>
 ```
 {: codeblock}
