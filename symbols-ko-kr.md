@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-09-10"
+lastupdated: "2020-11-18"
 
 subcollection: text-to-speech
 
@@ -31,7 +31,7 @@ The following sections describe the valid symbols for Korean.
 {: #koMonophthongs}
 
 | IPA symbol | IPA Unicode | Example words |
-|:----------:|:-----------:|---------------|
+|:----------:|:-----------:|:-------------:|
 | a | 0061 | **&#50500;**&#44592; |
 | e | 0065 | **&#50640;**&#45572;&#47532; |
 | i | 0069 | **&#51060;**&#48156; |
@@ -47,7 +47,7 @@ The following sections describe the valid symbols for Korean.
 {: #koDiphthongs}
 
 | IPA symbol | IPA Unicode | Example words |
-|:----------:|:-----------:|---------------|
+|:----------:|:-----------:|:-------------:|
 | ja | 006A+0061 | **&#50556;**&#44396; |
 | je | 006A+0065 | **&#50696;**&#49696; |
 | jo | 006A+006F | **&#50836;**&#47532; |
@@ -66,7 +66,7 @@ The following sections describe the valid symbols for Korean.
 {: #koOnsetConsonants}
 
 | IPA symbol | IPA Unicode | Example words |
-|:----------:|:-----------:|---------------|
+|:----------:|:-----------:|:-------------:|
 | P | 0070 | **&#48148;**&#45796; |
 | &#112;&#688; | 0070+02B0 | **&#54252;**&#46020; |
 | b | 0062 | &#49884;**&#48708;** |
@@ -92,7 +92,7 @@ The following sections describe the valid symbols for Korean.
 {: #koDoubleOnsetConsonants}
 
 | IPA symbol | IPA Unicode | Example words |
-|:----------:|:-----------:|---------------|
+|:----------:|:-----------:|:-------------:|
 | bb | 0062+0062 | **&#48848;**&#44984;&#44592; |
 | dd | 0064+0064 | **&#46392;**&#44592; |
 | &#680;&#680; | 02AB+02AB | **&#52040;**&#44984;&#48120; |
@@ -104,7 +104,7 @@ The following sections describe the valid symbols for Korean.
 {: #koCodaConsonants}
 
 | IPA symbol | IPA Unicode | Example words |
-|:----------:|:-----------:|---------------|
+|:----------:|:-----------:|:-------------:|
 | p | 0070 | **&#51665;** |
 | t | 0074 | **&#48155;**&#52840; |
 | k | 006B | **&#47785;** |

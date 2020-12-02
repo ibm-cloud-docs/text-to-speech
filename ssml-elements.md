@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-11-04"
+lastupdated: "2020-11-18"
 
 subcollection: text-to-speech
 
@@ -59,7 +59,7 @@ For more information about an element or attribute, including examples, restrict
 | &nbsp; &nbsp; &nbsp; [pitch](#prosody-pitch) | Full | &nbsp; &nbsp; &nbsp; [&lt;speak&gt;](#speak_element) | Full |
 | &nbsp; &nbsp; &nbsp; range | None | &nbsp; &nbsp; &nbsp; [&lt;sub&gt;](#sub_element) | Full |
 | &nbsp; &nbsp; &nbsp; [rate](#prosody-rate) | Full | &nbsp; &nbsp; &nbsp; [&lt;voice&gt;](#voice_element) | None |
-| &nbsp; &nbsp; &nbsp; [volume](#prosody-volume) | Partial | | |
+| &nbsp; &nbsp; &nbsp; volume | None | | |
 {: caption="Table 1. SSML elements and attributes"}
 
 ## The audio element
@@ -151,13 +151,10 @@ The only valid attribute for either element is `xml:lang`, which allows for lang
 The `<phoneme>` element provides a phonetic pronunciation for the enclosed text. The phonetic spelling represents the sounds of a word, how the sounds are divided into syllables, and which syllables receive stress. The element has two attributes:
 
 -   `alphabet` is an optional attribute that specifies the phonology to be used. The supported alphabets are
-    -   The standard International Phonetic Alphabet (IPA): `alphabet="ipa"`
-    -   The {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR): `alphabet="ibm"`
+    -   *The standard International Phonetic Alphabet (IPA):* `alphabet="ipa"`. All neural voices support IPA. This includes all voices for the Arabic, Chinese, Dutch, Australian English, and Korean languages.
+    -   *The {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR):* `alphabet="ibm"`. All enhanced neural voices support SPR in addition to IPA. This includes all voices for the Brazilian Portuguese, United Kingdom and United States English, French, German, Italian, Japanese, and Spanish (all dialects) languages.
 
-    If no alphabet is specified, the service uses {{site.data.keyword.IBM_notm}} SPR by default.
-
-    The Arabic, Chinese, Dutch, and Korean voices support only IPA, not SPR, with the `<phoneme>` element; for more information, see [Language support for SPR and IPA](/docs/text-to-speech?topic=text-to-speech-sprs#supportedLanguages). For Arabic, however, use of the `<phoneme>` element with IPA is not currently supported; for more information, see [Known limitations](/docs/text-to-speech?topic=text-to-speech-release-notes#limitations).
-    {: important}
+    If no alphabet is specified, the service uses {{site.data.keyword.IBM_notm}} SPR by default. For more information, see [Language support for SPR and IPA](/docs/text-to-speech?topic=text-to-speech-sprs#supportedLanguages).
 -   `ph` is a required attribute that provides the pronunciation in the indicated alphabet. The following examples show the pronunciation for the word *tomato* in both formats:
 
     -   IPA format:
@@ -183,7 +180,7 @@ For more information about using SPR and IPA notations with the `<phoneme>` elem
 ## The prosody element
 {: #prosody_element}
 
-The `<prosody>` element controls the pitch, speaking rate, and volume of the text. All attributes are optional, but an error occurs if no attribute is specified. The SSML specification allows for three attributes that the service does not support: `contour`, `range`, and `duration`. The service supports the `pitch`, `rate`, and `volume` attributes.
+The `<prosody>` element controls the pitch and speaking rate of the text. All attributes are optional, but an error occurs if no attribute is specified. The SSML specification allows for four attributes that the service does not support: `contour`, `range`, `duration`, and `volume`. The service supports the `pitch` and `rate` attributes.
 
 ### The pitch attribute
 {: #prosody-pitch}
@@ -232,30 +229,6 @@ The `rate` attribute indicates a change in the speaking rate for the text within
   <prosody rate="slow">Decrease speaking rate by 25%</prosody>
   <prosody rate="50">Set speaking rate at 50 words per minute</prosody>
   <prosody rate="+5%">Increase speaking rate by 5 percent</prosody>
-</speak>
-```
-{: codeblock}
-
-### The volume attribute
-{: #prosody-volume}
-
-The service does not support the `volume` attribute of the `<prosody>` element with its neural voices (for example, `en-US_AllisonV3Voice`). For more information, see [Neural voices](/docs/text-to-speech?topic=text-to-speech-voices#neuralVoices).
-{: note}
-
-The `volume` attribute modifies the volume for the text within the element. You can specify an integer or decimal value in the range of 1.0 to 100.0 (maximum volume). You can also use one of the following string values, which correspond to predefined settings in the range of 0 to 100. (The `silent` value is not supported.)
-
--   `x-soft` has the value 30.
--   `soft` has the value 50.
--   `medium` has the value 80.
--   `loud` has the value 90.
--   `default` has the value 92.
--   `x-loud` has the value 100.
-
-```xml
-<speak version="1.0">
-  <prosody volume="75">Modified volume is 75</prosody>
-  <prosody volume="88.9">Modified volume is 88.9</prosody>
-  <prosody volume="loud">Modified volume is 90</prosody>
 </speak>
 ```
 {: codeblock}
