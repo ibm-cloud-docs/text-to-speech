@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-10-21"
+lastupdated: "2020-11-18"
 
 subcollection: text-to-speech
 
@@ -76,11 +76,6 @@ You can pass the service plain text or text that is annotated with the Speech Sy
 
 -   For more information about specifying input text, see [Specifying input text](/docs/text-to-speech?topic=text-to-speech-usingHTTP#input).
 -   For more information about using SSML, see [Using SSML](/docs/text-to-speech?topic=text-to-speech-ssml).
-
-For some standard US English voices, the service augments SSML with service-specific expressive and voice-transformation elements:
-
--   [Expressive SSML](/docs/text-to-speech?topic=text-to-speech-expressive) extends SSML with an expressive element that you can use to indicate a speaking style of *GoodNews*, *Apology*, or *Uncertainty*. The feature is available for the standard US English Allison voice.
--   [Voice transformation SSML](/docs/text-to-speech?topic=text-to-speech-transformation) extends SSML by adding a voice transformation element. You can use the element to expand the range of possible voices by controlling aspects such as pitch, rate, and timbre. Voice transformation also offers two built-in virtual voices, *Young* and *Soft*. The feature is available only for standard US English voices.
 
 ### Word timings
 {: #features-timings}

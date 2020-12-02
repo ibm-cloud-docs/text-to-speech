@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-10-15"
+lastupdated: "2020-11-18"
 
 subcollection: text-to-speech
 
@@ -46,7 +46,7 @@ To synthesize text to audio, you call one of the two versions of the service's `
 The two versions of the `/v1/synthesize` method have the following parameters in common:
 
 -   `accept` (query parameter, *optional* string) - Specifies the requested audio format, or MIME type, in which the service is to return the audio. You can also specify this value with the HTTP `Accept` request header. URL-encode the argument to the `accept` query parameter. For more information, see [Audio formats](/docs/text-to-speech?topic=text-to-speech-audioFormats).
--   `voice` (query parameter, *optional* string) - Specifies the voice in which the text is to be spoken in the audio. Use the `/v1/voices` method to get the current list of supported voices. The default voice is `en-US_MichaelVoice`. For more information, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
+-   `voice` (query parameter, *optional* string) - Specifies the voice in which the text is to be spoken in the audio. Use the `/v1/voices` method to get the current list of supported voices. The default voice is `en-US_MichaelV3Voice`. For more information, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
 -   `customization_id` (query parameter, *optional* string) - Specifies a globally unique identifier (GUID) for a custom model that is to be used for the synthesis. A specified custom model must match the language of the voice that is used for the synthesis. If you include a customization ID, you must make the request with credentials for the instance of the service that owns the custom model. Omit the parameter to use the specified voice with no customization. For more information, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
 -   `X-Watson-Learning-Opt-Out` (request header, *optional* boolean) - Indicates whether the service logs request and response data to improve the service for future users. To prevent IBM from accessing your data for general service improvements, specify `true` for the parameter. For more information, see [Controlling request logging for {{site.data.keyword.watson}} services](/docs/watson?topic=watson-gs-logging-overview).
 -   `X-Watson-Metadata` (request header, *optional* string) - Associates a customer ID with data that is passed with a request. For more information, see [Information security](/docs/text-to-speech?topic=text-to-speech-information-security).
@@ -75,9 +75,10 @@ Although the `GET` and `POST` methods offer equivalent functionality, it is alwa
 ## Specifying SSML input
 {: #ssml-http}
 
-The Speech Synthesis Markup Language (SSML) is an XML-based markup language that is designed to provide annotations of text for speech synthesis applications such as the {{site.data.keyword.texttospeechshort}} service. You can use SSML elements and their attributes to gain greater control over the synthesis and resulting audio output.
+The Speech Synthesis Markup Language (SSML) is an XML-based markup language that is designed to provide annotations of text for speech synthesis applications such as the {{site.data.keyword.texttospeechshort}} service. You can use SSML elements and their attributes to gain greater control over the synthesis and resulting audio output. For more information about using SSML to annotate input text and an inventory of all supported elements and attributes, see
 
-For more information about using SSML to annotate input text, see [Using SSML](/docs/text-to-speech?topic=text-to-speech-ssml). The documentation inventories the SSML elements and attributes that are supported by the service. It also documents the service's expressive and voice-transformation extensions.
+-   [Using SSML](/docs/text-to-speech?topic=text-to-speech-ssml)
+-   [SSML elements](/docs/text-to-speech?topic=text-to-speech-elements)
 
 ## Escaping XML control characters
 {: #escape}
@@ -175,7 +176,7 @@ The following examples send two sentences to the `POST /v1/synthesize` method. T
     ```javascript
     {
       "text": "<s>&quot;What have I learned?&quot; he asked.
-        &quot;<express-as type=\"GoodNews\">Everything!</express-as>&quot;</s>"
+        &quot;<prodody rate=\"50\">Everything!</prosody>&quot;</s>"
     }
     ```
     {: codeblock}

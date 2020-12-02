@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-10-24"
+lastupdated: "2020-11-23"
 
 keywords: text to speech,IBM cloud,getting started,tutorial,synthesize audio,speech synthesis
 
@@ -74,7 +74,7 @@ Omit the braces (`{ }`) from the examples. They indicate variable values.
 {: #synthesizeEnglish}
 {: step}
 
-The following commands use the `POST /v1/synthesize` method to synthesize US English input to audio files in two different formats. Both requests use the default US English voice, `en-US_MichaelVoice`.
+The following commands use the `POST /v1/synthesize` method to synthesize US English input to audio files in two different formats. Both requests use the default US English voice, `en-US_MichaelV3Voice`.
 
 1.  Issue the following command to synthesize the string "hello world" and produce a WAV file that is named `hello_world.wav`.
     -   {: hide-dashboard} Replace `{apikey}` and `{url}` with your API key and URL.
@@ -113,18 +113,18 @@ You can use a browser or other tools to play the audio files that are produced b
 
 The following command uses the `GET /v1/synthesize` method to synthesize Spanish input to an audio file.
 
-1.  Issue the following command to synthesize the string "hola mundo" and produce a WAV file that is named `hola_mundo.wav`. The input text is URL-encoded. The method includes the query parameters `accept` to specify the audio format and `voice` to specify a Spanish voice, `es-ES_EnriqueVoice`.
+1.  Issue the following command to synthesize the string "hola mundo" and produce a WAV file that is named `hola_mundo.wav`. The input text is URL-encoded. The method includes the query parameters `accept` to specify the audio format and `voice` to specify a Spanish voice, `es-ES_EnriqueV3Voice`.
     -   {: hide-dashboard} Replace `{apikey}` and `{url}` with your API key and URL.
 
     ```bash
     curl -X GET -u "apikey:{apikey}"{: apikey} \
     --output hola_mundo.wav \
-    "{url}/v1/synthesize?accept=audio%2Fwav&text=hola%20mundo&voice=es-ES_EnriqueVoice"{: url}
+    "{url}/v1/synthesize?accept=audio%2Fwav&text=hola%20mundo&voice=es-ES_EnriqueV3Voice"{: url}
     ```
     {: pre}
 
 ## Next steps
 
--   To try an example application that accepts text and generates speech with different voices, see the [{{site.data.keyword.texttospeechshort}} demo](https://text-to-speech-demo.ng.bluemix.net/){: external}.
+-   To try an example application that accepts text and generates speech with different voices, see the [{{site.data.keyword.texttospeechshort}} demo](https://www.ibm.com/demos/live/tts-demo/self-service/home){: external}.
 -   For more information about the service's interfaces and features, see [Service features](/docs/text-to-speech?topic=text-to-speech-service-features).
 -   For more information about all methods of the service's interfaces, see the [API & SDK reference](https://{DomainName}/apidocs/text-to-speech){: external}.

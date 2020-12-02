@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-10-21"
+lastupdated: "2020-11-23"
 
 keywords: faqs,frequently asked questions,question,Text to Speech
 
@@ -30,18 +30,16 @@ FAQs for {{site.data.keyword.texttospeechfull}} include questions about speech s
 {: #faq-language-support}
 {: faq}
 
-The {{site.data.keyword.texttospeechshort}} service supports male and female voices in various spoken languages. Supported languages include Arabic (beta), Brazilian Portuguese, Chinese (Mandarin, beta), Dutch (beta), English (United Kingdom and United States), French, German, Italian, Japanese, Korean (beta), and Spanish (multiple dialects). For more information about the available voices for all languages, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
+The {{site.data.keyword.texttospeechshort}} service supports male and female voices in various spoken languages. Supported languages include Arabic, Brazilian Portuguese, Chinese (Mandarin), Dutch, English (Australian, United Kingdom, and United States), French, German, Italian, Japanese, Korean, and Spanish (multiple dialects). For more information about the available voices for all languages, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
 
 ## How does the service synthesize audio?
 {: #faq-voices}
 {: faq}
 
-The {{site.data.keyword.texttospeechshort}} service offers voices that rely on two types of voice-synthesis technology:
+The {{site.data.keyword.texttospeechshort}} service offers voices that rely on neural technology to synthesize text to speech. The topic of synthesizing text to speech is inherently complex. For more information, see
 
--   [Neural voices](/docs/text-to-speech?topic=text-to-speech-voices#neuralVoices)
--   [Standard (concatenative) voices](/docs/text-to-speech?topic=text-to-speech-voices#standardVoices)
-
-The topic of synthesizing text to speech is inherently complex. For more information, see [The science behind the service](/docs/text-to-speech?topic=text-to-speech-science).
+-   [Neural voice technology](/docs/text-to-speech?topic=text-to-speech-voices#neuralVoices)
+-   [The science behind the service](/docs/text-to-speech?topic=text-to-speech-science)
 
 ## What are the output audio formats?
 {: #faq-audio-types}
@@ -55,7 +53,7 @@ By default, the {{site.data.keyword.texttospeechshort}} service returns audio in
 
 To submit text to the service for synthesized audio output, you make an HTTP or WebSocket request. You can use the API directly or use one of the Watson SDKs. [Getting started](/docs/text-to-speech?topic=text-to-speech-gettingStarted) offers examples of both the HTTP `POST /v1/synthesize` and `GET /v1/synthesize` methods. The [API & SDK reference](/apidocs/text-to-speech){: external} shows examples of all interfaces and methods.
 
-There is no graphical user interface for submitting text. See the [Text to Speech demo](https://text-to-speech-demo.ng.bluemix.net/){: external} to try an example of the service in action. The demo accepts a small amount of your text as input to generate speech with different voices.
+There is no graphical user interface for submitting text. See the [Text to Speech demo](https://www.ibm.com/demos/live/tts-demo/self-service/home){: external} to try an example of the service in action. The demo accepts a small amount of your text as input to generate speech with different voices.
 
 ## Can I change how the service interprets input text and produces synthesized audio?
 {: #faq-change-synthesis}

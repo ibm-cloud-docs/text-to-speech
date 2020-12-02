@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-09-10"
+lastupdated: "2020-11-18"
 
 subcollection: text-to-speech
 
@@ -31,7 +31,7 @@ The following sections describe the valid symbols for Dutch.
 {: #nlRegularVowels}
 
 | IPA symbol | IPA Unicode | Example words |
-|:----------:|:-----------:|---------------|
+|:----------:|:-----------:|:-------------:|
 | &#593; | 0251 | b**a**d |
 | &#603; | 0258 | b**e**d |
 | &#618; | 026A | v**i**s |
@@ -47,7 +47,7 @@ The following sections describe the valid symbols for Dutch.
 {: #nlLongVowels}
 
 | IPA symbol | IPA Unicode | Example words |
-|:----------:|:-----------:|---------------|
+|:----------:|:-----------:|:-------------:|
 | a | 0061 | n**aa**m |
 | e | 0065 | h**ee**t |
 | i | 0069 | d**ie**p |
@@ -66,7 +66,7 @@ The following sections describe the valid symbols for Dutch.
 {: #nlNasalizedVowels}
 
 | IPA symbol | IPA Unicode | Example words |
-|:----------:|:-----------:|---------------|
+|:----------:|:-----------:|:-------------:|
 | &#593;&#771; | 0251+0303 | ch**an**son |
 | &#603;&#771; | 025B+0303 | t**im**bre |
 | &#596;&#771; | 0254+0303 | b**on**b**on** |
@@ -77,7 +77,7 @@ The following sections describe the valid symbols for Dutch.
 {: #nlDiphthongs}
 
 | IPA symbol | IPA Unicode | Example words |
-|:----------:|:-----------:|---------------|
+|:----------:|:-----------:|:-------------:|
 | &#603;&#105; | 025B+0069 | f**ij**n |
 | &#593;&#117; | 0251+0075 | k**ou** |
 | &#339;&#121; | 0153+0079 | h**ui**s |
@@ -87,7 +87,7 @@ The following sections describe the valid symbols for Dutch.
 {: #nlSemiVowels}
 
 | IPA symbol | IPA Unicode | Example words |
-|:----------:|:-----------:|---------------|
+|:----------:|:-----------:|:-------------:|
 | w | 0077 | **w**indows |
 | j | 006A | **j**as |
 {: caption="Table 5. Semi vowels (Dutch)"}
@@ -96,7 +96,7 @@ The following sections describe the valid symbols for Dutch.
 {: #nlConsonants}
 
 | IPA symbol | IPA Unicode | Example words |
-|:----------:|:-----------:|---------------|
+|:----------:|:-----------:|:-------------:|
 | p | 0070 | **p**ad |
 | b | 0062 | **b**ad |
 | t | 0074 | **t**ak |
@@ -109,11 +109,10 @@ The following sections describe the valid symbols for Dutch.
 | &#643; | 0283 | **sj**aal |
 | &#658; | 0292 | baga**g**e |
 | x | 0078 | **g**aan, to**ch** |
-| &#611; | Not available | re**g**en |
+| &#611; | 0263 | re**g**en |
 | h | 0068 | **h**and |
 | v | 0076 | le**v**en |
 | &#651; | 028B | **w**ang |
-| &#116;&#690; | 0074+02B2 | po**tj**e |
 | l | 006C | **l**and |
 | r | 0072 | **r**and |
 | &#641; | 0281 | abbatoi**r** |
@@ -121,11 +120,8 @@ The following sections describe the valid symbols for Dutch.
 | m | 006D | **m**at |
 | n | 006E | **n**ek |
 | &#331; | 014B | e**ng** |
-| &#626; | 0272 | ora**nj**e |
 | &#679; | 02A7 | **ch**eck |
-| &#678; | 02A6 | pa**ts** |
 | &#676; | 02A4 | **j**azz |
-| &#660; | 0294 | **g**e&euml;erd |
 | &#952; | 03B8 | **th**umbnail |
 | &#240; | 00F0 | bro**th**er |
 {: caption="Table 6. Consonants (Dutch)"}

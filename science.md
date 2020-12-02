@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-07-06"
+lastupdated: "2020-12-01"
 
 subcollection: text-to-speech
 
@@ -25,15 +25,13 @@ subcollection: text-to-speech
 # The science behind the service
 {: #science}
 
-The {{site.data.keyword.texttospeechfull}} service offers voices that rely on two types of technology: [neural voice technology](#science-neural) and [concatenative synthesis](#science-concatenative). Both technologies synthesize speech from input text, but they use different approaches to produce audio with different characteristics. Neural (`V3`) voices are enhanced versions of the service's original concatenative voices.
+The {{site.data.keyword.texttospeechfull}} service offers voices that rely on [neural voice technology](#science-neural). The service offers both neural and enhanced neural voices. The topic of synthesizing text to speech is inherently complex. For more information about the scientific research behind the service's speech technology, see the documents that are listed in [Research references](/docs/text-to-speech?topic=text-to-speech-references).
 {: shortdesc}
-
-The topic of synthesizing text to speech is inherently complex. For more information about the scientific research behind the service's speech technology, see the documents that are listed in [Research references](/docs/text-to-speech?topic=text-to-speech-references).
 
 ## Neural voice technology
 {: #science-neural}
 
-Neural voice technology synthesizes human-quality speech from input text. The service first analyzes the input text to determine the desired content. As with its concatenative models, the service uses an acoustic model that consists of a decision tree to generate candidate units for synthesis.
+Neural voice technology synthesizes human-quality speech from input text. The service first analyzes the input text to determine the desired content. The service uses an acoustic model that consists of a decision tree to generate candidate units for synthesis.
 
 For each of the phones in a sequence of phones to be synthesized, the model considers the phone in the context of the preceding and following two phones. It then produces a set of acoustic units that are evaluated for fitness. This step reduces the complexity of the search by restricting it to only those units that meet some contextual criteria and discarding all others.
 
@@ -49,11 +47,15 @@ The DNNs are trained on natural human speech to predict the acoustic features of
 
 Neural voices produce speech that is crisp and clear, with a very natural-sounding and smooth audio quality. For more information about the service's neural voice technology, see
 
+-   The documentation [Neural voice technology](/docs/text-to-speech?topic=text-to-speech-voices#neuralVoices)
 -   The blog post [{{site.data.keyword.ibmwatson_notm}} {{site.data.keyword.texttospeechshort}}: Neural Voices Generally Available](https://medium.com/ibm-watson/ibm-watson-text-to-speech-neural-voices-added-to-service-e562106ff9c7){: external}
 -   The research paper [High quality, lightweight and adaptable {{site.data.keyword.texttospeechshort}} using LPCNet](https://arxiv.org/abs/1905.00590){: external}
 
 ## Concatenative synthesis
 {: #science-concatenative}
+
+All concatenative voices, also referred to as standard voices, were deprecated as of 2 December 2020. The following information is maintained for general information purposes only. For more information about the deprecation of the concatenative voices, see the [2 December 2020 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#December2020) in the release notes.
+{: important}
 
 Concatenative synthesis relies on an inventory of acoustic units from a large synthesis corpus to produce output speech for arbitrary input text. It is based on the following pipeline of processes. These processes facilitate an efficient, real-time search over this inventory of units followed by a post-processing of the units.
 

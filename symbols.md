@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-10-01"
+lastupdated: "2020-11-20"
 
 subcollection: text-to-speech
 
@@ -60,7 +60,7 @@ IBM SPR is an alternative representation to standard IPA. Here are examples of v
 ```
 {: codeblock}
 
-In the definitions, the letters represent specific sounds of US English speech. A `.` (period) signals the beginning of a new syllable, and the digits `1` and `0` indicate syllable stress. For more information, see [Specifying syllables](#syllables).
+In the definitions, the letters represent specific sounds of US English speech. A `.` (period, IPA Unicode `002E`) signals the beginning of a new syllable, and the digits `1` and `0` indicate syllable stress. For more information, see [Specifying syllables](#syllables).
 
 ### Speech sound symbols
 {: #intro-SPRs-symbols}
@@ -96,7 +96,7 @@ You can specify syllable boundaries and stress in both SPR and IPA.
 ### Syllable boundaries
 {: #syllables-boundaries}
 
-You can use a `.` (period) to mark the beginning of each syllable. However, to preserve the valid phonetics of a language, the service can elect not to honor periods in some cases (for example, if a syllable boundary is placed at an illegal or unnatural position for a language). In general, in cases where the user can indicate a valid preference for a syllable boundary or other aspect of a word's pronunciation, the service honors such requests.
+You can use a `.` (period, IPA Unicode `002E`) to mark the beginning of each syllable. However, to preserve the valid phonetics of a language, the service can elect not to honor periods in some cases (for example, if a syllable boundary is placed at an illegal or unnatural position for a language). In general, in cases where the user can indicate a valid preference for a syllable boundary or other aspect of a word's pronunciation, the service honors such requests.
 
 ### Syllable stress
 {: #syllables-stress}
@@ -127,7 +127,6 @@ Table 2 lists language-specific considerations that apply to specifying syllable
 
 | Language | Notation | Language-specific rules |
 |:--------:|:--------:|-------------------------|
-| Arabic | IPA | The secondary stress symbol is ignored, but including the symbol may produce undesired results. |
 | French | SPR | All syllable stress symbols are honored. But syllable stress must immediately precede the vowel of the syllable. Syllable stress for French is much stricter than for other languages. An error occurs if you place the stress symbol in an invalid location. |
 | French | IPA | All syllable stress symbols are ignored. |
 | Italian | SPR | You can specify only `1` (primary stress). An error occurs if you specify secondary or no stress. |
@@ -141,7 +140,9 @@ Table 2 lists language-specific considerations that apply to specifying syllable
 {: help}
 {: support}
 
-Table 3 shows the service's language support for SPR and IPA symbols. The table provides links to pages that document the supported SPR symbols, IPA symbols, and equivalent IPA Unicode values that can be used with all voices for each language. The pages provide examples of each symbol in words from the language. Because of dialectal differences, the examples might not always match your pronunciation.
+Table 3 shows the service's language support for SPR and IPA symbols. All neural voices support IPA; enhanced neural voices also support SPR. For more information, see [Neural voice technology](/docs/text-to-speech?topic=text-to-speech-voices#neuralVoices).
+
+The table provides links to pages that document the supported SPR symbols, IPA symbols, and equivalent IPA Unicode values that can be used with all voices for each language. The pages provide examples of each symbol in words from the language. Because of dialectal differences, the examples might not always match your pronunciation.
 
 | Language | Supports SPR | Supports IPA |
 |----------|:------------:|:------------:|
@@ -149,6 +150,7 @@ Table 3 shows the service's language support for SPR and IPA symbols. The table 
 | [Brazilian Portuguese symbols](/docs/text-to-speech?topic=text-to-speech-ptSymbols)| Yes | Yes |
 | [Chinese (Mandarin) symbols](/docs/text-to-speech?topic=text-to-speech-zhSymbols) | No | Yes |
 | [Dutch symbols](/docs/text-to-speech?topic=text-to-speech-nlSymbols) | No | Yes |
+| [English (Australian) symbols](/docs/text-to-speech?topic=text-to-speech-auSymbols) | No | Yes |
 | [English (United Kingdom) symbols](/docs/text-to-speech?topic=text-to-speech-gbSymbols) | Yes | Yes |
 | [English (United States) symbols](/docs/text-to-speech?topic=text-to-speech-usSymbols) | Yes | Yes |
 | [French symbols](/docs/text-to-speech?topic=text-to-speech-frSymbols) | Yes | Yes |
@@ -158,6 +160,3 @@ Table 3 shows the service's language support for SPR and IPA symbols. The table 
 | [Korean symbols](/docs/text-to-speech?topic=text-to-speech-koSymbols) | No | Yes |
 | [Spanish symbols](/docs/text-to-speech?topic=text-to-speech-esSymbols) | Yes | Yes |
 {: caption="Table 3. Language support for phonetic symbols"}
-
-The Arabic voice, `ar-AR_OmarVoice`, does not currently support the Speech Synthesis Markup Language (SSML) `<phoneme>` element and International Phonetic Alphabet (IPA) symbols or Unicode values. For more information, see [Known limitations](/docs/text-to-speech?topic=text-to-speech-release-notes#limitations).
-{: important}

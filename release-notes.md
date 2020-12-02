@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-10-22"
+lastupdated: "2020-12-02"
 
 subcollection: text-to-speech
 
@@ -33,10 +33,101 @@ The following sections document the new features and changes that were included 
 
 The service has the following known limitations:
 
--   Use of the Speech Synthesis Markup Language (SSML) `<phoneme>` element and International Phonetic Alphabet (IPA) symbols or Unicode values with the Arabic voice, `ar-AR_OmarVoice`, is not currently supported. You cannot use the IPA phonetic symbols or Unicode values documented at [Arabic symbols](/docs/text-to-speech?topic=text-to-speech-arSymbols).
-
-    You can use only sounds-like translations for Arabic word pronunciation. For more information, see [Sounds-like translation](/docs/text-to-speech?topic=text-to-speech-customIntro#soundsLike).
 -   When you specify the `audio/ogg;codecs=opus` audio format, you can optionally specify a sampling rate other than the default 48,000 Hz. However, while the service accepts `48000`, `24000`, `16000`, `12000`, or `8000` as a valid sampling rate, it currently disregards a specified value and always returns the audio with a sampling rate of 48 kHz.
+-   Cross-Origin Resource Sharing (CORS) support is not available from the Mozilla Firefox&trade; browser for voices in the following languages: Arabic, Australian English, Chinese, Dutch, and Korean.
+
+## 2 December 2020
+{: #December2020}
+
+The voices offered by the service have undergone significant change. The service supports new languages and voices, has improved the quality of many voices, and has deprecated many older voices. In addition, all of the service's voices are now customizable and generally available (GA) for production use.
+
+### Neural and enhanced neural voices
+{: #December2020-neural-voices}
+
+To optimize the overall quality of voice synthesis, all available voices are now based on neural technology. The service offers two types of voices that are based on neural technology:
+
+-   *Neural voices*, which do *not* include the string `V3` in their names, are now available for Arabic, Australian English, Chinese, Dutch, and Korean. Neural voices support the use of the International Phonetic Alphabet (IPA) with the Speech Synthesis Markup Language (SSML) `<phoneme>` element.
+-   *Enhanced neural voices*, which include the string `V3` in their names, are now available for Brazilian Portuguese, United Kingdom and United States English, French, German, Italian, Japanese, and Spanish (all dialects). Enhanced neural voices support the use of both IPA and {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR) with the SSML `<phoneme>` element. Enhanced neural voices also achieve a slightly higher degree of natural-sounding speech. And further customization capabilities will be exposed for enhanced neural voices in the coming months.
+
+The service no longer offers standard voices for any language. Standard voices used concatenative synthesis to assemble segments of recorded speech to generate the requested audio. For more information, see
+
+-   [Supported languages and voices](/docs/text-to-speech?topic=text-to-speech-voices#languageVoices)
+-   [Neural voice technology](/docs/text-to-speech?topic=text-to-speech-voices#neuralVoices)
+
+### New voices
+{: #December2020-new-voices}
+
+The following voices are new:
+
+-   The service now supports Australian English with the following two neural voices: `en-AU_CraigVoice` and `en-AU_MadisonVoice`. For about the IPA symbols and Unicode values that are now available for the Australian language, see [English (Australian) symbols](/docs/text-to-speech?topic=text-to-speech-auSymbols).
+-   The service now supports two new Korean neural voices: `ko-KR_HyunjunVoice` and `ko-KR_SiWooVoice`. For information about the IPA symbols and Unicode values for the Korean language, see [Korean symbols](/docs/text-to-speech?topic=text-to-speech-koSymbols).
+
+### Improved voices
+{: #December2020-improved-voices}
+
+The voices for the existing Arabic, Chinese, Dutch, and Korean languages, all of which were concatenative, are now neural:
+
+-   `ar-MS_OmarVoice`
+-   `ko-KR_YoungmiVoice`
+-   `ko-KR_YunaVoice`
+-   `nl-NL_EmmaVoice`
+-   `nl-NL_LiamVoice`
+-   `zh-CN_LiNaVoice`
+-   `zh-CN_WangWeiVoice`
+-   `zh-CN_ZhangJingVoice`
+
+The following additional changes have also been made:
+
+-   The Arabic voice is now named `ar-MS_OmarVoice`. The former name, `ar-AR_OmarVoice`, is deprecated. It will continue to function for at least one year but might be removed at a future date. You are encouraged to migrate to the new name at your earliest convenience.
+-   The Arabic language now supports the use of IPA symbols and Unicode values with the SSML `<phoneme>` element. To create a custom model for Arabic, you must use the language identifier `ar-MS`. The identifier `ar-AR` is not supported for customization.
+-   The IPA symbols for the Arabic language are new. The previously documented symbols have been completely replaced. For more information about the supported IPA symbols and Unicode values, see [Arabic symbols](/docs/text-to-speech?topic=text-to-speech-arSymbols).
+-   The IPA symbols for the Dutch language have been changed as follows:
+    -   Dutch no longer supports the following IPA symbols: <code>&#116;&#690;</code> (`0074+02B2`), <code>&#626;</code> (`0272`), <code>&#678;</code> (`02A6`), and <code>&#660;</code> (`0294`).
+    -   Dutch now supports the following IPA symbol: <code>&#611;</code> (`0263`).
+
+    For more information about the supported IPA symbols and Unicode values, see [Dutch symbols](/docs/text-to-speech?topic=text-to-speech-nlSymbols).
+-   Cross-Origin Resource Sharing (CORS) support is now available for all voices from the Google Chrome&trade; and Apple&reg; Safari browsers. It is *not* available from the Mozilla Firefox&trade; browser for voices in the following languages: Arabic, Australian English, Chinese, Dutch, and Korean. For more information, see [Leveraging CORS support](/docs/text-to-speech?topic=text-to-speech-service-features#features-cors).
+
+### Deprecated voices
+{: #December2020-deprecated-voices}
+
+The following standard concatenative voices are now deprecated:
+
+-   `de-DE_BirgitVoice`
+-   `de-DE_DieterVoice`
+-   `en-GB_KateVoice`
+-   `en-US_AllisonVoice`
+-   `en-US_LisaVoice`
+-   `en-US_MichaelVoice`
+-   `es-ES_EnriqueVoice`
+-   `es-ES_LauraVoice`
+-   `es-LA_SofiaVoice`
+-   `es-US_SofiaVoice`
+-   `fr-FR_ReneeVoice`
+-   `it-IT_FrancescaVoice`
+-   `ja-JP_EmiVoice`
+-   `pt-BR_IsabelaVoice`
+
+All of the standard voices that have been deprecated have equivalent neural counterparts, so no voice is being taken away. Rather, you can change to the equivalent neural version of the voice (for example, from `de-DE_BirgitVoice` to `de-DE_BirgitV3Voice`) for better speech-synthesis results.
+
+These deprecated voices are removed from the published documentation. They will continue to function for at least one year but might be removed at a future date. You are encouraged to migrate to the equivalent neural voices at your earliest convenience. For more information about moving from a deprecated standard voice to a neural voice, see [Migrating from standard to neural voices](/docs/text-to-speech?topic=text-to-speech-voices#migrateVoice).
+
+If you omit the optional `voice` parameter from a speech synthesis request, the service uses `en-US_MichaelV3Voice` by default. This neural voice replaces the now-deprecated `en-US_MichaelVoice` standard voice that was the previous default.
+{: note}
+
+### Deprecated features
+{: #December2020-deprecated-features}
+
+The following features were available only for standard concatenative voices. They are deprecated and have been removed from the published documentation. They will continue to function for at least one year but might be removed at a future date. You are encouraged to remove these features from your applications and to migrate to neural voices at your earliest convenience.
+
+-   *Expressive SSML.* This was an IBM extension to SSML that was supported only for the `en-US_AllisonVoice` voice.
+-   *Voice transformation SSML.* This was an IBM extension to SSML that was supported only for the `en-US_AllisonVoice`, `en-US_LisaVoice`, and `en-US_MichaelVoice` voices.
+-   *The `volume` attribute of the `<prosody>` element.* This attribute was available for all standard voices.
+
+Including these SSML elements with a synthesis request for a neural voice generates an HTTP 400 response code because the request fails SSML validation.
+
+-   For more information about SSML validation, see [SSML validation](/docs/text-to-speech?topic=text-to-speech-ssml#errors).
+-   For more information about moving from a deprecated standard voice to a neural voice, see [Migrating from standard to neural voices](/docs/text-to-speech?topic=text-to-speech-voices#migrateVoice).
 
 ## 10 September 2020
 {: #September2020b}
@@ -56,19 +147,10 @@ The service now correctly parses and applies the `rate` attribute of the `<proso
 
 The customization interface is now generally available. Customization is no longer beta functionality. You can use the customization interface to specify how the service pronounces unusual words that occur in your input text by creating language-specific custom dictionaries. It can be used with all generally available and beta voices. For more information, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
 
-## 24 June 2020
-{: #June2020}
-
--   The service now offers three new neural voices:
-    -   UK English: `en-GB_CharlotteV3Voice` and `en-GB_JamesV3Voice`
-    -   French: `fr-FR_NicolasV3Voice`
-
-    It also offers an improved version of the existing UK neural voice, `en-GB_KateV3Voice`. For more information about these and all available voices, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
--   The service now supports the `digits` attribute of the SSML `<say-as>` element with its Japanese voice. For more information, see [The say-as element](/docs/text-to-speech?topic=text-to-speech-elements#say-as_element).
-
 ## Older releases
 {: #older}
 
+-   [24 June 2020](#June2020)
 -   [1 April 2020](#April2020)
 -   [24 February 2020](#February2020)
 -   [18 December 2019](#December2019b)
@@ -98,6 +180,16 @@ The customization interface is now generally available. Customization is no long
 -   [17 December 2015](#December2015)
 -   [21 September 2015](#September2015)
 -   [1 July 2015](#July2015)
+
+### 24 June 2020
+{: #June2020}
+
+-   The service now offers three new neural voices:
+    -   UK English: `en-GB_CharlotteV3Voice` and `en-GB_JamesV3Voice`
+    -   French: `fr-FR_NicolasV3Voice`
+
+    It also offers an improved version of the existing UK neural voice, `en-GB_KateV3Voice`. For more information about these and all available voices, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
+-   The service now supports the `digits` attribute of the SSML `<say-as>` element with its Japanese voice. For more information, see [The say-as element](/docs/text-to-speech?topic=text-to-speech-elements#say-as_element).
 
 ### 1 April 2020
 {: #April2020}
@@ -205,12 +297,13 @@ The service now offers a neural voice in Japanese: `ja-JP_EmiV3Voice`. Both stan
 {: #June2019}
 
 -   The service now offers two versions of most of its available voices:
-    -   [Standard voices](/docs/text-to-speech?topic=text-to-speech-voices#standardVoices) that use concatenative synthesis to assemble segments of recorded speech to generate audio. Standard voices do not include a version string in their name (for example, `en-US_AllisonVoice`).
-    -   [Neural voices](/docs/text-to-speech?topic=text-to-speech-voices#neuralVoices) that use Deep Neural Networks (DNNs) to predict the acoustic (spectral) features of the speech. Neural voices include a version string (`V3`) in their name (for example, `en-US_AllisonV3Voice`).
+    -   *Standard voices* that use concatenative synthesis to assemble segments of recorded speech to generate audio. Standard voices do not include a version string in their name (for example, `en-US_AllisonVoice`).
+    -   *Neural voices* that use Deep Neural Networks (DNNs) to predict the acoustic (spectral) features of the speech. Neural voices include a version string (`V3`) in their name (for example, `en-US_AllisonV3Voice`).
 
-    Enhanced neural versions are available for all standard voices except for the `ja-JP_EmiVoice` voice, which is pending and will be available soon. You cannot use the SSML `<express-as>` and `<voice-transformation>` elements with the neural voices, and you cannot use the `volume` attribute of the `<prosody>` element with the neural voices.
+    Neural versions are available for all standard voices except for the `ja-JP_EmiVoice` voice, which is pending and will be available soon. You cannot use the SSML `<express-as>` and `<voice-transformation>` elements with the neural voices, and you cannot use the `volume` attribute of the `<prosody>` element with the neural voices.
 
-    For more information about all available voices, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
+    -   For more information about all available voices, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
+    -   For more information about neural voices, see [Neural voice technology](/docs/text-to-speech?topic=text-to-speech-voices#neuralVoices).
 -   The service no longer includes the `V2` DNN voices that were previously available. If you use a `V2` voice in your application, the service automatically uses the equivalent `V3` voice instead.
 
 ### 24 March 2019

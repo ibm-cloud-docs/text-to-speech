@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-04-21"
+lastupdated: "2020-11-18"
 
 subcollection: text-to-speech
 
@@ -78,9 +78,7 @@ The {{site.data.keyword.texttospeechshort}} service bases its support on SSML Ve
 For more information about using SSML with the service, see the following:
 
 -   For complete information about the service's level of support for all SSML elements, see [SSML elements](/docs/text-to-speech?topic=text-to-speech-elements). With a few exceptions, the service implements most of the W3C specification, as well as SSML fragments.
--   The service extends SSML with an `<express-as>` element that indicates how text is to be expressed when spoken (as good news, as an apology, or with uncertainty). The service supports expressiveness only for the US English Allison voice. See [Using expressive SSML](/docs/text-to-speech?topic=text-to-speech-expressive).
--   The service extends SSML with a `<voice-transformation>` element that expands the range of possible voices by letting you control the pitch, pitch range, glottal tension, breathiness, rate, and timbre of spoken text. The service also offers two built-in virtual voices, *Young* and *Soft*. The service supports voice transformation only for the US English voices. See [Using voice transformation SSML](/docs/text-to-speech?topic=text-to-speech-transformation).
--   The service's customization interface supports the use of the SSML `<phoneme>` element to specify the phonetic spelling that it uses to pronounce a word. The phonetic spelling represents the sounds of a word, how these sounds are divided into syllables, and which syllables receive stress.
+-   The service's customization interface supports the use of the SSML `<phoneme>` element to specify the phonetic spelling that it uses to pronounce a word. The phonetic spelling represents the sounds of a word, how those sounds are divided into syllables, and which syllables receive stress.
     -   For information about the customization interface, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
     -   For information about the valid symbols that you can use in an {{site.data.keyword.IBM_notm}} SPR or IPA specification for any supported language, see [Using phonetic symbols](/docs/text-to-speech?topic=text-to-speech-sprs).
 
@@ -102,6 +100,12 @@ Specifically, the service returns an error in the following cases:
 -   *French liaison in invalid location.* In the `ph` attribute of a `<phoneme>` element, the liaison character does not follow a consonant or occurs in the middle of the word pronunciation.
 -   *Japanese `:` symbol does not precede a vowel.* In the `ph` attribute of a `<phoneme>` element, a `:` character does not occur before a vowel (possibly with other symbols, such as syllable boundary, in between).
 -   *Invalid syllable stress.* The `ph` attribute of a `<phoneme>` element for an {{site.data.keyword.IBM_notm}} SPR includes invalid syllable stress. For French, a syllable stress symbol does not immediately precede a vowel. For Spanish or Italian, a secondary (`2`) or no stress (`0`) symbol is used. For Japanese, a secondary stress symbol (`2`) is used.
--   *Invalid use of SSML `<express-as>` or `<voice-transformation>` element.* You can use these SSML extensions only with the specified standard US English voices.
--   *Invalid use of SSML `<prosody>` element.* You cannot use the `contour`, `duration`, and `range` attributes of the `<prosody>` element with any voice. Also, you cannot use the `volume` attribute of the `<prosody>` element with neural voices (for example, `en-US_AllisonV3Voice`).
 -   *Unescaped XML control characters.* The input text itself contains a <code>&quot;</code>, <code>&apos;</code>, `&`, `<`, or `>` character instead of its equivalent escape string or character encoding. For more information, see [Escaping XML control characters](/docs/text-to-speech?topic=text-to-speech-usingHTTP#escape).
+-   *Invalid use of the SSML `<prosody>` element.* You cannot use the `contour`, `duration`, and `range` attributes of the `<prosody>` element with any voice.
+
+The service also returns an error for invalid use of deprecated features:
+
+-   *Invalid use of the SSML `volume` attribute with the `<prosody>` element.* You cannot use the `volume` attribute of the `<prosody>` element with neural voices. The attribute was valid only with the deprecated standard voices.
+-   *Invalid use of the SSML `<express-as>` or `<voice-transformation>` element.* You cannot use these SSML extensions with neural voices. The elements were valid only with deprecated standard US English voices.
+
+For more information about these elements and about migrating to neural voices, see [Migrating from standard to neural voices](/docs/text-to-speech?topic=text-to-speech-voices#migrateVoice).

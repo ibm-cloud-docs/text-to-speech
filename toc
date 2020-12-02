@@ -8,7 +8,7 @@ Text to Speech
     getting-started.md
     index.md
     features.md
-    [Demo](https://text-to-speech-demo.ng.bluemix.net/)
+    [Demo](https://www.ibm.com/demos/live/tts-demo/self-service/home)
 
     {: .topicgroup}
     Additional resources
@@ -36,16 +36,15 @@ Text to Speech
     SSML
         ssml.md
         ssml-elements.md
-        ssml-expressive.md
-        ssml-transformation.md
 
     {: topicgroup}
     Phonetic symbols
         symbols.md
-        symbols-ar-ar.md
+        symbols-ar-ms.md
         symbols-pt-br.md
         symbols-zh-cn.md
         symbols-nl-nl.md
+        symbols-en-au.md
         symbols-en-gb.md
         symbols-en-us.md
         symbols-fr-fr.md
