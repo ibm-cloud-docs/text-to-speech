@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-11-18"
+lastupdated: "2020-12-16"
 
 subcollection: text-to-speech
 
@@ -98,6 +98,24 @@ You can define the custom entry for a word/translation pair based on other words
 
 Premium customers can work with {{site.data.keyword.IBM_notm}} to train a new custom voice for their specific use case and target market. {{site.data.keyword.IBM_notm}} can train a new voice with as little as one hour of training data. For more information, contact your {{site.data.keyword.IBM_notm}} Sales Representative.
 {: note}
+## Understanding data security
+{: #features-data-security}
+
+The {{site.data.keyword.texttospeechshort}} service provides security for all user data both in motion and at rest:
+
+-   Transport Layer Security (TLS) 1.2 is used to secure data in transit.
+-   Advanced Encryption Standard (AES)-256 with Secure Hash Algorithm (SHA)-256 is used to secure data at rest.
+
+For more information about data security for cloud applications, see [Security architecture for cloud applications](https://www.ibm.com/cloud/architecture/architectures/securityArchitecture/security-for-data){: external}.
+
+The service offers Standard and Premium pricing plans for its users:
+
+-   Standard plans are multi-tenant solutions that provide logical separation of data by using common encryption keys.
+-   Premium plans are single-tenant solutions that provide physical separation of data. Premium plans provide dedicated data storage accounts that use unique encryption keys.
+
+Users of Premium plans can also integrate with {{site.data.keyword.keymanagementservicefull}} to create, import, and manage their encryption keys. This process is commonly referred to as *Bring your own keys* (BYOK). For more information about using {{site.data.keyword.keymanagementserviceshort}}, see [Protecting sensitive information in your Watson service](/docs/watson?topic=watson-keyservice){: external}.
+
+And finally, the service supports the European Union General Data Protection Regulation (GDPR) to mange user data. For Premium plans, it also offers US Health Insurance Portability and Accountability Act (HIPAA) readiness. For more information, see [Information security](/docs/text-to-speech?topic=text-to-speech-information-security).
 
 ## Leveraging CORS support
 {: #features-cors}
