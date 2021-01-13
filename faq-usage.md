@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-11-23"
+lastupdated: "2021-01-13"
 
 keywords: faqs,frequently asked questions,question,Text to Speech
 
@@ -10,9 +10,10 @@ subcollection: text-to-speech
 
 ---
 
+{:faq: data-hd-content-type='faq'}
+{:support: data-reuse='support'}
 {:shortdesc: .shortdesc}
 {:external: target="_blank" .external}
-{:faq: data-hd-content-type='faq'}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -29,12 +30,14 @@ FAQs for {{site.data.keyword.texttospeechfull}} include questions about speech s
 ## What languages does the service support?
 {: #faq-language-support}
 {: faq}
+{: support}
 
 The {{site.data.keyword.texttospeechshort}} service supports male and female voices in various spoken languages. Supported languages include Arabic, Brazilian Portuguese, Chinese (Mandarin), Dutch, English (Australian, United Kingdom, and United States), French, German, Italian, Japanese, Korean, and Spanish (multiple dialects). For more information about the available voices for all languages, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
 
 ## How does the service synthesize audio?
 {: #faq-voices}
 {: faq}
+{: support}
 
 The {{site.data.keyword.texttospeechshort}} service offers voices that rely on neural technology to synthesize text to speech. The topic of synthesizing text to speech is inherently complex. For more information, see
 
@@ -44,12 +47,14 @@ The {{site.data.keyword.texttospeechshort}} service offers voices that rely on n
 ## What are the output audio formats?
 {: #faq-audio-types}
 {: faq}
+{: support}
 
 By default, the {{site.data.keyword.texttospeechshort}} service returns audio in Ogg format with the Opus codec (`audio/ogg;codecs=opus`). The service supports many other audio formats to suit your application needs. For more information, see [Supported audio formats](/docs/text-to-speech?topic=text-to-speech-audioFormats#formatsSupported).
 
 ## How do I convert my text to speech?
 {: #faq-convert}
 {: faq}
+{: support}
 
 To submit text to the service for synthesized audio output, you make an HTTP or WebSocket request. You can use the API directly or use one of the Watson SDKs. [Getting started](/docs/text-to-speech?topic=text-to-speech-gettingStarted) offers examples of both the HTTP `POST /v1/synthesize` and `GET /v1/synthesize` methods. The [API & SDK reference](/apidocs/text-to-speech){: external} shows examples of all interfaces and methods.
 
@@ -58,6 +63,7 @@ There is no graphical user interface for submitting text. See the [Text to Speec
 ## Can I change how the service interprets input text and produces synthesized audio?
 {: #faq-change-synthesis}
 {: faq}
+{: support}
 
 You can use the Speech Synthesis Markup Language (SSML) to control aspects of the synthesis process such as pronunciation, volume, pitch, speed, and other attributes.
 
@@ -67,6 +73,7 @@ You can use the Speech Synthesis Markup Language (SSML) to control aspects of th
 ## What programming languages can I use?
 {: #faq-sdks}
 {: faq}
+{: support}
 
 The service supports SDKs in many popular programming languages and platforms.
 
@@ -76,12 +83,14 @@ The service supports SDKs in many popular programming languages and platforms.
 ## How do I access my API key and URL endpoint?
 {: #faq-credentials}
 {: faq}
+{: support}
 
 From the [{{site.data.keyword.cloud}} Resource list](https://{DomainName}/resources){: external}, click on your {{site.data.keyword.texttospeechshort}} service instance to go to the {{site.data.keyword.texttospeechshort}} service dashboard page. On the **Manage** page, click **Show Credentials** to view your API key and URL endpoint. For more information, see [Before you begin](/docs/text-to-speech?topic=text-to-speech-gettingStarted#before-you-begin).
 
 ## What is the maximum amount of text that I can submit for synthesis?
 {: #faq-maximum-input}
 {: faq}
+{: support}
 
 You can submit the following maximum amount of text for a speech synthesis request with each of the service's method:
 
