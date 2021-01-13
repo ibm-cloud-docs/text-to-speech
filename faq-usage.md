@@ -1,12 +1,14 @@
 ---
 
 copyright:
-  years: 2020
+  years: 2020, 2021
 lastupdated: "2021-01-13"
 
 keywords: faqs,frequently asked questions,question,Text to Speech
 
 subcollection: text-to-speech
+
+content-type: faq
 
 ---
 
