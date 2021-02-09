@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-11-23"
+  years: 2015, 2021
+lastupdated: "2021-02-09"
 
 keywords: text to speech,IBM cloud,getting started,tutorial,synthesize audio,speech synthesis
 
@@ -32,6 +32,7 @@ completion-time: 10m
 {:url: data-credential-placeholder='url'}
 {:hide-dashboard: .hide-dashboard}
 {:step: data-tutorial-type='step'}
+{:video: .video}
 
 # Getting started with {{site.data.keyword.texttospeechshort}}
 {: #gettingStarted}
@@ -40,6 +41,10 @@ completion-time: 10m
 
 The {{site.data.keyword.texttospeechfull}} service converts written text to natural-sounding speech to provide speech-synthesis capabilities for applications. This curl-based tutorial can help you get started quickly with the service. The examples show you how to call the service's `POST` and `GET /v1/synthesize` methods to request an audio stream.
 {: shortdesc}
+
+Watch the following video for a visual summary of getting started with the {{site.data.keyword.texttospeechshort}} service. The video shows the steps described in the following sections.
+
+![Getting started with the {{site.data.keyword.texttospeechshort}} service](https://video.ibm.com/embed/channel/23952663/video/text-to-speech-get-started){: video output="iframe" data-script="none" id="watsonmediaplayer" width="560" height="315" scrolling="no" allowfullscreen webkitallowfullscreen mozAllowFullScreen frameborder="0" style="border: 0 none transparent;"}
 
 ## Before you begin
 {: #before-you-begin}
