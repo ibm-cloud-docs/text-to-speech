@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2020
-lastupdated: "2020-10-01"
+  years: 2019, 2021
+lastupdated: "2021-02-09"
 
 subcollection: text-to-speech
 
@@ -22,7 +22,7 @@ subcollection: text-to-speech
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# High availability and disaster recovery
+# Understanding high availability and disaster recovery for {{site.data.keyword.texttospeechshort}}
 {: #ha-dr}
 
 The {{site.data.keyword.texttospeechfull}} service is highly available within any {{site.data.keyword.cloud_notm}} location (for example, Dallas or Washington, DC). However, recovering from potential disasters that affect an entire location requires planning and preparation.
