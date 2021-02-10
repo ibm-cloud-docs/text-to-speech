@@ -54,7 +54,6 @@ Text to Speech
         symbols-ko-kr.md
         symbols-es-es.md
 
-    ha-dr.md
     /watson/watson-keyservice
     /watson/watson-public-private-endpoints
 
@@ -66,6 +65,7 @@ Text to Speech
 
     {: .navgroup id="reference"}
     [API & SDK reference](https://cloud.ibm.com/apidocs/text-to-speech)
+    ha-dr.md
     information-security.md
     at-events.md
     /watson/watson-using-sdks
