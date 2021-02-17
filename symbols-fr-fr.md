@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-09-20"
+  years: 2015, 2021
+lastupdated: "2021-02-17"
 
 subcollection: text-to-speech
 
@@ -33,11 +33,11 @@ The following sections describe the valid symbols for French.
 | SPR symbol | IPA symbol | IPA Unicode | Example words |
 |:----------:|:----------:|:-----------:|---------------|
 | a | a<br/><br/>&#593;<br/><br/>&#592; | 0061<br/><br/>0251<br/><br/>0250 | p**a**ttes, l**a**c, c**a**ve |
-| e | e | 0065 | caf**&egrave;**, d**&egrave;**form**e**r, **&egrave;**t**&egrave;** |
+| e | e | 0065 | caf**&eacute;**, d**&eacute;**form**e**r, **&eacute;**t**&eacute;** |
 | E | &#603;<br/><br/>&#604; | 025B<br/><br/>025C | f**ai**te, m**ai**, h**e**rb |
 | i | i<br/><br/>&#618; | 0069<br/><br/>026A | f**i**lm, t**y**p**i**que |
 | o | o | 006F | **eau**, **au**x, g**au**che |
-| c | &#596;<br/><br/>&#594; | 0254<br/><br/>0252 | P**au**l, n**o**te, &egrave;chal**o**tte |
+| c | &#596;<br/><br/>&#594; | 0254<br/><br/>0252 | P**au**l, n**o**te, &eacute;chal**o**tte |
 | u | u<br/><br/>&#650; | 0075<br/><br/>028A | r**ou**e, **o&ugrave;**, t**ou**r |
 | y | &#121;<br/><br/>&#655; | 0079<br/><br/>028F | **u**tile, p**u**re, Br**u**no |
 | x [**1**] | &#601; | 0259 | litr**e**s, marbr**e** |
@@ -58,27 +58,27 @@ The following sections describe the valid symbols for French.
 
 | SPR symbol | IPA symbol | IPA Unicode | Example words |
 |:----------:|:----------:|:-----------:|---------------|
-| b | b | 0062 | **b**&egrave;**b**&egrave;, **b**alle, ro**b**e |
+| b | b | 0062 | **b**&eacute;**b**&eacute;, **b**alle, ro**b**e |
 | p | p | 0070 | **p**orte, **p**r&ecirc;t, gu&ecirc;**p**e |
 | d | d | 0064 | **d**ort, **d**olmen |
-| t | t | 0074 | **t**on, pa**tt**e, th&egrave;&acirc;**t**re |
+| t | t | 0074 | **t**on, pa**tt**e, th&eacute;&acirc;**t**re |
 | g | g<br/><br/>&#609; | 0067<br/><br/>0261 | **gu**erre, ba**gu**e, **g**arer |
 | k | k | 006B | **k**ilo, **c**aler, **qu**ai |
 | v | v | 0076 | la**v**er, **w**agon, **v**isiter |
 | f | f | 0066 | che**f**, **f**aim, **ph**are |
-| z | z | 007A | ja**s**er, r&egrave;**s**eau, **z**ig**z**aguer |
+| z | z | 007A | ja**s**er, r&eacute;**s**eau, **z**ig**z**aguer |
 | s | s | 0073 | **s**ans, ambi**t**ion, fa**&ccedil;**on |
 | Z | &#658; | 0292 | ra**g**e, **g**&icirc;te, **j**ouer |
-| S | &#643; | 0283 | **ch**eval, l&acirc;**ch**e, **sch**&egrave;ma |
+| S | &#643; | 0283 | **ch**eval, l&acirc;**ch**e, **sch**&eacute;ma |
 | m | m | 006D | **m**a**m**an, fe**mm**e, **m**iser |
 | n | n | 006E | A**nn**e, **n**i, ma**n**iaque |
 | 'nj' | &#626; | 0272 | a**gn**eau, campa**gn**e |
 | 'ng' | &#331; | 014B | parki**ng**, campi**ng** |
 | r | r<br/><br/>&#633;<br/><br/>&#640;<br/><br/>&#641;<br/><br/>x<br/><br/>&#967; | 0072<br/><br/>0279<br/><br/>0280<br/><br/>0281<br/><br/>0078<br/><br/>03C7 | pa**r**er, **r**a**r**e, ca**rr**eau |
 | l | l | 006C | **l**itre, i**ll**isible, p&acirc;**l**e |
-| j | j<br/><br/>&#654; | 006A<br/><br/>028E | h**i**&egrave;rarchie, pa**ill**e, **y**oga |
-| w | w | 0077 | **ou**i, b**ou**&egrave;e, **w**att |
-| H | &#613; | 0265 | s**u**is, l**u**i, n**u**&egrave;e |
+| j | j<br/><br/>&#654; | 006A<br/><br/>028E | h**i**&eacute;rarchie, pa**ill**e, **y**oga |
+| w | w | 0077 | **ou**i, b**ou**&eacute;e, **w**att |
+| H | &#613; | 0265 | s**u**is, l**u**i, n**u**&eacute;e |
 {: caption="Table 2. Consonants (French)"}
 
 ## Liaison
