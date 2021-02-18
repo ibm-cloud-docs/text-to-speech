@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-11-20"
+  years: 2015, 2021
+lastupdated: "2021-02-18"
 
 subcollection: text-to-speech
 
@@ -129,10 +129,10 @@ Table 2 lists language-specific considerations that apply to specifying syllable
 |:--------:|:--------:|-------------------------|
 | French | SPR | All syllable stress symbols are honored. But syllable stress must immediately precede the vowel of the syllable. Syllable stress for French is much stricter than for other languages. An error occurs if you place the stress symbol in an invalid location. |
 | French | IPA | All syllable stress symbols are ignored. |
-| Italian | SPR | You can specify only `1` (primary stress). An error occurs if you specify secondary or no stress. |
-| Japanese | SPR | You can specify only `1` (primary stress) and `0` (no stress). An error occurs if you specify secondary stress. |
+| Italian | SPR and IPA | You can specify only `1` (primary stress). An error occurs if you specify secondary or no stress. |
+| Japanese | SPR and IPA | You can specify only `1` (primary stress) and `0` (no stress). An error occurs if you specify secondary stress. |
 | Korean | IPA | All syllable stress symbols are ignored, but including the symbols may produce undesired results. |
-| Spanish | SPR | You can specify only `1` (primary stress). An error occurs if you specify secondary or no stress. |
+| Spanish | SPR and IPA | You can specify only `1` (primary stress). An error occurs if you specify secondary or no stress. |
 {: caption="Table 2. Language-specific rules for using syllable stress"}
 
 ## Language support for SPR and IPA
