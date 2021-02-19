@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-01-13"
+lastupdated: "2021-02-19"
 
 subcollection: text-to-speech
 
@@ -79,7 +79,7 @@ A WebSocket client calls the `/v1/synthesize` method with the following query pa
 -   `access_token` (*required* string) - A valid Identity and Access Management (IAM) access token to authenticate with the service. You pass an IAM access token instead of passing an API key with the call. You must use the access token before it expires. For information about obtaining an access token, see [Authenticating to Watson services](/docs/watson?topic=watson-iam).
 -   `voice` (*optional* string) - Specifies the voice in which the text is to be spoken in the audio. Omit the parameter to use the default voice, `en-US_MichaelV3Voice`. For more information, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
 -   `customization_id` (*optional* string) - Specifies the globally unique identifier (GUID) for a custom model that is to be used for the synthesis. A specified custom model must match the language of the voice that is used for the synthesis. If you include a customization ID, you must make the request with credentials for the instance of the service that owns the custom model. Omit the parameter to use the specified voice with no customization. For more information, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
--   `x-watson-learning-opt-out` (*optional* boolean) - Indicates whether the service logs requests and results that are sent over the connection. To prevent IBM from accessing your data for general service improvements, specify `true` for the parameter. For more information, see [Controlling request logging for Watson services](/docs/watson?topic=watson-gs-logging-overview).
+-   `x-watson-learning-opt-out` (*optional* boolean) - Indicates whether the service logs requests and results that are sent over the connection. To prevent IBM from accessing your data for general service improvements, specify `true` for the parameter. Opting out directs IBM to write to disk *no* user data (text or audio) for your request. For more information, see [Controlling request logging for Watson services](/docs/watson?topic=watson-gs-logging-overview).
 -   `x-watson-metadata` (*optional* string) - Associates a customer ID with data that is passed over the connection. The parameter accepts the argument `customer_id={id}`, where `id` is a random or generic string that is to be associated with the data. You must URL-encode the argument to the parameter, for example, `customer_id%3dmy_ID`. By default, no customer ID is associated with the data. For more information, see [Information security](/docs/text-to-speech?topic=text-to-speech-information-security).
 
 The following snippet of JavaScript code opens a connection with the service. The call to the `/v1/synthesize` method passes the `voice` and `access_token` query parameters, the former to direct the service to use the US English Allison voice. Once the connection is established, the event listeners (`onOpen`, `onClose`, and so on) are defined to respond to events from the service.
