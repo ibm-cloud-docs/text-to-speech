@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2020
-lastupdated: "2020-09-03"
+  years: 2019, 2021
+lastupdated: "2021-03-21"
 
 subcollection: text-to-speech
 
@@ -25,7 +25,7 @@ subcollection: text-to-speech
 # Research references
 {: #references}
 
-For more information about the research behind the {{site.data.keyword.texttospeechfull}} service, see the following documents. IBM researchers wrote or contributed to all of these papers.
+For more information about the research behind the {{site.data.keyword.texttospeechfull}} service, see the following documents. {{site.data.keyword.IBM}} researchers wrote or contributed to all of these papers.
 {: shortdesc}
 
 1.  {: #eide2007}Eide, Ellen M., and Raul Fernandez. [*Database Mining for Flexible Concatenative Text-to-Speech.*](http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=4218196){: external} Proceedings of International Conference on Acoustics, Speech and Signal Processing (ICASSP), Vol. 4 (2007): pp. 697-700.
