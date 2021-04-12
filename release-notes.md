@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-12-02"
+  years: 2015, 2021
+lastupdated: "2021-04-11"
 
 subcollection: text-to-speech
 
@@ -13,6 +13,7 @@ subcollection: text-to-speech
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
+{:beta: .beta}
 {:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
@@ -33,8 +34,202 @@ The following sections document the new features and changes that were included 
 
 The service has the following known limitations:
 
--   When you specify the `audio/ogg;codecs=opus` audio format, you can optionally specify a sampling rate other than the default 48,000 Hz. However, while the service accepts `48000`, `24000`, `16000`, `12000`, or `8000` as a valid sampling rate, it currently disregards a specified value and always returns the audio with a sampling rate of 48 kHz.
+-   When you specify the `audio/ogg;codecs=opus` audio format, you can optionally specify a sampling rate other than the default 48,000 Hz. However, although the service accepts `48000`, `24000`, `16000`, `12000`, or `8000` as a valid sampling rate, it currently disregards a specified value and always returns the audio with a sampling rate of 48 kHz.
 -   Cross-Origin Resource Sharing (CORS) support is not available from the Mozilla Firefox&trade; browser for voices in the following languages: Arabic, Australian English, Chinese, Dutch, and Korean.
+
+## 12 April 2021
+{: #April2021}
+
+### New Canadian French voice
+{: #April2021-new-voice}
+
+The service now supports Canadian French with the enhanced neural voice `fr-CA_LouiseV3Voice`. The Canadian French voice supports customization and is generally available (GA) for production use.
+
+-   To hear a sample of the new voice, see [Supported language and voice](/docs/text-to-speech?topic=text-to-speech-voices#languageVoices).
+-   For more information about the phonetic symbols and Unicode values that are available for the Canadian French language, see [French (Canadian) symbols](/docs/text-to-speech?topic=text-to-speech-frCaSymbols).
+
+### New Tune by Example feature
+{: #April2021-tbe}
+
+The Tune by Example feature is beta functionality that is supported only for US English custom models and voices.
+{: beta}
+
+The new Tune by Example feature lets you control how specified text is spoken by the service. The feature has two components:
+
+-   *Custom prompts* include the written text that is to be spoken and recorded audio that speaks the text as you want to hear it. The audio specifies the intonation, cadence, and stress of the synthesized text. The prompt can emphasize different syllables or words, introduce pauses, and generally make the synthesized audio sound more natural and appropriate for its context.
+-   *Speaker models* provide enrollment audio for a user who speaks one or more prompts. A speaker model provides an audio sample of a user's voice. The service trains itself on the voice, which can help it to produce higher-quality prompts for that speaker.
+
+You specify a custom prompt with a speech synthesis request to indicate how the service's voice is to pronounce the text. To specify a prompt, you use the SSML extension `<ibm:prompt id="{prompt_id}"/>`. The synthesized audio duplicates the prosody of the prompt.
+
+For more information about using the Tune by Example feature, see the following topics:
+
+-   [Understanding Tune by Example](/docs/text-to-speech?topic=text-to-speech-tbe-intro)
+-   [Rules for creating custom prompts and speaker models](/docs/text-to-speech?topic=text-to-speech-tbe-rules)
+-   [Creating a custom prompt](/docs/text-to-speech?topic=text-to-speech-tbe-create)
+-   [Using a custom prompt](/docs/text-to-speech?topic=text-to-speech-tbe-use)
+-   [Managing custom prompts](/docs/text-to-speech?topic=text-to-speech-tbe-custom-prompts)
+-   [Managing speaker models](/docs/text-to-speech?topic=text-to-speech-tbe-speaker-models)
+
+The service includes eight new methods for working with the Tune by Example feature. The descriptions of the new methods that follow provide links to their entries in the API & SDK reference. You might need to select the `Curl` tab of the reference to see the new methods.
+
+-   The service includes four methods for working with custom prompts:
+
+    -   [Add a custom prompt](https://{DomainName}/apidocs/text-to-speech/text-to-speech#addcustomprompt){: external}: `POST /v1/customizations/{customization_id}/prompts/{prompt_id}`
+    -   [List custom prompts](https://{DomainName}/apidocs/text-to-speech/text-to-speech#listcustomprompts){: external}: `GET /v1/customizations/{customization_id}/prompts`
+    -   [Get a custom prompt](https://{DomainName}/apidocs/text-to-speech/text-to-speech#getcustomprompt){: external}: `GET /v1/customizations/{customization_id}/prompts/{prompt_id}`
+    -   [Delete a custom prompt](https://{DomainName}/apidocs/text-to-speech/text-to-speech#deletecustomprompt){: external}: `DELETE /v1/customizations/{customization_id}/prompts/{prompt_id}`
+
+-   The service includes four methods for working with speaker models:
+
+    -   [Create a speaker model](https://{DomainName}/apidocs/text-to-speech/text-to-speech#createspeakermodel){: external}: `POST /v1/speakers`
+    -   [List speaker models](https://{DomainName}/apidocs/text-to-speech/text-to-speech#listspeakermodels){: external}: `GET /v1/speakers`
+    -   [Get a speaker model](https://{DomainName}/apidocs/text-to-speech/text-to-speech#getspeakermodel){: external}: `GET /v1/speakers/{speaker_id}`
+    -   [Delete a speaker model](https://{DomainName}/apidocs/text-to-speech/text-to-speech#deletespeakermodel){: external}: `DELETE /v1/speakers/{speaker_id}`
+
+Activity Tracker actions are available for all new Tune by Example events. For more information, see [Tune by Example events](/docs/text-to-speech?topic=text-to-speech-at-events#at-events-tbe).
+
+### Updates to Activity Tracker actions for customization
+{: #April2021-at-updates}
+
+The names of the actions for the Activity Tracker events for the customization methods have changed. The actions now include the string `custom-model` instead of `custom-voice`. The old names of the actions are deprecated. The old names are still available for use but will be removed at a future date. Migrate to the new names that are listed in [Customization events](/docs/text-to-speech?topic=text-to-speech-at-events#at-events-custom) at your earliest convenience.
+
+The following tables show the deprecated and new names for all actions.
+
+-   *Create events*
+
+    <table>
+      <caption>Table 1. Names of actions for create events</caption>
+      <tr>
+        <th style="text-align:left">
+          Deprecated action name
+        </th>
+        <th style="text-align:left">
+          New action name
+        </th>
+      </tr>
+      <tr>
+        <td style="text-align:left">
+          `text-to-speech.custom-voice.create`
+        </td>
+        <td style="text-align:left">
+          `text-to-speech.custom-model.create`
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align:left">
+          `text-to-speech.custom-voice-word-list.create`
+        </td>
+        <td style="text-align:left">
+          `text-to-speech.custom-model-word-list.create`
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align:left">
+          `text-to-speech.custom-voice-word.create`
+        </td>
+        <td style="text-align:left">
+          `text-to-speech.custom-model-word.create`
+        </td>
+      </tr>
+    </table>
+
+-   *Read events*
+
+    <table>
+      <caption>Table 2. Names of actions for read events</caption>
+      <tr>
+        <th style="text-align:left">
+          Deprecated action name
+        </th>
+        <th style="text-align:left">
+          New action name
+        </th>
+      </tr>
+      <tr>
+        <td style="text-align:left">
+          `text-to-speech.custom-voice-list.read`
+        </td>
+        <td style="text-align:left">
+          `text-to-speech.custom-model-list.read`
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align:left">
+          `text-to-speech.custom-voice.read`
+        </td>
+        <td style="text-align:left">
+          `text-to-speech.custom-model.read`
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align:left">
+          `text-to-speech.custom-voice-word-list.read`
+        </td>
+        <td style="text-align:left">
+          `text-to-speech.custom-model-word-list.read`
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align:left">
+          `text-to-speech.custom-voice-word.read`
+        </td>
+        <td style="text-align:left">
+          `text-to-speech.custom-model-word.read`
+        </td>
+      </tr>
+    </table>
+
+-   *Update event*
+
+    <table>
+      <caption>Table 3. Names of actions for update event</caption>
+      <tr>
+        <th style="text-align:left">
+          Deprecated action name
+        </th>
+        <th style="text-align:left">
+          New action name
+        </th>
+      </tr>
+      <tr>
+        <td style="text-align:left">
+          `text-to-speech.custom-voice.update`
+        </td>
+        <td style="text-align:left">
+          `text-to-speech.custom-model.update`
+        </td>
+      </tr>
+    </table>
+
+-   *Delete events*
+
+    <table>
+      <caption>Table 4. Names of actions for delete events</caption>
+      <tr>
+        <th style="text-align:left">
+          Deprecated action name
+        </th>
+        <th style="text-align:left">
+          New action name
+        </th>
+      </tr>
+      <tr>
+        <td style="text-align:left">
+          `text-to-speech.custom-voice.delete`
+        </td>
+        <td style="text-align:left">
+          `text-to-speech.custom-model.delete`
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align:left">
+          `text-to-speech.custom-voice-word.delete`
+        </td>
+        <td style="text-align:left">
+          `text-top-speech.custom-model-word.delete`
+        </td>
+      </tr>
+    </table>
 
 ## 2 December 2020
 {: #December2020}
@@ -142,14 +337,10 @@ But the following use of the `rate` attribute with the `<prosody>` element cause
 
 The service now correctly parses and applies the `rate` attribute of the `<prosody>` element for Japanese input.
 
-## 4 September 2020
-{: #September2020a}
-
-The customization interface is now generally available. Customization is no longer beta functionality. You can use the customization interface to specify how the service pronounces unusual words that occur in your input text by creating language-specific custom dictionaries. It can be used with all generally available and beta voices. For more information, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
-
 ## Older releases
 {: #older}
 
+-   [4 September 2020](#September2020a)
 -   [24 June 2020](#June2020)
 -   [1 April 2020](#April2020)
 -   [24 February 2020](#February2020)
@@ -180,6 +371,11 @@ The customization interface is now generally available. Customization is no long
 -   [17 December 2015](#December2015)
 -   [21 September 2015](#September2015)
 -   [1 July 2015](#July2015)
+
+### 4 September 2020
+{: #September2020a}
+
+The customization interface is now generally available. Customization is no longer beta functionality. You can use the customization interface to specify how the service pronounces unusual words that occur in your input text by creating language-specific custom dictionaries. It can be used with all generally available and beta voices. For more information, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
 
 ### 24 June 2020
 {: #June2020}
@@ -228,7 +424,7 @@ The IPA symbols for the Arabic, Chinese, Dutch, and Korean languages are not yet
     -   The `volume` attribute of the `<prosody>` element
 
     For more information about these and all available voices, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
--   The service now supports the use of Activity Tracker events for all customization operations. {{site.data.keyword.at_full_notm}} records user-initiated activities that change the state of a service in IBM Cloud. You can use this service to investigate abnormal activity and critical actions and to comply with regulatory audit requirements. In addition, you can be alerted about actions as they happen. For more information, see [Activity Tracker events](/docs/text-to-speech?topic=text-to-speech-atEvents).
+-   The service now supports the use of Activity Tracker events for all customization operations. {{site.data.keyword.at_full_notm}} records user-initiated activities that change the state of a service in IBM Cloud. You can use this service to investigate abnormal activity and critical actions and to comply with regulatory audit requirements. In addition, you can be alerted about actions as they happen. For more information, see [Activity Tracker events](/docs/text-to-speech?topic=text-to-speech-at-events).
 
 ### 18 December 2019
 {: #December2019b}
@@ -422,7 +618,7 @@ The service now supports the MP3 or Motion Picture Experts Group (MPEG) audio fo
 ### 1 December 2016
 {: #December2016}
 
--   The service includes a new voice, `es-LA_SofiaVoice`, which is the Latin American equivalent of the `es-US_SofiaVoice` voice. The most significant difference between the two voices concerns how they interpret a `$` (dollar sign): The Latin American version uses the term *pesos*, while the North American version uses the term *dolares*. Other minor differences might also exist between the two voices.
+-   The service includes a new voice, `es-LA_SofiaVoice`, which is the Latin American equivalent of the `es-US_SofiaVoice` voice. The most significant difference between the two voices concerns how they interpret a `$` (dollar sign): The Latin American version uses the term *pesos*; the North American version uses the term *dolares*. Other minor differences might also exist between the two voices.
 -   In addition to the `en-US_AllisonVoice`, two more voices are now transformable with SSML voice transformation: `en-US_LisaVoice` and `en-US_MichaelVoice`. For more information about voice transformation, see [Voice transformation SSML](/docs/text-to-speech?topic=text-to-speech-transformation).
 -   When you use the customization interface with Japanese, the service now matches the longest word from the word/translation pairs that are defined for a custom model. For example, consider the following two entries for a custom model:
 
@@ -441,7 +637,7 @@ The service now supports the MP3 or Motion Picture Experts Group (MPEG) audio fo
 -   The customization interface, which includes the customization and `GET /v1/pronunciation` methods, is now available for all languages that are supported by the service. The interface remains a beta release. For more information, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
 -   The service now supports SSML for Japanese. For general information about SSML support, see [Using SSML](/docs/text-to-speech?topic=text-to-speech-ssml). For information about Japanese SPR and IPA symbols, see [Japanese symbols](/docs/text-to-speech?topic=text-to-speech-jaSymbols). Extra considerations and a `part_of_speech` field apply when creating entries for words in a Japanese custom model. For more information, see [Working with Japanese entries](/docs/text-to-speech?topic=text-to-speech-rules#jaNotes).
 -   The service now offers SSML voice transformation via the new `<voice-transformation>` element. You can expand the range of possible voices by creating custom transformations that modify the pitch, pitch range, glottal tension, breathiness, rate, and timbre of a voice. The service also offers two built-in virtual voices, *Young* and *Soft*. The service currently supports voice transformation only for the US English Allison voice. For more information, see [Voice transformation SSML](/docs/text-to-speech?topic=text-to-speech-transformation).
--   The service can now return word timing information for all strings of the input text that you pass to the WebSocket interface. To receive the start and end time of every string in the input, specify an array that includes the string `words` for the optional `timings` parameter of the JSON object that you pass to the service. The feature is not currently available for Japanese input text. For more information, see [Obtaining word timings](/docs/text-to-speech?topic=text-to-speech-timing).
+-   The service can now return word timing information for all strings of the input text that you pass to the WebSocket interface. To receive the start and end time of every string in the input, specify an array that includes the string `words` for the optional `timings` parameter of the JSON object that you pass to the service. The feature is not currently available for Japanese input text. For more information, see [Word timings](/docs/text-to-speech?topic=text-to-speech-timing).
 -   The service now validates all SSML elements that you submit in any context. If it finds an invalid tag, the service reports an HTTP 400 response code with a descriptive message, and the method fails. In previous releases, the service handled errors inconsistently; specifying an invalid word pronunciation, for example, could lead to unpredictable or inconsistent behavior. For more information, see [SSML validation](/docs/text-to-speech?topic=text-to-speech-ssml#errors).
 -   The use of `spr` is deprecated as an argument to the `format` option of the `GET /v1/pronunciation` method and for use with the `alphabet` attribute of an SSML `<phoneme>` element. To use {{site.data.keyword.IBM_notm}} SPR notation, use the `ibm` argument instead of `spr` in all cases.
 -   The list of supported audio formats now includes `audio/mulaw;rate=8000`. Like `audio/basic`, this format provides single-channel audio that is encoded by using 8-bit u-law (or mu-law) data that is sampled at 8 kHz. For more information, see [Audio formats](/docs/text-to-speech?topic=text-to-speech-audioFormats).

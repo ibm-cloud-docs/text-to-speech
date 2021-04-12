@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-04-27"
+  years: 2015, 2021
+lastupdated: "2021-02-21"
 
 subcollection: text-to-speech
 
@@ -22,7 +22,7 @@ subcollection: text-to-speech
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# Obtaining word timings
+# Word timings
 {: #timing}
 
 You can use the WebSocket interface of the {{site.data.keyword.texttospeechfull}} service to obtain timing information for user-specified locations such as word boundaries or for all words of the input text:

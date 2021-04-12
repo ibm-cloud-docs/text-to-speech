@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-02-19"
+lastupdated: "2021-04-01"
 
 subcollection: text-to-speech
 
@@ -50,7 +50,7 @@ The two versions of the `/v1/synthesize` method have the following parameters in
 -   `accept` (query parameter, *optional* string) - Specifies the requested audio format, or MIME type, in which the service is to return the audio. You can also specify this value with the HTTP `Accept` request header. URL-encode the argument to the `accept` query parameter. For more information, see [Audio formats](/docs/text-to-speech?topic=text-to-speech-audioFormats).
 -   `voice` (query parameter, *optional* string) - Specifies the voice in which the text is to be spoken in the audio. Use the `/v1/voices` method to get the current list of supported voices. The default voice is `en-US_MichaelV3Voice`. For more information, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
 -   `customization_id` (query parameter, *optional* string) - Specifies a globally unique identifier (GUID) for a custom model that is to be used for the synthesis. A specified custom model must match the language of the voice that is used for the synthesis. If you include a customization ID, you must make the request with credentials for the instance of the service that owns the custom model. Omit the parameter to use the specified voice with no customization. For more information, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
--   `X-Watson-Learning-Opt-Out` (request header, *optional* boolean) - Indicates whether the service logs request and response data to improve the service for future users. To prevent IBM from accessing your data for general service improvements, specify `true` for the parameter. Opting out directs IBM to write to disk *no* user data (text or audio) for your request. For more information, see [Controlling request logging for {{site.data.keyword.watson}} services](/docs/watson?topic=watson-gs-logging-overview).
+-   `X-Watson-Learning-Opt-Out` (request header, *optional* boolean) - Indicates whether the service logs request and response data to improve the service for future users. To prevent IBM from accessing your data for general service improvements, specify `true` for the parameter. Opting out directs IBM to write to disk *no* user data (text or audio) for your request. For more information, see [Request logging](/docs/text-to-speech?topic=text-to-speech-data-security#data-security-request-logging).
 -   `X-Watson-Metadata` (request header, *optional* string) - Associates a customer ID with data that is passed with a request. For more information, see [Information security](/docs/text-to-speech?topic=text-to-speech-information-security).
 
 If you specify an invalid query parameter or JSON field as part of the input to the `/v1/synthesize` method, the service returns a `Warnings` response header that describes and lists each invalid argument. The request succeeds despite the warnings.
@@ -60,19 +60,31 @@ If you specify an invalid query parameter or JSON field as part of the input to 
 {: help}
 {: support}
 
-Both the `GET` and `POST /v1/synthesize` methods accept plain input text or text that is annotated with SSML. The two versions differ primarily in how you specify the text that is to be synthesized:
+Both the `POST` and `GET /v1/synthesize` methods accept plain input text or text that is annotated with SSML. The two versions differ primarily in how you specify the text that is to be synthesized. The following examples both pass the plain text `Hello world`.
 
--   The `GET /v1/synthesize` method accepts input text that is specified by the `text` query parameter. You specify the input as plain text or as SSML, both of which must be URL-encoded.
--   The `POST /v1/synthesize` method accepts input text in the body of the request. You specify the input with the following simple JSON construct that encapsulates plain text or SSML. You must also specify a value of `application/json` for the `Content-Type` header.
+-   The `POST /v1/synthesize` method accepts input text in the body of the request. You specify the input with a simple JSON construct that includes plain text or SSML. You must also specify a value of `application/json` for the `Content-Type` header.
 
-    ```javascript
-    {
-      "text": ""
-    }
+    ```bash
+    curl -X POST -u "apikey:{apikey}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: audio/wav" \
+    --output hello_world.wav \
+    --data "{\"text\":\"Hello world\"}" \
+    "{url}/v1/synthesize"
     ```
-    {: codeblock}
+    {: pre}
 
-Although the `GET` and `POST` methods offer equivalent functionality, it is always more secure to pass input text to the service with the `POST` method. A `POST` request passes input in the body of the request, while a `GET` request exposes the data in the URL.
+-   The `GET /v1/synthesize` method accepts input text that is specified by the `text` query parameter. You specify the input as plain text or SSML, both of which must be URL-encoded.
+
+    ```bash
+    curl -X GET -u "apikey:{apikey}" \
+    --header "Accept: audio/wav" \
+    --output hello_world.wav \
+    "{url}/v1/synthesize?text=Hello%20world"
+    ```
+    {: pre}
+
+Although the `POST` and `GET` methods offer equivalent functionality, it is always more secure to pass input text to the service with the `POST` method. A `POST` request passes input in the body of the request. A `GET` request exposes the data in the URL.
 
 ## Specifying SSML input
 {: #ssml-http}
@@ -96,6 +108,7 @@ Because you can submit input text that includes XML-based SSML annotations, the 
 | `&`<br/>(ampersand) | `&amp;` | `&#38;` |
 | `<`<br/>(left angle bracket) | `&lt;` | `&#60;` |
 | `>`<br/>(right angle bracket) | `&gt;` | `&#62;` |
+| `/`<br/>(forward slash) | None | `&#47;` |
 {: caption="Table 1. Escaping XML control characters"}
 
 For more information about how the service validates input text, see [SSML validation](/docs/text-to-speech?topic=text-to-speech-ssml#errors).
@@ -104,6 +117,10 @@ For more information about how the service validates input text, see [SSML valid
 {: #httpExamples}
 
 The following examples show how to specify input text with either method of the HTTP interface. They also show how to escape XML control characters. The examples include line breaks for readability. Do *not* include the line breaks in actual input.
+
+Write text for synthesis with the punctuation you would use normally, as shown in the following examples. For example, include commas, periods, exclamation points, and questions marks as you would in normal writing. Commas and end-of-sentence punctuation affect the audio by inserting pauses at appropriate places in the resulting speech.
+
+However, the service does not change the cadence and intonation of the speech based on whether a sentence concludes with a period, an exclamation point, or a question mark. You can affect these aspects of the speech only by using different SSML elements and features.
 
 ### Example input with a GET request
 {: #getExamples}

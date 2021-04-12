@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2021
+  years: 2021
 lastupdated: "2021-04-06"
 
 subcollection: text-to-speech
@@ -22,39 +22,39 @@ subcollection: text-to-speech
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# French symbols
-{: #frSymbols}
+# French (Canadian) symbols
+{: #frCaSymbols}
 
-The following sections describe the valid symbols for French.
+The following sections describe the valid symbols for Canadian French.
 
 ## Vowels
-{: #frVowels}
+{: #frCaVowels}
 
 | SPR symbol | IPA symbol | IPA Unicode | Example words |
 |:----------:|:----------:|:-----------:|---------------|
-| a | a<br/><br/>&#593;<br/><br/>&#592; | 0061<br/><br/>0251<br/><br/>0250 | p**a**ttes, l**a**c, c**a**ve |
-| e | e | 0065 | caf**&eacute;**, d**&eacute;**form**e**r, **&eacute;**t**&eacute;** |
-| E | &#603;<br/><br/>&#604; | 025B<br/><br/>025C | f**ai**te, m**ai**, h**e**rb |
-| i | i<br/><br/>&#618; | 0069<br/><br/>026A | f**i**lm, t**y**p**i**que |
-| o | o | 006F | **eau**, **au**x, g**au**che |
-| c | &#596;<br/><br/>&#594; | 0254<br/><br/>0252 | P**au**l, n**o**te, &eacute;chal**o**tte |
-| u | u<br/><br/>&#650; | 0075<br/><br/>028A | r**ou**e, **o&ugrave;**, t**ou**r |
-| y | &#121;<br/><br/>&#655; | 0079<br/><br/>028F | **u**tile, p**u**re, Br**u**no |
-| x [**1**] | &#601; | 0259 | litr**e**s, marbr**e** |
-| 'eu' | &#248;<br/><br/>&#629; | 00F8<br/><br/>0275 | m**eu**gle, p**eu**, joy**eu**x |
-| 'oe' | &#339;<br/><br/>&#630; | 0153<br/><br/>0276 | p**eu**r, c**oeu**r, j**eu**ne |
+| a | a | 0061 | p**a**ttes, l**a**c, c**a**ve, inform**a**tion |
+| A | &#593; | 0251 | ch**a**r, m**&acirc;**le |
+| e | e | 0065 | caf**&eacute;**, d**e**former, **&eacute;**t**&eacute;** |
+| E | &#603;<br/><br/>&#604; | 025B<br/><br/>025C | **fait**e, dr**e**sser, p**&egrave;**re, annu**ai**re, f**&ecirc;**te |
+| i | i | 0069 | s**i**, t**y**pique |
+| I | &#618; | 026A | s**i**te, plast**i**que, r**i**de |
+| o | o | 006F | p**au**le, b**eau**, t**&ocirc;**t, c**&ocirc;**t&eacute;, v**au**devilliste |
+| c | &#596;<br/><br/>&#594; | 0254<br/><br/>0252 | p**au**l, n**o**te, &eacute;chal**o**tte, l**o**ge, enc**o**re |
+| u | u | 0075 | r**ou**e, **o&ugrave;**, t**ou**r, f**ou**r, d**ou**ze |
+| U | &#650; | 028A | f**ou**le, m**ou**sse |
+| y | y | 0079 | **u**tile, p**u**re, Br**u**no, d**u**r, b**u**se |
+| Y | &#655; | 028F | autob**u**s, ch**u**te |
+| x | &#601; | 0259 | l**e**, qu**e** |
+| 'eu' | &#248;<br/><br/>&#629; | 00F8<br/><br/>0275 | j**e&ucirc;**ne, &eacute;m**eu**te, m**eu**glement |
+| 'oe' | &#339;<br/><br/>&#630; | 0153<br/><br/>0276 | p**eu**r, j**eu**ne, d&eacute;j**eu**ner, c**e**pendant, ch**e**val |
 | 'a~' | &#97;&#771;<br/><br/>&#593;&#771; | 0061+0303<br/><br/>0251+0303 | b**an**c, **en**, t**em**ps |
-| 'E~' | &#101;&#771;<br/><br/>&#603;&#771;<br/><br/>&#230;&#771; | 0065+0303<br/><br/>025B+0303<br/><br/>00E6+0303 | f**i**n, pl**e**in, f**ai**m |
+| 'E~' | &#101;&#771;<br/><br/>&#603;&#771; | 0065+0303<br/><br/>025B+0303 | f**in**, pl**ein**, f**aim** |
 | 'o~' | &#111;&#771;<br/><br/>&#596;&#771; | 006F+0303<br/><br/>0254+0303 | b**on**, p**on**t, m**on** |
-| 'oe~' | &#339;&#771; | 0153+0303 | **un**, auc**un**, br**un** |
-{: caption="Table 1. Vowels (French)"}
-
-**Note:**
-
-1.  The `x` is elided in certain contexts.
+| 'oe~' | &#339;&#771; | 0153+0303 | **un**, auc**un** |
+{: caption="Table 1. Vowels (Canadian French)"}
 
 ## Consonants
-{: #frConsonants}
+{: #frCaConsonants}
 
 | SPR symbol | IPA symbol | IPA Unicode | Example words |
 |:----------:|:----------:|:-----------:|---------------|
@@ -66,6 +66,8 @@ The following sections describe the valid symbols for French.
 | k | k | 006B | **k**ilo, **c**aler, **qu**ai |
 | v | v | 0076 | la**v**er, **w**agon, **v**isiter |
 | f | f | 0066 | che**f**, **f**aim, **ph**are |
+| D | &#100;&#122;<br/><br/>&#675; | 0064+007A<br/><br/>02A3 | **d**uque, **d**ire |
+| T | &#116;&#115;<br/><br/>&#678; | 0074+0073<br/><br/>02A6 | pe**t**it, **t**uque |
 | z | z | 007A | ja**s**er, r&eacute;**s**eau, **z**ig**z**aguer |
 | s | s | 0073 | **s**ans, ambi**t**ion, fa**&ccedil;**on |
 | Z | &#658; | 0292 | ra**g**e, **g**&icirc;te, **j**ouer |
@@ -74,20 +76,20 @@ The following sections describe the valid symbols for French.
 | n | n | 006E | A**nn**e, **n**i, ma**n**iaque |
 | 'nj' | &#626; | 0272 | a**gn**eau, campa**gn**e |
 | 'ng' | &#331; | 014B | parki**ng**, campi**ng** |
-| r | r<br/><br/>&#633;<br/><br/>&#640;<br/><br/>&#641;<br/><br/>x<br/><br/>&#967; | 0072<br/><br/>0279<br/><br/>0280<br/><br/>0281<br/><br/>0078<br/><br/>03C7 | pa**r**er, **r**a**r**e, ca**rr**eau |
+| r | r<br/><br/>&#633;<br/><br/>&#640;<br/><br/>&#641; | 0072<br/><br/>0279<br/><br/>0280<br/><br/>0281 | pa**r**er, **r**a**r**e, ca**rr**eau |
 | l | l | 006C | **l**itre, i**ll**isible, p&acirc;**l**e |
 | j | j<br/><br/>&#654; | 006A<br/><br/>028E | h**i**&eacute;rarchie, pa**ill**e, **y**oga |
-| w | w | 0077 | **ou**i, b**ou**&eacute;e, **w**att |
-| H | &#613; | 0265 | s**u**is, l**u**i, n**u**&eacute;e |
-{: caption="Table 2. Consonants (French)"}
+| w | w | 0077 | **ou**i, **w**att |
+| H | &#613; | 0265 | s**u**is, l**u**i |
+{: caption="Table 2. Consonants (Canadian French)"}
 
 ## Liaison
-{: #frLiaison}
+{: #frCaLiaison}
 
-In French, the `_` (underscore) can be used following a word-final consonant (but within the double-quotes that enclose the SPR) to indicate that it is a liaison consonant. A liaison consonant is pronounced only if the following word begins with a vowel.
+In Canadian French, the `_` (underscore) can be used following a word-final consonant (but within the double-quotes that enclose the SPR) to indicate that it is a liaison consonant. A liaison consonant is pronounced only if the following word begins with a vowel.
 
 <table style="width:50%">
-  <caption>Table 3. Liaison (French)</caption>
+  <caption>Table 3. Liaison (Canadian French)</caption>
   <tr>
     <th style="width:33%; text-align:center; vertical-align:bottom">
       SPR symbol

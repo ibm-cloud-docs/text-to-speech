@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-10-22"
+  years: 2015, 2021
+lastupdated: "2021-03-18"
 
 subcollection: text-to-speech
 
@@ -32,9 +32,10 @@ The following rules and guidelines apply to populating a custom model with custo
 
 The following limits apply to all custom models and entries:
 
--   A custom model can include a maximum of 20,000 custom entries.
 -   A word in a custom entry can contain a maximum of 49 characters.
 -   A translation in a custom entry can contain a maximum of 499 characters.
+-   A custom model can include a maximum of 20,000 custom entries.
+-   A custom model can include a maximum of 1000 custom prompts.
 
 ## Character encoding
 {: #rulesCharEncoding}
@@ -44,12 +45,12 @@ The service accepts ASCII and UTF-8 character encoding for *word* and *translati
 ## White space
 {: #rulesWhitespace}
 
-A *word* cannot include white space. The service uses white space to delineate individual words in the input text.
+A word cannot include white space. The service uses white space to delineate individual words in the input text.
 
 ## Case-sensitivity
 {: #rulesCase}
 
-A *word* is case-sensitive. For example, assume that a custom model contains the entry `{word='Sun', translation='Sunday'}`. The service applies its default pronunciation to the word `sun` but the custom translation to the word `Sun`, since only the latter has an initial capital letter.
+A word is case-sensitive. For example, assume that a custom model contains the entry `{word='Sun', translation='Sunday'}`. The service applies its default pronunciation to the word `sun` but the custom translation to the word `Sun`, since only the latter has an initial capital letter.
 
 To apply a custom translation to a word that might appear with or without initial capitalization, create two entries for both possible occurrences. Include both entries only if the translation is to be applied to both forms of the word.
 
