@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-11-18"
+  years: 2015, 2021
+lastupdated: "2021-03-22"
 
 subcollection: text-to-speech
 
@@ -28,7 +28,10 @@ subcollection: text-to-speech
 The first step in working with any custom model is to create it. Once it exists, you can manage the model by querying or updating its metadata and entries, and by deleting it if it is no longer needed. Before getting started, review the following general usage information about custom models.
 {: shortdesc}
 
-## Usage notes
+A custom model can also include custom prompts that you define for the Tune by Example feature. For more information about Tune by Example, custom prompts, and speaker models, see [Understanding Tune by Example](/docs/text-to-speech?topic=text-to-speech-tbe-intro).
+{: note}
+
+## Usage notes for customization
 {: #customGuidelines}
 
 Consider the following guidelines when working with the customization interface.
@@ -50,7 +53,7 @@ How the service handles request logging for calls to the customization interface
 -   The service *does not* log data (words and translations) that are used to build custom models. You do not need to set the `X-Watson-Learning-Opt-Out` request header when using the customization interface to manage the words and translations in a custom model. Your training data is never used to improve the service's base models.
 -   The service *does* log data when a custom model is used with a synthesize request. You must set the `X-Watson-Learning-Opt-Out` request header to `true` to prevent logging for synthesize requests.
 
-For more information, see [Controlling request logging for {{site.data.keyword.watson}} services](/docs/watson?topic=watson-gs-logging-overview).
+For more information, see [Request logging](/docs/text-to-speech?topic=text-to-speech-data-security#data-security-request-logging).
 
 ### Information security
 {: #customSecurity}
@@ -98,7 +101,7 @@ The method returns a JSON object that contains a globally unique identifier (GUI
 ## Querying a custom model
 {: #cuModelsQuery}
 
-To query information about an existing custom model, use the `GET /v1/customizations/{customization_id}` method. This is the most direct means of seeing all of the information about a model, both its metadata and the word/translation pairs that it contains.
+To query information about an existing custom model, use the `GET /v1/customizations/{customization_id}` method. This is the most direct means of seeing all of the information about a model, including its metadata and the word/translation pairs and custom prompts that it contains.
 
 ```bash
 curl -X GET -u "apikey:{apikey}" \
@@ -117,14 +120,15 @@ The method returns its results as a JSON object of the following form:
   "language": "en-US",
   "description": "Customization test",
   "last_modified": "2016-07-15T18:12:31.743Z",
-  "words": []
+  "words": [],
+  "prompts": []
 }
 ```
 {: codeblock}
 
 In addition to the information entered when the model was created, the output includes the credentials of the model's owner, the model's language, and the times at which the model was created and last modified. Because the model has not been modified since its creation, the two times in the example are the same.
 
-The output also includes a `words` array that lists the model's custom entries. Because the model has yet to be updated, the array in the example is empty.
+The output also includes a `words` array that lists the model's custom words and a `prompts` array that lists the model's custom prompts. Because the model has yet to be updated, the arrays in the example are empty.
 
 ## Querying all custom models
 {: #cuModelsQueryAll}

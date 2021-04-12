@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-01-13"
+lastupdated: "2021-03-09"
 
 subcollection: text-to-speech
 
@@ -80,6 +80,9 @@ The {{site.data.keyword.texttospeechshort}} service bases its support on SSML Ve
 For more information about using SSML with the service, see the following:
 
 -   For complete information about the service's level of support for all SSML elements, see [SSML elements](/docs/text-to-speech?topic=text-to-speech-elements). With a few exceptions, the service implements most of the W3C specification, as well as SSML fragments.
+-   The service supports the use of SSML with the input text of a speech synthesis request to control how the resulting audio is pronounced or to obtain timing marks for the resulting audio.
+    -   For examples of using SSML elements with the `text` of a synthesis request, see [Examples of input text](/docs/text-to-speech?topic=text-to-speech-usingHTTP#httpExamples).
+    -   For information about using the SSML `<mark>` element with a WebSocket request, see [Specifying an SSML mark](/docs/text-to-speech?topic=text-to-speech-timing#mark).
 -   The service's customization interface supports the use of the SSML `<phoneme>` element to specify the phonetic spelling that it uses to pronounce a word. The phonetic spelling represents the sounds of a word, how those sounds are divided into syllables, and which syllables receive stress.
     -   For information about the customization interface, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
     -   For information about the valid symbols that you can use in an {{site.data.keyword.IBM_notm}} SPR or IPA specification for any supported language, see [Using phonetic symbols](/docs/text-to-speech?topic=text-to-speech-sprs).
@@ -102,7 +105,7 @@ Specifically, the service returns an error in the following cases:
 -   *French liaison in invalid location.* In the `ph` attribute of a `<phoneme>` element, the liaison character does not follow a consonant or occurs in the middle of the word pronunciation.
 -   *Japanese `:` symbol does not precede a vowel.* In the `ph` attribute of a `<phoneme>` element, a `:` character does not occur before a vowel (possibly with other symbols, such as syllable boundary, in between).
 -   *Invalid syllable stress.* The `ph` attribute of a `<phoneme>` element for an {{site.data.keyword.IBM_notm}} SPR includes invalid syllable stress. For French, a syllable stress symbol does not immediately precede a vowel. For Spanish or Italian, a secondary (`2`) or no stress (`0`) symbol is used. For Japanese, a secondary stress symbol (`2`) is used.
--   *Unescaped XML control characters.* The input text itself contains a <code>&quot;</code>, <code>&apos;</code>, `&`, `<`, or `>` character instead of its equivalent escape string or character encoding. For more information, see [Escaping XML control characters](/docs/text-to-speech?topic=text-to-speech-usingHTTP#escape).
+-   *Unescaped XML control characters.* The input text itself contains a <code>&quot;</code>, <code>&apos;</code>, `&`, `<`, `>`, or `/` character instead of its equivalent escape string or character encoding. For more information, see [Escaping XML control characters](/docs/text-to-speech?topic=text-to-speech-usingHTTP#escape).
 -   *Invalid use of the SSML `<prosody>` element.* You cannot use the `contour`, `duration`, and `range` attributes of the `<prosody>` element with any voice.
 
 The service also returns an error for invalid use of deprecated features:

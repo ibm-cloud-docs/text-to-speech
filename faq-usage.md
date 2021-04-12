@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-01-13"
+lastupdated: "2021-03-19"
 
 keywords: faqs,frequently asked questions,question,Text to Speech
 
@@ -114,15 +114,26 @@ The customization interface of the {{site.data.keyword.texttospeechshort}} servi
 
 Review the guidelines for working with the customization interface before you begin. Then, see the steps and examples for creating, querying, updating, and deleting custom models in [Creating and managing custom models](/docs/text-to-speech?topic=text-to-speech-customModels). Also review [Creating and managing custom entries](/docs/text-to-speech?topic=text-to-speech-customWords) for examples and guidance about adding relevant training data.
 
+## How do I use the Tune by Example feature?
+{: #faq-tune-by-example}
+{: faq}
+
+Tune by Example lets you control exactly how specified text is spoken by the service. You provide text and spoken audio to add a custom prompt to a custom model. The spoken audio can stress different syllables or words, introduce pauses, and generally make the synthesized audio sound more natural and appropriate for its context. When you synthesize the prompt, the service duplicates the qualities of the recorded speech with its voices.
+
+You can further enhance the quality of a prompt by creating an optional speaker model that contains a sample of a speaker's voice. The service leverages the sample audio to train itself on the voice, which can help it produce higher-quality prompts for that speaker.
+
+For more information, see [Understanding Tune by Example](/docs/text-to-speech?topic=text-to-speech-tbe-intro).
+
 ## What limits exist for a custom model?
 {: #faq-custom-limits}
 {: faq}
 
-The following limits apply to all custom models and entries:
+The following limits apply to all custom models:
 
--   A custom model can include a maximum of 20,000 custom entries.
 -   A word in a custom entry can contain a maximum of 49 characters.
 -   A translation in a custom entry can contain a maximum of 499 characters.
+-   A custom model can include a maximum of 20,000 custom entries.
+-   A custom model can include a maximum of 1000 custom prompts.
 
 For more information, see [Rules for creating custom entries](/docs/text-to-speech?topic=text-to-speech-rules).
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-02-18"
+lastupdated: "2021-02-19"
 
 subcollection: text-to-speech
 
@@ -127,8 +127,8 @@ Table 2 lists language-specific considerations that apply to specifying syllable
 
 | Language | Notation | Language-specific rules |
 |:--------:|:--------:|-------------------------|
-| French | SPR | All syllable stress symbols are honored. But syllable stress must immediately precede the vowel of the syllable. Syllable stress for French is much stricter than for other languages. An error occurs if you place the stress symbol in an invalid location. |
-| French | IPA | All syllable stress symbols are ignored. |
+| French and<br/>Canadian French | SPR | All syllable stress symbols are honored. But syllable stress must immediately precede the vowel of the syllable. Syllable stress for French is much stricter than for other languages. An error occurs if you place the stress symbol in an invalid location. |
+| French and<br/>Canadian French  | IPA | All syllable stress symbols are ignored. |
 | Italian | SPR and IPA | You can specify only `1` (primary stress). An error occurs if you specify secondary or no stress. |
 | Japanese | SPR and IPA | You can specify only `1` (primary stress) and `0` (no stress). An error occurs if you specify secondary stress. |
 | Korean | IPA | All syllable stress symbols are ignored, but including the symbols may produce undesired results. |
@@ -154,6 +154,7 @@ The table provides links to pages that document the supported SPR symbols, IPA s
 | [English (United Kingdom) symbols](/docs/text-to-speech?topic=text-to-speech-gbSymbols) | Yes | Yes |
 | [English (United States) symbols](/docs/text-to-speech?topic=text-to-speech-usSymbols) | Yes | Yes |
 | [French symbols](/docs/text-to-speech?topic=text-to-speech-frSymbols) | Yes | Yes |
+| [French (Canadian) symbols](/docs/text-to-speech?topic=text-to-speech-frCaSymbols) | Yes | Yes |
 | [German symbols](/docs/text-to-speech?topic=text-to-speech-deSymbols) | Yes | Yes |
 | [Italian symbols](/docs/text-to-speech?topic=text-to-speech-itSymbols) | Yes | Yes |
 | [Japanese symbols](/docs/text-to-speech?topic=text-to-speech-jaSymbols) | Yes | Yes |

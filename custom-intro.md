@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-11-18"
+  years: 2015, 2021
+lastupdated: "2021-03-16"
 
 subcollection: text-to-speech
 
@@ -30,6 +30,9 @@ When you synthesize text with {{site.data.keyword.texttospeechfull}}, the servic
 {: shortdesc}
 
 The service's regular pronunciation rules work well for common words. However, they can yield imperfect results for unusual words. Such words include domain-specific terms, words with foreign origins, personal or geographic names, and abbreviations or acronyms. If your application's lexicon includes such words, you can use the customization interface to specify how the service pronounces the words.
+
+A custom model can also include custom prompts that you define for the Tune by Example feature. For more information about Tune by Example, custom prompts, and speaker models, see [Understanding Tune by Example](/docs/text-to-speech?topic=text-to-speech-tbe-intro).
+{: note}
 
 ## Status and support
 {: #customIntro-support}

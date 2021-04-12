@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-12-01"
+  years: 2015, 2021
+lastupdated: "2021-04-11"
 
 subcollection: text-to-speech
 
@@ -27,7 +27,7 @@ subcollection: text-to-speech
 # About
 {: #about}
 
-**Service update:** *The {{site.data.keyword.texttospeechshort}} service was updated on 2 December 2020.  The voices offered by the service have undergone significant change. The service supports new languages and voices, has improved the quality of many voices, and has deprecated many older voices. In addition, all of the service's voices are now customizable and generally available (GA) for production use. For more information about all changes, see the [2 December 2020 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#December2020) in the release notes.*
+**Service update:** *The {{site.data.keyword.texttospeechshort}} service was updated on 12 April 2021. The service now offers a new Tune by Example feature that lets you create custom prompts to indicate how the voice is to speak the text of synthesized audio. Tune by Example is beta functionality that is supported for US English only. The service also includes a new enhanced neural voice for Canadian French, `fr-CA_LouiseV3Voice`. The Canadian French voice supports customization and is generally available (GA) for production use. Finally, the names of the actions for the Activity Tracker events for the customization methods have changed. For more information, see the [12 April 2021 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#April2021) in the release notes. *
 
 The {{site.data.keyword.texttospeechfull}} service provides APIs that use {{site.data.keyword.IBM_notm}}'s speech-synthesis capabilities to convert written text to natural-sounding speech. The service streams the synthesized audio back to the client with minimal delay. The audio uses appropriate cadence and intonation for its language and dialect to provide voices that are smooth and natural.
 
@@ -44,9 +44,9 @@ The {{site.data.keyword.texttospeechshort}} service supports both HTTP and WebSo
 ## Customization
 {: #about-customization}
 
-The service provides a customization interface that you can use to specify how the service pronounces unusual words that occur in your input text. You can define custom models to include dictionaries of words for your application's lexicon. For more information, see [Customizing the service](/docs/text-to-speech?topic=text-to-speech-service-features#features-customization) in the service features.
+The service provides a customization interface that you can use to specify how the service pronounces unusual words that occur in your input text. You can define custom models to include dictionaries of words for your application's lexicon. With the Tune by Example feature, you can also add custom prompts to your custom models. Custom prompts let you dictate the prosody with which the service speaks user-specified prompts. For more information about the customization interface and Tune by Example, see [Customizing the service](/docs/text-to-speech?topic=text-to-speech-service-features#features-customization) in the service features.
 
-## Language support
+## Language and voice support
 {: #about-languages}
 {: help}
 {: support}
@@ -58,7 +58,7 @@ The service synthesizes text to speech in many languages and dialects:
 -   Chinese (Mandarin)
 -   Dutch
 -   English (Australian, United Kingdom, and United States dialects)
--   French
+-   French (France and Canadian dialects)
 -   German
 -   Italian
 -   Japanese
@@ -67,7 +67,7 @@ The service synthesizes text to speech in many languages and dialects:
 
 The service offers female and male voices for different languages. All voices are neural voices. For more information, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
 
-## Audio formats
+## Audio format support
 {: #about-formats}
 {: help}
 {: support}

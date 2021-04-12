@@ -8,6 +8,7 @@ Text to Speech
     getting-started.md
     index.md
     features.md
+    data-security.md
     [Demo](https://www.ibm.com/demos/live/tts-demo/self-service/home)
 
     {: .topicgroup}
@@ -33,6 +34,15 @@ Text to Speech
         custom-using.md
 
     {: topicgroup}
+    The Tune by Example feature
+        tbe-intro.md
+        tbe-rules.md
+        tbe-create.md
+        tbe-use.md
+        tbe-prompts.md
+        tbe-speakers.md
+
+    {: topicgroup}
     SSML
         ssml.md
         ssml-elements.md
@@ -48,14 +58,18 @@ Text to Speech
         symbols-en-gb.md
         symbols-en-us.md
         symbols-fr-fr.md
+        symbols-fr-ca.md
         symbols-de-de.md
         symbols-it-it.md
         symbols-ja-jp.md
         symbols-ko-kr.md
         symbols-es-es.md
 
-    /watson/watson-keyservice
-    /watson/watson-public-private-endpoints
+    {: topicgroup}
+    Security topics
+        information-security.md
+        /watson/watson-keyservice
+        /watson/watson-public-private-endpoints
 
     {: topicgroup}
     Service background
@@ -66,7 +80,6 @@ Text to Speech
     {: .navgroup id="reference"}
     [API & SDK reference](https://cloud.ibm.com/apidocs/text-to-speech)
     ha-dr.md
-    information-security.md
     at-events.md
     /watson/watson-using-sdks
     [Watson GitHub repos](https://github.com/watson-developer-cloud/)

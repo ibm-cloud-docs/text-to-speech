@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-02-19"
+lastupdated: "2021-04-02"
 
 subcollection: text-to-speech
 
@@ -61,8 +61,8 @@ For billing purposes, whitespace characters are not counted. However, all other 
 
 The service supports speech synthesis for many languages and audio formats.
 
--   For information about the supported languages, see [Language support](/docs/text-to-speech?topic=text-to-speech-about#about-languages).
--   For information about the supported audio formats, see [Audio formats](/docs/text-to-speech?topic=text-to-speech-about#about-formats).
+-   For information about the supported languages, see [Language and voice support](/docs/text-to-speech?topic=text-to-speech-about#about-languages).
+-   For information about the supported audio formats, see [Audio format support](/docs/text-to-speech?topic=text-to-speech-about#about-formats).
 
 ## Using speech synthesis features
 {: #features-synthesis}
@@ -82,7 +82,7 @@ You can pass the service plain text or text that is annotated with the Speech Sy
 
 With the WebSocket interface, you can obtain timing information about the location of words in the audio that the service returns. Timing information is useful for synchronizing the input text and the audio.
 
-You can use the SSML `<mark>` element to identify specific locations, such as word boundaries, in the audio. For languages other than Japanese, you can also request word timing information for all words of the input text. For more information, see [Obtaining word timings](/docs/text-to-speech?topic=text-to-speech-timing).
+You can use the SSML `<mark>` element to identify specific locations, such as word boundaries, in the audio. For languages other than Japanese, you can also request word timing information for all words of the input text. For more information, see [Word timings](/docs/text-to-speech?topic=text-to-speech-timing).
 
 ## Customizing the service
 {: #features-customization}
@@ -99,37 +99,19 @@ You can define the custom entry for a word/translation pair based on other words
 Premium customers can work with {{site.data.keyword.IBM_notm}} to train a new custom voice for their specific use case and target market. {{site.data.keyword.IBM_notm}} can train a new voice with as little as one hour of training data. For more information, contact your {{site.data.keyword.IBM_notm}} Sales Representative.
 {: note}
 
-## Understanding data security
-{: #features-data-security}
+## Using Tune by Example
+{: #features-tune-by-example}
 
-The {{site.data.keyword.texttospeechshort}} service provides the following security features to help you protect your user data:
+The Tune by Example feature lets you control how specified text is spoken by the service. The feature lets you dictate the intonation, cadence, and stress of the synthesized text. You create a custom prompt by providing a sample recording that speaks the text as you want to hear it. The service then duplicates the qualities of the recorded speech with its voices when you synthesize the prompt.
 
--   The service provides security for all user data both in motion and at rest:
+The feature provides a simpler mechanism than standard SSML for modifying how speech is synthesized. Tune by Example eliminates the need for complex SSML by letting you record text as you want it to be spoken rather than requiring you to emulate the intended prosody with SSML.
 
-    -   Transport Layer Security (TLS) 1.2 is used to secure data in transit.
-    -   Advanced Encryption Standard (AES)-256 with Secure Hash Algorithm (SHA)-256 is used to secure data at rest.
+You can increase the quality of custom prompts by associating speaker models with those users who speak the prompts. You create a speaker model by providing an audio sample of a user's voice. The service trains itself on the voice to help it produce higher-quality prompts for that speaker.
 
-    For more information about data security for cloud applications, see [Security architecture for cloud applications](https://www.ibm.com/cloud/architecture/architectures/securityArchitecture/security-for-data){: external}.
+For more information about Tune by Example, custom prompts, and speaker models, see [Understanding Tune by Example](/docs/text-to-speech?topic=text-to-speech-tbe-intro).
 
--   The service offers Standard and Premium pricing plans that provide different levels of data separation for its users:
-
-    -   Standard plans are multi-tenant solutions that provide logical separation of data by using common encryption keys.
-    -   Premium plans are single-tenant solutions that provide physical separation of data. Premium plans provide dedicated data storage accounts that use unique encryption keys.
-
-    Users of Premium plans can also integrate with {{site.data.keyword.keymanagementservicefull}} to create, import, and manage their encryption keys. This process is commonly referred to as *Bring your own keys* (BYOK). For more information about using {{site.data.keyword.keymanagementserviceshort}}, see [Protecting sensitive information in your Watson service](/docs/watson?topic=watson-keyservice).
-
--   The service lets you control the default request logging that is performed for all {{site.data.keyword.watson}} services. The service logs request and response data only to improve the service for future users. The logged data is never shared or made public.
-
-    You can opt out of the default logging to prevent the service from logging your request and response data. If you opt out, the service logs *no* user data from your requests, saving no text or audio to disk. You can choose to opt out of logging at either the account level or the API request level. For more information, see [Controlling request logging for {{site.data.keyword.watson}} services](/docs/watson?topic=watson-gs-logging-overview).
-
--   The service supports the European Union General Data Protection Regulation (GDPR) to manage user data. For Premium plans, it also offers US Health Insurance Portability and Accountability Act (HIPAA) readiness. For more information, see [Information security](/docs/text-to-speech?topic=text-to-speech-information-security).
-
-## Leveraging CORS support
-{: #features-cors}
-
-The service supports Cross-Origin Resource Sharing (CORS). By using CORS, web pages can request resources directly from a foreign domain. CORS circumvents the same-origin security policy, which otherwise prevents such requests. Because the service supports CORS, a web page can communicate directly with the service without passing the request through the web server that hosts the page.
-
-For instance, a web page that is loaded from a server in {{site.data.keyword.cloud}} can call the customization API directly, bypassing the {{site.data.keyword.cloud_notm}} server. For more information, see [enable-cors.org](https://enable-cors.org/){: external}.
+The Tune by Example feature is beta functionality that is supported only for US English custom models and voices.
+{: beta}
 
 ## Learning more about application development
 {: #features-learn}
