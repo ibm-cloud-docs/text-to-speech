@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-04-07"
+lastupdated: "2021-04-21"
 
 subcollection: text-to-speech
 
@@ -34,6 +34,8 @@ You create a custom prompt by providing a sample recording that speaks the text 
 The feature provides a simpler mechanism than standard SSML for modifying how speech is synthesized. For example, using attributes of the SSML `<prosody>` element can be difficult. Tune by Example eliminates the need for such SSML by letting you record text as you want it to be spoken by the service rather than requiring you to emulate the intended prosody with SSML elements and attributes.
 
 You can further enhance the quality of a prompt by creating an optional speaker model that contains information about a speaker's voice. You create a speaker model by providing an audio sample of a user's voice. The service extracts information from the sample audio to train itself on the voice, which can help it produce higher-quality prompts for that speaker.
+
+For an overview of the Tune by Example feature, including a demo with example scripts, see the blog [Tune by Example: How to Tune Watson Text to Speech for Better Intonations](https://medium.com/ibm-data-ai/tune-by-example-how-to-tune-watson-text-to-speech-for-better-intonations-bcee8404d927){: external}.
 
 The Tune by Example feature is beta functionality that is supported only for US English custom models and voices.
 {: beta}
