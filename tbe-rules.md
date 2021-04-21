@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-04-06"
+lastupdated: "2021-04-21"
 
 subcollection: text-to-speech
 
@@ -83,6 +83,7 @@ For the spoken audio of a prompt:
     -   Control the pitch by making words and syllables sound higher or lower. Pitch control is much more effective for prompts that have speaker models.
     -   Insert pauses to emphases certain aspects of the phrase. Leading and trailing pauses are removed.
 -   You cannot change the pronunciation of a word. The service pronounces words according to its default vocabulary and any custom words that are defined for the model of the custom prompt. For more information, see [Tune by Example and word pronunciation](/docs/text-to-speech?topic=text-to-speech-tbe-intro#tbe-intro-how-pronunciation).
+-   You cannot control the expressiveness (for example, happiness or sadness) of a phrase. These qualities are different from intonation and cannot be adequately captured by the feature.
 -   You cannot control the loudness of a phrase. The service ignores the loudness of the spoken prompt.
 
 ## Rules for creating speaker models
