@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-04-21"
+lastupdated: "2021-04-22"
 
 subcollection: text-to-speech
 
@@ -52,7 +52,7 @@ For the identifier of a prompt:
 
 For the written text of a prompt:
 
--   As with any input text for speech synthesis, write the text of a prompt as you would normally, with commas and sentence-ending punctuation. However, the service does not consider the specific concluding punctuation when it parses the text of a prompt. A period produces the same results as a question mark or exclamation point. Only the spoken audio impacts the prosody of the resulting prompt.
+-   Write the text of a prompt as you would normally, with commas and sentence-ending punctuation. However, Tune by Example bases the prosody and intonation of the prompt on the prompt audio, not on the punctuation of the prompt text as it does for regular speech synthesis. Only the spoken audio impacts the prosody of the synthesized prompt.
 -   A prompt cannot contain more than 1000 characters of text. Speaking one or two sentences of text is the recommended limit.
 -   A prompt can include only fixed, static text. It cannot include variable data, which is data that changes for different uses of the prompt. For example, "Your account balance is $500" contains variable data: namely, "$500," which is a variable value that changes depending on a user's account balance. In this case, the prompt needs to speak "Your account balance is," and a second synthesis request needs to say the balance.
 -   Escape XML sensitive characters (double quotes, single quotes, ampersands, angle brackets, and slashes) that appear in the text of a prompt by applying the same rules that you use to provide text for a synthesis request. For more information, see [Escaping XML control characters](/docs/text-to-speech?topic=text-to-speech-usingHTTP#escape).
