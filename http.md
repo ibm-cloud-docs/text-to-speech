@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-04-01"
+lastupdated: "2021-04-22"
 
 subcollection: text-to-speech
 
@@ -86,13 +86,19 @@ Both the `POST` and `GET /v1/synthesize` methods accept plain input text or text
 
 Although the `POST` and `GET` methods offer equivalent functionality, it is always more secure to pass input text to the service with the `POST` method. A `POST` request passes input in the body of the request. A `GET` request exposes the data in the URL.
 
+## Punctuating input text
+{: #input-punctuation}
+
+Write text for synthesis with the punctuation you would use normally. For example, include commas, periods, exclamation points, and questions marks as you would in normal writing.
+
+The service considers punctuation when synthesizing text. For example, commas and end-of-sentence punctuation affect the audio by inserting pauses at appropriate places in the resulting synthesized speech. End-of-sentence punctuation such as periods, exclamation points, and question marks also change the intonation and inflection of the speech. You can also use SSML elements to affect these aspects of the speech.
+
 ## Specifying SSML input
 {: #ssml-http}
 
-The Speech Synthesis Markup Language (SSML) is an XML-based markup language that is designed to provide annotations of text for speech synthesis applications such as the {{site.data.keyword.texttospeechshort}} service. You can use SSML elements and their attributes to gain greater control over the synthesis and resulting audio output. For more information about using SSML to annotate input text and an inventory of all supported elements and attributes, see
+The Speech Synthesis Markup Language (SSML) is an XML-based markup language that is designed to provide annotations of text for speech synthesis applications such as the {{site.data.keyword.texttospeechshort}} service. You can use SSML elements and their attributes to gain greater control over the synthesis and resulting audio output.
 
--   [Using SSML](/docs/text-to-speech?topic=text-to-speech-ssml)
--   [SSML elements](/docs/text-to-speech?topic=text-to-speech-elements)
+For more information about using SSML to annotate input text, see [Using SSML](/docs/text-to-speech?topic=text-to-speech-ssml). For an inventory of all supported elements and attributes, see [SSML elements](/docs/text-to-speech?topic=text-to-speech-elements).
 
 ## Escaping XML control characters
 {: #escape}
@@ -117,10 +123,6 @@ For more information about how the service validates input text, see [SSML valid
 {: #httpExamples}
 
 The following examples show how to specify input text with either method of the HTTP interface. They also show how to escape XML control characters. The examples include line breaks for readability. Do *not* include the line breaks in actual input.
-
-Write text for synthesis with the punctuation you would use normally, as shown in the following examples. For example, include commas, periods, exclamation points, and questions marks as you would in normal writing. Commas and end-of-sentence punctuation affect the audio by inserting pauses at appropriate places in the resulting speech.
-
-However, the service does not change the cadence and intonation of the speech based on whether a sentence concludes with a period, an exclamation point, or a question mark. You can affect these aspects of the speech only by using different SSML elements and features.
 
 ### Example input with a GET request
 {: #getExamples}
