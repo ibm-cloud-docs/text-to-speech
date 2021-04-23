@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-03-22"
+lastupdated: "2021-04-23"
 
 subcollection: text-to-speech
 
@@ -107,7 +107,7 @@ To synthesize text, the client passes a simple JSON text message to the service 
 
 -   `text` (*required* string) - Provides the text that is to be synthesized. The client can pass plain text or text that is annotated with the Speech Synthesis Markup Language (SSML). The client can pass a maximum of 5 KB of input text with the request. The limit includes any SSML that you specify. For more information, see [Specifying input text](/docs/text-to-speech?topic=text-to-speech-usingHTTP#input) and the sections that follow it. (SSML input can also include the `&lt;mark&gt;` element. For more information, see [Specifying an SSML mark](/docs/text-to-speech?topic=text-to-speech-timing#mark).)
 -   `accept` (*required* string) - Specifies the requested format (MIME type) of the audio. Use `*/*` to request the default audio format, `audio/ogg;codecs=opus`. For more information, see [Audio formats](/docs/text-to-speech?topic=text-to-speech-audioFormats).
--   `timings` (*optional* string[ ]) - Specifies that the service is to return word timing information for all strings of the input text. The service returns the start and end time of each token of the input. Specify `words` as the lone element of the array to request word timings. Specify an empty array or omit the parameter to receive no word timings. For more information, see [Word timings](/docs/text-to-speech?topic=text-to-speech-timing#timing). *Not supported for Japanese input text.*
+-   `timings` (*optional* string[ ]) - Specifies that the service is to return word timing information for all strings of the input text. The service returns the start and end time of each token of the input. Specify `words` as the lone element of the array to request word timings. Specify an empty array or omit the parameter to receive no word timings. For more information, see [Word timings](/docs/text-to-speech?topic=text-to-speech-timing). *Not supported for Japanese input text.*
 
 The following snippet of JavaScript code passes a simple "Hello world" message as the input text and requests the default format for the audio. The calls are included in the `onOpen` function that is defined for the client to ensure that they are sent only after the connection is established.
 
@@ -222,3 +222,6 @@ The following example shows a warning response, in this case for an unknown para
 {: codeblock}
 
 For more information about WebSocket return codes, see the Internet Engineering Task Force (IETF) [Request for Comments (RFC) 6455](https://tools.ietf.org/html/rfc6455){: external}.
+
+The WebSocket implementations of the SDKs can return different or additional response codes.
+{: note}
