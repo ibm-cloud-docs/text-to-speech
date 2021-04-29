@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-04-06"
+lastupdated: "2021-04-29"
 
 subcollection: text-to-speech
 
@@ -88,31 +88,10 @@ The following sections describe the valid symbols for Canadian French.
 
 In Canadian French, the `_` (underscore) can be used following a word-final consonant (but within the double-quotes that enclose the SPR) to indicate that it is a liaison consonant. A liaison consonant is pronounced only if the following word begins with a vowel.
 
-<table style="width:50%">
-  <caption>Table 3. Liaison (Canadian French)</caption>
-  <tr>
-    <th style="width:33%; text-align:center; vertical-align:bottom">
-      SPR symbol
-    </th>
-    <th style="width:33%; text-align:center; vertical-align:bottom">
-      IPA symbol
-    </th>
-    <th style="text-align:center; vertical-align:bottom">
-      IPA Unicode
-    </th>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      _
-    </td>
-    <td style="text-align:center">
-      &#8255;
-    </td>
-    <td style="text-align:center">
-      0203F
-    </td>
-  </tr>
-</table>
+| SPR symbol | IPA symbol | IPA Unicode |
+|:----------:|:----------:|:-----------:|
+| _ | &#8255; | 0203F |
+{: caption="Table 3. Liaison (Canadian French)"}
 
 Examples of words with and without the liaison symbol follow:
 
