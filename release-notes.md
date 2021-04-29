@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-04-11"
+lastupdated: "2021-04-29"
 
 subcollection: text-to-speech
 
@@ -93,143 +93,43 @@ Activity Tracker actions are available for all new Tune by Example events. For m
 
 The names of the actions for the Activity Tracker events for the customization methods have changed. The actions now include the string `custom-model` instead of `custom-voice`. The old names of the actions are deprecated. The old names are still available for use but will be removed at a future date. Migrate to the new names that are listed in [Customization events](/docs/text-to-speech?topic=text-to-speech-at-events#at-events-custom) at your earliest convenience.
 
-The following tables show the deprecated and new names for all actions.
+#### Create events
+{: #April2021-at-updates-create}
 
--   *Create events*
+| Deprecated action name | New action name |
+|------------------------|-----------------|
+| `text-to-speech.custom-voice.create` | `text-to-speech.custom-model.create` |
+| `text-to-speech.custom-voice-word-list.create` | `text-to-speech.custom-model-word-list.create` |
+| `text-to-speech.custom-voice-word.create` | `text-to-speech.custom-model-word.create` |
+{: caption="Table 1. Names of actions for create events"}
 
-    <table>
-      <caption>Table 1. Names of actions for create events</caption>
-      <tr>
-        <th style="text-align:left">
-          Deprecated action name
-        </th>
-        <th style="text-align:left">
-          New action name
-        </th>
-      </tr>
-      <tr>
-        <td style="text-align:left">
-          `text-to-speech.custom-voice.create`
-        </td>
-        <td style="text-align:left">
-          `text-to-speech.custom-model.create`
-        </td>
-      </tr>
-      <tr>
-        <td style="text-align:left">
-          `text-to-speech.custom-voice-word-list.create`
-        </td>
-        <td style="text-align:left">
-          `text-to-speech.custom-model-word-list.create`
-        </td>
-      </tr>
-      <tr>
-        <td style="text-align:left">
-          `text-to-speech.custom-voice-word.create`
-        </td>
-        <td style="text-align:left">
-          `text-to-speech.custom-model-word.create`
-        </td>
-      </tr>
-    </table>
+#### Read events
+{: #April2021-at-updates-read}
 
--   *Read events*
+| Deprecated action name | New action name |
+|------------------------|-----------------|
+| `text-to-speech.custom-voice-list.read` | `text-to-speech.custom-model-list.read` |
+| `text-to-speech.custom-voice.read` | `text-to-speech.custom-model.read` |
+| `text-to-speech.custom-voice-word-list.read` | `text-to-speech.custom-model-word-list.read` |
+| `text-to-speech.custom-voice-word.read` | `text-to-speech.custom-model-word.read` |
+{: caption="Table 2. Names of actions for read events"}
 
-    <table>
-      <caption>Table 2. Names of actions for read events</caption>
-      <tr>
-        <th style="text-align:left">
-          Deprecated action name
-        </th>
-        <th style="text-align:left">
-          New action name
-        </th>
-      </tr>
-      <tr>
-        <td style="text-align:left">
-          `text-to-speech.custom-voice-list.read`
-        </td>
-        <td style="text-align:left">
-          `text-to-speech.custom-model-list.read`
-        </td>
-      </tr>
-      <tr>
-        <td style="text-align:left">
-          `text-to-speech.custom-voice.read`
-        </td>
-        <td style="text-align:left">
-          `text-to-speech.custom-model.read`
-        </td>
-      </tr>
-      <tr>
-        <td style="text-align:left">
-          `text-to-speech.custom-voice-word-list.read`
-        </td>
-        <td style="text-align:left">
-          `text-to-speech.custom-model-word-list.read`
-        </td>
-      </tr>
-      <tr>
-        <td style="text-align:left">
-          `text-to-speech.custom-voice-word.read`
-        </td>
-        <td style="text-align:left">
-          `text-to-speech.custom-model-word.read`
-        </td>
-      </tr>
-    </table>
+#### Update event
+{: #April2021-at-updates-update}
 
--   *Update event*
+| Deprecated action name | New action name |
+|------------------------|-----------------|
+| `text-to-speech.custom-voice.update` | `text-to-speech.custom-model.update` |
+{: caption="Table 3. Names of actions for update event"}
 
-    <table>
-      <caption>Table 3. Names of actions for update event</caption>
-      <tr>
-        <th style="text-align:left">
-          Deprecated action name
-        </th>
-        <th style="text-align:left">
-          New action name
-        </th>
-      </tr>
-      <tr>
-        <td style="text-align:left">
-          `text-to-speech.custom-voice.update`
-        </td>
-        <td style="text-align:left">
-          `text-to-speech.custom-model.update`
-        </td>
-      </tr>
-    </table>
+#### Delete events
+{: #April2021-at-updates-delete}
 
--   *Delete events*
-
-    <table>
-      <caption>Table 4. Names of actions for delete events</caption>
-      <tr>
-        <th style="text-align:left">
-          Deprecated action name
-        </th>
-        <th style="text-align:left">
-          New action name
-        </th>
-      </tr>
-      <tr>
-        <td style="text-align:left">
-          `text-to-speech.custom-voice.delete`
-        </td>
-        <td style="text-align:left">
-          `text-to-speech.custom-model.delete`
-        </td>
-      </tr>
-      <tr>
-        <td style="text-align:left">
-          `text-to-speech.custom-voice-word.delete`
-        </td>
-        <td style="text-align:left">
-          `text-top-speech.custom-model-word.delete`
-        </td>
-      </tr>
-    </table>
+| Deprecated action name | New action name |
+|------------------------|-----------------|
+| `text-to-speech.custom-voice.delete` | `text-to-speech.custom-model.delete` |
+| `text-to-speech.custom-voice-word.delete` | `text-top-speech.custom-model-word.delete` |
+{: caption="Table 4. Names of actions for delete events"}
 
 ## 2 December 2020
 {: #December2020}
