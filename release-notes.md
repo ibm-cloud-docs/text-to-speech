@@ -50,6 +50,9 @@ The service now supports Belgian Dutch (Flemish) with the neural voice `nl-BE_Ad
 -   To hear a sample of the new voice, see [Supported languages and voices](/docs/text-to-speech?topic=text-to-speech-voices#language-voices).
 -   For more information about the phonetic symbols and Unicode values that are available for the Belgian Dutch language, see [Dutch (Belgian) symbols](/docs/text-to-speech?topic=text-to-speech-beSymbols).
 
+The [API & SDK reference](https://{DomainName}/apidocs/text-to-speech){: external} is not yet updated for this change.
+{: note}
+
 ## 12 April 2021
 {: #April2021}
 
