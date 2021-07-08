@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-04-11"
+lastupdated: "2021-07-08"
 
 subcollection: text-to-speech
 
@@ -26,8 +26,6 @@ subcollection: text-to-speech
 
 # About
 {: #about}
-
-**Service update:** *The {{site.data.keyword.texttospeechshort}} service was updated on 12 April 2021. The service now offers a new Tune by Example feature that lets you create custom prompts to indicate how the voice is to speak the text of synthesized audio. Tune by Example is beta functionality that is supported for US English only. The service also includes a new enhanced neural voice for Canadian French, `fr-CA_LouiseV3Voice`. The Canadian French voice supports customization and is generally available (GA) for production use. Finally, the names of the actions for the Activity Tracker events for the customization methods have changed. For more information, see the [12 April 2021 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#April2021) in the release notes. *
 
 The {{site.data.keyword.texttospeechfull}} service provides APIs that use {{site.data.keyword.IBM_notm}}'s speech-synthesis capabilities to convert written text to natural-sounding speech. The service streams the synthesized audio back to the client with minimal delay. The audio uses appropriate cadence and intonation for its language and dialect to provide voices that are smooth and natural.
 
@@ -56,9 +54,9 @@ The service synthesizes text to speech in many languages and dialects:
 -   Arabic
 -   Brazilian Portuguese
 -   Chinese (Mandarin)
--   Dutch
+-   Dutch (Belgian and Netherlands dialects)
 -   English (Australian, United Kingdom, and United States dialects)
--   French (France and Canadian dialects)
+-   French (Canadian and France dialects)
 -   German
 -   Italian
 -   Japanese
