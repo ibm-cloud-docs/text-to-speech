@@ -41,7 +41,7 @@ The following sections describe the valid symbols for Belgian Dutch (Flemish).
 | &#230; | 00E6 | h**a**ppy |
 | &#650; | 028A | h**oo**k |
 | &#652; | 028C | br**u**sh |
-| &#604;&#815; | 025C 032F | nea**r** |
+| &#604;&#815; | 025C+032F | nea**r** |
 {: caption="Table 1. Regular vowels (Belgian Dutch)"}
 
 ## Long vowels
@@ -81,9 +81,9 @@ The following sections describe the valid symbols for Belgian Dutch (Flemish).
 
 | IPA symbol | IPA Unicode | Example words |
 |:----------:|:-----------:|:-------------:|
-| &#603;&#105;<br/><br/>&#603;<sup>&#105;</sup> | 025B 0069<br/><br/>Not available | f**ij**n |
-| &#593;&#117;<br/><br/>&#593;<sup>&#117;</sup> | 0251 0075<br/><br/>Not available | k**ou** |
-| &#339;&#121;<br/><br/>&#339;<sup>&#121;</sup> | 0153 0079<br/><br/>Not available | h**ui**s |
+| &#603;&#105;<br/><br/>&#603;<sup>&#105;</sup> | 025B+0069<br/><br/>Not available | f**ij**n |
+| &#593;&#117;<br/><br/>&#593;<sup>&#117;</sup> | 0251+0075<br/><br/>Not available | k**ou** |
+| &#339;&#121;<br/><br/>&#339;<sup>&#121;</sup> | 0153+0079<br/><br/>Not available | h**ui**s |
 | &#97;&#618; | 0061+026A | r**i**se |
 | &#101;&#618; | 0065+026A | r**ai**se |
 | &#596;&#618; | 0254+026A | n**oi**se |
