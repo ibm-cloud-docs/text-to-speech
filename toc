@@ -53,6 +53,7 @@ Text to Speech
         symbols-ar-ms.md
         symbols-pt-br.md
         symbols-zh-cn.md
+        symbols-nl-be.md
         symbols-nl-nl.md
         symbols-en-au.md
         symbols-en-gb.md

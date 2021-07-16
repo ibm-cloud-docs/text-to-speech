@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-04-01"
+lastupdated: "2021-07-08"
 
 subcollection: text-to-speech
 
@@ -49,7 +49,8 @@ If you omit the optional `voice` parameter from a synthesis request, the service
 | Chinese<br/>(Mandarin) | Female<br/>Neural | `zh-CN_LiNaVoice` | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/LiNa.wav" type="audio/wav"></audio> |
 | | Male<br/>Neural | `zh-CN_WangWeiVoice` | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/WangWei.wav" type="audio/wav"></audio> |
 | | Female<br/>Neural | `zh-CN_ZhangJingVoice` | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/ZhangJing.wav" type="audio/wav"></audio> |
-| Dutch | Female<br/>Neural | `nl-NL_EmmaVoice` | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/Emma.wav" type="audio/wav"></audio> |
+| Dutch<br/>(Belgian) | Neural | `nl-BE_AdeleVoice`<br/>Female | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/Adele.wav" type="audio/wav"></audio> |
+| Dutch<br/>(Netherlands) | Female<br/>Neural | `nl-NL_EmmaVoice` | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/Emma.wav" type="audio/wav"></audio> |
 | | Male<br/>Neural | `nl-NL_LiamVoice` | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/Liam.wav" type="audio/wav"></audio> |
 | English<br/>(Australian) | Male<br/>Neural | `en-AU_CraigVoice` | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/Craig.wav" type="audio/wav"></audio> |
 | | Female<br/>Neural | `en-AU_MadisonVoice` | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/Madison.wav" type="audio/wav"></audio> |

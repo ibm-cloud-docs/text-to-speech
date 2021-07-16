@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-04-29"
+lastupdated: "2021-07-16"
 
 subcollection: text-to-speech
 
@@ -29,6 +29,11 @@ subcollection: text-to-speech
 The following sections document the new features and changes that were included for each release and update of the {{site.data.keyword.texttospeechfull}} service. The information includes any known limitations. Unless otherwise noted, all changes are compatible with earlier releases and are automatically and transparently available to all new and existing applications.
 {: shortdesc}
 
+## Beta features
+{: release-notes-beta-features}
+
+IBM occasionally releases features and language support that are classified as beta. Such features are provided so that you can evaluate their functionality. They might not provide the same level of performance or compatibility that generally available (GA) features provide. They might be unstable and are subject to change or removal with short notice. They are not intended for use in a production environment.
+
 ## Known limitations
 {: #limitations}
 
@@ -36,6 +41,17 @@ The service has the following known limitations:
 
 -   When you specify the `audio/ogg;codecs=opus` audio format, you can optionally specify a sampling rate other than the default 48,000 Hz. However, although the service accepts `48000`, `24000`, `16000`, `12000`, or `8000` as a valid sampling rate, it currently disregards a specified value and always returns the audio with a sampling rate of 48 kHz.
 -   Cross-Origin Resource Sharing (CORS) support is not available from the Mozilla Firefox&trade; browser for voices in the following languages: Arabic, Australian English, Chinese, Dutch, and Korean.
+
+## 16 July 2021
+{: #July2021}
+
+The service now supports Belgian Dutch (Flemish) with the neural voice `nl-BE_AdeleVoice`. The Belgian Dutch voice supports customization and is generally available (GA) for production use.
+
+-   To hear a sample of the new voice, see [Supported languages and voices](/docs/text-to-speech?topic=text-to-speech-voices#language-voices).
+-   For more information about the phonetic symbols and Unicode values that are available for the Belgian Dutch language, see [Dutch (Belgian) symbols](/docs/text-to-speech?topic=text-to-speech-beSymbols).
+
+The [API & SDK reference](https://{DomainName}/apidocs/text-to-speech){: external} is not yet updated for this change.
+{: note}
 
 ## 12 April 2021
 {: #April2021}
@@ -237,10 +253,14 @@ But the following use of the `rate` attribute with the `<prosody>` element cause
 
 The service now correctly parses and applies the `rate` attribute of the `<prosody>` element for Japanese input.
 
+## 4 September 2020
+{: #September2020a}
+
+The customization interface is now generally available. Customization is no longer beta functionality. You can use the customization interface to specify how the service pronounces unusual words that occur in your input text by creating language-specific custom dictionaries. It can be used with all generally available and beta voices. For more information, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
+
 ## Older releases
 {: #older}
 
--   [4 September 2020](#September2020a)
 -   [24 June 2020](#June2020)
 -   [1 April 2020](#April2020)
 -   [24 February 2020](#February2020)
@@ -271,11 +291,6 @@ The service now correctly parses and applies the `rate` attribute of the `<proso
 -   [17 December 2015](#December2015)
 -   [21 September 2015](#September2015)
 -   [1 July 2015](#July2015)
-
-### 4 September 2020
-{: #September2020a}
-
-The customization interface is now generally available. Customization is no longer beta functionality. You can use the customization interface to specify how the service pronounces unusual words that occur in your input text by creating language-specific custom dictionaries. It can be used with all generally available and beta voices. For more information, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
 
 ### 24 June 2020
 {: #June2020}
