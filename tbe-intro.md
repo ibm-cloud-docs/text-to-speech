@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-04-21"
+lastupdated: "2021-05-07"
 
 subcollection: text-to-speech
 
@@ -26,6 +26,9 @@ subcollection: text-to-speech
 # Understanding Tune by Example
 {: #tbe-intro}
 
+The Tune by Example feature is beta functionality that is supported only for US English custom models and voices.
+{: beta}
+
 The Tune by Example feature lets you control exactly how specified text is spoken by the service. The feature lets you dictate the intonation, stress, tempo, cadence, rhythm, and pauses of the synthesized text. These aspects of speech are collectively referred to as *prosody*.
 {: shortdesc}
 
@@ -37,17 +40,14 @@ You can further enhance the quality of a prompt by creating an optional speaker 
 
 For an overview of the Tune by Example feature, including a demo with example scripts, see the blog [Tune by Example: How to Tune Watson Text to Speech for Better Intonations](https://medium.com/ibm-data-ai/tune-by-example-how-to-tune-watson-text-to-speech-for-better-intonations-bcee8404d927){: external}.
 
-The Tune by Example feature is beta functionality that is supported only for US English custom models and voices.
-{: beta}
-
 ## Status and support
 {: #tbe-intro-support}
 
 The following status and support information applies to Tune by Example:
 
 -   Tune by Example is beta functionality that is available only for US English. You can add prompts only to custom models whose language is `en-US`. You can use a custom prompt only with with US English voices.
--   You must have the Standard or Premium pricing plan to use Tune by Example. The feature is part of customization, which is restricted to these plans. For more information, see the {{site.data.keyword.texttospeechshort}} service in the [{{site.data.keyword.cloud}} Catalog](https://{DomainName}/catalog/text-to-speech){: external}.
 -   Custom models, custom prompts, and speaker models are owned by the instance of the service whose credentials are used to create them. Request logging and data privacy are supported for all customization components. For more information about these topics, see [Usage notes for customization](/docs/text-to-speech?topic=text-to-speech-customModels#customGuidelines).
+-   ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** You must have the Standard or Premium pricing plan to use Tune by Example. The feature is part of customization, which is restricted to these plans. For more information, see the {{site.data.keyword.texttospeechshort}} service in the [{{site.data.keyword.cloud}} Catalog](https://{DomainName}/catalog/text-to-speech){: external}.
 
 ## How Tune by Example works
 {: #tbe-intro-how}

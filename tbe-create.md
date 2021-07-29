@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-04-01"
+lastupdated: "2021-05-14"
 
 subcollection: text-to-speech
 
@@ -26,18 +26,18 @@ subcollection: text-to-speech
 # Creating a custom prompt
 {: #tbe-create}
 
+The Tune by Example feature is beta functionality that is supported only for US English custom models and voices.
+{: beta}
+
 Follow these steps to create a custom prompt for use in speech synthesis with the {{site.data.keyword.texttospeechfull}} service:
 {: shortdesc}
 
 1.  [Create a custom model](#tbe-create-custom-model). You can create a new custom model for your prompt, or you can add your prompt to an existing custom model.
 1.  [Create a speaker model](#tbe-create-speaker-model). A speaker model lets the service train itself on the voice of the user who speaks a prompt. Speaker models are optional but highly recommended.
 1.  [Add a custom prompt](#tbe-create-add-prompt). You add a custom prompt to a custom model. A custom model can contain multiple prompts.
-1.  [Evaluate the custom prompt](#tbe-create-evaluate-prompt). Once you add a custom prompt to a custom model, it is important to verify the quality of the prompt by using it in a synthesis request. For information about using a prompt with a speech synthesis request, see [Using a custom prompt](/docs/text-to-speech?topic=text-to-speech-tbe-use).
+1.  [Evaluate the custom prompt](#tbe-create-evaluate-prompt). Once you add a custom prompt to a custom model, it is important to verify the quality of the prompt by using it in a synthesis request. For information about using a prompt with a speech synthesis request, see [Using a custom prompt for speech synthesis](/docs/text-to-speech?topic=text-to-speech-tbe-use).
 
 You can add custom models, custom prompts, and speaker models as often as you need. You can add a maximum of 1000 custom prompts to a single custom model.
-
-The Tune by Example feature is beta functionality that is supported only for US English custom models and voices.
-{: beta}
 
 ## Create a custom model
 {: #tbe-create-custom-model}
@@ -46,8 +46,21 @@ You add a custom prompt to a custom model.  You can create a new custom model fo
 
 The following example creates a new custom model that is named `Prompt test`. Because custom prompts and speaker models are supported only for US English, the `language` of the model is `en-US`. The `Content-Type` header for the request must be `application/json`.
 
+![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+
 ```bash
 curl -X POST -u "apikey:{apikey}" \
+--header "Content-Type: application/json" \
+--data "{\"name\":\"Prompt test\", \"language\":\"en-US\", \"description\":\"Custom model to test prompts\"}" \
+"{url}/v1/customizations"
+```
+{: pre}
+
+![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+
+```bash
+curl -X POST \
+--header "Authorization: Bearer {token}" \
 --header "Content-Type: application/json" \
 --data "{\"name\":\"Prompt test\", \"language\":\"en-US\", \"description\":\"Custom model to test prompts\"}" \
 "{url}/v1/customizations"
@@ -72,8 +85,21 @@ The enrollment audio is distinct from the audio for any prompts. Enrollment audi
 
 The following example creates a speaker model named `speaker_one`. The request passes a 16 kHz WAV file as the enrollment audio in the body of the request. The `Content-Type` header of the request must be `audio/wav`.
 
+![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+
 ```bash
 curl -X POST -u "apikey:{apikey}" \
+--header "Content-Type: audio/wav" \
+--data-binary "@speaker-one-audio.wav" \
+"{url}/v1/speakers?speaker_name=speaker_one"
+```
+{: pre}
+
+![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+
+```bash
+curl -X POST \
+--header "Authorization: Bearer {token}" \
 --header "Content-Type: audio/wav" \
 --data-binary "@speaker-one-audio.wav" \
 "{url}/v1/speakers?speaker_name=speaker_one"
@@ -102,8 +128,23 @@ It is very important that the text and audio of the prompt match exactly. Discre
 
 The following example creates a custom prompt named `goodbye` that contains a simple farewell message. The request specifies the speaker ID for the speaker named `speaker_one` and the customization ID for the custom model that was created in the first step. The `Content-Type` header of the request must be `multipart/form-data`.
 
+![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+
 ```bash
 curl -X POST -u apikey:{apikey} \
+--header "Content-Type:multipart/form-data" \
+--form metadata="{\"prompt_text\": \"Thank you and good-bye!\", \
+   \"speaker_id\": \"56367f89-546d-4b37-891e-4eb0c13cc833\"}" \
+--form file=@goodbye-prompt.wav \
+"{url}/v1/customizations/82f4809a-bf63-89a6-52ca-22731fe467ba/prompts/goodbye"
+```
+{: pre}
+
+![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+
+```bash
+curl -X POST \
+--header "Authorization: Bearer {token}" \
 --header "Content-Type:multipart/form-data" \
 --form metadata="{\"prompt_text\": \"Thank you and good-bye!\", \
    \"speaker_id\": \"56367f89-546d-4b37-891e-4eb0c13cc833\"}" \
@@ -133,8 +174,19 @@ The service returns a 201 response code if it successfully initiates the request
 
 For shorter prompts, you can wait for a reasonable amount of time and then check the status of the prompt with the `GET /v1/customizations/{customization_id}/prompts/{prompt_id}` method. For longer prompts, consider using that method to poll the service every few seconds to determine when the prompt is ready. The following example checks the status of the `goodbye` prompt:
 
+![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+
 ```bash
 curl -X GET -u "apikey:{apikey}" \
+"{url}/v1/customizations/82f4809a-bf63-89a6-52ca-22731fe467ba/prompts/goodbye"
+```
+{: pre}
+
+![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+
+```bash
+curl -X GET \
+--header "Authorization: Bearer {token}" \
 "{url}/v1/customizations/82f4809a-bf63-89a6-52ca-22731fe467ba/prompts/goodbye"
 ```
 {: pre}
@@ -166,6 +218,8 @@ Always listen to and evaluate a prompt to determine its quality before using it 
 
 You call the same methods to evaluate a custom prompt and to use it in an application. For example, the following request uses the `POST /v1/synthesize` method to synthesize the prompt:
 
+![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+
 ```bash
 curl -X POST -u "apikey:{apikey}" \
 --header "Content-Type: application/json" \
@@ -175,7 +229,19 @@ curl -X POST -u "apikey:{apikey}" \
 ```
 {: pre}
 
-For more information about using prompts with speech synthesis, see [Using a custom prompt](/docs/text-to-speech?topic=text-to-speech-tbe-use).
+![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+
+```bash
+curl -X POST \
+--header "Authorization: Bearer {token}" \
+--header "Content-Type: application/json" \
+--header "Accept: audio/wav" \
+--data "{\"text\":\"<ibm:prompt id='goodbye'/>\"}" \
+"{url}/v1/synthesize?customization_id=82f4809a-bf63-89a6-52ca-22731fe467ba&voice=en-US_AllisonV3Voice"
+```
+{: pre}
+
+For more information about using prompts with speech synthesis, see [Using a custom prompt for speech synthesis](/docs/text-to-speech?topic=text-to-speech-tbe-use).
 
 ### Resolving evaluation problems for custom prompts
 {: #tbe-create-evaluate-prompt-problems}

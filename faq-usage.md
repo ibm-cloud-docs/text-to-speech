@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-03-19"
+lastupdated: "2021-05-10"
 
 keywords: faqs,frequently asked questions,question,Text to Speech
 
@@ -26,15 +26,27 @@ content-type: faq
 # Usage FAQs
 {: #faq-usage}
 
-FAQs for {{site.data.keyword.texttospeechfull}} include questions about speech synthesis, supported languages, audio formats, and other topics. To find all FAQs for {{site.data.keyword.cloud}}, see our [FAQ library](/docs/faqs){: external}.
+FAQs for {{site.data.keyword.texttospeechfull}} include questions about speech synthesis, supported languages, audio formats, and other topics. To find all FAQs for {{site.data.keyword.cloud}}, see the [FAQ library](/docs/faqs){: external}.
 {: shortdesc}
+
+## How do I access my service credentials?
+{: #faq-credentials}
+{: faq}
+{: support}
+
+How you access your service credentials depends on whether you are using {{site.data.keyword.texttospeechshort}} with {{site.data.keyword.cloud}} or {{site.data.keyword.icp4dfull}}. For more information about obtaining your credentials for both versions, see [Before you begin](/docs/text-to-speech?topic=text-to-speech-gettingStarted#getting-started-before-you-begin) in the getting started tutorial.
+
+Once you have your service credentials, see the following topics for information about authenticating to the service:
+
+-   [Authenticating to {{site.data.keyword.cloud_notm}}](/docs/text-to-speech?topic=text-to-speech-data-security#data-security-authentication-cloud)
+-   [Authenticating to {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-data-security#data-security-authentication-icpd)
 
 ## What languages does the service support?
 {: #faq-language-support}
 {: faq}
 {: support}
 
-The {{site.data.keyword.texttospeechshort}} service supports male and female voices in various spoken languages. Supported languages include Arabic, Brazilian Portuguese, Chinese (Mandarin), Dutch, English (Australian, United Kingdom, and United States), French, German, Italian, Japanese, Korean, and Spanish (multiple dialects). For more information about the available voices for all languages, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
+The {{site.data.keyword.texttospeechshort}} service supports male and female voices in various spoken languages. Supported languages include Arabic, Brazilian Portuguese, Chinese (Mandarin), Dutch, English (Australian, United Kingdom, and United States), French, German, Italian, Japanese, Korean, and Spanish (multiple dialects). Some languages and voices are available only for {{site.data.keyword.cloud}}, not for {{site.data.keyword.icp4dfull}}. For more information about the available voices for all languages, see [Using languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
 
 ## How does the service synthesize audio?
 {: #faq-voices}
@@ -43,7 +55,7 @@ The {{site.data.keyword.texttospeechshort}} service supports male and female voi
 
 The {{site.data.keyword.texttospeechshort}} service offers voices that rely on neural technology to synthesize text to speech. The topic of synthesizing text to speech is inherently complex. For more information, see
 
--   [Neural voice technology](/docs/text-to-speech?topic=text-to-speech-voices#neuralVoices)
+-   [Neural voice technology](/docs/text-to-speech?topic=text-to-speech-voices#neural-voices)
 -   [The science behind the service](/docs/text-to-speech?topic=text-to-speech-science)
 
 ## What are the output audio formats?
@@ -51,7 +63,7 @@ The {{site.data.keyword.texttospeechshort}} service offers voices that rely on n
 {: faq}
 {: support}
 
-By default, the {{site.data.keyword.texttospeechshort}} service returns audio in Ogg format with the Opus codec (`audio/ogg;codecs=opus`). The service supports many other audio formats to suit your application needs. For more information, see [Supported audio formats](/docs/text-to-speech?topic=text-to-speech-audioFormats#formatsSupported).
+By default, the {{site.data.keyword.texttospeechshort}} service returns audio in Ogg format with the Opus codec (`audio/ogg;codecs=opus`). The service supports many other audio formats to suit your application needs. For more information, see [Supported audio formats](/docs/text-to-speech?topic=text-to-speech-audio-formats#formats-supported).
 
 ## How do I convert my text to speech?
 {: #faq-convert}
@@ -67,10 +79,11 @@ There is no graphical user interface for submitting text. See the [Text to Speec
 {: faq}
 {: support}
 
-You can use the Speech Synthesis Markup Language (SSML) to control aspects of the synthesis process such as pronunciation, volume, pitch, speed, and other attributes.
+You can use the Speech Synthesis Markup Language (SSML) to control aspects of the synthesis process such as pronunciation, volume, pitch, speed, and other attributes. You can also use the Tune by Example feature to tailor the prosody, intonation, and cadence of custom prompts to better suit your application needs.
 
--   For general information, see [Using SSML](/docs/text-to-speech?topic=text-to-speech-ssml).
+-   For general information about SSML, see [Understanding SSML](/docs/text-to-speech?topic=text-to-speech-ssml).
 -   For information about the supported SSML elements, see [SSML elements](/docs/text-to-speech?topic=text-to-speech-elements).
+-   For information about the Tune by Example feature, see [Understanding Tune by Example](/docs/text-to-speech?topic=text-to-speech-tbe-intro).
 
 ## What programming languages can I use?
 {: #faq-sdks}
@@ -81,13 +94,6 @@ The service supports SDKs in many popular programming languages and platforms.
 
 -   For more information about the SDKs and links to them on GitHub, see [{{site.data.keyword.watson}} SDKs](/docs/text-to-speech?topic=watson-using-sdks).
 -   For more information about all methods of the SDKs for the {{site.data.keyword.texttospeechshort}} service, see the [API & SDK reference](/apidocs/text-to-speech){: external}.
-
-## How do I access my API key and URL endpoint?
-{: #faq-credentials}
-{: faq}
-{: support}
-
-From the [{{site.data.keyword.cloud}} Resource list](https://{DomainName}/resources){: external}, click on your {{site.data.keyword.texttospeechshort}} service instance to go to the {{site.data.keyword.texttospeechshort}} service dashboard page. On the **Manage** page, click **Show Credentials** to view your API key and URL endpoint. For more information, see [Before you begin](/docs/text-to-speech?topic=text-to-speech-gettingStarted#before-you-begin).
 
 ## What is the maximum amount of text that I can submit for synthesis?
 {: #faq-maximum-input}
@@ -141,4 +147,4 @@ For more information, see [Rules for creating custom entries](/docs/text-to-spee
 {: #faq-cost}
 {: faq}
 
-The {{site.data.keyword.texttospeechshort}} service offers multiple pricing plans. For more information about pricing, see the {{site.data.keyword.texttospeechshort}} service in the [IBM Cloud Catalog](https://cloud.ibm.com/catalog/text-to-speech).
+![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** The {{site.data.keyword.texttospeechshort}} service offers multiple pricing plans. For more information about pricing, see the {{site.data.keyword.texttospeechshort}} service in the [IBM Cloud Catalog](https://cloud.ibm.com/catalog/text-to-speech).

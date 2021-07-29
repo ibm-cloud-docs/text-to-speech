@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-03-09"
+lastupdated: "2021-05-13"
 
 subcollection: text-to-speech
 
@@ -27,7 +27,7 @@ content-type: troubleshoot
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# Using SSML
+# Understanding SSML
 {: #ssml}
 
 The Speech Synthesis Markup Language (SSML) is an XML-based markup language that provides annotations of text for speech-synthesis applications. It is a recommendation of the W3C Voice-Browser Working Group that has been adopted as the standard markup language for speech synthesis by the VoiceXML 2.0 specification. SSML provides developers of speech applications with a standard way to control aspects of the synthesis process by enabling them to specify pronunciation, volume, pitch, speed, and other attributes via markup.
@@ -82,10 +82,10 @@ For more information about using SSML with the service, see the following:
 -   For complete information about the service's level of support for all SSML elements, see [SSML elements](/docs/text-to-speech?topic=text-to-speech-elements). With a few exceptions, the service implements most of the W3C specification, as well as SSML fragments.
 -   The service supports the use of SSML with the input text of a speech synthesis request to control how the resulting audio is pronounced or to obtain timing marks for the resulting audio.
     -   For examples of using SSML elements with the `text` of a synthesis request, see [Examples of input text](/docs/text-to-speech?topic=text-to-speech-usingHTTP#httpExamples).
-    -   For information about using the SSML `<mark>` element with a WebSocket request, see [Specifying an SSML mark](/docs/text-to-speech?topic=text-to-speech-timing#mark).
+    -   For information about using the SSML `<mark>` element with a WebSocket request, see [Specifying an SSML mark](/docs/text-to-speech?topic=text-to-speech-timing#timing-mark).
 -   The service's customization interface supports the use of the SSML `<phoneme>` element to specify the phonetic spelling that it uses to pronounce a word. The phonetic spelling represents the sounds of a word, how those sounds are divided into syllables, and which syllables receive stress.
     -   For information about the customization interface, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
-    -   For information about the valid symbols that you can use in an {{site.data.keyword.IBM_notm}} SPR or IPA specification for any supported language, see [Using phonetic symbols](/docs/text-to-speech?topic=text-to-speech-sprs).
+    -   For information about the valid symbols that you can use in an {{site.data.keyword.IBM_notm}} SPR or IPA specification for any supported language, see [Understanding phonetic symbols](/docs/text-to-speech?topic=text-to-speech-symbols).
 
 ## SSML validation
 {: #errors}
@@ -113,4 +113,4 @@ The service also returns an error for invalid use of deprecated features:
 -   *Invalid use of the SSML `volume` attribute with the `<prosody>` element.* You cannot use the `volume` attribute of the `<prosody>` element with neural voices. The attribute was valid only with the deprecated standard voices.
 -   *Invalid use of the SSML `<express-as>` or `<voice-transformation>` element.* You cannot use these SSML extensions with neural voices. The elements were valid only with deprecated standard US English voices.
 
-For more information about these elements and about migrating to neural voices, see [Migrating from standard to neural voices](/docs/text-to-speech?topic=text-to-speech-voices#migrateVoice).
+For more information about these elements and about migrating to neural voices, see [Migrating from standard to neural voices](/docs/text-to-speech?topic=text-to-speech-voices#migrate-voice).

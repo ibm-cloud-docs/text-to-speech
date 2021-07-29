@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2020
-lastupdated: "2020-10-01"
+  years: 2019, 2021
+lastupdated: "2021-05-04"
 
 subcollection: text-to-speech
 
@@ -24,6 +24,8 @@ subcollection: text-to-speech
 
 # High availability and disaster recovery
 {: #ha-dr}
+
+![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
 
 The {{site.data.keyword.texttospeechfull}} service is highly available within any {{site.data.keyword.cloud_notm}} location (for example, Dallas or Washington, DC). However, recovering from potential disasters that affect an entire location requires planning and preparation.
 {: shortdesc}

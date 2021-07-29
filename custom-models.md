@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-03-22"
+lastupdated: "2021-05-06"
 
 subcollection: text-to-speech
 
@@ -45,16 +45,6 @@ All credentials obtained for the same instance of the {{site.data.keyword.textto
 
 An advantage of sharing ownership across credentials is that you can cancel a set of credentials, for example, if they become compromised. You can then create new credentials for the same service instance and still maintain ownership of and access to custom models created with the original credentials.
 
-### Request logging and data privacy
-{: #customLogging}
-
-How the service handles request logging for calls to the customization interface depends on the request:
-
--   The service *does not* log data (words and translations) that are used to build custom models. You do not need to set the `X-Watson-Learning-Opt-Out` request header when using the customization interface to manage the words and translations in a custom model. Your training data is never used to improve the service's base models.
--   The service *does* log data when a custom model is used with a synthesize request. You must set the `X-Watson-Learning-Opt-Out` request header to `true` to prevent logging for synthesize requests.
-
-For more information, see [Request logging](/docs/text-to-speech?topic=text-to-speech-data-security#data-security-request-logging).
-
 ### Information security
 {: #customSecurity}
 
@@ -68,6 +58,18 @@ In addition, if you delete an instance of the {{site.data.keyword.texttospeechsh
 
 For more information, see [Information security](/docs/text-to-speech?topic=text-to-speech-information-security).
 
+### Request logging and data privacy
+{: #customLogging}
+
+![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
+
+How the service handles request logging for calls to the customization interface depends on the request:
+
+-   The service *does not* log data (words and translations) that are used to build custom models. You do not need to set the `X-Watson-Learning-Opt-Out` request header when using the customization interface to manage the words and translations in a custom model. Your training data is never used to improve the service's base models.
+-   The service *does* log data when a custom model is used with a synthesize request. You must set the `X-Watson-Learning-Opt-Out` request header to `true` to prevent logging for synthesize requests.
+
+For more information, see [Request logging](/docs/text-to-speech?topic=text-to-speech-data-security#data-security-request-logging).
+
 ## Creating a custom model
 {: #cuModelsCreate}
 
@@ -79,10 +81,23 @@ You pass the following attributes as a JSON object with the body of a `POST /v1/
 -   `language` (*optional* string) - An identifier for the language of the custom model. The default is `en-US` for US English. The custom model can be used with any voice that is available in the specified language. For example, a custom model that is created for the `en-US` language can be used with any US English voice. It cannot, however, be used with an `en-GB` or `en-AU` voice.
 -   `description` (*optional* string) - A description of the new model. Although it is optional, a description is highly recommended.
 
-The following example `curl` command creates a new custom model named `Test`. The `Content-Type` header identifies the type of the input as `application/json`.
+The following example example creates a new custom model named `Test`. The `Content-Type` header identifies the type of the input as `application/json`.
+
+![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
 
 ```bash
 curl -X POST -u "apikey:{apikey}" \
+--header "Content-Type: application/json" \
+--data "{\"name\":\"Test\", \"language\":\"en-US\", \"description\":\"Customization test\"}" \
+"{url}/v1/customizations"
+```
+{: pre}
+
+![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+
+```bash
+curl -X POST \
+--header "Authorization: Bearer {token}" \
 --header "Content-Type: application/json" \
 --data "{\"name\":\"Test\", \"language\":\"en-US\", \"description\":\"Customization test\"}" \
 "{url}/v1/customizations"
@@ -103,8 +118,19 @@ The method returns a JSON object that contains a globally unique identifier (GUI
 
 To query information about an existing custom model, use the `GET /v1/customizations/{customization_id}` method. This is the most direct means of seeing all of the information about a model, including its metadata and the word/translation pairs and custom prompts that it contains.
 
+![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+
 ```bash
 curl -X GET -u "apikey:{apikey}" \
+"{url}/v1/customizations/{customization_id}"
+```
+{: pre}
+
+![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+
+```bash
+curl -X GET \
+--header "Authorization: Bearer {token}" \
 "{url}/v1/customizations/{customization_id}"
 ```
 {: pre}
@@ -135,8 +161,19 @@ The output also includes a `words` array that lists the model's custom words and
 
 To see information about all of the custom models that you own, use the `GET /v1/customizations` method:
 
+![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+
 ```bash
 curl -X GET -u "apikey:{apikey}" \
+"{url}/v1/customizations"
+```
+{: pre}
+
+![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+
+```bash
+curl -X GET \
+--header "Authorization: Bearer {token}" \
 "{url}/v1/customizations"
 ```
 {: pre}
@@ -178,8 +215,21 @@ To update information about a custom model, use the `POST /v1/customizations/{cu
 
 The following example updates the name and description of a custom model. An empty JSON array is sent with the `words` parameter to indicate that the model's entries are to remain unchanged.
 
+![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+
 ```bash
 curl -X POST -u "apikey:{apikey}" \
+--header "Content-Type: application/json" \
+--data "{\"name\":\"Test Update\", \"description\":\"Customization test update\", \"words\":[]}" \
+"{url}/v1/customizations/{customization_id}"
+```
+{: pre}
+
+![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+
+```bash
+curl -X POST \
+--header "Authorization: Bearer {token}" \
 --header "Content-Type: application/json" \
 --data "{\"name\":\"Test Update\", \"description\":\"Customization test update\", \"words\":[]}" \
 "{url}/v1/customizations/{customization_id}"
@@ -193,8 +243,19 @@ For information about updating the words in a model, see [Adding multiple words 
 
 To discard a custom model that you no longer need, use the `DELETE /v1/customizations/{customization_id}` method. Use this method only if you are sure that you no longer need the model, since deletion is permanent.
 
+![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+
 ```bash
 curl -X DELETE -u "apikey:{apikey}" \
+"{url}/v1/customizations/{customization_id}"
+```
+{: pre}
+
+![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+
+```bash
+curl -X DELETE \
+--header "Authorization: Bearer {token}" \
 "{url}/v1/customizations/{customization_id}"
 ```
 {: pre}

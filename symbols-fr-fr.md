@@ -22,7 +22,7 @@ subcollection: text-to-speech
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# French symbols
+# French (France) symbols
 {: #frSymbols}
 
 The following sections describe the valid symbols for French.

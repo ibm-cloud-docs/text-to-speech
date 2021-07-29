@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-04-02"
+lastupdated: "2021-05-07"
 
 subcollection: text-to-speech
 
@@ -29,6 +29,16 @@ subcollection: text-to-speech
 You can access the speech synthesis capabilities of the {{site.data.keyword.texttospeechfull}} service via an HTTP or WebSocket interface. Both interfaces provide features that let you submit and receive different information from the service. And as with all {{site.data.keyword.watson}} services, SDKs are available to simplify application development in many programming languages.
 {: shortdesc}
 
+## Using languages and voices
+{: #features-languages-voices}
+
+The service supports speech synthesis with voices for the many languages listed in [Language support](/docs/speech-to-text?topic=speech-to-text-about#about-languages). Some languages are supported for {{site.data.keyword.cloud}} only. For information about the supported languages and voices, see [Using languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
+
+## Using audio formats
+{: #features-audio-formats}
+
+The service can return synthesized audio in the many formats listed in [Audio support](/docs/text-to-speech?topic=text-to-speech-about#about-formats). For information about the supported audio formats, see [Using audio formats](/docs/text-to-speech?topic=text-to-speech-audio-formats).
+
 ## Synthesizing speech with the service
 {: #features-synthesis-interfaces}
 
@@ -53,16 +63,7 @@ The interfaces accept the following maximum amounts of text with a single reques
 
 These limits include all characters of the input, including whitespace.
 
-For billing purposes, whitespace characters are not counted. However, all other characters are counted, including those that are part of SSML elements.
-{: note}
-
-### Language and audio support
-{: #features-languages-formats}
-
-The service supports speech synthesis for many languages and audio formats.
-
--   For information about the supported languages, see [Language and voice support](/docs/text-to-speech?topic=text-to-speech-about#about-languages).
--   For information about the supported audio formats, see [Audio format support](/docs/text-to-speech?topic=text-to-speech-about#about-formats).
+![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** For billing purposes, whitespace characters are not counted. However, all other characters are counted, including those that are part of SSML elements.
 
 ## Using speech synthesis features
 {: #features-synthesis}
@@ -75,7 +76,7 @@ The service supports additional features that you can use to tailor the text tha
 You can pass the service plain text or text that is annotated with the Speech Synthesis Markup Language (SSML). SSML is an XML-based markup language that provides annotations of text for speech synthesis applications such as the {{site.data.keyword.texttospeechshort}} service.
 
 -   For more information about specifying input text, see [Specifying input text](/docs/text-to-speech?topic=text-to-speech-usingHTTP#input).
--   For more information about using SSML, see [Using SSML](/docs/text-to-speech?topic=text-to-speech-ssml).
+-   For more information about using SSML, see [Understanding SSML](/docs/text-to-speech?topic=text-to-speech-ssml).
 
 ### Word timings
 {: #features-timings}
@@ -91,13 +92,14 @@ The service includes a customization interface that you can use to create custom
 
 You can use custom models to create application-specific translations for unusual words for which the service's regular pronunciation rules might yield imperfect pronunciations. For example, your application might routinely encounter domain-specific terms, special terms with foreign origins, personal or geographic names, or abbreviations and acronyms. By using customization, you can define translations that tell the service how you want such terms to be pronounced.
 
-You can define the custom entry for a word/translation pair based on other words, or you can create pronunciations based on phoneme symbols in the standard International Phonetic Alphabet (IPA) or the proprietary {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR). Customization is available for all languages. You must have the Standard or Premium pricing plan to use customization. Users of the Lite plan cannot use the customization interface.
+You can define the custom entry for a word/translation pair based on other words, or you can create pronunciations based on phoneme symbols in the standard International Phonetic Alphabet (IPA) or the proprietary {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR). Customization is available for all languages.
 
 -   For more information about customization, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
--   For more information about pricing plans, see the {{site.data.keyword.texttospeechshort}} service in the [{{site.data.keyword.cloud}} Catalog](https://{DomainName}/catalog/text-to-speech){: external}.
+-   For more information about using phonetic IPA and SPR symbols, see [Understanding phonetic symbols](/docs/text-to-speech?topic=text-to-speech-symbols).
 
-Premium customers can work with {{site.data.keyword.IBM_notm}} to train a new custom voice for their specific use case and target market. {{site.data.keyword.IBM_notm}} can train a new voice with as little as one hour of training data. For more information, contact your {{site.data.keyword.IBM_notm}} Sales Representative.
-{: note}
+![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** You must have the Standard or Premium pricing plan to use customization. Users of the Lite plan cannot use the customization interface. For more information about pricing plans, see the {{site.data.keyword.texttospeechshort}} service in the [{{site.data.keyword.cloud}} Catalog](https://{DomainName}/catalog/text-to-speech){: external}.
+
+![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** Premium customers can work with {{site.data.keyword.IBM_notm}} to train a new custom voice for their specific use case and target market. {{site.data.keyword.IBM_notm}} can train a new voice with as little as one hour of training data. For more information, contact your {{site.data.keyword.IBM_notm}} Sales Representative.
 
 ## Using Tune by Example
 {: #features-tune-by-example}
@@ -113,15 +115,33 @@ For more information about Tune by Example, custom prompts, and speaker models, 
 The Tune by Example feature is beta functionality that is supported only for US English custom models and voices.
 {: beta}
 
+## Using software development kits
+{: #features-sdks}
+
+SDKs are available for the {{site.data.keyword.texttospeechshort}} service to simplify the development of speech applications. The SDKs support many popular programming languages and platforms.
+
+-   For a complete list of SDKs and links to the SDKs on GitHub, see [{{site.data.keyword.watson}} SDKs](/docs/text-to-speech?topic=watson-using-sdks).
+-   For more information about all methods of the SDKs for the {{site.data.keyword.texttospeechshort}} service, see the [API & SDK reference](https://{DomainName}/apidocs/text-to-speech){: external}.
+
 ## Learning more about application development
 {: #features-learn}
+
+![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
 
 For more information about working with {{site.data.keyword.watson}} services and {{site.data.keyword.cloud_notm}}:
 
 -   For an introduction, see [Getting started with {{site.data.keyword.watson}} and {{site.data.keyword.cloud_notm}}](/docs/watson?topic=watson-about).
 -   For information about using {{site.data.keyword.cloud_notm}} Identity and Access Management, see [Authenticating to {{site.data.keyword.watson}} services](/docs/watson?topic=watson-iam).
 
-SDKs are available for the {{site.data.keyword.texttospeechshort}} service to simplify the development of speech applications. The SDKs support many popular programming languages and platforms.
+## Next steps
+{: #features-next-steps}
 
--   For a complete list of SDKs and links to the SDKs on GitHub, see [{{site.data.keyword.watson}} SDKs](/docs/text-to-speech?topic=watson-using-sdks).
--   For more information about all methods of the SDKs for the {{site.data.keyword.texttospeechshort}} service, see the [API & SDK reference](https://{DomainName}/apidocs/text-to-speech){: external}.
+Explore the features introduced in this topic to gain a more in-depth understanding of the service's capabilities. Each feature includes links to topics that describe it in much greater detail.
+
+-   [Using languages and voices](#features-languages-voices) and [Using audio formats](#features-audio-formats) describe the basic underpinnings of the service's capabilities. You must choose a language and voice that are suitable for your text and application, and you must understand the characteristics of the audio the service returns.
+-   [Synthesizing speech with the service](#features-synthesis-interfaces) provides links to detailed presentations of each of the service's interfaces. Experiment with the interfaces to determine which is best suited to your application needs.
+-   [Using speech synthesis features](#features-synthesis) briefly describes the features that are available for speech synthesis and provides links for more information. Use the features to tailor the text that you send and the audio that you receive.
+-   [Customizing the service](#features-customization) describes the more advanced topic of customization, which you can use to create custom models that contain dictionaries of words and their translations for specific languages.
+-   [Using Tune by Example](#features-tune-by-example) introduces the Tune by Example feature that lets you create custom prompts. You can control the intonation, cadence, and stress of the synthesized text for your prompts.
+-   [Using software development kits](#features-sdks) provide links to the SDKs that are available to simplify application development in many programming languages.
+-   ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** [Learning more about application development](#features-learn) provides links to help you get started with {{site.data.keyword.watson}} services and understand authentication.

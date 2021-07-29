@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-03-18"
+lastupdated: "2021-05-03"
 
 subcollection: text-to-speech
 
@@ -113,7 +113,7 @@ Symbolic Phonetic Representation (SPR) is a proprietary, language-dependent form
 -   You can use a period to indicate the beginning of a syllable in a translation, but periods are optional and do not influence the word's pronunciation. They appear in the pronunciation for a word only if you include them in the word's translation. Do not use spaces to indicate syllable boundaries.
 -   {{site.data.keyword.IBM_notm}} recommends that you precede the vowel that has the primary stress for a word with a `1` symbol, though it is not strictly necessary. The service determines where stress occurs if you do not indicate it. You can also use a `2` symbol to indicate each secondary stress position, but the use of `2` symbols is also optional. They appear in the pronunciation for a word only if you include them in the word's translation.
 
-For more information about working with SPR, see [Using phonetic symbols](/docs/text-to-speech?topic=text-to-speech-sprs).
+For more information about working with SPR, see [Understanding phonetic symbols](/docs/text-to-speech?topic=text-to-speech-symbols).
 
 ## Working with Japanese entries
 {: #jaNotes}

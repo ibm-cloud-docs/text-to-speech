@@ -1,0 +1,42 @@
+{
+  "title": "Text to Speech docs",
+  "lastupdated": "2021-06-09",
+  "introduction": "Use the IBM Watson Text to Speech service to synthesize written text to natural-sounding speech. The synthesized audio uses appropriate cadence and intonation for its language and dialect. The documentation describes the Text to Speech service for IBM Cloud, IBM Cloud Pak for Data, and IBM Cloud Pak for Data as a Service.",
+  "section_devtools": {
+    "api": "/apidocs/text-to-speech"
+  },
+  "section_recommended": [
+    {
+      "title": "About",
+      "description": "A brief introduction to the service and its capabilities.",
+      "href": "/docs/text-to-speech?topic=text-to-speech-about"
+    },
+    {
+      "title": "Service features",
+      "description": "A more detailed description of the service and its capabilities.",
+      "href": "/docs/text-to-speech?topic=text-to-speech-service-features"
+    },
+    {
+      "title": "Getting started with Text to Speech",
+      "description": "A brief tutorial that demonstrates speech synthesis.",
+      "href": "/docs/text-to-speech?topic=text-to-speech-gettingStarted"
+    },
+    {
+      "title": "Release notes for IBM Cloud",
+      "description": "A summary of the latest releases and updates for IBM Watson Text to Speech for IBM Cloud.",
+      "href": "/docs/text-to-speech?topic=text-to-speech-release-notes"
+    },
+    {
+      "title": "Release notes for IBM Cloud Pak for Data",
+      "description": "A summary of the latest releases and updates for IBM Watson Text to Speech for IBM Cloud Pak for Data.",
+      "href": "/docs/text-to-speech?topic=text-to-speech-release-notes-data"
+    }
+  ],
+  "section_videos": [
+    {
+      "title": "Getting started with the Text to Speech service for IBM Cloud",
+      "href": "/docs/text-to-speech?topic=text-to-speech-gettingStarted",
+      "thumbnail": "/images/getting-started-thumbnail.png"
+    }
+  ]
+}

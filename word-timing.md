@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-02-21"
+lastupdated: "2021-05-13"
 
 subcollection: text-to-speech
 
@@ -37,7 +37,7 @@ The `<mark>` element and the `timings` parameter are available only with the Web
 {: note}
 
 ## How the service returns word timings
-{: #timingHow}
+{: #timing-how}
 
 To return mark or word timing information, the service multiplexes independent binary and text streams to construct its response:
 
@@ -51,7 +51,7 @@ In practical terms, the service can send an arbitrary number of audio chunks, in
 However, the text message that contains the timing information always arrives before the binary chunk that contains the corresponding audio. Moreover, the audio messages always arrive in order so that you can construct an accurate audio synthesis of the text from the binary results.
 
 ## Specifying an SSML mark
-{: #mark}
+{: #timing-mark}
 
 The optional SSML `<mark>` element is an empty tag that places a marker into the text to be synthesized. The client is notified when all of the text that precedes the `<mark>` element has been synthesized.
 
@@ -84,7 +84,7 @@ When it finishes synthesizing the text that precedes the mark, the service sends
 The text message that contains the timing information always arrives before the audio chunk that contains the mark's location.
 
 ## Requesting word timings for all words
-{: #timingRequest}
+{: #timing-request}
 
 The optional `timings` parameter of the JSON object that you pass to the service for a request returns timing information for all strings of the input text. This convenience eliminates the need to specify the SSML `<mark>` element for each word of the input. Pass an array that includes the string `words` to request word timings. Pass an empty array or omit the parameter to receive no timing information.
 
@@ -124,9 +124,9 @@ In response, the service can return the following text messages:
 The response is just an example. The service can return one or more text messages with timing information for the input. Moreover, the messages can be interspersed with responses that contain binary chunks of audio. But the text message that contains the timing information for a word always arrives before the audio chunk that contains that word.
 
 ### Timings for plain text
-{: #timingText}
+{: #timing-text}
 
-The service's synthesis process involves a text normalization step that spells out numbers, dates, times, monetary amounts, acronyms, and abbreviations. The results correspond to how such strings are spoken. For example, the string *$200* is spoken as three words: *two*, *hundred*, and *dollars*. Because word timing information is used to synchronize the audio with the input text, the service returns timing information that corresponds to the unnormalized spelling of the input.
+The service's synthesis process involves a text normalization step that spells out numbers, dates, times, monetary amounts, acronyms, and abbreviations. The results correspond to how such strings are spoken. For example, the string *$200* is spoken as three words: *two*, *hundred*, and *dollars*. Because word timing information is used to synchronize the audio with the input text, the service returns timing information that corresponds to the non-normalized spelling of the input.
 
 For example, consider the following input text:
 
@@ -141,7 +141,7 @@ The service returns audio timings for the following strings:
 
 Although "*-89.2*" is spoken in the audio as five separate words (*minus*, *eighty*, *nine*, *point*, *two*), the text message provides timing information for the string as a single unit with the start time of *minus* and the end time of *two*.
 
-As in the previous example, unnormalized strings can also contain punctuation. The service includes the punctuation that precedes or follows a word in the text message that it returns with the timings. For instance, the strings "*21,*" and "*1983!*" include punctuation that the service returns in its text message. Although the punctuation results in silence, the audio timing for the word does *not* include that silence.
+As in the previous example, non-normalized strings can also contain punctuation. The service includes the punctuation that precedes or follows a word in the text message that it returns with the timings. For instance, the strings "*21,*" and "*1983!*" include punctuation that the service returns in its text message. Although the punctuation results in silence, the audio timing for the word does *not* include that silence.
 
 For example, consider input text that contains the following conditional statement:
 
@@ -153,7 +153,7 @@ If it is sunny, I will go to the beach.
 The service returns timing information for all strings of the input, including "*sunny,*" and "*beach.*", both of which end in punctuation that produces silence. But the timing information for "*sunny,*" does not include the silence that is produced by the comma, and the timing information for "*beach.*" does not include the silence for the period. The information reflects only the timing of the spoken strings.
 
 ### Timings for SSML text
-{: #timingSSML}
+{: #timing-ssml}
 
 When the service synthesizes plain text, it returns all input characters except for blank spaces as part of the strings in its word timing response. The same is not true of SSML, since some SSML elements do not generate audio. The following list summarizes the SSML elements that can impact word timing information:
 
@@ -203,10 +203,10 @@ When the service synthesizes plain text, it returns all input characters except 
 - `<paragraph>` (or `<p>`) can add silence to the audio. The service does not return timing information for the silence.
 - `<sentence>` (or `<s>`) can add silence to the audio. The service does not return timing information for the silence.
 
-SSML elements that are not mentioned in the list do not impact word timing information. For more information about the service's support for SSML, see [Using SSML](/docs/text-to-speech?topic=text-to-speech-ssml).
+SSML elements that are not mentioned in the list do not impact word timing information. For more information about the service's support for SSML, see [Understanding SSML](/docs/text-to-speech?topic=text-to-speech-ssml).
 
 ## Examples with mark elements
-{: #timingExample}
+{: #timing-examples}
 
 The following examples show a simple WebSocket session between a client and the service. The examples focus on the exchange of data, not on opening the connection. The client sends a text message that includes two `<mark>` elements, named `SIMPLE` and `EXAMPLE`, and it requests the audio to be returned in WAV format:
 
@@ -222,67 +222,63 @@ The service first sends a message to confirm the audio format. It then sends mul
 
 Both of the following responses are possible. In each case, the service sends two text messages that identify the locations of the marks in the binary stream. But it sends an arbitrary number of binary messages that contain the audio. The timing information for a mark always arrives before the audio chunk that contains the location of the mark.
 
-### First example response
+-   *In the first example response,* the text messages are interspersed with multiple audio messages:
 
-In the first example response, the text messages are interspersed with multiple audio messages.
-
-```javascript
-{
-  "binary_streams": [
+    ```javascript
     {
-      "content_type": "audio/wav"
+      "binary_streams": [
+        {
+          "content_type": "audio/wav"
+        }
+      ]
     }
-  ]
-}
-... one or more chunks of binary audio
-    all audio precedes the SIMPLE mark ...
-{
-  "marks": [
-    [
-      "SIMPLE",
-      0.7848991042702103
-    ]
-  ]
-}
-... one or more chunks of binary audio
-    audio can precede and follow the SIMPLE mark
-    all audio precedes the EXAMPLE mark ...
-{
-  "marks": [
-    [
-      "EXAMPLE", 1.0034702987337102
-    ]
-  ]
-}
-... one or more chunks of binary audio
-    audio can precede and follow the EXAMPLE mark ...
-```
-{: codeblock}
+    ... One or more chunks of binary audio.
+        All audio precedes the SIMPLE mark....
+    {
+      "marks": [
+        [
+          "SIMPLE",
+          0.7848991042702103
+        ]
+      ]
+    }
+    ... One or more chunks of binary audio audio can precede
+        and follow the SIMPLE mark.
+        All audio precedes the EXAMPLE mark....
+    {
+      "marks": [
+        [
+          "EXAMPLE", 1.0034702987337102
+        ]
+      ]
+    }
+    ... One or more chunks of binary audio.
+        Audio can precede and follow the EXAMPLE mark....
+    ```
+    {: codeblock}
 
-### Second example response
+-   *In the second example response,* the text messages arrive before any of the audio messages:
 
-In the second example response, the text messages arrive before any of the audio messages.
-
-```javascript
-{
-  "binary_streams": [
-    "content_type": "audio/wav"}
-  ]
-}
-{
-  "marks": [
-    [
-      "SIMPLE", 0.7848991042702103
-    ]
-  ]
-}
-{
-  "marks": [
-    [
-      "EXAMPLE", 1.0034702987337102
-    ]
-  ]
-}
-... one or more chunks of binary audio ...
-```
-{: codeblock}
+    ```javascript
+    {
+      "binary_streams": [
+        "content_type": "audio/wav"}
+      ]
+    }
+    {
+      "marks": [
+        [
+          "SIMPLE", 0.7848991042702103
+        ]
+      ]
+    }
+    {
+      "marks": [
+        [
+          "EXAMPLE", 1.0034702987337102
+        ]
+      ]
+    }
+    ... One or more chunks of binary audio....
+    ```
+    {: codeblock}
