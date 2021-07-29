@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-03-26"
+lastupdated: "2021-05-14"
 
 subcollection: text-to-speech
 
@@ -26,11 +26,11 @@ subcollection: text-to-speech
 # Managing custom prompts
 {: #tbe-custom-prompts}
 
-Tune by Example includes methods for listing all custom prompts for a custom model, for getting information about an individual prompt, and for deleting a prompt. These methods are in addition to the `POST /v1/customizations/{customization_id}/prompts/{prompt_id}` method for adding a prompt to a custom model; for more information, see [Add a custom prompt](/docs/text-to-speech?topic=text-to-speech-tbe-create#tbe-create-add-prompt).
-{: shortdesc}
-
 The Tune by Example feature is beta functionality that is supported only for US English custom models and voices.
 {: beta}
+
+Tune by Example includes methods for listing all custom prompts for a custom model, for getting information about an individual prompt, and for deleting a prompt. These methods are in addition to the `POST /v1/customizations/{customization_id}/prompts/{prompt_id}` method for adding a prompt to a custom model; for more information, see [Add a custom prompt](/docs/text-to-speech?topic=text-to-speech-tbe-create#tbe-create-add-prompt).
+{: shortdesc}
 
 ## Listing custom prompts
 {: #tbe-custom-prompts-list}
@@ -52,13 +52,24 @@ The first method returns a `prompts` array that lists all of the prompts for a c
 
 When listing all prompts for a custom model, the `prompts` array is empty if the model contains no prompts.
 
-### Example requests and responses
-{: #tbe-custom-prompts-list-example}
+### List all custom prompts example
+{: #tbe-custom-prompts-list-all-example}
 
 The following example lists all custom prompts that are included in the custom model that has the specified customization ID:
 
+![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+
 ```bash
 curl -X GET -u "apikey:{apikey}" \
+"{url}/v1/customizations/{customization_id}/prompts"
+```
+{: pre}
+
+![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+
+```bash
+curl -X GET \
+--header "Authorization: Bearer {token}" \
 "{url}/v1/customizations/{customization_id}/prompts"
 ```
 {: pre}
@@ -91,13 +102,29 @@ The model contains three custom prompts. The first two prompts are associated wi
 ```
 {: codeblock}
 
+### List a specific custom prompt example
+{: #tbe-custom-prompts-list-specific-example}
+
 The following example returns information about just the first custom prompt from the previous listing:
+
+![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
 
 ```bash
 curl -X GET -u "apikey:{apikey}" \
 "{url}/v1/customizations/{customization_id}/prompts/greeting"
 ```
 {: pre}
+
+![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+
+```bash
+curl -X GET \
+--header "Authorization: Bearer {token}" \
+"{url}/v1/customizations/{customization_id}/prompts/greeting"
+```
+{: pre}
+
+The response duplicates the information from the previous example:
 
 ```javascript
 {
@@ -114,13 +141,24 @@ curl -X GET -u "apikey:{apikey}" \
 
 To delete a custom prompt from a custom model, use the `DELETE /v1/customizations/{customization_id}/prompts/{prompt_id}` method. Using a nonexistent or deleted custom prompt in a speech synthesis request causes the service to return a 400 response code. Make sure that you do not attempt to use a deleted prompt in production.
 
-### Example request
+### Delete a custom prompt example
 {: #tbe-custom-prompts-delete-example}
 
 The following example deletes the specified custom prompt from the custom model that has specified customization ID:
 
+![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+
 ```bash
 curl -X DELETE -u "apikey:{apikey}" \
+"{url}/v1/customizations/{customization_id}/prompts/{prompt_id}"
+```
+{: pre}
+
+![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+
+```bash
+curl -X DELETE \
+--header "Authorization: Bearer {token}" \
 "{url}/v1/customizations/{customization_id}/prompts/{prompt_id}"
 ```
 {: pre}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-09-06"
+lastupdated: "2020-05-03"
 
 subcollection: text-to-speech
 
@@ -22,32 +22,32 @@ subcollection: text-to-speech
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# Audio formats
-{: #audioFormats}
+# Using audio formats
+{: #audio-formats}
 
-The {{site.data.keyword.texttospeechfull}} service can return synthesized audio in a number of popular audio formats (or MIME types). For information about all supported formats, see [Supported audio formats](#formatsSupported).
+The {{site.data.keyword.texttospeechfull}} service can return synthesized audio in a number of popular audio formats (or MIME types). For information about all supported formats, see [Supported audio formats](#formats-supported).
 {: shortdesc}
 
-To make the best use of the service, you need to understand the sampling rate of the audio that the service returns and how to specify a different rate if you need to. For more information, see [Sampling rate](#formatsRate). The service always returns single-channel audio for all formats.
+To make the best use of the service, you need to understand the sampling rate of the audio that the service returns and how to specify a different rate if you need to. For more information, see [Sampling rate](#formats-rate). The service always returns single-channel audio for all formats.
 
 ## Sampling rate
-{: #formatsRate}
+{: #formats-rate}
 
 The sampling rate (or sampling frequency) is the number of samples that are generated per second for the audio. Sampling rate is measured in Hertz (Hz) or kilohertz (kHz). For example, a rate of 16,000 samples per second is equal to 16,000 Hz (or 16 kHz). For more information about sampling rates, see [Sampling (signal processing)](https://wikipedia.org/wiki/Sampling_%28signal_processing%29){: external}.
 
 Internally, the service always synthesizes audio with a sampling rate of 22,050 Hz. For many formats, the service also returns audio with this sampling rate. For other formats, the service returns audio with a different sampling rate.
 
-For most formats, you can specify a different sampling rate for the audio. For the `audio/l16` and `audio/mulaw` formats, you must specify a sampling rate. You specify a sampling rate by including the `rate={integer}` parameter with the audio format specification. For more information, see [Specifying an audio format](#formatsSpecify).
+For most formats, you can specify a different sampling rate for the audio. For the `audio/l16` and `audio/mulaw` formats, you must specify a sampling rate. You specify a sampling rate by including the `rate={integer}` parameter with the audio format specification. For more information, see [Specifying an audio format](#formats-specify).
 
 When you specify a sampling rate, the service resamples the audio from 22,050 Hz to the specified rate before it returns the audio. A specified sampling rate must lie in the range of 8 kHz to 192 kHz. Some audio formats restrict the rate to specific values; the descriptions of the formats identify such restrictions.
 
 ### Determining the sampling rate
-{: #formatsFind}
+{: #formats-rate-find}
 
-The most reliable way to identify the sampling rate for any audio that the service returns is to extract the information from the audio stream itself. To determine the rate, call the `/v1/synthesize` method with some simple text (for example, "hello world") and specify the format and codec that you plan to use. You can then obtain the sampling rate by saving the audio stream to a file and opening it in an audio player such as one of those listed in [Playing an audio file](#formatsPlay).
+The most reliable way to identify the sampling rate for any audio that the service returns is to extract the information from the audio stream itself. To determine the rate, call the `/v1/synthesize` method with some simple text (for example, "hello world") and specify the format and codec that you plan to use. You can then obtain the sampling rate by saving the audio stream to a file and opening it in an audio player such as one of those listed in [Playing an audio file](#formats-play).
 
 ## Supported audio formats
-{: #formatsSupported}
+{: #formats-supported}
 
 Table 1 lists the audio formats in which you can request synthesized audio. By default, the service returns the audio in Ogg format with the Opus codec (`audio/ogg;codecs=opus`). The service provides the following information for each format:
 
@@ -170,7 +170,7 @@ For more information, see
 -   [Vorbis](https://wikipedia.org/wiki/Vorbis){: external}
 
 ## Specifying an audio format
-{: #formatsSpecify}
+{: #formats-specify}
 
 By default, the service returns audio in the format `audio/ogg;codecs=opus`. You can specify a different audio format with either the HTTP or the WebSocket interface.
 
@@ -192,7 +192,7 @@ By default, the service returns audio in the format `audio/ogg;codecs=opus`. You
 -   With the WebSocket `/v1/synthesize` method, you must specify a format by using the required `accept` parameter of the text message that you pass to initiate synthesis. To receive audio in the default format, specify the value `*/*` for the parameter. For more information, see [Send input text](/docs/text-to-speech?topic=text-to-speech-usingWebSocket#WSsend).
 
 ## Playing an audio file
-{: #formatsPlay}
+{: #formats-play}
 
 To play an audio file that the service generates, use one of the following tools:
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-04-22"
+lastupdated: "2021-05-06"
 
 subcollection: text-to-speech
 
@@ -26,11 +26,11 @@ subcollection: text-to-speech
 # Rules for creating custom prompts and speaker models
 {: #tbe-rules}
 
-The service enforces the following rules for custom prompts and speakers models. Among the rules are guidelines for making the most effective use of the feature.
-{: shortdesc}
-
 The Tune by Example feature is beta functionality that is supported only for US English custom models and voices.
 {: beta}
+
+The service enforces the following rules for custom prompts and speakers models. Among the rules are guidelines for making the most effective use of the feature.
+{: shortdesc}
 
 ## Rules for creating custom prompts
 {: #tbe-rules-prompts}

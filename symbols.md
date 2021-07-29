@@ -24,8 +24,8 @@ subcollection: text-to-speech
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# Using phonetic symbols
-{: #sprs}
+# Understanding phonetic symbols
+{: #symbols}
 
 The {{site.data.keyword.texttospeechfull}} service supports both the standard International Phonetic Alphabet (IPA) and {{site.data.keyword.IBM}} Symbolic Phonetic Representation (SPR) notations to represent the sounds of words. Both notations provide phonetic coding that represents the pronunciation of a word, the sounds that make up the word, how the sounds are divided into syllables, and which syllables are stressed. [Language support for SPR and IPA](#supportedLanguages) provides links to pages that document the allowable phonetic symbols for each language.
 {: shortdesc}
@@ -140,25 +140,25 @@ Table 2 lists language-specific considerations that apply to specifying syllable
 {: help}
 {: support}
 
-Table 3 shows the service's language support for SPR and IPA symbols. All neural voices support IPA; enhanced neural voices also support SPR. For more information, see [Neural voice technology](/docs/text-to-speech?topic=text-to-speech-voices#neuralVoices).
+Table 3 shows the service's language support for SPR and IPA symbols. All neural voices support IPA; enhanced neural voices also support SPR. For more information, see [Neural voice technology](/docs/text-to-speech?topic=text-to-speech-voices#neural-voices).
 
 The table provides links to pages that document the supported SPR symbols, IPA symbols, and equivalent IPA Unicode values that can be used with all voices for each language. The pages provide examples of each symbol in words from the language. Because of dialectal differences, the examples might not always match your pronunciation.
 
-| Language | Supports SPR | Supports IPA |
-|----------|:------------:|:------------:|
-| [Arabic symbols](/docs/text-to-speech?topic=text-to-speech-arSymbols) | No | Yes |
-| [Brazilian Portuguese symbols](/docs/text-to-speech?topic=text-to-speech-ptSymbols)| Yes | Yes |
-| [Chinese (Mandarin) symbols](/docs/text-to-speech?topic=text-to-speech-zhSymbols) | No | Yes |
+| Language | Availability | Supports SPR | Supports IPA |
+|----------|:------------:|:------------:|:------------:|
+| [Arabic symbols](/docs/text-to-speech?topic=text-to-speech-arSymbols) | IBM Cloud only | No | Yes |
+| [Brazilian Portuguese symbols](/docs/text-to-speech?topic=text-to-speech-ptSymbols) | All versions | Yes | Yes |
+| [Chinese (Mandarin) symbols](/docs/text-to-speech?topic=text-to-speech-zhSymbols) | IBM Cloud only | No | Yes |
 | [Dutch (Belgian) symbols](/docs/text-to-speech?topic=text-to-speech-beSymbols) | IBM Cloud only | No | Yes |
-| [Dutch (Netherlands) symbols](/docs/text-to-speech?topic=text-to-speech-nlSymbols) | No | Yes |
-| [English (Australian) symbols](/docs/text-to-speech?topic=text-to-speech-auSymbols) | No | Yes |
-| [English (United Kingdom) symbols](/docs/text-to-speech?topic=text-to-speech-gbSymbols) | Yes | Yes |
-| [English (United States) symbols](/docs/text-to-speech?topic=text-to-speech-usSymbols) | Yes | Yes |
-| [French symbols](/docs/text-to-speech?topic=text-to-speech-frSymbols) | Yes | Yes |
-| [French (Canadian) symbols](/docs/text-to-speech?topic=text-to-speech-frCaSymbols) | Yes | Yes |
-| [German symbols](/docs/text-to-speech?topic=text-to-speech-deSymbols) | Yes | Yes |
-| [Italian symbols](/docs/text-to-speech?topic=text-to-speech-itSymbols) | Yes | Yes |
-| [Japanese symbols](/docs/text-to-speech?topic=text-to-speech-jaSymbols) | Yes | Yes |
-| [Korean symbols](/docs/text-to-speech?topic=text-to-speech-koSymbols) | No | Yes |
-| [Spanish symbols](/docs/text-to-speech?topic=text-to-speech-esSymbols) | Yes | Yes |
+| [Dutch (Netherlands) symbols](/docs/text-to-speech?topic=text-to-speech-nlSymbols) | IBM Cloud only | No | Yes |
+| [English (Australian) symbols](/docs/text-to-speech?topic=text-to-speech-auSymbols) | IBM Cloud only | No | Yes |
+| [English (United Kingdom) symbols](/docs/text-to-speech?topic=text-to-speech-gbSymbols) | All versions | Yes | Yes |
+| [English (United States) symbols](/docs/text-to-speech?topic=text-to-speech-usSymbols) | All versions | Yes | Yes |
+| [French (Canadian) symbols](/docs/text-to-speech?topic=text-to-speech-caSymbols) | All versions | Yes | Yes |
+| [French (France) symbols](/docs/text-to-speech?topic=text-to-speech-frSymbols) | All versions | Yes | Yes |
+| [German symbols](/docs/text-to-speech?topic=text-to-speech-deSymbols) | All versions | Yes | Yes |
+| [Italian symbols](/docs/text-to-speech?topic=text-to-speech-itSymbols) | All versions | Yes | Yes |
+| [Japanese symbols](/docs/text-to-speech?topic=text-to-speech-jaSymbols) | All versions | Yes | Yes |
+| [Korean symbols](/docs/text-to-speech?topic=text-to-speech-koSymbols) | IBM Cloud only | No | Yes |
+| [Spanish symbols](/docs/text-to-speech?topic=text-to-speech-esSymbols) | All versions | Yes | Yes |
 {: caption="Table 3. Language support for phonetic symbols"}

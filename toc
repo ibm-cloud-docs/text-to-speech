@@ -13,20 +13,24 @@ Text to Speech
 
     {: .topicgroup}
     Additional resources
+        [Pricing](https://www.ibm.com/cloud/watson-text-to-speech/pricing)
         [Blog](https://developer.ibm.com/watson/blog/)
         [Webinars](https://www.ibm.com/watson/webinars/)
-        [Watson videos](https://www.youtube.com/user/IBMWatsonSolutions)
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    http.md
-    websockets.md
+    speech-install-data.md
     voices.md
     audio-formats.md
-    word-timing.md
 
     {: topicgroup}
-    The customization interface
+    Synthesizing speech with the service
+        http.md
+        websockets.md
+        word-timing.md
+
+    {: topicgroup}
+    Customizing the service
         custom-intro.md
         custom-rules.md
         custom-models.md
@@ -34,7 +38,7 @@ Text to Speech
         custom-using.md
 
     {: topicgroup}
-    The Tune by Example feature
+    Using Tune by Example
         tbe-intro.md
         tbe-rules.md
         tbe-create.md
@@ -43,12 +47,12 @@ Text to Speech
         tbe-speakers.md
 
     {: topicgroup}
-    SSML
+    Using SSML
         ssml.md
         ssml-elements.md
 
     {: topicgroup}
-    Phonetic symbols
+    Using phonetic symbols
         symbols.md
         symbols-ar-ms.md
         symbols-pt-br.md
@@ -58,8 +62,8 @@ Text to Speech
         symbols-en-au.md
         symbols-en-gb.md
         symbols-en-us.md
-        symbols-fr-fr.md
         symbols-fr-ca.md
+        symbols-fr-fr.md
         symbols-de-de.md
         symbols-it-it.md
         symbols-ja-jp.md
@@ -84,10 +88,32 @@ Text to Speech
     at-events.md
     /watson/watson-using-sdks
     [Watson GitHub repos](https://github.com/watson-developer-cloud/)
+
+    {: .topicgroup}
+    Installing and managing previous versions
+
+        {: .topicgroup}
+        Installing and managing version 1.2
+            speech-install-12.md
+            speech-override-12.md
+            speech-cluster-12.md
+            speech-datastores-12.md
+            speech-scaling-12.md
+            speech-backup-12.md
+
+        {: .topicgroup}
+        Installing and managing version 1.1.4
+            speech-install.md
+            speech-override.md
+            speech-cluster.md
+            speech-datastores.md
+            speech-scaling.md
+            speech-backup.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     release-notes.md
+    release-notes-data.md
     faq-usage.md
 
     {: .topicgroup}

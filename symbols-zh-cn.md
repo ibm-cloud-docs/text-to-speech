@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-11-18"
+  years: 2021
+lastupdated: "2021-05-04"
 
 subcollection: text-to-speech
 
@@ -24,6 +24,8 @@ subcollection: text-to-speech
 
 # Chinese (Mandarin) symbols
 {: #zhSymbols}
+
+![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
 
 The following sections describe the valid symbols for Mandarin (Simplified) Chinese. Chinese symbols are described by using [Pinyin](https://en.wikipedia.org/wiki/Pinyin){: external}, which is a system that uses Latin characters to express how Chinese characters sound.
 

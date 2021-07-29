@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-03-19"
+lastupdated: "2021-05-14"
 
 subcollection: text-to-speech
 
@@ -26,13 +26,13 @@ subcollection: text-to-speech
 # Managing speaker models
 {: #tbe-speaker-models}
 
-Tune by Example includes methods for listing speaker models, listing the prompts for a speaker model, and deleting a speaker model. It also includes the `POST /v1/speakers` method to create a speaker model; for more information, see [Create a speaker model](/docs/text-to-speech?topic=text-to-speech-tbe-create#tbe-create-speaker-model).
-{: shortdesc}
-
 The Tune by Example feature is beta functionality that is supported only for US English custom models and voices.
 {: beta}
 
-## Listing speaker models
+Tune by Example includes methods for listing speaker models, listing the prompts for a speaker model, and deleting a speaker model. It also includes the `POST /v1/speakers` method to create a speaker model; for more information, see [Create a speaker model](/docs/text-to-speech?topic=text-to-speech-tbe-create#tbe-create-speaker-model).
+{: shortdesc}
+
+## Listing all speaker models
 {: #tbe-speaker-models-list}
 
 To list all of the speaker models that are defined for a service instance, use the `GET /v1/speakers` method. The method returns a `speakers` array that provides the following information for each speaker model:
@@ -42,13 +42,24 @@ To list all of the speaker models that are defined for a service instance, use t
 
 The array is empty if no speaker models are defined for the service instance.
 
-### Example request and response
+### List all speaker models example
 {: #tbe-speaker-models-list-example}
 
 The following example returns all of the available speaker models for the specified service credentials:
 
+![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+
 ```bash
 curl -X GET -u "apikey:{apikey}" \
+"{url}/v1/speakers"
+```
+{: pre}
+
+![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+
+```bash
+curl -X GET \
+--header "Authorization: Bearer {token}" \
 "{url}/v1/speakers"
 ```
 {: pre}
@@ -87,13 +98,24 @@ The method returns a `customizations` array that lists all of the custom prompts
 
 The `customizations` array is empty if the speaker model is not associated with any custom prompts.
 
-### Example request and response
+### List the custom prompts for a speaker model example
 {: #tbe-speaker-models-list-prompts-example}
 
 The following example returns all of the custom prompts with which the specified `speaker_id` is associated:
 
+![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+
 ```bash
 curl -X GET -u "apikey:{apikey}" \
+"{url}/v1/speakers/{speaker_id}"
+```
+{: pre}
+
+![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+
+```bash
+curl -X GET \
+--header "Authorization: Bearer {token}" \
 "{url}/v1/speakers/{speaker_id}"
 ```
 {: pre}
@@ -143,13 +165,24 @@ The speaker model is associated with four prompts divided between two custom mod
 
 To delete a speaker model, use the `DELETE /v1/speakers/{speaker_id}` method. Deleting a speaker model does not affect any prompts that are associated with the deleted speaker. The prosodic data that defines the quality of a prompt is established when the prompt is created. A prompt is static and remains unaffected by deletion of its associated speaker. However, the prompt cannot be resubmitted or updated with its original speaker once that speaker is deleted.
 
-### Example request
+### Delete a speaker model example
 {: #tbe-speaker-models-delete-example}
 
 The following example deletes the speaker model that has the specified speaker ID:
 
+![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+
 ```bash
 curl -X DELETE -u "apikey:{apikey}" \
+"{url}/v1/speakers/{speaker_id}"
+```
+{: pre}
+
+![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+
+```bash
+curl -X DELETE \
+--header "Authorization: Bearer {token}" \
 "{url}/v1/speakers/{speaker_id}"
 ```
 {: pre}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-04-08"
+lastupdated: "2021-05-04"
 
 keywords: IBM,activity tracker,event,security,text to speech
 
@@ -22,6 +22,8 @@ subcollection: text-to-speech
 # Activity Tracker events
 {: #at-events}
 
+![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
+
 As a security officer, auditor, or manager, you can use the Activity Tracker service to track how users and applications interact with {{site.data.keyword.texttospeechfull}} in {{site.data.keyword.cloud}}.
 {: shortdesc}
 
@@ -32,7 +34,7 @@ As a security officer, auditor, or manager, you can use the Activity Tracker ser
 
 The following tables list the {{site.data.keyword.texttospeechshort}} actions for model customization that generate events.
 
-The names of the actions for the customization events have changed. The old names are deprecated. Use the names in the following tables instead. For more information, see [Updates to Activity Tracker actions for customization](/docs/text-to-speech?topic=text-to-speech-release-notes#February2021-at-updates) in the release notes.
+The names of the actions for the customization events have changed. The old names are deprecated. Use the names in the following tables instead. For more information, see [Updates to Activity Tracker actions for customization](/docs/text-to-speech?topic=text-to-speech-release-notes#February2021-at-updates) in the release notes for {{site.data.keyword.cloud_notm}}.
 {: note}
 
 ### Create events

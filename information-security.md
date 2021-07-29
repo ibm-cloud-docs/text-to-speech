@@ -48,6 +48,8 @@ Learn more about {{site.data.keyword.IBM_notm}}'s own GDPR readiness journey and
 ## Health Insurance Portability and Accountability Act (HIPAA)
 {: #hipaa}
 
+![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
+
 US Health Insurance Portability and Accountability Act (HIPAA) support is available for Premium plans that are hosted in the Washington, DC, location and are created on or after 1 April 2019. For more information, see [Enabling EU and HIPAA supported settings](https://cloud.ibm.com/docs/account?topic=account-eu-hipaa-supported#eu-hipaa-supported){: external}.
 
 Do not include personal health information (PHI) in data that is to be added to custom models. Be sure to remove any PHI from data that you use for custom models.
@@ -68,11 +70,27 @@ Experimental and beta features are not intended for use with a production enviro
 ### Specifying a customer ID
 {: #specify-customer-id}
 
-To associate a customer ID with data, include the `X-Watson-Metadata` header with the request that passes the information. You pass the string `customer_id={id}` as the argument of the header. The following example associates the customer ID `my_ID` with the data passed with a `POST /v1/synthesize` request:
+To associate a customer ID with data, include the `X-Watson-Metadata` header with the request that passes the information. You pass the string `customer_id={id}` as the argument of the header. The following example associates the customer ID `my_customer_ID` with the data passed with a `POST /v1/synthesize` request:
+
+![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
 
 ```bash
 curl -X POST -u "apikey:{apikey}" \
---header "X-Watson-Metadata: customer_id=my_ID" \
+--header "X-Watson-Metadata: customer_id=my_customer_ID" \
+--header "Content-Type: application/json" \
+--header "Accept: audio/wav" \
+--data "{\"text\":\"hello world\"}" \
+--output hello_world.wav \
+"{url}/v1/synthesize"
+```
+{: pre}
+
+![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+
+```bash
+curl -X POST \
+--header "Authorization: Bearer {token}"\
+--header "X-Watson-Metadata: customer_id=my_customer_ID" \
 --header "Content-Type: application/json" \
 --header "Accept: audio/wav" \
 --data "{\"text\":\"hello world\"}" \
@@ -94,7 +112,7 @@ Use the `X-Watson-Metadata` header with the following methods:
 -   With WebSocket requests:
     -   `/v1/synthesize`
 
-    You specify the customer ID with the `x-watson-metadata` query parameter to associate the ID with data that is sent with the request. You must URL-encode the argument to the query parameter, for example, `customer_id%3dmy_ID`.
+    You specify the customer ID with the `x-watson-metadata` query parameter to associate the ID with data that is sent with the request. You must URL-encode the argument to the query parameter, for example, `customer_id%3dmy_customer_ID`.
 
 -   With requests to add custom words to custom models:
     -   `POST /v1/customizations/{customization_id}`
@@ -106,11 +124,22 @@ Use the `X-Watson-Metadata` header with the following methods:
 ### Deleting data
 {: #delete-pi}
 
-To delete all data that is associated with a customer ID, use the `DELETE /v1/user_data` method. You pass the string `customer_id={id}` as a query parameter with the request. The following example deletes all data for the customer ID `my_ID`:
+To delete all data that is associated with a customer ID, use the `DELETE /v1/user_data` method. You pass the string `customer_id={id}` as a query parameter with the request. The following example deletes all data for the customer ID `my_customer_ID`:
+
+![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
 
 ```bash
 curl -X DELETE -u "apikey:{apikey}" \
-"{url}/v1/user_data?customer_id=my_ID"
+"{url}/v1/user_data?customer_id=my_customer_ID"
+```
+{: pre}
+
+![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+
+```bash
+curl -X DELETE \
+--header "Authorization: Bearer {token}" \
+"{url}/v1/user_data?customer_id=my_customer_ID"
 ```
 {: pre}
 
@@ -118,6 +147,8 @@ The `/v1/user_data` method deletes all data that is associated with the specifie
 
 ## Deletion of all data for a {{site.data.keyword.texttospeechshort}} service instance
 {: #gdpr-text-to-speech-instance}
+
+![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
 
 If you delete an instance of the {{site.data.keyword.texttospeechshort}} service from the {{site.data.keyword.cloud_notm}} console, all data associated with that service instance is automatically deleted. This includes all custom models and word/translation pairs, and all data related to speech synthesis requests.
 

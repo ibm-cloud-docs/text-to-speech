@@ -23,12 +23,12 @@ subcollection: text-to-speech
 {:swift: .ph data-hd-programlang='swift'}
 
 # French (Canadian) symbols
-{: #frCaSymbols}
+{: #caSymbols}
 
 The following sections describe the valid symbols for Canadian French.
 
 ## Vowels
-{: #frCaVowels}
+{: #caVowels}
 
 | SPR symbol | IPA symbol | IPA Unicode | Example words |
 |:----------:|:----------:|:-----------:|---------------|
@@ -54,7 +54,7 @@ The following sections describe the valid symbols for Canadian French.
 {: caption="Table 1. Vowels (Canadian French)"}
 
 ## Consonants
-{: #frCaConsonants}
+{: #caConsonants}
 
 | SPR symbol | IPA symbol | IPA Unicode | Example words |
 |:----------:|:----------:|:-----------:|---------------|
@@ -84,7 +84,7 @@ The following sections describe the valid symbols for Canadian French.
 {: caption="Table 2. Consonants (Canadian French)"}
 
 ## Liaison
-{: #frCaLiaison}
+{: #caLiaison}
 
 In Canadian French, the `_` (underscore) can be used following a word-final consonant (but within the double-quotes that enclose the SPR) to indicate that it is a liaison consonant. A liaison consonant is pronounced only if the following word begins with a vowel.
 

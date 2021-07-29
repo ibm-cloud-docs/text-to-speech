@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-03-16"
+lastupdated: "2021-05-06"
 
 subcollection: text-to-speech
 
@@ -40,8 +40,8 @@ A custom model can also include custom prompts that you define for the Tune by E
 The following status and support information applies to customization:
 
 -   Customization is available for all languages.
--   You must have the Standard or Premium pricing plan to use customization. Users of the Lite plan cannot use the customization interface. For more information, see the {{site.data.keyword.texttospeechshort}} service in the [{{site.data.keyword.cloud}} Catalog](https://{DomainName}/catalog/text-to-speech){: external}.
--   Premium customers can work with {{site.data.keyword.IBM_notm}} to train a new custom voice for their specific use case and target market. {{site.data.keyword.IBM_notm}} can train a new voice with as little as one hour of training data. For more information, contact your {{site.data.keyword.IBM_notm}} Sales Representative.
+-   ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** You must have the Standard or Premium pricing plan to use customization. Users of the Lite plan cannot use the customization interface. For more information, see the {{site.data.keyword.texttospeechshort}} service in the [{{site.data.keyword.cloud}} Catalog](https://{DomainName}/catalog/text-to-speech){: external}.
+-   ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** Premium customers can work with {{site.data.keyword.IBM_notm}} to train a new custom voice for their specific use case and target market. {{site.data.keyword.IBM_notm}} can train a new voice with as little as one hour of training data. For more information, contact your {{site.data.keyword.IBM_notm}} Sales Representative.
 
 ## How customization works
 {: #ciHow}
@@ -93,7 +93,7 @@ For example, consider the word `trinitroglycerin`. The service's regular pronunc
 
 In these examples, the phonetic translation string is composed of phoneme symbols and a single primary stress mark. The primary stress mark is represented by <code>&#712;</code> in IPA and by `1` in SPR. It is placed just before the symbol for the stressed vowel in both cases. Although the examples do not show it, you can also specify syllable boundaries and secondary stress positions in a phonetic translation. These elements are not required and normally are not needed to achieve a pronunciation. As with sounds-like translations, you can compose a phonetic translation from multiple strings that are delimited by spaces.
 
-You can also specify IPA translations as IPA Unicode values. For more information, see [Using phonetic symbols](/docs/text-to-speech?topic=text-to-speech-sprs) and the language-specific tables on the pages that are referred to in [Language support for SPR and IPA](/docs/text-to-speech?topic=text-to-speech-sprs#supportedLanguages). For an example translation that uses IPA Unicode values, see [The phoneme element](/docs/text-to-speech?topic=text-to-speech-elements#phoneme_element).
+You can also specify IPA translations as IPA Unicode values. For more information, see [Understanding phonetic symbols](/docs/text-to-speech?topic=text-to-speech-symbols) and the language-specific tables on the pages that are referred to in [Language support for SPR and IPA](/docs/text-to-speech?topic=text-to-speech-symbols#supportedLanguages). For an example translation that uses IPA Unicode values, see [The phoneme element](/docs/text-to-speech?topic=text-to-speech-elements#phoneme_element).
 {: note}
 
 ### Working with an existing phonetic translation
@@ -110,8 +110,8 @@ For more information, see [Querying a word from a language](/docs/text-to-speech
 
 The following resources provide information about phonetic translation:
 
--   For more information about using SSML and its `<phoneme>` element, see [Using SSML](/docs/text-to-speech?topic=text-to-speech-ssml).
--   For more information about specifying SPR and IPA symbols and translations, see [Using phonetic symbols](/docs/text-to-speech?topic=text-to-speech-sprs).
+-   For more information about using SSML and its `<phoneme>` element, see [Understanding SSML](/docs/text-to-speech?topic=text-to-speech-ssml).
+-   For more information about specifying SPR and IPA symbols and translations, see [Understanding phonetic symbols](/docs/text-to-speech?topic=text-to-speech-symbols).
 
 ## Mixed sounds-like and phonetic translation
 

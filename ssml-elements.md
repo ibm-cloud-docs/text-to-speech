@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-11-18"
+  years: 2015, 2021
+lastupdated: "2020-05-13"
 
 subcollection: text-to-speech
 
@@ -111,7 +111,7 @@ You can use the service's customization interface to define a dictionary of cust
 ## The mark element
 {: #mark_element}
 
-The `<mark>` element is supported only by the service's WebSocket interface, not by its HTTP interface, which ignores the element. For more information, see [Specifying an SSML mark](/docs/text-to-speech?topic=text-to-speech-timing#mark).
+The `<mark>` element is supported only by the service's WebSocket interface, not by its HTTP interface, which ignores the element. For more information, see [Specifying an SSML mark](/docs/text-to-speech?topic=text-to-speech-timing#timing-mark).
 {: note}
 
 The `<mark>` element is an empty element that places a marker into the text to be synthesized. The client is notified when all of the text that precedes the `<mark>` element has been synthesized. The element accepts a single `name` attribute that specifies a string that uniquely identifies the mark; the name must begin with an alphanumeric character. The name is returned along with the time at which the mark occurs in the synthesized audio.
@@ -154,7 +154,7 @@ The `<phoneme>` element provides a phonetic pronunciation for the enclosed text.
     -   *The standard International Phonetic Alphabet (IPA):* `alphabet="ipa"`. All neural voices support IPA. This includes all voices for the Arabic, Chinese, Dutch, Australian English, and Korean languages.
     -   *The {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR):* `alphabet="ibm"`. All enhanced neural voices support SPR in addition to IPA. This includes all voices for the Brazilian Portuguese, United Kingdom and United States English, French, German, Italian, Japanese, and Spanish (all dialects) languages.
 
-    If no alphabet is specified, the service uses {{site.data.keyword.IBM_notm}} SPR by default. For more information, see [Language support for SPR and IPA](/docs/text-to-speech?topic=text-to-speech-sprs#supportedLanguages).
+    If no alphabet is specified, the service uses {{site.data.keyword.IBM_notm}} SPR by default. For more information, see [Language support for SPR and IPA](/docs/text-to-speech?topic=text-to-speech-symbols#supportedLanguages).
 -   `ph` is a required attribute that provides the pronunciation in the indicated alphabet. The following examples show the pronunciation for the word *tomato* in both formats:
 
     -   IPA format:
@@ -175,7 +175,7 @@ The `<phoneme>` element provides a phonetic pronunciation for the enclosed text.
           &lt;phoneme alphabet="ibm" ph=".0tx.1me.0Fo"&gt;tomato&lt;/phoneme&gt;
         &lt;/speak&gt;</code></pre>
 
-For more information about using SPR and IPA notations with the `<phoneme>` element, see [Using phonetic symbols](/docs/text-to-speech?topic=text-to-speech-sprs).
+For more information about using SPR and IPA notations with the `<phoneme>` element, see [Understanding phonetic symbols](/docs/text-to-speech?topic=text-to-speech-symbols).
 
 ## The prosody element
 {: #prosody_element}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-08"
+lastupdated: "2021-07-21"
 
 subcollection: text-to-speech
 
@@ -24,6 +24,8 @@ subcollection: text-to-speech
 
 # Dutch (Belgian) symbols
 {: #beSymbols}
+
+![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
 
 The following sections describe the valid symbols for Belgian Dutch (Flemish).
 
@@ -129,8 +131,12 @@ The following sections describe the valid symbols for Belgian Dutch (Flemish).
 | &#679; | 02A7 | **ch**eck |
 | &#678; | Not available | pa**ts** |
 | &#676; | 02A4 | **j**og |
-| &#660; | Not available | ge&euml;erd |
+| &#660; | Not available | ge&euml;erd [**1**] |
 | &#633; | 0279 | da**r**k |
 | &#952; | 03B8 | **th**ing |
 | &#240; | 00F0 | ne**th**er |
 {: caption="Table 6. Consonants (Belgian Dutch)"}
+
+**Note:**
+
+1. Glottal stop (&#660;) cannot be displayed in an example word. The engine ignores the glottal stop.

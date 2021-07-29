@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-12-01"
+  years: 2015, 2021
+lastupdated: "2021-05-04"
 
 subcollection: text-to-speech
 
@@ -47,14 +47,16 @@ The DNNs are trained on natural human speech to predict the acoustic features of
 
 Neural voices produce speech that is crisp and clear, with a very natural-sounding and smooth audio quality. For more information about the service's neural voice technology, see
 
--   The documentation [Neural voice technology](/docs/text-to-speech?topic=text-to-speech-voices#neuralVoices)
+-   The documentation [Neural voice technology](/docs/text-to-speech?topic=text-to-speech-voices#neural-voices)
 -   The blog post [{{site.data.keyword.ibmwatson_notm}} {{site.data.keyword.texttospeechshort}}: Neural Voices Generally Available](https://medium.com/ibm-watson/ibm-watson-text-to-speech-neural-voices-added-to-service-e562106ff9c7){: external}
 -   The research paper [High quality, lightweight and adaptable {{site.data.keyword.texttospeechshort}} using LPCNet](https://arxiv.org/abs/1905.00590){: external}
 
 ## Concatenative synthesis
 {: #science-concatenative}
 
-All concatenative voices, also referred to as standard voices, were deprecated as of 2 December 2020. The following information is maintained for general information purposes only. For more information about the deprecation of the concatenative voices, see the [2 December 2020 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#December2020) in the release notes.
+![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
+
+All concatenative voices, also referred to as standard voices, were deprecated as of 2 December 2020. The following information is maintained for general information purposes only. For more information about the deprecation of the concatenative voices, see the [2 December 2020 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#December2020) in the release notes for {{site.data.keyword.cloud_notm}}.
 {: important}
 
 Concatenative synthesis relies on an inventory of acoustic units from a large synthesis corpus to produce output speech for arbitrary input text. It is based on the following pipeline of processes. These processes facilitate an efficient, real-time search over this inventory of units followed by a post-processing of the units.
