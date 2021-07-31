@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-05-13"
+lastupdated: "2021-07-31"
 
 subcollection: text-to-speech
 
@@ -65,18 +65,24 @@ You can provide a translation by using the sounds-like or the phonetic method (o
 
     ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
 
-    <pre><code>$ curl -X PUT -u "apikey:{apikey}" \
+    ```bash
+    curl -X PUT -u "apikey:{apikey}" \
     --header "Content-Type: application/json" \
-    --data "{\"translation\":\"&lt;phoneme alphabet=\\\"ipa\\\" ph=\\\"&#712;a&#618;.t&#633;&#712;&#616;p&#601;l.&#712;i\\\"&gt;&lt;/phoneme&gt;\"}" \
-    "{url}/v1/customizations/{customization_id}/words/IEEE"</code></pre>
+    --data "{\"translation\":\"<phoneme alphabet=\\\"ipa\\\" ph=\\\"aɪ.tɹˈɨpəl.ˈi\\\"></phoneme>\"}" \
+    "{url}/v1/customizations/{customization_id}/words/IEEE"
+    ```
+    {: pre}
 
     ![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
 
-    <pre><code>$ curl -X PUT \
+    ```bash
+    curl -X PUT \
     --header "Authorization: Bearer {token}" \
     --header "Content-Type: application/json" \
-    --data "{\"translation\":\"&lt;phoneme alphabet=\\\"ipa\\\" ph=\\\"&#712;a&#618;.t&#633;&#712;&#616;p&#601;l.&#712;i\\\"&gt;&lt;/phoneme&gt;\"}" \
-    "{url}/v1/customizations/{customization_id}/words/IEEE"</code></pre>
+    --data "{\"translation\":\"<phoneme alphabet=\\\"ipa\\\" ph=\\\"aɪ.tɹˈɨpəl.ˈi\\\"></phoneme>\"}" \
+    "{url}/v1/customizations/{customization_id}/words/IEEE"
+    ```
+    {: pre}
 
 -   **Phonetic {{site.data.keyword.IBM_notm}} SPR:** SPR uses the `<phoneme>` element with the `alphabet` attribute set to `ibm` and the `ph` attribute defined in SPR format:
 
@@ -199,52 +205,70 @@ The following examples of the `PUT /v1/customizations/{customization_id}/words/{
 
     ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
 
-    <pre><code>$ curl -X PUT -u "apikey:{apikey}" \
+    ```bash
+    curl -X PUT -u "apikey:{apikey}" \
     --header "Content-Type: application/json" \
-    --data "{\"translation\":\"&#12491;&#12517;&#12540;&#12520;&#12540;&#12463;\", \"part_of_speech\":\"Mesi\"}" \
-    "{url}/v1/customizations/{customization_id}/words/%EF%BC%AE%EF%BC%B9"</code></pre>
+    --data "{\"translation\":\"ニューヨーク\", \"part_of_speech\":\"Mesi\"}" \
+    "{url}/v1/customizations/{customization_id}/words/%EF%BC%AE%EF%BC%B9"
+    ```
+    {: pre}
 
     ![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
 
-    <pre><code>$ curl -X PUT \
+    ```bash
+    curl -X PUT \
     --header "Authorization: Bearer {token}" \
     --header "Content-Type: application/json" \
-    --data "{\"translation\":\"&#12491;&#12517;&#12540;&#12520;&#12540;&#12463;\", \"part_of_speech\":\"Mesi\"}" \
-    "{url}/v1/customizations/{customization_id}/words/%EF%BC%AE%EF%BC%B9"</code></pre>
+    --data "{\"translation\":\"ニューヨーク\", \"part_of_speech\":\"Mesi\"}" \
+    "{url}/v1/customizations/{customization_id}/words/%EF%BC%AE%EF%BC%B9"
+    ```
+    {: pre}
 
 -   **Phonetic IPA:**
 
     ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
 
-    <pre><code>$ curl -X PUT -u "apikey:{apikey}" \
+    ```bash
+    curl -X PUT -u "apikey:{apikey}" \
     --header "Content-Type: application/json" \
-    --data "{\"translation\":\"&lt;phoneme alphabet=\\\"ipa\\\" ph=\\\"&#626;&#623;&#720;&#106;&#111;&#720;&#107;&#623;\\\"&gt;&lt;/phoneme&gt;\", \"part_of_speech\":\"Mesi\"}" \
-    "{url}/v1/customizations/{customization_id}/words/%EF%BC%AE%EF%BC%B9"</code></pre>
+    --data "{\"translation\":\"<phoneme alphabet=\\\"ipa\\\" ph=\\\"ɲɯːjoːkɯ\\\"></phoneme>\", \"part_of_speech\":\"Mesi\"}" \
+    "{url}/v1/customizations/{customization_id}/words/%EF%BC%AE%EF%BC%B9"
+    ```
+    {: pre}
 
     ![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
 
-    <pre><code>$ curl -X PUT \
+    ```bash
+    curl -X PUT \
     --header "Authorization: Bearer {token}" \
     --header "Content-Type: application/json" \
-    --data "{\"translation\":\"&lt;phoneme alphabet=\\\"ipa\\\" ph=\\\"&#626;&#623;&#720;&#106;&#111;&#720;&#107;&#623;\\\"&gt;&lt;/phoneme&gt;\", \"part_of_speech\":\"Mesi\"}" \
-    "{url}/v1/customizations/{customization_id}/words/%EF%BC%AE%EF%BC%B9"</code></pre>
+    --data "{\"translation\":\"<phoneme alphabet=\\\"ipa\\\" ph=\\\"ɲɯːjoːkɯ\\\"></phoneme>\", \"part_of_speech\":\"Mesi\"}" \
+    "{url}/v1/customizations/{customization_id}/words/%EF%BC%AE%EF%BC%B9"
+    ```
+    {: pre}
 
 -   **Phonetic {{site.data.keyword.IBM_notm}} SPR:**
 
     ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
 
-    <pre><code>$ curl -X PUT -u "apikey:{apikey}" \
+    ```bash
+    curl -X PUT -u "apikey:{apikey}" \
     --header "Content-Type: application/json" \
-    --data "{\"translation\":\"&lt;phoneme alphabet=\\\"ibm\\\" ph=\\\"nyu:yo:ku\\\"&gt;&lt;/phoneme&gt;\", \"part_of_speech\":\"Mesi\"}" \
-    "{url}/v1/customizations/{customization_id}/words/%EF%BC%AE%EF%BC%B9"</code></pre>
+    --data "{\"translation\":\"<phoneme alphabet=\\\"ibm\\\" ph=\\\"nyu:yo:ku\\\"></phoneme>\", \"part_of_speech\":\"Mesi\"}" \
+    "{url}/v1/customizations/{customization_id}/words/%EF%BC%AE%EF%BC%B9"
+    ```
+    {: pre}
 
     ![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
 
-    <pre><code>$ curl -X PUT \
+    ```bash
+    curl -X PUT \
     --header "Authorization: Bearer {token}" \
     --header "Content-Type: application/json" \
-    --data "{\"translation\":\"&lt;phoneme alphabet=\\\"ibm\\\" ph=\\\"nyu:yo:ku\\\"&gt;&lt;/phoneme&gt;\", \"part_of_speech\":\"Mesi\"}" \
-    "{url}/v1/customizations/{customization_id}/words/%EF%BC%AE%EF%BC%B9"</code></pre>
+    --data "{\"translation\":\"<phoneme alphabet=\\\"ibm\\\" ph=\\\"nyu:yo:ku\\\"></phoneme>\", \"part_of_speech\":\"Mesi\"}" \
+    "{url}/v1/customizations/{customization_id}/words/%EF%BC%AE%EF%BC%B9"
+    ```
+    {: pre}
 
 ## Querying a single word from a custom model
 {: #cuWordQueryModel}
@@ -404,9 +428,12 @@ curl -X GET \
 
 The response shows the IPA symbols for the pronunciation:
 
-<pre><code data-copy="false" class="language-javascript">{
-  "pronunciation": ".&#712;a&#618; .&#712;i .&#712;i .&#712;i"
-}</code></pre>
+```json
+{
+  "pronunciation": ".ˈaɪ .ˈi .ˈi .ˈi"
+}
+```
+{: codeblock}
 
 The following example enters a sounds-like translation for the word `IEEE` and obtains the phonetic equivalent in {{site.data.keyword.IBM_notm}} SPR format. Obtaining the phonetic pronunciation for a sounds-like translation is an especially interesting approach to composing a phonetic translation. The spaces of the word are URL-encoded in the example.
 

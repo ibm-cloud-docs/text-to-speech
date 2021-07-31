@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2020-05-13"
+lastupdated: "2020-07-30"
 
 subcollection: text-to-speech
 
@@ -159,21 +159,30 @@ The `<phoneme>` element provides a phonetic pronunciation for the enclosed text.
 
     -   IPA format:
 
-        <pre><code>&lt;speak version="1.0"&gt;
-          &lt;phoneme alphabet="ipa" ph="t&#601;&#712;me&#618;.&#638;o&#650;"&gt;tomato&lt;/phoneme&gt;
-        &lt;/speak&gt;</code></pre>
+        ```xml
+        <speak version="1.0">
+          <phoneme alphabet="ipa" ph="təˈmeɪ.ɾoʊ">tomato</phoneme>
+        </speak>
+        ```
+        {: codeblock}
 
     -   IPA format with Unicode symbols:
 
-        <pre><code>&lt;speak version="1.0"&gt;
-          &lt;phoneme alphabet="ipa" ph="t&amp;&#35;x259;mei&amp;&#35;x027E;o&amp;&#035;x028A;"&gt;tomato&lt;/phoneme&gt;
-        &lt;/speak&gt;</code></pre>
+        ```xml
+        <speak version="1.0">
+          <phoneme alphabet="ipa" ph="t&#x0259;&#x02C8;me&#x026A;.&#x027E;o&#x028A;">tomato</phoneme>
+        </speak>
+        ```
+        {: codeblock}
 
     -   {{site.data.keyword.IBM_notm}} SPR format:
 
-        <pre><code>&lt;speak version="1.0"&gt;
-          &lt;phoneme alphabet="ibm" ph=".0tx.1me.0Fo"&gt;tomato&lt;/phoneme&gt;
-        &lt;/speak&gt;</code></pre>
+        ```xml
+        <speak version="1.0">
+          <phoneme alphabet="ibm" ph=".0tx.1me.0Fo">tomato</phoneme>
+        </speak>
+        ```
+        {: codeblock}
 
 For more information about using SPR and IPA notations with the `<phoneme>` element, see [Understanding phonetic symbols](/docs/text-to-speech?topic=text-to-speech-symbols).
 
