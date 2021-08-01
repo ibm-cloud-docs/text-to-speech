@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-05-03"
+lastupdated: "2021-07-30"
 
 subcollection: text-to-speech
 
@@ -125,25 +125,28 @@ Extra rules and a `part_of_speech` field apply to the creation of entries for wo
 -   You can create only a single entry for any word, and you can specify only a single part of speech for any word. You cannot create multiple entries with different parts of speech (for instance, noun and verb) for the same word. Adding a translation for a word that exists in a model overwrites the word's existing translation, including its part of speech.
 -   The service applies the longest matching word from the word/translation pairs that are defined for a custom model. For example, consider the following three entries for a custom model.
 
-    <pre><code>{
+    ```json
+    {
       "words": [
         {
-          "word": "&#65326;&#65337;",
-          "translation": "&#12491;&#12517;&#12540;&#12520;&#12540;&#12463;",
+          "word": "ＮＹ",
+          "translation": "ニューヨーク",
           "part_of_speech": "Mesi"
         },
         {
-          "word": "&#65326;&#65337;&#65315;",
-          "translation": "&#12491;&#12517;&#12540;&#12520;&#12540;&#12463;&#12471;&#12486;&#12451;",
+          "word": "ＮＹＣ",
+          "translation": "ニューヨークシティ",
           "part_of_speech": "Mesi"
         },
         {
-          "word": "&#65337;&#65315;",
-          "translation": "&#12520;&#12467;&#12495;&#12510;&#12481;&#12517;&#12540;&#12459;&#12460;&#12452;",
+          "word": "ＹＣ",
+          "translation": "ヨコハマチューカガイ",
           "part_of_speech": "Mesi"
         }
       ]
-    }</code></pre>
+    }
+    ```
+    {: codeblock}
 
     With these entries, assume that the service receives the following input text: <code>&#19968;&#36913;&#38291;&#65326;&#65337;&#65315;&#12434;&#35370;&#21839;&#12375;&#12383;</code>. In this case, the service matches the word <code>&#65326;&#65337;&#65315;</code> because <code>&#65326;&#65337;&#65315;</code> is longer than <code>&#65326;&#65337;</code> and because <code>&#65326;&#65337;&#65315;</code> matches before <code>&#65337;&#65315;</code>.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-07-08"
+lastupdated: "2021-07-30"
 
 subcollection: text-to-speech
 
@@ -80,8 +80,11 @@ Also consider the following when defining a word's pronunciation in SPR format:
 
 You can define IPA pronunciations by using phonetic symbols or Unicode values. The following are examples of valid IPA notations for the word *tomato* in phonetic symbols and Unicode:
 
-<pre><code>&lt;phoneme alphabet="ipa" ph="t&#601;&#712;me&#618;.&#638;o&#650;"&gt;tomato&lt;/phoneme&gt;
-&lt;phoneme alphabet="ipa" ph="t&amp;&#35;x259;mei&amp;&#35;x027E;o&amp;&#035;x028A;"&gt;tomato&lt;/phoneme&gt;</code></pre>
+```xml
+<phoneme alphabet="ipa" ph="təˈmeɪ.ɾoʊ">tomato</phoneme>
+<phoneme alphabet="ipa" ph="t&#x0259;&#x02C8;me&#x026A;.&#x027E;o&#x028A;">tomato</phoneme>
+```
+{: codeblock}
 
 IPA is an industry standard notation. For more information, see the following pages:
 

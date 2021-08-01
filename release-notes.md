@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-07-16"
+lastupdated: "2021-07-30"
 
 subcollection: text-to-speech
 
@@ -539,12 +539,15 @@ The service now supports the MP3 or Motion Picture Experts Group (MPEG) audio fo
 -   In addition to the `en-US_AllisonVoice`, two more voices are now transformable with SSML voice transformation: `en-US_LisaVoice` and `en-US_MichaelVoice`.
 -   When you use the customization interface with Japanese, the service now matches the longest word from the word/translation pairs that are defined for a custom model. For example, consider the following two entries for a custom model:
 
-    <pre><code>{
+    ```json
+    {
       "words": [
-        {"word":"&#65326;&#65337;", "translation":"&#12491;&#12517;&#12540;&#12520;&#12540;&#12463;", "part_of_speech":"Mesi"},
-        {"word":"&#65326;&#65337;&#65315;", "translation":"&#12491;&#12517;&#12540;&#12520;&#12540;&#12463;&#12471;&#12486;&#12451;", "part_of_speech":"Mesi"}
+        {"word":"ＮＹ", "translation":"ニューヨーク", "part_of_speech":"Mesi"},
+        {"word":"ＮＹＣ", "translation":"ニューヨークシティ", "part_of_speech":"Mesi"}
       ]
-    }</code></pre>
+    }
+    ```
+    {: codeblock}
 
     If the service finds the string <code>&#65326;&#65337;&#65315;</code> in the input text, it matches that word because it is a longer match than <code>&#65326;&#65337;</code>. Previously, the service would have matched the string <code>&#65326;&#65337;</code>. For more information about working with Japanese entries for a custom model, see [Working with Japanese entries](/docs/text-to-speech?topic=text-to-speech-rules#jaNotes).
 
