@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-07-23"
+lastupdated: "2021-08-09"
 
 subcollection: text-to-speech
 
@@ -46,7 +46,7 @@ IBM occasionally releases features and language support that are classified as b
 
 -   **30 August 2019:** When you specify the `audio/ogg;codecs=opus` audio format, you can optionally specify a sampling rate other than the default 48,000 Hz. However, while the service accepts `48000`, `24000`, `16000`, `12000`, or `8000` as a valid sampling rate, it currently disregards a specified value and always returns the audio with a sampling rate of 48 kHz.
 
-## Version 4.0 (29 July 2021)
+## Version 4.0.0 (29 July 2021)
 {: #v40}
 
 {{site.data.keyword.texttospeechfull}} for {{site.data.keyword.icp4dfull}} version 4.0.0 is now available.  Installation and administration of the service include many changes. This version supports {{site.data.keyword.icp4dfull_notm}} version 4.x and Red Hat OpenShift version 4.6. For more information about installing and managing the service, see [Installing {{site.data.keyword.ibmwatson_notm}} {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-speech-install-data).

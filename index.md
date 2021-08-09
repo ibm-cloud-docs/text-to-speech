@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-07-16"
+lastupdated: "2021-08-09"
 
 subcollection: text-to-speech
 
@@ -41,7 +41,7 @@ The service can be used in applications such as voice-automated chatbots, as wel
     -   For information about the latest service update, see [16 July 2021](/docs/text-to-speech?topic=text-to-speech-release-notes#July2021) in the release notes.
 -   ![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}** for installed or on-premises instances of {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}. For links to information about installing and managing {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}, see [Installing {{site.data.keyword.ibmwatson_notm}} {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-speech-install-data).
     -   For information about service updates and known limitations, see the [Release notes for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes-data).
-    -   For information about the latest service update, see [Version 4.0 (29 July 2021)](/docs/text-to-speech?topic=text-to-speech-release-notes-data#v40) in the release notes.
+    -   For information about the latest service update, see [Version 4.0.0 (29 July 2021)](/docs/text-to-speech?topic=text-to-speech-release-notes-data#v40) in the release notes.
 
 ## Speech synthesis
 {: #about-synthesis}
