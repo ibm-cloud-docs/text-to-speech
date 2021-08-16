@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-08-09"
+lastupdated: "2021-08-16"
 
 subcollection: text-to-speech
 
@@ -201,6 +201,9 @@ The release includes the following functional changes and enhancements:
 
 ## Version 1.1.4 (19 June 2020)
 {: #v114}
+
+{{site.data.keyword.speechtotextshort}} and {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} version 1.1.4 go out of service on **30 September 2021**. You must upgrade to a later version of the services on {{site.data.keyword.icp4dfull_notm}} before that date. As of 1 October 2021, the documentation for version 1.1.4 will no longer be available.
+{: important}
 
 As of 4 September 2020, the customization interface is generally available. Customization is no longer beta functionality. You can use the customization interface to specify how the service pronounces unusual words that occur in your input text by creating language-specific custom dictionaries. For more information, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
 {: note}
