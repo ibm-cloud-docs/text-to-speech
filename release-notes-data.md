@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-08-16"
+lastupdated: "2021-08-18"
 
 subcollection: text-to-speech
 
@@ -50,9 +50,6 @@ IBM occasionally releases features and language support that are classified as b
 {: #v40}
 
 {{site.data.keyword.texttospeechfull}} for {{site.data.keyword.icp4dfull}} version 4.0.0 is now available.  Installation and administration of the service include many changes. This version supports {{site.data.keyword.icp4dfull_notm}} version 4.x and Red Hat OpenShift version 4.6. For more information about installing and managing the service, see [Installing {{site.data.keyword.ibmwatson_notm}} {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-speech-install-data).
-
-To install {{site.data.keyword.ibmwatson_notm}} {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}, contact your IBM Support representative. They can help you install and administer the service on {{site.data.keyword.icp4dfull_notm}}. Complete installation and administration documentation for the product will be published in the coming weeks.
-{: note}
 
 Version 4.0.0 includes the changes described in the following sections.
 
