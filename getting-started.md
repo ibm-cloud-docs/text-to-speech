@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-07-19"
+lastupdated: "2021-08-24"
 
 keywords: text to speech,IBM cloud,getting started,tutorial,synthesize audio,speech synthesis
 
@@ -54,15 +54,15 @@ The {{site.data.keyword.texttospeechfull}} service converts written text to natu
 
 ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
 
--   {: hide-dashboard} Create an instance of the service:
+-   Create an instance of the service: {: hide-dashboard}
 
-    1.  {: hide-dashboard} Go to the [{{site.data.keyword.texttospeechshort}}](https://{DomainName}/catalog/services/text-to-speech){: external} page in the {{site.data.keyword.cloud_notm}} Catalog.
-    1.  {: hide-dashboard} Sign up for a free {{site.data.keyword.cloud_notm}} account or log in.
-    1.  {: hide-dashboard} Click **Create**.
+    1.  Go to the [{{site.data.keyword.texttospeechshort}}](https://{DomainName}/catalog/services/text-to-speech){: external} page in the {{site.data.keyword.cloud_notm}} Catalog. {: hide-dashboard}
+    1.  Sign up for a free {{site.data.keyword.cloud_notm}} account or log in. {: hide-dashboard}
+    1.  Click **Create**. {: hide-dashboard}
 
 -   Copy the credentials to authenticate to your service instance:
 
-    1.  {: hide-dashboard} From the [{{site.data.keyword.cloud_notm}} Resource list](https://{DomainName}/resources){: external}, click on your {{site.data.keyword.texttospeechshort}} service instance to go to the {{site.data.keyword.texttospeechshort}} service dashboard page.
+    1.  From the [{{site.data.keyword.cloud_notm}} Resource list](https://{DomainName}/resources){: external}, click on your {{site.data.keyword.texttospeechshort}} service instance to go to the {{site.data.keyword.texttospeechshort}} service dashboard page. {: hide-dashboard}
     1.  On the **Manage** page, click **Show Credentials** to view your credentials.
     1.  Copy the `API Key` and `URL` values.
 
@@ -107,7 +107,7 @@ The following command use the `POST /v1/synthesize` method to synthesize US Engl
 
     ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
 
-    -   {: hide-dashboard} Replace `{apikey}` and `{url}` with your API key and URL.
+    -   Replace `{apikey}` and `{url}` with your API key and URL. {: hide-dashboard}
 
     ```bash
     curl -X POST -u "apikey:{apikey}"{: apikey} \
@@ -145,7 +145,7 @@ The following command again uses the `POST /v1/synthesize` method to synthesize 
 
     ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
 
-    -   {: hide-dashboard} Replace `{apikey}` and `{url}` with your API key and URL.
+    -   Replace `{apikey}` and `{url}` with your API key and URL. {: hide-dashboard}
 
     ```bash
     curl -X POST -u "apikey:{apikey}"{: apikey} \
@@ -182,7 +182,7 @@ The following command uses the `GET /v1/synthesize` method to synthesize Spanish
 
     ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
 
-    -   {: hide-dashboard} Replace `{apikey}` and `{url}` with your API key and URL.
+    -   Replace `{apikey}` and `{url}` with your API key and URL. {: hide-dashboard}
 
     ```bash
     curl -X GET -u "apikey:{apikey}"{: apikey} \

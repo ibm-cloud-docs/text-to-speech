@@ -14,7 +14,7 @@ Text to Speech
     {: .topicgroup}
     Additional resources
         [Pricing](https://www.ibm.com/cloud/watson-text-to-speech/pricing)
-        [Blog](https://developer.ibm.com/watson/blog/)
+        [Blog](https://developer.ibm.com/blogs/)
         [Webinars](https://www.ibm.com/watson/webinars/)
     {: .navgroup-end}
 
