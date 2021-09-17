@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-07-30"
+lastupdated: "2021-09-16"
 
 subcollection: text-to-speech
 
@@ -46,6 +46,11 @@ The service has the following known limitations:
 
 -   **2 December 2020:** Cross-Origin Resource Sharing (CORS) support is not available from the Mozilla Firefox&trade; browser for voices in the following languages: Arabic, Australian English, Chinese, Dutch, and Korean.
 -   **22 August 2019:** When you specify the `audio/ogg;codecs=opus` audio format, you can optionally specify a sampling rate other than the default 48,000 Hz. However, although the service accepts `48000`, `24000`, `16000`, `12000`, or `8000` as a valid sampling rate, it currently disregards a specified value and always returns the audio with a sampling rate of 48 kHz.
+
+## 16 September 2021
+{: #September2021}
+
+**Defect fix:** For the Castilian Spanish (`es-ES_EnriqueV3Voice` and `es-ES_LauraV3Voice`) and North American Spanish (`es-US_SofiaV3Voice`) voices, questions of all types now use the correct intonation. For the Latin American Spanish voice (`es-LA_SofiaV3Voice`), some questions do not use the correct intonation and sound instead like statements. The Latin American Spanish voice will be fixed soon.
 
 ## 16 July 2021
 {: #July2021}
@@ -255,14 +260,10 @@ But the following use of the `rate` attribute with the `<prosody>` element cause
 
 The service now correctly parses and applies the `rate` attribute of the `<prosody>` element for Japanese input.
 
-## 4 September 2020
-{: #September2020a}
-
-The customization interface is now generally available. Customization is no longer beta functionality. You can use the customization interface to specify how the service pronounces unusual words that occur in your input text by creating language-specific custom dictionaries. It can be used with all generally available and beta voices. For more information, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
-
 ## Older releases
 {: #older-versions}
 
+-   [4 September 2020](#September2020a)
 -   [24 June 2020](#June2020)
 -   [1 April 2020](#April2020)
 -   [24 February 2020](#February2020)
@@ -293,6 +294,11 @@ The customization interface is now generally available. Customization is no long
 -   [17 December 2015](#December2015)
 -   [21 September 2015](#September2015)
 -   [1 July 2015](#July2015)
+
+### 4 September 2020
+{: #September2020a}
+
+The customization interface is now generally available. Customization is no longer beta functionality. You can use the customization interface to specify how the service pronounces unusual words that occur in your input text by creating language-specific custom dictionaries. It can be used with all generally available and beta voices. For more information, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
 
 ### 24 June 2020
 {: #June2020}

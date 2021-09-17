@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-08-09"
+lastupdated: "2021-09-16"
 
 subcollection: text-to-speech
 
@@ -24,7 +24,7 @@ subcollection: text-to-speech
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# About
+# About {{site.data.keyword.texttospeechshort}}
 {: #about}
 
 The {{site.data.keyword.texttospeechfull}} service provides APIs that use {{site.data.keyword.IBM_notm}}'s speech-synthesis capabilities to convert written text to natural-sounding speech. The service streams the synthesized audio back to the client with minimal delay. The audio uses appropriate cadence and intonation for its language and dialect to provide voices that are smooth and natural.
@@ -37,10 +37,10 @@ The service can be used in applications such as voice-automated chatbots, as wel
 {{site.data.keyword.texttospeechshort}} can be deployed as a managed cloud service or can be installed on premises. This documentation describes how to use both versions of the product. Information that applies exclusively to one version is denoted by the appropriate icon:
 
 -   ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}** for managed instances of {{site.data.keyword.texttospeechshort}} that are hosted on {{site.data.keyword.cloud_notm}} or for instances that are hosted on [IBM Cloud Pak for Data as a Service](https://dataplatform.cloud.ibm.com/docs/content/wsj/landings/wtts.html){: external}.
-    -   For information about service updates and known limitations, see the [Release notes for {{site.data.keyword.cloud_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes).
-    -   For information about the latest service update, see [16 July 2021](/docs/text-to-speech?topic=text-to-speech-release-notes#July2021) in the release notes.
+    -   For information about all service updates and known limitations, see the [Release notes for {{site.data.keyword.cloud_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes).
+    -   For information about the latest service update, see [16 September 2021](/docs/text-to-speech?topic=text-to-speech-release-notes#September2021) in the release notes.
 -   ![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}** for installed or on-premises instances of {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}. For links to information about installing and managing {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}, see [Installing {{site.data.keyword.ibmwatson_notm}} {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-speech-install-data).
-    -   For information about service updates and known limitations, see the [Release notes for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes-data).
+    -   For information about all service updates and known limitations, see the [Release notes for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes-data).
     -   For information about the latest service update, see [Version 4.0.0 (29 July 2021)](/docs/text-to-speech?topic=text-to-speech-release-notes-data#v40) in the release notes.
 
 ## Speech synthesis
