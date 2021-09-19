@@ -2,27 +2,15 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-09-10"
+lastupdated: "2020-09-18"
 
 subcollection: text-to-speech
 
 ---
 
-{:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:important: .important}
-{:note: .note}
-{:deprecated: .deprecated}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
+{{site.data.keyword.attribute-definition-list}}
 
-# Brazilian Portuguese symbols
+# Portuguese (Brazilian) symbols
 {: #ptSymbols}
 
 The following sections describe the valid symbols for Brazilian Portuguese.

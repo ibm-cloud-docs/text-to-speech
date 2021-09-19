@@ -2,25 +2,13 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-05-04"
+lastupdated: "2021-09-18"
 
 subcollection: text-to-speech
 
 ---
 
-{:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:important: .important}
-{:note: .note}
-{:deprecated: .deprecated}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Chinese (Mandarin) symbols
 {: #zhSymbols}
@@ -39,9 +27,9 @@ The following sections describe the valid symbols for Mandarin (Simplified) Chin
 
 In summary, a pinyin translation is expressed as: *Initial* + *Final* + *Tone*. This information identifies how to convert Chinese pinyin characters to actual Chinese IPA symbols. In tables 1 through 3:
 
--   The first column shows *initial* characters, which are the same in all three tables. A dash (`-`) in the first column indicates the absence of an initial.
+-   The first column shows *initial* characters, which are the same in all three tables. A dash (**-**) in the first column indicates the absence of an initial.
 -   The top row shows the *final* characters, which change from table to table.
--   The intersecting cells of the table show how the initial and final characters can be combined to produce a Chinese character. A dash (`-`) in a cell indicates that the combination of initial and final characters is not supported.
+-   The intersecting cells of the table show how the initial and final characters can be combined to produce a Chinese character. A dash (**-**) in a cell indicates that the combination of initial and final characters is not supported.
 
 You can download a PDF file that documents tables 1 through 4: [Text-to-Speech-Chinese-Pinyin.pdf](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/Text-to-Speech-Chinese-Pinyin.pdf){: external}. The information in the file matches the tables, but the file might be easier to work with.
 
@@ -50,30 +38,30 @@ You can download a PDF file that documents tables 1 through 4: [Text-to-Speech-C
 
 | Finals /<br/>Initials | <br/>a | <br/>o | <br/>e | <br/>i | <br/>u | <br/>v | <br/>er | <br/>ai | <br/>ao | <br/>ou | <br/>un |
 |:---------------------:|:-:|:-:|:-:|:-:|:-:|:-:|:--:|:--:|:--:|:--:|:--:|
-| **-** | a | o | e | - | - | - | er | ai | ao | ou</tph>| - |
-| **b** | ba | bo | - | bi | bu | - | - | bai | bao | - | - |
-| **p** | pa | po | - | pi | pu | - | - | pai | pao | pou | - |
-| **m** | ma | mo | - | mi | mu | - | - | mai | mao | mou | - |
-| **f** | fa | fo | - | - | fu | - | - | - | - | fou | - |
-| **d** | da | - | de | di | du | - | - | dai | dao | dou | dun |
-| **t** | ta | - | te | ti | tu | - | - | tai | tao | tou | tun |
-| **n** | na | - | ne | ni | nu | nv | - | nai | nao | nou | - |
-| **l** | la | - | le | li | lu | lv | - | lai | lao | lou | lun |
-| **g** | ga | - | ge | - | gu | - | - | gai | gao | gou | gun |
-| **k** | ka | - | ke | - | ku | - | - | kai | kao | kou | kun |
-| **h** | ha | - | he | - | hu | - | - | hai | hao | hou | hun |
-| **j** | - | - | - | ji | ju | - | - | - | - | - | jun |
-| **q** | - | - | - | qi | qu | - | - | - | - | - | qun |
-| **x** | - | - | - | xi | xu | - | - | - | - | - | xun |
-| **zh** | zha | - | zhe | zhi | zhu | - | - | zhai | zhao | zhou | zhun |
-| **ch** | cha | - | che | chi | chu | - | - | chai | chao | chou | chun |
-| **sh** | sha | - | she | shi | shu | - | - | shai | shao | shou | shun |
-| **r** | - | - | re | ri | ru | - | - | - | rao | rou | run |
-| **z** | za | - | ze | zi | zu | - | - | zai | zao | zou | zun |
-| **c** | ca | - | ce | ci | cu | - | - | cai | cao | cou | cun |
-| **s** | sa | - | se | si | su | - | - | sai | sao | sou | sun |
-| **y** | ya | yo | ye | yi | yu | - | - | - | yao | you | yun |
-| **w** | wa | wo | - | - | wu | - | - | wai | - | - | - |
+| **-** | a | o | e | **-** | **-** | **-** | er | ai | ao | ou | **-** |
+| **b** | ba | bo | **-** | bi | bu | **-** | **-** | bai | bao | **-** | **-** |
+| **p** | pa | po | **-** | pi | pu | **-** | **-** | pai | pao | pou | **-** |
+| **m** | ma | mo | **-** | mi | mu | **-** | **-** | mai | mao | mou | **-** |
+| **f** | fa | fo | **-** | **-**| fu | **-**| **-**| **-**| **-**| fou | **-**|
+| **d** | da | **-**| de | di | du | **-** | **-** | dai | dao | dou | dun |
+| **t** | ta | **-** | te | ti | tu | **-** | **-** | tai | tao | tou | tun |
+| **n** | na | **-** | ne | ni | nu | nv | **-** | nai | nao | nou | **-** |
+| **l** | la | **-** | le | li | lu | lv | **-** | lai | lao | lou | lun |
+| **g** | ga | **-** | ge | **-** | gu | **-** | **-** | gai | gao | gou | gun |
+| **k** | ka | **-** | ke | **-** | ku | **-** | **-** | kai | kao | kou | kun |
+| **h** | ha | **-** | he | **-** | hu | **-** | **-** | hai | hao | hou | hun |
+| **j** | **-** | **-** | **-** | ji | ju | **-** | **-** | **-** | **-** | **-** | jun |
+| **q** | **-** | **-** | **-** | qi | qu | **-** | **-** | **-** | **-** | **-** | qun |
+| **x** | **-** | **-** | **-** | xi | xu | **-** | **-** | **-** | **-** | **-** | xun |
+| **zh** | zha | **-** | zhe | zhi | zhu | **-** | **-** | zhai | zhao | zhou | zhun |
+| **ch** | cha | **-** | che | chi | chu | **-** | **-** | chai | chao | chou | chun |
+| **sh** | sha | **-** | she | shi | shu | **-** | **-** | shai | shao | shou | shun |
+| **r** | **-** | **-** | re | ri | ru | **-** | **-** | **-** | rao | rou | run |
+| **z** | za | **-** | ze | zi | zu | **-** | **-** | zai | zao | zou | zun |
+| **c** | ca | **-** | ce | ci | cu | **-** | **-** | cai | cao | cou | cun |
+| **s** | sa | **-** | se | si | su | **-** | **-** | sai | sao | sou | sun |
+| **y** | ya | yo | ye | yi | yu | **-** | **-** | **-** | yao | you | yun |
+| **w** | wa | wo | **-** | **-** | wu | **-** | **-** | wai | **-** | **-** | **-** |
 {: caption="Table 1. Pinyin characters (part 1)"}
 
 ## Pinyin characters (part 2)
@@ -81,30 +69,30 @@ You can download a PDF file that documents tables 1 through 4: [Text-to-Speech-C
 
 | Finals /<br/>Initials | <br/>ei | <br/>ia | <br/>ie | <br/>iu | <br/>iao | <br/>ua | <br/>uo | <br/>ui | <br/>uai | <br/>ue | <br/>uan |
 |:---------------------:|:--:|:--:|:--:|:--:|:---:|:--:|:--:|:--:|:---:|:--:|:---:|
-| **-** | ei | - | - | - | - | - | - | - | - | -</tph>| - |
-| **b** | bei | - | bie | - | biao | - | - | - | - | - | - |
-| **p** | pei | - | pie | - | piao | - | - | - | - | - | - |
-| **m** | mei | - | mie | miu | miao | - | - | - | - | - | - |
-| **f** | fei | - | - | - | - | - | - | - | - | - | - |
-| **d** | dei | - | die | diu | diao | - | duo | dui | - | - | duan |
-| **t** | tei | - | tie | - | tiao | - | tuo | tui | - | - | tuan |
-| **n** | nei | - | nie | niu | niao | - | nuo | - | - | nue | nuan |
-| **l** | lei | lia | lie | liu | liao | - | luo | - | - | lue | luan |
-| **g** | gei | - | - | - | - | gua | guo | gui | guai | - | guan |
-| **k** | kei | - | - | - | - | kua | kuo | kui | kuai | - | kuan |
-| **h** | hei | - | - | - | - | hua | huo | hui | huai | - | huan |
-| **j** | - | jia | jie | jiu | jiao | - | - | - | - | jue | juan |
-| **q** | - | qia | qie | qiu | qiao | - | - | - | - | que | quan |
-| **x** | - | xia | xie | xiu | xiao | - | - | - | - | xue | xuan |
-| **zh** | - | - | - | - | - | zhua | zhuo | zhui | zhuai | - | zhuan |
-| **ch** | - | - | - | - | - | - | chuo | chui | chuai | - | chuan |
-| **sh** | shei | - | - | - | - | shua | shuo | shui | shuai | - | shuan |
-| **r** | - | - | - | - | - | - | ruo | rui | - | - | ruan |
-| **z** | zei | - | - | - | - | - | zuo | zui | - | - | zuan |
-| **c** | - | - | - | - | - | - | cuo | cui | - | - | cuan |
-| **s** | - | - | - | - | - | - | suo | sui | - | - | suan |
-| **y** | - | - | - | - | - | - | - | - | - | yue | yuan |
-| **w** | wei | - | - | - | - | - | - | - | - | - | - |
+| **-** | ei | **-** | **-** | **-** | **-** | **-** | **-** | **-** | **-** | **-** | **-** |
+| **b** | bei | **-** | bie | **-** | biao | **-** | **-** | **-** | **-** | **-** | **-** |
+| **p** | pei | **-** | pie | **-** | piao | **-** | **-** | **-** | **-** | **-** | **-** |
+| **m** | mei | **-** | mie | miu | miao | **-** | **-** | **-** | **-** | **-** | **-** |
+| **f** | fei | **-** | **-** | **-** | **-** | **-** | **-** | **-** | **-** | **-** | **-** |
+| **d** | dei | **-** | die | diu | diao | **-** | duo | dui | **-** | **-** | duan |
+| **t** | tei | **-** | tie | **-** | tiao | **-** | tuo | tui | **-** | **-** | tuan |
+| **n** | nei | **-** | nie | niu | niao | **-** | nuo | **-** | **-** | nue | nuan |
+| **l** | lei | lia | lie | liu | liao | **-** | luo | **-** | **-** | lue | luan |
+| **g** | gei | **-** | **-** | **-** | **-** | gua | guo | gui | guai | **-** | guan |
+| **k** | kei | **-** | **-** | **-** | **-** | kua | kuo | kui | kuai | **-** | kuan |
+| **h** | hei | **-** | **-** | **-** | **-** | hua | huo | hui | huai | **-** | huan |
+| **j** | **-** | jia | jie | jiu | jiao | **-** | **-** | **-** | **-** | jue | juan |
+| **q** | **-** | qia | qie | qiu | qiao | **-** | **-** | **-** | **-** | que | quan |
+| **x** | **-** | xia | xie | xiu | xiao | **-** | **-** | **-** | **-** | xue | xuan |
+| **zh** | **-** | **-** | **-** | **-** | **-** | zhua | zhuo | zhui | zhuai | **-** | zhuan |
+| **ch** | **-** | **-** | **-** | **-** | **-** | **-** | chuo | chui | chuai | **-** | chuan |
+| **sh** | shei | **-** | **-** | **-** | **-** | shua | shuo | shui | shuai | **-** | shuan |
+| **r** | **-** | **-** | **-** | **-** | **-** | **-** | ruo | rui | **-** | **-** | ruan |
+| **z** | zei | **-** | **-** | **-** | **-** | **-** | zuo | zui | **-** | **-** | zuan |
+| **c** | **-** | **-** | **-** | **-** | **-** | **-** | cuo | cui | **-** | **-** | cuan |
+| **s** | **-** | **-** | **-** | **-** | **-** | **-** | suo | sui | **-** | **-** | suan |
+| **y** | **-** | **-** | **-** | **-** | **-** | **-** | **-** | **-** | **-** | yue | yuan |
+| **w** | wei | **-** | **-** | **-** | **-** | **-** | **-** | **-** | **-** | **-** | **-** |
 {: caption="Table 2. Pinyin characters (part 2)"}
 
 ## Pinyin characters (part 3)
@@ -112,30 +100,30 @@ You can download a PDF file that documents tables 1 through 4: [Text-to-Speech-C
 
 | Finals /<br/>Initials | <br/>an | <br/>ang | <br/>ong | <br/>en | <br/>eng | <br/>in | <br/>ing | <br/>ian | <br/>iang | <br/>iong | <br/>uang |
 |:---------------------:|:--:|:---:|:---:|:--:|:---:|:--:|:---:|:---:|:----:|:----:|:----:|
-| **-** | an | ang | - | en | - | - | - | - | - | -</tph>| - |
-| **b** | ban | bang | - | ben | beng | bin | bing | bian | - | - | - |
-| **p** | pan | pang | - | pen | peng | pin | ping | pian | - | - | - |
-| **m** | man | mang | - | men | meng | min | ming | mian | - | - | - |
-| **f** | fan | fang | - | fen | feng | - | - | - | - | - | - |
-| **d** | dan | dang | dong | - | deng | - | ding | dian | - | - | - |
-| **t** | tan | tang | tong | - | teng | - | ting | tian | - | - | - |
-| **n** | nan | nang | nong | nen | neng | nin | ning | nian | niang | - | - |
-| **l** | lan | lang | long | - | leng | lin | ling | lian | liang | - | - |
-| **g** | gan | gang | gong | gen | geng | - | - | - | - | - | guang |
-| **k** | kan | kang | kong | ken | keng | - | - | - | - | - | kuang |
-| **h** | han | hang | hong | hen | heng | - | - | - | - | - | huang |
-| **j** | - | - | - | - | - | jin | jing | jian | jiang | jiong | - |
-| **q** | - | - | - | - | - | qin | qing | qian | qiang | qiong | - |
-| **x** | - | - | - | - | - | xin | xing | xian | xiang | xiong | - |
-| **zh** | zhan | zhang | zhong | zhen | zheng | - | - | - | - | - | zhuang |
-| **ch** | chan | chang | chong | chen | cheng | - | - | - | - | - | chuang |
-| **sh** | shan | shang | - | shen | sheng | - | - | - | - | - | shuang |
-| **r** | ran | rang | rong | ren | reng | - | - | - | - | - | - |
-| **z** | zan | zang | zong | zen | zeng | - | - | - | - | - | - |
-| **c** | can | cang | cong | cen | ceng | - | - | - | - | - | - |
-| **s** | san | sang | song | sen | seng | - | - | - | - | - | - |
-| **y** | yan | yang | yong | - | - | yin | ying | - | - | - | - |
-| **w** | wan | wang | - | wen | weng | - | - | - | - | - | - |
+| **-** | an | ang | **-** | en | **-** | **-** | **-** | **-** | **-** | **-** | **-** |
+| **b** | ban | bang | **-** | ben | beng | bin | bing | bian | **-** | **-** | **-** |
+| **p** | pan | pang | **-** | pen | peng | pin | ping | pian | **-** | **-** | **-** |
+| **m** | man | mang | **-** | men | meng | min | ming | mian | **-** | **-** | **-** |
+| **f** | fan | fang | **-** | fen | feng | **-** | **-** | **-** | **-** | **-** | **-** |
+| **d** | dan | dang | dong | **-** | deng | **-** | ding | dian | **-** | **-** | **-** |
+| **t** | tan | tang | tong | **-** | teng | **-** | ting | tian | **-** | **-** | **-** |
+| **n** | nan | nang | nong | nen | neng | nin | ning | nian | niang | **-** | **-** |
+| **l** | lan | lang | long | **-** | leng | lin | ling | lian | liang | **-** | **-** |
+| **g** | gan | gang | gong | gen | geng | **-** | **-** | **-** | **-** | **-** | guang |
+| **k** | kan | kang | kong | ken | keng | **-** | **-** | **-** | **-** | **-** | kuang |
+| **h** | han | hang | hong | hen | heng | **-** | **-** | **-** | **-** | **-** | huang |
+| **j** | **-** | **-** | **-** | **-** | **-** | jin | jing | jian | jiang | jiong | **-** |
+| **q** | **-** | **-** | **-** | **-** | **-** | qin | qing | qian | qiang | qiong | **-** |
+| **x** | **-** | **-** | **-** | **-** | **-** | xin | xing | xian | xiang | xiong | **-** |
+| **zh** | zhan | zhang | zhong | zhen | zheng | **-** | **-** | **-** | **-** | **-** | zhuang |
+| **ch** | chan | chang | chong | chen | cheng | **-** | **-** | **-** | **-** | **-** | chuang |
+| **sh** | shan | shang | **-** | shen | sheng | **-** | **-** | **-** | **-** | **-** | shuang |
+| **r** | ran | rang | rong | ren | reng | **-** | **-** | **-** | **-** | **-** | **-** |
+| **z** | zan | zang | zong | zen | zeng | **-** | **-** | **-** | **-** | **-** | **-** |
+| **c** | can | cang | cong | cen | ceng | **-** | **-** | **-** | **-** | **-** | **-** |
+| **s** | san | sang | song | sen | seng | **-** | **-** | **-** | **-** | **-** | **-** |
+| **y** | yan | yang | yong | **-** | **-** | yin | ying | **-** | **-** | **-** | **-** |
+| **w** | wan | wang | **-** | wen | weng | **-** | **-** | **-** | **-** | **-** | **-** |
 {: caption="Table 3. Pinyin characters (part 3)"}
 
 ## Pinyin tone symbols

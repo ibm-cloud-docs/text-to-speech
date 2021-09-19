@@ -2,25 +2,13 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-07-31"
+lastupdated: "2021-09-18"
 
 subcollection: text-to-speech
 
 ---
 
-{:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:important: .important}
-{:note: .note}
-{:deprecated: .deprecated}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Creating and managing custom entries
 {: #customWords}
@@ -428,7 +416,7 @@ curl -X GET \
 
 The response shows the IPA symbols for the pronunciation:
 
-```json
+```javascript
 {
   "pronunciation": ".ˈaɪ .ˈi .ˈi .ˈi"
 }
