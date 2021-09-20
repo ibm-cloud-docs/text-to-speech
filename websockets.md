@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-05-13"
+lastupdated: "2021-09-18"
 
 subcollection: text-to-speech
 
@@ -10,22 +10,7 @@ content-type: troubleshoot
 
 ---
 
-{:help: data-hd-content-type='help'}
-{:troubleshoot: data-hd-content-type='troubleshoot'}
-{:support: data-reuse='support'}
-{:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:important: .important}
-{:note: .note}
-{:deprecated: .deprecated}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
+{{site.data.keyword.attribute-definition-list}}
 
 # The WebSocket interface
 {: #usingWebSocket}
@@ -86,7 +71,7 @@ A WebSocket client calls the `/v1/synthesize` method with the following query pa
 -   `x-watson-metadata` (*optional* string) - Associates a customer ID with data that is passed over the connection. The parameter accepts the argument `customer_id={id}`, where `id` is a random or generic string that is to be associated with the data. You must URL-encode the argument to the parameter, for example, `customer_id%3dmy_customer_ID`. By default, no customer ID is associated with the data. For more information, see [Information security](/docs/text-to-speech?topic=text-to-speech-information-security).
 -   `x-watson-learning-opt-out` (*optional* boolean) - ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** Indicates whether the service logs requests and results that are sent over the connection. To prevent IBM from accessing your data for general service improvements, specify `true` for the parameter. Opting out directs IBM to write to disk *no* user data (text or audio) for your request. For more information, see [Request logging](/docs/text-to-speech?topic=text-to-speech-data-security#data-security-request-logging).
 
-The following snippet of JavaScript code opens a connection with the service. The call to the `/v1/synthesize` method passes the `voice` and `access_token` query parameters, the former to direct the service to use the enhanced neural US English Allison voice. Once the connection is established, the event listeners (`onOpen`, `onClose`, and so on) are defined to respond to events from the service.
+The following snippet of JavaScript code opens a connection with the service. The call to the `/v1/synthesize` method passes the `voice` and `access_token` query parameters, the former to direct the service to use the enhanced neural US English Allison voice. Once the connection is established, the event listeners (`onOpen()`, `onClose()`, and so on) are defined to respond to events from the service.
 
 ```javascript
 var access_token = '{access_token}';
@@ -109,11 +94,11 @@ websocket.onerror = function(evt) { onError(evt) };
 
 To synthesize text, the client passes a simple JSON text message to the service with the following parameters.
 
--   `text` (*required* string) - Provides the text that is to be synthesized. The client can pass plain text or text that is annotated with the Speech Synthesis Markup Language (SSML). The client can pass a maximum of 5 KB of input text with the request. The limit includes any SSML that you specify. For more information, see [Specifying input text](/docs/text-to-speech?topic=text-to-speech-usingHTTP#input) and the sections that follow it. (SSML input can also include the `&lt;mark&gt;` element. For more information, see [Specifying an SSML mark](/docs/text-to-speech?topic=text-to-speech-timing#timing-mark).)
+-   `text` (*required* string) - Provides the text that is to be synthesized. The client can pass plain text or text that is annotated with the Speech Synthesis Markup Language (SSML). The client can pass a maximum of 5 KB of input text with the request. The limit includes any SSML that you specify. For more information, see [Specifying input text](/docs/text-to-speech?topic=text-to-speech-usingHTTP#input) and the sections that follow it. (SSML input can also include the `<mark>` element. For more information, see [Specifying an SSML mark](/docs/text-to-speech?topic=text-to-speech-timing#timing-mark).)
 -   `accept` (*required* string) - Specifies the requested format (MIME type) of the audio. Use `*/*` to request the default audio format, `audio/ogg;codecs=opus`. For more information, see [Using audio formats](/docs/text-to-speech?topic=text-to-speech-audio-formats).
 -   `timings` (*optional* string[ ]) - Specifies that the service is to return word timing information for all strings of the input text. The service returns the start and end time of each token of the input. Specify `words` as the lone element of the array to request word timings. Specify an empty array or omit the parameter to receive no word timings. For more information, see [Word timings](/docs/text-to-speech?topic=text-to-speech-timing). *Not supported for Japanese input text.*
 
-The following snippet of JavaScript code passes a simple "Hello world" message as the input text and requests the default format for the audio. The calls are included in the `onOpen` function that is defined for the client to ensure that they are sent only after the connection is established.
+The following snippet of JavaScript code passes a simple "Hello world" message as the input text and requests the default format for the audio. The calls are included in the `onOpen()` function that is defined for the client to ensure that they are sent only after the connection is established.
 
 ```javascript
 function onOpen(evt) {
@@ -153,7 +138,7 @@ In addition to sending a text message that confirms the requested audio format, 
 
 The client can handle text messages by responding to them, displaying them, or capturing them for use by the application (for example, if they contain mark locations).
 
-When it finishes synthesizing the input text and sending all binary and text messages, the service automatically closes the WebSocket connection. The following simple `onMessage` function appends text and binary messages that are received from the service to the appropriate variables based on their type. When the `onClose()` function executes, the entire audio stream has been received and the service sends no further binary or text messages.
+When it finishes synthesizing the input text and sending all binary and text messages, the service automatically closes the WebSocket connection. The following simple `onMessage()` function appends text and binary messages that are received from the service to the appropriate variables based on their type. When the `onClose()` function executes, the entire audio stream has been received and the service sends no further binary or text messages.
 
 ```javascript
 var messages;
@@ -197,7 +182,7 @@ The WebSocket implementations of the SDKs can return different or additional res
 {: troubleshoot}
 {: support}
 
-The following examples show error responses. They include a JSON text message and a formatted message from the client's `onClose` callback method. The formatted messages begin with the boolean `true` because the connection is closed. They also include the WebSocket error code that caused the closure.
+The following examples show error responses. They include a JSON text message and a formatted message from the client's `onClose()` callback method. The formatted messages begin with the boolean `true` because the connection is closed. They also include the WebSocket error code that caused the closure.
 
 -   This example shows error messages for an invalid argument for the `accept` parameter:
 

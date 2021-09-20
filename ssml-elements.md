@@ -2,25 +2,13 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2020-07-30"
+lastupdated: "2020-09-18"
 
 subcollection: text-to-speech
 
 ---
 
-{:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:important: .important}
-{:note: .note}
-{:deprecated: .deprecated}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
+{{site.data.keyword.attribute-definition-list}}
 
 # SSML elements
 {: #elements}
@@ -31,43 +19,60 @@ With the {{site.data.keyword.texttospeechfull}} service, you can use most Speech
 ## Supported elements and attributes
 {: #elements-summary-table}
 
-The following table summarizes the service's support for SSML elements (for example, `<phoneme>` and `<prosody>`) and attributes (for example, `rate` and `volume`):
+Table 1 summarizes the service's support for SSML elements and attributes:
 
 -   *Full* means that the service fully supports the element or attribute with its HTTP and WebSocket interfaces.
 -   *Partial* means that the service does not support all aspects of the element or attribute. It can also mean that the service supports the element or attribute with only one of its interfaces, or that the element or attribute is not supported with all voices.
 -   *None* means that the service does not support the element or attribute.
 
-Support for some attributes and values differs slightly from the SSML specification. For more information, see [W3C Speech Synthesis Markup Language (SSML) Version 1.0](http://www.w3.org/TR/speech-synthesis/){: external}.
+The following sections provide descriptions of each element or attribute, including examples, restrictions, and whether the service's support differs from standard SSML. Support for some attributes and values differs slightly from the SSML specification. For more information, see [W3C Speech Synthesis Markup Language (SSML) Version 1.0](http://www.w3.org/TR/speech-synthesis/){: external}.
 
-For more information about an element or attribute, including examples, restrictions, and whether the service's support differs from standard SSML, click on its name to see its description. In the table, attributes are indented on the rows that follow their element. For example, `contour`, `duration`, `pitch`, `range`, `rate`, and `volume` are attributes of the `<prosody>` element.
-
-| Element or attribute | Support | &nbsp; &nbsp; &nbsp; Element or attribute | Support |
+| Element or attribute | Support | Element or attribute | Support |
 |----------------------|:-------:|----------------------|:-------:|
-| [&lt;audio&gt;](#audio_element) | None | &nbsp; &nbsp; &nbsp; [&lt;say-as&gt;](#say-as_element) | Partial |
-| [&lt;break&gt;](#break_element) | Full | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [cardinal](#sayAsCardinal) | Partial |
-| [&lt;desc&gt;](#desc_element) | None | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [date](#sayAsDate) | Partial |
-| [&lt;emphasis&gt;](#emphasis_element) | None | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [digits](#sayAsDigits) | Partial |
-| [&lt;lexicon&gt;](#lexicon_element) | None | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [letters](#sayAsLetters) | Partial |
-| [&lt;mark&gt;](#mark_element) | Partial | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [number](#sayAsNumber) | Partial |
-| [&lt;meta&gt;](#mm_element) | None | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ordinal](#sayAsOrdinal) | Partial |
-| [&lt;metadata&gt;](#mm_element) | None | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [vxml:boolean](#vxml-boolean) | Partial |
-| [&lt;paragraph&gt;](#ps_element) | Full | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [vxml:currency](#vxml-currency) | Partial |
-| [&lt;phoneme&gt;](#phoneme_element) | Full | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [vxml:date](#vxml-date) | Partial |
-| [&lt;prosody&gt;](#prosody_element) | Partial | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [vxml:digits](#vxml-digits) | Partial |
-| &nbsp; &nbsp; &nbsp; contour | None | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [vxml:phone](#vxml-phone) | Partial |
-| &nbsp; &nbsp; &nbsp; duration | None | &nbsp; &nbsp; &nbsp; [&lt;sentence&gt;](#ps_element) | Full |
-| &nbsp; &nbsp; &nbsp; [pitch](#prosody-pitch) | Full | &nbsp; &nbsp; &nbsp; [&lt;speak&gt;](#speak_element) | Full |
-| &nbsp; &nbsp; &nbsp; range | None | &nbsp; &nbsp; &nbsp; [&lt;sub&gt;](#sub_element) | Full |
-| &nbsp; &nbsp; &nbsp; [rate](#prosody-rate) | Full | &nbsp; &nbsp; &nbsp; [&lt;voice&gt;](#voice_element) | None |
-| &nbsp; &nbsp; &nbsp; volume | None | | |
+| [`<audio>` element](#audio_element) | None | [`<prosody>` element](#prosody_element) | Partial |
+| [`<break>` element](#break_element) | Full | - contour attribute | None |
+| [`<desc>` element](#desc_element) | None | - duration attribute | None |
+| [`<emphasis>` element](#emphasis_element) | None | - [pitch attribute](#prosody-pitch) | Full |
+| [`<lexicon>` element](#lexicon_element) | None | - range attribute | None |
+| [`<mark>` element](#mark_element) | Partial | - [rate attribute](#prosody-rate) | Full |
+| [`<meta>` element](#mm_element) | None | - volume attribute | None |
+| [`<metadata>` element](#mm_element) | None | [`<say-as>` element](#say-as_element) | Partial |
+| [`<paragraph>` element](#ps_element) | Full | - [interpret-as attribute](#say-as-interpret-as) | Partial |
+| [`<phoneme>` element](#phoneme_element) | Full | [`<sentence>` element](#ps_element) | Full |
+| | | [`<speak>` element](#speak_element) | Full |
+| | | [`<sub>` element](#sub_element) | Full |
+| | | [`<voice>` element](#voice_element) | None |
 {: caption="Table 1. SSML elements and attributes"}
 
-## The audio element
+<!--
+| Element or attribute | Support | Element or attribute | Support |
+|----------------------|:-------:|----------------------|:-------:|
+| [`<audio>`](#audio_element) | None | [`<say-as>`](#say-as_element) | Partial |
+| [`<break>`](#break_element) | Full | - [`cardinal`](#say-as-Cardinal) | Partial |
+| [`<desc>`](#desc_element) | None | - [date](#say-as-date) | Partial |
+| [`<emphasis>`](#emphasis_element) | None | - [`digits`](#say-as-digits) | Partial |
+| [`<lexicon>`](#lexicon_element) | None | - [`letters`](#say-as-letters) | Partial |
+| [`<mark>`](#mark_element) | Partial | - [`number`](#say-as-number) | Partial |
+| [`<meta>`](#mm_element) | None | - [`ordinal`](#say-as-ordinal) | Partial |
+| [`<metadata>`](#mm_element) | None | - [`vxml:boolean`](vxml-boolean) | Partial |
+| [`<paragraph>`](#ps_element) | Full | - [`vxml:currency`](#vxml-currency) | Partial |
+| [`<phoneme>`](#phoneme_element) | Full | - [`vxml:date`](#vxml-date) | Partial |
+| [`<prosody>`](#prosody_element) | Partial | - [`vxml:digits`](#vxml-digits) | Partial |
+| - `contour` | None | - [`vxml:phone`](#vxml-phone) | Partial |
+| - `duration` | None | [`<sentence>`](#ps_element) | Full |
+| - [`pitch`](#prosody-pitch) | Full | [`<speak>`](#speak_element) | Full |
+| - `range` | None | [`<sub>`](#sub_element) | Full |
+| - [rate](#prosody-rate) | Full | [`<voice>`](#voice_element) | None |
+| - `volume` | None | | |
+{: caption="Table 1. SSML elements and attributes"}
+-->
+
+## The `<audio>` element
 {: #audio_element}
 
 This `<audio>` element inserts recorded elements into the service-generated audio. It is not supported.
 
-## The break element
+## The `<break>` element
 {: #break_element}
 
 The `<break>` element inserts a pause into the spoken text. It has the following optional attributes:
@@ -91,24 +96,24 @@ The `<break>` element inserts a pause into the spoken text. It has the following
 ```
 {: codeblock}
 
-## The desc element
+## The `<desc>` element
 {: #desc_element}
 
 The `<desc>` element can occur only within an `<audio>` element. Because the `<audio>` element is not supported, neither is the `<desc>` element.
 
-## The emphasis element
+## The `<emphasis>` element
 {: #emphasis_element}
 
 The `<emphasis>` element requests that the enclosed text is spoken with emphasis. It is not supported.
 
-## The lexicon element
+## The `<lexicon>` element
 {: #lexicon_element}
 
 This `<lexicon>` element introduces pronunciation dictionaries for the given SSML document. It is not supported.
 
 You can use the service's customization interface to define a dictionary of custom entries (word/translation pairs) for use during speech synthesis. For more information, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
 
-## The mark element
+## The `<mark>` element
 {: #mark_element}
 
 The `<mark>` element is supported only by the service's WebSocket interface, not by its HTTP interface, which ignores the element. For more information, see [Specifying an SSML mark](/docs/text-to-speech?topic=text-to-speech-timing#timing-mark).
@@ -123,12 +128,12 @@ The `<mark>` element is an empty element that places a marker into the text to b
 ```
 {: codeblock}
 
-## The meta and metadata elements
+## The `<meta>` and `<metadata>` elements
 {: #mm_element}
 
 The `<meta>` and `<metadata>` elements are containers in which you can place information about the document. They are not supported.
 
-## The paragraph and sentence elements
+## The `<paragraph>` and `<sentence>` elements
 {: #ps_element}
 
 The `<paragraph>` (or `<p>`) and `<sentence>` (or `<s>`) elements are optional elements that can be used to give hints about textual structure. If the text that is enclosed in a `<paragraph>` or `<sentence>` element does not end with an end-of-sentence punctuation character (like a period), the service adds a longer than normal pause to the synthesized audio.
@@ -145,7 +150,7 @@ The only valid attribute for either element is `xml:lang`, which allows for lang
 ```
 {: codeblock}
 
-## The phoneme element
+## The `<phoneme>` element
 {: #phoneme_element}
 
 The `<phoneme>` element provides a phonetic pronunciation for the enclosed text. The phonetic spelling represents the sounds of a word, how the sounds are divided into syllables, and which syllables receive stress. The element has two attributes:
@@ -186,12 +191,24 @@ The `<phoneme>` element provides a phonetic pronunciation for the enclosed text.
 
 For more information about using SPR and IPA notations with the `<phoneme>` element, see [Understanding phonetic symbols](/docs/text-to-speech?topic=text-to-speech-symbols).
 
-## The prosody element
+## The `<prosody>` element
 {: #prosody_element}
 
-The `<prosody>` element controls the pitch and speaking rate of the text. All attributes are optional, but an error occurs if no attribute is specified. The SSML specification allows for four attributes that the service does not support: `contour`, `range`, `duration`, and `volume`. The service supports the `pitch` and `rate` attributes.
+The `<prosody>` element controls the pitch and speaking rate of the text. All attributes are optional, but an error occurs if you do not specify at least one attribute with the element.
 
-### The pitch attribute
+The service supports the following two attributes of the SSML specification:
+
+-   [The `pitch` attribute](#prosody-pitch)
+-   [The `rate` attribute](#prosody-rate)
+
+The SSML specification also offers four attributes that the service does not support:
+
+-   The `contour` attribute
+-   The `range` attribute
+-   The `duration` attribute
+-   The `volume` attribute
+
+### The `pitch` attribute
 {: #prosody-pitch}
 
 The `pitch` attribute modifies the baseline pitch for the text within the element. Accepted values are
@@ -219,7 +236,7 @@ The `pitch` attribute modifies the baseline pitch for the text within the elemen
     ```
     {: codeblock}
 
-### The rate attribute
+### The `rate` attribute
 {: #prosody-rate}
 
 The `rate` attribute indicates a change in the speaking rate for the text within the element. The rate is specified in terms of words per minute; if the speaking rate is 50 words per minute, then `rate` equals `50`. When `rate` is set to a positive number, the implementation does not comply with the current W3C prosody rate attribute specification. Also, the service supports relative percent changes (for example, `+15%`) but not relative value changes (for example, `+15`). Accepted values are
@@ -242,18 +259,39 @@ The `rate` attribute indicates a change in the speaking rate for the text within
 ```
 {: codeblock}
 
-## The say-as element
+## The `<say-as>` element
 {: #say-as_element}
 
-The `<say-as>` element is fully supported only for US English. For most other languages, the service supports only the `digits` and `letters` attributes of the element. For Japanese, the service supports only the `digits` attribute.
-{: note}
+The `<say-as>` element provides information about the type of text that is contained within the element and specifies the level of detail for rendering the text.
 
-The `<say-as>` element provides information about the type of text that is contained within the element and specifies the level of detail for rendering the text. The element has one required attribute, `interpret-as`, which indicates how the enclosed text is to be interpreted. It has two optional attributes, `format` and `detail`, which are used only with particular values within the `interpret-as` attribute, as illustrated in the following examples.
+-   The element has one required attribute, `interpret-as`, which indicates how the enclosed text is to be interpreted.
+-   The element has two optional attributes, `format` and `detail`, which are used only with particular values of the `interpret-as` attribute, as shown in the following examples.
 
-Acceptable values for the `interpret-as` attribute and examples of each follow.
+The service supports the `<say-as>` element with the following languages:
 
-### cardinal
-{: #sayAsCardinal}
+-   The service fully supports the `<say-as>` element for US English.
+-   For most other languages, the service supports only the `digits` and `letters` attributes of the element.
+-   For Japanese, the service supports only the `digits` attribute.
+
+### The `interpret-as` attribute
+{: #say-as-interpret-as}
+
+Acceptable values for the `interpret-as` attribute and examples of each value follow. The service supports the following values as arguments to the `interpret-as` attribute:
+
+-   [`cardinal`](#say-as-cardinal)
+-   [`date`](#say-as-date)
+-   [`digits`](#say-as-digits)
+-   [`letters`](#say-as-letters)
+-   [`number`](#say-as-number)
+-   [`ordinal`](#say-as-ordinal)
+-   [`vxml:boolean`](#vxml-boolean)
+-   [`vxml:currency`](#vxml-currency)
+-   [`vxml:date`](#vxml-date)
+-   [`vxml:digits`](#vxml-digits)
+-   [`vxml:phone`](#vxml-phone)
+
+#### `cardinal`
+{: #say-as-cardinal}
 
 The `cardinal` value speaks the cardinal number for the numeral within the element. The following examples say *Super Bowl forty-nine*. The first is superfluous, since it does not change the service's default behavior.
 
@@ -265,8 +303,8 @@ The `cardinal` value speaks the cardinal number for the numeral within the eleme
 ```
 {: codeblock}
 
-### date
-{: #sayAsDate}
+#### `date`
+{: #say-as-date}
 
 The `date` value speaks the date within the element according to the format given in the associated `format` attribute. The `format` attribute is required for the `date` value. If no `format` is present, the service still attempts to pronounce the date. The following examples speak the indicated dates in the specified formats, where `d`, `m`, and `y` represent day, month, and year.
 
@@ -283,8 +321,8 @@ The `date` value speaks the date within the element according to the format give
 ```
 {: codeblock}
 
-### digits
-{: #sayAsDigits}
+#### `digits`
+{: #say-as-digits}
 
 The `digits` value speaks the digits in the number within the element. The following example speaks the individual digits *123456*.
 
@@ -295,8 +333,8 @@ The `digits` value speaks the digits in the number within the element. The follo
 ```
 {: codeblock}
 
-### letters
-{: #sayAsLetters}
+#### `letters`
+{: #say-as-letters}
 
 The `letters` value spells out the characters in the word within the element. The following example spells the letters of the word *hello*.
 
@@ -307,8 +345,8 @@ The `letters` value spells out the characters in the word within the element. Th
 ```
 {: codeblock}
 
-### number
-{: #sayAsNumber}
+#### `number`
+{: #say-as-number}
 
 The `number` value offers an alternative to the `cardinal` and `ordinal` values. You can use the optional `format` attribute to indicate how a series of numbers is to be interpreted. The first example omits the `format` attribute to pronounce the number as a cardinal value. The second example explicitly specifies that the number is to be pronounced as a `cardinal` value. The third example specifies that the number is to be pronounced as an `ordinal` value.
 
@@ -332,8 +370,8 @@ You can also specify the value `telephone` for the `format` attribute. The examp
 ```
 {: codeblock}
 
-### ordinal
-{: #sayAsOrdinal}
+#### `ordinal`
+{: #say-as-ordinal}
 
 The `ordinal` value speaks the ordinal value for the digit within the element. The following example says *second first*.
 
@@ -345,7 +383,7 @@ The `ordinal` value speaks the ordinal value for the digit within the element. T
 ```
 {: codeblock}
 
-### vxml:boolean
+#### `vxml:boolean`
 {: #vxml-boolean}
 
 The `vxml:boolean` value speaks *yes* or *no* depending on the `true` or `false` value within the element.
@@ -358,7 +396,7 @@ The `vxml:boolean` value speaks *yes* or *no* depending on the `true` or `false`
 ```
 {: codeblock}
 
-### vxml:currency
+#### `vxml:currency`
 {: #vxml-currency}
 
 The `vxml:currency` value is used to control the synthesis of monetary values. The string must be written in the format `UUUmm.nn`, where `UUU` is the three-character currency indicator that is specified by ISO standard 4217 and `mm.nn` is the quantity. The following example says *forty-five dollars and thirty cents*.
@@ -379,7 +417,7 @@ If the specified number includes more than two decimal places, the amount is syn
 ```
 {: codeblock}
 
-### vxml:date
+#### `vxml:date`
 {: #vxml-date}
 
 The `vxml:date` value works like the `date` value, but the format is predefined as `YYYYMMDD`. If a day, month, or year value is not known or if you do not want it to be spoken, replace the value with a `?` (question mark). The second and third examples include question marks.
@@ -393,12 +431,12 @@ The `vxml:date` value works like the `date` value, but the format is predefined 
 ```
 {: codeblock}
 
-### vxml:digits
+#### `vxml:digits`
 {: #vxml-digits}
 
-The `vxml:digits` value provides the same function as the `digits` value.
+The `vxml:digits` value provides the same capabilities as the `digits` value.
 
-### vxml:phone
+#### `vxml:phone`
 {: #vxml-phone}
 
 The `vxml:phone` value speaks a phone number with both digits and punctuation. It is equivalent to using the `number` value and specifying `telephone` for the `format` attribute and `punctuation` for the `detail` attribute.
@@ -410,7 +448,7 @@ The `vxml:phone` value speaks a phone number with both digits and punctuation. I
 ```
 {: codeblock}
 
-## The speak element
+## The `<speak>` element
 {: #speak_element}
 
 The `<speak>` element is the root element for SSML documents. Valid attributes are
@@ -426,7 +464,7 @@ The `<speak>` element is the root element for SSML documents. Valid attributes a
 ```
 {: codeblock}
 
-## The sub element
+## The `<sub>` element
 {: #sub_element}
 
 The `<sub>` element indicates that the text that is specified by the `alias` attribute is to replace the text that is enclosed within the element when speech is synthesized. The `alias` attribute is the only attribute of the element and is required.
@@ -438,7 +476,7 @@ The `<sub>` element indicates that the text that is specified by the `alias` att
 ```
 {: codeblock}
 
-## The voice element
+## The `<voice>` element
 {: #voice_element}
 
 This `<voice>` element requests a change in voice. It is not supported.

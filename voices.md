@@ -1,27 +1,14 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2021-07-08"
+  years: 2010, 2021
+lastupdated: "2021-09-19"
 
 subcollection: text-to-speech
 
 ---
 
-{:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:important: .important}
-{:note: .note}
-{:beta: .beta}
-{:deprecated: .deprecated}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Using languages and voices
 {: #voices}
@@ -29,59 +16,59 @@ subcollection: text-to-speech
 The {{site.data.keyword.texttospeechfull}} service supports a variety of languages, voices, and dialects. The service offers female and male voices for different language. Each voice uses appropriate cadence and intonation for its dialect.
 {: shortdesc}
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** The list of available voices underwent many changes on 2 December 2020. For example, to optimize the audio quality and naturalness of synthesized speech, the standard (concatenative) voices that were previously available with the service are now deprecated.<br/><br/>For more information about the changes and implications for voice availability and usage, see the [2 December 2020 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#December2020) in the release notes for {{site.data.keyword.cloud_notm}}. For information about moving to neural voices, see [Migrating from standard to neural voices](#migrate-voice).
+![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** The list of available voices underwent many changes on 2 December 2020. To optimize the audio quality and naturalness of synthesized speech, the standard (concatenative) voices that were previously available with the service are now deprecated. {{site.data.keyword.IBM_notm}} recommends that you migrate from standard to neural voices at your earliest convenience. For more information about the changes and implications for voice synthesis, see the [2 December 2020 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#December2020) in the release notes. For information about moving to neural voices, see [Migrating from standard to neural voices](#migrate-voice).
 {: important}
 
 ## Supported languages and voices
 {: #language-voices}
 
-Table 1 lists and provides audio samples for the voices that are available for each language and dialect. All voices are generally available (GA) for production use.
+Table 1 lists and provides audio samples for the voices that are available for each language and dialect. All voices are generally available (GA) for production use. The default voice for speech synthesis is `en-US_MichaelV3Voice`. For more information, see [Specifying a voice for speech synthesis](#specify-voice).
 
 All voices use [Neural voice technology](#neural-voices). Voices are classified into two types based on their quality, capabilities, and availability:
 
 -   *Enhanced neural voices* are available for both {{site.data.keyword.cloud}} and {{site.data.keyword.icp4dfull}}.
 -   *Neural voices* are available only for {{site.data.keyword.cloud_notm}}.
 
-The default voice for speech synthesis is `en-US_MichaelV3Voice`. For more information, see [Specifying a voice for speech synthesis](#specify-voice).
+Unless it is labeled in the *Type / Availability* column as restricted to just one version of the service, a voice is available with both {{site.data.keyword.cloud}} and {{site.data.keyword.icp4dfull}}.
 
 | Language | Type / Availability | Voice / Gender | Sample |
 |----------|:-------------------:|:--------------:|:------:|
-| Arabic | Neural<br/>{{site.data.keyword.cloud_notm}} only | `ar-MS_OmarVoice`<br/>Male | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/Omar.wav" type="audio/wav"></audio> |
-| Brazilian<br/>Portuguese | Enhanced neural<br/>All product versions | `pt-BR_IsabelaV3Voice`<br/>Female | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/IsabelaV3.wav" type="audio/wav"></audio> |
-| Chinese<br/>(Mandarin) | Neural<br/>{{site.data.keyword.cloud_notm}} only | `zh-CN_LiNaVoice`<br/>Female | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/LiNa.wav" type="audio/wav"></audio> |
-| | Neural<br/>{{site.data.keyword.cloud_notm}} only | `zh-CN_WangWeiVoice`<br/>Male | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/WangWei.wav" type="audio/wav"></audio> |
-| | Neural<br/>{{site.data.keyword.cloud_notm}} only | `zh-CN_ZhangJingVoice`<br/>Female | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/ZhangJing.wav" type="audio/wav"></audio> |
-| Dutch<br/>(Belgian) | Neural<br/>{{site.data.keyword.cloud_notm}} only | `nl-BE_AdeleVoice`<br/>Female | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/Adele.wav" type="audio/wav"></audio> |
-| Dutch<br/>(Netherlands) | Neural<br/>{{site.data.keyword.cloud_notm}} only | `nl-NL_EmmaVoice`<br/>Female | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/Emma.wav" type="audio/wav"></audio> |
-| | Neural<br/>{{site.data.keyword.cloud_notm}} only | `nl-NL_LiamVoice`<br/>Male | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/Liam.wav" type="audio/wav"></audio> |
-| English<br/>(Australian) | Neural<br/>{{site.data.keyword.cloud_notm}} only | `en-AU_CraigVoice`<br/>Male | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/Craig.wav" type="audio/wav"></audio> |
-| | Neural<br/>{{site.data.keyword.cloud_notm}} only | `en-AU_MadisonVoice`<br/>Female | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/Madison.wav" type="audio/wav"></audio> |
-| English<br/>(United Kingdom) | Enhanced neural<br/>All product versions | `en-GB_CharlotteV3Voice`<br/>Female | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/CharlotteV3.wav" type="audio/wav"></audio> |
-| | Enhanced neural<br/>All product versions | `en-GB_JamesV3Voice`<br/>Male | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/JamesV3.wav" type="audio/wav"></audio> |
-| | Enhanced neural<br/>All product versions | `en-GB_KateV3Voice`<br/>Female | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/KateV3.wav" type="audio/wav"></audio> |
-| English<br/>(United States) | Enhanced neural<br/>All product versions | `en-US_AllisonV3Voice`<br/>Female | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/AllisonV3.wav" type="audio/wav"></audio> |
-| | Enhanced neural<br/>All product versions | `en-US_EmilyV3Voice`<br/>Female | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/EmilyV3.wav" type="audio/wav"></audio> |
-| | Enhanced neural<br/>All product versions | `en-US_HenryV3Voice`<br/>Male | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/HenryV3.wav" type="audio/wav"></audio> |
-| | Enhanced neural<br/>All product versions | `en-US_KevinV3Voice`<br/>Male | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/KevinV3.wav" type="audio/wav"></audio> |
-| | Enhanced neural<br/>All product versions | `en-US_LisaV3Voice`<br/>Female | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/LisaV3.wav" type="audio/wav"></audio> |
-| | Enhanced neural<br/>All product versions | `en-US_MichaelV3Voice`<br/>Male | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/MichaelV3.wav" type="audio/wav"></audio> |
-| | Enhanced neural<br/>All product versions | `en-US_OliviaV3Voice`<br/>Female | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/OliviaV3.wav" type="audio/wav"></audio> |
-| French<br/>(Canadian) | Enhanced neural<br/>All product versions | `fr-FR_LouiseV3Voice`<br/>Female | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/LouiseV3.wav" type="audio/wav"></audio> |
-| French<br/>(France) | Enhanced neural<br/>All product versions | `fr-FR_NicolasV3Voice`<br/>Male | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/NicolasV3.wav" type="audio/wav"></audio> |
-| | Enhanced neural<br/>All product versions | `fr-FR_ReneeV3Voice`<br/>Female | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/ReneeV3.wav" type="audio/wav"></audio> |
-| German | Enhanced neural<br/>All product versions | `de-DE_BirgitV3Voice`<br/>Female | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/BirgitV3.wav" type="audio/wav"></audio> |
-| | Enhanced neural<br/>All product versions | `de-DE_DieterV3Voice`<br/>Male | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/DieterV3.wav" type="audio/wav"></audio> |
-| | Enhanced neural<br/>All product versions | `de-DE_ErikaV3Voice`<br/>Female | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/ErikaV3.wav" type="audio/wav"></audio> |
-| Italian | Enhanced neural<br/>All product versions | `it-IT_FrancescaV3Voice`<br/>Female | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/FrancescaV3.wav" type="audio/wav"></audio> |
-| Japanese | Enhanced neural<br/>All product versions | `ja-JP_EmiV3Voice`<br/>Female | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/EmiV3.wav" type="audio/wav"></audio> |
-| Korean | Neural<br/>{{site.data.keyword.cloud_notm}} only | `ko-KR_HyunjunVoice`<br/>Male | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/Hyunjun.wav" type="audio/wav"></audio> |
-| | Neural<br/>{{site.data.keyword.cloud_notm}} only | `ko-KR_SiWooVoice`<br/>Male | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/SiWoo.wav" type="audio/wav"></audio> |
-| | Neural<br/>{{site.data.keyword.cloud_notm}} only | `ko-KR_YoungmiVoice`<br/>Female | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/Youngmi.wav" type="audio/wav"></audio> |
-| | Neural<br/>{{site.data.keyword.cloud_notm}} only | `ko-KR_YunaVoice`<br/>Female | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/Yuna.wav" type="audio/wav"></audio> |
-| Spanish<br/>(Castilian) | Enhanced neural<br/>All product versions | `es-ES_EnriqueV3Voice`<br/>Male | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/EnriqueV3.wav" type="audio/wav"></audio> |
-| | Enhanced neural<br/>All product versions | `es-ES_LauraV3Voice`<br/>Female | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/LauraV3.wav" type="audio/wav"></audio> |
-| Spanish<br/>(Latin American) | Enhanced neural<br/>All product versions | `es-LA_SofiaV3Voice`<br/>Female | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/SofiaV3.wav" type="audio/wav"></audio> |
-| Spanish<br/>(North American) | Enhanced neural<br/>All product versions | `es-US_SofiaV3Voice`<br/>Female | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/SofiaV3.wav" type="audio/wav"></audio> |
+| Arabic | Neural<br/>{{site.data.keyword.cloud_notm}} only | `ar-MS_OmarVoice`<br/>Male | ![ar-MS_OmarVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/Omar.wav){: audio controls} |
+| Chinese<br/>(Mandarin) | Neural<br/>{{site.data.keyword.cloud_notm}} only | `zh-CN_LiNaVoice`<br/>Female | ![zh-CN_LiNaVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/LiNa.wav){: audio controls} |
+| | Neural<br/>{{site.data.keyword.cloud_notm}} only | `zh-CN_WangWeiVoice`<br/>Male | ![zh-CN_WangWeiVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/WangWei.wav){: audio controls} |
+| | Neural<br/>{{site.data.keyword.cloud_notm}} only | `zh-CN_ZhangJingVoice`<br/>Female | ![zh-CN_ZhangJingVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/ZhangJing.wav){: audio controls} |
+| Dutch<br/>(Belgian) | Neural<br/>{{site.data.keyword.cloud_notm}} only | `nl-BE_AdeleVoice`<br/>Female | ![nl-BE_AdeleVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/Adele.wav){: audio controls} |
+| Dutch<br/>(Netherlands) | Neural<br/>{{site.data.keyword.cloud_notm}} only | `nl-NL_EmmaVoice`<br/>Female | ![nl-NL_EmmaVoive sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/Emma.wav){: audio controls} |
+| | Neural<br/>{{site.data.keyword.cloud_notm}} only | `nl-NL_LiamVoice`<br/>Male | ![nl-NL_LiamVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/Liam.wav){: audio controls} |
+| English<br/>(Australian) | Neural<br/>{{site.data.keyword.cloud_notm}} only | `en-AU_CraigVoice`<br/>Male | ![en-AU_CraigVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/Craig.wav){: audio controls} |
+| | Neural<br/>{{site.data.keyword.cloud_notm}} only | `en-AU_MadisonVoice`<br/>Female | ![en-AU_MadisonVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/Madison.wav){: audio controls} |
+| English<br/>(United Kingdom) | Enhanced neural | `en-GB_CharlotteV3Voice`<br/>Female | ![en-GB_CharlotteV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/CharlotteV3.wav){: audio controls} |
+| | Enhanced neural | `en-GB_JamesV3Voice`<br/>Male | ![en-GB_JamesV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/JamesV3.wav){: audio controls} |
+| | Enhanced neural | `en-GB_KateV3Voice`<br/>Female | ![en-GB_KateV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/KateV3.wav){: audio controls} |
+| English<br/>(United States) | Enhanced neural | `en-US_AllisonV3Voice`<br/>Female | ![en-US_AllisonV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/AllisonV3.wav){: audio controls} |
+| | Enhanced neural | `en-US_EmilyV3Voice`<br/>Female | ![en-US_EmilyV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/EmilyV3.wav){: audio controls} |
+| | Enhanced neural | `en-US_HenryV3Voice`<br/>Male | ![en-US_HenryV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/HenryV3.wav){: audio controls} |
+| | Enhanced neural | `en-US_KevinV3Voice`<br/>Male | ![en-US_KevinV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/KevinV3.wav){: audio controls} |
+| | Enhanced neural | `en-US_LisaV3Voice`<br/>Female | ![en-US_LisaV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/LisaV3.wav){: audio controls} |
+| | Enhanced neural | `en-US_MichaelV3Voice`<br/>Male | ![en-US_MichaelV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/MichaelV3.wav){: audio controls} |
+| | Enhanced neural | `en-US_OliviaV3Voice`<br/>Female | ![en-US_OliviaV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/OliviaV3.wav){: audio controls} |
+| French<br/>(Canadian) | Enhanced neural| `fr-FR_LouiseV3Voice`<br/>Female | ![fr-FR_LouiseV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/LouiseV3.wav){: audio controls} |
+| French<br/>(France) | Enhanced neural | `fr-FR_NicolasV3Voice`<br/>Male | ![fr-FR_NicolasV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/NicolasV3.wav){: audio controls} |
+| | Enhanced neural | `fr-FR_ReneeV3Voice`<br/>Female | ![fr-FR_ReneeV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/ReneeV3.wav){: audio controls} |
+| German | Enhanced neural | `de-DE_BirgitV3Voice`<br/>Female | ![de-DE_BirgitV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/BirgitV3.wav){: audio controls} |
+| | Enhanced neural | `de-DE_DieterV3Voice`<br/>Male | ![de-DE_DieterV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/DieterV3.wav){: audio controls} |
+| | Enhanced neural | `de-DE_ErikaV3Voice`<br/>Female | ![de-DE_ErikaV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/ErikaV3.wav){: audio controls} |
+| Italian | Enhanced neural  | `it-IT_FrancescaV3Voice`<br/>Female | ![it-IT_FrancescaV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/FrancescaV3.wav){: audio controls} |
+| Japanese | Enhanced neural | `ja-JP_EmiV3Voice`<br/>Female | ![ja-JP_EmiV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/EmiV3.wav){: audio controls} |
+| Korean | Neural<br/>{{site.data.keyword.cloud_notm}} only | `ko-KR_HyunjunVoice`<br/>Male | ![ko-KR_HyunjunVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/Hyunjun.wav){: audio controls} |
+| | Neural<br/>{{site.data.keyword.cloud_notm}} only | `ko-KR_SiWooVoice`<br/>Male | ![ko-KR_SiWooVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/SiWoo.wav){: audio controls} |
+| | Neural<br/>{{site.data.keyword.cloud_notm}} only | `ko-KR_YoungmiVoice`<br/>Female | ![ko-KR_YoungmiVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/Youngmi.wav){: audio controls} |
+| | Neural<br/>{{site.data.keyword.cloud_notm}} only | `ko-KR_YunaVoice`<br/>Female | ![ko-KR_YunaVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/Yuna.wav){: audio controls} |
+| Portuguese<br/>(Brazilian) | Enhanced neural | `pt-BR_IsabelaV3Voice`<br/>Female | ![pt-BR_IsabelaV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/IsabelaV3.wav){: audio controls} |
+| Spanish<br/>(Castilian) | Enhanced neural | `es-ES_EnriqueV3Voice`<br/>Male | ![es-ES_EnriqueV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/EnriqueV3.wav){: audio controls} |
+| | Enhanced neural | `es-ES_LauraV3Voice`<br/>Female | ![es-ES_LauraV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/LauraV3.wav){: audio controls} |
+| Spanish<br/>(Latin American) | Enhanced neural | `es-LA_SofiaV3Voice`<br/>Female | ![es-LA_SofiaV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/SofiaV3.wav){: audio controls} |
+| Spanish<br/>(North American) | Enhanced neural | `es-US_SofiaV3Voice`<br/>Female | ![es-US_SofiaV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/SofiaV3.wav){: audio controls} |
 {: caption="Table 1. Supported languages and voices"}
 
 The Spanish Latin American and North American `Sofia` voices are essentially the same voice. The most significant difference concerns how the two voices interpret a $ (dollar sign). The Latin American version uses the term *pesos*; the North American version uses the term *d&oacute;lares*. Other minor differences might also exist between the two voices.
@@ -111,7 +98,7 @@ For more information about the service's neural voice technology, see
 
 ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
 
-To optimize the audio quality and naturalness of synthesized speech, the standard (concatenative) voices that were previously available with the service are deprecated as of 2 December 2020. {{site.data.keyword.IBM_notm}} recommends that you migrate from standard to neural voices at your earliest convenience. For more information about the changes and the implications for voice synthesis, see the [2 December 2020 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#December2020) in the release notes for {{site.data.keyword.cloud_notm}}.
+![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** The list of available voices underwent many changes on 2 December 2020. To optimize the audio quality and naturalness of synthesized speech, the standard (concatenative) voices that were previously available with the service are now deprecated. {{site.data.keyword.IBM_notm}} recommends that you migrate from standard to neural voices at your earliest convenience. For more information about the changes and implications for voice synthesis, see the [2 December 2020 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#December2020) in the release notes. For information about moving to neural voices, see [Migrating from standard to neural voices](#migrate-voice).
 {: important}
 
 If you previously used any of the now-deprecated standard voices, you might have used the following features:

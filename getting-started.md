@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-08-24"
+lastupdated: "2021-09-18"
 
 keywords: text to speech,IBM cloud,getting started,tutorial,synthesize audio,speech synthesis
 
@@ -14,25 +14,7 @@ completion-time: 10m
 
 ---
 
-{:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:important: .important}
-{:note: .note}
-{:deprecated: .deprecated}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:go: .ph data-hd-programlang='go'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
-{:apikey: data-credential-placeholder='apikey'}
-{:url: data-credential-placeholder='url'}
-{:hide-dashboard: .hide-dashboard}
-{:step: data-tutorial-type='step'}
-{:video: .video}
+{{site.data.keyword.attribute-definition-list}}
 
 # Getting started with {{site.data.keyword.texttospeechshort}}
 {: #gettingStarted}
@@ -110,14 +92,16 @@ The following command use the `POST /v1/synthesize` method to synthesize US Engl
     -   Replace `{apikey}` and `{url}` with your API key and URL. {: hide-dashboard}
 
     ```bash
-    curl -X POST -u "apikey:{apikey}"{: apikey} \
+    curl -X POST -u "apikey:{apikey}" \
     --header "Content-Type: application/json" \
     --header "Accept: audio/wav" \
     --data "{\"text\":\"hello world\"}" \
     --output hello_world.wav \
-    "{url}/v1/synthesize"{: url}
+    "{url}/v1/synthesize"
     ```
     {: pre}
+    {: apikey}
+    {: url}
 
     ![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
 
@@ -148,13 +132,16 @@ The following command again uses the `POST /v1/synthesize` method to synthesize 
     -   Replace `{apikey}` and `{url}` with your API key and URL. {: hide-dashboard}
 
     ```bash
-    curl -X POST -u "apikey:{apikey}"{: apikey} \
+    curl -X POST -u "apikey:{apikey}" \
     --header "Content-Type: application/json" \
     --data "{\"text\":\"hello world\"}" \
     --output hello_world.ogg \
-    "{url}/v1/synthesize?voice=en-US_AllisonV3Voice"{: url}
+    "{url}/v1/synthesize?voice=en-US_AllisonV3Voice"
     ```
     {: pre}
+    {: apikey}
+    {: url}
+
 
     ![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
 
@@ -185,11 +172,13 @@ The following command uses the `GET /v1/synthesize` method to synthesize Spanish
     -   Replace `{apikey}` and `{url}` with your API key and URL. {: hide-dashboard}
 
     ```bash
-    curl -X GET -u "apikey:{apikey}"{: apikey} \
+    curl -X GET -u "apikey:{apikey}" \
     --output hola_mundo.wav \
-    "{url}/v1/synthesize?accept=audio%2Fwav&text=hola%20mundo&voice=es-ES_EnriqueV3Voice"{: url}
+    "{url}/v1/synthesize?accept=audio%2Fwav&text=hola%20mundo&voice=es-ES_EnriqueV3Voice"
     ```
     {: pre}
+    {: apikey}
+    {: url}
 
     ![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
 

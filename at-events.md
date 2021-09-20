@@ -10,14 +10,7 @@ subcollection: text-to-speech
 
 ---
 
-{:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:note: .note}
-{:tip: .tip}
-{:important: .important}
-{:deprecated: .deprecated}
+{{site.data.keyword.attribute-definition-list}}
 
 # Activity Tracker events
 {: #at-events}

@@ -1,0 +1,149 @@
+toc:
+  properties:
+    subcollection: text-to-speech
+    version: 2
+    category: ai
+    audience: service
+    href: /docs/text-to-speech
+    product-page: https://www.ibm.com/cloud/watson-text-to-speech
+    path: text-to-speech
+    label: Text to Speech
+
+  entries:
+  - navgroup:
+      id: learn
+      topics:
+      - getting-started.md
+      - index.md
+      - features.md
+      - data-security.md
+      - link:
+          label: Demo
+          href: https://www.ibm.com/demos/live/tts-demo/self-service/home
+      - topicgroup:
+          label: Additional resources
+          links:
+          - link:
+              label: Pricing
+              href: https://www.ibm.com/cloud/watson-text-to-speech/pricing
+          - link:
+              label: Blogs
+              href: https://developer.ibm.com/blogs/
+          - link:
+              label: Webinars
+              href: https://www.ibm.com/watson/webinars/
+
+  - navgroup:
+      id: howto
+      topics:
+      - speech-install-data.md
+      - voices.md
+      - audio-formats.md
+      - topicgroup:
+          label: Synthesizing speech with the service
+          topics:
+          - http.md
+          - websockets.md
+          - word-timing.md
+      - topicgroup:
+          label: Customizing the service
+          topics:
+          - custom-intro.md
+          - custom-rules.md
+          - custom-models.md
+          - custom-entries.md
+          - custom-using.md
+      - topicgroup:
+          label: Using Tune by Example
+          topics:
+          - tbe-intro.md
+          - tbe-rules.md
+          - tbe-create.md
+          - tbe-use.md
+          - tbe-prompts.md
+          - tbe-speakers.md
+      - topicgroup:
+          label: Using SSML
+          topics:
+          - ssml.md
+          - ssml-elements.md
+      - topicgroup:
+          label: Using phonetic symbols
+          topics:
+          - symbols.md
+          - symbols-ar-ms.md
+          - symbols-zh-cn.md
+          - symbols-nl-be.md
+          - symbols-nl-nl.md
+          - symbols-en-au.md
+          - symbols-en-gb.md
+          - symbols-en-us.md
+          - symbols-fr-ca.md
+          - symbols-fr-fr.md
+          - symbols-de-de.md
+          - symbols-it-it.md
+          - symbols-ja-jp.md
+          - symbols-ko-kr.md
+          - symbols-pt-br.md
+          - symbols-es-es.md
+      - topicgroup:
+          label: Security topics
+          topics:
+          - information-security.md
+          - /watson/watson-keyservice
+          - /watson/watson-public-private-endpoints
+      - topicgroup:
+          label: Service background
+          topics:
+          - science.md
+          - references.md
+
+  - navgroup:
+      id: reference
+      topics:
+      - link:
+          label: API & SDK reference
+          href: https://{DomainName}/apidocs/text-to-speech
+      - ha-dr.md
+      - at-events.md
+      - /watson/watson-using-sdks
+      - link:
+          label: Watson GitHub repos
+          href: https://github.com/watson-developer-cloud/
+      - topicgroup:
+          label: Installing and managing previous versions
+          topics:
+          - topicgroup:
+              label: Installing and managing version 1.2
+              topics:
+              - speech-install-12.md
+              - speech-override-12.md
+              - speech-cluster-12.md
+              - speech-datastores-12.md
+              - speech-scaling-12.md
+              - speech-backup-12.md
+          - topicgroup:
+              label: Installing and managing version 1.1.4
+              topics:
+              - speech-install.md
+              - speech-override.md
+              - speech-cluster.md
+              - speech-datastores.md
+              - speech-scaling.md
+              - speech-backup.md
+
+  - navgroup:
+      id: help
+      topics:
+      - release-notes.md
+      - release-notes-data.md
+      - faq-usage.md
+      - topicgroup:
+          label: Developer community
+          links:
+          - link:
+              label: StackOverflow
+              href: http://stackoverflow.com/questions/tagged/ibm-watson-cognitive+text-to-speech
+          - link:
+              label: WDC Slack channel
+              href: http://wdc-slack-inviter.mybluemix.net/

@@ -2,25 +2,13 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-05-03"
+lastupdated: "2020-09-16"
 
 subcollection: text-to-speech
 
 ---
 
-{:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:important: .important}
-{:note: .note}
-{:deprecated: .deprecated}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Using audio formats
 {: #audio-formats}
@@ -181,6 +169,7 @@ By default, the service returns audio in the format `audio/ogg;codecs=opus`. You
         audio/l16;rate=16000
         ```
         {: codeblock}
+
     -   If you use the `accept` query parameter, you must URL-encode the format and any additional parameters as shown in the following example. The example specifies the same format and sampling rate as the previous example.
 
         ```

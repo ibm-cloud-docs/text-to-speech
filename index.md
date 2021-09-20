@@ -2,27 +2,13 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-09-16"
+lastupdated: "2021-09-18"
 
 subcollection: text-to-speech
 
 ---
 
-{:help: data-hd-content-type='help'}
-{:support: data-reuse='support'}
-{:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:important: .important}
-{:note: .note}
-{:deprecated: .deprecated}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
+{{site.data.keyword.attribute-definition-list}}
 
 # About {{site.data.keyword.texttospeechshort}}
 {: #about}
@@ -63,7 +49,6 @@ With the Tune by Example feature, you can also add custom prompts to your custom
 The service synthesizes text to speech in many languages and dialects:
 
 -   Arabic
--   Brazilian Portuguese
 -   Chinese (Mandarin)
 -   Dutch (Belgian and Netherlands dialects)
 -   English (Australian, United Kingdom, and United States dialects)
@@ -72,6 +57,7 @@ The service synthesizes text to speech in many languages and dialects:
 -   Italian
 -   Japanese
 -   Korean
+-   Portuguese (Brazilian)
 -   Spanish (Castilian, Latin American, and North American dialects)
 
 The service offers female and male voices for different languages. All voices are neural voices. Different languages and voices are available for the different versions of the product. For more information, see [Using languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).

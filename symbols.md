@@ -2,27 +2,13 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-07-30"
+lastupdated: "2021-09-18"
 
 subcollection: text-to-speech
 
 ---
 
-{:help: data-hd-content-type='help'}
-{:support: data-reuse='support'}
-{:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:important: .important}
-{:note: .note}
-{:deprecated: .deprecated}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Understanding phonetic symbols
 {: #symbols}
@@ -150,7 +136,6 @@ The table provides links to pages that document the supported SPR symbols, IPA s
 | Language | Availability | Supports SPR | Supports IPA |
 |----------|:------------:|:------------:|:------------:|
 | [Arabic symbols](/docs/text-to-speech?topic=text-to-speech-arSymbols) | IBM Cloud only | No | Yes |
-| [Brazilian Portuguese symbols](/docs/text-to-speech?topic=text-to-speech-ptSymbols) | All versions | Yes | Yes |
 | [Chinese (Mandarin) symbols](/docs/text-to-speech?topic=text-to-speech-zhSymbols) | IBM Cloud only | No | Yes |
 | [Dutch (Belgian) symbols](/docs/text-to-speech?topic=text-to-speech-beSymbols) | IBM Cloud only | No | Yes |
 | [Dutch (Netherlands) symbols](/docs/text-to-speech?topic=text-to-speech-nlSymbols) | IBM Cloud only | No | Yes |
@@ -163,5 +148,6 @@ The table provides links to pages that document the supported SPR symbols, IPA s
 | [Italian symbols](/docs/text-to-speech?topic=text-to-speech-itSymbols) | All versions | Yes | Yes |
 | [Japanese symbols](/docs/text-to-speech?topic=text-to-speech-jaSymbols) | All versions | Yes | Yes |
 | [Korean symbols](/docs/text-to-speech?topic=text-to-speech-koSymbols) | IBM Cloud only | No | Yes |
+| [Portuguese (Brazilian) symbols](/docs/text-to-speech?topic=text-to-speech-ptSymbols) | All versions | Yes | Yes |
 | [Spanish symbols](/docs/text-to-speech?topic=text-to-speech-esSymbols) | All versions | Yes | Yes |
 {: caption="Table 3. Language support for phonetic symbols"}

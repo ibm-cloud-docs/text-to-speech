@@ -2,25 +2,13 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-05-13"
+lastupdated: "2021-09-18"
 
 subcollection: text-to-speech
 
 ---
 
-{:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:important: .important}
-{:note: .note}
-{:deprecated: .deprecated}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Word timings
 {: #timing}
@@ -224,7 +212,7 @@ Both of the following responses are possible. In each case, the service sends tw
 
 -   *In the first example response,* the text messages are interspersed with multiple audio messages:
 
-    ```javascript
+    ```json
     {
       "binary_streams": [
         {
@@ -259,7 +247,7 @@ Both of the following responses are possible. In each case, the service sends tw
 
 -   *In the second example response,* the text messages arrive before any of the audio messages:
 
-    ```javascript
+    ```json
     {
       "binary_streams": [
         "content_type": "audio/wav"}

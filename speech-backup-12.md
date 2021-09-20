@@ -2,25 +2,13 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-06-08"
+lastupdated: "2021-09-18"
 
 subcollection: text-to-speech
 
 ---
 
-{:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:important: .important}
-{:note: .note}
-{:deprecated: .deprecated}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Backing up and restoring your data
 {: #speech-backup-12}
@@ -114,7 +102,7 @@ Use these steps to back up your data from MinIO.
     ```bash
     mc --insecure -C {minio_backup_directory} \
     cp -r {alias}/stt-customization-icp {minio_backup_directory}/{minio_data_dump}
-```
+    ```
     {: pre}
 
     You can use a Kubernetes job that calls the `mc` command to dump the data into a directory where a Kubernetes persistent volume (for example, a Portworx persistent volume) is mounted.
@@ -154,8 +142,8 @@ Use these steps to restore your data to MinIO.
 1.  Copy the backed-up data into the bucket by running the following command:
 
     ```bash
-    mc --insecure -C {minio_backup_directory} \
-    cp -r {minio_backup_directory}/{minio_data_dump}/stt-customization-icp/customizations \
+    mc --insecure -C {minio_backup_directory} cp -r \
+    {minio_backup_directory}/{minio_data_dump}/stt-customization-icp/customizations \
     {target_alias}/stt-customization-icp
     ```
     {: pre}
@@ -252,17 +240,17 @@ Use these steps to restore your data to PostgreSQL.
 
 1.  Verify the command's output to make sure the command ran successfully. Then run a few SQL statements against the databases to make sure they are restored correctly. The commands in the following examples succeed if their output lists the customizations that are available in the database.
 
-    -    For the `stt-customization` database, run the following two commands:
+    -   For the `stt-customization` database, run the following two commands:
 
-         ```bash
-         psql -v -d stt-customization -U stolon \
-         -h {target_release-name}-ibm-postgresql-proxy-svc.{namespace} -p 5432
-         ```
-         {: pre}
+        ```bash
+        psql -v -d stt-customization -U stolon \
+        -h {target_release-name}-ibm-postgresql-proxy-svc.{namespace} -p 5432
+        ```
+        {: pre}
 
-         ```bash
-         stt-customization=# SELECT count(*) FROM customizations;
-         ```
+        ```bash
+        stt-customization=# SELECT count(*) FROM customizations;
+        ```
 
     -   For the `tts-customization` database, run the following two commands:
 
@@ -290,4 +278,4 @@ Use these steps to restore your data to PostgreSQL.
         UPDATE notification_urls SET username='{target_instance_id}' WHERE username='{source_instance_id}';
         UPDATE notification_urls SET instance_id='{target_instance_id}' WHERE instance_id='{source_instance_id}';
         UPDATE jobs SET username='{target_instance_id}' WHERE username='{source_instance_id}';
-       ```
+        ```
