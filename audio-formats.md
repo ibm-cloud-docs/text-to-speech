@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-09-16"
+lastupdated: "2020-09-22"
 
 subcollection: text-to-speech
 
@@ -49,13 +49,13 @@ As shown in the *Audio formats* column for those formats that accept a `codecs` 
 |---------------|:---------------------:|:-------------------:|:-------------------:|
 | [audio/basic](#audio-basic) | 8000 Hz | None | None |
 | [audio/flac](#audio-flac) | 22,050 Hz | None | `rate={integer}` |
-| [audio/l16](#audio-l16) | None | `rate={integer}` | `endianness=big-endian`<br/>`endianness=little-endian` |
-| [audio/mp3](#audio-mp3)<br/>[audio/mpeg](#audio-mp3) | 22,050 Hz | None | `rate={integer}` |
+| [audio/l16](#audio-l16) | None | `rate={integer}` | `endianness=big-endian`  \n `endianness=little-endian` |
+| [audio/mp3](#audio-mp3)  \n [audio/mpeg](#audio-mp3) | 22,050 Hz | None | `rate={integer}` |
 | [audio/mulaw](#audio-mulaw) | None | `rate={integer}` | None |
-| [audio/ogg](#audio-ogg)<br/>[audio/ogg;codecs=vorbis](#audio-ogg) | 22,050 Hz | None | `rate={integer}` |
+| [audio/ogg](#audio-ogg)  \n [audio/ogg;codecs=vorbis](#audio-ogg) | 22,050 Hz | None | `rate={integer}` |
 | [audio/ogg;codecs=opus](#audio-ogg) | 48,000 Hz | None | `rate={integer}` |
 | [audio/wav](#audio-wav) | 22,050 Hz | None | `rate={integer}` |
-| [audio/webm](#audio-webm)<br/>[audio/webm;codecs=opus](#audio-webm) | 48,000 Hz | None | None |
+| [audio/webm](#audio-webm)  \n [audio/webm;codecs=opus](#audio-webm) | 48,000 Hz | None | None |
 | [audio/webm;codecs=vorbis](#audio-webm) | 22,050 Hz | None | `rate={integer}` |
 {: caption="Table 1. Summary of supported audio formats"}
 
@@ -117,6 +117,7 @@ For more information, see [M-law algorithm](https://wikipedia.org/wiki/M-law_alg
 
     A current limitation causes the service to disregard a valid sampling rate. The service always returns the audio with a sampling rate of 48 kHz.
     {: important}
+
 -   The *Vorbis* codec by specifying `audio/ogg;codecs=vorbis` or simply `audio/ogg`. You can optionally specify a sampling rate other than the default 22,050 Hz.
 
 Both codecs are free, open, lossy audio-compression formats. Opus is the preferred codec, but per the Ogg specification, the service returns the audio in Vorbis format if you omit the codec. If you omit an audio format altogether, the service returns the audio in Ogg format with the Opus codec by default.
@@ -165,14 +166,14 @@ By default, the service returns audio in the format `audio/ogg;codecs=opus`. You
 -   With the HTTP `GET` and `POST /v1/synthesize` methods, you can specify a format by using the `Accept` request header or the `accept` query parameter.
     -   If you use the `Accept` request header, you specify the format and any additional parameters as shown in the following example. The example specifies the `audio/l16` format and a sampling rate of 16,000 Hz.
 
-        ```
+        ```text
         audio/l16;rate=16000
         ```
         {: codeblock}
 
     -   If you use the `accept` query parameter, you must URL-encode the format and any additional parameters as shown in the following example. The example specifies the same format and sampling rate as the previous example.
 
-        ```
+        ```text
         audio%2Fl16%3Brate%3D16000
         ```
         {: codeblock}

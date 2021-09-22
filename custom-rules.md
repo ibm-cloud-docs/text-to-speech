@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-09-18"
+lastupdated: "2021-09-22"
 
 subcollection: text-to-speech
 
@@ -47,21 +47,21 @@ To apply a custom translation to a word that might appear with or without initia
 
 The pronunciations of some words are context-sensitive. For example, consider the following example input sentence:
 
-```
+```text
 St. Anthony lives on Henry St.
 ```
 {: codeblock}
 
 The service's default pronunciation rules correctly synthesize this text as
 
-```
+```text
 Saint Anthony lives on Henry Street
 ```
 {: codeblock}
 
 However, if you override the default pronunciation rules for the string `St.` to translate it as `saint`, the service can no longer pronounce the word based on context. Applying a custom model that includes such a translation causes the service to pronounce the previous input sentence as
 
-```
+```text
 Saint Anthony lives on Henry saint
 ```
 {: codeblock}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-09-18"
+lastupdated: "2021-09-22"
 
 keywords: text to speech,IBM cloud,getting started,tutorial,synthesize audio,speech synthesis
 
@@ -100,8 +100,6 @@ The following command use the `POST /v1/synthesize` method to synthesize US Engl
     "{url}/v1/synthesize"
     ```
     {: pre}
-    {: apikey}
-    {: url}
 
     ![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
 
@@ -139,9 +137,6 @@ The following command again uses the `POST /v1/synthesize` method to synthesize 
     "{url}/v1/synthesize?voice=en-US_AllisonV3Voice"
     ```
     {: pre}
-    {: apikey}
-    {: url}
-
 
     ![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
 
@@ -177,8 +172,6 @@ The following command uses the `GET /v1/synthesize` method to synthesize Spanish
     "{url}/v1/synthesize?accept=audio%2Fwav&text=hola%20mundo&voice=es-ES_EnriqueV3Voice"
     ```
     {: pre}
-    {: apikey}
-    {: url}
 
     ![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-09-18"
+lastupdated: "2021-09-22"
 
 subcollection: text-to-speech
 
@@ -60,7 +60,7 @@ function onOpen(evt) {
 
 When it finishes synthesizing the text that precedes the mark, the service sends a text message that identifies the name of the mark and the time in seconds at which the mark occurs in the audio:
 
-```javascript
+```json
 {
   "marks": [
     ["here", 0.5019387755102041]
@@ -92,7 +92,7 @@ function onOpen(evt) {
 
 In response, the service can return the following text messages:
 
-```javascript
+```json
 {
   "words": [
     ["I", [0.0690258394023930, 0.1655782733012873]]
@@ -118,7 +118,7 @@ The service's synthesis process involves a text normalization step that spells o
 
 For example, consider the following input text:
 
-```
+```text
 The coldest recorded temperature is -89.2 degrees Celsius in Antarctica on July 21, 1983!
 ```
 {: codeblock}
@@ -133,7 +133,7 @@ As in the previous example, non-normalized strings can also contain punctuation.
 
 For example, consider input text that contains the following conditional statement:
 
-```
+```text
 If it is sunny, I will go to the beach.
 ```
 {: codeblock}
@@ -198,7 +198,7 @@ SSML elements that are not mentioned in the list do not impact word timing infor
 
 The following examples show a simple WebSocket session between a client and the service. The examples focus on the exchange of data, not on opening the connection. The client sends a text message that includes two `<mark>` elements, named `SIMPLE` and `EXAMPLE`, and it requests the audio to be returned in WAV format:
 
-```javascript
+```json
 {
   "text": "This is a <mark name=\"SIMPLE\"/>simple <mark name=\"EXAMPLE\"/> example.",
   "accept": "audio/wav"
