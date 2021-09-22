@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-04-29"
+lastupdated: "2021-09-22"
 
 subcollection: text-to-speech
 
@@ -20,20 +20,20 @@ The following sections describe the valid symbols for French.
 
 | SPR symbol | IPA symbol | IPA Unicode | Example words |
 |:----------:|:----------:|:-----------:|---------------|
-| a | a<br/><br/>&#593;<br/><br/>&#592; | 0061<br/><br/>0251<br/><br/>0250 | p**a**ttes, l**a**c, c**a**ve |
+| a | a  \n   \n &#593;  \n   \n &#592; | 0061  \n   \n 0251  \n   \n 0250 | p**a**ttes, l**a**c, c**a**ve |
 | e | e | 0065 | caf**&eacute;**, d**&eacute;**form**e**r, **&eacute;**t**&eacute;** |
-| E | &#603;<br/><br/>&#604; | 025B<br/><br/>025C | f**ai**te, m**ai**, h**e**rb |
-| i | i<br/><br/>&#618; | 0069<br/><br/>026A | f**i**lm, t**y**p**i**que |
+| E | &#603;  \n   \n &#604; | 025B  \n   \n 025C | f**ai**te, m**ai**, h**e**rb |
+| i | i  \n   \n &#618; | 0069  \n   \n 026A | f**i**lm, t**y**p**i**que |
 | o | o | 006F | **eau**, **au**x, g**au**che |
-| c | &#596;<br/><br/>&#594; | 0254<br/><br/>0252 | P**au**l, n**o**te, &eacute;chal**o**tte |
-| u | u<br/><br/>&#650; | 0075<br/><br/>028A | r**ou**e, **o&ugrave;**, t**ou**r |
-| y | &#121;<br/><br/>&#655; | 0079<br/><br/>028F | **u**tile, p**u**re, Br**u**no |
+| c | &#596;  \n   \n &#594; | 0254  \n   \n 0252 | P**au**l, n**o**te, &eacute;chal**o**tte |
+| u | u  \n   \n &#650; | 0075  \n   \n 028A | r**ou**e, **o&ugrave;**, t**ou**r |
+| y | &#121;  \n   \n &#655; | 0079  \n   \n 028F | **u**tile, p**u**re, Br**u**no |
 | x [**1**] | &#601; | 0259 | litr**e**s, marbr**e** |
-| 'eu' | &#248;<br/><br/>&#629; | 00F8<br/><br/>0275 | m**eu**gle, p**eu**, joy**eu**x |
-| 'oe' | &#339;<br/><br/>&#630; | 0153<br/><br/>0276 | p**eu**r, c**oeu**r, j**eu**ne |
-| 'a~' | &#97;&#771;<br/><br/>&#593;&#771; | 0061+0303<br/><br/>0251+0303 | b**an**c, **en**, t**em**ps |
-| 'E~' | &#101;&#771;<br/><br/>&#603;&#771;<br/><br/>&#230;&#771; | 0065+0303<br/><br/>025B+0303<br/><br/>00E6+0303 | f**i**n, pl**e**in, f**ai**m |
-| 'o~' | &#111;&#771;<br/><br/>&#596;&#771; | 006F+0303<br/><br/>0254+0303 | b**on**, p**on**t, m**on** |
+| 'eu' | &#248;  \n   \n &#629; | 00F8  \n   \n 0275 | m**eu**gle, p**eu**, joy**eu**x |
+| 'oe' | &#339;  \n   \n &#630; | 0153  \n   \n 0276 | p**eu**r, c**oeu**r, j**eu**ne |
+| 'a~' | &#97;&#771;  \n   \n &#593;&#771; | 0061+0303  \n   \n 0251+0303 | b**an**c, **en**, t**em**ps |
+| 'E~' | &#101;&#771;  \n   \n &#603;&#771;  \n   \n &#230;&#771; | 0065+0303  \n   \n 025B+0303  \n   \n 00E6+0303 | f**i**n, pl**e**in, f**ai**m |
+| 'o~' | &#111;&#771;  \n   \n &#596;&#771; | 006F+0303  \n   \n 0254+0303 | b**on**, p**on**t, m**on** |
 | 'oe~' | &#339;&#771; | 0153+0303 | **un**, auc**un**, br**un** |
 {: caption="Table 1. Vowels (French)"}
 
@@ -50,7 +50,7 @@ The following sections describe the valid symbols for French.
 | p | p | 0070 | **p**orte, **p**r&ecirc;t, gu&ecirc;**p**e |
 | d | d | 0064 | **d**ort, **d**olmen |
 | t | t | 0074 | **t**on, pa**tt**e, th&eacute;&acirc;**t**re |
-| g | g<br/><br/>&#609; | 0067<br/><br/>0261 | **gu**erre, ba**gu**e, **g**arer |
+| g | g  \n   \n &#609; | 0067  \n   \n 0261 | **gu**erre, ba**gu**e, **g**arer |
 | k | k | 006B | **k**ilo, **c**aler, **qu**ai |
 | v | v | 0076 | la**v**er, **w**agon, **v**isiter |
 | f | f | 0066 | che**f**, **f**aim, **ph**are |
@@ -62,9 +62,9 @@ The following sections describe the valid symbols for French.
 | n | n | 006E | A**nn**e, **n**i, ma**n**iaque |
 | 'nj' | &#626; | 0272 | a**gn**eau, campa**gn**e |
 | 'ng' | &#331; | 014B | parki**ng**, campi**ng** |
-| r | r<br/><br/>&#633;<br/><br/>&#640;<br/><br/>&#641;<br/><br/>x<br/><br/>&#967; | 0072<br/><br/>0279<br/><br/>0280<br/><br/>0281<br/><br/>0078<br/><br/>03C7 | pa**r**er, **r**a**r**e, ca**rr**eau |
+| r | r  \n   \n &#633;  \n   \n &#640;  \n   \n &#641;  \n   \n x  \n   \n &#967; | 0072  \n   \n 0279  \n   \n 0280  \n   \n 0281  \n   \n 0078  \n   \n 03C7 | pa**r**er, **r**a**r**e, ca**rr**eau |
 | l | l | 006C | **l**itre, i**ll**isible, p&acirc;**l**e |
-| j | j<br/><br/>&#654; | 006A<br/><br/>028E | h**i**&eacute;rarchie, pa**ill**e, **y**oga |
+| j | j  \n   \n &#654; | 006A  \n   \n 028E | h**i**&eacute;rarchie, pa**ill**e, **y**oga |
 | w | w | 0077 | **ou**i, b**ou**&eacute;e, **w**att |
 | H | &#613; | 0265 | s**u**is, l**u**i, n**u**&eacute;e |
 {: caption="Table 2. Consonants (French)"}

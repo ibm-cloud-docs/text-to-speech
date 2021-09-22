@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-21"
+lastupdated: "2021-09-22"
 
 subcollection: text-to-speech
 
@@ -48,7 +48,7 @@ The following sections describe the valid symbols for Belgian Dutch (Flemish).
 | &#248; | 00F8 | b**eu**k |
 | &#603;&#720; | 025B+02D0 | g**&ecirc;**ne |
 | &#596;&#720; | 0254+02D0 | r**o**ze |
-| &#339;&#720;<br/><br/>&#339; | Not available<br/><br/>Not available | **oeu**vre |
+| &#339;&#720;  \n   \n &#339; | Not available  \n   \n Not available | **oeu**vre |
 | &#593;&#720; | 0251+02D0 | gu**a**rd |
 | &#105;&#720; | 0069+02D0 | ch**ea**p |
 | &#117;&#720; | 0075+02D0 | bl**ue** |
@@ -63,7 +63,7 @@ The following sections describe the valid symbols for Belgian Dutch (Flemish).
 | &#593;&#771; | 0251+0303 | ch**an**son |
 | &#603;&#771; | 025B+0303 | t**im**bre |
 | &#596;&#771; | 0254+0303 | ly**on** |
-| &#339;&#771;<br/><br/>&#655;&#771; | Not available<br/><br/>Not available | **un** soleil |
+| &#339;&#771;  \n   \n &#655;&#771; | Not available  \n   \n Not available | **un** soleil |
 {: caption="Table 3. Nasalized vowels (Belgian Dutch)"}
 
 ## Diphthongs
@@ -71,9 +71,9 @@ The following sections describe the valid symbols for Belgian Dutch (Flemish).
 
 | IPA symbol | IPA Unicode | Example words |
 |:----------:|:-----------:|:-------------:|
-| &#603;&#105;<br/><br/>&#603;<sup>&#105;</sup> | 025B+0069<br/><br/>Not available | f**ij**n |
-| &#593;&#117;<br/><br/>&#593;<sup>&#117;</sup> | 0251+0075<br/><br/>Not available | k**ou** |
-| &#339;&#121;<br/><br/>&#339;<sup>&#121;</sup> | 0153+0079<br/><br/>Not available | h**ui**s |
+| &#603;&#105;<br/><br/>&#603;<sup>&#105;</sup> | 025B+0069  \n   \n Not available | f**ij**n |
+| &#593;&#117;<br/><br/>&#593;<sup>&#117;</sup> | 0251+0075  \n   \n Not available | k**ou** |
+| &#339;&#121;<br/><br/>&#339;<sup>&#121;</sup> | 0153+0079  \n   \n Not available | h**ui**s |
 | &#97;&#618; | 0061+026A | r**i**se |
 | &#101;&#618; | 0065+026A | r**ai**se |
 | &#596;&#618; | 0254+026A | n**oi**se |

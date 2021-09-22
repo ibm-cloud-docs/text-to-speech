@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-09-20"
+lastupdated: "2020-09-22"
 
 subcollection: text-to-speech
 
@@ -20,18 +20,18 @@ The following sections describe the valid symbols for United States (US) English
 
 | SPR symbol | IPA symbol | IPA Unicode | Example words |
 |:----------:|:----------:|:-----------:|---------------|
-| a | a<br/><br/>&#97;&#720;<br/><br/>&#593;<br/><br/>&#593;&#720;<br/><br/>&#592; | 0061<br/><br/>0061+02D0<br/><br/>0251<br/><br/>0251+02D0<br/><br/>0250 | f**a**ther, l**o**t |
+| a | a  \n   \n &#97;&#720;  \n   \n &#593;  \n   \n &#593;&#720;  \n   \n &#592; | 0061  \n   \n 0061+02D0  \n   \n 0251  \n   \n 0251+02D0  \n   \n 0250 | f**a**ther, l**o**t |
 | A | &#230; | 00E6 | b**a**ck, h**a**d |
-| e | e<br/><br/>&#101;&#618; | 0065<br/><br/>0065+026A | c**a**ke, p**ai**n |
+| e | e  \n   \n &#101;&#618; | 0065  \n   \n 0065+026A | c**a**ke, p**ai**n |
 | E | &#603; | 025B | h**e**dge, l**e**t |
-| i | i<br/><br/>&#105;&#720; | 0069<br/><br/>0069+02D0 | s**ee**, sp**ea**k, bel**ie**ve |
+| i | i  \n   \n &#105;&#720; | 0069  \n   \n 0069+02D0 | s**ee**, sp**ea**k, bel**ie**ve |
 | I | &#618; | 026A | p**i**ck, **i**ll |
-| o | o<br/><br/>&#111;&#650; | 006F<br/><br/>006F+028A | b**o**th, **o**ak |
-| c | &#596;<br/><br/>&#596;&#720;<br/><br/>&#594; | 0254<br/><br/>0254+02D0<br/><br/>0252 | l**a**w, c**ou**gh |
-| u | u<br/><br/>&#117;&#720; | 0075<br/><br/>0075+02D0 | z**oo**, tr**u**th |
-| U | &#650;<br/><br/>&#623; | 028A<br/><br/>026F | t**oo**k, p**u**t |
+| o | o  \n   \n &#111;&#650; | 006F  \n   \n 006F+028A | b**o**th, **o**ak |
+| c | &#596;  \n   \n &#596;&#720;  \n   \n &#594; | 0254  \n   \n 0254+02D0  \n   \n 0252 | l**a**w, c**ou**gh |
+| u | u  \n   \n &#117;&#720; | 0075  \n   \n 0075+02D0 | z**oo**, tr**u**th |
+| U | &#650;  \n   \n &#623; | 028A  \n   \n 026F | t**oo**k, p**u**t |
 | H | &#652; | 028C | b**u**t, m**u**g, s**o**n |
-| R | &#601;&#734;<br/><br/>&#602;<br/><br/>&#604;&#720;<br/><br/>&#605; | 0259+02DE<br/><br/>025A<br/><br/>025C+02D0<br/><br/>025D | butt**er**, h**ur**t |
+| R | &#601;&#734;  \n   \n &#602;  \n   \n &#604;&#720;  \n   \n &#605; | 0259+02DE  \n   \n 025A  \n   \n 025C+02D0  \n   \n 025D | butt**er**, h**ur**t |
 {: caption="Table 1. Regular vowels (US English)"}
 
 ## Diphthongs
@@ -50,7 +50,7 @@ The following sections describe the valid symbols for United States (US) English
 | SPR symbol | IPA symbol | IPA Unicode | Example words |
 |:----------:|:----------:|:-----------:|---------------|
 | x | &#601; | 0259 | sof**a**, **a**lone, s**u**ppose, tedi**ou**s, **A**meric**a** |
-| X | &#616;<br/><br/>&#305; | 0268<br/><br/>0131 | ros**e**s, c**o**nnect, mel**o**dy, symph**o**ny, hint**e**d |
+| X | &#616;  \n   \n &#305; | 0268  \n   \n 0131 | ros**e**s, c**o**nnect, mel**o**dy, symph**o**ny, hint**e**d |
 {: caption="Table 3. Reduced vowels (US English)"}
 
 ## Consonants
@@ -62,7 +62,7 @@ The following sections describe the valid symbols for United States (US) English
 | p | p | 0070 | **p**it, ri**p** |
 | d | d | 0064 | **d**ip, ha**d** |
 | t | t | 0074 | **t**ip, pe**t** |
-| g | g<br/><br/>&#609; | 0067<br/><br/>0261 | **g**ood, bu**g** |
+| g | g  \n   \n &#609; | 0067  \n   \n 0261 | **g**ood, bu**g** |
 | k | k | 006B | **k**ill, **c**at, ma**k**e, ba**ck** |
 | D | &#240; | 00F0 | **th**is, brea**th**e |
 | T | &#952; | 03B8 | **th**ing, Be**th** |
@@ -72,15 +72,15 @@ The following sections describe the valid symbols for United States (US) English
 | s | s | 0073 | **s**eal, mi**ss**, **c**eiling |
 | Z | &#658; | 0292 | trea**s**ure, gara**g**e |
 | S | &#643; | 0283 | **sh**ip, wi**sh** |
-| J | &#100;&#658;<br/><br/>&#676; | 0064+0292<br/><br/>02A4 | **J**ane, hu**g**e |
-| C | &#116;&#643;<br/><br/>&#679; | 0074+0283<br/><br/>02A7 | **ch**ip, wit**ch**, na**t**ure |
-| h | h<br/><br/>&#614;<br/><br/>x<br/><br/>&#967; | 0068<br/><br/>0266<br/><br/>0078<br/><br/>03C7 | **h**ot, **h**ero, **ch**allah |
+| J | &#100;&#658;  \n   \n &#676; | 0064+0292  \n   \n 02A4 | **J**ane, hu**g**e |
+| C | &#116;&#643;  \n   \n &#679; | 0074+0283  \n   \n 02A7 | **ch**ip, wit**ch**, na**t**ure |
+| h | h  \n   \n &#614;  \n   \n x  \n   \n &#967; | 0068  \n   \n 0266  \n   \n 0078  \n   \n 03C7 | **h**ot, **h**ero, **ch**allah |
 | m | m | 006D | **m**an, hu**m**, su**mm**er |
 | n | n | 006E | **n**ever, su**n**, wi**nn**er |
 | G | &#331; | 014B | si**ng**, fi**ng**er |
-| r | r<br/><br/>&#633; | 0072<br/><br/>0279 | bo**rr**ow, **r**ake |
+| r | r  \n   \n &#633; | 0072  \n   \n 0279 | bo**rr**ow, **r**ake |
 | l | l | 006C | **l**ow, ha**ll** |
-| w | w<br/><br/>&#653; | 0077<br/><br/>028D | **w**ear, q**ui**ck |
+| w | w  \n   \n &#653; | 0077  \n   \n 028D | **w**ear, q**ui**ck |
 | y | j | 006A | **y**es, Virgin**i**a |
 | M | &#109;&#809; | 006D+0329 | h**mmm** |
 | ? (glottal stop) | &#660; | 0294 | ki**tt**en, La**t**in |

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-05-04"
+lastupdated: "2021-09-22"
 
 subcollection: text-to-speech
 
@@ -24,7 +24,7 @@ The following sections describe the valid symbols for Australian English.
 |:----------:|:-----------:|:-------------:|
 | &#594; | 0252 | n**o**t |
 | &#230; | 00E6 | c**a**t |
-| e<br/><br/>&#603; | 0065<br/><br/>Not available | p**e**t |
+| e  \n   \n &#603; | 0065  \n   \n Not available | p**e**t |
 | I | 026A | c**i**ty |
 | i | 0069 | happ**y** |
 | &#650; | 028A | p**u**t |
@@ -43,7 +43,7 @@ The following sections describe the valid symbols for Australian English.
 | &#596;I | 0254+026A | n**oi**se |
 | a&#650; | 0061+028A | r**ou**se |
 | &#601;&#650; | 0259+028A | n**o**se |
-| e&#601;<br/><br/>&#603;&#601; | 0065+0259<br/><br/>Not available | st**ai**rs |
+| e&#601;  \n   \n &#603;&#601; | 0065+0259  \n   \n Not available | st**ai**rs |
 | I&#601; | 026A+0259 | f**ea**r |
 | &#650;&#601; | 028A+0259 | c**u**re |
 {: caption="Table 2. Diphthongs (Australian English)"}
@@ -91,7 +91,7 @@ The following sections describe the valid symbols for Australian English.
 | &#331; | 014B | ri**ng** |
 | l | 006C | **l**eft |
 | &#108;&#809; | Not available | turt**le** |
-| &#633;<br/><br/>&#635;<br/><br/>r | 0279<br/><br/>Not available<br/><br/>Not available | **wr**ong |
+| &#633;  \n   \n &#635;  \n   \n r | 0279  \n   \n Not available  \n   \n Not available | **wr**ong |
 | j | 006A | **y**es |
 | w | 0077 | **w**e |
 {: caption="Table 4. Consonants (Australian English)"}
