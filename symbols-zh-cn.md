@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-09-18"
+lastupdated: "2021-09-22"
 
 subcollection: text-to-speech
 
@@ -36,7 +36,7 @@ You can download a PDF file that documents tables 1 through 4: [Text-to-Speech-C
 ## Pinyin characters (part 1)
 {: #zhPinyinPart1}
 
-| Finals /<br/>Initials | <br/>a | <br/>o | <br/>e | <br/>i | <br/>u | <br/>v | <br/>er | <br/>ai | <br/>ao | <br/>ou | <br/>un |
+| Finals / Initials | a | o | e | i | u | v | er | ai | ao | ou | un |
 |:---------------------:|:-:|:-:|:-:|:-:|:-:|:-:|:--:|:--:|:--:|:--:|:--:|
 | **-** | a | o | e | **-** | **-** | **-** | er | ai | ao | ou | **-** |
 | **b** | ba | bo | **-** | bi | bu | **-** | **-** | bai | bao | **-** | **-** |
@@ -67,7 +67,7 @@ You can download a PDF file that documents tables 1 through 4: [Text-to-Speech-C
 ## Pinyin characters (part 2)
 {: #zhPinyinPart2}
 
-| Finals /<br/>Initials | <br/>ei | <br/>ia | <br/>ie | <br/>iu | <br/>iao | <br/>ua | <br/>uo | <br/>ui | <br/>uai | <br/>ue | <br/>uan |
+| Finals / Initials | ei | ia | ie | iu | iao | ua | uo | ui | uai | ue | uan |
 |:---------------------:|:--:|:--:|:--:|:--:|:---:|:--:|:--:|:--:|:---:|:--:|:---:|
 | **-** | ei | **-** | **-** | **-** | **-** | **-** | **-** | **-** | **-** | **-** | **-** |
 | **b** | bei | **-** | bie | **-** | biao | **-** | **-** | **-** | **-** | **-** | **-** |
@@ -98,7 +98,7 @@ You can download a PDF file that documents tables 1 through 4: [Text-to-Speech-C
 ## Pinyin characters (part 3)
 {: #zhPinyinPart3}
 
-| Finals /<br/>Initials | <br/>an | <br/>ang | <br/>ong | <br/>en | <br/>eng | <br/>in | <br/>ing | <br/>ian | <br/>iang | <br/>iong | <br/>uang |
+| Finals / Initials | an | ang | ong | en | eng | in | ing | ian | iang | iong | uang |
 |:---------------------:|:--:|:---:|:---:|:--:|:---:|:--:|:---:|:---:|:----:|:----:|:----:|
 | **-** | an | ang | **-** | en | **-** | **-** | **-** | **-** | **-** | **-** | **-** |
 | **b** | ban | bang | **-** | ben | beng | bin | bing | bian | **-** | **-** | **-** |

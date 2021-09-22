@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-07-07"
+lastupdated: "2021-09-22"
 
 subcollection: text-to-speech
 
@@ -49,7 +49,7 @@ The following sections describe the valid symbols for Netherlands Dutch.
 | &#596;&#720; | 0254+02D0 | r**o**ze |
 | &#117;&#720; | 0075+02D0 | bl**ue** |
 | &#121;&#720; | 0079+02D0 | b**&uuml;h**ne |
-| &#339;&#720;<br/><br/>&#339; | 0153+02D0<br/><br/>Not available | **oeu**vre |
+| &#339;&#720;  \n   \n &#339; | 0153+02D0  \n   \n Not available | **oeu**vre |
 {: caption="Table 2. Long vowels (Netherlands Dutch)"}
 
 ## Nasalized vowels
