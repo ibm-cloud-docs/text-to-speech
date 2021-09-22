@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2020-09-18"
+lastupdated: "2020-09-22"
 
 subcollection: text-to-speech
 
@@ -43,29 +43,6 @@ The following sections provide descriptions of each element or attribute, includ
 | | | [`<sub>` element](#sub_element) | Full |
 | | | [`<voice>` element](#voice_element) | None |
 {: caption="Table 1. SSML elements and attributes"}
-
-<!--
-| Element or attribute | Support | Element or attribute | Support |
-|----------------------|:-------:|----------------------|:-------:|
-| [`<audio>`](#audio_element) | None | [`<say-as>`](#say-as_element) | Partial |
-| [`<break>`](#break_element) | Full | - [`cardinal`](#say-as-Cardinal) | Partial |
-| [`<desc>`](#desc_element) | None | - [date](#say-as-date) | Partial |
-| [`<emphasis>`](#emphasis_element) | None | - [`digits`](#say-as-digits) | Partial |
-| [`<lexicon>`](#lexicon_element) | None | - [`letters`](#say-as-letters) | Partial |
-| [`<mark>`](#mark_element) | Partial | - [`number`](#say-as-number) | Partial |
-| [`<meta>`](#mm_element) | None | - [`ordinal`](#say-as-ordinal) | Partial |
-| [`<metadata>`](#mm_element) | None | - [`vxml:boolean`](vxml-boolean) | Partial |
-| [`<paragraph>`](#ps_element) | Full | - [`vxml:currency`](#vxml-currency) | Partial |
-| [`<phoneme>`](#phoneme_element) | Full | - [`vxml:date`](#vxml-date) | Partial |
-| [`<prosody>`](#prosody_element) | Partial | - [`vxml:digits`](#vxml-digits) | Partial |
-| - `contour` | None | - [`vxml:phone`](#vxml-phone) | Partial |
-| - `duration` | None | [`<sentence>`](#ps_element) | Full |
-| - [`pitch`](#prosody-pitch) | Full | [`<speak>`](#speak_element) | Full |
-| - `range` | None | [`<sub>`](#sub_element) | Full |
-| - [rate](#prosody-rate) | Full | [`<voice>`](#voice_element) | None |
-| - `volume` | None | | |
-{: caption="Table 1. SSML elements and attributes"}
--->
 
 ## The `<audio>` element
 {: #audio_element}

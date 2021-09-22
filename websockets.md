@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-09-18"
+lastupdated: "2021-09-22"
 
 subcollection: text-to-speech
 
@@ -39,7 +39,7 @@ The snippets of example code that follow are written in JavaScript and are based
 
 You call the `/v1/synthesize` method over the WebSocket Secure (WSS) protocol to open a connection to the service. The method is available at the following endpoint:
 
-```
+```text
 wss://api.{location}.text-to-speech.watson.cloud.ibm.com/instances/{instance_id}/v1/synthesize
 ```
 {: codeblock}
@@ -186,7 +186,7 @@ The following examples show error responses. They include a JSON text message an
 
 -   This example shows error messages for an invalid argument for the `accept` parameter:
 
-    ```javascript
+    ```json
     {
       "error": "Unsupported mimetype. Supported mimetypes are: ['application/json', 'audio/flac', ...]"
     }
@@ -196,7 +196,7 @@ The following examples show error responses. They include a JSON text message an
 
 -   This example shows error messages for a missing `text` parameter:
 
-    ```javascript
+    ```json
     {
       "error": "Required parameter \"text\" is missing."
     }
@@ -206,7 +206,7 @@ The following examples show error responses. They include a JSON text message an
 
 The following example shows a warning response, in this case for an unknown parameter named `invalid-parameter`. It does not include the second message because the connection is not closed by the warning.
 
-```javascript
+```json
 {
   "warnings": "Unknown arguments: invalid-parameter."
 }

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-09-16"
+lastupdated: "2021-09-22"
 
 subcollection: text-to-speech
 
@@ -574,6 +574,7 @@ The service now supports the MP3 or Motion Picture Experts Group (MPEG) audio fo
 
     When using the `GET /v1/pronunciation` method without a customization ID and for a language other than US English, you can request a word's pronunciation only in {{site.data.keyword.IBM_notm}} SPR notation. For a language other than US English, you must specify `spr` with the method's `format` option.
     {: note}
+
 -   The list of supported audio formats now includes `audio/basic`, which provides single-channel audio that is encoded using 8-bit u-law (or mu-law) data that is sampled at 8 kHz. For more information, see [Using audio formats](/docs/text-to-speech?topic=text-to-speech-audio-formats).
 -   The HTTP and WebSocket `/v1/synthesize` methods can return a `warnings` response that includes messages about invalid query parameters or JSON fields that are included with a request. The format of the warnings changed. The following example shows the previous format:
 
@@ -607,6 +608,7 @@ The service was updated with a new expressive SSML feature. The service extends 
 
     The customization interface is a beta release that currently supports US English only. All customization methods and the `GET /v1/pronunciation` method can currently be used to create and manipulate custom models and word translations only in US English.
     {: note}
+
 -   The service supports a new voice, `pt-BR_IsabelaVoice`, to synthesize audio in Brazilian Portuguese with a female voice. For more information, see [Using languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
 
 ### 21 September 2015
@@ -616,10 +618,9 @@ The service was updated with a new expressive SSML feature. The service extends 
     -   The *{{site.data.keyword.watson}} Swift SDK* is available from the [swift-sdk repository](https://github.com/watson-developer-cloud/swift-sdk){: external} in the `watson-developer-cloud` namespace on GitHub.
     -   The *{{site.data.keyword.watson}} Speech Android SDK* is available from the [speech-android-sdk repository](https://github.com/watson-developer-cloud/speech-android-sdk){: external} in the `watson-developer-cloud` namespace on GitHub.
 
-    Both SDKs support authenticating with the speech services by using either your {{site.data.keyword.cloud_notm}} service credentials or an authentication token.
-
-    Because the SDKs are beta functionality, they are subject to change in the future.
+    Both SDKs support authenticating with the speech services by using either your {{site.data.keyword.cloud_notm}} service credentials or an authentication token. Because the SDKs are beta functionality, they are subject to change in the future.
     {: note}
+
 -   The service supports a new language, Japanese. The voice `ja-JP_EmiVoice` is a Japanese female voice.
 
 ### 1 July 2015

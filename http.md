@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-05-06"
+lastupdated: "2021-09-22"
 
 subcollection: text-to-speech
 
@@ -122,12 +122,12 @@ Because you can submit input text that includes XML-based SSML annotations, the 
 
 | Character | Escape strings | Character encoding |
 |:---------:|:--------------:|:------------------:|
-| `"`<br/>(double quotes) | `&quot;` | `&#34;` |
-| `'`<br/>(apostrophe or single quote) | `&apos;` | `&#39;` |
-| `&`<br/>(ampersand) | `&amp;` | `&#38;` |
-| `<`<br/>(left angle bracket) | `&lt;` | `&#60;` |
-| `>`<br/>(right angle bracket) | `&gt;` | `&#62;` |
-| `/`<br/>(forward slash) | None | `&#47;` |
+| `"`  \n (double quotes) | `&quot;` | `&#34;` |
+| `'`  \n (apostrophe or single quote) | `&apos;` | `&#39;` |
+| `&`  \n (ampersand) | `&amp;` | `&#38;` |
+| `<`  \n (left angle bracket) | `&lt;` | `&#60;` |
+| `>`  \n (right angle bracket) | `&gt;` | `&#62;` |
+| `/`  \n (forward slash) | None | `&#47;` |
 {: caption="Table 1. Escaping XML control characters"}
 
 For more information about how the service validates input text, see [SSML validation](/docs/text-to-speech?topic=text-to-speech-ssml#errors).
@@ -144,7 +144,7 @@ The following examples pass URL-encoded input with the `text` query parameter of
 
 -   Plain text input:
 
-    ```
+    ```text
     text=This&20is&20the&20first&20sentence&20of&20the&20paragraph.&20Here
     &20is&20another&20sentence.&20Finally,&20this&20is&20the&20last&20sentence.
     ```
@@ -152,7 +152,7 @@ The following examples pass URL-encoded input with the `text` query parameter of
 
 -   SSML input:
 
-    ```
+    ```text
     text=%22%3Cp%3E%3Cs%3EThis%20is%20the%20first%20sentence%20of%20the%20%3C
     break%20time=%225s%22/%3E%20paragraph.%3C/s%3E%3Cs%3EHere%20is%20another
     %20sentence.%3C/s%3E%3Cs%3EFinally,%20this%20is%20the%20last%20sentence.
@@ -167,7 +167,7 @@ The following examples pass input in the body of the `POST /v1/synthesize` metho
 
 -   Plain text input:
 
-    ```javascript
+    ```json
     {
       "text": "This is the first sentence of the paragraph. Here is another
         sentence. Finally, this is the last sentence."
@@ -177,7 +177,7 @@ The following examples pass input in the body of the `POST /v1/synthesize` metho
 
 -   SSML input:
 
-    ```javascript
+    ```json
     {
       "text": "<p><s>This is the first sentence of the <break time=\"5s\"/>
         paragraph.</s><s>Here is another sentence.</s><s>Finally, this is
@@ -191,14 +191,14 @@ The following examples pass input in the body of the `POST /v1/synthesize` metho
 
 The following examples send two sentences to the `POST /v1/synthesize` method. The examples properly escape the embedded XML characters.
 
-```
+```text
 "What have I learned?" he asked. "Everything!"
 ```
 {: codeblock}
 
 -   Plain text input:
 
-    ```javascript
+    ```json
     {
       "text": "&quot;What have I learned?&quot; he asked. &quot;Everything!&quot;"
     }
@@ -207,7 +207,7 @@ The following examples send two sentences to the `POST /v1/synthesize` method. T
 
 -   SSML input:
 
-    ```javascript
+    ```json
     {
       "text": "<s>&quot;What have I learned?&quot; he asked.
         &quot;<prodody rate=\"50\">Everything!</prosody>&quot;</s>"
