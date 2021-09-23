@@ -2,7 +2,7 @@
 
 copyright:
   years: 2010, 2021
-lastupdated: "2021-09-19"
+lastupdated: "2021-09-23"
 
 subcollection: text-to-speech
 
@@ -52,7 +52,7 @@ Unless it is labeled in the *Type / Availability* column as restricted to just o
 | | Enhanced neural | `en-US_LisaV3Voice`<br/>Female | ![en-US_LisaV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/LisaV3.wav){: audio controls} |
 | | Enhanced neural | `en-US_MichaelV3Voice`<br/>Male | ![en-US_MichaelV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/MichaelV3.wav){: audio controls} |
 | | Enhanced neural | `en-US_OliviaV3Voice`<br/>Female | ![en-US_OliviaV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/OliviaV3.wav){: audio controls} |
-| French<br/>(Canadian) | Enhanced neural| `fr-FR_LouiseV3Voice`<br/>Female | ![fr-FR_LouiseV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/LouiseV3.wav){: audio controls} |
+| French<br/>(Canadian) | Enhanced neural| `fr-CA_LouiseV3Voice`<br/>Female | ![fr-CA_LouiseV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/LouiseV3.wav){: audio controls} |
 | French<br/>(France) | Enhanced neural | `fr-FR_NicolasV3Voice`<br/>Male | ![fr-FR_NicolasV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/NicolasV3.wav){: audio controls} |
 | | Enhanced neural | `fr-FR_ReneeV3Voice`<br/>Female | ![fr-FR_ReneeV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/ReneeV3.wav){: audio controls} |
 | German | Enhanced neural | `de-DE_BirgitV3Voice`<br/>Female | ![de-DE_BirgitV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/BirgitV3.wav){: audio controls} |
