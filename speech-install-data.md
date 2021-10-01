@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-08-18"
+lastupdated: "2021-10-01"
 
 subcollection: text-to-speech
 
@@ -24,7 +24,3 @@ To install {{site.data.keyword.texttospeechfull}} for {{site.data.keyword.icp4df
 For information about installing and managing previous versions of the service on {{site.data.keyword.icp4dfull_notm}}, see the following topics:
 
 -   [Installing {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}} version 1.2](/docs/text-to-speech?topic=text-to-speech-speech-install-12)
--   [Installing {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}} version 1.1.4](/docs/text-to-speech?topic=text-to-speech-speech-install)
-
-{{site.data.keyword.speechtotextshort}} and {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} version 1.1.4 go out of service on **30 September 2021**. You must upgrade to a later version of the services on {{site.data.keyword.icp4dfull_notm}} before that date. As of 1 October 2021, the documentation for version 1.1.4 will no longer be available.
-{: important}
