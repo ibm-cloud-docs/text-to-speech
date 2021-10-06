@@ -2,15 +2,19 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-10-01"
+lastupdated: "2021-10-06"
+
+keywords: text to speech for IBM cloud pak for data release notes
 
 subcollection: text-to-speech
+
+content-type: release-note
 
 ---
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Release notes for {{site.data.keyword.icp4dfull_notm}}
+# Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}
 {: #release-notes-data}
 
 ![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}} only**
@@ -18,7 +22,7 @@ subcollection: text-to-speech
 The following features and changes were included for each release and update of installed or on-premises instances of {{site.data.keyword.texttospeechfull}} for {{site.data.keyword.icp4dfull_notm}}. The information includes known limitations. Unless otherwise noted, all changes are compatible with earlier releases and are automatically and transparently available to all new and existing applications.
 {: shortdesc}
 
-For information about releases and updates for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}}, see [Release notes for {{site.data.keyword.cloud_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes).
+For information about releases and updates for {{site.data.keyword.cloud_notm}}, see [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes).
 {: note}
 
 ## Beta features

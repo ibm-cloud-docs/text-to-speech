@@ -2,15 +2,19 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-09-22"
+lastupdated: "2021-10-06"
+
+keywords: text to speech release notes
 
 subcollection: text-to-speech
+
+content-type: release-note
 
 ---
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Release notes for {{site.data.keyword.cloud_notm}}
+# Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}}
 {: #release-notes}
 
 ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
@@ -18,7 +22,7 @@ subcollection: text-to-speech
 The following features and changes were included for each release and update of managed instances of {{site.data.keyword.texttospeechfull}} that are hosted on {{site.data.keyword.cloud_notm}} or for instances that are hosted on [IBM Cloud Pak for Data as a Service](https://dataplatform.cloud.ibm.com/docs/content/wsj/landings/wtts.html){: external}. The information includes known limitations. Unless otherwise noted, all changes are compatible with earlier releases and are automatically and transparently available to all new and existing applications.
 {: shortdesc}
 
-For information about releases and updates for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}, see [Release notes for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes-data).
+For information about releases and updates for {{site.data.keyword.icp4dfull_notm}}, see [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes-data).
 {: note}
 
 ## Beta features
@@ -31,8 +35,20 @@ IBM occasionally releases features and language support that are classified as b
 
 The service has the following known limitations:
 
--   **2 December 2020:** Cross-Origin Resource Sharing (CORS) support is not available from the Mozilla Firefox&trade; browser for voices in the following languages: Arabic, Australian English, Chinese, Dutch, and Korean.
+-   **2 December 2020:** Cross-Origin Resource Sharing (CORS) support is not available from the Mozilla Firefox™ browser for voices in the following languages: Arabic, Australian English, Chinese, Dutch, and Korean.
 -   **22 August 2019:** When you specify the `audio/ogg;codecs=opus` audio format, you can optionally specify a sampling rate other than the default 48,000 Hz. However, although the service accepts `48000`, `24000`, `16000`, `12000`, or `8000` as a valid sampling rate, it currently disregards a specified value and always returns the audio with a sampling rate of 48 kHz.
+
+## 6 October 2021
+{: #October2021}
+
+-   US Health Insurance Portability and Accountability Act (HIPAA) support is now available for Premium plans that are hosted in the Dallas (`us-south`) location. For more information, see [Health Insurance Portability and Accountability Act (HIPAA)](/docs/text-to-speech?topic=text-to-speech-information-security#hipaa).
+-   **Defect fix:** For the Latin American Spanish voice (`es-LA_SofiaV3Voice`), questions of all types now use the correct intonation.
+
+<!-- 21.13
+-   The existing neural voices for Chinese, Dutch (Belgian and Netherlands), Australian English, and Korean have been updated for improved speech synthesis. For more information about all available voices, see [Using languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
+-   A new male Australian English voice, `en-AU_SteveVoice`, is now available. The voice is a neural voice.
+-   A new language, Swedish, with a new female voice, `sv-SE_IngridVoice`, is now available. The voice is a neural voice. For more information about the IPA symbols for the language, see [Swedish symbols](/docs/text-to-speech?topic=text-to-speech-svSymbols).
+-->
 
 ## 16 September 2021
 {: #September2021}
@@ -191,7 +207,7 @@ The following additional changes have also been made:
     -   Dutch now supports the following IPA symbol: <code>&#611;</code> (`0263`).
 
     For more information about the supported IPA symbols and Unicode values, see [Dutch symbols](/docs/text-to-speech?topic=text-to-speech-nlSymbols).
--   Cross-Origin Resource Sharing (CORS) support is now available for all voices from the Google Chrome&trade; and Apple&reg; Safari browsers. It is *not* available from the Mozilla Firefox&trade; browser for voices in the following languages: Arabic, Australian English, Chinese, Dutch, and Korean. For more information, see [Leveraging CORS support](/docs/text-to-speech?topic=text-to-speech-service-features#features-cors).
+-   Cross-Origin Resource Sharing (CORS) support is now available for all voices from the Google Chrome™ and Apple® Safari browsers. It is *not* available from the Mozilla Firefox™ browser for voices in the following languages: Arabic, Australian English, Chinese, Dutch, and Korean. For more information, see [Leveraging CORS support](/docs/text-to-speech?topic=text-to-speech-service-features#features-cors).
 
 ### Deprecated voices
 {: #December2020-deprecated-voices}
@@ -234,22 +250,10 @@ Including these SSML elements with a synthesis request for a neural voice genera
 -   For more information about SSML validation, see [SSML validation](/docs/text-to-speech?topic=text-to-speech-ssml#errors).
 -   For more information about moving from a deprecated standard voice to a neural voice, see [Migrating from standard to neural voices](/docs/text-to-speech?topic=text-to-speech-voices#migrate-voice).
 
-## 10 September 2020
-{: #September2020b}
-
-**Defect fix:** For the `ja-JP_EmiV3Voice` voice, the service now correctly parses SSML input text that includes a prosody rate specification. Previously, the following use of the `<prosody>` element worked properly:
-
-<code>&lt;speak&gt;&#25104;&#21151;&#12377;&#12427;&#47;&#32321;&#26628;&#12377;&#12427;&lt;/speak&gt;</code>
-
-But the following use of the `rate` attribute with the `<prosody>` element caused the service to read and speak the embedded SSML notation:
-
-<code>&lt;speak rate="fast"&gt;&#25104;&#21151;&#12377;&#12427;&#47;&#32321;&#26628;&#12377;&#12427;&lt;/speak&gt;</code>
-
-The service now correctly parses and applies the `rate` attribute of the `<prosody>` element for Japanese input.
-
 ## Older releases
 {: #older-versions}
 
+-   [10 September 2020](#September2020b)
 -   [4 September 2020](#September2020a)
 -   [24 June 2020](#June2020)
 -   [1 April 2020](#April2020)
@@ -281,6 +285,19 @@ The service now correctly parses and applies the `rate` attribute of the `<proso
 -   [17 December 2015](#December2015)
 -   [21 September 2015](#September2015)
 -   [1 July 2015](#July2015)
+
+### 10 September 2020
+{: #September2020b}
+
+**Defect fix:** For the `ja-JP_EmiV3Voice` voice, the service now correctly parses SSML input text that includes a prosody rate specification. Previously, the following use of the `<prosody>` element worked properly:
+
+<code>&lt;speak&gt;&#25104;&#21151;&#12377;&#12427;&#47;&#32321;&#26628;&#12377;&#12427;&lt;/speak&gt;</code>
+
+But the following use of the `rate` attribute with the `<prosody>` element caused the service to read and speak the embedded SSML notation:
+
+<code>&lt;speak rate="fast"&gt;&#25104;&#21151;&#12377;&#12427;&#47;&#32321;&#26628;&#12377;&#12427;&lt;/speak&gt;</code>
+
+The service now correctly parses and applies the `rate` attribute of the `<prosody>` element for Japanese input.
 
 ### 4 September 2020
 {: #September2020a}
@@ -588,7 +605,7 @@ The service now supports the MP3 or Motion Picture Experts Group (MPEG) audio fo
 {: #March2016}
 
 -   The `GET` and `POST /v1/synthesize` methods can now return a `Warnings` response header that includes a list of warning messages about invalid query parameters or JSON fields that are included with the request. Each element of the list includes a string that describes the nature of the warning followed by an array of invalid argument strings; for example, `Unknown arguments: [u'{invalid_arg_1}', u'{invalid_arg_2}'].` For more information, see the [API & SDK reference](https://{DomainName}/apidocs/text-to-speech){: external}.
--   The beta *{{site.data.keyword.watson}} Speech Software Development Kit (SDK) for the Apple&reg; iOS operating system* is deprecated and replaced by the *{{site.data.keyword.watson}} Swift SDK*. The new SDK is available from the [swift-sdk repository](https://github.com/watson-developer-cloud/swift-sdk){: external} in the `watson-developer-cloud` namespace on GitHub.
+-   The beta *{{site.data.keyword.watson}} Speech Software Development Kit (SDK) for the Apple® iOS operating system* is deprecated and replaced by the *{{site.data.keyword.watson}} Swift SDK*. The new SDK is available from the [swift-sdk repository](https://github.com/watson-developer-cloud/swift-sdk){: external} in the `watson-developer-cloud` namespace on GitHub.
 
 ### 22 February 2016
 {: #February2016}
@@ -616,7 +633,7 @@ The service was updated with a new expressive SSML feature. The service extends 
 
 -   Two new beta mobile Software Development Kits (SDKs) are available for the speech services. The SDKs enable mobile applications to interact with both the {{site.data.keyword.texttospeechshort}} and {{site.data.keyword.speechtotextshort}} services. You can use the SDKs to send text to the {{site.data.keyword.texttospeechshort}} service and receive an audio response.
     -   The *{{site.data.keyword.watson}} Swift SDK* is available from the [swift-sdk repository](https://github.com/watson-developer-cloud/swift-sdk){: external} in the `watson-developer-cloud` namespace on GitHub.
-    -   The *{{site.data.keyword.watson}} Speech Android SDK* is available from the [speech-android-sdk repository](https://github.com/watson-developer-cloud/speech-android-sdk){: external} in the `watson-developer-cloud` namespace on GitHub.
+    -   The *{{site.data.keyword.watson}} Speech Android™ SDK* is available from the [speech-android-sdk repository](https://github.com/watson-developer-cloud/speech-android-sdk){: external} in the `watson-developer-cloud` namespace on GitHub.
 
     Both SDKs support authenticating with the speech services by using either your {{site.data.keyword.cloud_notm}} service credentials or an authentication token. Because the SDKs are beta functionality, they are subject to change in the future.
     {: note}
