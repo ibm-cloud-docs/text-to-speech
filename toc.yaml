@@ -17,6 +17,13 @@ toc:
       - index.md
       - features.md
       - data-security.md
+      - topicgroup:
+          label: Release notes
+          topics:
+          - topic: release-notes.md
+            navtitle: Release notes for IBM Cloud
+          - topic: release-notes-data.md
+            navtitle: Release notes for IBM Cloud Pak for Data
       - link:
           label: Demo
           href: https://www.ibm.com/demos/live/tts-demo/self-service/home
@@ -123,8 +130,6 @@ toc:
   - navgroup:
       id: help
       topics:
-      - release-notes.md
-      - release-notes-data.md
       - faq-usage.md
       - topicgroup:
           label: Developer community
@@ -133,5 +138,5 @@ toc:
               label: StackOverflow
               href: http://stackoverflow.com/questions/tagged/ibm-watson-cognitive+text-to-speech
           - link:
-              label: WDC Slack channel
+              label: Watson Developer Community Slack channel
               href: http://wdc-slack-inviter.mybluemix.net/
