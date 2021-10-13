@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-09-22"
+lastupdated: "2021-10-13"
 
 subcollection: text-to-speech
 
@@ -61,15 +61,23 @@ The examples in the documentation abbreviate `wss://api.{location}.text-to-speec
 
 A WebSocket client calls the `/v1/synthesize` method with the following query parameters to establish an authenticated connection with the service.
 
--   `access_token` (*required* string) - Pass a valid access token to authenticate with the service. You must use the access token before it expires.
+`access_token` (*required* string)
+:   Pass a valid access token to authenticate with the service. You must use the access token before it expires.
 
     -   ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** Pass an Identity and Access Management (IAM) access token to authenticate with the service. You pass an IAM access token instead of passing an API key with the call. For more information, see [Authenticating to {{site.data.keyword.cloud_notm}}](/docs/text-to-speech?topic=text-to-speech-data-security#data-security-authentication-cloud).
     -   ![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}} only.** Pass an access token as you would with the `Authorization` header of an HTTP request. For more information, see [Authenticating to {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-data-security#data-security-authentication-icpd).
 
--   `voice` (*optional* string) - Specifies the voice in which the text is to be spoken in the audio. Omit the parameter to use the default voice, `en-US_MichaelV3Voice`. For more information, see [Using languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
--   `customization_id` (*optional* string) - Specifies the globally unique identifier (GUID) for a custom model that is to be used for the synthesis. A specified custom model must match the language of the voice that is used for the synthesis. If you include a customization ID, you must make the request with credentials for the instance of the service that owns the custom model. Omit the parameter to use the specified voice with no customization. For more information, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
--   `x-watson-metadata` (*optional* string) - Associates a customer ID with data that is passed over the connection. The parameter accepts the argument `customer_id={id}`, where `id` is a random or generic string that is to be associated with the data. You must URL-encode the argument to the parameter, for example, `customer_id%3dmy_customer_ID`. By default, no customer ID is associated with the data. For more information, see [Information security](/docs/text-to-speech?topic=text-to-speech-information-security).
--   `x-watson-learning-opt-out` (*optional* boolean) - ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** Indicates whether the service logs requests and results that are sent over the connection. To prevent IBM from accessing your data for general service improvements, specify `true` for the parameter. Opting out directs IBM to write to disk *no* user data (text or audio) for your request. For more information, see [Request logging](/docs/text-to-speech?topic=text-to-speech-data-security#data-security-request-logging).
+`voice` (*optional* string)
+:   Specifies the voice in which the text is to be spoken in the audio. Omit the parameter to use the default voice, `en-US_MichaelV3Voice`. For more information, see [Using languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
+
+`customization_id` (*optional* string)
+:   Specifies the globally unique identifier (GUID) for a custom model that is to be used for the synthesis. A specified custom model must match the language of the voice that is used for the synthesis. If you include a customization ID, you must make the request with credentials for the instance of the service that owns the custom model. Omit the parameter to use the specified voice with no customization. For more information, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
+
+`x-watson-metadata` (*optional* string)
+:   Associates a customer ID with data that is passed over the connection. The parameter accepts the argument `customer_id={id}`, where `id` is a random or generic string that is to be associated with the data. You must URL-encode the argument to the parameter, for example, `customer_id%3dmy_customer_ID`. By default, no customer ID is associated with the data. For more information, see [Information security](/docs/text-to-speech?topic=text-to-speech-information-security).
+
+`x-watson-learning-opt-out` (*optional* boolean)
+:   ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** Indicates whether the service logs requests and results that are sent over the connection. To prevent IBM from accessing your data for general service improvements, specify `true` for the parameter. Opting out directs IBM to write to disk *no* user data (text or audio) for your request. For more information, see [Request logging](/docs/text-to-speech?topic=text-to-speech-data-security#data-security-request-logging).
 
 The following snippet of JavaScript code opens a connection with the service. The call to the `/v1/synthesize` method passes the `voice` and `access_token` query parameters, the former to direct the service to use the enhanced neural US English Allison voice. Once the connection is established, the event listeners (`onOpen()`, `onClose()`, and so on) are defined to respond to events from the service.
 
@@ -94,9 +102,14 @@ websocket.onerror = function(evt) { onError(evt) };
 
 To synthesize text, the client passes a simple JSON text message to the service with the following parameters.
 
--   `text` (*required* string) - Provides the text that is to be synthesized. The client can pass plain text or text that is annotated with the Speech Synthesis Markup Language (SSML). The client can pass a maximum of 5 KB of input text with the request. The limit includes any SSML that you specify. For more information, see [Specifying input text](/docs/text-to-speech?topic=text-to-speech-usingHTTP#input) and the sections that follow it. (SSML input can also include the `<mark>` element. For more information, see [Specifying an SSML mark](/docs/text-to-speech?topic=text-to-speech-timing#timing-mark).)
--   `accept` (*required* string) - Specifies the requested format (MIME type) of the audio. Use `*/*` to request the default audio format, `audio/ogg;codecs=opus`. For more information, see [Using audio formats](/docs/text-to-speech?topic=text-to-speech-audio-formats).
--   `timings` (*optional* string[ ]) - Specifies that the service is to return word timing information for all strings of the input text. The service returns the start and end time of each token of the input. Specify `words` as the lone element of the array to request word timings. Specify an empty array or omit the parameter to receive no word timings. For more information, see [Word timings](/docs/text-to-speech?topic=text-to-speech-timing). *Not supported for Japanese input text.*
+`text` (*required* string)
+:   Provides the text that is to be synthesized. The client can pass plain text or text that is annotated with the Speech Synthesis Markup Language (SSML). The client can pass a maximum of 5 KB of input text with the request. The limit includes any SSML that you specify. For more information, see [Specifying input text](/docs/text-to-speech?topic=text-to-speech-usingHTTP#input) and the sections that follow it. (SSML input can also include the `<mark>` element. For more information, see [Specifying an SSML mark](/docs/text-to-speech?topic=text-to-speech-timing#timing-mark).)
+
+`accept` (*required* string)
+:   Specifies the requested format (MIME type) of the audio. Use `*/*` to request the default audio format, `audio/ogg;codecs=opus`. For more information, see [Using audio formats](/docs/text-to-speech?topic=text-to-speech-audio-formats).
+
+`timings` (*optional* string[ ])
+:   Specifies that the service is to return word timing information for all strings of the input text. The service returns the start and end time of each token of the input. Specify `words` as the lone element of the array to request word timings. Specify an empty array or omit the parameter to receive no word timings. For more information, see [Word timings](/docs/text-to-speech?topic=text-to-speech-timing). *Not supported for Japanese input text.*
 
 The following snippet of JavaScript code passes a simple "Hello world" message as the input text and requests the default format for the audio. The calls are included in the `onOpen()` function that is defined for the client to ensure that they are sent only after the connection is established.
 
@@ -113,7 +126,7 @@ function onOpen(evt) {
 
 The service responds to this message by sending a text message that confirms the format of the audio response. The following response confirms the default audio format.
 
-```javascript
+```json
 {
   'binary_streams': [
     {

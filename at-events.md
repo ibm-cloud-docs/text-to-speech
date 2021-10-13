@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-05-04"
+lastupdated: "2021-10-13"
 
 keywords: IBM,activity tracker,event,security,text to speech
 
@@ -27,7 +27,7 @@ As a security officer, auditor, or manager, you can use the Activity Tracker ser
 
 The following tables list the {{site.data.keyword.texttospeechshort}} actions for model customization that generate events.
 
-The names of the actions for the customization events have changed. The old names are deprecated. Use the names in the following tables instead. For more information, see [Updates to Activity Tracker actions for customization](/docs/text-to-speech?topic=text-to-speech-release-notes#February2021-at-updates) in the release notes for {{site.data.keyword.cloud_notm}}.
+The names of the actions for the customization events have changed. The old names are deprecated. Use the names in the following tables instead. For more information, see [Updates to Activity Tracker actions for customization](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-12april2021) in the release notes for {{site.data.keyword.cloud_notm}}.
 {: note}
 
 ### Create events

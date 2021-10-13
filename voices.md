@@ -2,7 +2,7 @@
 
 copyright:
   years: 2010, 2021
-lastupdated: "2021-09-23"
+lastupdated: "2021-10-13"
 
 subcollection: text-to-speech
 
@@ -16,7 +16,7 @@ subcollection: text-to-speech
 The {{site.data.keyword.texttospeechfull}} service supports a variety of languages, voices, and dialects. The service offers female and male voices for different language. Each voice uses appropriate cadence and intonation for its dialect.
 {: shortdesc}
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** The list of available voices underwent many changes on 2 December 2020. To optimize the audio quality and naturalness of synthesized speech, the standard (concatenative) voices that were previously available with the service are now deprecated. {{site.data.keyword.IBM_notm}} recommends that you migrate from standard to neural voices at your earliest convenience. For more information about the changes and implications for voice synthesis, see the [2 December 2020 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#December2020) in the release notes. For information about moving to neural voices, see [Migrating from standard to neural voices](#migrate-voice).
+![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** The list of available voices underwent many changes on 2 December 2020. To optimize the audio quality and naturalness of synthesized speech, the standard (concatenative) voices that were previously available with the service are now deprecated. {{site.data.keyword.IBM_notm}} recommends that you migrate from standard to neural voices at your earliest convenience. For more information about the changes and implications for voice synthesis, see the [2 December 2020 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-2december2020) in the release notes. For information about moving to neural voices, see [Migrating from standard to neural voices](#migrate-voice).
 {: important}
 
 ## Supported languages and voices
@@ -98,7 +98,7 @@ For more information about the service's neural voice technology, see
 
 ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** The list of available voices underwent many changes on 2 December 2020. To optimize the audio quality and naturalness of synthesized speech, the standard (concatenative) voices that were previously available with the service are now deprecated. {{site.data.keyword.IBM_notm}} recommends that you migrate from standard to neural voices at your earliest convenience. For more information about the changes and implications for voice synthesis, see the [2 December 2020 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#December2020) in the release notes. For information about moving to neural voices, see [Migrating from standard to neural voices](#migrate-voice).
+![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** The list of available voices underwent many changes on 2 December 2020. To optimize the audio quality and naturalness of synthesized speech, the standard (concatenative) voices that were previously available with the service are now deprecated. {{site.data.keyword.IBM_notm}} recommends that you migrate from standard to neural voices at your earliest convenience. For more information about the changes and implications for voice synthesis, see the [2 December 2020 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-2december2020) in the release notes. For information about moving to neural voices, see [Migrating from standard to neural voices](#migrate-voice).
 {: important}
 
 If you previously used any of the now-deprecated standard voices, you might have used the following features:
