@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-05-04"
+lastupdated: "2021-10-13"
 
 subcollection: text-to-speech
 
@@ -44,7 +44,7 @@ Neural voices produce speech that is crisp and clear, with a very natural-soundi
 
 ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
 
-All concatenative voices, also referred to as standard voices, were deprecated as of 2 December 2020. The following information is maintained for general information purposes only. For more information about the deprecation of the concatenative voices, see the [2 December 2020 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#December2020) in the release notes for {{site.data.keyword.cloud_notm}}.
+All concatenative voices, also referred to as standard voices, were deprecated as of 2 December 2020. The following information is maintained for general information purposes only. For more information about the deprecation of the concatenative voices, see the [2 December 2020 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-2december2020) in the release notes for {{site.data.keyword.cloud_notm}}.
 {: important}
 
 Concatenative synthesis relies on an inventory of acoustic units from a large synthesis corpus to produce output speech for arbitrary input text. It is based on the following pipeline of processes. These processes facilitate an efficient, real-time search over this inventory of units followed by a post-processing of the units.
