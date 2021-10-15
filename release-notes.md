@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-10-13"
+lastupdated: "2021-10-15"
 
 keywords: text to speech release notes,text to speech for IBM cloud release notes
 
@@ -348,33 +348,36 @@ New standard Arabic, Chinese, and Netherlands Dutch voices
 
 Full support for {{site.data.keyword.cloud_notm}} IAM
 :   The {{site.data.keyword.texttospeechshort}} service now supports the full implementation of {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM). API keys for Watson services are no longer limited to a single service instance. You can create access policies and API keys that apply to more than one service, and you can grant access between services. For more information about IAM, see [Authenticating to Watson services](/docs/watson?topic=watson-iam).
-    -   To support this change, the API service endpoints use a different domain and include the service instance ID. The pattern is `api.{location}.text-to-speech.watson.cloud.ibm.com/instances/{instance_id}`.
 
-        -   Example HTTP URL for an instance hosted in the Dallas location:
+    To support this change, the API service endpoints use a different domain and include the service instance ID. The pattern is `api.{location}.text-to-speech.watson.cloud.ibm.com/instances/{instance_id}`.
 
-            `https://api.us-south.text-to-speech.watson.cloud.ibm.com/instances/6bbda3b3-d572-45e1-8c54-22d6ed9e52c2`
+    -   Example HTTP URL for an instance hosted in the Dallas location:
 
-        -   Example WebSocket URL for an instance hosted in the Dallas location:
+        `https://api.us-south.text-to-speech.watson.cloud.ibm.com/instances/6bbda3b3-d572-45e1-8c54-22d6ed9e52c2`
 
-            `wss://api.us-south.text-to-speech.watson.cloud.ibm.com/instances/6bbda3b3-d572-45e1-8c54-22d6ed9e52c2`
+    -   Example WebSocket URL for an instance hosted in the Dallas location:
 
-        For more information about the URLs, see the [API & SDK reference](https://{DomainName}/apidocs/text-to-speech/text-to-speech#service-endpoint){: external}.
+        `wss://api.us-south.text-to-speech.watson.cloud.ibm.com/instances/6bbda3b3-d572-45e1-8c54-22d6ed9e52c2`
 
-        These URLs do not constitute a breaking change. The new URLs work for both your existing service instances and for new instances. The original URLs continue to work on your existing service instances for at least one year, until December 2020.
+    For more information about the URLs, see the [API & SDK reference](https://{DomainName}/apidocs/text-to-speech/text-to-speech#service-endpoint){: external}.
+
+    These URLs do not constitute a breaking change. The new URLs work for both your existing service instances and for new instances. The original URLs continue to work on your existing service instances for at least one year, until December 2020.
 
 New network and data security features
-:   Support for the following new network and data security features:
+:   Support for the following new network and data security features is now available:
     -   *Support for private network endpoints*
-        -   Users of Premium plans can create private network endpoints to connect to the {{site.data.keyword.texttospeechshort}} service over a private network. Connections to private network endpoints do not require public internet access. For more information, see [Public and private network endpoints](/docs/text-to-speech/?topic=watson-public-private-endpoints).
+
+        Users of Premium plans can create private network endpoints to connect to the {{site.data.keyword.texttospeechshort}} service over a private network. Connections to private network endpoints do not require public internet access. For more information, see [Public and private network endpoints](/docs/text-to-speech/?topic=watson-public-private-endpoints).
     -   *Support for data encryption with customer-managed keys*
-        -   Users of new Premium and Dedicated instances can integrate {{site.data.keyword.keymanagementservicefull}} with the {{site.data.keyword.texttospeechshort}} service to encrypt your data and manage encryption keys. For more information, see [Protecting sensitive information in your Watson service](/docs/watson?topic=watson-keyservice).
+
+        Users of new Premium and Dedicated instances can integrate {{site.data.keyword.keymanagementservicefull}} with the {{site.data.keyword.texttospeechshort}} service to encrypt your data and manage encryption keys. For more information, see [Protecting sensitive information in your Watson service](/docs/watson?topic=watson-keyservice).
 
 ## 12 November 2019
 {: #text-to-speech-12november2019}
 {: release-note}
 
-New Seoul location
-:   The service is now available in the {{site.data.keyword.cloud_notm}} Seoul location (**kr-seo**). As with other locations, the {{site.data.keyword.cloud_notm}} location uses token-based IAM authentication. All new services instances that you create in this location use IAM authentication.
+New Seoul location now available
+:   The {{site.data.keyword.texttospeechshort}} service is now available in the {{site.data.keyword.cloud_notm}} Seoul location (**kr-seo**). As with other locations, the {{site.data.keyword.cloud_notm}} location uses token-based IAM authentication. All new services instances that you create in this location use IAM authentication.
 
 ## 1 October 2019
 {: #text-to-speech-1october2019}
@@ -471,14 +474,14 @@ New support for {{site.data.keyword.cloud_notm}} IAM by WebSocket interface
 {: #text-to-speech-13december2018}
 {: release-note}
 
-New London location
+New London location now available
 :   The {{site.data.keyword.texttospeechshort}} service is now available in the {{site.data.keyword.cloud}} London location (**eu-gb**). Like all locations, London uses token-based Identity and Access Management (IAM) authentication. All new services instances that you create in this location use IAM authentication.
 
 ## 7 November 2018
 {: #text-to-speech-7november2018}
 {: release-note}
 
-New Tokyo location
+New Tokyo location now available
 :   The {{site.data.keyword.texttospeechshort}} service is now available in the {{site.data.keyword.cloud}} Tokyo location (**jp-tok**). Like all locations, Tokyo uses token-based Identity and Access Management (IAM) authentication. All new services instances that you create in this location use IAM authentication.
 
 ## 30 October 2018
@@ -542,7 +545,7 @@ New support for MP3 (MPEG) audio format
 {: #text-to-speech-10april2017}
 {: release-note}
 
-New support for WebM audio format
+New support for Web Media (WebM) audio format
 :   The service now supports the Web Media (WebM) audio format with the Opus or Vorbis codec. The service now also supports the Ogg audio format with the Vorbis codec in addition to the Opus codec. For more information about supported audio formats, see [Using audio formats](/docs/text-to-speech?topic=text-to-speech-audio-formats).
 
 New support for Cross-Origin Resource Sharing
@@ -602,7 +605,7 @@ New voice transformation SSML feature
 Word timings now available with WebSocket interface
 :   The service can now return word timing information for all strings of the input text that you pass to the WebSocket interface. To receive the start and end time of every string in the input, specify an array that includes the string `words` for the optional `timings` parameter of the JSON object that you pass to the service. The feature is not currently available for Japanese input text. For more information, see [Word timings](/docs/text-to-speech?topic=text-to-speech-timing).
 
-New support SSML validation
+New support for SSML validation
 :   The service now validates all SSML elements that you submit in any context. If it finds an invalid tag, the service reports an HTTP 400 response code with a descriptive message, and the method fails. In previous releases, the service handled errors inconsistently; specifying an invalid word pronunciation, for example, could lead to unpredictable or inconsistent behavior. For more information, see [SSML validation](/docs/text-to-speech?topic=text-to-speech-ssml#errors).
 
 IBM SPR format now specified with `ibm` instead of `spr`
@@ -705,7 +708,7 @@ New Japanese voice: `ja-JP_EmiVoice`
 {: #text-to-speech-1july2015}
 {: release-note}
 
-The {{site.data.keyword.texttospeechshort}} service is generally available
+The {{site.data.keyword.texttospeechshort}} service is now generally available
 :   The service moved from beta to general availability (GA) on 1 July 2015. The following differences existed between the beta and GA versions of the {{site.data.keyword.texttospeechshort}} API. The GA release requires that users upgrade to the new version of the service.
 
 New token-based programming model
@@ -728,10 +731,10 @@ Changes to available voices
 
     The previous names of the voices continue to work with the beta version of the service (via `-beta` API endpoints) while that version remains available. However, you must use the new names with the GA version of the service.
 
-New support for FLAC audio format
+New support for Free Lossless Audio Codec (FLAC) audio format
 :   You can now request the service to return audio in the Free Lossless Audio Codec (FLAC) format. The service can still return audio in the Ogg format with the Opus codec (the default) and in the Waveform Audio File Format (WAV). For more information about using audio formats with the `/v1/synthesize` methods, see [Using audio formats](/docs/text-to-speech?topic=text-to-speech-audio-formats).
 
-Limitations on maximum amount of synthesized text
+New limits on maximum amount of synthesized text
 :   The text that you send to the `/v1/synthesize` method in the URL of an HTTP `GET` request or in the body of an HTTP `POST` request is now limited to a maximum of 5 KB. The text had a maximum size of 4 MB for the beta version.
 
 New header to opt out of contributing to service improvements
