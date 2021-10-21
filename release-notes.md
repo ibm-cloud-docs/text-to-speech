@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-10-15"
+lastupdated: "2021-10-21"
 
 keywords: text to speech release notes,text to speech for IBM cloud release notes
 
@@ -25,11 +25,6 @@ The following features and changes were included for each release and update of 
 For information about releases and updates for {{site.data.keyword.icp4dfull_notm}}, see [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes-data).
 {: note}
 
-## Beta features
-{: release-notes-beta-features}
-
-{{site.data.keyword.IBM_notm}} occasionally releases features and language support that are classified as beta. Such features are provided so that you can evaluate their functionality. They might not provide the same level of performance or compatibility that generally available (GA) features provide. They might be unstable and are subject to change or removal with short notice. They are not intended for use in a production environment.
-
 ## Known limitations
 {: #limitations}
 
@@ -37,6 +32,19 @@ The service has the following known limitations:
 
 -   **2 December 2020:** Cross-Origin Resource Sharing (CORS) support is not available from the Mozilla Firefox™ browser for voices in the following languages: Arabic, Australian English, Chinese, Dutch (Belgian and Netherlands), and Korean.
 -   **22 August 2019:** When you specify the `audio/ogg;codecs=opus` audio format, you can optionally specify a sampling rate other than the default 48,000 Hz. However, although the service accepts `48000`, `24000`, `16000`, `12000`, or `8000` as a valid sampling rate, it currently disregards a specified value and always returns the audio with a sampling rate of 48 kHz.
+
+## 21 October 2021
+{: #text-to-speech-21october2021}
+{: release-note}
+
+Multiple neural voice improvements
+:   The existing neural voices for Chinese, Dutch (Belgian and Netherlands), Australian English, and Korean have been updated for improved speech synthesis and enhanced audio results. For more information about all available voices, see [Using languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
+
+New Australian English voice
+:   A new male Australian English voice, `en-AU_SteveVoice`, is now available. The voice is a neural voice. For more information about the IPA symbols for the language, see [English (Australian) symbols](/docs/text-to-speech?topic=text-to-speech-auSymbols).
+
+New Swedish voice
+:   A new language, Swedish, with a new female voice, `sv-SE_IngridVoice`, is now available. The voice is a neural voice. For more information about the IPA symbols for the language, see [Swedish symbols](/docs/text-to-speech?topic=text-to-speech-svSymbols).
 
 ## 6 October 2021
 {: #text-to-speech-6october2021}
@@ -47,12 +55,6 @@ New US HIPAA support for Premium plans in Dallas location
 
 Defect fix for Latin American Spanish voice
 :   **Defect fix:** For the Latin American Spanish voice (`es-LA_SofiaV3Voice`), questions of all types now use the correct intonation.
-
-<!-- 21.13
--   The existing neural voices for Chinese, Dutch (Belgian and Netherlands), Australian English, and Korean have been updated for improved speech synthesis. For more information about all available voices, see [Using languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
--   A new male Australian English voice, `en-AU_SteveVoice`, is now available. The voice is a neural voice.
--   A new language, Swedish, with a new female voice, `sv-SE_IngridVoice`, is now available. The voice is a neural voice. For more information about the IPA symbols for the language, see [Swedish symbols](/docs/text-to-speech?topic=text-to-speech-svSymbols).
--->
 
 ## 16 September 2021
 {: #text-to-speech-16september2021}

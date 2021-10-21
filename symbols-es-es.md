@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-09-22"
+lastupdated: "2020-10-04"
 
 subcollection: text-to-speech
 
@@ -46,7 +46,7 @@ The following sections describe the valid symbols for Spanish. The information a
 | j | h [**2**]  \n   \n x [**3**] | 0068  \n   \n 0078 | **j**unco, re**j**a, **g**ente |
 | m | m | 006D | **m**ano, a**m**or |
 | n | n | 006E | **n**ada, ma**n**o |
-| N | &#626; | 0272 | pi**&ntilde;**a, ni**&ntilde;**o |
+| N | &#626; | 0272 | pi**ñ**a, ni**ñ**o |
 | r | &#638; | 027E | pa**r**a, pe**r**o |
 | l | l | 006C | **l**oco, a**l**go |
 | L [**4**] | &#654;  \n   \n &#669; [**5**] | 028E  \n   \n 029D | **ll**over, po**ll**o  \n   \n **y**egua, pla**y**a |
@@ -75,7 +75,7 @@ Each allophone is a variation of the phoneme indicated in parentheses. If an all
 | D (d) | &#240; | 00F0 | ha**d**a, de**d**o |
 | G (g) | &#611; | 0263 | se**g**ar, lu**g**ar |
 | z (s) | z | 007A | mi**s**mo, de**s**de |
-| 'ng' [**1**] | &#331;g | 014B+0067 | ta**n**go, e**n**ga&ntilde;o |
+| 'ng' [**1**] | &#331;g | 014B+0067 | ta**n**go, e**n**gaño |
 | 'nk' [**1**] | &#331;k | 014B+006B | a**n**cla, ci**n**co |
 {: caption="Table 3. Allophones (Spanish)"}
 

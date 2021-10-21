@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-10-13"
+lastupdated: "2021-10-18"
 
 subcollection: text-to-speech
 
@@ -59,7 +59,7 @@ And `{instance_id}` is the unique identifier of the service instance.
 The examples in the documentation abbreviate `wss://api.{location}.text-to-speech.watson.cloud.ibm.com/instances/{instance_id}` to `{ws_url}`. So all WebSocket examples call the method as `{ws_url}/v1/synthesize`.
 {: note}
 
-A WebSocket client calls the `/v1/synthesize` method with the following query parameters to establish an authenticated connection with the service.
+A WebSocket client calls the `/v1/synthesize` method with the following query parameters to establish an authenticated connection with the service:
 
 `access_token` (*required* string)
 :   Pass a valid access token to authenticate with the service. You must use the access token before it expires.
@@ -100,7 +100,7 @@ websocket.onerror = function(evt) { onError(evt) };
 {: help}
 {: support}
 
-To synthesize text, the client passes a simple JSON text message to the service with the following parameters.
+To synthesize text, the client passes a simple JSON text message to the service with the following parameters:
 
 `text` (*required* string)
 :   Provides the text that is to be synthesized. The client can pass plain text or text that is annotated with the Speech Synthesis Markup Language (SSML). The client can pass a maximum of 5 KB of input text with the request. The limit includes any SSML that you specify. For more information, see [Specifying input text](/docs/text-to-speech?topic=text-to-speech-usingHTTP#input) and the sections that follow it. (SSML input can also include the `<mark>` element. For more information, see [Specifying an SSML mark](/docs/text-to-speech?topic=text-to-speech-timing#timing-mark).)

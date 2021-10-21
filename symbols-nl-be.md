@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-09-22"
+lastupdated: "2021-10-04"
 
 subcollection: text-to-speech
 
@@ -46,7 +46,7 @@ The following sections describe the valid symbols for Belgian Dutch (Flemish).
 | y | 0079 | **uu**r |
 | u | 0075 | h**oe**d |
 | &#248; | 00F8 | b**eu**k |
-| &#603;&#720; | 025B+02D0 | g**&ecirc;**ne |
+| &#603;&#720; | 025B+02D0 | g**ê**ne |
 | &#596;&#720; | 0254+02D0 | r**o**ze |
 | &#339;&#720;  \n   \n &#339; | Not available  \n   \n Not available | **oeu**vre |
 | &#593;&#720; | 0251+02D0 | gu**a**rd |
@@ -71,9 +71,9 @@ The following sections describe the valid symbols for Belgian Dutch (Flemish).
 
 | IPA symbol | IPA Unicode | Example words |
 |:----------:|:-----------:|:-------------:|
-| &#603;&#105;<br/><br/>&#603;<sup>&#105;</sup> | 025B+0069  \n   \n Not available | f**ij**n |
-| &#593;&#117;<br/><br/>&#593;<sup>&#117;</sup> | 0251+0075  \n   \n Not available | k**ou** |
-| &#339;&#121;<br/><br/>&#339;<sup>&#121;</sup> | 0153+0079  \n   \n Not available | h**ui**s |
+| &#603;&#105; | 025B+0069 | f**ij**n |
+| &#593;&#117; | 0251+0075 | k**ou** |
+| &#339;&#121; | 0153+0079 | h**ui**s |
 | &#97;&#618; | 0061+026A | r**i**se |
 | &#101;&#618; | 0065+026A | r**ai**se |
 | &#596;&#618; | 0254+026A | n**oi**se |
@@ -119,7 +119,7 @@ The following sections describe the valid symbols for Belgian Dutch (Flemish).
 | &#679; | 02A7 | **ch**eck |
 | &#678; | Not available | pa**ts** |
 | &#676; | 02A4 | **j**og |
-| &#660; | Not available | ge&euml;erd [**1**] |
+| &#660; | Not available | geëerd [**1**] |
 | &#633; | 0279 | da**r**k |
 | &#952; | 03B8 | **th**ing |
 | &#240; | 00F0 | ne**th**er |

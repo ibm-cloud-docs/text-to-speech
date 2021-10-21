@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-09-22"
+lastupdated: "2021-10-04"
 
 subcollection: text-to-speech
 
@@ -45,10 +45,10 @@ The following sections describe the valid symbols for Netherlands Dutch.
 | o | 006F | p**oo**t |
 | y | 0079 | **uu**r |
 | &#105;&#720; | 0069+02D0 | ch**ea**p |
-| &#603;&#720; | 0258+02D0 | g**&ecirc;**ne |
+| &#603;&#720; | 0258+02D0 | g**ê**ne |
 | &#596;&#720; | 0254+02D0 | r**o**ze |
 | &#117;&#720; | 0075+02D0 | bl**ue** |
-| &#121;&#720; | 0079+02D0 | b**&uuml;h**ne |
+| &#121;&#720; | 0079+02D0 | b**üh**ne |
 | &#339;&#720;  \n   \n &#339; | 0153+02D0  \n   \n Not available | **oeu**vre |
 {: caption="Table 2. Long vowels (Netherlands Dutch)"}
 

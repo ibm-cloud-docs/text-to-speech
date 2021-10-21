@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-09-22"
+lastupdated: "2021-10-19"
 
 subcollection: text-to-speech
 
@@ -150,4 +150,5 @@ The table provides links to pages that document the supported SPR symbols, IPA s
 | [Korean symbols](/docs/text-to-speech?topic=text-to-speech-koSymbols) | IBM Cloud only | No | Yes |
 | [Portuguese (Brazilian) symbols](/docs/text-to-speech?topic=text-to-speech-ptSymbols) | All versions | Yes | Yes |
 | [Spanish symbols](/docs/text-to-speech?topic=text-to-speech-esSymbols) | All versions | Yes | Yes |
+| [Swedish symbols](/docs/text-to-speech?topic=text-to-speech-svSymbols) | IBM Cloud only | No | Yes |
 {: caption="Table 3. Language support for phonetic symbols"}

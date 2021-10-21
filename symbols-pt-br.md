@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-09-22"
+lastupdated: "2020-10-04"
 
 subcollection: text-to-speech
 
@@ -21,16 +21,16 @@ The following sections describe the valid symbols for Brazilian Portuguese.
 | SPR symbol | IPA symbol | IPA Unicode | Example words |
 |:----------:|:----------:|:-----------:|---------------|
 | a [**1**] | a  \n   \n &#592; | 0061  \n   \n 0250 | vir**ar**, m**a**r  \n   \n Terr**a**, muit**a** |
-| e | e | 0065 | d**e**do, portugu**&ecirc;**s |
-| E | &#603; | 025B | **&eacute;**s, b**e**lo, **e**co |
+| e | e | 0065 | d**e**do, portugu**ê**s |
+| E | &#603; | 025B | **é**s, b**e**lo, **e**co |
 | i | i | 0069 | l**i**gar, bod**e** |
 | o | o | 006F | c**o**r, b**o**lha |
-| c | &#596; | 0254 | pr**&oacute;**ximo, p**o**rta |
+| c | &#596; | 0254 | pr**ó**ximo, p**o**rta |
 | u | u | 0075 | l**u**gar, per**u** |
-| 'a~' | &#592;&#771; | 0250+0303 | b**a**nco, l**&atilde;** |
+| 'a~' | &#592;&#771; | 0250+0303 | b**a**nco, l**ã** |
 | 'e~' | &#101;&#771; | 0065+0303  \n 1EBD | inc**en**so, ag**en**te |
 | 'i~' | &#105;&#771; | 0069+0303  \n 0129 | ass**im**, **in**censo |
-| 'o~' | &#111;&#771; | 006F+0303  \n 00F5 | c**&ocirc;n**sul, t**om** |
+| 'o~' | &#111;&#771; | 006F+0303  \n 00F5 | c**ôn**sul, t**om** |
 | 'u~' | &#117;&#771; | 0075+0303  \n 0169 | alg**un**s, **um** |
 {: caption="Table 1. Regular vowels (Brazilian Portuguese)"}
 
@@ -44,9 +44,9 @@ The following sections describe the valid symbols for Brazilian Portuguese.
 | SPR symbol | IPA symbol | IPA Unicode | Example words |
 |:----------:|:----------:|:-----------:|---------------|
 | y | j | 006A | do**i**s, no**i**va |
-| Y | j&#771; | 006A+0303 | m&atilde;**e**, mu**i**to |
+| Y | j&#771; | 006A+0303 | mã**e**, mu**i**to |
 | w | w | 0077 | me**u**, q**u**arto |
-| W | w&#771; | 0077+0303 | capit&atilde;**o**, S&atilde;**o** |
+| W | w&#771; | 0077+0303 | capitã**o**, Sã**o** |
 {: caption="Table 2. Semi-vowels (Brazilian Portuguese)"}
 
 ## Consonants
@@ -54,7 +54,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
 
 | SPR symbol | IPA symbol | IPA Unicode | Example words |
 |:----------:|:----------:|:-----------:|---------------|
-| b | b | 0062 | a**b**ra&ccedil;o, **B**rasil |
+| b | b | 0062 | a**b**raço, **B**rasil |
 | p | p | 0070 | **p**luma, **p**rimo |
 | d | d | 0064 | **d**ar, **d**ente |
 | t | t | 0074 | **t**rono, por**t**a |
@@ -63,7 +63,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
 | v | v | 0076 | **v**ila, bre**v**e |
 | f | f | 0066 | **f**lauta, **f**aixa |
 | z | z | 007A | **z**ero, ca**s**o |
-| s | s | 0073 | **c**erto, avan**&ccedil;**ar, **s**ete |
+| s | s | 0073 | **c**erto, avan**ç**ar, **s**ete |
 | Z | &#658; | 0292 | **g**eral, **j**ogo |
 | S | &#643; | 0283 | **ch**ave, bai**x**a |
 | J | &#100;&#658;  \n   \n &#676; | 0064+0292  \n   \n 02A4 | bo**d**e, **d**iz |

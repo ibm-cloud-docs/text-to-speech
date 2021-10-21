@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-09-22"
+lastupdated: "2020-09-28"
 
 subcollection: text-to-speech
 
@@ -186,5 +186,5 @@ By default, the service returns audio in the format `audio/ogg;codecs=opus`. You
 
 To play an audio file that the service generates, use one of the following tools:
 
--   A web browser such as Google Chrome&trade;, Firefox&reg;, or Microsoft&reg; Internet Explorer&reg;
--   An audio player such as Audacity&reg; ([audacityteam.org](https://www.audacityteam.org/){: external}) or FFmpeg ([ffmpeg.org](https://www.ffmpeg.org){: external})
+-   A web browser such as Google Chrome™, Firefox®, or Microsoft® Internet Explorer®
+-   An audio player such as Audacity® ([audacityteam.org](https://www.audacityteam.org/){: external}) or FFmpeg ([ffmpeg.org](https://www.ffmpeg.org){: external})

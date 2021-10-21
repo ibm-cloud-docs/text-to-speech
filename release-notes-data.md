@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-10-12"
+lastupdated: "2021-10-19"
 
 keywords: text to speech release notes,text to speech for IBM cloud pak for data release notes
 
@@ -22,11 +22,6 @@ The following features and changes were included for each release and update of 
 
 For information about releases and updates for {{site.data.keyword.cloud_notm}}, see [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes).
 {: note}
-
-## Beta features
-{: release-notes-data-beta-features}
-
-{{site.data.keyword.IBM_notm}} occasionally releases features and language support that are classified as beta. Such features are provided so that you can evaluate their functionality. They might not provide the same level of performance or compatibility that generally available (GA) features provide. They might be unstable and are subject to change or removal with short notice. They are not intended for use in a production environment.
 
 ## Known limitations
 {: #limitations-data}
