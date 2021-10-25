@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-10-21"
+lastupdated: "2021-10-22"
 
 keywords: text to speech release notes,text to speech for IBM cloud release notes
 
@@ -33,8 +33,8 @@ The service has the following known limitations:
 -   **2 December 2020:** Cross-Origin Resource Sharing (CORS) support is not available from the Mozilla Firefox™ browser for voices in the following languages: Arabic, Australian English, Chinese, Dutch (Belgian and Netherlands), and Korean.
 -   **22 August 2019:** When you specify the `audio/ogg;codecs=opus` audio format, you can optionally specify a sampling rate other than the default 48,000 Hz. However, although the service accepts `48000`, `24000`, `16000`, `12000`, or `8000` as a valid sampling rate, it currently disregards a specified value and always returns the audio with a sampling rate of 48 kHz.
 
-## 21 October 2021
-{: #text-to-speech-21october2021}
+## 22 October 2021
+{: #text-to-speech-22october2021}
 {: release-note}
 
 Multiple neural voice improvements
