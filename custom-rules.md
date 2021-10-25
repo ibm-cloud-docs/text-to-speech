@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-09-22"
+lastupdated: "2021-09-30"
 
 subcollection: text-to-speech
 
@@ -73,7 +73,7 @@ Consider such cases when you develop word/translation pairs.
 
 The service applies a word from a custom model only to those strings in the input text that match the word exactly. A trailing `.` (period) in a word entry changes how the word is synthesized:
 
--   *A word that does not have a trailing period* can contain practically any character. Characters include letters, digits, punctuation (other than a trailing period), non-letter symbols (such as %, &amp;, and @), quotation marks, parentheses, brackets, and so on. Its *translation* can include any legal input to the service, including white space and a phonetic representation in SSML format.
+-   *A word that does not have a trailing period* can contain practically any character. Characters include letters, digits, punctuation (other than a trailing period), non-letter symbols (such as `%`, `&`, and `@`), quotation marks, parentheses, brackets, and so on. Its *translation* can include any legal input to the service, including white space and a phonetic representation in SSML format.
 -   *A word that has a trailing period* can contain only letters, periods, and internal apostrophes (not as the first or last character). The word's *translation* can contain only normal words with ordinary spelling that are separated by white space or hyphens. It cannot contain a phonetic representation.
 
 An example of a word with a trailing period is "`div.`". Assume that a custom model includes the entry `{word='div.', translation='division'}`. The service does not apply the translation to the string "`div`" because it does not include a trailing period and therefore does not match the entry.

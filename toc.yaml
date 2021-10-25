@@ -93,6 +93,7 @@ toc:
           - symbols-ko-kr.md
           - symbols-pt-br.md
           - symbols-es-es.md
+          - symbols-sv-se.md
       - topicgroup:
           label: Security topics
           topics:

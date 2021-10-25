@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-05-13"
+lastupdated: "2021-10-20"
 
 subcollection: text-to-speech
 
@@ -71,13 +71,14 @@ The first two examples generate a custom pronunciation for `IEEE` that is based 
     ```
     {: pre}
 
-The third example establishes a WebSocket connection with the `/v1/synthesize` method that uses the indicated custom model to synthesize text passed over the connection:
+The third example establishes a WebSocket connection with the `/v1/synthesize` method. The request uses the indicated custom model to synthesize text that is passed over the connection.
 
 ```javascript
 var access_token = '{access_token}';
 var wsURI = '{ws_url}/v1/synthesize'
   + '?access_token=' + access_token
-  + '&voice=en-US_AllisonV3Voice';
+  + '&voice=en-US_AllisonV3Voice'
+  + '&customization_id=={customization_id}';
 var websocket = new WebSocket(wsURI);
 
 ```

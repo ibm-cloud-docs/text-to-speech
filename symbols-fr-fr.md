@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-09-22"
+lastupdated: "2021-10-04"
 
 subcollection: text-to-speech
 
@@ -21,12 +21,12 @@ The following sections describe the valid symbols for French.
 | SPR symbol | IPA symbol | IPA Unicode | Example words |
 |:----------:|:----------:|:-----------:|---------------|
 | a | a  \n   \n &#593;  \n   \n &#592; | 0061  \n   \n 0251  \n   \n 0250 | p**a**ttes, l**a**c, c**a**ve |
-| e | e | 0065 | caf**&eacute;**, d**&eacute;**form**e**r, **&eacute;**t**&eacute;** |
+| e | e | 0065 | caf**é**, d**é**form**e**r, **é**t**é** |
 | E | &#603;  \n   \n &#604; | 025B  \n   \n 025C | f**ai**te, m**ai**, h**e**rb |
 | i | i  \n   \n &#618; | 0069  \n   \n 026A | f**i**lm, t**y**p**i**que |
 | o | o | 006F | **eau**, **au**x, g**au**che |
-| c | &#596;  \n   \n &#594; | 0254  \n   \n 0252 | P**au**l, n**o**te, &eacute;chal**o**tte |
-| u | u  \n   \n &#650; | 0075  \n   \n 028A | r**ou**e, **o&ugrave;**, t**ou**r |
+| c | &#596;  \n   \n &#594; | 0254  \n   \n 0252 | P**au**l, n**o**te, échal**o**tte |
+| u | u  \n   \n &#650; | 0075  \n   \n 028A | r**ou**e, **où**, t**ou**r |
 | y | &#121;  \n   \n &#655; | 0079  \n   \n 028F | **u**tile, p**u**re, Br**u**no |
 | x [**1**] | &#601; | 0259 | litr**e**s, marbr**e** |
 | 'eu' | &#248;  \n   \n &#629; | 00F8  \n   \n 0275 | m**eu**gle, p**eu**, joy**eu**x |
@@ -46,27 +46,27 @@ The following sections describe the valid symbols for French.
 
 | SPR symbol | IPA symbol | IPA Unicode | Example words |
 |:----------:|:----------:|:-----------:|---------------|
-| b | b | 0062 | **b**&eacute;**b**&eacute;, **b**alle, ro**b**e |
-| p | p | 0070 | **p**orte, **p**r&ecirc;t, gu&ecirc;**p**e |
+| b | b | 0062 | **b**é**b**é, **b**alle, ro**b**e |
+| p | p | 0070 | **p**orte, **p**rêt, guê**p**e |
 | d | d | 0064 | **d**ort, **d**olmen |
-| t | t | 0074 | **t**on, pa**tt**e, th&eacute;&acirc;**t**re |
+| t | t | 0074 | **t**on, pa**tt**e, théâ**t**re |
 | g | g  \n   \n &#609; | 0067  \n   \n 0261 | **gu**erre, ba**gu**e, **g**arer |
 | k | k | 006B | **k**ilo, **c**aler, **qu**ai |
 | v | v | 0076 | la**v**er, **w**agon, **v**isiter |
 | f | f | 0066 | che**f**, **f**aim, **ph**are |
-| z | z | 007A | ja**s**er, r&eacute;**s**eau, **z**ig**z**aguer |
-| s | s | 0073 | **s**ans, ambi**t**ion, fa**&ccedil;**on |
-| Z | &#658; | 0292 | ra**g**e, **g**&icirc;te, **j**ouer |
-| S | &#643; | 0283 | **ch**eval, l&acirc;**ch**e, **sch**&eacute;ma |
+| z | z | 007A | ja**s**er, ré**s**eau, **z**ig**z**aguer |
+| s | s | 0073 | **s**ans, ambi**t**ion, fa**ç**on |
+| Z | &#658; | 0292 | ra**g**e, **g**îte, **j**ouer |
+| S | &#643; | 0283 | **ch**eval, lâ**ch**e, **sch**éma |
 | m | m | 006D | **m**a**m**an, fe**mm**e, **m**iser |
 | n | n | 006E | A**nn**e, **n**i, ma**n**iaque |
 | 'nj' | &#626; | 0272 | a**gn**eau, campa**gn**e |
 | 'ng' | &#331; | 014B | parki**ng**, campi**ng** |
 | r | r  \n   \n &#633;  \n   \n &#640;  \n   \n &#641;  \n   \n x  \n   \n &#967; | 0072  \n   \n 0279  \n   \n 0280  \n   \n 0281  \n   \n 0078  \n   \n 03C7 | pa**r**er, **r**a**r**e, ca**rr**eau |
-| l | l | 006C | **l**itre, i**ll**isible, p&acirc;**l**e |
-| j | j  \n   \n &#654; | 006A  \n   \n 028E | h**i**&eacute;rarchie, pa**ill**e, **y**oga |
-| w | w | 0077 | **ou**i, b**ou**&eacute;e, **w**att |
-| H | &#613; | 0265 | s**u**is, l**u**i, n**u**&eacute;e |
+| l | l | 006C | **l**itre, i**ll**isible, pâ**l**e |
+| j | j  \n   \n &#654; | 006A  \n   \n 028E | h**i**érarchie, pa**ill**e, **y**oga |
+| w | w | 0077 | **ou**i, b**ou**ée, **w**att |
+| H | &#613; | 0265 | s**u**is, l**u**i, n**u**ée |
 {: caption="Table 2. Consonants (French)"}
 
 ## Liaison
@@ -76,7 +76,7 @@ In French, the `_` (underscore) can be used following a word-final consonant (bu
 
 | SPR symbol | IPA symbol | IPA Unicode |
 |:----------:|:----------:|:-----------:|
-| _ | &#8255; | 0203F |
+| _ | &#8255; | 203F |
 {: caption="Table 3. Liaison (French)"}
 
 Examples of words with and without the liaison symbol follow:

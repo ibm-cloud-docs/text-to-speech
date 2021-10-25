@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-10-03"
+lastupdated: "2021-10-20"
 
 subcollection: text-to-speech
 
@@ -95,12 +95,16 @@ The service supports the European Union General Data Protection Regulation (GDPR
 
 For more information about these features and their use, see [Information security](/docs/text-to-speech?topic=text-to-speech-information-security).
 
-## CORS support
-{: #data-security-cors}
+## Request logging
+{: #data-security-request-logging}
 
-The service supports Cross-Origin Resource Sharing (CORS). By using CORS, web pages can request resources directly from a foreign domain. CORS circumvents the same-origin security policy, which otherwise prevents such requests. Because the service supports CORS, a web page can communicate directly with the service without passing the request through the web server that hosts the page.
+![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
 
-For instance, a web page that is loaded from a server in {{site.data.keyword.cloud}} can call the customization API directly, bypassing the {{site.data.keyword.cloud_notm}} server. For more information, see [enable-cors.org](https://enable-cors.org/){: external}.
+The service lets you control the default request logging that is performed for all {{site.data.keyword.watson}} services. The service logs request and response data only to improve the service for future users. The logged data is never shared or made public. No data can be exported from the service. For example, users must retain the data that they use for training custom prompts because it cannot be retrieved from the service.
+
+If you are concerned about the privacy of users' personal information or otherwise do not want your requests to be logged by {{site.data.keyword.IBM_notm}}, you can opt out of the default logging to prevent the service from logging your request and response data. If you opt out, the service logs *no* user data from your HTTP or WebSocket requests. No user data is written to disk.
+
+You can choose to opt out of logging at either the account level or the API request level. For more information, see [Controlling request logging for {{site.data.keyword.watson}} services](/docs/watson?topic=watson-gs-logging-overview).
 
 ## Data separation and encryption
 {: #data-security-encryption}
@@ -123,14 +127,12 @@ Users of Premium plans can also integrate with {{site.data.keyword.keymanagement
 
 Private network endpoints are supported for paid plans. Check the plan information for your service to learn about the plans that support private network endpoints. For more information, see [Public and private network endpoints](/docs/text-to-speech?topic=watson-public-private-endpoints).
 
-## Request logging
-{: #data-security-request-logging}
+## CORS support
+{: #data-security-cors}
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
+The service supports Cross-Origin Resource Sharing (CORS). By using CORS, web pages can request resources directly from a foreign domain. CORS circumvents the same-origin security policy, which otherwise prevents such requests. Because the service supports CORS, a web page can communicate directly with the service without passing the request through the web server that hosts the page.
 
-The service lets you control the default request logging that is performed for all {{site.data.keyword.watson}} services. The service logs request and response data only to improve the service for future users. The logged data is never shared or made public.
-
-If you are concerned about the privacy of users' personal information or otherwise do not want your requests to be logged by {{site.data.keyword.IBM_notm}}, you can opt out of the default logging to prevent the service from logging your request and response data. If you opt out, the service logs *no* user data from your requests, saving no text or audio to disk. You can choose to opt out of logging at either the account level or the API request level. For more information, see [Controlling request logging for {{site.data.keyword.watson}} services](/docs/watson?topic=watson-gs-logging-overview).
+For instance, a web page that is loaded from a server in {{site.data.keyword.cloud}} can call the customization API directly, bypassing the {{site.data.keyword.cloud_notm}} server. For more information, see [enable-cors.org](https://enable-cors.org/){: external}.
 
 ## FISMA support
 {: #data-security-fisma}

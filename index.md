@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-10-13"
+lastupdated: "2021-10-22"
 
 subcollection: text-to-speech
 
@@ -24,7 +24,7 @@ The service can be used in applications such as voice-automated chatbots, as wel
 
 -   ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}** for managed instances of {{site.data.keyword.texttospeechshort}} that are hosted on {{site.data.keyword.cloud_notm}} or for instances that are hosted on [IBM Cloud Pak for Data as a Service](https://dataplatform.cloud.ibm.com/docs/content/wsj/landings/wtts.html){: external}.
     -   For information about all service updates and known limitations, see the [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes).
-    -   For information about the latest service update, see [6 October 2021](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-6october2021) in the release notes.
+    -   For information about the latest service update, see [22 October 2021](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-22october2021) in the release notes.
 -   ![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}** for installed or on-premises instances of {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}. For links to information about installing and managing {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}, see [Installing {{site.data.keyword.ibmwatson_notm}} {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-speech-install-data).
     -   For information about all service updates and known limitations, see the [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes-data).
     -   For information about the latest service update, see [1 October 2021 (Version 1.1.x)](/docs/text-to-speech?topic=text-to-speech-release-notes-data#text-to-speech-data-1october2021) in the release notes.
@@ -59,10 +59,7 @@ The service synthesizes text to speech in many languages and dialects:
 -   Korean
 -   Portuguese (Brazilian)
 -   Spanish (Castilian, Latin American, and North American dialects)
-
-<!-- 21.13
 -   Swedish
--->
 
 The service offers female and male voices for different languages. All voices are neural voices. Different languages and voices are available for the different versions of the product. For more information, see [Using languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
 
@@ -82,6 +79,13 @@ The service produces audio in many popular formats:
 -   Basic audio
 
 Different formats support different sampling rates and other characteristics. For more information, see [Using audio formats](/docs/text-to-speech?topic=text-to-speech-audio-formats).
+
+## Beta features
+{: about-beta-features}
+
+{{site.data.keyword.IBM_notm}} occasionally releases features and language support that are classified as beta. Such features are provided so that you can evaluate their functionality. They might be unstable and are subject to change or removal with short notice. They are not intended for use in a production environment.
+
+Beta features might not provide the same level of performance or compatibility as generally available features. Generally available features are ready for use in a production environment.
 
 ## Pricing
 {: #about-pricing}

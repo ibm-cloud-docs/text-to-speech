@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-09-22"
+lastupdated: "2021-10-04"
 
 subcollection: text-to-speech
 
@@ -178,7 +178,7 @@ When the service synthesizes plain text, it returns all input characters except 
     ```
     {: codeblock}
 
-    In this case, the service returns timing information for the following strings: "*The*", "*&lt;phoneme&gt;*", "*was*", "*ripe.*"
+    In this case, the service returns timing information for the following strings: "*The*", "*\<phoneme\>*", "*was*", "*ripe.*"
 -   `<sub>` substitutes the text that is included in the element's `alias` attribute for the text that is enclosed between the opening and closing `<sub>` tags in the spoken audio. For example, the following input includes a single `<sub>` tag:
 
     ```xml
