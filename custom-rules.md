@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-09-30"
+lastupdated: "2021-11-22"
 
 subcollection: text-to-speech
 
@@ -111,6 +111,10 @@ Extra rules and a `part_of_speech` field apply to the creation of entries for wo
 -   A sounds-like translation can contain only *Katakana* characters. *Kanji* and *Hiragana* characters are not allowed.
 -   When you create a translation (sounds-like or phonetic) for a word, you can also specify an optional `part_of_speech` field to identify the word's part of speech. The service uses the part of speech to produce the correct intonation for the word. For a complete list, see [Japanese parts of speech](#partsOfSpeech).
 -   You can create only a single entry for any word, and you can specify only a single part of speech for any word. You cannot create multiple entries with different parts of speech (for instance, noun and verb) for the same word. Adding a translation for a word that exists in a model overwrites the word's existing translation, including its part of speech.
+
+    For improved naturalness of synthesized speech, do not create custom entries for long phrases. Create translations for single words or short phrases only. Note that other languages limit translation to single words only.
+    {: important}
+
 -   The service applies the longest matching word from the word/translation pairs that are defined for a custom model. For example, consider the following three entries for a custom model.
 
     ```json

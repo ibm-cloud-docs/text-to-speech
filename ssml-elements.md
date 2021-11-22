@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2020-09-22"
+lastupdated: "2020-11-22"
 
 subcollection: text-to-speech
 
@@ -190,16 +190,19 @@ The SSML specification also offers four attributes that the service does not sup
 
 The `pitch` attribute modifies the baseline pitch for the text within the element. Accepted values are
 
--   A number followed by the `Hz` (Hertz) designation: The baseline pitch is transposed (up or down) to the specified value.
--   A relative change value (in semitones): A number that causes an absolute shift from the current baseline. The number is preceded by `+` (an increase) or `-` (a decrease) and followed by `st` (semitones), for example, `+5st`.
--   A relative change in percent: A number that causes a relative shift from the current baseline. The number is preceded by `+` (an increase) or `-` (a decrease) and followed by `%` (percent sign), for example, `-10%`.
--   One of the following six keywords, which modify the pitch to the corresponding predefined values:
+-   _A number followed by the `Hz` (Hertz) designation:_ The baseline pitch is transposed (up or down) to the specified value. For example, `150Hz`.
+-   _A relative change value (in semitones):_ A number that causes an absolute shift from the current baseline. The number is preceded by `+` (an increase) or `-` (a decrease) and followed by `st` (semitones). For example, `+5st`.
+-   _A relative change in percent:_ A number that causes a relative shift from the current baseline. The number is preceded by `+` (an increase) or `-` (a decrease) and followed by `%` (percent sign). For example, `-10%`.
+-   _A keyword:_ One of the following six keywords, which modify the pitch to the corresponding predefined values:
     -   `default` uses the service's default baseline pitch.
     -   `x-low` shifts the pitch baseline down by 12 semitones.
     -   `low` shifts the pitch baseline down by six semitones.
     -   `medium` produces the same behavior as `default`.
     -   `high` shifts the pitch baseline up by six semitones.
     -   `x-high` shifts the pitch baseline up by 12 semitones.
+
+    Make adjustments based on percentages and experiment with different values to determine what works best for you. When lowering the pitch, do not exceed a value of `-50%`. When raising the pitch, do not exceed a value of `+100%`, which doubles the baseline pitch and represents an absolute limit that is quite extreme. Whether lowering or raising the pitch, experiment with incremental changes before trying the extreme values.
+    {: tip}
 
     ```xml
     <speak version="1.0">
