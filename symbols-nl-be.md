@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-10-04"
+lastupdated: "2021-11-08"
 
 subcollection: text-to-speech
 
@@ -13,9 +13,7 @@ subcollection: text-to-speech
 # Dutch (Belgian) symbols
 {: #beSymbols}
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
-
-The following sections describe the valid symbols for Belgian Dutch (Flemish).
+The service supports the following symbols for Belgian Dutch (Flemish).
 
 ## Regular vowels
 {: #beRegularVowels}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-10-19"
+lastupdated: "2021-11-08"
 
 subcollection: text-to-speech
 
@@ -13,7 +13,7 @@ subcollection: text-to-speech
 # Understanding phonetic symbols
 {: #symbols}
 
-The {{site.data.keyword.texttospeechfull}} service supports both the standard International Phonetic Alphabet (IPA) and {{site.data.keyword.IBM}} Symbolic Phonetic Representation (SPR) notations to represent the sounds of words. Both notations provide phonetic coding that represents the pronunciation of a word, the sounds that make up the word, how the sounds are divided into syllables, and which syllables are stressed. [Language support for SPR and IPA](#supportedLanguages) provides links to pages that document the allowable phonetic symbols for each language.
+The {{site.data.keyword.texttospeechfull}} service supports both the standard International Phonetic Alphabet (IPA) and {{site.data.keyword.IBM}} Symbolic Phonetic Representation (SPR) notations to represent the sounds of words. Both notations provide phonetic coding that represents the pronunciation of a word, the sounds that make up the word, how the sounds are divided into syllables, and which syllables are stressed. [Language support for IPA and SPR](#supportedLanguages) provides links to pages that document the allowable phonetic symbols for each language.
 {: shortdesc}
 
 ## Defining a word pronunciation
@@ -124,22 +124,22 @@ Table 2 lists language-specific considerations that apply to specifying syllable
 | Spanish | SPR and IPA | You can specify only `1` (primary stress). An error occurs if you specify secondary or no stress. |
 {: caption="Table 2. Language-specific rules for using syllable stress"}
 
-## Language support for SPR and IPA
+## Language support for IPA and SPR
 {: #supportedLanguages}
 {: help}
 {: support}
 
-Table 3 shows the service's language support for SPR and IPA symbols. All neural voices support IPA; enhanced neural voices also support SPR. For more information, see [Neural voice technology](/docs/text-to-speech?topic=text-to-speech-voices#neural-voices).
+Table 3 shows the service's language support for IPA and SPR symbols. All neural voices support IPA; enhanced neural voices also support SPR. For more information, see [Neural voice technology](/docs/text-to-speech?topic=text-to-speech-voices#neural-voices).
 
 The table provides links to pages that document the supported SPR symbols, IPA symbols, and equivalent IPA Unicode values that can be used with all voices for each language. The pages provide examples of each symbol in words from the language. Because of dialectal differences, the examples might not always match your pronunciation.
 
-| Language | Availability | Supports SPR | Supports IPA |
+| Language | Availability | Supports IPA | Supports SPR |
 |----------|:------------:|:------------:|:------------:|
-| [Arabic symbols](/docs/text-to-speech?topic=text-to-speech-arSymbols) | IBM Cloud only | No | Yes |
-| [Chinese (Mandarin) symbols](/docs/text-to-speech?topic=text-to-speech-zhSymbols) | IBM Cloud only | No | Yes |
-| [Dutch (Belgian) symbols](/docs/text-to-speech?topic=text-to-speech-beSymbols) | IBM Cloud only | No | Yes |
-| [Dutch (Netherlands) symbols](/docs/text-to-speech?topic=text-to-speech-nlSymbols) | IBM Cloud only | No | Yes |
-| [English (Australian) symbols](/docs/text-to-speech?topic=text-to-speech-auSymbols) | IBM Cloud only | No | Yes |
+| [Arabic symbols](/docs/text-to-speech?topic=text-to-speech-arSymbols) | All versions | Yes | No |
+| [Chinese (Mandarin) symbols](/docs/text-to-speech?topic=text-to-speech-zhSymbols) | All versions | Yes | No |
+| [Dutch (Belgian) symbols](/docs/text-to-speech?topic=text-to-speech-beSymbols) | All versions | Yes | No |
+| [Dutch (Netherlands) symbols](/docs/text-to-speech?topic=text-to-speech-nlSymbols) | All versions | Yes | No |
+| [English (Australian) symbols](/docs/text-to-speech?topic=text-to-speech-auSymbols) | All versions | Yes | No |
 | [English (United Kingdom) symbols](/docs/text-to-speech?topic=text-to-speech-gbSymbols) | All versions | Yes | Yes |
 | [English (United States) symbols](/docs/text-to-speech?topic=text-to-speech-usSymbols) | All versions | Yes | Yes |
 | [French (Canadian) symbols](/docs/text-to-speech?topic=text-to-speech-caSymbols) | All versions | Yes | Yes |
@@ -147,8 +147,8 @@ The table provides links to pages that document the supported SPR symbols, IPA s
 | [German symbols](/docs/text-to-speech?topic=text-to-speech-deSymbols) | All versions | Yes | Yes |
 | [Italian symbols](/docs/text-to-speech?topic=text-to-speech-itSymbols) | All versions | Yes | Yes |
 | [Japanese symbols](/docs/text-to-speech?topic=text-to-speech-jaSymbols) | All versions | Yes | Yes |
-| [Korean symbols](/docs/text-to-speech?topic=text-to-speech-koSymbols) | IBM Cloud only | No | Yes |
+| [Korean symbols](/docs/text-to-speech?topic=text-to-speech-koSymbols) | All versions | Yes | No |
 | [Portuguese (Brazilian) symbols](/docs/text-to-speech?topic=text-to-speech-ptSymbols) | All versions | Yes | Yes |
 | [Spanish symbols](/docs/text-to-speech?topic=text-to-speech-esSymbols) | All versions | Yes | Yes |
-| [Swedish symbols](/docs/text-to-speech?topic=text-to-speech-svSymbols) | IBM Cloud only | No | Yes |
-{: caption="Table 3. Language support for phonetic symbols"}
+| [Swedish symbols](/docs/text-to-speech?topic=text-to-speech-svSymbols) | All versions | Yes | No |
+{: caption="Table 3. Language support for IPA and SPR phonetic symbols"}

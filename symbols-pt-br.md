@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-10-04"
+  years: 2015, 2021
+lastupdated: "2021-11-08"
 
 subcollection: text-to-speech
 
@@ -13,7 +13,7 @@ subcollection: text-to-speech
 # Portuguese (Brazilian) symbols
 {: #ptSymbols}
 
-The following sections describe the valid symbols for Brazilian Portuguese.
+The service supports the following symbols for Brazilian Portuguese.
 
 ## Regular vowels
 {: #ptRegularVowels}

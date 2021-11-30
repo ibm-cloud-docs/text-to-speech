@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-10-04"
+lastupdated: "2021-11-08"
 
 subcollection: text-to-speech
 
@@ -13,7 +13,7 @@ subcollection: text-to-speech
 # French (Canadian) symbols
 {: #caSymbols}
 
-The following sections describe the valid symbols for Canadian French.
+The service supports the following symbols for Canadian French.
 
 ## Vowels
 {: #caVowels}

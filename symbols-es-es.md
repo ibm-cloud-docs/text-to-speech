@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-10-04"
+  years: 2015, 2021
+lastupdated: "2021-11-08"
 
 subcollection: text-to-speech
 
@@ -13,7 +13,7 @@ subcollection: text-to-speech
 # Spanish symbols
 {: #esSymbols}
 
-The following sections describe the valid symbols for Spanish. The information applies to the Castilian, Latin American, and North American dialects. Except where noted, the dialects are identical.
+The service supports the following symbols for Spanish. The information applies to the Castilian, Latin American, and North American dialects. Except where noted, the dialects are identical.
 
 ## Regular vowels
 {: #esReducedVowels}

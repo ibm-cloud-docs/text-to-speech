@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-10-04"
+lastupdated: "2021-11-08"
 
 subcollection: text-to-speech
 
@@ -13,9 +13,7 @@ subcollection: text-to-speech
 # Dutch (Netherlands) symbols
 {: #nlSymbols}
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
-
-The following sections describe the valid symbols for Netherlands Dutch.
+The service supports the following symbols for Netherlands Dutch.
 
 ## Regular vowels
 {: #nlRegularVowels}
