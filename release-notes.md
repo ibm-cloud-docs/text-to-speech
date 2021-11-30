@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-10-22"
+lastupdated: "2021-11-08"
 
 keywords: text to speech release notes,text to speech for IBM cloud release notes
 
@@ -30,7 +30,7 @@ For information about releases and updates for {{site.data.keyword.icp4dfull_not
 
 The service has the following known limitations:
 
--   **2 December 2020:** Cross-Origin Resource Sharing (CORS) support is not available from the Mozilla Firefox™ browser for voices in the following languages: Arabic, Australian English, Chinese, Dutch (Belgian and Netherlands), and Korean.
+-   **2 December 2020:** Cross-Origin Resource Sharing (CORS) support is not available from the Mozilla Firefox™ browser for voices in the following languages: Arabic, Australian English, Chinese, Dutch (Belgian and Netherlands), Korean, and Swedish.
 -   **22 August 2019:** When you specify the `audio/ogg;codecs=opus` audio format, you can optionally specify a sampling rate other than the default 48,000 Hz. However, although the service accepts `48000`, `24000`, `16000`, `12000`, or `8000` as a valid sampling rate, it currently disregards a specified value and always returns the audio with a sampling rate of 48 kHz.
 
 ## 22 October 2021
@@ -40,10 +40,10 @@ The service has the following known limitations:
 Multiple neural voice improvements
 :   The existing neural voices for Chinese, Dutch (Belgian and Netherlands), Australian English, and Korean have been updated for improved speech synthesis and enhanced audio results. For more information about all available voices, see [Using languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
 
-New Australian English voice
+New Australian English neural voice
 :   A new male Australian English voice, `en-AU_SteveVoice`, is now available. The voice is a neural voice. For more information about the IPA symbols for the language, see [English (Australian) symbols](/docs/text-to-speech?topic=text-to-speech-auSymbols).
 
-New Swedish voice
+New Swedish neural voice
 :   A new language, Swedish, with a new female voice, `sv-SE_IngridVoice`, is now available. The voice is a neural voice. For more information about the IPA symbols for the language, see [Swedish symbols](/docs/text-to-speech?topic=text-to-speech-svSymbols).
 
 ## 6 October 2021
@@ -53,14 +53,14 @@ New Swedish voice
 New US HIPAA support for Premium plans in Dallas location
 :   US Health Insurance Portability and Accountability Act (HIPAA) support is now available for Premium plans that are hosted in the Dallas (`us-south`) location. For more information, see [Health Insurance Portability and Accountability Act (HIPAA)](/docs/text-to-speech?topic=text-to-speech-information-security#hipaa).
 
-Defect fix for Latin American Spanish voice
+Defect fix for Latin American Spanish enhanced neural voice
 :   **Defect fix:** For the Latin American Spanish voice (`es-LA_SofiaV3Voice`), questions of all types now use the correct intonation.
 
 ## 16 September 2021
 {: #text-to-speech-16september2021}
 {: release-note}
 
-Defect fix for Castilian Spanish and North American Spanish voices
+Defect fix for Castilian Spanish and North American Spanish enhanced neural voices
 :   **Defect fix:** For the Castilian Spanish (`es-ES_EnriqueV3Voice` and `es-ES_LauraV3Voice`) and North American Spanish (`es-US_SofiaV3Voice`) voices, questions of all types now use the correct intonation. For the Latin American Spanish voice (`es-LA_SofiaV3Voice`), some questions do not use the correct intonation and sound instead like statements. The Latin American Spanish voice will be fixed soon.
 
 ## 16 July 2021

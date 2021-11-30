@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2021-10-19"
+  years: 2021
+lastupdated: "2021-11-08"
 
 subcollection: text-to-speech
 
@@ -13,7 +13,7 @@ subcollection: text-to-speech
 # Swedish symbols
 {: #svSymbols}
 
-The following sections describe the valid symbols for Swedish.
+The service supports the following symbols for Swedish.
 
 ## Monophthong
 {: #svMonophthongs}

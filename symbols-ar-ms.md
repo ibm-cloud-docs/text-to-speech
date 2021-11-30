@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-09-22"
+  years: 2019, 2021
+lastupdated: "2021-11-08"
 
 subcollection: text-to-speech
 
@@ -13,9 +13,7 @@ subcollection: text-to-speech
 # Arabic symbols
 {: #arSymbols}
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
-
-The following sections describe the valid symbols for Arabic. (Unlike other languages, significant symbols in example words for Arabic are not highlighted.)
+The service supports the following symbols for Arabic. (Unlike other languages, significant symbols in example words for Arabic are not highlighted.)
 
 ## Vowels
 {: #arVowels}

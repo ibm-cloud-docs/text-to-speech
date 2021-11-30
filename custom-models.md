@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-10-20"
+lastupdated: "2021-11-09"
 
 subcollection: text-to-speech
 
@@ -70,6 +70,9 @@ You pass the following attributes as a JSON object with the body of a `POST /v1/
 
 `language` (*optional* string)
 :   An identifier for the language of the custom model. The default is `en-US` for US English. The custom model can be used with any voice that is available in the specified language. For example, a custom model that is created for the `en-US` language can be used with any US English voice. It cannot, however, be used with an `en-GB` or `en-AU` voice.
+
+    ![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}** If you install the neural voices, the `language` parameter is required. You must use the parameter to specify a language. The request fails if you do not specify a language.
+    {: important}
 
 `description` (*optional* string)
 :   A description of the new model. Although it is optional, a description is highly recommended.

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-09-22"
+  years: 2015, 2021
+lastupdated: "2021-11-17"
 
 subcollection: text-to-speech
 
@@ -13,7 +13,7 @@ subcollection: text-to-speech
 # English (United States) symbols
 {: #usSymbols}
 
-The following sections describe the valid symbols for United States (US) English.
+The service supports the following symbols for United States (US) English.
 
 ## Regular vowels
 {: #usRegularVowels}
@@ -84,6 +84,6 @@ The following sections describe the valid symbols for United States (US) English
 | y | j | 006A | **y**es, Virgin**i**a |
 | M | &#109;&#809; | 006D+0329 | h**mmm** |
 | ? (glottal stop) | &#660; | 0294 | ki**tt**en, La**t**in |
-| F (flap) | &#638; | 027E | wri**t**er, fi**dd**le |
+| F (flap) | &#638; | 027E | wri**t**er, fi**dd**le, li**tt**le |
 | N (syllabic nasal) | &#110;&#809; | 006E+0329 | butt**on**, sat**in**, eat**en**, burd**en** |
 {: caption="Table 4. Consonants (US English)"}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-09-22"
+lastupdated: "2021-11-08"
 
 keywords: text to speech,IBM cloud,getting started,tutorial,synthesize audio,speech synthesis
 
@@ -83,7 +83,7 @@ This tutorial uses the `curl` command to call methods of the service's HTTP inte
 {: #getting-started-synthesize-english}
 {: step}
 
-The following command use the `POST /v1/synthesize` method to synthesize US English input to audio. The request uses the default voice, `en-US_MichaelV3Voice`, and produces audio in the WAV format.
+The following command use the `POST /v1/synthesize` method to synthesize US English input to audio. The request uses the voice `en-US_MichaelV3Voice`. It produces audio in the WAV format.
 
 1.  Issue the following command to synthesize the string "hello world". The request produces a WAV file that is named `hello_world.wav`.
 
@@ -97,7 +97,7 @@ The following command use the `POST /v1/synthesize` method to synthesize US Engl
     --header "Accept: audio/wav" \
     --data "{\"text\":\"hello world\"}" \
     --output hello_world.wav \
-    "{url}/v1/synthesize"
+    "{url}/v1/synthesize?voice=en-US_MichaelV3Voice"
     ```
     {: pre}
 
@@ -113,7 +113,7 @@ The following command use the `POST /v1/synthesize` method to synthesize US Engl
     --header "Accept: audio/wav" \
     --data "{\"text\":\"hello world\"}" \
     --output hello_world.wav \
-    "{url}/v1/synthesize"
+    "{url}/v1/synthesize?voice=en-US_MichaelV3Voice"
     ```
     {: pre}
 

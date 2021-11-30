@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-09-22"
+  years: 2015, 2021
+lastupdated: "2021-11-08"
 
 subcollection: text-to-speech
 
@@ -13,7 +13,7 @@ subcollection: text-to-speech
 # Italian symbols
 {: #itSymbols}
 
-The following sections describe the valid symbols for Italian.
+The service supports the following symbols for Italian.
 
 ## Regular vowels
 {: #itRegularVowels}

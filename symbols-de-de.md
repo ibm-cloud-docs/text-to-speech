@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-10-14"
+lastupdated: "2021-11-08"
 
 subcollection: text-to-speech
 
@@ -13,7 +13,7 @@ subcollection: text-to-speech
 # German symbols
 {: #deSymbols}
 
-The following sections describe the valid symbols for German.
+The service supports the following symbols for German.
 
 ## Regular vowels
 {: #deRegularVowels}
@@ -103,11 +103,6 @@ Nasalized vowels in French occur mostly in foreign loan words.
 | ? (glottal stop) | &#660; | 0294 | **e**r**o**bern (IPA `ʔɛɐˈʔoːbɐn`) |
 | | | | **e**rinnern (IPA `ʔɛɐˈʁɪnɐn`) |
 {: caption="Table 5. Consonants (German)"}
-
-<!--
-_er_obern &#660;&#603;&#592;&#712;&#660;&#111;&#720;&#98;&#592;&#110;
-_erinnern &#660;&#603;&#592;&#712;&#641;&#618;&#110;&#592;&#110;
--->
 
 **Notes:**
 

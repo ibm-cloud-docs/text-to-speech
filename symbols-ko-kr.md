@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-05-04"
+lastupdated: "2021-11-08"
 
 subcollection: text-to-speech
 
@@ -13,9 +13,7 @@ subcollection: text-to-speech
 # Korean symbols
 {: #koSymbols}
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
-
-The following sections describe the valid symbols for Korean.
+The service supports the following symbols for Korean.
 
 ## Monophthongs
 {: #koMonophthongs}

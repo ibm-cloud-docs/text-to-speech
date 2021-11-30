@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-10-08"
+  years: 2015, 2021
+lastupdated: "2021-11-08"
 
 subcollection: text-to-speech
 
@@ -13,7 +13,7 @@ subcollection: text-to-speech
 # Japanese symbols
 {: #jaSymbols}
 
-The following sections describe the valid symbols for Japanese. The significant symbols in example Japanese words are shown in **bold**.
+The service supports the following symbols for Japanese. The significant symbols in example Japanese words are shown in **bold**.
 
 ## Vowels and marks
 {: #jaVowelsMarks}

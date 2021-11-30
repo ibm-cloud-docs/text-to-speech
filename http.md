@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-10-18"
+lastupdated: "2021-11-08"
 
 subcollection: text-to-speech
 
@@ -36,7 +36,7 @@ The two versions of the `/v1/synthesize` method have the following parameters in
 :   Specifies the requested audio format, or MIME type, in which the service is to return the audio. You can also specify this value with the HTTP `Accept` request header. URL-encode the argument to the `accept` query parameter. For more information, see [Using audio formats](/docs/text-to-speech?topic=text-to-speech-audio-formats).
 
 `voice` (query parameter, *optional* string
-:   Specifies the voice in which the text is to be spoken in the audio. Use the `/v1/voices` method to get the current list of supported voices. The default voice is `en-US_MichaelV3Voice`. For more information, see [Using languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
+:   Specifies the voice in which the text is to be spoken in the audio. Use the `/v1/voices` method to get the current list of supported voices. Omit the parameter to use the default voice. For more information, see [Using languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
 
 `customization_id` (query parameter, *optional* string)
 :   Specifies a globally unique identifier (GUID) for a custom model that is to be used for the synthesis. A specified custom model must match the language of the voice that is used for the synthesis. If you include a customization ID, you must make the request with credentials for the instance of the service that owns the custom model. Omit the parameter to use the specified voice with no customization. For more information, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
@@ -66,7 +66,7 @@ Both the `POST` and `GET /v1/synthesize` methods accept plain input text or text
     --header "Accept: audio/wav" \
     --output hello_world.wav \
     --data "{\"text\":\"Hello world\"}" \
-    "{url}/v1/synthesize"
+    "{url}/v1/synthesize?voice=en-US_MichaelV3Voice"
     ```
     {: pre}
 
@@ -79,7 +79,7 @@ Both the `POST` and `GET /v1/synthesize` methods accept plain input text or text
     --header "Accept: audio/wav" \
     --output hello_world.wav \
     --data "{\"text\":\"Hello world\"}" \
-    "{url}/v1/synthesize"
+    "{url}/v1/synthesize?voice=en-US_MichaelV3Voice"
     ```
     {: pre}
 
@@ -91,7 +91,7 @@ Both the `POST` and `GET /v1/synthesize` methods accept plain input text or text
     curl -X GET -u "apikey:{apikey}" \
     --header "Accept: audio/wav" \
     --output hello_world.wav \
-    "{url}/v1/synthesize?text=Hello%20world"
+    "{url}/v1/synthesize?text=Hello%20world&voice=en-US_MichaelV3Voice"
     ```
     {: pre}
 
@@ -102,7 +102,7 @@ Both the `POST` and `GET /v1/synthesize` methods accept plain input text or text
     --header "Authorization: Bearer {token}" \
     --header "Accept: audio/wav" \
     --output hello_world.wav \
-    "{url}/v1/synthesize?text=Hello%20world"
+    "{url}/v1/synthesize?text=Hello%20world&voice=en-US_MichaelV3Voice"""
     ```
     {: pre}
 

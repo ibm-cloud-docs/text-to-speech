@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-10-19"
+lastupdated: "2021-11-30"
 
 keywords: text to speech release notes,text to speech for IBM cloud pak for data release notes
 
@@ -30,6 +30,88 @@ For information about releases and updates for {{site.data.keyword.cloud_notm}},
 
 -   **30 August 2019:** When you specify the `audio/ogg;codecs=opus` audio format, you can optionally specify a sampling rate other than the default 48,000 Hz. However, while the service accepts `48000`, `24000`, `16000`, `12000`, or `8000` as a valid sampling rate, it currently disregards a specified value and always returns the audio with a sampling rate of 48 kHz.
 
+## 30 November 2021 (Version 4.0.3)
+{: #text-to-speech-data-30november2021}
+
+Version 4.0.3 is now available
+:   {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} version 4.0.3 is now available. This version supports {{site.data.keyword.icp4dfull_notm}} version 4.x and Red Hat OpenShift versions 4.6 and 4.8. For more information about installing and managing the service, see [Installing {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.0?topic=speech-installing-watson-text){: external}.
+
+License Server now a mandatory prerequisite
+:   You must now install the License Server from the {{site.data.keyword.icp4dfull_notm}} foundational services. You must install the License Server by using the YAML content that is provided to create an OperandRequest with the necessary bindings. You must also install the License Service in the same namespace as the service (operand), which is also where {{site.data.keyword.icp4dfull_notm}} is installed. For more information, see [Installing {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.0?topic=speech-installing-watson-text){: external}.
+
+New support for in-place upgrade
+:   The service now supports in-place, operator-based upgrade from version 4.0.0 to version 4.0.3. Moving from {{site.data.keyword.icp4dfull_notm}} version 3.5 to version 4.0.3 continues to require use of migration utilities. For more information, see [Upgrading {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.0?topic=speech-upgrading-watson-text){: external}.
+
+EDB PostgreSQL operator and license installation changes
+:   Installation, upgrade, and uninstallation for the Enterprise DB PostgreSQL operator and license have changed:
+    -   Instructions for installing the EDB PostgreSQL operator and license are now included with the {{site.data.keyword.icp4dfull_notm}} foundational services. The instructions for installing the Speech services have been updated accordingly. For more information, see [Installing {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.0?topic=speech-installing-watson-text){: external}.
+    -   Instructions for upgrading from {{site.data.keyword.texttospeechshort}} version 4.0.0 to 4.0.3 include instructions for uninstalling the previous EDB PostgreSQL operator and license and reinstalling them with the {{site.data.keyword.icp4dfull_notm}} foundational services. For more information, see [Upgrading {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.0?topic=speech-upgrading-watson-text){: external}.
+    -   Instructions for uninstalling the Speech services now include steps for removing the EDB PostgreSQL operator and license that were previously installed with  {{site.data.keyword.texttospeechshort}}. For more information, see [Uninstalling {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.0?topic=speech-uninstalling-watson-text){: external}.
+
+New guidance for scaling up your installation
+:   The service now provides updated guidance about scaling up your installation. The information includes specifying the number of pods and the maximum number of concurrent sessions for enhanced neural or neural voices. For more information, see [Administering {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.0?topic=speech-administering-watson-text){: external}.
+
+Command-line updates to import and export utilities
+:   The commands that are used with the import and export utilities for the Speech services include new options and arguments. The import and export utilities are also the foundation for backing up and restoring the services and for migrating from {{site.data.keyword.icp4dfull_notm}} version 3.5 to version 4.0.3. For more information about using the utilities, see
+
+    -   [Administering {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.0?topic=speech-administering-watson-text){: external}
+    -   [Upgrading {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.0?topic=speech-upgrading-watson-text){: external}
+
+New property for managing concurrency and speech synthesis
+:   The new `global.ttsVoiceMarginalCPU` property manages the tradeoff between concurrency and speech synthesis speed. The default value of 400 offers a reasonable balance for most customers and maintains real-time synthesis. For information about modifying this value to suit your needs, contact IBM Support.
+
+New support for neural voices
+:   All neural voices that are currently available for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}} are now also available for installation on {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}. The following languages and voices are now available:
+
+    -   *Arabic:* `ar-MS_OmarVoice`
+    -   *Chinese (Mandarin):* `zh-CN_LiNaVoice`, `zh-CN_WangWeiVoice`, and `zh-CN_ZhangJingVoice`
+    -   *Dutch (Belgian):* `nl-BE_AdeleVoice`
+    -   *Dutch (Netherlands):* `nl-NL_EmmaVoice` and `nl-NL_LiamVoice`
+    -   *English (Australian):* `en-AU_CraigVoice`, `en-AU_MadisonVoice`, and `en-AU_SteveVoice`
+    -   *Korean:* `ko-KR_HyunjunVoice`, `ko-KR_SiWooVoice`, `ko-KR_YoungmiVoice`, and `ko-KR_YunaVoice`
+    -   *Swedish:* `sv-SE_IngridVoice`
+
+    For more information about all available languages and voices, see [Using laguages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
+
+Installing voices
+:   You can install either the enhanced neural voices or the neural voices. You can install only one of the two types of voices. When you install the service, you use the `voiceType` property of the custom resource to indicate the voices that are to be installed:
+
+    -   Specify `enhancedNeuralVoices` to install the enhanced neural voices. You must then specify the individual enhanced neural voices that are to be installed. By default, only `en-US_AllisonV3Voice`, `en-US_LisaV3Voice`, and `en-US_MichaelV3Voice` are installed. You can choose to install these default voices, these and other voices, or just other voices. Only the voices that you install are available.
+    -   Specify `neuralVoices` to install the neural voices. All of the neural voices are installed and available. You cannot refine the list of installed voices.
+
+    For more information about using the custom resource to install voices, see [Installing {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.0?topic=speech-installing-watson-text){: external}.
+
+Specifying a voice for speech synthesis
+:   Both the HTTP `POST` and `GET /v1/synthesize` methods, as well as the WebSocket `/v1/synthesize` method, accept an optional `voice` query parameter that you use to specify the voice that is to be used for speech synthesis. If you omit the `voice` parameter, the service uses a default voice, which depends on the version of the service that you are using:
+
+    -   ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}** The service always uses the US English `en-US_MichaelV3Voice` by default.
+    -   ![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}** The default voice depends on the voices that you installed:
+
+        -   *If you installed the enhanced neural voices,* the service uses the US English `en-US_MichaelV3Voice` by default. If that voice is not installed, you must specify a voice.
+        -   *If you installed the neural voices,* the service always uses the Australian English `en-AU_MadisonVoice` by default.
+
+    For more information, see [Specifying a voice for speech synthesis](/docs/text-to-speech?topic=text-to-speech-voices#specify-voice).
+
+Specifying a language for a custom model
+:   You use the `POST /v1/customizations` method to create a custom model. The method includes a `language` parameter that you use to identify the language of the new custom model.
+
+    -   *If you installed the enhanced neural voices,* the `language` parameter is optional. By default, the service uses the `en-US` identifier for the language.
+    -   *If you installed the neural voices,* the `language` parameter is required. You must specify the language for the custom model in the indicated format (for example, `en-AU` for Australian English).
+
+    For more information about specifying a language when you create a custom model, see [Creating a custom model](/docs/text-to-speech?topic=text-to-speech-customModels#cuModelsCreate).
+
+Defect fix for Spanish enhanced neural voices
+:   **Defect fix:** For the Castilian Spanish (`es-ES_EnriqueV3Voice` and `es-ES_LauraV3Voice`), Latin American Spanish (`es-LA_SofiaV3Voice`), and North American Spanish (`es-US_SofiaV3Voice`) voices, questions of all types now use the correct intonation. The voices previously did not use the correct intonation for some questions, instead pronouncing them like statements.
+
+Defect fix for multitenancy documentation
+:   The {{site.data.keyword.icp4dfull_notm}} topic [Multitenancy support](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.0?topic=planning-multitenancy-support){: external} incorrectly stated that the Speech services do not support multitenancy. The topic has been updated to state that the Speech services support the following operations:
+
+    -   Install the service in separate projects
+    -   Install the service multiple times in the same project
+    -   Install the service once and deploy multiple instances in the same project
+
+    The documentation that is specific to the Speech services correctly stated the multitenancy support.
+
 ## 1 October 2021 (Version 1.1.x)
 {: #text-to-speech-data-1october2021}
 
@@ -40,7 +122,7 @@ Version 1.1.x is out of service
 {: #text-to-speech-data-29july2021}
 
 Version 4.0.0 is available
-:   {{site.data.keyword.texttospeechfull}} for {{site.data.keyword.icp4dfull}} version 4.0.0 is now available.  Installation and administration of the service include many changes. This version supports {{site.data.keyword.icp4dfull_notm}} version 4.x and Red Hat OpenShift version 4.6. For more information about installing and managing the service, see [Installing {{site.data.keyword.ibmwatson_notm}} {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-speech-install-data).
+:   {{site.data.keyword.texttospeechfull}} for {{site.data.keyword.icp4dfull}} version 4.0.0 is now available. Installation and administration of the service include many changes. This version supports {{site.data.keyword.icp4dfull_notm}} version 4.x and Red Hat OpenShift version 4.6. For more information about installing and managing the service, see [Installing {{site.data.keyword.ibmwatson_notm}} {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-speech-install-data).
 
 Enhanced neural voices
 :   To optimize the overall quality of voice synthesis, all available voices are now *enhanced neural voices*. Enhanced neural voices, which include the string `V3` in their names, are now available for Brazilian Portuguese, United Kingdom and United States English, French, German, Italian, Japanese, and Spanish (all dialects).
@@ -129,7 +211,7 @@ New installation instructions
 :   For both clusters connected to the internet and air-gapped clusters, the installation instructions include the following steps:
     -   Use the `oc label` command to set up required labels for the namespace where {{site.data.keyword.icp4dfull_notm}} is installed.
     -   Use the `oc project` command to ensure that you are pointing at the correct OpenShift project.
-    -   Use the `cpd-cli install` command to install an EnterpriseDB PostgreSQL server that is used by the Speech services.
+    -   Use the `cpd-cli install` command to install an Enterprise DB PostgreSQL server that is used by the Speech services.
 
     You perform these steps before you install the Speech services. For more information, see [Installing the {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}} service](https://www.ibm.com/support/knowledgecenter/SSQNUZ_3.5.0/svc-speech/stt-svc-install.html){: external}.
 

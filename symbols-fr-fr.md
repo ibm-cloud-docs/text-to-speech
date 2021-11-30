@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-10-04"
+lastupdated: "2021-11-08"
 
 subcollection: text-to-speech
 
@@ -13,7 +13,7 @@ subcollection: text-to-speech
 # French (France) symbols
 {: #frSymbols}
 
-The following sections describe the valid symbols for French.
+The service supports the following symbols for French.
 
 ## Vowels
 {: #frVowels}

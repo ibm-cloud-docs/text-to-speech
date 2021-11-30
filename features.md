@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-05-07"
+lastupdated: "2021-11-08"
 
 subcollection: text-to-speech
 
@@ -19,7 +19,7 @@ You can access the speech synthesis capabilities of the {{site.data.keyword.text
 ## Using languages and voices
 {: #features-languages-voices}
 
-The service supports speech synthesis with voices for the many languages listed in [Language support](/docs/speech-to-text?topic=speech-to-text-about#about-languages). Some languages are supported for {{site.data.keyword.cloud}} only. For information about the supported languages and voices, see [Using languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
+The service supports speech synthesis with voices for the many languages listed in [Language support](/docs/speech-to-text?topic=speech-to-text-about#about-languages). For different languages, the service offers female voices, male voices, or both. Some languages and voices might be supported for {{site.data.keyword.cloud}} only. For information about the supported languages and voices, see [Using languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
 
 ## Using audio formats
 {: #features-audio-formats}
