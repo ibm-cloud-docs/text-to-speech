@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-11-08"
+lastupdated: "2021-12-03"
 
 keywords: text to speech release notes,text to speech for IBM cloud release notes
 
@@ -33,6 +33,23 @@ The service has the following known limitations:
 -   **2 December 2020:** Cross-Origin Resource Sharing (CORS) support is not available from the Mozilla Firefox™ browser for voices in the following languages: Arabic, Australian English, Chinese, Dutch (Belgian and Netherlands), Korean, and Swedish.
 -   **22 August 2019:** When you specify the `audio/ogg;codecs=opus` audio format, you can optionally specify a sampling rate other than the default 48,000 Hz. However, although the service accepts `48000`, `24000`, `16000`, `12000`, or `8000` as a valid sampling rate, it currently disregards a specified value and always returns the audio with a sampling rate of 48 kHz.
 
+## 3 December 2021
+{: #text-to-speech-3december2021}
+{: release-note}
+
+New Czech neural voice: `cs-CZ_AlenaVoice`
+:   A new language, Czech, with a new female voice, `cs-CZ_AlenaVoice`, is now available. The voice is a neural voice. For more information about the IPA symbols for the language, see [Czech symbols](/docs/text-to-speech?topic=text-to-speech-csSymbols).
+
+New Belgian Dutch neural voice: `nl-BE_BramVoice`
+:   A new male Belgian Dutch (Flemish) voice, `en-AU_BramVoice`, is now available. The voice is a neural voice. For more information about the IPA symbols for the language, see [Dutch (Belgian) symbols](/docs/text-to-speech?topic=text-to-speech-beSymbols).
+
+Defect fixes for SSML and speech synthesis
+:   The following defects for the Speech Synthesis Markup Language (SSML) and speech synthesis were fixed with this release:
+
+    -   The `pitch` attribute of the `<prosody>` element is now applied to all specified text. Previously, the pitch change was not always applied to the first word of the affected text. Also, the documentation now includes additional guidance about specifying a `pitch` value. For more information, see [The `pitch` attribute](/docs/text-to-speech?topic=text-to-speech-elements#prosody-pitch).
+    -   Neural voices now parse the escaped apostrophe character (`&apos;`) properly. Previously, some neural voices were not interpreting the character properly.
+    -   Speech synthesis of Japanese now speaks the audio more slowly. Previously, the synthesized speech was being spoken too quickly.
+
 ## 22 October 2021
 {: #text-to-speech-22october2021}
 {: release-note}
@@ -40,10 +57,10 @@ The service has the following known limitations:
 Multiple neural voice improvements
 :   The existing neural voices for Chinese, Dutch (Belgian and Netherlands), Australian English, and Korean have been updated for improved speech synthesis and enhanced audio results. For more information about all available voices, see [Using languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
 
-New Australian English neural voice
+New Australian English neural voice: `en-AU_SteveVoice`
 :   A new male Australian English voice, `en-AU_SteveVoice`, is now available. The voice is a neural voice. For more information about the IPA symbols for the language, see [English (Australian) symbols](/docs/text-to-speech?topic=text-to-speech-auSymbols).
 
-New Swedish neural voice
+New Swedish neural voice: `sv-SE_IngridVoice`
 :   A new language, Swedish, with a new female voice, `sv-SE_IngridVoice`, is now available. The voice is a neural voice. For more information about the IPA symbols for the language, see [Swedish symbols](/docs/text-to-speech?topic=text-to-speech-svSymbols).
 
 ## 6 October 2021

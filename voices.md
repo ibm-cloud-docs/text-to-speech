@@ -2,7 +2,7 @@
 
 copyright:
   years: 2010, 2021
-lastupdated: "2021-11-08"
+lastupdated: "2021-12-03"
 
 subcollection: text-to-speech
 
@@ -16,7 +16,7 @@ subcollection: text-to-speech
 The {{site.data.keyword.texttospeechfull}} service supports a variety of languages, voices, and dialects. For different languages, the service offers female voices, male voices, or both. Each voice uses appropriate cadence and intonation for its dialect.
 {: shortdesc}
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** The list of available voices underwent many changes on 2 December 2020. To optimize the audio quality and naturalness of synthesized speech, the standard (concatenative) voices that were previously available with the service are now deprecated. {{site.data.keyword.IBM_notm}} recommends that you migrate from standard to neural voices at your earliest convenience. For more information about the changes and implications for voice synthesis, see the [2 December 2020 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-2december2020) in the release notes. For information about moving to neural voices, see [Migrating from standard to neural voices](#migrate-voice).
+![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** The list of available voices underwent many changes on 2 December 2020. For more information, see the [2 December 2020 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-2december2020) in the release notes and [Migrating from standard to neural voices](#migrate-voice).
 {: important}
 
 ## Supported languages and voices
@@ -24,7 +24,7 @@ The {{site.data.keyword.texttospeechfull}} service supports a variety of languag
 
 Table 1 lists and provides audio samples for the voices that are available for each language and dialect. All voices are generally available (GA) for production use. For more information about specifying a voice for speech synthesis and about the default voice, see [Specifying a voice for speech synthesis](#specify-voice).
 
-All voices use [Neural voice technology](#neural-voices). Voices are classified into two types based on their quality, capabilities, and availability: *enhanced neural voices* and *neural voices*. Unless it is labeled in the *Type / Availability* column as restricted to just one version of the service, a voice is available with both {{site.data.keyword.cloud}} and {{site.data.keyword.icp4dfull}}.
+All voices use [Neural voice technology](#neural-voices). Voices are classified into two types based on their quality, capabilities, and availability: *enhanced neural voices* and *neural voices*. If it is labeled in the **Type / Availability** column with just one version of the service, *{{site.data.keyword.cloud_notm}} only* or *{{site.data.keyword.icp4dfull_notm}} only*, a voice is restricted to that version. Otherwise, the voice is available with both versions of the service.
 
 | Language | Type / Availability | Voice / Gender | Sample |
 |----------|:-------------------:|:--------------:|:------:|
@@ -32,7 +32,9 @@ All voices use [Neural voice technology](#neural-voices). Voices are classified 
 | Chinese  \n (Mandarin) | Neural | `zh-CN_LiNaVoice`  \n Female | ![zh-CN_LiNaVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/zh-CN_LiNaVoice.wav){: audio controls} |
 | | Neural | `zh-CN_WangWeiVoice`  \n Male | ![zh-CN_WangWeiVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/zh-CN_WangWeiVoice.wav){: audio controls} |
 | | Neural | `zh-CN_ZhangJingVoice`  \n Female | ![zh-CN_ZhangJingVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/zh-CN_ZhangJingVoice.wav){: audio controls} |
+| Czech | Neural  \n {{site.data.keyword.cloud_notm}} only | `cs-CZ_AlenaVoice`  \n Female | ![cs-CZ_AlenaVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/cs-CZ_AlenaVoice.wav){: audio controls} |
 | Dutch  \n (Belgian) | Neural | `nl-BE_AdeleVoice`  \n Female | ![nl-BE_AdeleVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/nl-BE_AdeleVoice.wav){: audio controls} |
+| | Neural  \n {{site.data.keyword.cloud_notm}} only | `nl-BE_BramVoice`  \n Male | ![nl-BE_BramVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/nl-BE_BramVoice.wav){: audio controls} |
 | Dutch  \n (Netherlands) | Neural | `nl-NL_EmmaVoice`  \n Female | ![nl-NL_EmmaVoive sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/nl-NL_EmmaVoice.wav){: audio controls} |
 | | Neural | `nl-NL_LiamVoice`  \n Male | ![nl-NL_LiamVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/nl-NL_LiamVoice.wav){: audio controls} |
 | English  \n (Australian) | Neural | `en-AU_CraigVoice`  \n Male | ![en-AU_CraigVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/en-AU_CraigVoice.wav){: audio controls} |
@@ -95,7 +97,7 @@ For more information about the service's neural voice technology, see
 
 ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** The list of available voices underwent many changes on 2 December 2020. To optimize the audio quality and naturalness of synthesized speech, the standard (concatenative) voices that were previously available with the service are now deprecated. {{site.data.keyword.IBM_notm}} recommends that you migrate from standard to neural voices at your earliest convenience. For more information about the changes and implications for voice synthesis, see the [2 December 2020 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-2december2020) in the release notes. For information about moving to neural voices, see [Migrating from standard to neural voices](#migrate-voice).
+![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** The list of available voices underwent many changes on 2 December 2020. To optimize the audio quality and naturalness of synthesized speech, the standard (concatenative) voices that were previously available with the service are now deprecated. {{site.data.keyword.IBM_notm}} recommends that you migrate from standard to neural voices at your earliest convenience. For more information about the changes and implications for voice synthesis, see the [2 December 2020 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-2december2020) in the release notes.
 {: important}
 
 If you previously used any of the now-deprecated standard voices, you might have used the following features:
