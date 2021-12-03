@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-11-23"
+lastupdated: "2021-12-02"
 
 subcollection: text-to-speech
 
@@ -24,7 +24,7 @@ The service can be used in applications such as voice-automated chatbots, as wel
 
 -   ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}** for managed instances of {{site.data.keyword.texttospeechshort}} that are hosted on {{site.data.keyword.cloud_notm}} or for instances that are hosted on [IBM Cloud Pak for Data as a Service](https://dataplatform.cloud.ibm.com/docs/content/wsj/landings/wtts.html){: external}.
     -   For information about all service updates and known limitations, see the [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes).
-    -   For information about the latest service update, see [22 October 2021](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-22october2021) in the release notes.
+    -   For information about the latest service update, see [3 December 2021](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-3december2021) in the release notes.
 -   ![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}** for installed or on-premises instances of {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}. For links to information about installing and managing {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}, see [Installing {{site.data.keyword.ibmwatson_notm}} {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-speech-install-data).
     -   For information about all service updates and known limitations, see the [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes-data).
     -   For information about the latest service update, see [30 November 2021 (Version 4.0.3)](/docs/text-to-speech?topic=text-to-speech-release-notes-data#text-to-speech-data-30november2021) in the release notes.
@@ -50,6 +50,7 @@ The service synthesizes text to speech in many languages and dialects:
 
 -   Arabic
 -   Chinese (Mandarin)
+-   Czech
 -   Dutch (Belgian and Netherlands dialects)
 -   English (Australian, United Kingdom, and United States dialects)
 -   French (Canadian and France dialects)

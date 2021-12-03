@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-11-08"
+lastupdated: "2021-12-02"
 
 subcollection: text-to-speech
 
@@ -85,7 +85,7 @@ You can specify syllable boundaries and stress in both SPR and IPA.
 ### Syllable boundaries
 {: #syllables-boundaries}
 
-You can use a `.` (period, IPA Unicode `002E`) to mark the beginning of each syllable. However, to preserve the valid phonetics of a language, the service can elect not to honor periods in some cases (for example, if a syllable boundary is placed at an illegal or unnatural position for a language). In general, in cases where the user can indicate a valid preference for a syllable boundary or other aspect of a word's pronunciation, the service honors such requests.
+You can use a `.` (period, IPA Unicode `002E`) to mark the beginning of each syllable in SPR or IPA. However, to preserve the valid phonetics of a language, the service can elect not to honor periods in some cases (for example, if a syllable boundary is placed at an illegal or unnatural position for a language). In general, in cases where the user can indicate a valid preference for a syllable boundary or other aspect of a word's pronunciation, the service honors such requests.
 
 ### Syllable stress
 {: #syllables-stress}
@@ -137,6 +137,7 @@ The table provides links to pages that document the supported SPR symbols, IPA s
 |----------|:------------:|:------------:|:------------:|
 | [Arabic symbols](/docs/text-to-speech?topic=text-to-speech-arSymbols) | All versions | Yes | No |
 | [Chinese (Mandarin) symbols](/docs/text-to-speech?topic=text-to-speech-zhSymbols) | All versions | Yes | No |
+| [Czech symbols](/docs/text-to-speech?topic=text-to-speech-csSymbols) | {{site.data.keyword.cloud_notm}} only | Yes | No |
 | [Dutch (Belgian) symbols](/docs/text-to-speech?topic=text-to-speech-beSymbols) | All versions | Yes | No |
 | [Dutch (Netherlands) symbols](/docs/text-to-speech?topic=text-to-speech-nlSymbols) | All versions | Yes | No |
 | [English (Australian) symbols](/docs/text-to-speech?topic=text-to-speech-auSymbols) | All versions | Yes | No |
