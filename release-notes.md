@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-12-03"
+lastupdated: "2021-12-14"
 
 keywords: text to speech release notes,text to speech for IBM cloud release notes
 
@@ -41,7 +41,7 @@ New Czech neural voice: `cs-CZ_AlenaVoice`
 :   A new language, Czech, with a new female voice, `cs-CZ_AlenaVoice`, is now available. The voice is a neural voice. For more information about the IPA symbols for the language, see [Czech symbols](/docs/text-to-speech?topic=text-to-speech-csSymbols).
 
 New Belgian Dutch neural voice: `nl-BE_BramVoice`
-:   A new male Belgian Dutch (Flemish) voice, `en-AU_BramVoice`, is now available. The voice is a neural voice. For more information about the IPA symbols for the language, see [Dutch (Belgian) symbols](/docs/text-to-speech?topic=text-to-speech-beSymbols).
+:   A new male Belgian Dutch (Flemish) voice, `nl-BE_BramVoice`, is now available. The voice is a neural voice. For more information about the IPA symbols for the language, see [Dutch (Belgian) symbols](/docs/text-to-speech?topic=text-to-speech-beSymbols).
 
 Defect fixes for SSML and speech synthesis
 :   The following defects for the Speech Synthesis Markup Language (SSML) and speech synthesis were fixed with this release:
