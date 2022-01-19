@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2021-09-24"
+  years: 2015, 2022
+lastupdated: "2022-01-19"
 
 subcollection: text-to-speech
 
@@ -47,7 +47,7 @@ A full legal SSML document consists of an XML prolog, which contains information
   "http://www.w3.org/TR/speech-synthesis/synthesis.dtd">
 
 <!-- Root Element -->
-<speak version="1.0" xmlns="www.w3.org/2001/10/synthesis"
+<speak version="1.0" xmlns="www.w3.org/2001/10/synthesis">
   ... the body that contains text to be synthesized plus markup ...
 </speak>
 ```
