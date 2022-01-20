@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-05-06"
+  years: 2021, 2022
+lastupdated: "2022-01-19"
 
 subcollection: text-to-speech
 
@@ -48,7 +48,7 @@ For the written text of a prompt:
     For example, the SSML `<say-as>` element is used to indicate how the services says numbers, letters, and dates. This example directs the service to speak the individual digits of the value `123456` rather than to speak the value as a quantity in the hundreds of thousands:
 
     ```xml
-    <speak version="1.0">
+    <speak version="1.1">
       <say-as interpret-as="digits">123456</say-as>
     </speak>
     ```
