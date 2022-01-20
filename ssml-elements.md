@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2020-11-22"
+  years: 2015, 2022
+lastupdated: "2022-01-19"
 
 subcollection: text-to-speech
 
@@ -25,7 +25,7 @@ Table 1 summarizes the service's support for SSML elements and attributes:
 -   *Partial* means that the service does not support all aspects of the element or attribute. It can also mean that the service supports the element or attribute with only one of its interfaces, or that the element or attribute is not supported with all voices.
 -   *None* means that the service does not support the element or attribute.
 
-The following sections provide descriptions of each element or attribute, including examples, restrictions, and whether the service's support differs from standard SSML. Support for some attributes and values differs slightly from the SSML specification. For more information, see [W3C Speech Synthesis Markup Language (SSML) Version 1.0](http://www.w3.org/TR/speech-synthesis/){: external}.
+The following sections provide descriptions of each element or attribute, including examples, restrictions, and whether the service's support differs from standard SSML. Support for some attributes and values differs slightly from the SSML specification. For more information, see [W3C Speech Synthesis Markup Language (SSML) Version 1.1](http://www.w3.org/TR/speech-synthesis/){: external}.
 
 | Element or attribute | Support | Element or attribute | Support |
 |----------------------|:-------:|----------------------|:-------:|
@@ -60,15 +60,15 @@ The `<break>` element inserts a pause into the spoken text. It has the following
 -   `time` specifies the length of the pause in terms of seconds or milliseconds. Valid value formats are `{integer}s` for seconds or `{integer}ms` for milliseconds.
 
 ```xml
-<speak version="1.0">
-  Different sized <break strength="none">no pause</break>
-  Different sized <break strength="x-weak">x-weak pause</break>
-  Different sized <break strength="weak">weak pause</break>
-  Different sized <break strength="medium">medium pause</break>
-  Different sized <break strength="strong">strong pause</break>
-  Different sized <break strength="x-strong">x-strong pause</break>
-  Different sized <break time="1s">one-second pause</break>
-  Different sized <break time="1500ms">1500-millisecond pause</break>
+<speak version="1.1">
+  Break size <break strength="none"/> no pause
+  Break size <break strength="x-weak"/> x-weak pause
+  Break size <break strength="weak"/> weak pause
+  Break size <break strength="medium"/> medium pause
+  Break size <break strength="strong"/> strong pause
+  Break size <break strength="x-strong"/> x-strong pause
+  Break size <break time="1s"/> one-second pause
+  Break size <break time="1500ms"/> 1500-millisecond pause
 </speak>
 ```
 {: codeblock}
@@ -99,7 +99,7 @@ The `<mark>` element is supported only by the service's WebSocket interface, not
 The `<mark>` element is an empty element that places a marker into the text to be synthesized. The client is notified when all of the text that precedes the `<mark>` element has been synthesized. The element accepts a single `name` attribute that specifies a string that uniquely identifies the mark; the name must begin with an alphanumeric character. The name is returned along with the time at which the mark occurs in the synthesized audio.
 
 ```xml
-<speak version="1.0">
+<speak version="1.1">
   Hello <mark name="here"/> world.
 </speak>
 ```
@@ -118,7 +118,7 @@ The `<paragraph>` (or `<p>`) and `<sentence>` (or `<s>`) elements are optional e
 The only valid attribute for either element is `xml:lang`, which allows for language switching. The attribute is not supported.
 
 ```xml
-<speak version="1.0">
+<speak version="1.1">
   <paragraph>
     <sentence>Text within a sentence element.</sentence>
     <s>More text in another sentence.</s>
@@ -142,7 +142,7 @@ The `<phoneme>` element provides a phonetic pronunciation for the enclosed text.
     -   IPA format:
 
         ```xml
-        <speak version="1.0">
+        <speak version="1.1">
           <phoneme alphabet="ipa" ph="təˈmeɪ.ɾoʊ">tomato</phoneme>
         </speak>
         ```
@@ -151,7 +151,7 @@ The `<phoneme>` element provides a phonetic pronunciation for the enclosed text.
     -   IPA format with Unicode symbols:
 
         ```xml
-        <speak version="1.0">
+        <speak version="1.1">
           <phoneme alphabet="ipa" ph="t&#x0259;&#x02C8;me&#x026A;.&#x027E;o&#x028A;">tomato</phoneme>
         </speak>
         ```
@@ -160,7 +160,7 @@ The `<phoneme>` element provides a phonetic pronunciation for the enclosed text.
     -   {{site.data.keyword.IBM_notm}} SPR format:
 
         ```xml
-        <speak version="1.0">
+        <speak version="1.1">
           <phoneme alphabet="ibm" ph=".0tx.1me.0Fo">tomato</phoneme>
         </speak>
         ```
@@ -205,7 +205,7 @@ The `pitch` attribute modifies the baseline pitch for the text within the elemen
     {: tip}
 
     ```xml
-    <speak version="1.0">
+    <speak version="1.1">
       <prosody pitch="150Hz">Transpose pitch to 150 Hz</prosody>
       <prosody pitch="-20Hz">Lower pitch by 20 Hz from baseline</prosody>
       <prosody pitch="+20Hz">Increase pitch by 20 Hz from baseline</prosody>
@@ -231,7 +231,7 @@ The `rate` attribute indicates a change in the speaking rate for the text within
 -   `x-fast` increases the rate by 50 percent.
 
 ```xml
-<speak version="1.0">
+<speak version="1.1">
   <prosody rate="slow">Decrease speaking rate by 25%</prosody>
   <prosody rate="50">Set speaking rate at 50 words per minute</prosody>
   <prosody rate="+5%">Increase speaking rate by 5 percent</prosody>
@@ -276,7 +276,7 @@ Acceptable values for the `interpret-as` attribute and examples of each value fo
 The `cardinal` value speaks the cardinal number for the numeral within the element. The following examples say *Super Bowl forty-nine*. The first is superfluous, since it does not change the service's default behavior.
 
 ```xml
-<speak version="1.0">
+<speak version="1.1">
   Super Bowl <say-as interpret-as="cardinal">49</say-as>
   Super Bowl <say-as interpret-as="cardinal">XLIX</say-as>
 </speak>
@@ -289,7 +289,7 @@ The `cardinal` value speaks the cardinal number for the numeral within the eleme
 The `date` value speaks the date within the element according to the format given in the associated `format` attribute. The `format` attribute is required for the `date` value. If no `format` is present, the service still attempts to pronounce the date. The following examples speak the indicated dates in the specified formats, where `d`, `m`, and `y` represent day, month, and year.
 
 ```xml
-<speak version="1.0">
+<speak version="1.1">
   <say-as interpret-as="date" format="mdy">12/17/2005</say-as>
   <say-as interpret-as="date" format="ymd">2005/12/17</say-as>
   <say-as interpret-as="date" format="dmy">17/12/2005</say-as>
@@ -307,7 +307,7 @@ The `date` value speaks the date within the element according to the format give
 The `digits` value speaks the digits in the number within the element. The following example speaks the individual digits *123456*.
 
 ```xml
-<speak version="1.0">
+<speak version="1.1">
   <say-as interpret-as="digits">123456</say-as>
 </speak>
 ```
@@ -319,7 +319,7 @@ The `digits` value speaks the digits in the number within the element. The follo
 The `letters` value spells out the characters in the word within the element. The following example spells the letters of the word *hello*.
 
 ```xml
-<speak version="1.0">
+<speak version="1.1">
   <say-as interpret-as="letters">Hello</say-as>
 </speak>
 ```
@@ -331,7 +331,7 @@ The `letters` value spells out the characters in the word within the element. Th
 The `number` value offers an alternative to the `cardinal` and `ordinal` values. You can use the optional `format` attribute to indicate how a series of numbers is to be interpreted. The first example omits the `format` attribute to pronounce the number as a cardinal value. The second example explicitly specifies that the number is to be pronounced as a `cardinal` value. The third example specifies that the number is to be pronounced as an `ordinal` value.
 
 ```xml
-<speak version="1.0">
+<speak version="1.1">
   <say-as interpret-as="number">123456</say-as>
   <say-as interpret-as="number" format="cardinal">123456</say-as>
   <say-as interpret-as="number" format="ordinal">123456</say-as>
@@ -342,7 +342,7 @@ The `number` value offers an alternative to the `cardinal` and `ordinal` values.
 You can also specify the value `telephone` for the `format` attribute. The examples show two different ways of pronouncing a series of numbers as a telephone number. To pronounce the numbers with the punctuation included, specify the value `punctuation` for the optional `detail` attribute.
 
 ```xml
-<speak version="1.0">
+<speak version="1.1">
   <say-as interpret-as="number" format="telephone">555-555-5555</say-as>
   <say-as interpret-as="number" format="telephone"
     detail="punctuation">555-555-5555</say-as>
@@ -356,7 +356,7 @@ You can also specify the value `telephone` for the `format` attribute. The examp
 The `ordinal` value speaks the ordinal value for the digit within the element. The following example says *second first*.
 
 ```xml
-<speak version="1.0">
+<speak version="1.1">
   <say-as interpret-as="ordinal">2</say-as>
   <say-as interpret-as="ordinal">1</say-as>
 </speak>
@@ -369,7 +369,7 @@ The `ordinal` value speaks the ordinal value for the digit within the element. T
 The `vxml:boolean` value speaks *yes* or *no* depending on the `true` or `false` value within the element.
 
 ```xml
-<speak version="1.0">
+<speak version="1.1">
   <say-as interpret-as="vxml:boolean">true</say-as>
   <say-as interpret-as="vxml:boolean">false</say-as>
 </speak>
@@ -382,7 +382,7 @@ The `vxml:boolean` value speaks *yes* or *no* depending on the `true` or `false`
 The `vxml:currency` value is used to control the synthesis of monetary values. The string must be written in the format `UUUmm.nn`, where `UUU` is the three-character currency indicator that is specified by ISO standard 4217 and `mm.nn` is the quantity. The following example says *forty-five dollars and thirty cents*.
 
 ```xml
-<speak version="1.0">
+<speak version="1.1">
   <say-as interpret-as="vxml:currency">USD45.30</say-as>
 </speak>
 ```
@@ -391,7 +391,7 @@ The `vxml:currency` value is used to control the synthesis of monetary values. T
 If the specified number includes more than two decimal places, the amount is synthesized as a decimal number followed by the currency indicator. If the three-character currency indicator is not present, the amount is synthesized as a decimal number only and the currency type is not pronounced. The following example says *forty-five point three two nine US dollars*.
 
 ```xml
-<speak version="1.0">
+<speak version="1.1">
   <say-as interpret-as="vxml:currency">USD45.329</say-as>
 </speak>
 ```
@@ -403,7 +403,7 @@ If the specified number includes more than two decimal places, the amount is syn
 The `vxml:date` value works like the `date` value, but the format is predefined as `YYYYMMDD`. If a day, month, or year value is not known or if you do not want it to be spoken, replace the value with a `?` (question mark). The second and third examples include question marks.
 
 ```xml
-<speak version="1.0">
+<speak version="1.1">
   <say-as interpret-as="vxml:date">20050720</say-as>
   <say-as interpret-as="vxml:date">????0720</say-as>
   <say-as interpret-as="vxml:date">200507??</say-as>
@@ -422,7 +422,7 @@ The `vxml:digits` value provides the same capabilities as the `digits` value.
 The `vxml:phone` value speaks a phone number with both digits and punctuation. It is equivalent to using the `number` value and specifying `telephone` for the `format` attribute and `punctuation` for the `detail` attribute.
 
 ```xml
-<speak version="1.0">
+<speak version="1.1">
   <say-as interpret-as="vxml:phone">555-555-5555</say-as>
 </speak>
 ```
@@ -436,9 +436,10 @@ The `<speak>` element is the root element for SSML documents. Valid attributes a
 -   `version` is a required attribute that specifies the SSML specification. The accepted value is `1.0`.
 -   `xml:lang` is not required by the service. Omit the attribute when you use this element.
 -   `xml:base` has no effect.
+-   `xmlns` is not required by the service. Omit the attribute when you use this element.
 
 ```xml
-<speak version="1.0">
+<speak version="1.1">
   The text to be spoken.
 </speak>
 ```
@@ -450,7 +451,7 @@ The `<speak>` element is the root element for SSML documents. Valid attributes a
 The `<sub>` element indicates that the text that is specified by the `alias` attribute is to replace the text that is enclosed within the element when speech is synthesized. The `alias` attribute is the only attribute of the element and is required.
 
 ```xml
-<speak version="1.0">
+<speak version="1.1">
   <sub alias="International Business Machines">IBM</sub>
 </speak>
 ```

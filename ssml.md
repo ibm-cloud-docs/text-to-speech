@@ -43,11 +43,9 @@ A full legal SSML document consists of an XML prolog, which contains information
 ```xml
 <!-- The XML Prolog -->
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE speak PUBLIC "-//W3C//DTD SYNTHESIS 1.0//EN"
-  "http://www.w3.org/TR/speech-synthesis/synthesis.dtd">
 
 <!-- Root Element -->
-<speak version="1.0" xmlns="www.w3.org/2001/10/synthesis">
+<speak version="1.1">
   ... the body that contains text to be synthesized plus markup ...
 </speak>
 ```
@@ -60,7 +58,7 @@ The service supports SSML fragments, which are SSML elements that do not include
 {: troubleshoot}
 {: support}
 
-The {{site.data.keyword.texttospeechshort}} service bases its support on SSML Version 1.0, which was recommended by W3C on September 7, 2004. For more information about the W3C SSML recommendation, see [W3C Speech Synthesis Markup Language (SSML) Version 1.0](http://www.w3.org/TR/speech-synthesis/){: external}.
+The {{site.data.keyword.texttospeechshort}} service bases its support on SSML version 1.1, which was recommended by W3C on 7 September 2010. For more information about the W3C SSML recommendation, see [W3C Speech Synthesis Markup Language (SSML) Version 1.1](http://www.w3.org/TR/speech-synthesis/){: external}.
 
 For more information about using SSML with the service, see the following:
 
