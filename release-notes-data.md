@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2021
-lastupdated: "2021-12-20"
+  years: 2019, 2022
+lastupdated: "2022-01-27"
 
 keywords: text to speech release notes,text to speech for IBM cloud pak for data release notes
 
@@ -29,6 +29,41 @@ For information about releases and updates for {{site.data.keyword.cloud_notm}},
 {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} has the following known limitation:
 
 -   **30 August 2019:** When you specify the `audio/ogg;codecs=opus` audio format, you can optionally specify a sampling rate other than the default 48,000 Hz. However, while the service accepts `48000`, `24000`, `16000`, `12000`, or `8000` as a valid sampling rate, it currently disregards a specified value and always returns the audio with a sampling rate of 48 kHz.
+
+## 26 January 2022 (Version 4.0.5)
+{: #text-to-speech-data-26january2022}
+
+Version 4.0.5 is now available
+:   {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} version 4.0.5 is now available. This version supports {{site.data.keyword.icp4dfull_notm}} version 4.x and Red Hat OpenShift versions 4.6 and 4.8. For more information about installing and managing the service, see [Installing {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.0?topic=speech-installing-watson-text){: external}.
+
+License Server is now automatically installed
+:   The Speech services operator now automatically installs the required License Server when it installs the Speech services. You no longer need to install the License Server from the {{site.data.keyword.icp4dfull_notm}} foundational services, and you no longer need to use additional YAML content to create an OperandRequest with the necessary bindings.
+
+Removal of steps specific to PostgreSQL EnterpriseDB server
+:   The previous version of the documentation included steps for the PostgreSQL EnterpriseDB server that were specific to the Speech services. These steps were documented in the topics *Upgrading {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}} (Version 4.0)* and *Uninstalling {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}}*. These additional steps are no longer necessary and have been removed from the documentation.
+
+Security vulnerabilities addressed
+:   The following security vulnerabilities associated with Apache Log4j have been addressed:
+    -   [Security Bulletin: Vulnerability in Apache Log4j may affect IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data (CVE-2021-4104)](https://www.ibm.com/support/pages/node/6551170){: external}
+    -   [Security Bulletin: IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data is vulnerable to denial of service and arbitrary code execution due to Apache Log4j (CVE-2021-45105 and CVE-2021-45046)](https://www.ibm.com/support/pages/node/6551168){: external}
+    -   [Security Bulletin: Vulnerability in Apache Log4j may affect IBM Watson Speech Services Cartridge for {{site.data.keyword.icp4dfull_notm}} (CVE-2021-4428)](https://www.ibm.com/support/pages/node/6536732){: external} (this vulnerability was fixed with Speech services version 4.0.4)
+
+RabbitMQ datastore is now used only by the `sttAysnc` component
+:   The RabbitMQ datastore was previously used by components of both Speech services, {{site.data.keyword.speechtotextshort}} and {{site.data.keyword.texttospeechshort}}. It now handles non-persistent message queuing for the Speech to Text asynchronous HTTP component (`sttAsync`) only. It is used only if the `sttAsync` component is installed and enabled.
+
+New Belgian Dutch and Czech neural voices
+:   Two new neural voices are now available:
+    -   *Belgian Dutch:* A new male Belgian Dutch (Flemish) voice, `nl-BE_BramVoice`. For more information about the IPA symbols for the language, see [Dutch (Belgian) symbols](/docs/text-to-speech?topic=text-to-speech-beSymbols).
+    -   *Czech:* A new language, Czech, with a new female voice, `cs-CZ_AlenaVoice`. For more information about the IPA symbols for the language, see [Czech symbols](/docs/text-to-speech?topic=text-to-speech-csSymbols).
+
+    You can install the new voices along with all neural voices by setting the `voiceType` property of the custom resource to `neuralVoices`.
+    -   For more information about using the custom resource to install voices, see [Installing {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.0?topic=speech-installing-watson-text){: external}.
+    -   For more information about all available languages and voices, see [Using languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
+
+Defect fixes for SSML documentation
+:   **Defect fixes:** The SSML documentation was updated to correct the following errors:
+    -   The examples of the `<break>` element are now correct. The element is unary, as now shown in the examples. The previous examples included open and close tags with embedded text. The embedded text was not spoken by the service. For more information, see [The `<break>` element](/docs/text-to-speech?topic=text-to-speech-elements#break_element).
+    -   The service supports Speech Synthesis Markup Language (SSML) version 1.1. All references and examples now use the correct version. The documentation previously referred to version 1.0.
 
 ## 20 December 2021 (Version 4.0.4)
 {: #text-to-speech-data-20december2021}
@@ -101,7 +136,9 @@ Defect fixes for SSML and speech synthesis
 {: #text-to-speech-data-20december2021-12}
 
 Important: You can no longer install {{site.data.keyword.texttospeechshort}} version 1.2.x on {{site.data.keyword.icp4dfull_notm}} version 3.5
-:   **Important:** You can no longer perform new installations of {{site.data.keyword.texttospeechshort}} version 1.2.x on {{site.data.keyword.icp4dfull_notm}} version 3.5. The Speech services for {{site.data.keyword.icp4dfull_notm}} version 3.5 reach their End of Support date on 30 April 2022. You can install only {{site.data.keyword.texttospeechshort}} version 4.0.x on {{site.data.keyword.icp4dfull_notm}} version 4.x, as described in the previous release update.
+:   **Important:** You can no longer perform new installations of {{site.data.keyword.texttospeechshort}} version 1.2.x on {{site.data.keyword.icp4dfull_notm}} version 3.5. You can install only {{site.data.keyword.texttospeechshort}} version 4.0.x on {{site.data.keyword.icp4dfull_notm}} version 4.x. For more information, see [Installing {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.0?topic=speech-installing-watson-text){: external}.
+
+    The Speech services for {{site.data.keyword.icp4dfull_notm}} version 3.5 reach their End of Support date on 30 April 2022. You are encouraged to upgrade to the latest version 4.0.x release of the services at your earliest convenience. For more information, see [Upgrading {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.0?topic=speech-upgrading-watson-text){: external}.
 
 ## 30 November 2021 (Version 4.0.3)
 {: #text-to-speech-data-30november2021}
@@ -144,7 +181,7 @@ New support for neural voices
     -   *Korean:* `ko-KR_HyunjunVoice`, `ko-KR_SiWooVoice`, `ko-KR_YoungmiVoice`, and `ko-KR_YunaVoice`
     -   *Swedish:* `sv-SE_IngridVoice`
 
-    For more information about all available languages and voices, see [Using laguages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
+    For more information about all available languages and voices, see [Using languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
 
 Installing voices
 :   You can install either the enhanced neural voices or the neural voices. You can install only one of the two types of voices. When you install the service, you use the `voiceType` property of the custom resource to indicate the voices that are to be installed:
@@ -345,11 +382,19 @@ New voices
 Defect fix for `<prosody>` element for Japanese
 :   **Defect fix:** For the `ja-JP_EmiV3Voice` voice, the service now correctly parses SSML input text that includes a prosody rate specification. Previously, the following use of the `<prosody>` element worked properly:
 
-    `<speak>成功する/繁栄する</speak>`
+    ```xml
+    <speak>成功する/繁栄する</speak>
+    ```
+    {: codeblock}
 
     But the following use of the rate attribute with the `<prosody>` element caused the service to read and speak the embedded SSML notation:
 
-    `<speak rate="fast">成功する/繁栄する</speak>`
+    ```xml
+    <speak>
+      <prosody rate="fast">成功する/繁栄する</prosody>
+    </speak>
+    ```
+    {: codeblock}
 
     The service now correctly parses and applies the `rate` attribute of the `<prosody>` element for Japanese input.
 

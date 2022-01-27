@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2021-12-02"
+  years: 2015, 2022
+lastupdated: "2022-01-14"
 
 subcollection: text-to-speech
 
@@ -137,7 +137,7 @@ The table provides links to pages that document the supported SPR symbols, IPA s
 |----------|:------------:|:------------:|:------------:|
 | [Arabic symbols](/docs/text-to-speech?topic=text-to-speech-arSymbols) | All versions | Yes | No |
 | [Chinese (Mandarin) symbols](/docs/text-to-speech?topic=text-to-speech-zhSymbols) | All versions | Yes | No |
-| [Czech symbols](/docs/text-to-speech?topic=text-to-speech-csSymbols) | {{site.data.keyword.cloud_notm}} only | Yes | No |
+| [Czech symbols](/docs/text-to-speech?topic=text-to-speech-csSymbols) | All versions | Yes | No |
 | [Dutch (Belgian) symbols](/docs/text-to-speech?topic=text-to-speech-beSymbols) | All versions | Yes | No |
 | [Dutch (Netherlands) symbols](/docs/text-to-speech?topic=text-to-speech-nlSymbols) | All versions | Yes | No |
 | [English (Australian) symbols](/docs/text-to-speech?topic=text-to-speech-auSymbols) | All versions | Yes | No |
