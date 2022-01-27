@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2021-12-16"
+  years: 2015, 2022
+lastupdated: "2022-01-19"
 
 keywords: text to speech release notes,text to speech for IBM cloud release notes
 
@@ -32,6 +32,15 @@ The service has the following known limitations:
 
 -   **2 December 2020:** Cross-Origin Resource Sharing (CORS) support is not available from the Mozilla Firefox™ browser for voices in the following languages: Arabic, Australian English, Chinese, Dutch (Belgian and Netherlands), Korean, and Swedish.
 -   **22 August 2019:** When you specify the `audio/ogg;codecs=opus` audio format, you can optionally specify a sampling rate other than the default 48,000 Hz. However, although the service accepts `48000`, `24000`, `16000`, `12000`, or `8000` as a valid sampling rate, it currently disregards a specified value and always returns the audio with a sampling rate of 48 kHz.
+
+<!--
+
+Defect fixes for SSML documentation
+:   **Defect fixes:** The SSML documentation was updated to correct the following errors:
+    -   The examples of the `<break>` element are now correct. The element is unary, as now shown in the examples. The previous examples included open and close tags with embedded text. The embedded text was not spoken by the service. For more information, see [The `<break>` element](/docs/text-to-speech?topic=text-to-speech-elements#break_element).
+    -   The service supports Speech Synthesis Markup Language (SSML) version 1.1. All references and examples now use the correct version. The documentation previously referred to version 1.0.
+
+-->
 
 ## 3 December 2021
 {: #text-to-speech-3december2021}
@@ -266,11 +275,19 @@ New support for Cross-Origin Resource Sharing
 Defect fix for Japanese voice
 :   **Defect fix:** For the `ja-JP_EmiV3Voice` voice, the service now correctly parses SSML input text that includes a prosody rate specification. Previously, the following use of the `<prosody>` element worked properly:
 
-    `<speak>成功する/繁栄する</speak>`
+    ```xml
+    <speak>成功する/繁栄する</speak>
+    ```
+    {: codeblock}
 
     But the following use of the `rate` attribute with the `<prosody>` element caused the service to read and speak the embedded SSML notation:
 
-    `<speak rate="fast">成功する/繁栄する</speak>`
+    ```xml
+    <speak>
+      <prosody rate="fast">成功する/繁栄する</prosody>
+    </speak>
+    ```
+    {: codeblock}
 
     The service now correctly parses and applies the `rate` attribute of the `<prosody>` element for Japanese input.
 

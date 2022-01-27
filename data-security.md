@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2021-12-10"
+  years: 2015, 2022
+lastupdated: "2022-01-19"
 
 subcollection: text-to-speech
 
@@ -148,4 +148,4 @@ For instance, a web page that is loaded from a server in {{site.data.keyword.clo
 
 ![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}} only**
 
-Federal Information Security Management Act (FISMA) support is available for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} offerings purchased on or after August 30, 2019 (version 1.0.1). {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} is FISMA High Ready.
+Federal Information Security Management Act (FISMA) support is available for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} offerings purchased on or after 30 August 2019 (version 1.0.1). {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} is FISMA High Ready.
