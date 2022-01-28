@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-01-27"
+lastupdated: "2022-01-28"
 
 keywords: text to speech release notes,text to speech for IBM cloud pak for data release notes
 
@@ -35,6 +35,22 @@ For information about releases and updates for {{site.data.keyword.cloud_notm}},
 
 Version 4.0.5 is now available
 :   {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} version 4.0.5 is now available. This version supports {{site.data.keyword.icp4dfull_notm}} version 4.x and Red Hat OpenShift versions 4.6 and 4.8. For more information about installing and managing the service, see [Installing {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.0?topic=speech-installing-watson-text){: external}.
+
+Important: Additional step for performing an air-gapped installation of Minio datastore
+:   **Important:** If you are performing an air-gapped installation, you need to perform an additional step *before* completing either of the following steps:
+
+    -   Step 7 [Mirroring the images to the private container registry](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.0?topic=registry-mirroring-images-bastion-node#reference_g4h_z1q_tpb__mirror-to-target){: external} of *Mirroring images with a bastion model*
+    -   Step 8 [Mirroring the images to the intermediary container registry](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.0?topic=registry-mirroring-images-intermediary-container#preinstall_container_registry_air_gapped__mirror-to-target){: external} of *Mirroring images with an intermediary container registry*
+
+    This step is mandatory to copy the necessary images for the Minio datastore:
+
+    ```sh
+    echo 'cp.icr.io,cp/opencontent-minio-client,1.1.4,sha256:7b4cf5e47a0455cfa7ca9ab246b80916e4dccbc1483b3e0f276fb7b0ab3e5c60,IMAGE,linux,x86_64,"",0,CASE,"",""' \
+    >> $CASE_PATH/ibm-watson-speech-4.0.5-images.csv
+    ```
+    {: codeblock}
+
+    Failure to perform this step will cause installation errors for both {{site.data.keyword.texttospeechshort}} and {{site.data.keyword.speechtotextshort}}.
 
 License Server is now automatically installed
 :   The Speech services operator now automatically installs the required License Server when it installs the Speech services. You no longer need to install the License Server from the {{site.data.keyword.icp4dfull_notm}} foundational services, and you no longer need to use additional YAML content to create an OperandRequest with the necessary bindings.
