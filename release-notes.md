@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-01-19"
+lastupdated: "2022-02-02"
 
 keywords: text to speech release notes,text to speech for IBM cloud release notes
 
@@ -33,14 +33,14 @@ The service has the following known limitations:
 -   **2 December 2020:** Cross-Origin Resource Sharing (CORS) support is not available from the Mozilla Firefox™ browser for voices in the following languages: Arabic, Australian English, Chinese, Dutch (Belgian and Netherlands), Korean, and Swedish.
 -   **22 August 2019:** When you specify the `audio/ogg;codecs=opus` audio format, you can optionally specify a sampling rate other than the default 48,000 Hz. However, although the service accepts `48000`, `24000`, `16000`, `12000`, or `8000` as a valid sampling rate, it currently disregards a specified value and always returns the audio with a sampling rate of 48 kHz.
 
-<!--
+## 2 February 2022
+{: #text-to-speech-2february2022}
+{: release-note}
 
 Defect fixes for SSML documentation
 :   **Defect fixes:** The SSML documentation was updated to correct the following errors:
     -   The examples of the `<break>` element are now correct. The element is unary, as now shown in the examples. The previous examples included open and close tags with embedded text. The embedded text was not spoken by the service. For more information, see [The `<break>` element](/docs/text-to-speech?topic=text-to-speech-elements#break_element).
     -   The service supports Speech Synthesis Markup Language (SSML) version 1.1. All references and examples now use the correct version. The documentation previously referred to version 1.0.
-
--->
 
 ## 3 December 2021
 {: #text-to-speech-3december2021}

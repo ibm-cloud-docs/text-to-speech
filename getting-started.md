@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2021-11-08"
+  years: 2015, 2022
+lastupdated: "2021-02-02"
 
 keywords: text to speech,IBM cloud,getting started,tutorial,synthesize audio,speech synthesis
 
@@ -191,4 +191,4 @@ The following command uses the `GET /v1/synthesize` method to synthesize Spanish
 
 -   To try an example application that accepts text and generates speech with different voices, see the [{{site.data.keyword.texttospeechshort}} demo](https://www.ibm.com/demos/live/tts-demo/self-service/home){: external}.
 -   For more information about the service's interfaces and features, see [Service features](/docs/text-to-speech?topic=text-to-speech-service-features).
--   For more information about all methods of the service's interfaces, see the [API & SDK reference](https://{DomainName}/apidocs/text-to-speech){: external}.
+-   For more information about all methods of the service's interfaces, see the [API & SDK reference](/apidocs/text-to-speech){: external}.
