@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2021-11-08"
+  years: 2015, 2022
+lastupdated: "2022-02-16"
 
 subcollection: text-to-speech
 
@@ -50,7 +50,7 @@ The service supports the following symbols for German.
 ## Nasalized vowels
 {: #deNasalizedVowels}
 
-Nasalized vowels in French occur mostly in foreign loan words.
+Nasalized vowels in German occur mostly in foreign loan words.
 
 | SPR symbol | IPA symbol | IPA Unicode | Example words |
 |:----------:|:----------:|:-----------:|---------------|
