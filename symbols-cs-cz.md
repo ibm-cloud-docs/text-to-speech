@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-01-14"
+lastupdated: "2022-02-15"
 
 subcollection: text-to-speech
 
@@ -12,6 +12,8 @@ subcollection: text-to-speech
 
 # Czech symbols
 {: #csSymbols}
+
+![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
 
 The service supports the following symbols for Czech.
 

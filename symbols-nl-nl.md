@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2021
-lastupdated: "2021-11-08"
+  years: 2020, 2022
+lastupdated: "2022-02-15"
 
 subcollection: text-to-speech
 
@@ -12,6 +12,8 @@ subcollection: text-to-speech
 
 # Dutch (Netherlands) symbols
 {: #nlSymbols}
+
+![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
 
 The service supports the following symbols for Netherlands Dutch.
 
