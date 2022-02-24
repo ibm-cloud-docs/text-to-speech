@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-11-08"
+  years: 2021, 2022
+lastupdated: "2022-02-15"
 
 subcollection: text-to-speech
 
@@ -12,6 +12,8 @@ subcollection: text-to-speech
 
 # Korean symbols
 {: #koSymbols}
+
+![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
 
 The service supports the following symbols for Korean.
 

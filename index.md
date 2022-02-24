@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-02-02"
+lastupdated: "2022-02-14"
 
 subcollection: text-to-speech
 
@@ -13,7 +13,7 @@ subcollection: text-to-speech
 # About {{site.data.keyword.texttospeechshort}}
 {: #about}
 
-The {{site.data.keyword.texttospeechfull}} service provides APIs that use {{site.data.keyword.IBM_notm}}'s speech-synthesis capabilities to convert written text to natural-sounding speech. The service streams the synthesized audio back to the client with minimal delay. The audio uses appropriate cadence and intonation for its language and dialect to provide voices that are smooth and natural.
+The {{site.data.keyword.texttospeechfull}} service provides APIs that use {{site.data.keyword.IBM_notm}}'s speech-synthesis capabilities to convert written text to natural-sounding speech. The service streams the synthesized audio back to the client with minimal delay.  The audio uses appropriate cadence and intonation for its language and dialect to provide voices that are smooth and natural.
 
 The service can be used in applications such as voice-automated chatbots, as well as a variety of voice-driven and screenless applications, such as tools for the disabled or visually impaired, video narration and voice over, and educational and home-automation solutions. It is appropriate for any application where audio is the preferred method of output.
 
@@ -27,7 +27,7 @@ The service can be used in applications such as voice-automated chatbots, as wel
     -   For information about the latest service update, see [2 February 2022](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-2february2022) in the release notes.
 -   ![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}** for installed or on-premises instances of {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}. For links to information about installing and managing {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}, see [Installing {{site.data.keyword.ibmwatson_notm}} {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-speech-install-data).
     -   For information about all service updates and known limitations, see the [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes-data).
-    -   For information about the latest service update, see [31 January 2022 (Version 4.0.5)](/docs/text-to-speech?topic=text-to-speech-release-notes-data#text-to-speech-data-31january2022) in the release notes.
+    -   For information about the latest service update, see [23 February 2022 (Version 4.0.6)](/docs/text-to-speech?topic=text-to-speech-release-notes-data#text-to-speech-data-23february2022) in the release notes.
 
 ## Speech synthesis
 {: #about-synthesis}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-01-14"
+lastupdated: "2022-02-15"
 
 subcollection: text-to-speech
 
@@ -131,16 +131,16 @@ Table 2 lists language-specific considerations that apply to specifying syllable
 
 Table 3 shows the service's language support for IPA and SPR symbols. All neural voices support IPA; enhanced neural voices also support SPR. For more information, see [Neural voice technology](/docs/text-to-speech?topic=text-to-speech-voices#neural-voices).
 
-The table provides links to pages that document the supported SPR symbols, IPA symbols, and equivalent IPA Unicode values that can be used with all voices for each language. The pages provide examples of each symbol in words from the language. Because of dialectal differences, the examples might not always match your pronunciation.
+The table indicates which languages are available with with version of the service and which versions support IPA, SPR, or both. The table provides links to pages that document the supported SPR symbols, IPA symbols, and equivalent IPA Unicode values that can be used with all voices for each language. The pages provide examples of each symbol in words from the language. Because of dialectal differences, the examples might not always match your pronunciation.
 
 | Language | Availability | Supports IPA | Supports SPR |
 |----------|:------------:|:------------:|:------------:|
-| [Arabic symbols](/docs/text-to-speech?topic=text-to-speech-arSymbols) | All versions | Yes | No |
-| [Chinese (Mandarin) symbols](/docs/text-to-speech?topic=text-to-speech-zhSymbols) | All versions | Yes | No |
-| [Czech symbols](/docs/text-to-speech?topic=text-to-speech-csSymbols) | All versions | Yes | No |
-| [Dutch (Belgian) symbols](/docs/text-to-speech?topic=text-to-speech-beSymbols) | All versions | Yes | No |
-| [Dutch (Netherlands) symbols](/docs/text-to-speech?topic=text-to-speech-nlSymbols) | All versions | Yes | No |
-| [English (Australian) symbols](/docs/text-to-speech?topic=text-to-speech-auSymbols) | All versions | Yes | No |
+| [Arabic symbols](/docs/text-to-speech?topic=text-to-speech-arSymbols) | {{site.data.keyword.cloud_notm}} only | Yes | No |
+| [Chinese (Mandarin) symbols](/docs/text-to-speech?topic=text-to-speech-zhSymbols) | {{site.data.keyword.cloud_notm}} only | Yes | No |
+| [Czech symbols](/docs/text-to-speech?topic=text-to-speech-csSymbols) | {{site.data.keyword.cloud_notm}} only | Yes | No |
+| [Dutch (Belgian) symbols](/docs/text-to-speech?topic=text-to-speech-beSymbols) | {{site.data.keyword.cloud_notm}} only | Yes | No |
+| [Dutch (Netherlands) symbols](/docs/text-to-speech?topic=text-to-speech-nlSymbols) | {{site.data.keyword.cloud_notm}} only | Yes | No |
+| [English (Australian) symbols](/docs/text-to-speech?topic=text-to-speech-auSymbols) | {{site.data.keyword.cloud_notm}} only | Yes | No |
 | [English (United Kingdom) symbols](/docs/text-to-speech?topic=text-to-speech-gbSymbols) | All versions | Yes | Yes |
 | [English (United States) symbols](/docs/text-to-speech?topic=text-to-speech-usSymbols) | All versions | Yes | Yes |
 | [French (Canadian) symbols](/docs/text-to-speech?topic=text-to-speech-caSymbols) | All versions | Yes | Yes |
@@ -148,8 +148,8 @@ The table provides links to pages that document the supported SPR symbols, IPA s
 | [German symbols](/docs/text-to-speech?topic=text-to-speech-deSymbols) | All versions | Yes | Yes |
 | [Italian symbols](/docs/text-to-speech?topic=text-to-speech-itSymbols) | All versions | Yes | Yes |
 | [Japanese symbols](/docs/text-to-speech?topic=text-to-speech-jaSymbols) | All versions | Yes | Yes |
-| [Korean symbols](/docs/text-to-speech?topic=text-to-speech-koSymbols) | All versions | Yes | No |
+| [Korean symbols](/docs/text-to-speech?topic=text-to-speech-koSymbols) | {{site.data.keyword.cloud_notm}} only | Yes | No |
 | [Portuguese (Brazilian) symbols](/docs/text-to-speech?topic=text-to-speech-ptSymbols) | All versions | Yes | Yes |
 | [Spanish symbols](/docs/text-to-speech?topic=text-to-speech-esSymbols) | All versions | Yes | Yes |
-| [Swedish symbols](/docs/text-to-speech?topic=text-to-speech-svSymbols) | All versions | Yes | No |
+| [Swedish symbols](/docs/text-to-speech?topic=text-to-speech-svSymbols) | {{site.data.keyword.cloud_notm}} only | Yes | No |
 {: caption="Table 3. Language support for IPA and SPR phonetic symbols"}
