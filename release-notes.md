@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-02-02"
+lastupdated: "2022-02-28"
 
 keywords: text to speech release notes,text to speech for IBM cloud release notes
 
@@ -32,6 +32,39 @@ The service has the following known limitations:
 
 -   **2 December 2020:** Cross-Origin Resource Sharing (CORS) support is not available from the Mozilla Firefox™ browser for voices in the following languages: Arabic, Australian English, Chinese, Dutch (Belgian and Netherlands), Korean, and Swedish.
 -   **22 August 2019:** When you specify the `audio/ogg;codecs=opus` audio format, you can optionally specify a sampling rate other than the default 48,000 Hz. However, although the service accepts `48000`, `24000`, `16000`, `12000`, or `8000` as a valid sampling rate, it currently disregards a specified value and always returns the audio with a sampling rate of 48 kHz.
+
+## 28 February 2022
+{: #text-to-speech-28february2022}
+{: release-note}
+
+Change to word timing response for WebSocket interface
+:   The response object that the service sends when you request word timings with the WebSocket interface has changed. The service now sends word timing results in a single array that includes a string followed by two floats:
+
+    ```json
+    {
+      "words": [
+        ["Hello", 0.0, 0.259],
+        ["world", 0.259, 0.532]
+      ]
+    }
+    ```
+    {: codeblock}
+
+    The service previously sent timing results as an array that included a string following by an array of two floats:
+
+    ```json
+    {
+      "words": [
+        ["Hello", [0.0629826778195474, 0.2590192737303819]],
+        ["world", [0.2598829173456253, 0.5322130804452672]]
+      ]
+    }
+    ```
+    {: codeblock}
+
+    Also, the level of precision for word timings and marks is now reduced to three decimal places. For more information about the new responses, see [Word timings](/docs/text-to-speech?topic=text-to-speech-timing).
+
+    **Note:** Results for enhanced neural and neural voices were different previously. These inconsistencies could cause errors for the {{site.data.keyword.watson}} SDKs. The results for all voices are now consistent.
 
 ## 2 February 2022
 {: #text-to-speech-2february2022}
@@ -383,7 +416,7 @@ New standard Arabic, Chinese, and Netherlands Dutch voices
 {: release-note}
 
 Full support for {{site.data.keyword.cloud_notm}} IAM
-:   The {{site.data.keyword.texttospeechshort}} service now supports the full implementation of {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM). API keys for Watson services are no longer limited to a single service instance. You can create access policies and API keys that apply to more than one service, and you can grant access between services. For more information about IAM, see [Authenticating to Watson services](/docs/watson?topic=watson-iam).
+:   The {{site.data.keyword.texttospeechshort}} service now supports the full implementation of {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM). API keys for {{site.data.keyword.watson}} services are no longer limited to a single service instance. You can create access policies and API keys that apply to more than one service, and you can grant access between services. For more information about IAM, see [Authenticating to {{site.data.keyword.watson}} services](/docs/watson?topic=watson-iam).
 
     To support this change, the API service endpoints use a different domain and include the service instance ID. The pattern is `api.{location}.text-to-speech.watson.cloud.ibm.com/instances/{instance_id}`.
 
@@ -406,14 +439,14 @@ New network and data security features
         Users of Premium plans can create private network endpoints to connect to the {{site.data.keyword.texttospeechshort}} service over a private network. Connections to private network endpoints do not require public internet access. For more information, see [Public and private network endpoints](/docs/text-to-speech/?topic=watson-public-private-endpoints).
     -   *Support for data encryption with customer-managed keys*
 
-        Users of new Premium and Dedicated instances can integrate {{site.data.keyword.keymanagementservicefull}} with the {{site.data.keyword.texttospeechshort}} service to encrypt your data and manage encryption keys. For more information, see [Protecting sensitive information in your Watson service](/docs/watson?topic=watson-keyservice).
+        Users of new Premium and Dedicated instances can integrate {{site.data.keyword.keymanagementservicefull}} with the {{site.data.keyword.texttospeechshort}} service to encrypt your data and manage encryption keys. For more information, see [Protecting sensitive information in your {{site.data.keyword.watson}} service](/docs/watson?topic=watson-keyservice).
 
 ## 12 November 2019
 {: #text-to-speech-12november2019}
 {: release-note}
 
 New Seoul location now available
-:   The {{site.data.keyword.texttospeechshort}} service is now available in the {{site.data.keyword.cloud_notm}} Seoul location (**kr-seo**). As with other locations, the {{site.data.keyword.cloud_notm}} location uses token-based IAM authentication. All new services instances that you create in this location use IAM authentication.
+:   The {{site.data.keyword.texttospeechshort}} service is now available in the {{site.data.keyword.cloud_notm}} Seoul location (**kr-seo**). As with other locations, the {{site.data.keyword.cloud_notm}} location uses token-based IAM authentication. All new service instances that you create in this location use IAM authentication.
 
 ## 1 October 2019
 {: #text-to-speech-1october2019}
@@ -511,14 +544,14 @@ New support for {{site.data.keyword.cloud_notm}} IAM by WebSocket interface
 {: release-note}
 
 New London location now available
-:   The {{site.data.keyword.texttospeechshort}} service is now available in the {{site.data.keyword.cloud}} London location (**eu-gb**). Like all locations, London uses token-based Identity and Access Management (IAM) authentication. All new services instances that you create in this location use IAM authentication.
+:   The {{site.data.keyword.texttospeechshort}} service is now available in the {{site.data.keyword.cloud}} London location (**eu-gb**). Like all locations, London uses token-based Identity and Access Management (IAM) authentication. All new service instances that you create in this location use IAM authentication.
 
 ## 7 November 2018
 {: #text-to-speech-7november2018}
 {: release-note}
 
 New Tokyo location now available
-:   The {{site.data.keyword.texttospeechshort}} service is now available in the {{site.data.keyword.cloud}} Tokyo location (**jp-tok**). Like all locations, Tokyo uses token-based Identity and Access Management (IAM) authentication. All new services instances that you create in this location use IAM authentication.
+:   The {{site.data.keyword.texttospeechshort}} service is now available in the {{site.data.keyword.cloud}} Tokyo location (**jp-tok**). Like all locations, Tokyo uses token-based Identity and Access Management (IAM) authentication. All new service instances that you create in this location use IAM authentication.
 
 ## 30 October 2018
 {: #text-to-speech-30october2018}
@@ -534,13 +567,13 @@ New support for token-based {{site.data.keyword.cloud_notm}} IAM
 
     The migration to IAM authentication affects new and existing service instances differently:
 
-    -   *All new service instances that you create in any location* now use IAM authentication to access the service. You can pass either a bearer token or an API key: Tokens support authenticated requests without embedding service credentials in every call; API keys use HTTP basic authentication. When you use any of the {{site.data.keyword.ibmwatson}} SDKs, you can pass the API key and let the SDK manage the lifecycle of the tokens.
-    -   *Existing service instances that you created in a location before the indicated migration date* continue to use the `{username}` and `{password}` from their previous Cloud Foundry service credentials for authentication until you migrate them to use IAM authentication. For more information about migrating to IAM authentication, see [Migrating Watson services from Cloud Foundry](/docs/text-to-speech?topic=watson-migrate).
+    -   *All new service instances that you create in any location* now use IAM authentication to access the service. You can pass either a bearer token or an API key: Tokens support authenticated requests without embedding service credentials in every call; API keys use HTTP basic authentication. When you use any of the {{site.data.keyword.watson}} SDKs, you can pass the API key and let the SDK manage the lifecycle of the tokens.
+    -   *Existing service instances that you created in a location before the indicated migration date* continue to use the `{username}` and `{password}` from their previous Cloud Foundry service credentials for authentication until you migrate them to use IAM authentication. For more information about migrating to IAM authentication, see [Migrating {{site.data.keyword.watson}} services from Cloud Foundry](/docs/text-to-speech?topic=watson-migrate).
 
     For more information, see the following documentation:
 
     -   To learn which authentication mechanism your service instance uses, view your service credentials by clicking the instance on the [{{site.data.keyword.cloud_notm}} dashboard](https://{DomainName}/dashboard/apps){: external}.
-    -   For more information about using IAM tokens with {{site.data.keyword.watson}} services, see [Authenticating to Watson services](/docs/watson?topic=watson-iam).
+    -   For more information about using IAM tokens with {{site.data.keyword.watson}} services, see [Authenticating to {{site.data.keyword.watson}} services](/docs/watson?topic=watson-iam).
     -   For examples that use IAM authentication, see the [API & SDK reference](https://{DomainName}/apidocs/text-to-speech){: external}.
 
 ## 12 June 2018

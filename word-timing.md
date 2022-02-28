@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2021-10-04"
+  years: 2015, 2022
+lastupdated: "2022-02-24"
 
 subcollection: text-to-speech
 
@@ -19,7 +19,7 @@ You can use the WebSocket interface of the {{site.data.keyword.texttospeechfull}
 -   Include the SSML `<mark>` element in input text to identify the time at which the marker occurs in the audio.
 -   Specify the `timings` parameter of a JSON text message to obtain timing information for all strings of the input text.
 
-Timing information is useful for synchronizing the audio and the input text. For example, you can coordinate a robot's gestures with the content of the synthesized speech.
+Timing information is useful for synchronizing the audio and the input text. For example, you can coordinate an avatar's or robot's gestures with the content of the synthesized speech.
 
 The `<mark>` element and the `timings` parameter are available only with the WebSocket interface, not with the HTTP interface. Also, the `timings` parameter is not supported for Japanese input text.
 {: note}
@@ -36,7 +36,7 @@ The binary and text streams that the service sends are independent. So the servi
 
 In practical terms, the service can send an arbitrary number of audio chunks, including multiple chunks of audio before and after each text message. It is also possible for a single binary chunk to contain audio data that both precede and follow the timing information for a mark or word.
 
-However, the text message that contains the timing information always arrives before the binary chunk that contains the corresponding audio. Moreover, the audio messages always arrive in order so that you can construct an accurate audio synthesis of the text from the binary results.
+However, the text message that contains the timing information always arrives before the binary chunk that contains the corresponding audio. Moreover, the audio messages always arrive in order so that you can construct complete and accurate audio of the synthesized text from the binary results.
 
 ## Specifying an SSML mark
 {: #timing-mark}
@@ -63,7 +63,7 @@ When it finishes synthesizing the text that precedes the mark, the service sends
 ```json
 {
   "marks": [
-    ["here", 0.5019387755102041]
+    ["here", 0.501]
   ]
 }
 ```
@@ -95,21 +95,31 @@ In response, the service can return the following text messages:
 ```json
 {
   "words": [
-    ["I", [0.0690258394023930, 0.1655782733012873]]
-    ["have", [0.1655789302434486, 0.3722901056092351]]
-    ["a", [0.3722906798320199, 0.4012192331086645]]
+    [
+      "I", 0.0, 0.157
+    ],
+    [
+      "have", 0.157, 0.321
+    ],
+    [
+      "a", 0.321, 0.406
+    ]
   ]
 }
 {
   "words": [
-    ["pet", [0.4012195492838347, 0.5798213856109801]]
-    ["bird.", [0.5798218710823425, 0.7440360383928273]]
+    [
+      "pet", 0.406, 0.731
+    ],
+    [
+      "bird.", 0.731, 1.049
+    ]
   ]
 }
 ```
 {: codeblock}
 
-The response is just an example. The service can return one or more text messages with timing information for the input. Moreover, the messages can be interspersed with responses that contain binary chunks of audio. But the text message that contains the timing information for a word always arrives before the audio chunk that contains that word.
+The response is just an example. The service can return one or more text messages with timing information for the input. It can also return a separate text message for each word of the input. Moreover, the messages can be interspersed with responses that contain binary chunks of audio. But the text message that contains the timing information for a word always arrives before the audio chunk that contains that word.
 
 ### Timings for plain text
 {: #timing-text}
@@ -225,8 +235,7 @@ Both of the following responses are possible. In each case, the service sends tw
     {
       "marks": [
         [
-          "SIMPLE",
-          0.7848991042702103
+          "SIMPLE", 0.784
         ]
       ]
     }
@@ -236,7 +245,7 @@ Both of the following responses are possible. In each case, the service sends tw
     {
       "marks": [
         [
-          "EXAMPLE", 1.0034702987337102
+          "EXAMPLE", 1.003
         ]
       ]
     }
@@ -256,14 +265,14 @@ Both of the following responses are possible. In each case, the service sends tw
     {
       "marks": [
         [
-          "SIMPLE", 0.7848991042702103
+          "SIMPLE", 0.784
         ]
       ]
     }
     {
       "marks": [
         [
-          "EXAMPLE", 1.0034702987337102
+          "EXAMPLE", 1.003
         ]
       ]
     }

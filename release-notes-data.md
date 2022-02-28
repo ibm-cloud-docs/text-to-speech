@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-02-22"
+lastupdated: "2022-02-25"
 
 keywords: text to speech release notes,text to speech for IBM cloud pak for data release notes
 
@@ -45,6 +45,7 @@ All neural voices are now deprecated for {{site.data.keyword.icp4dfull_notm}}
     -   Czech
     -   Dutch (Belgian)
     -   Dutch (Netherlands)
+    -   English (Australian)
     -   Korean
     -   Swedish
 
