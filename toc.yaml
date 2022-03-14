@@ -1,6 +1,7 @@
 toc:
   properties:
     subcollection: text-to-speech
+    service-name: text-to-speech
     version: 2
     category: ai
     audience: service
