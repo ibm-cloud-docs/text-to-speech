@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-02-25"
+lastupdated: "2022-03-28"
 
 keywords: text to speech release notes,text to speech for IBM cloud pak for data release notes
 
@@ -29,6 +29,48 @@ For information about releases and updates for {{site.data.keyword.cloud_notm}},
 {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} has the following known limitation:
 
 -   **30 August 2019:** When you specify the `audio/ogg;codecs=opus` audio format, you can optionally specify a sampling rate other than the default 48,000 Hz. However, while the service accepts `48000`, `24000`, `16000`, `12000`, or `8000` as a valid sampling rate, it currently disregards a specified value and always returns the audio with a sampling rate of 48 kHz.
+
+## 30 March 2022 (Version 4.0.7)
+{: #text-to-speech-data-30march2022}
+
+Version 4.0.7 is now available
+:   {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} version 4.0.7 is now available. This version supports {{site.data.keyword.icp4dfull_notm}} version 4.x and Red Hat OpenShift versions 4.6 and 4.8. For more information about installing and managing the service, see [Installing {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.0?topic=speech-installing-watson-text){: external}.
+
+Custom resource property for specifying a default voice
+:   The default voice for speech synthesis and pronunciation requests is `en-US_MichaelV3Voice`. If you do not install the `en-US_MichaelV3Voice`, you must either
+    -   Use the `voice` parameter to pass the voice that is to be used with each request.
+    -   Specify a new default voice for your installation of {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} by using the `defaultTTSVoice` property in the Speech services custom resource. For more information, see  [Installing {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.0?topic=speech-installing-watson-text){: external}.
+
+Change to word timing response for WebSocket interface
+:   The response object that the service sends when you request word timings with the WebSocket interface has changed. The service now sends word timing results in a single array that includes a string followed by two floats:
+
+    ```json
+    {
+      "words": [
+        ["Hello", 0.0, 0.259],
+        ["world", 0.259, 0.532]
+      ]
+    }
+    ```
+    {: codeblock}
+
+    The service previously sent timing results as an array that included a string following by an array of two floats:
+
+    ```json
+    {
+      "words": [
+        ["Hello", [0.0629826778195474, 0.2590192737303819]],
+        ["world", [0.2598829173456253, 0.5322130804452672]]
+      ]
+    }
+    ```
+    {: codeblock}
+
+    Also, the level of precision for word timings and marks is now reduced to three decimal places. For more information about the new responses, see [Word timings](/docs/text-to-speech?topic=text-to-speech-timing).
+
+Security vulnerabilities addressed
+:   The following security vulnerabilities have been addressed:
+    -   [Red Hat CVE-2022-24407](https://access.redhat.com/security/cve/CVE-2022-24407): A flaw was found in the SQL plugin shipped with Cyrus SASL. The vulnerability occurs due to failure to properly escape SQL input and leads to an improper input validation vulnerability. This flaw allows an attacker to execute arbitrary SQL commands and the ability to change the passwords for other accounts allowing escalation of privileges.
 
 ## 23 February 2022 (Version 4.0.6)
 {: #text-to-speech-data-23february2022}
@@ -85,14 +127,6 @@ Updated recommendation for OpenShift Container Storage
     The Speech services work with either version of OpenShift Container Storage. The newly recommended version has more restrictive access permissions. For more information, see
     -    [Installing {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.0?topic=speech-installing-watson-text){: external}
     -   [Upgrading {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.0?topic=speech-upgrading-watson-text){: external}
-
-## 2 February 2022
-{: #text-to-speech-data-2february2022}
-
-Defect fixes for SSML documentation
-:   **Defect fixes:** The SSML documentation was updated to correct the following errors:
-    -   The examples of the `<break>` element are now correct. The element is unary, as now shown in the examples. The previous examples included open and close tags with embedded text. The embedded text was not spoken by the service. For more information, see [The `<break>` element](/docs/text-to-speech?topic=text-to-speech-elements#break_element).
-    -   The service supports Speech Synthesis Markup Language (SSML) version 1.1. All references and examples now use the correct version. The documentation previously referred to version 1.0.
 
 ## 31 January 2022 (Version 4.0.5)
 {: #text-to-speech-data-31january2022}
