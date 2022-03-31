@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-02-28"
+lastupdated: "2022-03-28"
 
 keywords: text to speech release notes,text to speech for IBM cloud release notes
 
@@ -32,6 +32,34 @@ The service has the following known limitations:
 
 -   **2 December 2020:** Cross-Origin Resource Sharing (CORS) support is not available from the Mozilla Firefox™ browser for voices in the following languages: Arabic, Australian English, Chinese, Dutch (Belgian and Netherlands), Korean, and Swedish.
 -   **22 August 2019:** When you specify the `audio/ogg;codecs=opus` audio format, you can optionally specify a sampling rate other than the default 48,000 Hz. However, although the service accepts `48000`, `24000`, `16000`, `12000`, or `8000` as a valid sampling rate, it currently disregards a specified value and always returns the audio with a sampling rate of 48 kHz.
+
+## 31 March 2022
+{: #text-to-speech-31march2022}
+{: release-note}
+
+Important: Deprecation of all neural voices
+:   **Important:** Effective **31 March 2022**, all neural voices are deprecated. The deprecated voices remain available to existing users until **31 March 2023**, when they will be removed from the service and the documentation. All enhanced neural voices remain available to all users.
+
+    The following neural voices are now deprecated:
+    -   Arabic: `ar-MS_OmarVoice`
+    -   Chinese (Mandarin): `zh-CN_LiNaVoice`, `zh-CN_WangWeiVoice`, and `zh-CN_ZhangJingVoice`
+    -   Czech: `cs-CZ_AlenaVoice`
+    -   Dutch (Belgian): `nl-BE_AdeleVoice` and `nl-BE_BramVoice`
+    -   Dutch (Netherlands): `nl-NL_EmmaVoice` and `nl-NL_LiamVoice`
+    -   English (Australian): `en-AU_CraigVoice`, `en-AU_MadisonVoice`, and `en-AU_SteveVoice`
+    -   Korean: `ko-KR_HyunjunVoice`, `ko-KR_SiWooVoice`, `ko-KR_YoungmiVoice`, and `ko-KR_YunaVoice`
+    -   Swedish: `sv-SE_IngridVoice`
+
+    The deprecated neural voices continue to be available to existing users but are no longer available to new users:
+    -   *Existing users:* Instances of the service created before *31 March 2022* can continue to use the deprecated voices for speech synthesis. The instances can also be used create and work with custom models that are based on the deprecated voices. And they can continue to list and query the voices with the `GET /v1/voices` and `GET /v1/voices/{voice}` methods.
+    -   *New users:* Instances of the service created on or after *31 March 2022* cannot use the deprecated voices for speech synthesis. The instances also cannot be used create custom models that are based on the deprecated voices. And they cannot list or query the voices with the `GET /v1/voices` and `GET /v1/voices/{voice}` methods. Any API call that includes one of the deprecated voices returns an HTTP error code of 400 or 404, depending on the call.
+
+    For more information about the available languages and voices, see [Using languages and voices](/docs/text-to-speech?topic=text-to-speech-voices). Note that the service might provide enhanced neural voices to replace some of the deprecated languages and voices by 31 March 2023.
+
+Deprecated standard voices are removed from the documentation
+:   The standard concatenative voices were deprecated on [2 December 2020](#text-to-speech-2december2020). These standard voices have now been removed from the API reference. The topic *Migrating from standard to neural voices* has also been removed from the page [Using languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
+
+    Similarly, the former name of the Arabic voice, `ar-AR_OmarVoice`, was deprecated at the same time. It too has been removed from the documentation. Use the voice `ar-MS_OmarVoice` instead.
 
 ## 28 February 2022
 {: #text-to-speech-28february2022}
@@ -66,8 +94,8 @@ Change to word timing response for WebSocket interface
 
     **Note:** Results for enhanced neural and neural voices were different previously. These inconsistencies could cause errors for the {{site.data.keyword.watson}} SDKs. The results for all voices are now consistent.
 
-## 2 February 2022
-{: #text-to-speech-2february2022}
+## 26 January 2022
+{: #text-to-speech-26january2022}
 {: release-note}
 
 Defect fixes for SSML documentation
@@ -282,7 +310,7 @@ Deprecated standard voices
 
     All of the standard voices that have been deprecated have equivalent neural counterparts, so no voice is being taken away. Rather, you can change to the equivalent neural version of the voice (for example, from `de-DE_BirgitVoice` to `de-DE_BirgitV3Voice`) for better speech-synthesis results.
 
-    These deprecated voices are removed from the published documentation. They will continue to function for at least one year but might be removed at a future date. You are encouraged to migrate to the equivalent neural voices at your earliest convenience. For more information about moving from a deprecated standard voice to a neural voice, see [Migrating from standard to neural voices](/docs/text-to-speech?topic=text-to-speech-voices#migrate-voice).
+    These deprecated voices are removed from the published documentation. They will continue to function for at least one year but might be removed at a future date. You are encouraged to migrate to the equivalent neural voices at your earliest convenience.
 
     If you omit the optional `voice` parameter from a speech synthesis request, the service uses `en-US_MichaelV3Voice` by default. This neural voice replaces the now-deprecated `en-US_MichaelVoice` standard voice that was the previous default.
 
@@ -293,10 +321,7 @@ Deprecated features
     -   *Voice transformation SSML.* This was an IBM extension to SSML that was supported only for the `en-US_AllisonVoice`, `en-US_LisaVoice`, and `en-US_MichaelVoice` voices.
     -   *The `volume` attribute of the `<prosody>` element.* This attribute was available for all standard voices.
 
-    Including these SSML elements with a synthesis request for a neural voice generates an HTTP 400 response code because the request fails SSML validation.
-
-    -   For more information about SSML validation, see [SSML validation](/docs/text-to-speech?topic=text-to-speech-ssml#errors).
-    -   For more information about moving from a deprecated standard voice to a neural voice, see [Migrating from standard to neural voices](/docs/text-to-speech?topic=text-to-speech-voices#migrate-voice).
+    Including these SSML elements with a synthesis request for a neural voice generates an HTTP 400 response code because the request fails SSML validation. For more information about SSML validation, see [SSML validation](/docs/text-to-speech?topic=text-to-speech-ssml#errors).
 
 New support for Cross-Origin Resource Sharing
 :   Cross-Origin Resource Sharing (CORS) support is now available for all voices from the Google Chrome™ and Apple® Safari browsers. It is *not* available from the Mozilla Firefox™ browser for voices in the following languages: Arabic, Australian English, Chinese, Netherlands Dutch, and Korean. For more information, see [Leveraging CORS support](/docs/text-to-speech?topic=text-to-speech-service-features#features-cors).
@@ -568,7 +593,7 @@ New support for token-based {{site.data.keyword.cloud_notm}} IAM
     The migration to IAM authentication affects new and existing service instances differently:
 
     -   *All new service instances that you create in any location* now use IAM authentication to access the service. You can pass either a bearer token or an API key: Tokens support authenticated requests without embedding service credentials in every call; API keys use HTTP basic authentication. When you use any of the {{site.data.keyword.watson}} SDKs, you can pass the API key and let the SDK manage the lifecycle of the tokens.
-    -   *Existing service instances that you created in a location before the indicated migration date* continue to use the `{username}` and `{password}` from their previous Cloud Foundry service credentials for authentication until you migrate them to use IAM authentication. For more information about migrating to IAM authentication, see [Migrating {{site.data.keyword.watson}} services from Cloud Foundry](/docs/text-to-speech?topic=watson-migrate).
+    -   *Existing service instances that you created in a location before the indicated migration date* continue to use the `{username}` and `{password}` from their previous Cloud Foundry service credentials for authentication until you migrate them to use IAM authentication.
 
     For more information, see the following documentation:
 

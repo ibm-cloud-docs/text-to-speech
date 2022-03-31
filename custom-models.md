@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2021-11-09"
+  years: 2015, 2022
+lastupdated: "2022-03-24"
 
 subcollection: text-to-speech
 
@@ -13,7 +13,7 @@ subcollection: text-to-speech
 # Creating and managing custom models
 {: #customModels}
 
-The first step in working with any custom model is to create it. Once it exists, you can manage the model by querying or updating its metadata and entries, and by deleting it if it is no longer needed. Before getting started, review the following general usage information about custom models.
+The first step in working with any custom model is to create it.  Once it exists, you can manage the model by querying or updating its metadata and entries, and by deleting it if it is no longer needed. Before getting started, review the following general usage information about custom models.
 {: shortdesc}
 
 A custom model can also include custom prompts that you define for the Tune by Example feature. For more information about Tune by Example, custom prompts, and speaker models, see [Understanding Tune by Example](/docs/text-to-speech?topic=text-to-speech-tbe-intro).
@@ -69,10 +69,7 @@ You pass the following attributes as a JSON object with the body of a `POST /v1/
 :   A user-defined name for the new custom model. The name is used to label the model for easy identification. The name must be unique among all custom models that you own.
 
 `language` (*optional* string)
-:   An identifier for the language of the custom model. The default is `en-US` for US English. The custom model can be used with any voice that is available in the specified language. For example, a custom model that is created for the `en-US` language can be used with any US English voice. It cannot, however, be used with an `en-GB` or `en-AU` voice.
-
-    ![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}** If you install the neural voices, the `language` parameter is required. You must use the parameter to specify a language. The request fails if you do not specify a language.
-    {: important}
+:   An identifier for the language of the custom model. The default is `en-US` for US English. The custom model can be used with any voice that is available in the specified language. For example, a custom model that is created for the `en-US` language can be used with any US English voice. It cannot, however, be used with an `en-GB` voice.
 
 `description` (*optional* string)
 :   A description of the new model. Although it is optional, a description is highly recommended.

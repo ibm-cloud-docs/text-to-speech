@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-02-15"
+lastupdated: "2022-03-22"
 
 subcollection: text-to-speech
 
@@ -21,6 +21,9 @@ The service supports the following symbols for Mandarin (Simplified) Chinese. Ch
 -   *Table 4* shows the tone symbols that can be used with the initial and final symbols to specify the intonation of a Chinese character.
 -   *Tables 5 and 6* provide groups of phonetic representations and examples of Mandarin Chinese synthesis.
 -   *Tables 7 through 10* provide English symbols for consonants and different forms of vowels that you can use to construct pinyin representations.
+
+Effective **31 March 2022**, the neural Mandarin Chinese voices are deprecated. All deprecated voices remain available to existing users until **31 March 2023**, when they will be removed from the service and the documentation. For more information, see the [31 March 2022 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-31march2022) in the release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}}.
+{: deprecated}
 
 ## Using pinyin
 {: #zhPinyinUsing}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-01-19"
+lastupdated: "2022-03-25"
 
 subcollection: text-to-speech
 
@@ -95,5 +95,3 @@ The service also returns an error for invalid use of deprecated features:
 
 -   *Invalid use of the SSML `volume` attribute with the `<prosody>` element.* You cannot use the `volume` attribute of the `<prosody>` element with neural voices. The attribute was valid only with the deprecated standard voices.
 -   *Invalid use of the SSML `<express-as>` or `<voice-transformation>` element.* You cannot use these SSML extensions with neural voices. The elements were valid only with deprecated standard US English voices.
-
-For more information about these elements and about migrating to neural voices, see [Migrating from standard to neural voices](/docs/text-to-speech?topic=text-to-speech-voices#migrate-voice).

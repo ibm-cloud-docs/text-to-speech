@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2021
-lastupdated: "2021-05-10"
+  years: 2020, 2022
+lastupdated: "2022-03-24"
 
 keywords: faqs,frequently asked questions,question,Text to Speech
 
@@ -37,7 +37,15 @@ Once you have your service credentials, see the following topics for information
 {: faq}
 {: support}
 
-The {{site.data.keyword.texttospeechshort}} service supports male and female voices in various spoken languages. Supported languages include Arabic, Brazilian Portuguese, Chinese (Mandarin), Dutch, English (Australian, United Kingdom, and United States), French, German, Italian, Japanese, Korean, and Spanish (multiple dialects). Some languages and voices are available only for {{site.data.keyword.cloud}}, not for {{site.data.keyword.icp4dfull}}. For more information about the available voices for all languages, see [Using languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
+The {{site.data.keyword.texttospeechshort}} service supports male and female voices in various spoken languages:
+
+-   The services offers *enhanced neural* voices for the following languages: English (United Kingdom and United States), French, German, Italian, Japanese, Portuguese (Brazilian), and Spanish (Castilian, Latin American, and North American).
+-   The service offers *neural* voices for the following languages: Arabic, Chinese (Mandarin), Czech, Dutch (Belgian and Netherlands), English (Australian), Korean, and Swedish.
+
+    Effective **31 March 2022**, all neural voices are deprecated. The deprecated voices remain available to existing users until **31 March 2023**, when they will be removed from the service and the documentation. The neural voices are supported only for IBM Cloud; they are not available for IBM Cloud Pak for Data. All enhanced neural voices remain available to all users. For more information, see the [31 March 2022 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-31march2022) in the release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}}.
+    {: important}
+
+Some languages and voices are available only for {{site.data.keyword.cloud}}, not for {{site.data.keyword.icp4dfull}}. For more information about the available voices for all languages, see [Using languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
 
 ## How does the service synthesize audio?
 {: #faq-voices}
