@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-02-15"
+lastupdated: "2022-03-24"
 
 subcollection: text-to-speech
 
@@ -133,14 +133,17 @@ Table 3 shows the service's language support for IPA and SPR symbols. All neural
 
 The table indicates which languages are available with with version of the service and which versions support IPA, SPR, or both. The table provides links to pages that document the supported SPR symbols, IPA symbols, and equivalent IPA Unicode values that can be used with all voices for each language. The pages provide examples of each symbol in words from the language. Because of dialectal differences, the examples might not always match your pronunciation.
 
+Effective **31 March 2022**, all neural voices are deprecated. The languages of the deprecated voices are labeled as *Deprecated* in Table 3. The neural voices are supported only for IBM Cloud; they are not available for IBM Cloud Pak for Data. All enhanced neural voices remain available to all users. For more information, see the [31 March 2022 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-31march2022) in the release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}}.
+{: important}
+
 | Language | Availability | Supports IPA | Supports SPR |
 |----------|:------------:|:------------:|:------------:|
-| [Arabic symbols](/docs/text-to-speech?topic=text-to-speech-arSymbols) | {{site.data.keyword.cloud_notm}} only | Yes | No |
-| [Chinese (Mandarin) symbols](/docs/text-to-speech?topic=text-to-speech-zhSymbols) | {{site.data.keyword.cloud_notm}} only | Yes | No |
-| [Czech symbols](/docs/text-to-speech?topic=text-to-speech-csSymbols) | {{site.data.keyword.cloud_notm}} only | Yes | No |
-| [Dutch (Belgian) symbols](/docs/text-to-speech?topic=text-to-speech-beSymbols) | {{site.data.keyword.cloud_notm}} only | Yes | No |
-| [Dutch (Netherlands) symbols](/docs/text-to-speech?topic=text-to-speech-nlSymbols) | {{site.data.keyword.cloud_notm}} only | Yes | No |
-| [English (Australian) symbols](/docs/text-to-speech?topic=text-to-speech-auSymbols) | {{site.data.keyword.cloud_notm}} only | Yes | No |
+| [Arabic symbols](/docs/text-to-speech?topic=text-to-speech-arSymbols) | {{site.data.keyword.cloud_notm}} only  \n Deprecated | Yes | No |
+| [Chinese (Mandarin) symbols](/docs/text-to-speech?topic=text-to-speech-zhSymbols) | {{site.data.keyword.cloud_notm}} only  \n Deprecated | Yes | No |
+| [Czech symbols](/docs/text-to-speech?topic=text-to-speech-csSymbols) | {{site.data.keyword.cloud_notm}} only  \n Deprecated | Yes | No |
+| [Dutch (Belgian) symbols](/docs/text-to-speech?topic=text-to-speech-beSymbols) | {{site.data.keyword.cloud_notm}} only  \n Deprecated | Yes | No |
+| [Dutch (Netherlands) symbols](/docs/text-to-speech?topic=text-to-speech-nlSymbols) | {{site.data.keyword.cloud_notm}} only  \n Deprecated | Yes | No |
+| [English (Australian) symbols](/docs/text-to-speech?topic=text-to-speech-auSymbols) | {{site.data.keyword.cloud_notm}} only  \n Deprecated | Yes | No |
 | [English (United Kingdom) symbols](/docs/text-to-speech?topic=text-to-speech-gbSymbols) | All versions | Yes | Yes |
 | [English (United States) symbols](/docs/text-to-speech?topic=text-to-speech-usSymbols) | All versions | Yes | Yes |
 | [French (Canadian) symbols](/docs/text-to-speech?topic=text-to-speech-caSymbols) | All versions | Yes | Yes |
@@ -148,8 +151,8 @@ The table indicates which languages are available with with version of the servi
 | [German symbols](/docs/text-to-speech?topic=text-to-speech-deSymbols) | All versions | Yes | Yes |
 | [Italian symbols](/docs/text-to-speech?topic=text-to-speech-itSymbols) | All versions | Yes | Yes |
 | [Japanese symbols](/docs/text-to-speech?topic=text-to-speech-jaSymbols) | All versions | Yes | Yes |
-| [Korean symbols](/docs/text-to-speech?topic=text-to-speech-koSymbols) | {{site.data.keyword.cloud_notm}} only | Yes | No |
+| [Korean symbols](/docs/text-to-speech?topic=text-to-speech-koSymbols) | {{site.data.keyword.cloud_notm}} only  \n Deprecated | Yes | No |
 | [Portuguese (Brazilian) symbols](/docs/text-to-speech?topic=text-to-speech-ptSymbols) | All versions | Yes | Yes |
 | [Spanish symbols](/docs/text-to-speech?topic=text-to-speech-esSymbols) | All versions | Yes | Yes |
-| [Swedish symbols](/docs/text-to-speech?topic=text-to-speech-svSymbols) | {{site.data.keyword.cloud_notm}} only | Yes | No |
+| [Swedish symbols](/docs/text-to-speech?topic=text-to-speech-svSymbols) | {{site.data.keyword.cloud_notm}} only  \n Deprecated | Yes | No |
 {: caption="Table 3. Language support for IPA and SPR phonetic symbols"}

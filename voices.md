@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-02-15"
+lastupdated: "2022-03-25"
 
 subcollection: text-to-speech
 
@@ -16,8 +16,8 @@ subcollection: text-to-speech
 The {{site.data.keyword.texttospeechfull}} service supports a variety of languages, voices, and dialects. For different languages, the service offers female voices, male voices, or both. Each voice uses appropriate cadence and intonation for its dialect.
 {: shortdesc}
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** The list of available voices underwent many changes on 2 December 2020. For more information, see the [2 December 2020 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-2december2020) in the release notes and [Migrating from standard to neural voices](#migrate-voice).
-{: important}
+Effective **31 March 2022**, all neural voices are deprecated. The deprecated voices remain available to existing users until **31 March 2023**, when they will be removed from the service and the documentation. The neural voices are supported only for IBM Cloud; they are not available for IBM Cloud Pak for Data. All enhanced neural voices remain available to all users. For more information, see the [31 March 2022 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-31march2022) in the release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}}.
+{: deprecated}
 
 ## Supported languages and voices
 {: #language-voices}
@@ -28,20 +28,23 @@ All voices use neural voice technology. The service offers two types of voices w
 
 If a voice is labeled in the **Type / Availability** column with just one version of the service, *{{site.data.keyword.cloud_notm}} only* or *{{site.data.keyword.icp4dfull_notm}} only*, it is restricted to that version. Otherwise, the voice is available with both versions of the service. Only enhanced neural voices are available for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}.
 
+Effective **31 March 2022**, all neural voices are deprecated. They are labeled as *Deprecated* in Table 1. The neural voices are supported only for IBM Cloud; they are not available for IBM Cloud Pak for Data. All enhanced neural voices remain available to all users. For more information, see the [31 March 2022 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-31march2022) in the release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}}.
+{: deprecated}
+
 | Language | Type / Availability | Voice / Gender | Sample |
 |----------|:-------------------:|:--------------:|:------:|
-| Arabic | Neural  \n {{site.data.keyword.cloud_notm}} only | `ar-MS_OmarVoice`  \n Male | ![ar-MS_OmarVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/ar-MS_OmarVoice.wav){: audio controls} |
-| Chinese  \n (Mandarin) | Neural  \n {{site.data.keyword.cloud_notm}} only | `zh-CN_LiNaVoice`  \n Female | ![zh-CN_LiNaVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/zh-CN_LiNaVoice.wav){: audio controls} |
-| | Neural  \n {{site.data.keyword.cloud_notm}} only | `zh-CN_WangWeiVoice`  \n Male | ![zh-CN_WangWeiVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/zh-CN_WangWeiVoice.wav){: audio controls} |
-| | Neural  \n {{site.data.keyword.cloud_notm}} only | `zh-CN_ZhangJingVoice`  \n Female | ![zh-CN_ZhangJingVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/zh-CN_ZhangJingVoice.wav){: audio controls} |
-| Czech | Neural  \n {{site.data.keyword.cloud_notm}} only | `cs-CZ_AlenaVoice`  \n Female | ![cs-CZ_AlenaVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/cs-CZ_AlenaVoice.wav){: audio controls} |
-| Dutch  \n (Belgian) | Neural  \n {{site.data.keyword.cloud_notm}} only | `nl-BE_AdeleVoice`  \n Female | ![nl-BE_AdeleVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/nl-BE_AdeleVoice.wav){: audio controls} |
-| | Neural  \n {{site.data.keyword.cloud_notm}} only | `nl-BE_BramVoice`  \n Male | ![nl-BE_BramVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/nl-BE_BramVoice.wav){: audio controls} |
-| Dutch  \n (Netherlands) | Neural  \n {{site.data.keyword.cloud_notm}} only | `nl-NL_EmmaVoice`  \n Female | ![nl-NL_EmmaVoive sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/nl-NL_EmmaVoice.wav){: audio controls} |
-| | Neural  \n {{site.data.keyword.cloud_notm}} only | `nl-NL_LiamVoice`  \n Male | ![nl-NL_LiamVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/nl-NL_LiamVoice.wav){: audio controls} |
-| English  \n (Australian) | Neural  \n {{site.data.keyword.cloud_notm}} only | `en-AU_CraigVoice`  \n Male | ![en-AU_CraigVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/en-AU_CraigVoice.wav){: audio controls} |
-| | Neural  \n {{site.data.keyword.cloud_notm}} only | `en-AU_MadisonVoice`  \n Female | ![en-AU_MadisonVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/en-AU_MadisonVoice.wav){: audio controls} |
-| | Neural  \n {{site.data.keyword.cloud_notm}} only | `en-AU_SteveVoice`  \n Male | ![en-AU_SteveVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/en-AU_SteveVoice.wav){: audio controls} |
+| Arabic | Neural  \n {{site.data.keyword.cloud_notm}} only  \n Deprecated | `ar-MS_OmarVoice`  \n Male | ![ar-MS_OmarVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/ar-MS_OmarVoice.wav){: audio controls} |
+| Chinese  \n (Mandarin) | Neural  \n {{site.data.keyword.cloud_notm}} only  \n Deprecated | `zh-CN_LiNaVoice`  \n Female | ![zh-CN_LiNaVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/zh-CN_LiNaVoice.wav){: audio controls} |
+| | Neural  \n {{site.data.keyword.cloud_notm}} only  \n Deprecated | `zh-CN_WangWeiVoice`  \n Male | ![zh-CN_WangWeiVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/zh-CN_WangWeiVoice.wav){: audio controls} |
+| | Neural  \n {{site.data.keyword.cloud_notm}} only  \n Deprecated | `zh-CN_ZhangJingVoice`  \n Female | ![zh-CN_ZhangJingVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/zh-CN_ZhangJingVoice.wav){: audio controls} |
+| Czech | Neural  \n {{site.data.keyword.cloud_notm}} only  \n Deprecated | `cs-CZ_AlenaVoice`  \n Female | ![cs-CZ_AlenaVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/cs-CZ_AlenaVoice.wav){: audio controls} |
+| Dutch  \n (Belgian) | Neural  \n {{site.data.keyword.cloud_notm}} only  \n Deprecated | `nl-BE_AdeleVoice`  \n Female | ![nl-BE_AdeleVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/nl-BE_AdeleVoice.wav){: audio controls} |
+| | Neural  \n {{site.data.keyword.cloud_notm}} only  \n Deprecated | `nl-BE_BramVoice`  \n Male | ![nl-BE_BramVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/nl-BE_BramVoice.wav){: audio controls} |
+| Dutch  \n (Netherlands) | Neural  \n {{site.data.keyword.cloud_notm}} only  \n Deprecated | `nl-NL_EmmaVoice`  \n Female | ![nl-NL_EmmaVoive sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/nl-NL_EmmaVoice.wav){: audio controls} |
+| | Neural  \n {{site.data.keyword.cloud_notm}} only  \n Deprecated | `nl-NL_LiamVoice`  \n Male | ![nl-NL_LiamVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/nl-NL_LiamVoice.wav){: audio controls} |
+| English  \n (Australian) | Neural  \n {{site.data.keyword.cloud_notm}} only  \n Deprecated | `en-AU_CraigVoice`  \n Male | ![en-AU_CraigVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/en-AU_CraigVoice.wav){: audio controls} |
+| | Neural  \n {{site.data.keyword.cloud_notm}} only  \n Deprecated | `en-AU_MadisonVoice`  \n Female | ![en-AU_MadisonVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/en-AU_MadisonVoice.wav){: audio controls} |
+| | Neural  \n {{site.data.keyword.cloud_notm}} only  \n Deprecated | `en-AU_SteveVoice`  \n Male | ![en-AU_SteveVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/en-AU_SteveVoice.wav){: audio controls} |
 | English  \n (United Kingdom) | Enhanced neural | `en-GB_CharlotteV3Voice`  \n Female | ![en-GB_CharlotteV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/en-GB_CharlotteV3Voice.wav){: audio controls} |
 | | Enhanced neural | `en-GB_JamesV3Voice`  \n Male | ![en-GB_JamesV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/en-GB_JamesV3Voice.wav){: audio controls} |
 | | Enhanced neural | `en-GB_KateV3Voice`  \n Female | ![en-GB_KateV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/en-GB_KateV3Voice.wav){: audio controls} |
@@ -60,19 +63,19 @@ If a voice is labeled in the **Type / Availability** column with just one versio
 | | Enhanced neural | `de-DE_ErikaV3Voice`  \n Female | ![de-DE_ErikaV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/de-DE_ErikaV3Voice.wav){: audio controls} |
 | Italian | Enhanced neural  | `it-IT_FrancescaV3Voice`  \n Female | ![it-IT_FrancescaV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/it-IT_FrancescaV3Voice.wav){: audio controls} |
 | Japanese | Enhanced neural | `ja-JP_EmiV3Voice`  \n Female | ![ja-JP_EmiV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/ja-JP_EmiV3Voice.wav){: audio controls} |
-| Korean | Neural  \n {{site.data.keyword.cloud_notm}} only | `ko-KR_HyunjunVoice`  \n Male | ![ko-KR_HyunjunVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/ko-KR_HyunjunVoice.wav){: audio controls} |
-| | Neural  \n {{site.data.keyword.cloud_notm}} only | `ko-KR_SiWooVoice`  \n Male | ![ko-KR_SiWooVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/ko-KR_SiWooVoice.wav){: audio controls} |
-| | Neural  \n {{site.data.keyword.cloud_notm}} only | `ko-KR_YoungmiVoice`  \n Female | ![ko-KR_YoungmiVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/ko-KR_YoungmiVoice.wav){: audio controls} |
-| | Neural  \n {{site.data.keyword.cloud_notm}} only | `ko-KR_YunaVoice`  \n Female | ![ko-KR_YunaVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/ko-KR_YunaVoice.wav){: audio controls} |
+| Korean | Neural  \n {{site.data.keyword.cloud_notm}} only  \n Deprecated | `ko-KR_HyunjunVoice`  \n Male | ![ko-KR_HyunjunVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/ko-KR_HyunjunVoice.wav){: audio controls} |
+| | Neural  \n {{site.data.keyword.cloud_notm}} only  \n Deprecated | `ko-KR_SiWooVoice`  \n Male | ![ko-KR_SiWooVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/ko-KR_SiWooVoice.wav){: audio controls} |
+| | Neural  \n {{site.data.keyword.cloud_notm}} only  \n Deprecated | `ko-KR_YoungmiVoice`  \n Female | ![ko-KR_YoungmiVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/ko-KR_YoungmiVoice.wav){: audio controls} |
+| | Neural  \n {{site.data.keyword.cloud_notm}} only  \n Deprecated | `ko-KR_YunaVoice`  \n Female | ![ko-KR_YunaVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/ko-KR_YunaVoice.wav){: audio controls} |
 | Portuguese  \n (Brazilian) | Enhanced neural | `pt-BR_IsabelaV3Voice`  \n Female | ![pt-BR_IsabelaV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/pt-BR_IsabelaV3Voice.wav){: audio controls} |
 | Spanish  \n (Castilian) | Enhanced neural | `es-ES_EnriqueV3Voice`  \n Male | ![es-ES_EnriqueV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/es-ES_EnriqueV3Voice.wav){: audio controls} |
 | | Enhanced neural | `es-ES_LauraV3Voice`  \n Female | ![es-ES_LauraV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/es-ES_LauraV3Voice.wav){: audio controls} |
 | Spanish  \n (Latin American) | Enhanced neural | `es-LA_SofiaV3Voice`  \n Female | ![es-LA_SofiaV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/es-LA_SofiaV3Voice.wav){: audio controls} |
 | Spanish  \n (North American) | Enhanced neural | `es-US_SofiaV3Voice`  \n Female | ![es-US_SofiaV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/es-US_SofiaV3Voice.wav){: audio controls} |
-| Swedish | Neural  \n {{site.data.keyword.cloud_notm}} only | `sv-SE_IngridVoice`  \n Female | ![sv-SE_IngridVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/sv-SE_IngridVoice.wav){: audio controls} |
+| Swedish | Neural  \n {{site.data.keyword.cloud_notm}} only  \n Deprecated | `sv-SE_IngridVoice`  \n Female | ![sv-SE_IngridVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-2112/sv-SE_IngridVoice.wav){: audio controls} |
 {: caption="Table 1. Supported languages and voices"}
 
-The Spanish Latin American and North American `Sofia` voices are essentially the same voice. The most significant difference concerns how the two voices interpret a $ (dollar sign). The Latin American version uses the term *pesos*; the North American version uses the term *dólares*. Other minor differences might also exist between the two voices.
+The Spanish Latin American and North American `Sofia` voices are essentially the same voice. The most significant difference concerns how the two voices interpret a $ (dollar sign). The Latin American version uses the term *pesos*; the North American version uses the term *dólares*. Other minor differences might also exist between the two voices.p
 {: note}
 
 ### Neural voice technology
@@ -85,6 +88,10 @@ During synthesis, the DNNs predict the pitch and phoneme duration (prosody), spe
 The service offers two types of neural voices:
 
 -   *Neural voices* do *not* include the string `V3` in their names. All voices for Arabic, Australian English, Chinese, Dutch, Korean, and Swedish are neural voices.
+
+    Effective **31 March 2022**, all neural voices are deprecated. The deprecated voices remain available to existing users until **31 March 2023**, when they will be removed from the service and the documentation. The neural voices are supported only for IBM Cloud; they are not available for IBM Cloud Pak for Data. All enhanced neural voices remain available to all users. For more information, see the [31 March 2022 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-31march2022) in the release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}}.
+    {: deprecated}
+
 -   *Enhanced neural voices* include the string `V3` in their names. All voices for Brazilian Portuguese, United Kingdom and United States English, French (both dialects), German, Italian, Japanese, and Spanish (all dialects) are enhanced neural voices.
 
 Enhanced neural voices achieve a slightly higher degree of natural-sounding speech. Enhanced neural voices support both IPA and SPR for word and phoneme customization; neural voices support only IPA.
@@ -94,126 +101,10 @@ For more information about the service's neural voice technology, see
 -   The blog post [{{site.data.keyword.ibmwatson_notm}} {{site.data.keyword.texttospeechshort}}: Neural Voices Generally Available](https://medium.com/ibm-watson/ibm-watson-text-to-speech-neural-voices-added-to-service-e562106ff9c7){: external}
 -   The research paper [High quality, lightweight and adaptable {{site.data.keyword.texttospeechshort}} using LPCNet](https://arxiv.org/abs/1905.00590){: external}
 
-### Migrating from standard to neural voices
-{: #migrate-voice}
-
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
-
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** The list of available voices underwent many changes on 2 December 2020. To optimize the audio quality and naturalness of synthesized speech, the standard (concatenative) voices that were previously available with the service are now deprecated. {{site.data.keyword.IBM_notm}} recommends that you migrate from standard to neural voices at your earliest convenience. For more information about the changes and implications for voice synthesis, see the [2 December 2020 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-2december2020) in the release notes.
-{: important}
-
-If you previously used any of the now-deprecated standard voices, you might have used the following features:
-
--   The `<express-as>` element. This feature was available only for the standard US English voice `en-US_AllisonVoice`.
--   The `<voice-transformation>` element. This feature was available only for the standard US English voices `en-US_AllisonVoice`, `en-US_LisaVoice`, and `US_MichaelVoice`.
--   The `volume` attribute of the `<prosody>` element. This attribute was available for all standard voices.
-
-These SSML features are not available for neural voices. However, you might find that these features are no longer needed when using neural voices. Also, you can make pitch and rate modifications to neural voices by using the `<prosody>` element in place of the `<voice-transformation>` element. For more information, see [The prosody element](/docs/text-to-speech?topic=text-to-speech-elements#prosody_element).
-
-To migrate from a standard voice to a neural voice, complete these steps:
-
-1.  Modify calls to the `/v1/synthesize` method. Change the `voice` query parameter of the `/v1/synthesize` method to specify the neural voice instead of the standard voice. For example, change
-
-    ```sh
-    voice=en-US_AllisonVoice
-    ```
-    {: codeblock}
-
-    to
-
-    ```sh
-    voice=en-US_AllisonV3Voice
-    ```
-    {: codeblock}
-
-1.  Eliminate the use of *Expressive SSML*. The `<express-as>` SSML element was supported only with the standard `en-US_AllisonVoice` voice. You must remove any instances of the element from input text when using neural voices. For example, change
-
-    ```xml
-    <express-as type="GoodNews">
-      I have your results!
-    </express-as>
-    ```
-    {: codeblock}
-
-    to
-
-    ```xml
-    I have your results.
-    ```
-    {: codeblock}
-
-    Because neural voices are more natural sounding, you might find that you no longer need this SSML extension.
-
-1.  Eliminate the use of *Voice transformation SSML*. The `<voice-transformation>` SSML element was supported only for the standard `en-US_AllisonVoice`, `en-US_LisaVoice`, and `en-US_MichaelVoice` voices. You must remove all instances of the element from input text when using neural voices.
-
-    -  *For built-in transformations* of `type` equals `Young` or `Soft`, with or without the optional `strength` attribute, remove the `<voice-transformation>` element from the input text. For example, change
-
-        ```xml
-        <voice-transformation type="Young" strength="80%">
-          Could you provide us with new information?
-        </voice-transformation>
-        ```
-        {: codeblock}
-
-        to
-
-        ```xml
-        Could you provide us with new information?
-        ```
-        {: codeblock}
-
-    -   *For custom transformations* of `type` equals `Custom`:
-
-        -   Remove instances of the `<voice-transformation>` element that use the `glottal_tension`, `breathiness`, `timbre`, or `timbre_extent` attributes.
-
-        -   Change instances of the `<voice-transformation>` element that use the `pitch`, `pitch_rate`, or `rate` attributes to use the SSML `<prosody>` element instead. For more information, see [The prosody element](/docs/text-to-speech?topic=text-to-speech-elements#prosody_element).
-
-        For example, change
-
-        ```xml
-        <voice-transformation type="Custom" glottal_tension="-50%" rate="10%">
-          Do you have more information?
-        </voice-transformation>
-        ```
-        {: codeblock}
-
-        to
-
-        ```xml
-        <prosody rate="10%">
-          Do you have more information?
-        </prosody>
-        ```
-        {: codeblock}
-
-1.  Eliminate the use of the `volume` attribute of the SSML `<prosody>` element. The `volume` attribute was supported only for standard voices. For example, change
-
-    ```xml
-    <prosody rate="50%" volume="75">
-      Let me say that again.
-    </prosody>
-    ```
-    {: codeblock}
-
-    to
-
-    ```xml
-    <prosody rate="50%">
-      Let me say that again.
-    </prosody>
-    ```
-    {: codeblock}
-
 ## Specifying a voice for speech synthesis
 {: #specify-voice}
 
-Both the HTTP `POST` and `GET /v1/synthesize` methods, as well as the WebSocket `/v1/synthesize` method, accept an optional `voice` query parameter. You use the `voice` parameter to indicate the voice that is to be used for speech synthesis. If you omit the parameter from a request, the service uses a default voice, which depends upon the version of the service that you are using:
-
--   ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}** The service always uses the US English `en-US_MichaelV3Voice` by default.
--   ![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}** The default voice depends on the voices that you installed:
-
-    -   *If you installed the enhanced neural voices,* the service uses the US English `en-US_MichaelV3Voice` by default. If that voice is not installed, you must specify a voice.
-    -   *If you installed the neural voices,* the service always uses the Australian English `en-AU_MadisonVoice` by default.
+Both the HTTP `POST` and `GET /v1/synthesize` methods, as well as the WebSocket `/v1/synthesize` method, accept an optional `voice` query parameter. You use the `voice` parameter to indicate the voice that is to be used for speech synthesis.
 
 The service bases its understanding of the language for the input text on the specified voice. Be sure to specify a voice that matches the language of the input text. For example, if you specify the French voice `fr-FR_ReneeV3Voice`, the service expects to receive input text that is written in French. If you pass text that is not written in the language of the voice (for example, English text for the French voice), the service might not produce meaningful results.
 
@@ -264,6 +155,16 @@ The service bases its understanding of the language for the input text on the sp
     "{url}/v1/synthesize?accept=audio%2Fwav&text=hello%20world&voice=en-US_AllisonV3Voice"
     ```
     {: pre}
+
+## The default voice
+{: #specify-voice-default}
+
+If you omit the `voice` parameter from a request, the service uses the US English `en-US_MichaelV3Voice` by default. This default applies to all speech synthesis requests and to the  `GET /v1/pronunciation` method.
+
+![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}} only** If you do not install the `en-US_MichaelV3Voice`, it cannot serve as the default voice. In this case, you must either
+
+-   Use the `voice` parameter to pass the voice that is to be used with each request.
+-   Specify a new default voice for your installation of {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} by using the `defaultTTSVoice` property in the Speech services custom resource. For more information, see  [Installing {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.0?topic=speech-installing-watson-text){: external}.
 
 ## Customization
 {: #customize-voice}

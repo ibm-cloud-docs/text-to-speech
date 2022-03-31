@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-02-15"
+lastupdated: "2022-03-22"
 
 subcollection: text-to-speech
 
@@ -16,6 +16,9 @@ subcollection: text-to-speech
 ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
 
 The service supports the following symbols for Czech.
+
+Effective **31 March 2022**, the neural Czech voice is deprecated. All deprecated voices remain available to existing users until **31 March 2023**, when they will be removed from the service and the documentation. For more information, see the [31 March 2022 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-31march2022) in the release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}}.
+{: deprecated}
 
 ## Regular vowels
 {: #csRegularVowels}
