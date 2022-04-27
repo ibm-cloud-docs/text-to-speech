@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-03-25"
+lastupdated: "2022-04-22"
 
 subcollection: text-to-speech
 
@@ -156,7 +156,7 @@ The service bases its understanding of the language for the input text on the sp
     ```
     {: pre}
 
-## The default voice
+### The default voice
 {: #specify-voice-default}
 
 If you omit the `voice` parameter from a request, the service uses the US English `en-US_MichaelV3Voice` by default. This default applies to all speech synthesis requests and to the  `GET /v1/pronunciation` method.
@@ -166,14 +166,23 @@ If you omit the `voice` parameter from a request, the service uses the US Englis
 -   Use the `voice` parameter to pass the voice that is to be used with each request.
 -   Specify a new default voice for your installation of {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} by using the `defaultTTSVoice` property in the Speech services custom resource. For more information, see  [Installing {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.0?topic=speech-installing-watson-text){: external}.
 
-## Customization
-{: #customize-voice}
+## Creating a custom model
+{: #customize-model}
 
 When you synthesize text, the service applies language-dependent pronunciation rules to convert the ordinary spelling of each word to a phonetic spelling. The service's pronunciation rules work well for common words, but they can yield imperfect results for unusual words, such as terms with foreign origins, personal names, and abbreviations or acronyms. If your application's lexicon includes such words, you can use the customization interface to specify how the service pronounces them.
 
 You create a custom model for a specific language, not for a specific voice. So a custom model can be used with any voice for its specified language. For example, a custom model that you create for the `en-US` language can be used with any US English voice. It cannot, however, be used with an `en-GB` or `en-AU` voice.
 
 Customization is available for all languages. For more information, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
+
+## Creating a custom voice
+{: #customize-voice}
+
+![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
+
+Premium customers can work with {{site.data.keyword.IBM_notm}} to train a new custom voice for their specific use case and target market. Creating a custom voice is different from customizing one of the service's existing voices. A custom voice is a unique new voice that is based on audio training data that the customer provides. {{site.data.keyword.IBM_notm}} can train a custom voice with as little as one hour of training data.
+
+For more information, contact your {{site.data.keyword.IBM_notm}} Sales Representative.
 
 ## Listing all available voices
 {: #list-voices}

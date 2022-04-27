@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-03-24"
+lastupdated: "2022-04-22"
 
 subcollection: text-to-speech
 
@@ -89,7 +89,12 @@ You can define the custom entry for a word/translation pair based on other words
 
 ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** You must have the Standard or Premium pricing plan to use customization. Users of the Lite plan cannot use the customization interface. For more information about pricing plans, see the {{site.data.keyword.texttospeechshort}} service in the [{{site.data.keyword.cloud}} Catalog](https://{DomainName}/catalog/text-to-speech){: external}.
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** Premium customers can work with {{site.data.keyword.IBM_notm}} to train a new custom voice for their specific use case and target market. {{site.data.keyword.IBM_notm}} can train a new voice with as little as one hour of training data. For more information, contact your {{site.data.keyword.IBM_notm}} Sales Representative.
+### Creating a custom voice
+{: #features-customization-voice}
+
+![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
+
+Premium customers can work with {{site.data.keyword.IBM_notm}} to train a new custom voice for their specific application needs. A custom voice is a unique voice that is based on audio training data that the customer provides. {{site.data.keyword.IBM_notm}} can train a custom voice with as little as one hour of training data. For more information, see [Creating a custom voice](/docs/text-to-speech?topic=text-to-speech-voices#customize-voice) or contact your {{site.data.keyword.IBM_notm}} Sales Representative.
 
 ## Using Tune by Example
 {: #features-tune-by-example}

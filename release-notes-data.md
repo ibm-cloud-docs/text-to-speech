@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-03-28"
+lastupdated: "2022-04-24"
 
 keywords: text to speech release notes,text to speech for IBM cloud pak for data release notes
 
@@ -29,6 +29,44 @@ For information about releases and updates for {{site.data.keyword.cloud_notm}},
 {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} has the following known limitation:
 
 -   **30 August 2019:** When you specify the `audio/ogg;codecs=opus` audio format, you can optionally specify a sampling rate other than the default 48,000 Hz. However, while the service accepts `48000`, `24000`, `16000`, `12000`, or `8000` as a valid sampling rate, it currently disregards a specified value and always returns the audio with a sampling rate of 48 kHz.
+
+## 27 April 2022 (Version 4.0.8)
+{: #text-to-speech-data-27april2022}
+
+Version 4.0.8 is now available
+:   {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} version 4.0.8 is now available. This version supports {{site.data.keyword.icp4dfull_notm}} version 4.x and Red Hat OpenShift versions 4.6 and 4.8. For more information about installing and managing the service, see [Installing {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.0?topic=speech-installing-watson-text){: external}.
+
+New environment variables used in {{site.data.keyword.icp4dfull_notm}} documentation
+:   Most commands in the {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} documentation have been updated to use a common set of environment variables. The documentation provides a script to automatically export the environment variables before you run installation, upgrade, and administration commands. After you source the script, you can copy most commands from the documentation and run them without making any changes.
+
+    The environment variables that the script defines include the following:
+    -   `${PROJECT_CPD_INSTANCE}` identifies the project where you plan to install {{site.data.keyword.icp4dfull_notm}} and the Speech services.
+    -   `${PROJECT_CPD_OPS}` identifies the project for the {{site.data.keyword.icp4dfull_notm}} platform operator.
+    -   `${PROJECT_CPFS_OPS}` identifies the project for the {{site.data.keyword.icp4dfull_notm}} foundational services.
+
+    For more information about using the environment variables, see [Best practice: Setting up install variables](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.0?topic=installing-best-practice-setting-up-install-variables){: external}.
+
+The `ttsVoiceMarginalCPU` property is no longer documented
+:   The `ttsVoiceMarginalCPU` property has been removed from the documentation for the Speech services custom resource. The property manages the tradeoff between concurrency and speech synthesis speed. The default value of `400` ensures a reasonable balance for most customers and maintains real-time synthesis.
+
+Security vulnerabilities addressed
+:   The following security vulnerabilities have been fixed:
+    -   [Security Bulletin: A vulnerability with Guava affects IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data (CVE-2020-8908)](https://www.ibm.com/support/pages/node/6575479){: external}
+    -   [Security Bulletin: A Google Guava vulnerability affects IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data (CVE-2018-10237)](https://www.ibm.com/support/pages/node/6575477){: external}
+    -   [Security Bulletin: Vulnerabilities in Apache Tomcat affect IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data (CVE-2022-23181)](https://www.ibm.com/support/pages/node/6575481){: external}
+    -   [Security Bulletin: A Cyrus SASL vulnerability affects IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data (CVE-2022-24407)](https://www.ibm.com/support/pages/node/6575483){: external}
+    -   [Security Bulletin: A vulnerability with GNU wget affects IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data (CVE-2016-4971)](https://www.ibm.com/support/pages/node/6575485){: external}
+    -   [Security Bulletin: A vulnerability with GNU Wget affects IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data (CVE-2018-0494)](https://www.ibm.com/support/pages/node/6575487){: external}
+    -   [Security Bulletin: A vulnerability in 'GNU Wget' affects IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data (CVE-2018-20483)](https://www.ibm.com/support/pages/node/6575489){: external}
+    -   [Security Bulletin: A vulnerability in ISC BIND affects IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data (CVE-2018-5741)](https://www.ibm.com/support/pages/node/6575493){: external}
+    -   [Security Bulletin: A vulnerability in Python affects IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data (CVE-2019-20916)](https://www.ibm.com/support/pages/node/6575495){: external}
+    -   [Security Bulletin: A vulnerability with ISC BIND affects IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data (CVE-2021-25214)](https://www.ibm.com/support/pages/node/6575497){: external}
+    -   [ Security Bulletin: A vulnerability in ISC BIND affects IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data (CVE-2021-25215)](https://www.ibm.com/support/pages/node/6575499){: external}
+    -   [Security Bulletin: A vulnerability in ISC BIND affects IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data (CVE-2021-25216)](https://www.ibm.com/support/pages/node/6575503){: external}
+    -   [Security Bulletin: A vulnerability in ISC BIND affects IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data (CVE-2021-25219)](https://www.ibm.com/support/pages/node/6575505){: external}
+    -   [Security Bulletin: A vulnerability in PostgreSQL JDBC Driver (PgJDBC) affects IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data (CVE-2022-21724)](https://www.ibm.com/support/pages/node/6575507){: external}
+    -   [Security Bulletin: A vulnerability in GNU Tar affects IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data (CVE-2019-9923)](https://www.ibm.com/support/pages/node/6575509){: external}
+    -   [Security Bulletin: A vulnerability in logback-classic affects IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data (CVE-2021-42550)](https://www.ibm.com/support/pages/node/6575511){: external}
 
 ## 30 March 2022 (Version 4.0.7)
 {: #text-to-speech-data-30march2022}
@@ -69,8 +107,10 @@ Change to word timing response for WebSocket interface
     Also, the level of precision for word timings and marks is now reduced to three decimal places. For more information about the new responses, see [Word timings](/docs/text-to-speech?topic=text-to-speech-timing).
 
 Security vulnerabilities addressed
-:   The following security vulnerabilities have been addressed:
-    -   [Red Hat CVE-2022-24407](https://access.redhat.com/security/cve/CVE-2022-24407): A flaw was found in the SQL plugin shipped with Cyrus SASL. The vulnerability occurs due to failure to properly escape SQL input and leads to an improper input validation vulnerability. This flaw allows an attacker to execute arbitrary SQL commands and the ability to change the passwords for other accounts allowing escalation of privileges.
+:   The following security vulnerabilities have been fixed:
+    -   [Red Hat CVE-2022-24407](https://access.redhat.com/security/cve/CVE-2022-24407){: external}: A flaw was found in the SQL plugin shipped with Cyrus SASL. The vulnerability occurs due to failure to properly escape SQL input and leads to an improper input validation vulnerability. This flaw allows an attacker to execute arbitrary SQL commands and the ability to change the passwords for other accounts allowing escalation of privileges.
+    -   [Security Bulletin: A jwt-go vulnerability affects IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data (CVE-2020-26160)](https://www.ibm.com/support/pages/node/6574543){: external}
+    -   [Security Bulletin: A vulnerability in Golang Go affects IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data (CVE-2021-29923)](https://www.ibm.com/support/pages/node/6574545){: external}
 
 ## 23 February 2022 (Version 4.0.6)
 {: #text-to-speech-data-23february2022}
@@ -172,12 +212,6 @@ License Server is now automatically installed
 Removal of steps specific to PostgreSQL EnterpriseDB server
 :   The previous version of the documentation included steps for the PostgreSQL EnterpriseDB server that were specific to the Speech services. These steps were documented in the topics *Upgrading {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}} (Version 4.0)* and *Uninstalling {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}}*. These additional steps are no longer necessary and have been removed from the documentation.
 
-Security vulnerabilities addressed
-:   The following security vulnerabilities associated with Apache Log4j have been addressed:
-    -   [Security Bulletin: Vulnerability in Apache Log4j may affect IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data (CVE-2021-4104)](https://www.ibm.com/support/pages/node/6551170){: external}
-    -   [Security Bulletin: IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data is vulnerable to denial of service and arbitrary code execution due to Apache Log4j (CVE-2021-45105 and CVE-2021-45046)](https://www.ibm.com/support/pages/node/6551168){: external}
-    -   [Security Bulletin: Vulnerability in Apache Log4j may affect IBM Watson Speech Services Cartridge for {{site.data.keyword.icp4dfull_notm}} (CVE-2021-4428)](https://www.ibm.com/support/pages/node/6536732){: external} (this vulnerability was fixed with Speech services version 4.0.4)
-
 RabbitMQ datastore is now used only by the `sttAysnc` component
 :   The RabbitMQ datastore was previously used by components of both Speech services, {{site.data.keyword.speechtotextshort}} and {{site.data.keyword.texttospeechshort}}. It now handles non-persistent message queuing for the Speech to Text asynchronous HTTP component (`sttAsync`) only. It is used only if the `sttAsync` component is installed and enabled.
 
@@ -194,6 +228,11 @@ Defect fixes for SSML documentation
 :   **Defect fixes:** The SSML documentation was updated to correct the following errors:
     -   The examples of the `<break>` element are now correct. The element is unary, as now shown in the examples. The previous examples included open and close tags with embedded text. The embedded text was not spoken by the service. For more information, see [The `<break>` element](/docs/text-to-speech?topic=text-to-speech-elements#break_element).
     -   The service supports Speech Synthesis Markup Language (SSML) version 1.1. All references and examples now use the correct version. The documentation previously referred to version 1.0.
+
+Security vulnerabilities addressed
+:   The following security vulnerabilities associated with Apache Log4j have been fixed:
+    -   [Security Bulletin: Vulnerability in Apache Log4j may affect IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data (CVE-2021-4104)](https://www.ibm.com/support/pages/node/6551170){: external}
+    -   [Security Bulletin: IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data is vulnerable to denial of service and arbitrary code execution due to Apache Log4j (CVE-2021-45105 and CVE-2021-45046)](https://www.ibm.com/support/pages/node/6551168){: external}
 
 ## 20 December 2021 (Version 4.0.4)
 {: #text-to-speech-data-20december2021}
@@ -261,6 +300,10 @@ Defect fixes for SSML and speech synthesis
     -   The `pitch` attribute of the `<prosody>` element is now applied to all specified text. Previously, the pitch change was not always applied to the first word of the affected text. Also, the documentation now includes additional guidance about specifying a `pitch` value. For more information, see [The `pitch` attribute](/docs/text-to-speech?topic=text-to-speech-elements#prosody-pitch).
     -   Speech synthesis of Japanese text now speaks the audio more slowly. Previously, the synthesized speech was being spoken too quickly. If you find that synthesis of Japanese text is still spoken too quickly for your application, use the `rate` attribute of the SSML `<prosody>` element to control the rate of speech. For more information, see [The `rate` attribute](/docs/text-to-speech?topic=text-to-speech-elements#prosody-rate).
     -   Neural voices now parse the escaped apostrophe character (`&apos;`) properly. Previously, some neural voices were not interpreting the character properly.
+
+Security vulnerability addressed
+:   The following security vulnerability associated with Apache Log4j has been fixed:
+    -   [Security Bulletin: Vulnerability in Apache Log4j may affect IBM Watson Speech Services Cartridge for {{site.data.keyword.icp4dfull_notm}} (CVE-2021-4428)](https://www.ibm.com/support/pages/node/6536732){: external}
 
 ## 20 December 2021 (Version 1.2.x)
 {: #text-to-speech-data-20december2021-12}
