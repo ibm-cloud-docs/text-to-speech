@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-03-24"
+lastupdated: "2022-04-22"
 
 subcollection: text-to-speech
 
@@ -28,7 +28,7 @@ The following status and support information applies to customization:
 
 -   Customization is available for all languages.
 -   ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** You must have the Standard or Premium pricing plan to use customization. Users of the Lite plan cannot use the customization interface. For more information, see the {{site.data.keyword.texttospeechshort}} service in the [{{site.data.keyword.cloud}} Catalog](https://{DomainName}/catalog/text-to-speech){: external}.
--   ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** Premium customers can work with {{site.data.keyword.IBM_notm}} to train a new custom voice for their specific use case and target market. {{site.data.keyword.IBM_notm}} can train a new voice with as little as one hour of training data. For more information, contact your {{site.data.keyword.IBM_notm}} Sales Representative.
+-   ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** Premium customers can work with {{site.data.keyword.IBM_notm}} to train a new custom voice for their specific application needs. For more information, see [Creating a custom voice](/docs/text-to-speech?topic=text-to-speech-voices#customize-voice).
 
 Effective **31 March 2022**, all neural voices are deprecated. The deprecated voices remain available to existing users until **31 March 2023**, when they will be removed from the service and the documentation. The neural voices are supported only for IBM Cloud; they are not available for IBM Cloud Pak for Data. All enhanced neural voices remain available to all users. For more information, see the [31 March 2022 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-31march2022) in the release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}}.
 {: important}

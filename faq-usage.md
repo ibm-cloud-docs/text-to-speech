@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-03-24"
+lastupdated: "2022-04-22"
 
 keywords: faqs,frequently asked questions,question,Text to Speech
 
@@ -118,6 +118,14 @@ The customization interface of the {{site.data.keyword.texttospeechshort}} servi
 {: faq}
 
 Review the guidelines for working with the customization interface before you begin. Then, see the steps and examples for creating, querying, updating, and deleting custom models in [Creating and managing custom models](/docs/text-to-speech?topic=text-to-speech-customModels). Also review [Creating and managing custom entries](/docs/text-to-speech?topic=text-to-speech-customWords) for examples and guidance about adding relevant training data.
+
+## Can I create a custom voice?
+{: #faq-custom-create-voice}
+{: faq}
+
+![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** As a premium customer, you can work with {{site.data.keyword.IBM_notm}} to train a new custom voice for your specific use case and target market. Creating a custom voice is different from customizing one of the service's existing voices. A custom voice is a unique new voice that is based on audio training data that the customer provides. {{site.data.keyword.IBM_notm}} can train a custom voice with as little as one hour of training data.
+
+For more information, contact your {{site.data.keyword.IBM_notm}} Sales Representative.
 
 ## How do I use the Tune by Example feature?
 {: #faq-tune-by-example}
