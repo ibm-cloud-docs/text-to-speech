@@ -18,6 +18,7 @@ toc:
       - index.md
       - features.md
       - data-security.md
+      - speech-install-data.md
       - topicgroup:
           label: Release notes
           topics:
@@ -44,7 +45,6 @@ toc:
   - navgroup:
       id: howto
       topics:
-      - speech-install-data.md
       - voices.md
       - audio-formats.md
       - topicgroup:
