@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-09-28"
+  years: 2015, 2022
+lastupdated: "2022-05-23"
 
 subcollection: text-to-speech
 
@@ -25,7 +25,7 @@ The sampling rate (or sampling frequency) is the number of samples that are gene
 
 Internally, the service always synthesizes audio with a sampling rate of 22,050 Hz. For many formats, the service also returns audio with this sampling rate. For other formats, the service returns audio with a different sampling rate.
 
-For most formats, you can specify a different sampling rate for the audio. For the `audio/l16` and `audio/mulaw` formats, you must specify a sampling rate. You specify a sampling rate by including the `rate={integer}` parameter with the audio format specification. For more information, see [Specifying an audio format](#formats-specify).
+For most formats, you can specify a different sampling rate for the audio. For the `audio/alaw`, `audio/l16`, and `audio/mulaw` formats, you must specify a sampling rate. You specify a sampling rate by including the `rate={integer}` parameter with the audio format specification. For more information, see [Specifying an audio format](#formats-specify).
 
 When you specify a sampling rate, the service resamples the audio from 22,050 Hz to the specified rate before it returns the audio. A specified sampling rate must lie in the range of 8 kHz to 192 kHz. Some audio formats restrict the rate to specific values; the descriptions of the formats identify such restrictions.
 
@@ -47,6 +47,7 @@ As shown in the *Audio formats* column for those formats that accept a `codecs` 
 
 | Audio formats | Default sampling rate | Required parameters | Optional parameters |
 |---------------|:---------------------:|:-------------------:|:-------------------:|
+| [audio/alaw](#audio-alaw) | None | `rate={integer}` | None |
 | [audio/basic](#audio-basic) | 8000 Hz | None | None |
 | [audio/flac](#audio-flac) | 22,050 Hz | None | `rate={integer}` |
 | [audio/l16](#audio-l16) | None | `rate={integer}` | `endianness=big-endian`  \n `endianness=little-endian` |
@@ -59,10 +60,20 @@ As shown in the *Audio formats* column for those formats that accept a `codecs` 
 | [audio/webm;codecs=vorbis](#audio-webm) | 22,050 Hz | None | `rate={integer}` |
 {: caption="Table 1. Summary of supported audio formats"}
 
+### audio/alaw format
+{: #audio-alaw}
+
+*A-law* (`audio/alaw`) is a single-channel, lossy audio format that is encoded by using u-law (or mu-law) data that is similar to the `audio/basic` and `audio/mulaw` formats, though the A-law algorithm produces different signal characteristics. You must specify the sampling rate with this format. For example, specify `audio/alaw;rate=8000` for audio that is sampled at 8 kHz.
+
+Due to the streaming nature of the returned audio, the A-law audio that is generated might not work in all audio players. Specifically, the attribute `numSamples` in the header of the audio stream is set to `0` regardless of the length of the audio.
+{: note}
+
+For more information, see [A-law algorithm](https://wikipedia.org/wiki/A-law_algorithm){: external}.
+
 ### audio/basic format
 {: #audio-basic}
 
-*Basic audio* is a single-channel, lossy audio format that is  encoded by using 8-bit u-law (or mu-law) data that is sampled at 8 kHz. This format provides a lowest-common denominator media type. Audio in this format always has a sampling rate of 8 kHz.
+*Basic audio* is a single-channel, lossy audio format that is encoded by using 8-bit u-law (or mu-law) data that is sampled at 8 kHz. This format provides a lowest-common denominator media type. Audio in this format always has a sampling rate of 8 kHz.
 
 For more information, see
 
