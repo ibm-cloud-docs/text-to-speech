@@ -33,6 +33,13 @@ The service has the following known limitations:
 -   **2 December 2020:** Cross-Origin Resource Sharing (CORS) support is not available from the Mozilla Firefox™ browser for voices in the following languages: Arabic, Australian English, Chinese, Dutch (Belgian and Netherlands), Korean, and Swedish.
 -   **22 August 2019:** When you specify the `audio/ogg;codecs=opus` audio format, you can optionally specify a sampling rate other than the default 48,000 Hz. However, although the service accepts `48000`, `24000`, `16000`, `12000`, or `8000` as a valid sampling rate, it currently disregards a specified value and always returns the audio with a sampling rate of 48 kHz.
 
+## 25 May 2022
+{: #text-to-speech-25may2022}
+{: release-note}
+
+New support for `audio/alaw` audio format
+:   The list of supported audio formats now includes `audio/alaw;rate={rate}`. Like `audio/basic` and `audio/mulaw`, this format provides single-channel audio that is encoded by using 8-bit u-law (or mu-law) data that is sampled at 8 kHz. For more information, see [Using audio formats](/docs/text-to-speech?topic=text-to-speech-audio-formats).
+
 ## 19 May 2022
 {: #text-to-speech-19may2022}
 {: release-note}
@@ -713,7 +720,7 @@ IBM SPR format now specified with `ibm` instead of `spr`
 :   The use of `spr` is deprecated as an argument to the `format` option of the `GET /v1/pronunciation` method and for use with the `alphabet` attribute of an SSML `<phoneme>` element. To use {{site.data.keyword.IBM_notm}} SPR notation, use the `ibm` argument instead of `spr` in all cases.
 
 New support for `audio/mulaw` audio format
-:   The list of supported audio formats now includes `audio/mulaw;rate=8000`. Like `audio/basic`, this format provides single-channel audio that is encoded by using 8-bit u-law (or mu-law) data that is sampled at 8 kHz. For more information, see [Using audio formats](/docs/text-to-speech?topic=text-to-speech-audio-formats).
+:   The list of supported audio formats now includes `audio/mulaw;rate={rate}`. Like `audio/basic`, this format provides single-channel audio that is encoded by using 8-bit u-law (or mu-law) data that is sampled at 8 kHz. For more information, see [Using audio formats](/docs/text-to-speech?topic=text-to-speech-audio-formats).
 
 New supported features identified when listing voices
 :   The `GET /v1/voices` and `GET /v1/voices/{voice}` methods now return a `supported_features` object as part of their output for each voice. The object describes whether the voice supports customization and the SSML `<voice_transformation>` element. For more information, see [Using languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).

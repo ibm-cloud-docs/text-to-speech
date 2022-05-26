@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-05-19"
+lastupdated: "2022-05-22"
 
 subcollection: text-to-speech
 
@@ -24,10 +24,10 @@ The service can be used in applications such as voice-automated chatbots, as wel
 
 -   ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}** for managed instances of {{site.data.keyword.texttospeechshort}} that are hosted on {{site.data.keyword.cloud_notm}} or for instances that are hosted on [IBM Cloud Pak for Data as a Service](https://dataplatform.cloud.ibm.com/docs/content/wsj/landings/wtts.html){: external}.
     -   For information about all service updates and known limitations, see the [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes).
-    -   For information about the latest service update, see [19 May 2022](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-19may2022) in the release notes.
+    -   For information about the latest service update, see [25 May 2022](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-25may2022) in the release notes.
 -   ![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}** for installed or on-premises instances of {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}. For links to information about installing and managing {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}, see [Installing {{site.data.keyword.ibmwatson_notm}} {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-speech-install-data).
     -   For information about all service updates and known limitations, see the [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes-data).
-    -   For information about the latest service update, see [1 May 2022 (Version 1.2.x)](/docs/text-to-speech?topic=text-to-speech-release-notes-data#text-to-speech-data-1may2022) in the release notes.
+    -   For information about the latest service update, see [25 May 2022 (Version 4.0.9)](/docs/text-to-speech?topic=text-to-speech-release-notes-data#text-to-speech-data-25may2022) in the release notes.
 
 ## Speech synthesis
 {: #about-synthesis}
@@ -71,13 +71,14 @@ For different languages, the service offers female voices, male voices, or both.
 
 The service produces audio in many popular formats:
 
--   Ogg or Web Media (WebM) audio with the Opus or Vorbis codec
--   MP3 (or MPEG)
--   Waveform Audio File Format (WAV)
+-   A-law
+-   Basic audio
 -   Free Lossless Audio Codec (FLAC)
 -   Linear 16-bit Pulse-Code Modulation (PCM)
+-   MP3 (or MPEG)
 -   Mu-law (or u-law)
--   Basic audio
+-   Ogg or Web Media (WebM) audio with the Opus or Vorbis codec
+-   Waveform Audio File Format (WAV)
 
 Different formats support different sampling rates and other characteristics. For more information, see [Using audio formats](/docs/text-to-speech?topic=text-to-speech-audio-formats).
 
