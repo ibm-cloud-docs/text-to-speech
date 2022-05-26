@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-03-22"
+lastupdated: "2022-05-26"
 
 subcollection: text-to-speech
 
@@ -64,7 +64,7 @@ Effective **31 March 2022**, the neural Czech voice is deprecated. All deprecate
 {: caption="Table 3. Diphthongs (Czech)"}
 
 ## Consonants
-{: #beConsonants}
+{: #csConsonants}
 
 | IPA symbol | IPA Unicode | Example words |
 |:----------:|:-----------:|:-------------:|
