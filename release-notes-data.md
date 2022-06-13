@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-05-22"
+lastupdated: "2022-06-13"
 
 keywords: text to speech release notes,text to speech for IBM cloud pak for data release notes
 
@@ -20,7 +20,7 @@ subcollection: text-to-speech
 The following features and changes were included for each release and update of installed or on-premises instances of {{site.data.keyword.texttospeechfull}} for {{site.data.keyword.icp4dfull_notm}}. The information includes known limitations. Unless otherwise noted, all changes are compatible with earlier releases and are automatically and transparently available to all new and existing applications.
 {: shortdesc}
 
-For information about releases and updates for {{site.data.keyword.cloud_notm}}, see [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes).
+For information about releases and updates of the service for {{site.data.keyword.cloud_notm}}, see [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes).
 {: note}
 
 ## Known limitations
@@ -41,6 +41,12 @@ New support for `audio/alaw` audio format
 
 The Speech services do not support the OADP backup and restore utility
 :   Watson Speech services do not support the {{site.data.keyword.icp4dfull_notm}} OpenShift APIs for Data Protection (OADP) backup and restore utility. If the Speech services are installed on a cluster, you might not be able to use the {{site.data.keyword.icp4dfull_notm}} OADP backup and restore utility to back up other services that are installed on that cluster. This limitation applies to version 4.0.0 and later versions of the Speech services.
+
+Security vulnerabilities addressed
+:   The following security vulnerabilities have been fixed:
+    -   [Security Bulletin: IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data is vulnerable a denial of service, caused by a buffer overflow with Twisted (CVE-2022-21716)](https://www.ibm.com/support/pages/node/6593867){: external}
+    -   [Security Bulletin: IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data is vulnerable to a denial of service in NumPy. (CVE-2021-33430)](https://www.ibm.com/support/pages/node/6592841){: external}
+    -   [Security Bulletin: IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data is vulnerable to a denial of service, caused by improper input validation with Spring Framework (CVE-2022-22950)](https://www.ibm.com/support/pages/node/6593865){: external}
 
 ## 1 May 2022 (Version 1.2.x)
 {: #text-to-speech-data-1may2022}
