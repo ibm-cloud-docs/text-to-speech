@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-04-22"
+lastupdated: "2022-06-28"
 
 subcollection: text-to-speech
 
@@ -21,7 +21,7 @@ You can access the speech synthesis capabilities of the {{site.data.keyword.text
 
 The service supports speech synthesis with voices for the many languages listed in [Language support](/docs/speech-to-text?topic=speech-to-text-about#about-languages). For different languages, the service offers female voices, male voices, or both. Some languages and voices are supported for {{site.data.keyword.cloud}} only. For information about the supported languages and voices, see [Using languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
 
-Effective **31 March 2022**, all neural voices are deprecated. The deprecated voices remain available to existing users until **31 March 2023**, when they will be removed from the service and the documentation. The neural voices are supported only for IBM Cloud; they are not available for IBM Cloud Pak for Data. All enhanced neural voices remain available to all users. For more information, see the [31 March 2022 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-31march2022) in the release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}}.
+Effective **31 March 2022**, all neural voices are deprecated. The deprecated voices remain available to existing users until 31 March 2023, when they will be removed from the service and the documentation. The neural voices are supported only for IBM Cloud; they are not available for IBM Cloud Pak for Data. New voices for Australian English, Dutch, and Korean will be released by February 15, 2023. If you are using Australian English, Dutch, or Korean voices, your API calls will automatically redirect to the new voices in that language. All other languages will be removed from service. Note that all enhanced neural voices remain available to all users. For more information, see the [31 March 2022 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-31march2022) in the release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}}.
 {: deprecated}
 
 ## Using audio formats
