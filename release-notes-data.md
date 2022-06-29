@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-06-13"
+lastupdated: "2022-06-29"
 
 keywords: text to speech release notes,text to speech for IBM cloud pak for data release notes
 
@@ -29,6 +29,33 @@ For information about releases and updates of the service for {{site.data.keywor
 {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} has the following known limitation:
 
 -   **30 August 2019:** When you specify the `audio/ogg;codecs=opus` audio format, you can optionally specify a sampling rate other than the default 48,000 Hz. However, while the service accepts `48000`, `24000`, `16000`, `12000`, or `8000` as a valid sampling rate, it currently disregards a specified value and always returns the audio with a sampling rate of 48 kHz.
+
+## 29 June 2022 (Version 4.5.0)
+{: #text-to-speech-data-29june2022}
+
+Version 4.5.0 is now available
+:   {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} version 4.5.0 is now available. This version supports {{site.data.keyword.icp4dfull_notm}} version 4.5.x and Red Hat OpenShift versions 4.6, 4.8, and 4.10.
+
+Unified Speech services for {{site.data.keyword.icp4dfull_notm}} documentation
+:   The installation and administration documentation for both {{site.data.keyword.speechtotextshort}} and {{site.data.keyword.texttospeechshort}} is now combined in the {{site.data.keyword.icp4dfull_notm}} documentation. For more information about installing and managing the Speech services, see [{{site.data.keyword.watson}} Speech services on {{site.data.keyword.icp4dfull_notm}}](https://www.ibm.com/docs/SSQNUZ_4.5.x/services-watson-speech){: external}.
+
+Changes to Speech services custom resource
+:   The custom resource is now created when you initially install the Speech services. The process is described in the {{site.data.keyword.icp4dfull_notm}} installation documentation. The content of the custom resource has changed:
+    -   The recommended name of the custom resource has changed from `speech-prod-cr` to `speech-cr`.
+    -   All references to storage class have changed from variants of `storageClass` to `blockStorageClass`.
+    -   The name of the Portworx block storage class has changed from `portworx-shared-gp3` to `portworx-db-gp3-sc`.
+    -   The `createSecret` property has been removed for the MinIO and PostgreSQl datastores. The property is only used internally. The Speech services always use a secrets object if you create one, and they always automatically create the object if none is provided.
+
+User-provided secrets object now supported for RabbitMQ datastore
+:   You can now provide security credentials for the RabbitMQ datastore, just as you can for the MinIO and PostgreSQL datastores. The documented process is similar for all three datastores.
+
+Defect fix: Multiple consecutive SSML `<phoneme>` tags are now parsed correctly
+:   **Defect fix:** The service now correctly synthesizes text that contains consecutive `<phoneme>` tags. Previously, if the text contained two or more consecutive `<phoneme>` tags, the service synthesized only the first tag, ignoring the others.
+
+<!--
+Security vulnerabilities addressed
+:   The following security vulnerabilities have been fixed:
+-->
 
 ## 25 May 2022 (Version 4.0.9)
 {: #text-to-speech-data-25may2022}

@@ -89,6 +89,7 @@ The service offers two types of neural voices:
 
 -   *Neural voices* do *not* include the string `V3` in their names. All voices for Arabic, Australian English, Chinese, Dutch, Korean, and Swedish are neural voices.
 
+
     Effective **31 March 2022**, all neural voices are deprecated. The deprecated voices remain available to existing users until 31 March 2023, when they will be removed from the service and the documentation. The neural voices are supported only for IBM Cloud; they are not available for IBM Cloud Pak for Data. New voices for Australian English, Dutch, and Korean will be released by February 15, 2023. If you are using Australian English, Dutch, or Korean voices, your API calls will automatically redirect to the new voices in that language. All other languages will be removed from service. Note that all enhanced neural voices remain available to all users. For more information, see the [31 March 2022 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-31march2022) in the release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}}.
     {: deprecated}
 
