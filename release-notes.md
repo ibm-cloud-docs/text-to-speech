@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-06-13"
+lastupdated: "2022-07-06"
 
 keywords: text to speech release notes,text to speech for IBM cloud release notes
 
@@ -68,7 +68,9 @@ Important: Deprecation of all neural voices
     -   *Existing users:* Instances of the service created before *31 March 2022* can continue to use the deprecated voices for speech synthesis. The instances can also be used create and work with custom models that are based on the deprecated voices. And they can continue to list and query the voices with the `GET /v1/voices` and `GET /v1/voices/{voice}` methods.
     -   *New users:* Instances of the service created on or after *31 March 2022* cannot use the deprecated voices for speech synthesis. The instances also cannot be used create custom models that are based on the deprecated voices. And they cannot list or query the voices with the `GET /v1/voices` and `GET /v1/voices/{voice}` methods. Any API call that includes one of the deprecated voices returns an HTTP error code of 400 or 404, depending on the call.
 
-    For more information about the available languages and voices, see [Using languages and voices](/docs/text-to-speech?topic=text-to-speech-voices). Note that the service might provide enhanced neural voices to replace some of the deprecated languages and voices by 31 March 2023.
+    New voices for Australian English, Dutch, and Korean will be released by 15 February 2023. If you are using Australian English, Dutch, or Korean voices, your API calls will automatically redirect to the new voices in that language. Voices in Arabic, Chinese, Czech, Swedish, and Flemish will be removed from service.
+
+    For more information about all available languages and voices, see [Using languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
 
 Deprecated standard voices are removed from the documentation
 :   The standard concatenative voices were deprecated on [2 December 2020](#text-to-speech-2december2020). These standard voices have now been removed from the API reference. The topic *Migrating from standard to neural voices* has also been removed from the page [Using languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
