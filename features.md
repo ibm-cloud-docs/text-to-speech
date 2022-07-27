@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-07-06"
+lastupdated: "2022-07-15"
 
 subcollection: text-to-speech
 
@@ -68,12 +68,22 @@ You can pass the service plain text or text that is annotated with the Speech Sy
 -   For more information about specifying input text, see [Specifying input text](/docs/text-to-speech?topic=text-to-speech-usingHTTP#input).
 -   For more information about using SSML, see [Understanding SSML](/docs/text-to-speech?topic=text-to-speech-ssml).
 
+### Spelling out strings
+{: #features-spell-out}
+
+![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
+
+To indicate how individual characters of a string (alphabetic, numeric, or alphanumeric) are to be spelled out, you can include the `spell_out_mode` query parameter with a request. By default, the service spells out individual characters at the same rate at which it synthesizes text for a language. You can use the parameter to direct the service to spell out individual characters more slowly, in groups of one, two, or three characters. Use the parameter with the SSML `<say-as>` element to control how the characters of a string are synthesized. For more information, see [Specifying how strings are spelled out](/docs/text-to-speech?topic=text-to-speech-synthesis-params#params-spell-out-mode).
+
+The `spell_out_mode` parameter is beta functionality that is supported only for German voices.
+{: beta}
+
 ### Word timings
 {: #features-timings}
 
 With the WebSocket interface, you can obtain timing information about the location of words in the audio that the service returns. Timing information is useful for synchronizing the input text and the audio.
 
-You can use the SSML `<mark>` element to identify specific locations, such as word boundaries, in the audio. For languages other than Japanese, you can also request word timing information for all words of the input text. For more information, see [Word timings](/docs/text-to-speech?topic=text-to-speech-timing).
+You can use the SSML `<mark>` element to identify specific locations, such as word boundaries, in the audio. For languages other than Japanese, you can also request word timing information for all words of the input text. For more information, see [Generating word timings](/docs/text-to-speech?topic=text-to-speech-timing).
 
 ## Customizing the service
 {: #features-customization}

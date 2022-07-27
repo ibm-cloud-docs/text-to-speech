@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2021-11-08"
+  years: 2015, 2022
+lastupdated: "2022-07-15"
 
 subcollection: text-to-speech
 
@@ -40,6 +40,9 @@ The two versions of the `/v1/synthesize` method have the following parameters in
 
 `customization_id` (query parameter, *optional* string)
 :   Specifies a globally unique identifier (GUID) for a custom model that is to be used for the synthesis. A specified custom model must match the language of the voice that is used for the synthesis. If you include a customization ID, you must make the request with credentials for the instance of the service that owns the custom model. Omit the parameter to use the specified voice with no customization. For more information, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
+
+`spell_out_mode` (*optional* string)
+:   ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** *For German voices,* specifies how individual characters of a string are to be spelled out. By default, the service spells out individual characters at the same rate at which it synthesizes text for a language. You can use the parameter to direct the service to spell out individual characters more slowly, in groups of one (`singles`), two (`pairs`), or three (`triples`). For more information, see [Specifying how strings are spelled out](/docs/text-to-speech?topic=text-to-speech-synthesis-params#params-spell-out-mode).
 
 `X-Watson-Metadata` (request header, *optional* string)
 :   Associates a customer ID with data that is passed with a request. For more information, see [Information security](/docs/text-to-speech?topic=text-to-speech-information-security).

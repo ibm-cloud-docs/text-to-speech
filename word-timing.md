@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-02-24"
+lastupdated: "2022-07-11"
 
 subcollection: text-to-speech
 
@@ -10,7 +10,7 @@ subcollection: text-to-speech
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Word timings
+# Generating word timings
 {: #timing}
 
 You can use the WebSocket interface of the {{site.data.keyword.texttospeechfull}} service to obtain timing information for user-specified locations such as word boundaries or for all words of the input text:
