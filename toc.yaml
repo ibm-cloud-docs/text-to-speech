@@ -52,6 +52,7 @@ toc:
           topics:
           - http.md
           - websockets.md
+          - synthesis-params.md
           - word-timing.md
       - topicgroup:
           label: Customizing the service

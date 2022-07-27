@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-03-25"
+lastupdated: "2022-07-26"
 
 subcollection: text-to-speech
 
@@ -66,6 +66,7 @@ For more information about using SSML with the service, see the following:
 -   The service supports the use of SSML with the input text of a speech synthesis request to control how the resulting audio is pronounced or to obtain timing marks for the resulting audio.
     -   For examples of using SSML elements with the `text` of a synthesis request, see [Examples of input text](/docs/text-to-speech?topic=text-to-speech-usingHTTP#httpExamples).
     -   For information about using the SSML `<mark>` element with a WebSocket request, see [Specifying an SSML mark](/docs/text-to-speech?topic=text-to-speech-timing#timing-mark).
+    -   For information about using the SSML `<say-as>` element to spell out strings, see [Specifying how strings are spelled out](/docs/text-to-speech?topic=text-to-speech-synthesis-params#params-spell-out-mode).
 -   The service's customization interface supports the use of the SSML `<phoneme>` element to specify the phonetic spelling that it uses to pronounce a word. The phonetic spelling represents the sounds of a word, how those sounds are divided into syllables, and which syllables receive stress.
     -   For information about the customization interface, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
     -   For information about the valid symbols that you can use in an {{site.data.keyword.IBM_notm}} SPR or IPA specification for any supported language, see [Understanding phonetic symbols](/docs/text-to-speech?topic=text-to-speech-symbols).

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-07-06"
+lastupdated: "2022-07-26"
 
 keywords: text to speech release notes,text to speech for IBM cloud release notes
 
@@ -32,6 +32,13 @@ The service has the following known limitations:
 
 -   **2 December 2020:** Cross-Origin Resource Sharing (CORS) support is not available from the Mozilla Firefox™ browser for voices in the following languages: Arabic, Australian English, Chinese, Dutch (Belgian and Netherlands), Korean, and Swedish.
 -   **22 August 2019:** When you specify the `audio/ogg;codecs=opus` audio format, you can optionally specify a sampling rate other than the default 48,000 Hz. However, although the service accepts `48000`, `24000`, `16000`, `12000`, or `8000` as a valid sampling rate, it currently disregards a specified value and always returns the audio with a sampling rate of 48 kHz.
+
+## 27 July 2022
+{: #text-to-speech-27july2022}
+{: release-note}
+
+New beta `spell_out_mode` parameter for German voices
+:   To indicate how individual characters of a string are to be spelled out, you can now include the beta `spell_out_mode` query parameter with a synthesis request for a German voice. By default, the service spells out individual characters at the same rate at which it synthesizes text for a language. You can use the parameter to direct the service to spell out individual characters more slowly, in groups of one, two, or three characters. Use the parameter with the SSML `<say-as>` element to control how the characters of a string are synthesized. For more information, see [Specifying how strings are spelled out](/docs/text-to-speech?topic=text-to-speech-synthesis-params#params-spell-out-mode).
 
 ## 25 May 2022
 {: #text-to-speech-25may2022}
@@ -106,7 +113,7 @@ Change to word timing response for WebSocket interface
     ```
     {: codeblock}
 
-    Also, the level of precision for word timings and marks is now reduced to three decimal places. For more information about the new responses, see [Word timings](/docs/text-to-speech?topic=text-to-speech-timing).
+    Also, the level of precision for word timings and marks is now reduced to three decimal places. For more information about the new responses, see [Generating word timings](/docs/text-to-speech?topic=text-to-speech-timing).
 
     **Note:** Results for enhanced neural and neural voices were different previously. These inconsistencies could cause errors for the {{site.data.keyword.watson}} SDKs. The results for all voices are now consistent.
 
@@ -406,7 +413,7 @@ New feature support for Arabic, Chinese, and Netherlands Dutch voices
     See the following sections for additional information:
 
     -   For more information about all available voices, see [Using languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
-    -   For more information about using the WebSocket interface to obtain word timings, see [Word timings](/docs/text-to-speech?topic=text-to-speech-timing).
+    -   For more information about using the WebSocket interface to obtain word timings, see [Generating word timings](/docs/text-to-speech?topic=text-to-speech-timing).
     -   For more information about customization, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
     -   For more information about the use of IPA and SPR with customization, see [Understanding phonetic symbols](/docs/text-to-speech?topic=text-to-speech-symbols). (The IPA symbols for the Arabic, Chinese, Netherlands Dutch, and Korean languages are not yet documented. This documentation will be made available soon.)
 
@@ -713,7 +720,7 @@ New voice transformation SSML feature
 :   The service now offers SSML voice transformation via the new `<voice-transformation>` element. You can expand the range of possible voices by creating custom transformations that modify the pitch, pitch range, glottal tension, breathiness, rate, and timbre of a voice. The service also offers two built-in virtual voices, *Young* and *Soft*. The service currently supports voice transformation only for the US English Allison voice.
 
 Word timings now available with WebSocket interface
-:   The service can now return word timing information for all strings of the input text that you pass to the WebSocket interface. To receive the start and end time of every string in the input, specify an array that includes the string `words` for the optional `timings` parameter of the JSON object that you pass to the service. The feature is not currently available for Japanese input text. For more information, see [Word timings](/docs/text-to-speech?topic=text-to-speech-timing).
+:   The service can now return word timing information for all strings of the input text that you pass to the WebSocket interface. To receive the start and end time of every string in the input, specify an array that includes the string `words` for the optional `timings` parameter of the JSON object that you pass to the service. The feature is not currently available for Japanese input text. For more information, see [Generating word timings](/docs/text-to-speech?topic=text-to-speech-timing).
 
 New support for SSML validation
 :   The service now validates all SSML elements that you submit in any context. If it finds an invalid tag, the service reports an HTTP 400 response code with a descriptive message, and the method fails. In previous releases, the service handled errors inconsistently; specifying an invalid word pronunciation, for example, could lead to unpredictable or inconsistent behavior. For more information, see [SSML validation](/docs/text-to-speech?topic=text-to-speech-ssml#errors).

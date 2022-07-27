@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-01-19"
+lastupdated: "2022-07-14"
 
 subcollection: text-to-speech
 
@@ -253,6 +253,8 @@ The service supports the `<say-as>` element with the following languages:
 -   For most other languages, the service supports only the `digits` and `letters` attributes of the element.
 -   For Japanese, the service supports only the `digits` attribute.
 
+The service's default pronunciation of alphabetic, numeric, and alphanumeric strings varies by language, with each language having its own rules. You can use the `<say-as>` element to control how strings are pronounced, including whether they are to be spelled out as individual characters with the `letters` and `digits` elements. For German, you can also control the pace at which the service pronounces the characters. For more information, see [Specifying how strings are spelled out](/docs/text-to-speech?topic=text-to-speech-synthesis-params#params-spell-out-mode).
+
 ### The `interpret-as` attribute
 {: #say-as-interpret-as}
 
@@ -313,6 +315,9 @@ The `digits` value speaks the digits in the number within the element. The follo
 ```
 {: codeblock}
 
+The `digits` value also pronounces individually any alphabetic characters that are included in the enclosed string.
+{: note}
+
 #### `letters`
 {: #say-as-letters}
 
@@ -324,6 +329,9 @@ The `letters` value spells out the characters in the word within the element. Th
 </speak>
 ```
 {: codeblock}
+
+The `letters` value also pronounces individually any numeric characters that are included in the enclosed string.
+{: note}
 
 #### `number`
 {: #say-as-number}
