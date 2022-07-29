@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-07-26"
+lastupdated: "2022-07-29"
 
 subcollection: text-to-speech
 
@@ -78,7 +78,7 @@ The following WebSocket example shows inclusion of the parameter with the same v
 var access_token = '{access_token}';
 var wsURI = '{ws_url}/v1/synthesize'
   + '?access_token=' + access_token
-  + '&voice=en-US_AllisonV3Voice'
+  + '&voice=de-DE_ErikaV3Voice'
   + '&spell_out_mode=singles';
 var websocket = new WebSocket(wsURI);
 ```
