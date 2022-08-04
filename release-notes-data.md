@@ -45,8 +45,10 @@ Defect fix: Fixed ephemeral storage calculations to prevent occasional pod evict
 The service does not support multilingual speech synthesis
 :   The service does not support multilingual speech synthesis at this time. However, you can use customization to approximate the pronunciation of words from other languages. For more information, see [Multilingual speech synthesis](/docs/text-to-speech?topic=text-to-speech-voices#synthesis-multilingual).
 
+<!--
 Security vulnerabilities addressed
 :   The following security vulnerabilities have been fixed:
+-->
 
 ## 29 June 2022 (Version 4.5.0)
 {: #text-to-speech-data-29june2022}
