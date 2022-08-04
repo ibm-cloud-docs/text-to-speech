@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-06-29"
+lastupdated: "2022-08-01"
 
 keywords: text to speech release notes,text to speech for IBM cloud pak for data release notes
 
@@ -30,6 +30,24 @@ For information about releases and updates of the service for {{site.data.keywor
 
 -   **30 August 2019:** When you specify the `audio/ogg;codecs=opus` audio format, you can optionally specify a sampling rate other than the default 48,000 Hz. However, while the service accepts `48000`, `24000`, `16000`, `12000`, or `8000` as a valid sampling rate, it currently disregards a specified value and always returns the audio with a sampling rate of 48 kHz.
 
+## 3 August 2022 (Version 4.5.1)
+{: #text-to-speech-data-3august2022}
+
+Version 4.5.1 is now available
+:   {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} version 4.5.1 is now available. This version supports {{site.data.keyword.icp4dfull_notm}} version 4.5.x and Red Hat OpenShift versions 4.6, 4.8, and 4.10.
+
+Support for FIPS-enabled clusters
+:   Both {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} and {{site.data.keyword.speechtotextshort}} for {{site.data.keyword.icp4dfull_notm}} now support running on Federal Information Processing Standard (FIPS)-enabled clusters. For more information, see [Services that support FIPS](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.5.x?topic=considerations-services-that-support-fips){: external}.
+
+Defect fix: Fixed ephemeral storage calculations to prevent occasional pod evictions
+:   **Defect fix:** A defect was fixed and calculation of ephemeral storage limits is now more precise for the {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} and {{site.data.keyword.speechtotextshort}} for {{site.data.keyword.icp4dfull_notm}} runtimes. These changes prevent occasional pod evictions when the services' runtimes are under heavy load.
+
+The service does not support multilingual speech synthesis
+:   The service does not support multilingual speech synthesis at this time. However, you can use customization to approximate the pronunciation of words from other languages. For more information, see [Multilingual speech synthesis](/docs/text-to-speech?topic=text-to-speech-voices#synthesis-multilingual).
+
+Security vulnerabilities addressed
+:   The following security vulnerabilities have been fixed:
+
 ## 29 June 2022 (Version 4.5.0)
 {: #text-to-speech-data-29june2022}
 
@@ -52,10 +70,8 @@ User-provided secrets object now supported for RabbitMQ datastore
 Defect fix: Multiple consecutive SSML `<phoneme>` tags are now parsed correctly
 :   **Defect fix:** The service now correctly synthesizes text that contains consecutive `<phoneme>` tags. Previously, if the text contained two or more consecutive `<phoneme>` tags, the service synthesized only the first tag, ignoring the others.
 
-<!--
 Security vulnerabilities addressed
-:   The following security vulnerabilities have been fixed:
--->
+:   No security vulnerabilities were fixed for version 4.5.0.
 
 ## 25 May 2022 (Version 4.0.9)
 {: #text-to-speech-data-25may2022}
@@ -158,7 +174,7 @@ Change to word timing response for WebSocket interface
     ```
     {: codeblock}
 
-    Also, the level of precision for word timings and marks is now reduced to three decimal places. For more information about the new responses, see [Word timings](/docs/text-to-speech?topic=text-to-speech-timing).
+    Also, the level of precision for word timings and marks is now reduced to three decimal places. For more information about the new responses, see [Generating word timings](/docs/text-to-speech?topic=text-to-speech-timing).
 
 Security vulnerabilities addressed
 :   The following security vulnerabilities have been fixed:

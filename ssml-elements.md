@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-07-14"
+lastupdated: "2022-07-31"
 
 subcollection: text-to-speech
 
@@ -442,7 +442,7 @@ The `vxml:phone` value speaks a phone number with both digits and punctuation. I
 The `<speak>` element is the root element for SSML documents. Valid attributes are
 
 -   `version` is a required attribute that specifies the SSML specification. The accepted value is `1.0`.
--   `xml:lang` is not required by the service. Omit the attribute when you use this element.
+-   `xml:lang` is not required by the service. Omit the attribute when you use this element. Note that you cannot use this attribute to change the language for a speech synthesis request.
 -   `xml:base` has no effect.
 -   `xmlns` is not required by the service. Omit the attribute when you use this element.
 
