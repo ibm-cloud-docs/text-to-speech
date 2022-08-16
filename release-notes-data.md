@@ -243,7 +243,7 @@ All neural voices are now deprecated for {{site.data.keyword.icp4dfull_notm}}
     Existing users of these voices can continue to use them for now, but the voices will be removed entirely in a future release. These voices can no longer be installed by new users and have been removed from the installation documentation for {{site.data.keyword.icp4dfull_notm}}. The `voiceType` property has been removed from the Speech services custom resource.
 
     For more information, see
-    -   [Supported languages and voices](https://test.cloud.ibm.com/docs/text-to-speech?topic=text-to-speech-voices#language-voices)
+    -   [Using languages and voices](/docs/text-to-speech?topic=text-to-speech-voices)
     -   [Installing {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.0?topic=speech-installing-watson-text){: external}
 
 Updates to import/export scripts
@@ -519,10 +519,7 @@ Version 4.0.0 is available
 Enhanced neural voices
 :   To optimize the overall quality of voice synthesis, all available voices are now *enhanced neural voices*. Enhanced neural voices, which include the string `V3` in their names, are now available for Brazilian Portuguese, United Kingdom and United States English, French, German, Italian, Japanese, and Spanish (all dialects).
 
-    Enhanced neural voices support the use of both IPA and {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR) with the SSML `<phoneme>` element. Enhanced neural voices also achieve a slightly higher degree of natural-sounding speech. For more information, see
-
-    -   [Supported languages and voices](/docs/text-to-speech?topic=text-to-speech-voices#language-voices)
-    -   [Neural voice technology](/docs/text-to-speech?topic=text-to-speech-voices#neural-voices)
+    Enhanced neural voices support the use of both IPA and {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR) with the SSML `<phoneme>` element. Enhanced neural voices also achieve a slightly higher degree of natural-sounding speech. For more information, see [Using languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
 
 New Canadian French voice
 :   The service now supports Canadian French with the enhanced neural voice `fr-CA_LouiseV3Voice`. The Canadian French voice supports customization and is generally available (GA) for production use.

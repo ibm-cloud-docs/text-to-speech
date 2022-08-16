@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2021-11-22"
+  years: 2015, 2022
+lastupdated: "2022-08-06"
 
 subcollection: text-to-speech
 
@@ -90,7 +90,7 @@ The same phonetic symbol can produce different sounds for different languages. A
 
 Symbolic Phonetic Representation (SPR) is a proprietary, language-dependent format developed by {{site.data.keyword.IBM_notm}} for specifying a word's pronunciation. For each supported language, SPR includes a phoneme alphabet, symbols for syllable boundaries, and symbols for levels of lexical stress. The following basic rules apply to creation of SPR entries:
 
--   The default pronunciation that the customization interface returns for a word begins with a <code>&#96;</code> (back quote) and is enclosed in `[]` (square brackets). For example, the interface returns the following pronunciation for the word `tomato`:
+-   The default pronunciation that the customization interface returns for a word begins with a ``` (back quote) and is enclosed in `[]` (square brackets). For example, the interface returns the following pronunciation for the word `tomato`:
 
     ```xml
     `[.0tx.1ma.0to]
@@ -140,7 +140,7 @@ Extra rules and a `part_of_speech` field apply to the creation of entries for wo
     ```
     {: codeblock}
 
-    With these entries, assume that the service receives the following input text: <code>&#19968;&#36913;&#38291;&#65326;&#65337;&#65315;&#12434;&#35370;&#21839;&#12375;&#12383;</code>. In this case, the service matches the word <code>&#65326;&#65337;&#65315;</code> because <code>&#65326;&#65337;&#65315;</code> is longer than <code>&#65326;&#65337;</code> and because <code>&#65326;&#65337;&#65315;</code> matches before <code>&#65337;&#65315;</code>.
+    With these entries, assume that the service receives the following input text: `一週間ＮＹＣを訪問した`. In this case, the service matches the word `ＮＹＣ` because `ＮＹＣ` is longer than `ＮＹ` and because `ＮＹＣ` matches before `ＹＣ`.
 
 ### Japanese parts of speech
 {: #partsOfSpeech}
@@ -152,12 +152,12 @@ The following table lists the parts of speech that are supported for Japanese cu
 | `Dosi` | *Doushi* | Verb |
 | `Fuku` | *Fukishi* | Adverb |
 | `Gobi` | *Gobi* | Inflection |
-| `Hoka` | *Hoka* | Other (Words that have a special grammatical meaning of their own that does not fit into any other part of speech. For example, <code>&#12354;&#12426;&#12364;&#12392;&#12358;</code> for "thank you.") |
+| `Hoka` | *Hoka* | Other (Words that have a special grammatical meaning of their own that does not fit into any other part of speech. For example, `ありがとう` for "thank you.") |
 | `Jodo` | *Jodoushi* | Auxiliary verb |
-| `Josi` | *Joshi* | Postpositional particle (For example, <code>&#12364;&#32;&#12398;&#32;&#12434;</code> for "of.") |
+| `Josi` | *Joshi* | Postpositional particle (For example, `が の を` for "of.") |
 | `Kato` | *Kantoushi* | Interjection |
 | `Kedo` | *Keiyodoushi* | Adjective verb |
-| `Keyo` | *Keiyoshi* | Adjective (For example, <code>&#32654;&#12375;</code> for "beautiful" or <code>&#26126;&#12427;</code> for "bright.") |
+| `Keyo` | *Keiyoshi* | Adjective (For example, `美し` for "beautiful" or `明る` for "bright.") |
 | `Kigo` | *Kigou* | Symbol |
 | `Koyu` | *Koyuumeishi* | Proper noun |
 | `Mesi` | *Meishi* | Noun |

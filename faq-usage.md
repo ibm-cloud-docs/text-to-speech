@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-04-22"
+lastupdated: "2022-08-04"
 
 keywords: faqs,frequently asked questions,question,Text to Speech
 
@@ -54,7 +54,7 @@ Some languages and voices are available only for {{site.data.keyword.cloud}}, no
 
 The {{site.data.keyword.texttospeechshort}} service offers voices that rely on neural technology to synthesize text to speech. The topic of synthesizing text to speech is inherently complex. For more information, see
 
--   [Neural voice technology](/docs/text-to-speech?topic=text-to-speech-voices#neural-voices)
+-   [Using languages and voices](/docs/text-to-speech?topic=text-to-speech-voices)
 -   [The science behind the service](/docs/text-to-speech?topic=text-to-speech-science)
 
 ## What are the output audio formats?

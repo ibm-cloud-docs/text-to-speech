@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-04-22"
+lastupdated: "2022-08-06"
 
 subcollection: text-to-speech
 
@@ -76,10 +76,10 @@ The `alphabet` attribute specifies the phonetic representation type: `ipa` or `i
 
 For example, consider the word `trinitroglycerin`. The service's regular pronunciation rules produce a pronunciation that differs from the one commonly used by chemists and physicians. The correct pronunciation can be achieved with a phonetic translation:
 
--   *IPA*: <code>t&#633;a&#618;n&#712;a&#618;t&#633;&#601;gl&#618;s&#601;&#633;&#616;n</code>
+-   *IPA*: `tɹaɪnˈaɪtɹəglɪsəɹɨn`
 -   *SPR*: `trYn1YtrxglIsxrXn`
 
-In these examples, the phonetic translation string is composed of phoneme symbols and a single primary stress mark. The primary stress mark is represented by <code>&#712;</code> in IPA and by `1` in SPR. It is placed just before the symbol for the stressed vowel in both cases. Although the examples do not show it, you can also specify syllable boundaries and secondary stress positions in a phonetic translation. These elements are not required and normally are not needed to achieve a pronunciation. As with sounds-like translations, you can compose a phonetic translation from multiple strings that are delimited by spaces.
+In these examples, the phonetic translation string is composed of phoneme symbols and a single primary stress mark. The primary stress mark is represented by `ˈ` in IPA and by `1` in SPR. It is placed just before the symbol for the stressed vowel in both cases. Although the examples do not show it, you can also specify syllable boundaries and secondary stress positions in a phonetic translation. These elements are not required and normally are not needed to achieve a pronunciation. As with sounds-like translations, you can compose a phonetic translation from multiple strings that are delimited by spaces.
 
 You can also specify IPA translations as IPA Unicode values. For more information, see [Understanding phonetic symbols](/docs/text-to-speech?topic=text-to-speech-symbols) and the language-specific tables on the pages that are referred to in [Language support for IPA and SPR](/docs/text-to-speech?topic=text-to-speech-symbols#supportedLanguages). For an example translation that uses IPA Unicode values, see [The phoneme element](/docs/text-to-speech?topic=text-to-speech-elements#phoneme_element).
 {: note}
@@ -108,4 +108,4 @@ You can mix the sounds-like and phonetic methods in the same translation. This f
 
 For instance, assume that you used the sounds-like method to get part of a word pronounced satisfactorily. But you now need to fine-tune the remaining elements of the word. You can use the phonetic method to specify the difficult aspects of the word. The following example applies mixed translation to the word `trinitroglycerin`:
 
-<code>try&lt;phoneme alphabet="ipa" ph="n&#712;a&#618;t&#633;&#601;gl&#618;s&#601;&#633;&#616;n"&gt;&lt;/phoneme&gt;</code>
+`try<phoneme alphabet="ipa" ph="nˈaɪtɹəglɪsəɹɨn"></phoneme>`

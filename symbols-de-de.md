@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-02-16"
+lastupdated: "2022-08-07"
 
 subcollection: text-to-speech
 
@@ -106,5 +106,5 @@ Nasalized vowels in German occur mostly in foreign loan words.
 
 **Notes:**
 
-1.  The IPA symbol <code>&#240;</code> (IPA Unicode `00F0`) occurs only in loanwords from foreign languages, mostly English (for example, *The New York Times*). However, the service realizes that sound as IPA symbol `d` (IPA Unicode `0064`).
-1.  The IPA symbol <code>&#952;</code> (IPA Unicode `03B8`) occurs only in loanwords from foreign languages, mostly English (for example, *thriller*). However, the service realizes that sound as IPA symbol <code>&#678;</code> (IPA Unicode `02A6`).
+1.  The IPA symbol `ð` (IPA Unicode `00F0`) occurs only in loanwords from foreign languages, mostly English (for example, *The New York Times*). However, the service realizes that sound as IPA symbol `d` (IPA Unicode `0064`).
+1.  The IPA symbol `θ` (IPA Unicode `03B8`) occurs only in loanwords from foreign languages, mostly English (for example, *thriller*). However, the service realizes that sound as IPA symbol `ʦ` (IPA Unicode `02A6`).

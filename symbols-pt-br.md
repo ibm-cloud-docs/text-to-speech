@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2021-11-08"
+  years: 2015, 2022
+lastupdated: "2022-08-07"
 
 subcollection: text-to-speech
 
@@ -36,7 +36,7 @@ The service supports the following symbols for Brazilian Portuguese.
 
 **Note:**
 
-1.  The SPR symbol `a` maps to two different IPA symbols with different pronunciations: `a` and <code>&#592;</code>. In general, the SPR symbol maps to `a` for synthesis of stressed syllables and to <code>&#592;</code> for synthesis of unstressed syllables.
+1.  The SPR symbol `a` maps to two different IPA symbols with different pronunciations: `a` and `ɐ`. In general, the SPR symbol maps to `a` for synthesis of stressed syllables and to `ɐ` for synthesis of unstressed syllables.
 
 ## Semi-vowels
 {: #ptSemiVowels}
