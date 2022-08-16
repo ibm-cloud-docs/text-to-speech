@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2021-11-08"
+  years: 2015, 2022
+lastupdated: "2022-08-07"
 
 subcollection: text-to-speech
 
@@ -60,9 +60,9 @@ The service supports the following symbols for Spanish. The information applies 
 1.  The SPR symbol `T` is realized only in Castilian Spanish. It is replaced internally with the phonetic symbol `s` in North American and Latin American Spanish, even when present in the SPR input.
 1.  The IPA symbol `h` applies to North American and Latin American Spanish only.
 1.  The IPA symbol `x` applies to Castilian Spanish only.
-1.  The SPR symbol `L` maps to two different IPA symbols with different pronunciations for both North American and Latin American Spanish: <code>&#654;</code> and <code>&#669;</code>. Specifying this SPR symbol with these dialects might yield either of the two variants. The difference between the pronunciations is often indistinguishable to native speakers.
-1.  The IPA symbol <code>&#669;</code> maps to the SPR symbol `L` in North American and Latin American Spanish.
-1.  The IPA symbol <code>&#669;</code> maps to the SPR symbol `Y` in Castilian Spanish.
+1.  The SPR symbol `L` maps to two different IPA symbols with different pronunciations for both North American and Latin American Spanish: `ʎ` and `ʝ`. Specifying this SPR symbol with these dialects might yield either of the two variants. The difference between the pronunciations is often indistinguishable to native speakers.
+1.  The IPA symbol `ʝ` maps to the SPR symbol `L` in North American and Latin American Spanish.
+1.  The IPA symbol `ʝ` maps to the SPR symbol `Y` in Castilian Spanish.
 
 ## Allophones
 {: #esAllophones}

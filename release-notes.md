@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-08-01"
+lastupdated: "2022-08-07"
 
 keywords: text to speech release notes,text to speech for IBM cloud release notes
 
@@ -286,10 +286,9 @@ New neural and enhanced neural voices
     -   *Neural voices*, which do *not* include the string `V3` in their names, are now available for Arabic, Australian English, Chinese, Netherlands Dutch, and Korean. Neural voices support the use of the International Phonetic Alphabet (IPA) with the Speech Synthesis Markup Language (SSML) `<phoneme>` element.
     -   *Enhanced neural voices*, which include the string `V3` in their names, are now available for Brazilian Portuguese, United Kingdom and United States English, French, German, Italian, Japanese, and Spanish (all dialects). Enhanced neural voices support the use of both IPA and {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR) with the SSML `<phoneme>` element. Enhanced neural voices also achieve a slightly higher degree of natural-sounding speech. And further customization capabilities will be exposed for enhanced neural voices in the coming months.
 
-    The service no longer offers standard voices for any language. Standard voices used concatenative synthesis to assemble segments of recorded speech to generate the requested audio. For more information, see
+    The service no longer offers standard voices for any language. Standard voices used concatenative synthesis to assemble segments of recorded speech to generate the requested audio.
 
-    -   [Supported languages and voices](/docs/text-to-speech?topic=text-to-speech-voices#language-voices)
-    -   [Neural voice technology](/docs/text-to-speech?topic=text-to-speech-voices#neural-voices)
+    For more information, see [Using languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
 
 New Australian English and Korean neural voices
 :   The following Australian English and Korean voices are new:
@@ -315,8 +314,8 @@ Improved neural voices
     -   The Arabic language now supports the use of IPA symbols and Unicode values with the SSML `<phoneme>` element. To create a custom model for Arabic, you must use the language identifier `ar-MS`. The identifier `ar-AR` is not supported for customization.
     -   The IPA symbols for the Arabic language are new. The previously documented symbols have been completely replaced. For more information about the supported IPA symbols and Unicode values, see [Arabic symbols](/docs/text-to-speech?topic=text-to-speech-arSymbols).
     -   The IPA symbols for the Netherlands Dutch language have been changed as follows:
-        -   Netherlands Dutch no longer supports the following IPA symbols: <code>&#116;&#690;</code> (`0074+02B2`), <code>&#626;</code> (`0272`), <code>&#678;</code> (`02A6`), and <code>&#660;</code> (`0294`).
-        -   Netherlands Dutch now supports the following IPA symbol: <code>&#611;</code> (`0263`).
+        -   Netherlands Dutch no longer supports the following IPA symbols: `tʲ` (`0074+02B2`), `ɲ` (`0272`), `ʦ` (`02A6`), and `ʔ` (`0294`).
+        -   Netherlands Dutch now supports the following IPA symbol: `ɣ` (`0263`).
 
         For more information about the supported IPA symbols and Unicode values, see [Dutch (Netherlands) symbols](/docs/text-to-speech?topic=text-to-speech-nlSymbols).
 
@@ -533,10 +532,7 @@ New support for standard and neural voices
     -   *Standard voices* that use concatenative synthesis to assemble segments of recorded speech to generate audio. Standard voices do not include a version string in their name (for example, `en-US_AllisonVoice`).
     -   *Neural voices* that use Deep Neural Networks (DNNs) to predict the acoustic (spectral) features of the speech. Neural voices include a version string (`V3`) in their name (for example, `en-US_AllisonV3Voice`).
 
-    Neural versions are available for all standard voices except for the `ja-JP_EmiVoice` voice, which is pending and will be available soon. You cannot use the SSML `<express-as>` and `<voice-transformation>` elements with the neural voices, and you cannot use the `volume` attribute of the `<prosody>` element with the neural voices.
-
-    -   For more information about all available voices, see [Using languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
-    -   For more information about neural voices, see [Neural voice technology](/docs/text-to-speech?topic=text-to-speech-voices#neural-voices).
+    Neural versions are available for all standard voices except for the `ja-JP_EmiVoice` voice, which is pending and will be available soon. You cannot use the SSML `<express-as>` and `<voice-transformation>` elements with the neural voices, and you cannot use the `volume` attribute of the `<prosody>` element with the neural voices. For more information about all available voices, see [Using languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
 
 V2 neural voices withdrawn from service
 :   The service no longer includes the `V2` DNN voices that were previously available. If you use a `V2` voice in your application, the service automatically uses the equivalent `V3` voice instead.
@@ -711,7 +707,7 @@ Changes to customization for Japanese
     ```
     {: codeblock}
 
-    If the service finds the string <code>&#65326;&#65337;&#65315;</code> in the input text, it matches that word because it is a longer match than <code>&#65326;&#65337;</code>. Previously, the service would have matched the string <code>&#65326;&#65337;</code>. For more information about working with Japanese entries for a custom model, see [Working with Japanese entries](/docs/text-to-speech?topic=text-to-speech-rules#jaNotes).
+    If the service finds the string `ＮＹＣ` in the input text, it matches that word because it is a longer match than `ＮＹ`. Previously, the service would have matched the string `ＮＹ`. For more information about working with Japanese entries for a custom model, see [Working with Japanese entries](/docs/text-to-speech?topic=text-to-speech-rules#jaNotes).
 
 ## 22 September 2016
 {: #text-to-speech-22september2016}

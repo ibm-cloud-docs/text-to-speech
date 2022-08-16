@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-05-26"
+lastupdated: "2022-08-04"
 
 subcollection: text-to-speech
 
@@ -35,7 +35,7 @@ The DNNs are trained on natural human speech to predict the acoustic features of
 
 Neural voices produce speech that is crisp and clear, with a very natural-sounding and smooth audio quality. For more information about the service's neural voice technology, see
 
--   The documentation [Neural voice technology](/docs/text-to-speech?topic=text-to-speech-voices#neural-voices)
+-   The documentation [Using languages and voices](/docs/text-to-speech?topic=text-to-speech-voices)
 -   The research paper [High quality, lightweight and adaptable {{site.data.keyword.texttospeechshort}} using LPCNet](https://arxiv.org/abs/1905.00590){: external}
 
 ## Concatenative synthesis

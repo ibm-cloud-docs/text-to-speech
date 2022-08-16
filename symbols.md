@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-03-24"
+lastupdated: "2022-08-07"
 
 subcollection: text-to-speech
 
@@ -94,8 +94,8 @@ Table 1 identifies the symbols that you can use to indicate syllable stress for 
 
 | Stress | SPR symbol | IPA symbol | IPA Unicode |
 |---------|:----------:|:----------:|:-----------:|
-| Primary stress | `1` | <code>&#712;</code> | `02C8` |
-| Secondary stress | `2` | <code>&#716;</code> | `02CC` |
+| Primary stress | `1` | `ˈ` | `02C8` |
+| Secondary stress | `2` | `ˌ` | `02CC` |
 | No stress | `0` | No symbol | No value |
 {: caption="Table 1. Syllable stress"}
 
@@ -129,7 +129,7 @@ Table 2 lists language-specific considerations that apply to specifying syllable
 {: help}
 {: support}
 
-Table 3 shows the service's language support for IPA and SPR symbols. All neural voices support IPA; enhanced neural voices also support SPR. For more information, see [Neural voice technology](/docs/text-to-speech?topic=text-to-speech-voices#neural-voices).
+Table 3 shows the service's language support for IPA and SPR symbols. All voices support IPA; enhanced neural voices also support SPR. For more information, see [Using languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
 
 The table indicates which languages are available with with version of the service and which versions support IPA, SPR, or both. The table provides links to pages that document the supported SPR symbols, IPA symbols, and equivalent IPA Unicode values that can be used with all voices for each language. The pages provide examples of each symbol in words from the language. Because of dialectal differences, the examples might not always match your pronunciation.
 
