@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-07-29"
+lastupdated: "2022-08-19"
 
 subcollection: text-to-speech
 
@@ -48,10 +48,10 @@ Die Nummer ist <say-as interpret-as=‘digits’>AB7234987FFA</say-as>.
 
 | Specification of the `spell_out_mode` parameter | Resulting audio  |
 |-------------------------------------------------|:----------------:|
-| `spell_out_mode=default`  \n The service reads the characters in succession, typically with no pause between them, at the rate at which it synthesizes speech for the request. You can also omit the parameter to get the default behavior. | ![spell_out_mode=default](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/spell-out-default.wav){: audio controls} |
-| `spell_out_mode=singles`  \n The service reads the characters one at a time, with a brief pause between each character. | ![spell_out_mode=singles](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/spell-out-singles.wav){: audio controls} |
-| `spell_out_mode=pairs`  \n The service reads the characters two at a time, with a brief pause between each pair. | ![spell_out_mode=pairs](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/spell-out-pairs.wav){: audio controls} |
-| `spell_out_mode=triplets`  \n The service reads the characters three at a time, with a brief pause between each triplet. | ![spell_out_mode=triplets](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/spell-out-triplets.wav){: audio controls} |
+| `spell_out_mode=default`  \n The service reads the characters in succession, typically with no pause between them, at the rate at which it synthesizes speech for the request. You can also omit the parameter to get the default behavior. | ![spell_out_mode=default](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-spell-out/spell-out-default.wav){: audio controls} |
+| `spell_out_mode=singles`  \n The service reads the characters one at a time, with a brief pause between each character. | ![spell_out_mode=singles](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-spell-out/spell-out-singles.wav){: audio controls} |
+| `spell_out_mode=pairs`  \n The service reads the characters two at a time, with a brief pause between each pair. | ![spell_out_mode=pairs](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-spell-out/spell-out-pairs.wav){: audio controls} |
+| `spell_out_mode=triplets`  \n The service reads the characters three at a time, with a brief pause between each triplet. | ![spell_out_mode=triplets](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-spell-out/spell-out-triplets.wav){: audio controls} |
 {: caption="Table 1. Using the spell_out_mode parameter for German"}
 
 Alphanumeric strings that mix letters and digits can yield different groupings of characters. If you do not use the `<say-as>` element, groups of letters and digits can be pronounced in ways that do not necessarily conform to the requested mode.
