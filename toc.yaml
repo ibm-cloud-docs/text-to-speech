@@ -126,6 +126,7 @@ toc:
   - navgroup:
       id: help
       topics:
+      - known-limitations.md
       - faq-usage.md
       - topicgroup:
           label: Developer community

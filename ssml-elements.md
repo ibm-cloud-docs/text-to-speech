@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-07-31"
+lastupdated: "2022-08-09"
 
 subcollection: text-to-speech
 
@@ -185,14 +185,34 @@ The SSML specification also offers four attributes that the service does not sup
 -   The `duration` attribute
 -   The `volume` attribute
 
+The service also supports query parameters that let you adjust the rate and pitch for all text of a speech synthesis request. For more information about the parameters and their interaction with the `pitch` and `rate` attributes of the `<prosody>` element, see
+
+-   [Modifying the speaking rate](/docs/text-to-speech?topic=text-to-speech-synthesis-params#params-rate-percentage)
+-   [Modifying the speaking pitch](/docs/text-to-speech?topic=text-to-speech-synthesis-params#params-pitch-percentage)
+
+### Differences from the SSML version 1.1 specification
+{: #prosody-differences}
+
+The {{site.data.keyword.texttospeechshort}} service bases its SSML support on [W3C Speech Synthesis Markup Language (SSML) Version 1.1](http://www.w3.org/TR/speech-synthesis/){: external}. However, the SSML specification has evolved since the service was first released. To maintain backward-compatibility for users, the service continues to support some features of the `<prosody>` element that are different from the latest SSML specification.
+
+-   _For the `pitch` attribute,_ the service supports the following additional features:
+    -   A relative change in percent indicated by a signed or unsigned number and followed by a `%` (percent sign). The default pitch for a voice is equivalent to passing a value of `0%`.
+    -   A relative change in semitones indicated by a signed or unsigned number and followed by the string `st`.
+
+-   _For the `rate` attribute,_ the service supports the following additional features:
+    -   A relative change in percent indicated by a signed or unsigned number and followed by a `%` (percent sign). The default speaking rate for a voice is equivalent to passing a value of `0%`.
+    -   A number with no unit designation specifies the number of words per minute. The number is absolute; you cannot specify a relative increase or decrease in words per minute.
+
+For more information about the features supported by SSML version 1.1, refer to section [3.2.4 prosody Element](https://www.w3.org/TR/speech-synthesis/#S3.2.4){: external} of the SSML specification.
+
 ### The `pitch` attribute
 {: #prosody-pitch}
 
-The `pitch` attribute modifies the baseline pitch for the text within the element. Accepted values are
+The `pitch` attribute modifies the baseline pitch, or tone, for the text within the element. Accepted values are
 
 -   _A number followed by the `Hz` (Hertz) designation:_ The baseline pitch is transposed (up or down) to the specified value. For example, `150Hz`.
--   _A relative change value (in semitones):_ A number that causes an absolute shift from the current baseline. The number is preceded by `+` (an increase) or `-` (a decrease) and followed by `st` (semitones). For example, `+5st`.
--   _A relative change in percent:_ A number that causes a relative shift from the current baseline. The number is preceded by `+` (an increase) or `-` (a decrease) and followed by `%` (percent sign). For example, `-10%`.
+-   _A relative change in percent:_ A number that causes a relative shift from the default baseline. The number is preceded by `+` (an increase) or `-` (a decrease) and followed by a `%` (percent sign). An unsigned number that is followed by a `%` is interpreted as a positive increase. For example, `+10%` or `10%`. The default pitch for a voice is equivalent to passing a value of `0%`.
+-   _A relative change in semitones:_ A number that causes an absolute shift from the default baseline. The number is preceded by `+` (an increase) or `-` (a decrease) and followed by `st` (semitones). An unsigned number followed by `st` is interpreted as a positive increase. For example, `+5st` or `5st`.
 -   _A keyword:_ One of the following six keywords, which modify the pitch to the corresponding predefined values:
     -   `default` uses the service's default baseline pitch.
     -   `x-low` shifts the pitch baseline down by 12 semitones.
@@ -201,40 +221,46 @@ The `pitch` attribute modifies the baseline pitch for the text within the elemen
     -   `high` shifts the pitch baseline up by six semitones.
     -   `x-high` shifts the pitch baseline up by 12 semitones.
 
-    Make adjustments based on percentages and experiment with different values to determine what works best for you. When lowering the pitch, do not exceed a value of `-50%`. When raising the pitch, do not exceed a value of `+100%`, which doubles the baseline pitch and represents an absolute limit that is quite extreme. Whether lowering or raising the pitch, experiment with incremental changes before trying the extreme values.
-    {: tip}
+The best way to determine what works for your application is to make adjustments based on percentages and experiment with different values. Try incremental changes of five or ten percent before making more significant modifications.
 
-    ```xml
-    <speak version="1.1">
-      <prosody pitch="150Hz">Transpose pitch to 150 Hz</prosody>
-      <prosody pitch="-20Hz">Lower pitch by 20 Hz from baseline</prosody>
-      <prosody pitch="+20Hz">Increase pitch by 20 Hz from baseline</prosody>
-      <prosody pitch="-12st">Lower pitch by 12 semitones from baseline</prosody>
-      <prosody pitch="+12st">Increase pitch by 12 semitones from baseline</prosody>
-      <prosody pitch="x-low">Lower pitch by 12 semitones from baseline</prosody>
-    </speak>
-    ```
-    {: codeblock}
+```xml
+<speak version="1.1">
+  <prosody pitch="150Hz">Transpose pitch to 150 Hz</prosody>
+  <prosody pitch="-20Hz">Lower pitch by 20 Hz from baseline</prosody>
+  <prosody pitch="+20Hz">Increase pitch by 20 Hz from baseline</prosody>
+  <prosody pitch="-10%">Decrease pitch by 10 percent</prosody>
+  <prosody pitch="+10%">Increase pitch by 10 percent</prosody>
+  <prosody pitch="-12st">Lower pitch by 12 semitones from baseline</prosody>
+  <prosody pitch="+12st">Increase pitch by 12 semitones from baseline</prosody>
+  <prosody pitch="x-low">Lower pitch by 12 semitones from baseline</prosody>
+</speak>
+```
+{: codeblock}
 
 ### The `rate` attribute
 {: #prosody-rate}
 
-The `rate` attribute indicates a change in the speaking rate for the text within the element. The rate is specified in terms of words per minute; if the speaking rate is 50 words per minute, then `rate` equals `50`. When `rate` is set to a positive number, the implementation does not comply with the current W3C prosody rate attribute specification. Also, the service supports relative percent changes (for example, `+15%`) but not relative value changes (for example, `+15`). Accepted values are
+The `rate` attribute indicates a change in the speaking rate for the text within the element. Accepted values are
 
--   A relative percentage increase or decrease: `+10%`.
--   A number of words per minute as a positive number: `75`.
--   `default` uses the service's default rate.
--   `x-slow` decreases the rate by 50 percent.
--   `slow` decreases the rate by 25 percent.
--   `medium` produces the same behavior as `default`.
--   `fast` increases the rate by 25 percent.
--   `x-fast` increases the rate by 50 percent.
+-   _A number with no unit designation:_ The rate is changed to the specified number of words per minute. For example, a value of `50` indicates a speaking rate of 50 words per minute. The number is absolute; you cannot specify a relative increase or decrease in words per minute.
+-   _A relative change in percent:_ A number that causes a relative shift from the default speaking rate. The number is preceded by `+` (an increase) or `-` (a decrease) and followed by a `%` (percent sign). An unsigned number that is followed by a `%` is interpreted as a positive increase. For example, `+10%` or `10%`. The default speaking rate for a voice is equivalent to passing a value of `0%`.
+-   _A keyword:_ One of the following six keywords, which modify the speaking rate to the corresponding predefined values:
+    -   `default` uses the service's default speaking rate.
+    -   `x-slow` decreases the rate by 50 percent.
+    -   `slow` decreases the rate by 25 percent.
+    -   `medium` produces the same behavior as `default`.
+    -   `fast` increases the rate by 25 percent.
+    -   `x-fast` increases the rate by 50 percent.
+
+The best way to determine what works for your application is to make adjustments based on percentages and experiment with different values. Try incremental changes of five or ten percent before making more significant modifications.
 
 ```xml
 <speak version="1.1">
-  <prosody rate="slow">Decrease speaking rate by 25%</prosody>
-  <prosody rate="50">Set speaking rate at 50 words per minute</prosody>
+  <prosody rate="50">Set speaking rate to 50 words per minute</prosody>
+  <prosody rate="-5%">Decrease speaking rate by 5 percent</prosody>
   <prosody rate="+5%">Increase speaking rate by 5 percent</prosody>
+  <prosody rate="slow">Decrease speaking rate by 25%</prosody>
+  <prosody rate="fast">Increase speaking rate by 25%</prosody>
 </speak>
 ```
 {: codeblock}
