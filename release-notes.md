@@ -1,8 +1,7 @@
 ---
-
 copyright:
   years: 2015, 2022
-lastupdated: "2022-08-07"
+lastupdated: "2022-08-31"
 
 keywords: text to speech release notes,text to speech for IBM cloud release notes
 
@@ -19,19 +18,29 @@ content-type: release-note
 
 ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
 
-The following features and changes were included for each release and update of managed instances of {{site.data.keyword.texttospeechfull}} that are hosted on {{site.data.keyword.cloud_notm}} or for instances that are hosted on [IBM Cloud Pak for Data as a Service](https://dataplatform.cloud.ibm.com/docs/content/wsj/landings/wtts.html){: external}. The information includes known limitations.  Unless otherwise noted, all changes are compatible with earlier releases and are automatically and transparently available to all new and existing applications.
+The following features and changes were included for each release and update of managed instances of {{site.data.keyword.texttospeechfull}} that are hosted on {{site.data.keyword.cloud_notm}} or for instances that are hosted on [IBM Cloud Pak for Data as a Service](https://dataplatform.cloud.ibm.com/docs/content/wsj/landings/wtts.html){: external}. Unless otherwise noted, all changes are compatible with earlier releases and are automatically and transparently available to all new and existing applications.
 {: shortdesc}
+
+For information about known limitations of the service, see [Known limitations](/docs/text-to-speech?topic=text-to-speech-known-limitations).
 
 For information about releases and updates of the service for {{site.data.keyword.icp4dfull_notm}}, see [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes-data).
 {: note}
 
-## Known limitations
-{: #limitations}
+## 31 August 2022
+{: #text-to-speech-31august2022}
+{: release-note}
 
-The service has the following known limitations:
+New beta `rate_percentage` query parameter for controlling the global speaking rate
+:   The service offers a new `rate_percentage` query parameter to modify the speaking rate for a speech synthesis request. The speaking rate is the speed at which the service speaks the text that it synthesizes into speech. A higher rate causes the text to be spoken more quickly; a lower rate causes the text to be spoken more slowly. The parameter changes the per-voice default rate for an entire request. For more information, see [Modifying the speaking rate](/docs/text-to-speech?topic=text-to-speech-synthesis-params#params-rate-percentage).
 
--   **2 December 2020:** Cross-Origin Resource Sharing (CORS) support is not available from the Mozilla Firefox™ browser for voices in the following languages: Arabic, Australian English, Chinese, Dutch (Belgian and Netherlands), Korean, and Swedish.
--   **22 August 2019:** When you specify the `audio/ogg;codecs=opus` audio format, you can optionally specify a sampling rate other than the default 48,000 Hz. However, although the service accepts `48000`, `24000`, `16000`, `12000`, or `8000` as a valid sampling rate, it currently disregards a specified value and always returns the audio with a sampling rate of 48 kHz.
+New beta `pitch_percentage` query parameter for controlling the global speaking pitch
+:   The service offers a new `pitch_percentage` query parameter to modify the speaking pitch for a synthesis request. The speaking pitch represents the tone of the speech that the service synthesizes. It represents how high or low the tone of the voice is perceived by the listener. A higher pitch results in speech that is spoken at a higher tone and is perceived as a higher voice; a lower pitch results in speech that is spoken in a lower tone and is perceived as a lower voice. The parameter changes the per-voice default pitch for an entire request. For more information, see [Modifying the speaking pitch](/docs/text-to-speech?topic=text-to-speech-synthesis-params#params-pitch-percentage).
+
+Defect fix: Full text is now being synthesized for a Japanese request
+:   **Defect fix:** The service now synthesizes the full text of a request in Japanese that includes a blank space between the `な` and `ら` characters. Previously, the service failed to synthesize the complete text when it encountered such a blank space.
+
+Documentation updates for the SSML `<prosody>` element
+:   The documentation for the SSML `<prosody>` element and its `pitch` and `rate` parameters has been improved and clarified. It also now includes a description of the differences between the service and the latest version of the SSML specification. For more information, see [The `<prosody>` element](/docs/text-to-speech?topic=text-to-speech-elements#prosody_element).
 
 ## 3 August 2022
 {: #text-to-speech-3august2022}
