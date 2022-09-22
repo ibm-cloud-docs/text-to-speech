@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-08-06"
+lastupdated: "2022-09-09"
 
 subcollection: text-to-speech
 
@@ -33,7 +33,10 @@ To synthesize text to audio, you call one of the two versions of the service's `
 The two versions of the `/v1/synthesize` method have the following parameters in common:
 
 `accept` (query parameter, *optional* string)
-:   Specifies the requested audio format, or MIME type, in which the service is to return the audio. You can also specify this value with the HTTP `Accept` request header. URL-encode the argument to the `accept` query parameter. For more information, see [Using audio formats](/docs/text-to-speech?topic=text-to-speech-audio-formats).
+:   Specifies the requested audio format, or MIME type, in which the service is to return the audio. You can also specify this value with the HTTP `Accept` request header. URL-encode the argument to the `accept` query parameter. By default, the service returns the audio in the format `audio/ogg;codecs=opus`. For more information, see [Using audio formats](/docs/text-to-speech?topic=text-to-speech-audio-formats).
+
+    The Ogg audio format is not supported with the Safari browser. If you are using the the {{site.data.keyword.texttospeechshort}} service with the Safari browser, you must specify a different format in which you want the service to return the audio.
+    {: important}
 
 `voice` (query parameter, *optional* string
 :   Specifies the voice in which the text is to be spoken in the audio. Use the `/v1/voices` method to get the current list of supported voices. Omit the parameter to use the default voice. For more information, see [Using languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).

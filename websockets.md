@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-08-06"
+lastupdated: "2022-09-21"
 
 subcollection: text-to-speech
 
@@ -116,6 +116,9 @@ To synthesize text, the client passes a simple JSON text message to the service 
 
 `accept` (*required* string)
 :   Specifies the requested format (MIME type) of the audio. Use `*/*` to request the default audio format, `audio/ogg;codecs=opus`. For more information, see [Using audio formats](/docs/text-to-speech?topic=text-to-speech-audio-formats).
+
+    The Ogg audio format is not supported with the Safari browser. If you are using the the {{site.data.keyword.texttospeechshort}} service with the Safari browser, you must specify a different format in which you want the service to return the audio.
+    {: important}
 
 `timings` (*optional* string[ ])
 :   Specifies that the service is to return word timing information for all strings of the input text. The service returns the start and end time of each token of the input. Specify `words` as the lone element of the array to request word timings. Specify an empty array or omit the parameter to receive no word timings. For more information, see [Generating word timings](/docs/text-to-speech?topic=text-to-speech-timing). *Not supported for Japanese input text.*

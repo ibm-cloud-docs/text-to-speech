@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2015, 2022
-lastupdated: "2022-08-31"
+lastupdated: "2022-09-21"
 
 keywords: text to speech release notes,text to speech for IBM cloud release notes
 
@@ -25,6 +25,24 @@ For information about known limitations of the service, see [Known limitations](
 
 For information about releases and updates of the service for {{site.data.keyword.icp4dfull_notm}}, see [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes-data).
 {: note}
+
+## 21 September 2022
+{: #text-to-speech-21september2022}
+{: release-note}
+
+New Activity Tracker event for GDPR deletion of user information
+:   The service now returns an Activity Tracker event when you use the `DELETE /v1/user_data` method to delete all information about a user. The event is named `text-to-speech.gdpr-user-data.delete`. For more information, see [Activity Tracker events](/docs/text-to-speech?topic=text-to-speech-at-events).
+
+Defect fix: Custom word translations now accept commas in all cases
+:   **Defect fix:** Word translations added to custom models now accept commas in all cases. Previously, a comma in a translation could occasionally cause the translation to fail to generate valid audio when used for speech syntheses. This problem was identified in US English custom models.
+
+Defect fix: French synthesis of dates is now consistent
+:   **Defect fix:** French synthesis no longer includes the article "le" before dates of the form "the *ordinal* of *month*." Previously, the article was included only for the first day of the month for French (for example, "the first of September," "le premier septembre").
+
+Known limitation with using the Ogg audio format with the Safari browser
+:   By default, the service returns audio in the Ogg audio format with the Opus codec (`audio/ogg;codecs=opus`). However, the Ogg audio format is not supported with the Safari browser. If you are using the the {{site.data.keyword.texttospeechshort}} service with the Safari browser, you must specify a different format in which you want the service to return the audio.
+    -   For more information about the available formats, see [Supported audio formats](/docs/text-to-speech?topic=text-to-speech-audio-formats#formats-supported).
+    -   For more information about specifying a format, see [Specifying an audio format](/docs/text-to-speech?topic=text-to-speech-audio-formats#formats-specify).
 
 ## 31 August 2022
 {: #text-to-speech-31august2022}
