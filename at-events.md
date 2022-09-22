@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2021
-lastupdated: "2021-10-13"
+  years: 2020, 2022
+lastupdated: "2022-09-21"
 
 keywords: IBM,activity tracker,event,security,text to speech
 
@@ -47,7 +47,7 @@ The names of the actions for the customization events have changed. The old name
 |--------|-------------|
 | `text-to-speech.custom-model-list.read` | Read a list of custom models created by a user (`GET /v1/customizations`).                 |
 | `text-to-speech.custom-model.read` | Read a custom model (`GET /v1/customizations/{customization_id}`).                         |
-| `text-to-speech.custom-model-word-list.read` | Read a word list for a custom model (`GET /v1/customizations/{customization_id}/words`).   |
+| `text-to-speech.custom-model-word-list.read` | Read a word list for a custom model (`GET /v1/customizations/{customization_id}/words`). |
 | `text-to-speech.custom-model-word.read` | Read a word for a custom model (`GET /v1/customizations/{customization_id}/words/{word}`). |
 {: caption="Table 2. Customization .read actions that generate events"}
 
@@ -78,29 +78,39 @@ The following tables list the {{site.data.keyword.texttospeechshort}} actions fo
 
 | Action | Description |
 |--------|-------------|
-| `text-to-speech.speaker.create` | Create a speaker (`POST /v1/speakers/{speaker_name}`) |
-| `text-to-speech.custom-model-prompt.create` | Create a prompt for a custom model (`POST /v1/customizations/{customization_id}/prompts/{prompt_id}`) |
-{: caption="Table 5. Tube by Example .create actions that generate events"}
+| `text-to-speech.speaker.create` | Create a speaker (`POST /v1/speakers/{speaker_name}`). |
+| `text-to-speech.custom-model-prompt.create` | Create a prompt for a custom model (`POST /v1/customizations/{customization_id}/prompts/{prompt_id}`). |
+{: caption="Table 5. Tune by Example .create actions that generate events"}
 
 ### Read events
 {: #at-events-tbe-read}
 
 | Action | Description |
 |--------|-------------|
-| `text-to-speech.speaker-list.read` | Read a list of speakers (`GET /v1/speakers`) |
-| `text-to-speech.speaker-prompt-list.read` | Read a list of prompts for a speaker (`GET /v1/speakers/{speaker_id}`) |
-| `text-to-speech.custom-model-prompt-list.read` | Read a list of prompts for a custom model (`GET /v1/customizations/{customization_id}/prompts`) |
-| `text-to-speech.custom-model-prompt.read` | Read a prompt for a custom model (`GET /v1/customizations/{customization_id}/prompts/{prompt_id}`) |
-{: caption="Table 6. Tube by Example .read actions that generate events"}
+| `text-to-speech.speaker-list.read` | Read a list of speakers (`GET /v1/speakers`). |
+| `text-to-speech.speaker-prompt-list.read` | Read a list of prompts for a speaker (`GET /v1/speakers/{speaker_id}`). |
+| `text-to-speech.custom-model-prompt-list.read` | Read a list of prompts for a custom model (`GET /v1/customizations/{customization_id}/prompts`). |
+| `text-to-speech.custom-model-prompt.read` | Read a prompt for a custom model (`GET /v1/customizations/{customization_id}/prompts/{prompt_id}`). |
+{: caption="Table 6. Tune by Example .read actions that generate events"}
 
 ### Delete events
 {: #at-events-tbe-delete}
 
 | Action | Description |
 |--------|-------------|
-| `text-to-speech.speaker.delete` | Delete a speaker (`DELETE /v1/speakers/{speaker_id}`) |
-| `text-to-speech.custom-model-prompt.delete` | Delete a prompt from a custom model (`DELETE /v1/customizations/{customization_id}/prompts/{prompt_id}`) |
-{: caption="Table 7. Tube by Example .delete actions that generate events"}
+| `text-to-speech.speaker.delete` | Delete a speaker (`DELETE /v1/speakers/{speaker_id}`). |
+| `text-to-speech.custom-model-prompt.delete` | Delete a prompt from a custom model (`DELETE /v1/customizations/{customization_id}/prompts/{prompt_id}`). |
+{: caption="Table 7. Tune by Example .delete actions that generate events"}
+
+## GDPR event
+{: #at-events-gdpr}
+
+The following table lists the {{site.data.keyword.texttospeechshort}} action for General Data Protection Regulation (GDPR) that generates an event.
+
+| Action | Description |
+|--------|-------------|
+| `text-to-speech.gdpr-user-data.delete` | Delete information for a user (`DELETE /v1/user_data`). |
+{: caption="Table 8. GDPR .delete action that generates an event"}
 
 ## Where to view events
 {: #at-ui}

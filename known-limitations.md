@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-08-14"
+lastupdated: "2022-0p-09"
 
 ---
 
@@ -13,6 +13,14 @@ lastupdated: "2022-08-14"
 
 The {{site.data.keyword.texttospeechshort}} service has the following known limitations.
 {: shortdesc}
+
+## Issue: The Ogg audio format is not supported with the Safari browser
+{: #limitation-ogg-safari}
+
+**9 September 2022:** By default, the service returns audio in the Ogg audio format with the Opus codec (`audio/ogg;codecs=opus`). However, the Ogg audio format is not supported with the Safari browser. If you are using the the {{site.data.keyword.texttospeechshort}} service with the Safari browser, you must specify a different format in which you want the service to return the audio.
+
+-   For more information about the available formats, see [Supported audio formats](/docs/text-to-speech?topic=text-to-speech-audio-formats#formats-supported).
+-   For more information about specifying a format, see [Specifying an audio format](/docs/text-to-speech?topic=text-to-speech-audio-formats#formats-specify).
 
 ## Issue: CORS is not supported for neural voices in the Firefox browser
 {: #limitation-cors}
