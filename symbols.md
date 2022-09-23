@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-08-07"
+lastupdated: "2022-08-24"
 
 subcollection: text-to-speech
 
@@ -13,7 +13,7 @@ subcollection: text-to-speech
 # Understanding phonetic symbols
 {: #symbols}
 
-The {{site.data.keyword.texttospeechfull}} service supports both the standard International Phonetic Alphabet (IPA) and {{site.data.keyword.IBM}} Symbolic Phonetic Representation (SPR) notations to represent the sounds of words. Both notations provide phonetic coding that represents the pronunciation of a word, the sounds that make up the word, how the sounds are divided into syllables, and which syllables are stressed. [Language support for IPA and SPR](#supportedLanguages) provides links to pages that document the allowable phonetic symbols for each language.
+The {{site.data.keyword.texttospeechfull}} service supports both the standard International Phonetic Alphabet (IPA) and {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR) notations to represent the sounds of words. Both notations provide phonetic coding that represents the pronunciation of a word, the sounds that make up the word, how the sounds are divided into syllables, and which syllables are stressed. [Language support for IPA and SPR](#supportedLanguages) provides links to pages that document the allowable phonetic symbols for each language.
 {: shortdesc}
 
 ## Defining a word pronunciation
@@ -129,11 +129,11 @@ Table 2 lists language-specific considerations that apply to specifying syllable
 {: help}
 {: support}
 
-Table 3 shows the service's language support for IPA and SPR symbols. All voices support IPA; enhanced neural voices also support SPR. For more information, see [Using languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
+Table 3 shows the service's language support for IPA and SPR symbols. All voices support IPA; expressive and enhanced neural voices also support SPR. For more information, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
 
 The table indicates which languages are available with with version of the service and which versions support IPA, SPR, or both. The table provides links to pages that document the supported SPR symbols, IPA symbols, and equivalent IPA Unicode values that can be used with all voices for each language. The pages provide examples of each symbol in words from the language. Because of dialectal differences, the examples might not always match your pronunciation.
 
-Effective **31 March 2022**, all neural voices are deprecated. The languages of the deprecated voices are labeled as *Deprecated* in Table 3. The neural voices are supported only for IBM Cloud; they are not available for IBM Cloud Pak for Data. All enhanced neural voices remain available to all users. For more information, see the [31 March 2022 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-31march2022) in the release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}}.
+Effective **31 March 2022**, all neural voices are deprecated. The languages of the deprecated voices are labeled as *Deprecated* in Table 3. The neural voices are supported only for IBM Cloud; they are not available for IBM Cloud Pak for Data. All expressive and enhanced neural voices remain available to all users. For more information, see the [31 March 2022 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-31march2022) in the release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}}.
 {: important}
 
 | Language | Availability | Supports IPA | Supports SPR |

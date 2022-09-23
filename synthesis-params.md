@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-08-24"
+lastupdated: "2022-08-31"
 
 subcollection: text-to-speech
 
@@ -23,7 +23,7 @@ Each of these parameters interacts with elements of the Speech Synthesis Markup 
 
 ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
 
-The `rate_percentage` parameter is beta functionality that is supported only for enhanced neural voices.
+The `rate_percentage` parameter is beta functionality that is supported only for expressive and enhanced neural voices.
 {: beta}
 
 The speaking rate is the speed at which the service speaks the text that it synthesizes into speech. A higher rate causes the text to be spoken more quickly; a lower rate causes the text to be spoken more slowly.
@@ -38,7 +38,7 @@ The best way to determine how the parameter affects the rate of a given voice is
 
 Table 1 provides examples of how the service changes the speaking rate with different values for the `rate_percentage` parameter. The examples use the `en-US_AllisonV3Voice`.
 
-| Specification of the `rate_percentage` parameter | Resulting audio  |
+| Specification of the `rate_percentage` parameter | Audio sample |
 |-------------------------------------------------|:----------------:|
 | `rate_percentage=0`  \n The service uses the default speaking rate. You can also omit the parameter to get the default behavior. | ![rate_percentage=0](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-rate-percentage/allison-rate-default.wav){: audio controls} |
 | `rate_percentage=-20`  \n The service uses a speaking rate that is 20 percent slower. | ![rate_percentage=-20](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-rate-percentage/allison-rate-slow.wav){: audio controls} |
@@ -57,7 +57,9 @@ If you use the `rate_percentage` parameter and also use the `rate` attribute of 
 
 The following HTTP `POST /v1/synthesize` method uses the `rate_percentage` query parameter with a value of `-5`. The resulting audio is spoken at a rate that is five percent slower than it is by default. The example uses the US English voice `en-US_AllisonV3Voice`.
 
-```bash
+![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+
+```sh
 curl -X POST -u "apikey:{apikey}" \
 --header "Content-Type: application/json" \
 --header "Accept: audio/wav" \
@@ -66,6 +68,21 @@ curl -X POST -u "apikey:{apikey}" \
 "{url}/v1/synthesize?voice=en-US_AllisonV3Voice&rate_percentage=-5"
 ```
 {: pre}
+
+<!--
+![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+
+```sh
+curl -X POST \
+--header "Authorization: Bearer {token}" \
+--header "Content-Type: application/json" \
+--header "Accept: audio/wav" \
+--output rate-percentage.wav \
+--data "{\"text\":\"This text is spoken five percent slower than the default.\"}" \
+"{url}/v1/synthesize?voice=en-US_AllisonV3Voice&rate_percentage=-5"
+```
+{: pre}
+-->
 
 The following WebSocket example shows inclusion of the parameter with the same value on the request to establish a connection:
 
@@ -84,7 +101,7 @@ var websocket = new WebSocket(wsURI);
 
 ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
 
-The `pitch_percentage` parameter is beta functionality that is supported only for enhanced neural voices.
+The `pitch_percentage` parameter is beta functionality that is supported only for expressive and enhanced neural voices.
 {: beta}
 
 The speaking pitch represents the pitch, or tone, of the speech that the service synthesizes, which also affects the intonation. It represents how high or low the tone of the voice is perceived by the listener. A higher pitch results in speech that is spoken at a higher tone and is perceived as a higher voice; a lower pitch results in speech that is spoken in a lower tone and is perceived as a lower, deeper voice.
@@ -99,7 +116,7 @@ The best means of determining how the parameter affects the pitch of a given voi
 
 Table 2 provides examples of how the service changes the speaking pitch with different values for the `pitch_percentage` parameter. The examples use the `en-US_AllisonV3Voice`.
 
-| Specification of the `pitch_percentage` parameter | Resulting audio  |
+| Specification of the `pitch_percentage` parameter | Audio sample |
 |-------------------------------------------------|:----------------:|
 | `pitch_percentage=0`  \n The service uses the default speaking pitch. You can also omit the parameter to get the default behavior. | ![pitch_percentage=0](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-pitch-percentage/allison-pitch-default.wav){: audio controls} |
 | `pitch_percentage=-20`  \n The service uses a speaking pitch that is 20 percent lower. | ![pitch_percentage=-20](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-pitch-percentage/allison-pitch-low.wav){: audio controls} |
@@ -118,7 +135,9 @@ If you use the `pitch_percentage` parameter and also use the `pitch` attribute o
 
 The following HTTP `POST /v1/synthesize` method uses the `pitch_percentage` query parameter with a value of `5`. The resulting audio is spoken with a pitch that is five percent higher than it is by default. The example uses the US English voice `en-US_AllisonV3Voice`.
 
-```bash
+![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+
+```sh
 curl -X POST -u "apikey:{apikey}" \
 --header "Content-Type: application/json" \
 --header "Accept: audio/wav" \
@@ -127,6 +146,21 @@ curl -X POST -u "apikey:{apikey}" \
 "{url}/v1/synthesize?voice=en-US_AllisonV3Voice&pitch_percentage=5"
 ```
 {: pre}
+
+<!--
+![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+
+```sh
+curl -X POST \
+--header "Authorization: Bearer {token}" \
+--header "Content-Type: application/json" \
+--header "Accept: audio/wav" \
+--output pitch-percentage.wav \
+--data "{\"text\":\"This text is spoken five percent higher than the default.\"}" \
+"{url}/v1/synthesize?voice=en-US_AllisonV3Voice&pitch_percentage=5"
+```
+{: pre}
+-->
 
 The following WebSocket example shows inclusion of the parameter with the same value on the request to establish a connection:
 
@@ -170,7 +204,7 @@ Die Nummer ist <say-as interpret-as=‘digits’>AB7234987FFA</say-as>.
 ```
 {: codeblock}
 
-| Specification of the `spell_out_mode` parameter | Resulting audio  |
+| Specification of the `spell_out_mode` parameter | Audio sample |
 |-------------------------------------------------|:----------------:|
 | `spell_out_mode=default`  \n The service reads the characters in succession, typically with no pause between them, at the rate at which it synthesizes speech for the request. You can also omit the parameter to get the default behavior. | ![spell_out_mode=default](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-spell-out/spell-out-default.wav){: audio controls} |
 | `spell_out_mode=singles`  \n The service reads the characters one at a time, with a brief pause between each character. | ![spell_out_mode=singles](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-spell-out/spell-out-singles.wav){: audio controls} |
@@ -186,7 +220,9 @@ Alphanumeric strings that mix letters and digits can yield different groupings o
 
 The following HTTP `POST /v1/synthesize` method uses the `spell_out_mode` query parameter with a value of `singles`. The example uses the German voice `de-DE_ErikaV3Voice`. The alphanumeric text to be synthesized is a hexadecimal string that is wrapped in a `<say-as>` element and interpreted as `digits`.
 
-```bash
+![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+
+```sh
 curl -X POST -u "apikey:{apikey}" \
 --header "Content-Type: application/json" \
 --header "Accept: audio/wav" \
@@ -195,6 +231,21 @@ curl -X POST -u "apikey:{apikey}" \
 "{url}/v1/synthesize?voice=de-DE_ErikaV3Voice&spell_out_mode=singles"
 ```
 {: pre}
+
+<!--
+![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+
+```sh
+curl -X POST \
+--header "Authorization: Bearer {token}" \
+--header "Content-Type: application/json" \
+--header "Accept: audio/wav" \
+--output spell-out-mode.wav \
+--data "{\"text\":\"Die Nummer ist <say-as interpret-as=‘digits’>AB7234987FFA</say-as>.\"}" \
+"{url}/v1/synthesize?voice=de-DE_ErikaV3Voice&spell_out_mode=singles"
+```
+{: pre}
+-->
 
 The following WebSocket example shows inclusion of the parameter with the same value on the request to establish a connection:
 

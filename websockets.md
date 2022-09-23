@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-09-21"
+lastupdated: "2022-09-09"
 
 subcollection: text-to-speech
 
@@ -68,7 +68,7 @@ A WebSocket client calls the `/v1/synthesize` method with the following query pa
     -   ![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}} only.** Pass an access token as you would with the `Authorization` header of an HTTP request. For more information, see [Authenticating to {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-data-security#data-security-authentication-icpd).
 
 `voice` (*optional* string)
-:   Specifies the voice in which the text is to be spoken in the audio. Use the `/v1/voices` method to get the current list of supported voices. Omit the parameter to use the default voice. For more information, see [Using languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
+:   Specifies the voice in which the text is to be spoken in the audio. Use the `/v1/voices` method to get the current list of supported voices. Omit the parameter to use the default voice. For more information, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices) and [Using the default voice](/docs/text-to-speech?topic=text-to-speech-voices-use#specify-voice-default).
 
 `customization_id` (*optional* string)
 :   Specifies the globally unique identifier (GUID) for a custom model that is to be used for the synthesis. A specified custom model must match the language of the voice that is used for the synthesis. If you include a customization ID, you must make the request with credentials for the instance of the service that owns the custom model. Omit the parameter to use the specified voice with no customization. For more information, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
@@ -88,7 +88,7 @@ A WebSocket client calls the `/v1/synthesize` method with the following query pa
 `x-watson-learning-opt-out` (*optional* boolean)
 :   ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** Indicates whether the service logs requests and results that are sent over the connection. To prevent IBM from accessing your data for general service improvements, specify `true` for the parameter. Opting out directs IBM to write to disk *no* user data (text or audio) for your request. For more information, see [Request logging](/docs/text-to-speech?topic=text-to-speech-data-security#data-security-request-logging).
 
-The following snippet of JavaScript code opens a connection with the service. The call to the `/v1/synthesize` method passes the `voice` and `access_token` query parameters, the former to direct the service to use the enhanced neural US English Allison voice. Once the connection is established, the event listeners (`onOpen()`, `onClose()`, and so on) are defined to respond to events from the service.
+The following snippet of JavaScript code opens a connection with the service. The call to the `/v1/synthesize` method passes the `voice` and `access_token` query parameters, the former to direct the service to use the US English Allison voice. Once the connection is established, the event listeners (`onOpen()`, `onClose()`, and so on) are defined to respond to events from the service.
 
 ```javascript
 var access_token = '{access_token}';

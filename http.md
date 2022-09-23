@@ -39,7 +39,7 @@ The two versions of the `/v1/synthesize` method have the following parameters in
     {: important}
 
 `voice` (query parameter, *optional* string
-:   Specifies the voice in which the text is to be spoken in the audio. Use the `/v1/voices` method to get the current list of supported voices. Omit the parameter to use the default voice. For more information, see [Using languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
+:   Specifies the voice in which the text is to be spoken in the audio. Use the `/v1/voices` method to get the current list of supported voices. Omit the parameter to use the default voice. For more information, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices) and [Using the default voice](/docs/text-to-speech?topic=text-to-speech-voices-use#specify-voice-default).
 
 `customization_id` (query parameter, *optional* string)
 :   Specifies a globally unique identifier (GUID) for a custom model that is to be used for the synthesis. A specified custom model must match the language of the voice that is used for the synthesis. If you include a customization ID, you must make the request with credentials for the instance of the service that owns the custom model. Omit the parameter to use the specified voice with no customization. For more information, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).

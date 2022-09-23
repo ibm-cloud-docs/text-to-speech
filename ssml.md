@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-07-26"
+lastupdated: "2022-09-20"
 
 subcollection: text-to-speech
 
@@ -51,7 +51,8 @@ A full legal SSML document consists of an XML prolog, which contains information
 ```
 {: codeblock}
 
-The service supports SSML fragments, which are SSML elements that do not include the full XML header.
+The service supports SSML fragments, which are SSML elements that do not include the full XML header. The `<?xml>` and `<speak>` elements are always optional for SSML that you pass to the service.
+{: note}
 
 ## SSML support
 {: #ssmlSupport}
@@ -79,7 +80,7 @@ For more information about using SSML with the service, see the following:
 The service validates all SSML elements that you submit in any content, either as input text for synthesis or as the definition of a word's translation for customization. The service cannot determine ahead of time whether text submitted for synthesis contains SSML elements. Therefore, it performs the same validation for all input text, regardless of whether it contains SSML.
 
 -   *All SSML input must be correct and well formed.* The service silently ignores unsupported SSML elements. The service synthesizes the text contained inside an unsupported element or an element that uses unsupported features; only the element is ignored.
--   *The service reports an HTTP 400 error code for invalid elements.* The error response includes a descriptive message, and the request fails.
+-   *The service reports an HTTP 400 error code for invalid elements or attributes.* The error response includes a descriptive message, and the request fails.
 
 Specifically, the service returns an error in the following cases:
 

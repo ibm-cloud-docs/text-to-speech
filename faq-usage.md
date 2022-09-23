@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-08-04"
+lastupdated: "2022-09-23"
 
 keywords: faqs,frequently asked questions,question,Text to Speech
 
@@ -39,13 +39,14 @@ Once you have your service credentials, see the following topics for information
 
 The {{site.data.keyword.texttospeechshort}} service supports male and female voices in various spoken languages:
 
+-   The service offers *expressive* voices for US English.
 -   The services offers *enhanced neural* voices for the following languages: English (United Kingdom and United States), French, German, Italian, Japanese, Portuguese (Brazilian), and Spanish (Castilian, Latin American, and North American).
 -   The service offers *neural* voices for the following languages: Arabic, Chinese (Mandarin), Czech, Dutch (Belgian and Netherlands), English (Australian), Korean, and Swedish.
 
-    Effective **31 March 2022**, all neural voices are deprecated. The deprecated voices remain available to existing users until **31 March 2023**, when they will be removed from the service and the documentation. The neural voices are supported only for IBM Cloud; they are not available for IBM Cloud Pak for Data. All enhanced neural voices remain available to all users. For more information, see the [31 March 2022 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-31march2022) in the release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}}.
+    Effective **31 March 2022**, all neural voices are deprecated. The deprecated voices remain available to existing users until **31 March 2023**, when they will be removed from the service and the documentation. The neural voices are supported only for IBM Cloud; they are not available for IBM Cloud Pak for Data. All expressive and enhanced neural voices remain available to all users. For more information, see the [31 March 2022 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-31march2022) in the release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}}.
     {: important}
 
-Some languages and voices are available only for {{site.data.keyword.cloud}}, not for {{site.data.keyword.icp4dfull}}. For more information about the available voices for all languages, see [Using languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
+Some languages and voices are available only for {{site.data.keyword.cloud}}, not for {{site.data.keyword.icp4dfull}}. For more information about the available voices for all languages, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
 
 ## How does the service synthesize audio?
 {: #faq-voices}
@@ -54,7 +55,7 @@ Some languages and voices are available only for {{site.data.keyword.cloud}}, no
 
 The {{site.data.keyword.texttospeechshort}} service offers voices that rely on neural technology to synthesize text to speech. The topic of synthesizing text to speech is inherently complex. For more information, see
 
--   [Using languages and voices](/docs/text-to-speech?topic=text-to-speech-voices)
+-   [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices)
 -   [The science behind the service](/docs/text-to-speech?topic=text-to-speech-science)
 
 ## What are the output audio formats?
@@ -125,7 +126,7 @@ Review the guidelines for working with the customization interface before you be
 
 ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** As a premium customer, you can work with {{site.data.keyword.IBM_notm}} to train a new custom voice for your specific use case and target market. Creating a custom voice is different from customizing one of the service's existing voices. A custom voice is a unique new voice that is based on audio training data that the customer provides. {{site.data.keyword.IBM_notm}} can train a custom voice with as little as one hour of training data.
 
-For more information, contact your {{site.data.keyword.IBM_notm}} Sales Representative.
+To request a custom voice or for more information, complete and submit this [{{site.data.keyword.IBM_notm}} Request Form](https://form.asana.com/?k=CBuXK1uwlAf5ek6FwB6mcg&d=8612789739828){: external}.
 
 ## How do I use the Tune by Example feature?
 {: #faq-tune-by-example}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-08-04"
+lastupdated: "2022-08-24"
 
 subcollection: text-to-speech
 
@@ -13,7 +13,7 @@ subcollection: text-to-speech
 # The science behind the service
 {: #science}
 
-The {{site.data.keyword.texttospeechfull}} service offers voices that rely on [neural voice technology](#science-neural). The service offers both neural and enhanced neural voices. The topic of synthesizing text to speech is inherently complex. For more information about the scientific research behind the service's speech technology, see the documents that are listed in [Research references](/docs/text-to-speech?topic=text-to-speech-references).
+The {{site.data.keyword.texttospeechfull}} service offers only voices that rely on [neural voice technology](#science-neural): *expressive*, *enhanced neural*, and *neural* voices. A brief overview of neural voice technology follows. But the topic of synthesizing text to speech is inherently complex. For more information about the scientific research behind the service's speech technology, see the documents that are listed in [Research references](/docs/text-to-speech?topic=text-to-speech-references).
 {: shortdesc}
 
 ## Neural voice technology
@@ -35,8 +35,9 @@ The DNNs are trained on natural human speech to predict the acoustic features of
 
 Neural voices produce speech that is crisp and clear, with a very natural-sounding and smooth audio quality. For more information about the service's neural voice technology, see
 
--   The documentation [Using languages and voices](/docs/text-to-speech?topic=text-to-speech-voices)
+-   The documentation [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices)
 -   The research paper [High quality, lightweight and adaptable {{site.data.keyword.texttospeechshort}} using LPCNet](https://arxiv.org/abs/1905.00590){: external}
+-   The research paper [Transplantation of Conversational Speaking Style with Interjections in Sequence-to-Sequence Speech Synthesis](https://arxiv.org/abs/2207.12262){: external}
 
 ## Concatenative synthesis
 {: #science-concatenative}

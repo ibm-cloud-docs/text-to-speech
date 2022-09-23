@@ -37,7 +37,7 @@ The most reliable way to identify the sampling rate for any audio that the servi
 ## Supported audio formats
 {: #formats-supported}
 
-Table 1 lists the audio formats in which you can request synthesized audio. By default, the service returns the audio in Ogg format with the Opus codec (`audio/ogg;codecs=opus`).
+Table 1 lists the audio formats in which you can request synthesized audio. By default, the service returns the audio in the Ogg format with the Opus codec (`audio/ogg;codecs=opus`).
 
 The Ogg audio format is not supported with the Safari browser. If you are using the the {{site.data.keyword.texttospeechshort}} service with the Safari browser, you must specify a different format in which you want the service to return the audio. For more information, see [Specifying an audio format](#formats-specify).
 {: important}

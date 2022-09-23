@@ -45,7 +45,12 @@ toc:
   - navgroup:
       id: howto
       topics:
-      - voices.md
+      - topicgroup:
+          label: Using languages and voices
+          topics:
+          - voices.md
+          - voices-use.md
+          - voices-list.md
       - audio-formats.md
       - topicgroup:
           label: Synthesizing speech with the service
@@ -53,6 +58,7 @@ toc:
           - http.md
           - websockets.md
           - synthesis-params.md
+          - synthesis-expressive.md
           - word-timing.md
       - topicgroup:
           label: Customizing the service
