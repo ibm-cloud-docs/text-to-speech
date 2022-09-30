@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-09-20"
+lastupdated: "2022-09-30"
 
 subcollection: text-to-speech
 
@@ -63,14 +63,21 @@ The {{site.data.keyword.texttospeechshort}} service bases its support on SSML ve
 
 For more information about using SSML with the service, see the following:
 
--   For complete information about the service's level of support for all SSML elements, see [SSML elements](/docs/text-to-speech?topic=text-to-speech-elements). With a few exceptions, the service implements most of the W3C specification, as well as SSML fragments.
--   The service supports the use of SSML with the input text of a speech synthesis request to control how the resulting audio is pronounced or to obtain timing marks for the resulting audio.
-    -   For examples of using SSML elements with the `text` of a synthesis request, see [Examples of input text](/docs/text-to-speech?topic=text-to-speech-usingHTTP#httpExamples).
-    -   For information about using the SSML `<mark>` element with a WebSocket request, see [Specifying an SSML mark](/docs/text-to-speech?topic=text-to-speech-timing#timing-mark).
-    -   For information about using the SSML `<say-as>` element to spell out strings, see [Specifying how strings are spelled out](/docs/text-to-speech?topic=text-to-speech-synthesis-params#params-spell-out-mode).
+-   The service implements most of the W3C specification and supports SSML fragments.
+    -   For complete information about the service's level of support for all SSML elements, see [SSML elements](/docs/text-to-speech?topic=text-to-speech-elements).
+    -   For examples of using SSML elements with the `text` of a speech synthesis request, see [Examples of input text](/docs/text-to-speech?topic=text-to-speech-usingHTTP#httpExamples).
+-   The service supports additional synthesis features for enhanced neural and expressive neural voices. For more information, see
+    -   [Modifying the speaking rate](/docs/text-to-speech?topic=text-to-speech-synthesis-params#params-rate-percentage)
+    -   [Modifying the speaking pitch](/docs/text-to-speech?topic=text-to-speech-synthesis-params#params-pitch-percentage)
+-   The service supports additional synthesis features for expressive neural voices. For more information, see
+    -   [Using speaking styles](/docs/text-to-speech?topic=text-to-speech-synthesis-expressive#syntheses-expressive-styles)
+    -   [Emphasizing interjections](/docs/text-to-speech?topic=text-to-speech-synthesis-expressive#syntheses-expressive-interjections)
+    -   [Emphasizing words](/docs/text-to-speech?topic=text-to-speech-synthesis-expressive#emphasizing-words)
+-   The service supports a synthesis feature that lets you control how alphanumeric strings are spelled out for German voices. For more information, see [Specifying how strings are spelled out](/docs/text-to-speech?topic=text-to-speech-synthesis-params#params-spell-out-mode).
+-   The service supports the use of the SSML `<mark>` element with the WebSocket interface to obtain timing information for words of the resulting audio. For more information, see [Specifying an SSML mark](/docs/text-to-speech?topic=text-to-speech-timing#timing-mark).
 -   The service's customization interface supports the use of the SSML `<phoneme>` element to specify the phonetic spelling that it uses to pronounce a word. The phonetic spelling represents the sounds of a word, how those sounds are divided into syllables, and which syllables receive stress.
     -   For information about the customization interface, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
-    -   For information about the valid symbols that you can use in an {{site.data.keyword.IBM_notm}} SPR or IPA specification for any supported language, see [Understanding phonetic symbols](/docs/text-to-speech?topic=text-to-speech-symbols).
+    -   For information about the valid symbols that you can use in an IPA or {{site.data.keyword.IBM_notm}} SPR specification for any supported language, see [Understanding phonetic symbols](/docs/text-to-speech?topic=text-to-speech-symbols).
 
 ## SSML validation
 {: #errors}
