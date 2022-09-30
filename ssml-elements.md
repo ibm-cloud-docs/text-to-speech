@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-09-20"
+lastupdated: "2022-09-29"
 
 subcollection: text-to-speech
 
@@ -82,6 +82,8 @@ The `<desc>` element can occur only within an `<audio>` element. Because the `<a
 ## The `<emphasis>` element
 {: #emphasis_element}
 
+![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
+
 The `<emphasis>` element is supported for use only with the expressive neural voices.
 {: note}
 
@@ -103,6 +105,8 @@ For more information, see [Emphasizing words](/docs/text-to-speech?topic=text-to
 
 ## The `<express-as>` element
 {: #express-as_element}
+
+![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
 
 The `<express-as>` element is an SSML extension specific to the {{site.data.keyword.texttospeechshort}} service. It is supported for use only with the expressive neural voices.
 {: note}
@@ -215,7 +219,7 @@ The SSML specification also offers four attributes that the service does not sup
 -   The `duration` attribute
 -   The `volume` attribute
 
-The service also supports query parameters that let you adjust the rate and pitch for all text of a speech synthesis request. For more information about the parameters and their interaction with the `pitch` and `rate` attributes of the `<prosody>` element, see
+![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only** The service also supports query parameters that let you adjust the rate and pitch for all text of a speech synthesis request. For more information about the parameters and their interaction with the `pitch` and `rate` attributes of the `<prosody>` element, see
 
 -   [Modifying the speaking rate](/docs/text-to-speech?topic=text-to-speech-synthesis-params#params-rate-percentage)
 -   [Modifying the speaking pitch](/docs/text-to-speech?topic=text-to-speech-synthesis-params#params-pitch-percentage)
@@ -315,7 +319,9 @@ The service supports the `<say-as>` element with the following languages:
 -   For most other languages, the service supports only the `digits` and `letters` attributes of the element.
 -   For Japanese, the service supports only the `digits` attribute.
 
-The service's default pronunciation of alphabetic, numeric, and alphanumeric strings varies by language, with each language having its own rules. You can use the `<say-as>` element to control how strings are pronounced, including whether they are to be spelled out as individual characters with the `letters` and `digits` elements. For German, you can also control the pace at which the service pronounces the characters. For more information, see [Specifying how strings are spelled out](/docs/text-to-speech?topic=text-to-speech-synthesis-params#params-spell-out-mode).
+The service's default pronunciation of alphabetic, numeric, and alphanumeric strings varies by language, with each language having its own rules. You can use the `<say-as>` element to control how strings are pronounced, including whether they are to be spelled out as individual characters with the `letters` and `digits` elements.
+
+![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only** For German, you can also control the pace at which the service pronounces the characters. For more information, see [Specifying how strings are spelled out](/docs/text-to-speech?topic=text-to-speech-synthesis-params#params-spell-out-mode).
 
 ### The `interpret-as` attribute
 {: #say-as-interpret-as}
@@ -374,6 +380,8 @@ The `digits` value speaks the digits in the number within the element. (The valu
 
 #### `interjection`
 {: #say-as-interjection}
+
+![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
 
 The `interjection` attribute is an SSML extension specific to the {{site.data.keyword.texttospeechshort}} service. It is supported for use only with the expressive neural voices.
 {: note}
