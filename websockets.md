@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-09-09"
+lastupdated: "2022-10-07"
 
 subcollection: text-to-speech
 
@@ -64,8 +64,8 @@ A WebSocket client calls the `/v1/synthesize` method with the following query pa
 `access_token` (*required* string)
 :   Pass a valid access token to authenticate with the service. You must use the access token before it expires.
 
-    -   ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** Pass an Identity and Access Management (IAM) access token to authenticate with the service. You pass an IAM access token instead of passing an API key with the call. For more information, see [Authenticating to {{site.data.keyword.cloud_notm}}](/docs/text-to-speech?topic=text-to-speech-data-security#data-security-authentication-cloud).
-    -   ![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}} only.** Pass an access token as you would with the `Authorization` header of an HTTP request. For more information, see [Authenticating to {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-data-security#data-security-authentication-icpd).
+    -   ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** Pass an Identity and Access Management (IAM) access token to authenticate with the service. You pass an IAM access token instead of passing an API key with the call. For more information, see [Authenticating to {{site.data.keyword.cloud_notm}}](/docs/watson?topic=watson-iam#gs-credential-cloud).
+    -   ![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}} only.** Pass an access token as you would with the `Authorization` header of an HTTP request. For more information, see [Authenticating to {{site.data.keyword.icp4dfull_notm}}](/docs/watson?topic=watson-iam#gs-credential-cpd).
 
 `voice` (*optional* string)
 :   Specifies the voice in which the text is to be spoken in the audio. Use the `/v1/voices` method to get the current list of supported voices. Omit the parameter to use the default voice. For more information, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices) and [Using the default voice](/docs/text-to-speech?topic=text-to-speech-voices-use#specify-voice-default).
@@ -86,7 +86,7 @@ A WebSocket client calls the `/v1/synthesize` method with the following query pa
 :   Associates a customer ID with data that is passed over the connection. The parameter accepts the argument `customer_id={id}`, where `id` is a random or generic string that is to be associated with the data. You must URL-encode the argument to the parameter, for example, `customer_id%3dmy_customer_ID`. By default, no customer ID is associated with the data. For more information, see [Information security](/docs/text-to-speech?topic=text-to-speech-information-security).
 
 `x-watson-learning-opt-out` (*optional* boolean)
-:   ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** Indicates whether the service logs requests and results that are sent over the connection. To prevent IBM from accessing your data for general service improvements, specify `true` for the parameter. Opting out directs IBM to write to disk *no* user data (text or audio) for your request. For more information, see [Request logging](/docs/text-to-speech?topic=text-to-speech-data-security#data-security-request-logging).
+:   ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** Indicates whether the service logs requests and results that are sent over the connection. To prevent IBM from accessing your data for general service improvements, specify `true` for the parameter. Opting out directs IBM to write to disk *no* user data (text or audio) for your request. You can also opt out at the account level. For more information, see [Request logging](/docs/text-to-speech?topic=text-to-speech-data-security#data-security-request-logging).
 
 The following snippet of JavaScript code opens a connection with the service. The call to the `/v1/synthesize` method passes the `voice` and `access_token` query parameters, the former to direct the service to use the US English Allison voice. Once the connection is established, the event listeners (`onOpen()`, `onClose()`, and so on) are defined to respond to events from the service.
 

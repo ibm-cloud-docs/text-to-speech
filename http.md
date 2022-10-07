@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-09-09"
+lastupdated: "2022-10-03"
 
 subcollection: text-to-speech
 
@@ -57,7 +57,7 @@ The two versions of the `/v1/synthesize` method have the following parameters in
 :   Associates a customer ID with data that is passed with a request. For more information, see [Information security](/docs/text-to-speech?topic=text-to-speech-information-security).
 
 `X-Watson-Learning-Opt-Out` (request header, *optional* boolean)
-:   ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** Indicates whether the service logs request and response data to improve the service for future users. To prevent IBM from accessing your data for general service improvements, specify `true` for the parameter. Opting out directs IBM to write to disk *no* user data (text or audio) for your request. For more information, see [Request logging](/docs/text-to-speech?topic=text-to-speech-data-security#data-security-request-logging).
+:   ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** Indicates whether the service logs request and response data to improve the service for future users. To prevent IBM from accessing your data for general service improvements, specify `true` for the parameter. Opting out directs IBM to write to disk *no* user data (text or audio) for your request. You can also opt out at the account level. For more information, see [Request logging](/docs/text-to-speech?topic=text-to-speech-data-security#data-security-request-logging).
 
 If you specify an invalid query parameter or JSON field as part of the input to the `/v1/synthesize` method, the service returns a `Warnings` response header that describes and lists each invalid argument. The request succeeds despite the warnings.
 
@@ -151,7 +151,7 @@ Because you can submit input text that includes XML-based SSML annotations, the 
 | `/`  \n (forward slash) | None | `&#47;` |
 {: caption="Table 1. Escaping XML control characters"}
 
-For more information about how the service validates input text, see [SSML validation](/docs/text-to-speech?topic=text-to-speech-ssml#errors).
+For more information about how the service validates input text, see [SSML validation](/docs/text-to-speech?topic=text-to-speech-ssml#ssml-errors).
 
 ## Examples of input text
 {: #httpExamples}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-11-08"
+  years: 2021, 2022
+lastupdated: "2022-10-03"
 
 subcollection: text-to-speech
 
@@ -74,7 +74,7 @@ The service supports the following symbols for Canadian French.
 ## Liaison
 {: #caLiaison}
 
-In Canadian French, the `_` (underscore) can be used following a word-final consonant (but within the double-quotes that enclose the SPR) to indicate that it is a liaison consonant. A liaison consonant is pronounced only if the following word begins with a vowel.
+In Canadian French, the `_` (underscore) can be used immediately following the final consonant of a word (but within the double-quotes that enclose the SPR) to indicate that it is a liaison consonant. A liaison consonant is pronounced only if the word that follows begins with a vowel.
 
 | SPR symbol | IPA symbol | IPA Unicode |
 |:----------:|:----------:|:-----------:|

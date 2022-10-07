@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-09-23"
+lastupdated: "2022-10-07"
 
 subcollection: text-to-speech
 
@@ -24,7 +24,7 @@ The service can be used in applications such as voice-automated chatbots, as wel
 
 -   ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}** for managed instances of {{site.data.keyword.texttospeechshort}} that are hosted on {{site.data.keyword.cloud_notm}} or for instances that are hosted on [IBM Cloud Pak for Data as a Service](https://dataplatform.cloud.ibm.com/docs/content/wsj/landings/wtts.html){: external}.
     -   For information about all service updates, see the [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes).
-    -   For information about the latest service update, see [23 September 2022](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-23september2022) in the release notes.
+    -   For information about the latest service update, see [7 October 2022](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-7october2022) in the release notes.
 -   ![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}** for installed or on-premises instances of {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}. For links to information about installing and managing {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}, see [Installing {{site.data.keyword.ibmwatson_notm}} {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-speech-install-data).
     -   For information about all service updates, see the [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes-data).
     -   For information about the latest service update, see [3 August 2022 (Version 4.5.1)](/docs/text-to-speech?topic=text-to-speech-release-notes-data#text-to-speech-data-3august2022) in the release notes.
