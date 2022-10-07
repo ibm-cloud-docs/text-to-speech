@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2015, 2022
-lastupdated: "2022-09-23"
+lastupdated: "2022-10-07"
 
 keywords: text to speech release notes,text to speech for IBM cloud release notes
 
@@ -25,6 +25,16 @@ For information about known limitations of the service, see [Known limitations](
 
 For information about releases and updates of the service for {{site.data.keyword.icp4dfull_notm}}, see [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes-data).
 {: note}
+
+## 7 October 2022
+{: #text-to-speech-7october2022}
+{: release-note}
+
+The service now enforces stricter SSML validation
+:   The service now enforces stricter validation of input text that includes Speech Synthesis Markup Language (SSML) elements. Required elements of attributes must be specified with valid values. Otherwise, the request fails with a 400 error code. For more information about SSML validation and the requirements that marked-up text must meet, see [SSML validation](/docs/text-to-speech?topic=text-to-speech-ssml#ssml-errors).
+
+Defect fix: The gender listed for the `en-US_MichaelExpressive` voice is now correct
+:   **Defect fix:** When you list information about the available voices, the `gender` of the `en-US_MichaelExpressive` voice is now `male`. Previously, the voice's gender was mistakenly described as `female`. For more information, see [Listing information about voices](/docs/text-to-speech?topic=text-to-speech-voices-list).
 
 ## 23 September 2022
 {: #text-to-speech-23september2022}
@@ -189,7 +199,7 @@ Change to word timing response for WebSocket interface
 Defect fixes for SSML documentation
 :   **Defect fixes:** The SSML documentation was updated to correct the following errors:
     -   The examples of the `<break>` element are now correct. The element is unary, as now shown in the examples. The previous examples included open and close tags with embedded text. The embedded text was not spoken by the service. For more information, see [The `<break>` element](/docs/text-to-speech?topic=text-to-speech-elements#break_element).
-    -   The service supports Speech Synthesis Markup Language (SSML) version 1.1. All references and examples now use the correct version. The documentation previously referred to version 1.0.
+    -   The service supports SSML version 1.1. All references and examples now use the correct version. The documentation previously referred to version 1.0.
 
 ## 3 December 2021
 {: #text-to-speech-3december2021}
@@ -408,7 +418,7 @@ Deprecated features
     -   *Voice transformation SSML.* This was an IBM extension to SSML that was supported only for the `en-US_AllisonVoice`, `en-US_LisaVoice`, and `en-US_MichaelVoice` voices.
     -   *The `volume` attribute of the `<prosody>` element.* This attribute was available for all standard voices.
 
-    Including these SSML elements with a synthesis request for a neural voice generates an HTTP 400 response code because the request fails SSML validation. For more information about SSML validation, see [SSML validation](/docs/text-to-speech?topic=text-to-speech-ssml#errors).
+    Including these SSML elements with a synthesis request for a neural voice generates an HTTP 400 response code because the request fails SSML validation. For more information about SSML validation, see [SSML validation](/docs/text-to-speech?topic=text-to-speech-ssml#ssml-errors).
 
 New support for Cross-Origin Resource Sharing
 :   Cross-Origin Resource Sharing (CORS) support is now available for all voices from the Google Chrome™ and Apple® Safari browsers. It is *not* available from the Mozilla Firefox™ browser for voices in the following languages: Arabic, Australian English, Chinese, Netherlands Dutch, and Korean. For more information, see [Leveraging CORS support](/docs/text-to-speech?topic=text-to-speech-service-features#features-cors).
@@ -784,7 +794,7 @@ Word timings now available with WebSocket interface
 :   The service can now return word timing information for all strings of the input text that you pass to the WebSocket interface. To receive the start and end time of every string in the input, specify an array that includes the string `words` for the optional `timings` parameter of the JSON object that you pass to the service. The feature is not currently available for Japanese input text. For more information, see [Generating word timings](/docs/text-to-speech?topic=text-to-speech-timing).
 
 New support for SSML validation
-:   The service now validates all SSML elements that you submit in any context. If it finds an invalid tag, the service reports an HTTP 400 response code with a descriptive message, and the method fails. In previous releases, the service handled errors inconsistently; specifying an invalid word pronunciation, for example, could lead to unpredictable or inconsistent behavior. For more information, see [SSML validation](/docs/text-to-speech?topic=text-to-speech-ssml#errors).
+:   The service now validates all SSML elements that you submit in any context. If it finds an invalid tag, the service reports an HTTP 400 response code with a descriptive message, and the method fails. In previous releases, the service handled errors inconsistently; specifying an invalid word pronunciation, for example, could lead to unpredictable or inconsistent behavior. For more information, see [SSML validation](/docs/text-to-speech?topic=text-to-speech-ssml#ssml-errors).
 
 IBM SPR format now specified with `ibm` instead of `spr`
 :   The use of `spr` is deprecated as an argument to the `format` option of the `GET /v1/pronunciation` method and for use with the `alphabet` attribute of an SSML `<phoneme>` element. To use {{site.data.keyword.IBM_notm}} SPR notation, use the `ibm` argument instead of `spr` in all cases.

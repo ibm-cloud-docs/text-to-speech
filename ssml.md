@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-09-30"
+lastupdated: "2022-10-06"
 
 subcollection: text-to-speech
 
@@ -15,10 +15,10 @@ content-type: troubleshoot
 # Understanding SSML
 {: #ssml}
 
-The Speech Synthesis Markup Language (SSML) is an XML-based markup language that provides annotations of text for speech-synthesis applications. It is a recommendation of the W3C Voice-Browser Working Group that has been adopted as the standard markup language for speech synthesis by the VoiceXML 2.0 specification. SSML provides developers of speech applications with a standard way to control aspects of the synthesis process by enabling them to specify pronunciation, volume, pitch, speed, and other attributes via markup.
+The Speech Synthesis Markup Language (SSML) is an XML-based markup language that provides annotations of text for speech-synthesis applications. It is a recommendation of the W3C Voice-Browser Working Group that has been adopted as the standard markup language for speech synthesis by the VoiceXML 2.0 specification. SSML provides developers of speech applications with a standard way to control aspects of the synthesis process by enabling them to specify pronunciation, volume, pitch, speed, and other attributes via markup. You can use SSML to control the synthesis of your text with all supported languages.
 {: shortdesc}
 
-With the {{site.data.keyword.texttospeechfull}} service, you can use SSML to control the synthesis of your text with all supported languages. This includes using the SSML `<phoneme>` element to define a word's pronunciation in either the International Phonetic Alphabet (IPA) or the {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR). The service also relies on the SSML `<phoneme>` element to define the phonetic translation for a word with its customization interface; for more information, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
+The {{site.data.keyword.texttospeechfull}} service bases its support on SSML version 1.1, which was recommended by W3C on 7 September 2010. For more information about the W3C SSML recommendation, see [W3C Speech Synthesis Markup Language (SSML) Version 1.1](http://www.w3.org/TR/speech-synthesis/){: external}.
 
 ## Introduction to SSML
 {: #introduction-SSML}
@@ -38,7 +38,7 @@ An SSML element is anything contained within, and including, an opening tag and 
 ```
 {: codeblock}
 
-A full legal SSML document consists of an XML prolog, which contains information such as encoding and the schema against which to validate the SSML document, followed by the root element, `<speak>`. (For more information about the structure of the prolog, see [tizag.com/xmlTutorial/xmlprolog.php](http://www.tizag.com/xmlTutorial/xmlprolog.php){: external}.) Within the span of the `<speak>` element, you specify the text that is to be synthesized, augmented with additional elements.
+A full legal SSML document consists of an XML prolog, which contains information such as encoding and the schema against which to validate the SSML document, followed by the root element, `<speak>`. Within the span of the `<speak>` element, you specify the text that is to be synthesized, augmented with additional elements.
 
 ```xml
 <!-- The XML Prolog -->
@@ -51,7 +51,7 @@ A full legal SSML document consists of an XML prolog, which contains information
 ```
 {: codeblock}
 
-The service supports SSML fragments, which are SSML elements that do not include the full XML header. The `<?xml>` and `<speak>` elements are always optional for SSML that you pass to the service.
+The XML prolog is not needed for text that you pass to the service. The service supports SSML fragments, which are SSML elements that do not include the full XML header and do not need to include their parent elements. For example, the `<?xml>` and `<speak>` elements are always optional for SSML that you send for synthesis.
 {: note}
 
 ## SSML support
@@ -59,9 +59,7 @@ The service supports SSML fragments, which are SSML elements that do not include
 {: troubleshoot}
 {: support}
 
-The {{site.data.keyword.texttospeechshort}} service bases its support on SSML version 1.1, which was recommended by W3C on 7 September 2010. For more information about the W3C SSML recommendation, see [W3C Speech Synthesis Markup Language (SSML) Version 1.1](http://www.w3.org/TR/speech-synthesis/){: external}.
-
-For more information about using SSML with the service, see the following:
+For more information about using SSML and related features with the service, see the following:
 
 -   The service implements most of the W3C specification and supports SSML fragments.
     -   For complete information about the service's level of support for all SSML elements, see [SSML elements](/docs/text-to-speech?topic=text-to-speech-elements).
@@ -74,33 +72,60 @@ For more information about using SSML with the service, see the following:
     -   [Emphasizing interjections](/docs/text-to-speech?topic=text-to-speech-synthesis-expressive#syntheses-expressive-interjections)
     -   [Emphasizing words](/docs/text-to-speech?topic=text-to-speech-synthesis-expressive#emphasizing-words)
 -   The service supports a synthesis feature that lets you control how alphanumeric strings are spelled out for German voices. For more information, see [Specifying how strings are spelled out](/docs/text-to-speech?topic=text-to-speech-synthesis-params#params-spell-out-mode).
--   The service supports the use of the SSML `<mark>` element with the WebSocket interface to obtain timing information for words of the resulting audio. For more information, see [Specifying an SSML mark](/docs/text-to-speech?topic=text-to-speech-timing#timing-mark).
+-   The service supports the use of the SSML `<mark>` element with the WebSocket interface to obtain timing information for words of the resulting audio. The WebSocket interface also allows you to request information for all strings of the input text. For more information, see
+    -   [Specifying an SSML mark](/docs/text-to-speech?topic=text-to-speech-timing#timing-mark)
+    -   [Requesting word timings for all words](/docs/text-to-speech?topic=text-to-speech-timing#timing-request)
 -   The service's customization interface supports the use of the SSML `<phoneme>` element to specify the phonetic spelling that it uses to pronounce a word. The phonetic spelling represents the sounds of a word, how those sounds are divided into syllables, and which syllables receive stress.
     -   For information about the customization interface, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
-    -   For information about the valid symbols that you can use in an IPA or {{site.data.keyword.IBM_notm}} SPR specification for any supported language, see [Understanding phonetic symbols](/docs/text-to-speech?topic=text-to-speech-symbols).
+    -   For information about the valid symbols that you can use in an International Phonetic Alphabet (IPA) or the {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR) specification for any supported language, see [Understanding phonetic symbols](/docs/text-to-speech?topic=text-to-speech-symbols).
 
 ## SSML validation
-{: #errors}
+{: #ssml-errors}
 {: troubleshoot}
 {: support}
 
 The service validates all SSML elements that you submit in any content, either as input text for synthesis or as the definition of a word's translation for customization. The service cannot determine ahead of time whether text submitted for synthesis contains SSML elements. Therefore, it performs the same validation for all input text, regardless of whether it contains SSML.
 
--   *All SSML input must be correct and well formed.* The service silently ignores unsupported SSML elements. The service synthesizes the text contained inside an unsupported element or an element that uses unsupported features; only the element is ignored.
--   *The service reports an HTTP 400 error code for invalid elements or attributes.* The error response includes a descriptive message, and the request fails.
+### Validation of elements and attributes
+{: #ssml-errors-rules}
 
-Specifically, the service returns an error in the following cases:
+The service performs the following validation of SSML elements and attributes:
 
--   *Invalid element.* For example, you specify a tag incorrectly, omit a required attribute, or include an opening tag but no matching closing tag.
--   *Invalid symbol.* The `ph` attribute of a `<phoneme>` element includes an unsupported IPA or SPR symbol for the specified language.
--   *No vowels.* The `ph` attribute of a `<phoneme>` element specifies a word pronunciation that includes no vowels.
--   *French liaison in invalid location.* In the `ph` attribute of a `<phoneme>` element, the liaison character does not follow a consonant or occurs in the middle of the word pronunciation.
--   *Japanese `:` symbol does not precede a vowel.* In the `ph` attribute of a `<phoneme>` element, a `:` character does not occur before a vowel (possibly with other symbols, such as syllable boundary, in between).
--   *Invalid syllable stress.* The `ph` attribute of a `<phoneme>` element for an {{site.data.keyword.IBM_notm}} SPR includes invalid syllable stress. For French, a syllable stress symbol does not immediately precede a vowel. For Spanish or Italian, a secondary (`2`) or no stress (`0`) symbol is used. For Japanese, a secondary stress symbol (`2`) is used.
--   *Unescaped XML control characters.* The input text itself contains a `"`, `'`, `&`, `<`, `>`, or `/` character instead of its equivalent escape string or character encoding. For more information, see [Escaping XML control characters](/docs/text-to-speech?topic=text-to-speech-usingHTTP#escape).
--   *Invalid use of the SSML `<prosody>` element.* You cannot use the `contour`, `duration`, and `range` attributes of the `<prosody>` element with any voice.
+-   *All SSML input must be correct and well formed.*
+-   *The service silently ignores unsupported SSML elements.* The service synthesizes the text that is contained within the tags of an unsupported element; only the element is ignored.
+-   *The service returns an HTTP 400 error code for invalid SSML elements or attributes.* When specifying SSML elements that require an attribute:
+    -   You must specify the required attribute.
+    -   You must specify a valid value for the required attribute.
+    -   If you include additional invalid attributes or values, they are ignored.
 
-The service also returns an error for invalid use of deprecated features:
+    If the request fails, the error response includes a descriptive message. For example, suppose you specify the following input text, which includes the `<say-as>` element:
 
--   *Invalid use of the SSML `volume` attribute with the `<prosody>` element.* You cannot use the `volume` attribute of the `<prosody>` element with neural voices. The attribute was valid only with the deprecated standard voices.
--   *Invalid use of the SSML `<express-as>` or `<voice-transformation>` element.* You cannot use these SSML extensions with neural voices. The elements were valid only with deprecated standard US English voices.
+    ```text
+    "text": "The price is <say-as interpret-as=\"currency\">$2,500.00</say-as>."
+    ```
+    {: codeblock}
+
+    In this example, the `interpret-as` attribute is required and is specified, but its value is invalid. A valid value for the attribute is `vxml:currency`, not `currency`. The error response includes the following message:
+
+    ```text
+    The connection to the Watson Text to Speech service closed with the following error: Tag <say-as> has invalid attribute interpret-as=currency
+    ```
+    {: codeblock}
+
+### Summary of SSML errors
+{: #ssml-errors-summary}
+
+Table 1 describes many common SSML validation errors. In each case, the request fails and the service returns a 400 error code.
+
+| Validation error | Description of problem |
+|------------------|------------------------|
+| Invalid SSML element | For example, you specify a tag incorrectly, omit a required attribute, or include an opening tag but no matching closing tag. |
+| Unescaped XML control characters | The input text itself contains a `"`, `'`, `&`, `<`, `>`, or `/` character instead of its equivalent escape string or character encoding. For more information, see [Escaping XML control characters](/docs/text-to-speech?topic=text-to-speech-usingHTTP#escape). |
+| Invalid syllable stress | The `ph` attribute of a `<phoneme>` element for {{site.data.keyword.IBM_notm}} SPR includes invalid syllable stress. For more information about indicating syllables and syllable stress, see [Specifying syllables](/docs/text-to-speech?topic=text-to-speech-symbols#syllables). |
+| Invalid phonetic symbol | The `ph` attribute of a `<phoneme>` element includes an unsupported IPA or SPR symbol for the specified language. |
+| No vowels | The `ph` attribute of a `<phoneme>` element specifies a word pronunciation that includes no vowels. |
+| French liaison in invalid location | In the `ph` attribute of a `<phoneme>` element, the liaison character does not follow a consonant or it occurs in the middle of a word's pronunciation. |
+| Japanese `:` symbol does not precede a vowel | In the `ph` attribute of a `<phoneme>` element in Japanese, a `:` character does not occur before a vowel (possibly with other symbols, such as syllable boundary, in between). |
+| Invalid use of the SSML `<prosody>` element | You cannot use the `contour`, `duration`, `range`, and `volume` attributes of the `<prosody>` element with any voice. |
+| Invalid use of the SSML `<express-as>` element | You can use the `<express-as>` element only with expressive neural voices. |
+{: caption="Table 1. SSML validation errors"}

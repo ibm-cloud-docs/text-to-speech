@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-09-23"
+lastupdated: "2022-10-07"
 
 keywords: faqs,frequently asked questions,question,Text to Speech
 
@@ -28,9 +28,8 @@ FAQs for {{site.data.keyword.texttospeechfull}} include questions about speech s
 How you access your service credentials depends on whether you are using {{site.data.keyword.texttospeechshort}} with {{site.data.keyword.cloud}} or {{site.data.keyword.icp4dfull}}. For more information about obtaining your credentials for both versions, see [Before you begin](/docs/text-to-speech?topic=text-to-speech-gettingStarted#getting-started-before-you-begin) in the getting started tutorial.
 
 Once you have your service credentials, see the following topics for information about authenticating to the service:
-
--   [Authenticating to {{site.data.keyword.cloud_notm}}](/docs/text-to-speech?topic=text-to-speech-data-security#data-security-authentication-cloud)
--   [Authenticating to {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-data-security#data-security-authentication-icpd)
+-   [Authenticating to {{site.data.keyword.cloud_notm}}](/docs/watson?topic=watson-iam#gs-credential-cloud)
+-   [Authenticating to {{site.data.keyword.icp4dfull_notm}}](/docs/watson?topic=watson-iam#gs-credential-cpd)
 
 ## What languages does the service support?
 {: #faq-language-support}
@@ -38,7 +37,6 @@ Once you have your service credentials, see the following topics for information
 {: support}
 
 The {{site.data.keyword.texttospeechshort}} service supports male and female voices in various spoken languages:
-
 -   The service offers *expressive* voices for US English.
 -   The services offers *enhanced neural* voices for the following languages: English (United Kingdom and United States), French, German, Italian, Japanese, Portuguese (Brazilian), and Spanish (Castilian, Latin American, and North American).
 -   The service offers *neural* voices for the following languages: Arabic, Chinese (Mandarin), Czech, Dutch (Belgian and Netherlands), English (Australian), Korean, and Swedish.
