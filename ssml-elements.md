@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-09-29"
+lastupdated: "2022-10-10"
 
 subcollection: text-to-speech
 
@@ -321,7 +321,7 @@ The service supports the `<say-as>` element with the following languages:
 
 The service's default pronunciation of alphabetic, numeric, and alphanumeric strings varies by language, with each language having its own rules. You can use the `<say-as>` element to control how strings are pronounced, including whether they are to be spelled out as individual characters with the `letters` and `digits` elements.
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only** For German, you can also control the pace at which the service pronounces the characters. For more information, see [Specifying how strings are spelled out](/docs/text-to-speech?topic=text-to-speech-synthesis-params#params-spell-out-mode).
+For German, you can also control the pace at which the service pronounces the characters. For more information, see [Specifying how strings are spelled out](/docs/text-to-speech?topic=text-to-speech-synthesis-params#params-spell-out-mode).
 
 ### The `interpret-as` attribute
 {: #say-as-interpret-as}

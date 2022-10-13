@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-08-31"
+lastupdated: "2022-10-10"
 
 subcollection: text-to-speech
 
@@ -190,8 +190,6 @@ If you use the `letters` or `digits` attributes, all letters and numbers of the 
 ### Specifying the pace at which strings are spelled out
 {: #params-spell-out-mode-rate}
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
-
 The `spell_out_mode` parameter is beta functionality that is supported only for German voices.
 {: beta}
 
@@ -232,7 +230,6 @@ curl -X POST -u "apikey:{apikey}" \
 ```
 {: pre}
 
-<!--
 ![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
 
 ```sh
@@ -245,7 +242,6 @@ curl -X POST \
 "{url}/v1/synthesize?voice=de-DE_ErikaV3Voice&spell_out_mode=singles"
 ```
 {: pre}
--->
 
 The following WebSocket example shows inclusion of the parameter with the same value on the request to establish a connection:
 

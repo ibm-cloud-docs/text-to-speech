@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-09-07"
+lastupdated: "2022-10-10"
 
 subcollection: text-to-speech
 
@@ -92,8 +92,6 @@ The `pitch_percentage` parameter is beta functionality.
 
 ### Spelling out strings
 {: #features-spell-out}
-
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
 
 To indicate how individual characters of a string (alphabetic, numeric, or alphanumeric) are to be spelled out, you can include the `spell_out_mode` query parameter with a request. By default, the service spells out individual characters at the same rate at which it synthesizes text for a language. You can use the parameter to direct the service to spell out individual characters more slowly, in groups of one, two, or three characters. Use the parameter with the SSML `<say-as>` element to control how the characters of a string are synthesized. For more information, see [Specifying how strings are spelled out](/docs/text-to-speech?topic=text-to-speech-synthesis-params#params-spell-out-mode).
 
