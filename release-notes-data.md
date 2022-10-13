@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-08-12"
+lastupdated: "2022-10-12"
 
 keywords: text to speech release notes,text to speech for IBM cloud pak for data release notes
 
@@ -25,11 +25,75 @@ For information about known limitations of the service, see [Known limitations](
 For information about releases and updates of the service for {{site.data.keyword.cloud_notm}}, see [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes).
 {: note}
 
+## 13 October 2022 (Version 4.5.3)
+{: #text-to-speech-data-13october2022}
+
+Version 4.5.3 is now available
+:   {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} version 4.5.3 is now available. This version supports {{site.data.keyword.icp4dfull_notm}} version 4.5.x and Red Hat OpenShift versions 4.6, 4.8, and 4.10. For more information, see [{{site.data.keyword.watson}} Speech services on {{site.data.keyword.icp4dfull_notm}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.5.x?topic=services-watson-speech){: external}.
+
+Audit events are available for the Speech services
+:   The {{site.data.keyword.icp4dfull_notm}} Audit Logging Service generates and forwards audit events for both the {{site.data.keyword.speechtotextshort}} and {{site.data.keyword.texttospeechshort}} services. The audit events match those that are available for [Activity Tracker](/docs/text-to-speech?topic=text-to-speech-at-events) with the public service. For more information, see [Audit events](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.5.x?topic=2-audit-events){: external}.
+
+You cannot uninstall individual Speech service components
+:   The documentation now notes that you cannot uninstall individual service components (microservices) once they are installed. To remove any of the following components, you must uninstall the Watson Speech services in their entirety and reinstall only the components that you need: {{site.data.keyword.speechtotextshort}} runtime, {{site.data.keyword.speechtotextshort}} asynchronous HTTP, {{site.data.keyword.speechtotextshort}} customization, {{site.data.keyword.texttospeechshort}} runtime, and {{site.data.keyword.texttospeechshort}} customization. For more information about installing the Speech services, see [{{site.data.keyword.watson}} Speech services on {{site.data.keyword.icp4dfull_notm}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.5.x?topic=services-watson-speech){: external}.
+
+New beta `spell_out_mode` parameter for German voices
+:   To indicate how individual characters of a string are to be spelled out, you can now include the beta `spell_out_mode` query parameter with a synthesis request for a German voice. By default, the service spells out individual characters at the same rate at which it synthesizes text for a language. You can use the parameter to direct the service to spell out individual characters more slowly, in groups of one, two, or three characters. Use the parameter with the SSML `<say-as>` element to control how the characters of a string are synthesized. For more information, see [Specifying how strings are spelled out](/docs/text-to-speech?topic=text-to-speech-synthesis-params#params-spell-out-mode).
+
+Known limitation with using the Ogg audio format with the Safari browser
+:   By default, the service returns audio in the Ogg audio format with the Opus codec (`audio/ogg;codecs=opus`). However, the Ogg audio format is not supported with the Safari browser. If you are using the the {{site.data.keyword.texttospeechshort}} service with the Safari browser, you must specify a different format in which you want the service to return the audio.
+    -   For more information about the available formats, see [Supported audio formats](/docs/text-to-speech?topic=text-to-speech-audio-formats#formats-supported).
+    -   For more information about specifying a format, see [Specifying an audio format](/docs/text-to-speech?topic=text-to-speech-audio-formats#formats-specify).
+
+Troubleshooting upgrade from version 4.0.x to version 4.5.x
+:   When you upgrade the Speech services from version 4.0.x to version 4.5.x, you might encounter an issue where the PostgreSQL pods become stuck in the `Terminating` state. If this problem occurs during your upgrade, perform the following steps to resolve the problem. The information and steps are also documented in *Upgrading Watson Speech services from Version 4.0 to Version 4.5* in the *Upgrading* topic of [{{site.data.keyword.watson}} Speech services on {{site.data.keyword.icp4dfull_notm}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.5.x?topic=services-watson-speech){: external}.
+
+    1.  Use the following command to identify pods that remain in the `Terminating` state:
+
+    ```sh
+    oc get pods -n ${PROJECT_CPD_INSTANCE} -o wide | awk {'print $1'}
+    ```
+    {: codeblock}
+
+    1.  Use the following command to set the environment variable `pods` to include the list of pods that remain in the `Terminating` state:
+
+    ```sh
+    pods=$(oc get pods -n ${PROJECT_CPD_INSTANCE} -o wide | grep Terminating | awk {'print $1'})
+    ```
+    {: codeblock}
+
+    1.  Use the following command to delete the stuck pods so that the upgrade process can continue:
+
+    ```sh
+    oc delete pod $pods -n ${PROJECT_CPD_INSTANCE} --force=true --grace-period=0
+    ```
+    {: codeblock}
+
+Documentation updates for the SSML `<prosody>` element
+:   The documentation for the SSML `<prosody>` element and its `pitch` and `rate` parameters has been improved and clarified. It also now includes a description of the differences between the service and the latest version of the SSML specification. For more information, see [The `<prosody>` element](/docs/text-to-speech?topic=text-to-speech-elements#prosody_element).
+
+Security vulnerabilities addressed
+:   The following security vulnerabilities have been fixed:
+    -   [Security Bulletin: IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data is vulnerable to a buffer over-read flaw in Linux Kernel (CVE-2020-28915)](https://www.ibm.com/support/pages/node/6829133){: external}
+    -   [Security Bulletin: IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data is vulnerable to a security bypass in GNU Gzip (CVE-2022-1271)](https://www.ibm.com/support/pages/node/6829139){: external}
+    -   [Security Bulletin: IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data is vulnerable to elevated privileges in Apple macOS Monterey and macOS Big Sur (CVE-2022-26691)](https://www.ibm.com/support/pages/node/6829141){: external}
+    -   [Security Bulletin: IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data is vulnerable to elevated privileges in Linux Kernel (CVE-2022-27666)](https://www.ibm.com/support/pages/node/6829143){: external}
+    -   [Security Bulletin: IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data is vulnerable to cross-site scripting in Apache Tomcat (CVE-2022-34305)](https://www.ibm.com/support/pages/node/6829145){: external}
+    -   [Security Bulletin: IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data is vulnerable to a security restrictions bypass in GNU C Library (CVE-2019-19126)](https://www.ibm.com/support/pages/node/6829149){: external}
+    -   [Security Bulletin: IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data is vulnerable to a denial of service in GNU C Library ( CVE-2020-10029)](https://www.ibm.com/support/pages/node/6829151){: external}
+    -   [Security Bulletin: IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data is vulnerable to a denial of service in GNU glibc (CVE-2020-1751)](https://www.ibm.com/support/pages/node/6829155){: external}
+    -   [Security Bulletin: IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data is vulnerable to a denial of service in GNU glibc (CVE-2020-1752)](https://www.ibm.com/support/pages/node/6829157){: external}
+    -   [Security Bulletin: IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data is vulnerable to information disclosure or denial of service in GNU glibc (CVE-2021-35942)](https://www.ibm.com/support/pages/node/6829159){: external}
+    -   [Security Bulletin: IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data is vulnerable to buffer overflow in OpenSSL (CVE-2021-3711)](https://www.ibm.com/support/pages/node/6829161){: external}
+    -   [Security Bulletin: IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data is vulnerable to information disclosure or denial of service in OpenSSL (CVE-2021-3712)](https://www.ibm.com/support/pages/node/6829165){: external}
+    -   [Security Bulletin: IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data is vulnerable to weakened security in OpenSSL (CVE-2021-4160)](https://www.ibm.com/support/pages/node/6829167){: external}
+    -   [Security Bulletin: IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data is vulnerable to a denial of service in OpenSSL (CVE-2022-0778)](https://www.ibm.com/support/pages/node/6829175){: external}
+
 ## 3 August 2022 (Version 4.5.1)
 {: #text-to-speech-data-3august2022}
 
 Version 4.5.1 is now available
-:   {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} version 4.5.1 is now available. This version supports {{site.data.keyword.icp4dfull_notm}} version 4.5.x and Red Hat OpenShift versions 4.6, 4.8, and 4.10.
+:   {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} version 4.5.1 is now available. This version supports {{site.data.keyword.icp4dfull_notm}} version 4.5.x and Red Hat OpenShift versions 4.6, 4.8, and 4.10. For more information, see [{{site.data.keyword.watson}} Speech services on {{site.data.keyword.icp4dfull_notm}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.5.x?topic=services-watson-speech){: external}.
 
 Support for FIPS-enabled clusters
 :   Both {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} and {{site.data.keyword.speechtotextshort}} for {{site.data.keyword.icp4dfull_notm}} now support running on Federal Information Processing Standard (FIPS)-enabled clusters. For more information, see [Services that support FIPS](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.5.x?topic=considerations-services-that-support-fips){: external}.
@@ -38,7 +102,7 @@ Defect fix: Fixed ephemeral storage calculations to prevent occasional pod evict
 :   **Defect fix:** A defect was fixed and calculation of ephemeral storage limits is now more precise for the {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} and {{site.data.keyword.speechtotextshort}} for {{site.data.keyword.icp4dfull_notm}} runtimes. These changes prevent occasional pod evictions when the services' runtimes are under heavy load.
 
 The service does not support multilingual speech synthesis
-:   The service does not support multilingual speech synthesis at this time. However, you can use customization to approximate the pronunciation of words from other languages. For more information, see [Multilingual speech synthesis](/docs/text-to-speech?topic=text-to-speech-voices#synthesis-multilingual).
+:   The service does not support multilingual speech synthesis at this time. However, you can use customization to approximate the pronunciation of words from other languages. For more information, see [Multilingual speech synthesis](/docs/text-to-speech?topic=text-to-speech-voices-use#synthesis-multilingual).
 
 Security vulnerabilities addressed
 :   The following security vulnerabilities have been fixed:
@@ -84,7 +148,7 @@ Security vulnerabilities addressed
 {: #text-to-speech-data-29june2022}
 
 Version 4.5.0 is now available
-:   {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} version 4.5.0 is now available. This version supports {{site.data.keyword.icp4dfull_notm}} version 4.5.x and Red Hat OpenShift versions 4.6, 4.8, and 4.10.
+:   {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} version 4.5.0 is now available. This version supports {{site.data.keyword.icp4dfull_notm}} version 4.5.x and Red Hat OpenShift versions 4.6, 4.8, and 4.10. For more information, see [{{site.data.keyword.watson}} Speech services on {{site.data.keyword.icp4dfull_notm}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.5.x?topic=services-watson-speech){: external}.
 
 Unified Speech services for {{site.data.keyword.icp4dfull_notm}} documentation
 :   The installation and administration documentation for both {{site.data.keyword.speechtotextshort}} and {{site.data.keyword.texttospeechshort}} is now combined in the {{site.data.keyword.icp4dfull_notm}} documentation. For more information about installing and managing the Speech services, see [{{site.data.keyword.watson}} Speech services on {{site.data.keyword.icp4dfull_notm}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.5.x?topic=services-watson-speech){: external}.
@@ -179,7 +243,7 @@ Version 4.0.7 is now available
 Custom resource property for specifying a default voice
 :   The default voice for speech synthesis and pronunciation requests is `en-US_MichaelV3Voice`. If you do not install the `en-US_MichaelV3Voice`, you must either
     -   Use the `voice` parameter to pass the voice that is to be used with each request.
-    -   Specify a new default voice for your installation of {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} by using the `defaultTTSVoice` property in the Speech services custom resource. For more information, see  [Installing {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.0?topic=speech-installing-watson-text){: external}.
+    -   Specify a new default voice for your installation of {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} by using the `defaultTTSVoice` property in the Speech services custom resource. For more information, see [Installing {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.0?topic=speech-installing-watson-text){: external} and [Using the default voice](/docs/text-to-speech?topic=text-to-speech-voices-use#specify-voice-default).
 
 Change to word timing response for WebSocket interface
 :   The response object that the service sends when you request word timings with the WebSocket interface has changed. The service now sends word timing results in a single array that includes a string followed by two floats:
@@ -238,7 +302,7 @@ All neural voices are now deprecated for {{site.data.keyword.icp4dfull_notm}}
     Existing users of these voices can continue to use them for now, but the voices will be removed entirely in a future release. These voices can no longer be installed by new users and have been removed from the installation documentation for {{site.data.keyword.icp4dfull_notm}}. The `voiceType` property has been removed from the Speech services custom resource.
 
     For more information, see
-    -   [Using languages and voices](/docs/text-to-speech?topic=text-to-speech-voices)
+    -   [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices)
     -   [Installing {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.0?topic=speech-installing-watson-text){: external}
 
 Updates to import/export scripts
@@ -326,7 +390,7 @@ New Belgian Dutch and Czech neural voices
 
     You can install the new voices along with all neural voices by setting the `voiceType` property of the custom resource to `neuralVoices`.
     -   For more information about using the custom resource to install voices, see [Installing {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.0?topic=speech-installing-watson-text){: external}.
-    -   For more information about all available languages and voices, see [Using languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
+    -   For more information about all available languages and voices, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
 
 Defect fixes for SSML documentation
 :   **Defect fixes:** The SSML documentation was updated to correct the following errors:
@@ -458,7 +522,7 @@ New support for neural voices
     -   *Korean:* `ko-KR_HyunjunVoice`, `ko-KR_SiWooVoice`, `ko-KR_YoungmiVoice`, and `ko-KR_YunaVoice`
     -   *Swedish:* `sv-SE_IngridVoice`
 
-    For more information about all available languages and voices, see [Using languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
+    For more information about all available languages and voices, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
 
 Installing voices
 :   You can install either the enhanced neural voices or the neural voices. You can install only one of the two types of voices. When you install the service, you use the `voiceType` property of the custom resource to indicate the voices that are to be installed:
@@ -477,7 +541,7 @@ Specifying a voice for speech synthesis
         -   *If you installed the enhanced neural voices,* the service uses the US English `en-US_MichaelV3Voice` by default. If that voice is not installed, you must specify a voice.
         -   *If you installed the neural voices,* the service always uses the Australian English `en-AU_MadisonVoice` by default.
 
-    For more information, see [Specifying a voice for speech synthesis](/docs/text-to-speech?topic=text-to-speech-voices#specify-voice).
+    For more information, see [Using a voice for speech synthesis](/docs/text-to-speech?topic=text-to-speech-voices-use).
 
 Specifying a language for a custom model
 :   You use the `POST /v1/customizations` method to create a custom model. The method includes a `language` parameter that you use to identify the language of the new custom model.
@@ -514,7 +578,7 @@ Version 4.0.0 is available
 Enhanced neural voices
 :   To optimize the overall quality of voice synthesis, all available voices are now *enhanced neural voices*. Enhanced neural voices, which include the string `V3` in their names, are now available for Brazilian Portuguese, United Kingdom and United States English, French, German, Italian, Japanese, and Spanish (all dialects).
 
-    Enhanced neural voices support the use of both IPA and {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR) with the SSML `<phoneme>` element. Enhanced neural voices also achieve a slightly higher degree of natural-sounding speech. For more information, see [Using languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
+    Enhanced neural voices support the use of both IPA and {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR) with the SSML `<phoneme>` element. Enhanced neural voices also achieve a slightly higher degree of natural-sounding speech. For more information, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
 
 New Canadian French voice
 :   The service now supports Canadian French with the enhanced neural voice `fr-CA_LouiseV3Voice`. The Canadian French voice supports customization and is generally available (GA) for production use.
