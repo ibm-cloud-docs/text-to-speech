@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2015, 2022
-lastupdated: "2022-10-07"
+lastupdated: "2022-10-27"
 
 keywords: text to speech release notes,text to speech for IBM cloud release notes
 
@@ -134,7 +134,7 @@ Defect fix: Multiple consecutive SSML `<phoneme>` tags are now parsed correctly
 {: release-note}
 
 Important: Deprecation of all neural voices
-:   **Important:** Effective **31 March 2022**, all neural voices are deprecated. The deprecated voices remain available to existing users until **31 March 2023**, when they will be removed from the service and the documentation. All enhanced neural voices remain available to all users.
+:   **Important:** Effective **31 March 2022**, all neural voices are deprecated. The deprecated voices remain available to existing users until **31 March 2023**, when they will be removed from the service and the documentation. *No enhanced neural voices or expressive voices are deprecated.*
 
     The following neural voices are now deprecated:
     -   Arabic: `ar-MS_OmarVoice`
