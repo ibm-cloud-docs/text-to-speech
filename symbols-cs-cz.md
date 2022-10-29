@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-10-27
+lastupdated: "2022-10-27"
 
 subcollection: text-to-speech
 
