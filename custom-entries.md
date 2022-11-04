@@ -24,7 +24,7 @@ For more information about the rules and limits that apply to custom entries, se
 
 To add a single word/translation pair to a custom model, use the `PUT /v1/customizations/{customization_id}/words/{word}` method. You specify the word to be added in the URL of the method. You provide the translation for the word as a JSON object with a single `translation` attribute. Adding a new translation for a word that already exists in a model overwrites the word's existing translation.
 
-You can provide a translation by using the sounds-like or the phonetic method (or a combination of the two). For phonetic translations, you can use either the International Phonetic Alphabet (IPA) or the {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR) format. The following examples use different approaches to add equivalent translations for the word `IEEE` to a custom model.
+You can provide a translation by using the sounds-like or the phonetic method (or a combination of the two). For phonetic translations, you can use either the International Phonetic Alphabet (IPA) or the {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR) format. The following examples use different approaches to add equivalent translations for the word `IEEE` to a custom model. The required `Content-Type` header identifies the type of the input as `application-json`.
 
 -   **Sounds-like:** For this example, the sounds-like method is the simplest approach:
 
@@ -98,7 +98,9 @@ You can provide a translation by using the sounds-like or the phonetic method (o
 ## Adding multiple words to a custom model
 {: #cuWordsAdd}
 
-To add one or more words to a custom model at one time, use the `POST /v1/customizations/{customization_id}/words` method. You specify the entries to be added to the custom model as a JSON array of word/translation pairs. The following example adds common sounds-like translations for the words `NCAA` and `iPhone` to a custom model:
+To add one or more words to a custom model at one time, use the `POST /v1/customizations/{customization_id}/words` method. You specify the entries to be added to the custom model as a JSON array of word/translation pairs. The required `Content-Type` header identifies the type of the input as `application-json`.
+
+The following example adds common sounds-like translations for the words `NCAA` and `iPhone` to a custom model:
 
 ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
 
