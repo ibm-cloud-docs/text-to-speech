@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-10-27"
+lastupdated: "2022-11-28"
 
 subcollection: text-to-speech
 
@@ -73,8 +73,6 @@ You can pass the service plain text or text that is annotated with the Speech Sy
 ### Modifying the speaking rate
 {: #features-rate}
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
-
 To modify the global rate of speech synthesis for a request, you can use the `rate_percentage` query parameter. The speaking rate is the speed at which the service speaks the text that it synthesizes into speech. A higher rate causes the text to be spoken more quickly; a lower rate causes the text to be spoken more slowly. The parameter changes the per-voice default rate for an entire request. For more information, see [Modifying the speaking rate](/docs/text-to-speech?topic=text-to-speech-synthesis-params#params-rate-percentage).
 
 The `rate_percentage` parameter is beta functionality.
@@ -82,8 +80,6 @@ The `rate_percentage` parameter is beta functionality.
 
 ### Modifying the speaking pitch
 {: #features-pitch}
-
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
 
 To modify the global pitch of speech synthesis for a request, you can use the `rate_pitch` query parameter. The speaking pitch represents the tone of the speech that the service synthesizes. It represents how high or low the tone of the voice is perceived by the listener. A higher pitch results in speech that is spoken at a higher tone and is perceived as a higher voice; a lower pitch results in speech that is spoken in a lower tone and is perceived as a lower voice. The parameter changes the per-voice default pitch for an entire request. For more information, see [Modifying the speaking pitch](/docs/text-to-speech?topic=text-to-speech-synthesis-params#params-pitch-percentage).
 

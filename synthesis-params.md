@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-10-10"
+lastupdated: "2022-11-28"
 
 subcollection: text-to-speech
 
@@ -20,8 +20,6 @@ Each of these parameters interacts with elements of the Speech Synthesis Markup 
 
 ## Modifying the speaking rate
 {: #params-rate-percentage}
-
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
 
 The `rate_percentage` parameter is beta functionality that is supported only for expressive and enhanced neural voices.
 {: beta}
@@ -69,7 +67,6 @@ curl -X POST -u "apikey:{apikey}" \
 ```
 {: pre}
 
-<!--
 ![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
 
 ```sh
@@ -82,7 +79,6 @@ curl -X POST \
 "{url}/v1/synthesize?voice=en-US_AllisonV3Voice&rate_percentage=-5"
 ```
 {: pre}
--->
 
 The following WebSocket example shows inclusion of the parameter with the same value on the request to establish a connection:
 
@@ -98,8 +94,6 @@ var websocket = new WebSocket(wsURI);
 
 ## Modifying the speaking pitch
 {: #params-pitch-percentage}
-
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
 
 The `pitch_percentage` parameter is beta functionality that is supported only for expressive and enhanced neural voices.
 {: beta}
@@ -147,7 +141,6 @@ curl -X POST -u "apikey:{apikey}" \
 ```
 {: pre}
 
-<!--
 ![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
 
 ```sh
@@ -160,7 +153,6 @@ curl -X POST \
 "{url}/v1/synthesize?voice=en-US_AllisonV3Voice&pitch_percentage=5"
 ```
 {: pre}
--->
 
 The following WebSocket example shows inclusion of the parameter with the same value on the request to establish a connection:
 
