@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-11-20"
+lastupdated: "2022-11-30"
 
 keywords: text to speech release notes,text to speech for IBM cloud pak for data release notes
 
@@ -25,11 +25,76 @@ For information about known limitations of the service, see [Known limitations](
 For information about releases and updates of the service for {{site.data.keyword.cloud_notm}}, see [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes).
 {: note}
 
+## 30 November 2022 (Version 4.6.0)
+{: #text-to-speech-data-30november2022}
+
+Version 4.6.0 is now available
+:   {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} version 4.6.0 is now available. This version supports {{site.data.keyword.icp4dfull_notm}} version 4.6.x and Red Hat OpenShift versions 4.8 and 4.10. For more information, see [{{site.data.keyword.watson}} Speech services on {{site.data.keyword.icp4dfull_notm}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.6.x?topic=services-watson-speech){: external}.
+
+Amazon Web Services (AWS) is now supported
+:   {{site.data.keyword.watson}} Speech services for {{site.data.keyword.icp4dfull_notm}} are now supported on Amazon Web Services™ (AWS™). The services support Amazon Elastic Block Store, which you specify by setting the `blockStorageClass` property of the Speech services custom resource to `gp2-csi` or `gp3-csi`.
+
+New storage classes are now supported
+:   {{site.data.keyword.watson}} Speech services for {{site.data.keyword.icp4dfull_notm}} now support two additional storage classes:
+    -   IBM Cloud Block Storage (`ibmc-block-gold`)
+    -   NetApp Trident (`ontap-nas`)
+
+    You specify the storage class with the `blockStorageClass` property of the Speech services custom resource. For more information about all supported storage classes, see the following topics in [{{site.data.keyword.watson}} Speech services on {{site.data.keyword.icp4dfull_notm}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.6.x?topic=services-watson-speech){: external}:
+    -   *Before you begin* in *Installing Watson Speech services*
+    -   *Specifying a storage class* in *Using the Watson Speech services custom resource*
+
+Known issue: Some Watson Speech services pods do not have annotations that are used for scheduling
+:   **Known issue:** Some Watson Speech services pods are missing the `cloudpakInstanceId` annotation. If you use the {{site.data.keyword.icp4dfull_notm}} scheduling service, any Watson Speech services pods without the `cloudpakInstanceId` annotation are
+    -   Scheduled by the default Kubernetes scheduler rather than the scheduling service
+    -   Not included in the quota enforcement
+
+Monitoring of the PostgreSQL datastore is now available
+:   You can now enable monitoring of the PostgreSQL datastore to receive updates on its usage and status by the Watson Speech services. The events can be consumed by Prometheus monitoring software or whatever application you use for monitoring. By enabling monitoring for user-defined projects in addition to the default platform monitoring, you can monitor your own projects with the Red Hat® OpenShift® Container Platform monitoring stack. This capability includes an additional property, `spec.global.datastores.postgressql.enablePodMonitor`, in the Speech services custom resource.
+
+    For more information, see the topic *Monitoring the PostgreSQL datastore for Watson Speech services* in the *Administering* section of [{{site.data.keyword.watson}} Speech services on {{site.data.keyword.icp4dfull_notm}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.6.x?topic=services-watson-speech){: external}.
+
+Defect fix: PostgreSQL datastore is no longer installed if only runtime microservices are enabled
+:   **Defect fix:** The PostgreSQL datastore is no longer installed if only the runtime microservices are enabled. The datastore is now installed only if at least one of the `sttAsync`, `sttCustomization`, or `ttsCustomization` microservices is installed. PostgreSQL is not uninstalled if at a later date these microservices are disabled.
+
+    Prior to version 4.6.0, PostgreSQL was always installed with the Speech services. If you are an existing customer who used only the runtime microservices of the Speech services prior to version 4.6.0, PostgreSQL remains installed but is not used. In this case, installation of PostgreSQL persists across upgrades.
+
+    The MinIO datastore is always installed because the runtime microservices depend on it. The RabbitMQ datastore is installed only if the `sttAsync` microservice is installed.
+
+    For more information, see *Datastore properties* in *Using the Watson Speech services custom resource* in [{{site.data.keyword.watson}} Speech services on {{site.data.keyword.icp4dfull_notm}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.6.x?topic=services-watson-speech){: external}.
+
+Defect fix: Creation of a Network Policy is no longer necessary for the PostgreSQL operator to monitor its operands
+:   **Defect fix:** For version 4.6.0, it is not necessary to create a Network Policy to allow the PostgreSQL operator to monitor its operands, as described in the [10 November 2022 (Versions 4.0.x and 4.5.x)](#text-to-speech-data-10november2022) service update. As of version 4.6.0, the service handles this situation automatically.
+
+New beta `rate_percentage` query parameter for controlling the global speaking rate
+:   The service offers a new `rate_percentage` query parameter to modify the speaking rate for a speech synthesis request. The speaking rate is the speed at which the service speaks the text that it synthesizes into speech. A higher rate causes the text to be spoken more quickly; a lower rate causes the text to be spoken more slowly. The parameter changes the per-voice default rate for an entire request. For more information, see [Modifying the speaking rate](/docs/text-to-speech?topic=text-to-speech-synthesis-params#params-rate-percentage).
+
+New beta `pitch_percentage` query parameter for controlling the global speaking pitch
+:   The service offers a new `pitch_percentage` query parameter to modify the speaking pitch for a synthesis request. The speaking pitch represents the tone of the speech that the service synthesizes. It represents how high or low the tone of the voice is perceived by the listener. A higher pitch results in speech that is spoken at a higher tone and is perceived as a higher voice; a lower pitch results in speech that is spoken in a lower tone and is perceived as a lower voice. The parameter changes the per-voice default pitch for an entire request. For more information, see [Modifying the speaking pitch](/docs/text-to-speech?topic=text-to-speech-synthesis-params#params-pitch-percentage).
+
+Defect fix: Custom word translations now accept commas in all cases
+:   **Defect fix:** Word translations added to custom models now accept commas in all cases. Previously, a comma in a translation could occasionally cause the translation to fail to generate valid audio when used for speech syntheses. This problem was identified in US English custom models.
+
+Defect fix: French synthesis of dates is now consistent
+:   **Defect fix:** French synthesis no longer includes the article "le" before dates of the form "the *ordinal* of *month*." Previously, the article was included only for the first day of the month for French (for example, "the first of September," "le premier septembre").
+
+Defect fix: Japanese synthesis is improved to handle long strings of input text
+:   **Defect fix:** The service now correctly synthesizes Japanese requests that include long strings of characters. Previously, the service failed to properly synthesize very long strings of Japanese text.
+
+Defect fix for custom model naming documentation
+:   **Defect fix:** The documentation now provides detailed rules for naming custom models. For more information, see
+    -   [Creating a custom model](/docs/text-to-speech?topic=text-to-speech-customModels#cuModelsCreate)
+    -   [API & SDK reference](https://{DomainName}/apidocs/text-to-speech){: external}
+
+<!--
+Security vulnerabilities addressed
+:   The following security vulnerabilities have been fixed:
+-->
+
 ## 10 November 2022 (Versions 4.0.x and 4.5.x)
 {: #text-to-speech-data-10november2022}
 
-Defect fix: Updated Network Policy needed for PostgreSQL operator
-:   **Defect fix:** For Speech services version 4.0.x (not including version 4.0.0) and 4.5.x, if the PostgreSQL operator and the Speech services are installed in different namespaces, the PostgreSQL operator is not able to monitor the PostgreSQL operands for the Speech services. The operator is prevented from monitoring the operands by the Network Policy that is in place for the Speech services.
+Known issue: Updated Network Policy needed for PostgreSQL operator
+:   **Known issue:** For Speech services version 4.0.x (not including version 4.0.0) and 4.5.x, if the PostgreSQL operator and the Speech services are installed in different namespaces, the PostgreSQL operator is not able to monitor the PostgreSQL operands for the Speech services. The operator is prevented from monitoring the operands by the Network Policy that is in place for the Speech services.
 
     This problem does not prevent the PostgreSQL cluster from functioning properly. The cluster remains active and fully functional. However, the operator is not able to update the operands when you upgrade to new versions of the Speech services.
 
@@ -65,7 +130,7 @@ Defect fix: Updated Network Policy needed for PostgreSQL operator
         -   `<custom-resource-name>` is the name of the Speech services custom resource. The recommended name for version 4.0.x is `speech-prod-cr`; the recommended name for version 4.5.x is `speech-cr`.
         -   `<cpd-instance-name>` is the name of the project (namespace) in which the Speech services are installed. The documentation uses the environment variable `${PROJECT_CPD_INSTANCE}` to identity the namespace.
 
-    3.  To verify that the updated Network Policy allows the operator to monitor the operands and that that PostgreSQL cluster is in a healthy state, enter the following command, where `<custom-resource-name>` and `<cpd-instance-name>` are the values you used in the previous step:
+    3.  To verify that the updated Network Policy allows the operator to monitor the operands and that the PostgreSQL cluster is in a healthy state, enter the following command, where `<custom-resource-name>` and `<cpd-instance-name>` are the values you used in the previous step:
 
         ```text
         oc -get cluster {{ <custom-resource-name> }}-postgres -n {{ <cpd-instance-namespace> }}

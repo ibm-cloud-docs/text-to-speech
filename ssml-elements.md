@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-10-10"
+lastupdated: "2022-11-28"
 
 subcollection: text-to-speech
 
@@ -219,7 +219,7 @@ The SSML specification also offers four attributes that the service does not sup
 -   The `duration` attribute
 -   The `volume` attribute
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only** The service also supports query parameters that let you adjust the rate and pitch for all text of a speech synthesis request. For more information about the parameters and their interaction with the `pitch` and `rate` attributes of the `<prosody>` element, see
+The service also supports query parameters that let you adjust the rate and pitch for all text of a speech synthesis request. For more information about the parameters and their interaction with the `pitch` and `rate` attributes of the `<prosody>` element, see
 
 -   [Modifying the speaking rate](/docs/text-to-speech?topic=text-to-speech-synthesis-params#params-rate-percentage)
 -   [Modifying the speaking pitch](/docs/text-to-speech?topic=text-to-speech-synthesis-params#params-pitch-percentage)
