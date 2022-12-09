@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-12-05"
+lastupdated: "2022-12-09"
 
 keywords: text to speech,IBM cloud,getting started,tutorial,synthesize audio,speech synthesis
 
@@ -23,6 +23,9 @@ completion-time: 10m
 
 The {{site.data.keyword.texttospeechfull}} service converts written text to natural-sounding speech to provide speech-synthesis capabilities for applications. This `curl`-based tutorial can help you get started quickly with the service. The examples show you how to call the service's `POST` and `GET /v1/synthesize` methods to request an audio stream.
 {: shortdesc}
+
+The tutorial uses the `curl` command-line utility to demonstrate REST API calls. For more information about `curl`, see [Using curl with Watson examples](/docs/watson?topic=watson-using-curl).
+{: note}
 
 ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** Watch the following video for a visual summary of getting started with the {{site.data.keyword.texttospeechshort}} service.
 
@@ -69,32 +72,14 @@ This tutorial uses an API key to authenticate. In production, use an IAM token. 
 This tutorial uses a Bearer token to authenticate. For more information see [Authenticating to IBM Cloud Pak for Data](/docs/watson?topic=watson-iam#gs-credential-cpd).
 {: tip}
 
-### Using the curl examples
-{: #getting-started-curl}
-
-This tutorial uses the `curl` command to call methods of the service's HTTP interface. Make sure that you have the `curl` command installed on your system.
-
-1.  To test whether `curl` is installed, run the following command on the command line. If the output lists the `curl` version that supports Secure Sockets Layer (SSL), you are set for the tutorial.
-
-    ```bash
-    curl -V
-    ```
-    {: pre}
-
-1.  If necessary, install the version of `curl` with SSL enabled for your operating system from [curl.haxx.se](https://curl.haxx.se/){: external}.
-
-### Tips
-{: #getting-started-tips}
-
--   Omit the braces (`{ }`) from the examples. They indicate variable values.
--   *Windows users,* replace the backslash (`\`) at the end of each line with a caret (`^`). Make sure there are no trailing spaces.
--   You can use a browser or other tools to play the audio files that are produced by the examples in this tutorial. For more information, see [Playing an audio file](/docs/text-to-speech?topic=text-to-speech-audio-formats#formats-play).
-
 ## Synthesize text in US English
 {: #getting-started-synthesize-english}
 {: step}
 
 The following command use the `POST /v1/synthesize` method to synthesize US English input to audio. The request uses the voice `en-US_MichaelV3Voice`. It produces audio in the WAV format.
+
+You can use a browser or other tools to play the audio files that are produced by the examples in this tutorial. For more information, see [Playing an audio file](/docs/text-to-speech?topic=text-to-speech-audio-formats#formats-play).
+{: tip}
 
 1.  Issue the following command to synthesize the string "hello world". The request produces a WAV file that is named `hello_world.wav`.
 
