@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-09-18"
+lastupdated: "2022-12-13"
 
 subcollection: text-to-speech
 
@@ -61,7 +61,7 @@ curl -X POST -u "apikey:{apikey}" \
 --header "Accept: audio/wav" \
 --output full-cheerful-style.wav \
 --data "{\"text\":\"<express-as style='cheerful'>Oh, that&apos;s good news! I am very happy for you!</express-as>\"}" \
-"{url}/v1/synthesize?voice=en-US_EmmaExpresive"
+"{url}/v1/synthesize?voice=en-US_EmmaExpressive"
 ```
 {: pre}
 
