@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2015, 2022
-lastupdated: "2022-11-29"
+lastupdated: "2022-12-15"
 
 keywords: text to speech release notes,text to speech for IBM cloud release notes
 
@@ -316,39 +316,23 @@ New Tune be Example methods
 Updates to Activity Tracker actions for customization
 :   The names of the actions for the Activity Tracker events for the customization methods have changed. The actions now include the string `custom-model` instead of `custom-voice`. The old names of the actions are deprecated. The old names are still available for use but will be removed at a future date. Migrate to the new names that are listed in [Customization events](/docs/text-to-speech?topic=text-to-speech-at-events#at-events-custom) at your earliest convenience.
 
-    **Create events**
+    **Create events** *Deprecated action name* -> *New action name*
+    -   `text-to-speech.custom-voice.create` -> `text-to-speech.custom-model.create`
+    -   `text-to-speech.custom-voice-word-list.create` -> `text-to-speech.custom-model-word-list.create`
+    -   `text-to-speech.custom-voice-word.create` -> `text-to-speech.custom-model-word.create`
 
-    | Deprecated action name | New action name |
-    |------------------------|-----------------|
-    | `text-to-speech.custom-voice.create` | `text-to-speech.custom-model.create` |
-    | `text-to-speech.custom-voice-word-list.create` | `text-to-speech.custom-model-word-list.create` |
-    | `text-to-speech.custom-voice-word.create` | `text-to-speech.custom-model-word.create` |
-    {: caption="Table 1. Names of actions for create events"}
+    **Read events** *Deprecated action name* -> *New action name*
+    -   `text-to-speech.custom-voice-list.read` -> `text-to-speech.custom-model-list.read`
+    -   `text-to-speech.custom-voice.read` -> `text-to-speech.custom-model.read`
+    -   `text-to-speech.custom-voice-word-list.read` -> `text-to-speech.custom-model-word-list.read`
+    -   `text-to-speech.custom-voice-word.read` -> `text-to-speech.custom-model-word.read`
 
-    **Read events**
+    **Update event** *Deprecated action name* -> *New action name*
+    -   `text-to-speech.custom-voice.update` -> `text-to-speech.custom-model.update`
 
-    | Deprecated action name | New action name |
-    |------------------------|-----------------|
-    | `text-to-speech.custom-voice-list.read` | `text-to-speech.custom-model-list.read` |
-    | `text-to-speech.custom-voice.read` | `text-to-speech.custom-model.read` |
-    | `text-to-speech.custom-voice-word-list.read` | `text-to-speech.custom-model-word-list.read` |
-    | `text-to-speech.custom-voice-word.read` | `text-to-speech.custom-model-word.read` |
-    {: caption="Table 2. Names of actions for read events"}
-
-    **Update event**
-
-    | Deprecated action name | New action name |
-    |------------------------|-----------------|
-    | `text-to-speech.custom-voice.update` | `text-to-speech.custom-model.update` |
-    {: caption="Table 3. Names of actions for update event"}
-
-    **Delete events**
-
-    | Deprecated action name | New action name |
-    |------------------------|-----------------|
-    | `text-to-speech.custom-voice.delete` | `text-to-speech.custom-model.delete` |
-    | `text-to-speech.custom-voice-word.delete` | `text-top-speech.custom-model-word.delete` |
-    {: caption="Table 4. Names of actions for delete events"}
+    **Delete events** *Deprecated action name* -> *New action name*
+    -   `text-to-speech.custom-voice.delete` -> `text-to-speech.custom-model.delete`
+    -   `text-to-speech.custom-voice-word.delete` -> `text-to-speech.custom-model-word.delete`
 
 ## 2 December 2020
 {: #text-to-speech-2december2020}
