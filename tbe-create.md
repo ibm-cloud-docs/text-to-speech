@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-05-14"
+  years: 2021, 2023
+lastupdated: "2023-01-14"
 
 subcollection: text-to-speech
 
@@ -33,7 +33,7 @@ You add a custom prompt to a custom model.  You can create a new custom model fo
 
 The following example creates a new custom model that is named `Prompt test`. Because custom prompts and speaker models are supported only for US English, the `language` of the model is `en-US`. The `Content-Type` header for the request must be `application/json`.
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+[IBM Cloud]{: tag-ibm-cloud}
 
 ```bash
 curl -X POST -u "apikey:{apikey}" \
@@ -43,7 +43,7 @@ curl -X POST -u "apikey:{apikey}" \
 ```
 {: pre}
 
-![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+[IBM Cloud Pak for Data]{: tag-cp4d}
 
 ```bash
 curl -X POST \
@@ -72,7 +72,7 @@ The enrollment audio is distinct from the audio for any prompts. Enrollment audi
 
 The following example creates a speaker model named `speaker_one`. The request passes a 16 kHz WAV file as the enrollment audio in the body of the request. The `Content-Type` header of the request must be `audio/wav`.
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+[IBM Cloud]{: tag-ibm-cloud}
 
 ```bash
 curl -X POST -u "apikey:{apikey}" \
@@ -82,7 +82,7 @@ curl -X POST -u "apikey:{apikey}" \
 ```
 {: pre}
 
-![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+[IBM Cloud Pak for Data]{: tag-cp4d}
 
 ```bash
 curl -X POST \
@@ -115,7 +115,7 @@ It is very important that the text and audio of the prompt match exactly. Discre
 
 The following example creates a custom prompt named `goodbye` that contains a simple farewell message. The request specifies the speaker ID for the speaker named `speaker_one` and the customization ID for the custom model that was created in the first step. The `Content-Type` header of the request must be `multipart/form-data`.
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+[IBM Cloud]{: tag-ibm-cloud}
 
 ```bash
 curl -X POST -u apikey:{apikey} \
@@ -127,7 +127,7 @@ curl -X POST -u apikey:{apikey} \
 ```
 {: pre}
 
-![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+[IBM Cloud Pak for Data]{: tag-cp4d}
 
 ```bash
 curl -X POST \
@@ -161,7 +161,7 @@ The service returns a 201 response code if it successfully initiates the request
 
 For shorter prompts, you can wait for a reasonable amount of time and then check the status of the prompt with the `GET /v1/customizations/{customization_id}/prompts/{prompt_id}` method. For longer prompts, consider using that method to poll the service every few seconds to determine when the prompt is ready. The following example checks the status of the `goodbye` prompt:
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+[IBM Cloud]{: tag-ibm-cloud}
 
 ```bash
 curl -X GET -u "apikey:{apikey}" \
@@ -169,7 +169,7 @@ curl -X GET -u "apikey:{apikey}" \
 ```
 {: pre}
 
-![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+[IBM Cloud Pak for Data]{: tag-cp4d}
 
 ```bash
 curl -X GET \
@@ -205,7 +205,7 @@ Always listen to and evaluate a prompt to determine its quality before using it 
 
 You call the same methods to evaluate a custom prompt and to use it in an application. For example, the following request uses the `POST /v1/synthesize` method to synthesize the prompt:
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+[IBM Cloud]{: tag-ibm-cloud}
 
 ```bash
 curl -X POST -u "apikey:{apikey}" \
@@ -216,7 +216,7 @@ curl -X POST -u "apikey:{apikey}" \
 ```
 {: pre}
 
-![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+[IBM Cloud Pak for Data]{: tag-cp4d}
 
 ```bash
 curl -X POST \

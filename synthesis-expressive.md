@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-12-13"
+  years: 2022, 2023
+lastupdated: "2023-01-14"
 
 subcollection: text-to-speech
 
@@ -21,7 +21,7 @@ The features involve the use of elements of the Speech Synthesis Markup Language
 ## Using speaking styles
 {: #syntheses-expressive-styles}
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
+[IBM Cloud]{: tag-ibm-cloud}
 
 The expressive neural voices determine the sentiment of the text from the context of its words and phrases. The speech that they produce, in addition to having a very conversational style, reflects the mood of the text. The expressive voices naturally express gratitude, thankfulness, happiness, empathy, confusion, and other sentiments by default, with no explicit additional tagging.
 
@@ -53,7 +53,7 @@ Table 1 provides examples of each available `style` for the `<express-as>` eleme
 
 The following HTTP request uses the `<express-as>` element with a `style` of `cheerful` to modify the speaking style of the entire input text. The example uses the `en-US_EmmaExpressive` voice.
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+[IBM Cloud]{: tag-ibm-cloud}
 
 ```sh
 curl -X POST -u "apikey:{apikey}" \
@@ -66,7 +66,7 @@ curl -X POST -u "apikey:{apikey}" \
 {: pre}
 
 <!--
-![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+[IBM Cloud Pak for Data]{: tag-cp4d}
 
 ```sh
 curl -X POST \
@@ -82,7 +82,7 @@ curl -X POST \
 
 The following example HTTP request uses the `cheerful` style for the first sentence of the request only. The second sentence is spoken with the default voice. The example again uses the `en-US_EmmaExpressive` voice.
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+[IBM Cloud]{: tag-ibm-cloud}
 
 ```sh
 curl -X POST -u "apikey:{apikey}" \
@@ -95,7 +95,7 @@ curl -X POST -u "apikey:{apikey}" \
 {: pre}
 
 <!--
-![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+[IBM Cloud Pak for Data]{: tag-cp4d}
 
 ```sh
 curl -X POST \
@@ -112,7 +112,7 @@ curl -X POST \
 ## Emphasizing interjections
 {: #syntheses-expressive-interjections}
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
+[IBM Cloud]{: tag-ibm-cloud}
 
 When you use expressive neural voices, the service automatically detects a number of common interjections based on context. In the resulting audio, it gives them the natural emphasis that a human would use in normal conversation.
 
@@ -136,7 +136,7 @@ The service always interprets and pronounces most of the interjections as descri
 
 The following example HTTP request directs the service not to pronounce `oh` and `aha` as interjections. The example uses the `en-US_AllisonExpressive` voice.
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+[IBM Cloud]{: tag-ibm-cloud}
 
 ```bash
 curl -X POST -u "apikey:{apikey}" \
@@ -149,7 +149,7 @@ curl -X POST -u "apikey:{apikey}" \
 {: pre}
 
 <!--
-![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+[IBM Cloud Pak for Data]{: tag-cp4d}
 
 ```sh
 curl -X POST \
@@ -174,9 +174,9 @@ Keep the following in mind when using interjections:
 -   The neutral style does not emphasize interjections to the extent of the default expressive voice or the other styles.
 
 ## Emphasizing words
-{: syntheses-expressive-word-emphasis}
+{: #syntheses-expressive-word-emphasis}
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
+[IBM Cloud]{: tag-ibm-cloud}
 
 The expressive voices use a conversational style that naturally applies the correct intonation from context. But you can use the SSML `<emphasis>` element to indicate that one or more words are to be given more or less emphasis in the synthesized audio. The change in stress can be indicated by an increase or decrease in pitch, timing, volume, or other acoustic attributes.
 
@@ -199,11 +199,11 @@ Table 3 provides examples of each available `level` for the `emphasis` element. 
 {: caption="Table 3. Emphasizing words"}
 
 ### Emphasizing a word with SSML
-{: syntheses-expressive-word-emphasis-example}
+{: #syntheses-expressive-word-emphasis-example}
 
 The following example HTTP request uses the `<emphasis>` element with a `level` of `moderate` (the default) to emphasize the word `give` in the sentence. The example uses the `en-US_MichaelExpressive` voice.
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+[IBM Cloud]{: tag-ibm-cloud}
 
 ```bash
 curl -X POST -u "apikey:{apikey}" \
@@ -216,7 +216,7 @@ curl -X POST -u "apikey:{apikey}" \
 {: pre}
 
 <!--
-![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+[IBM Cloud Pak for Data]{: tag-cp4d}
 
 ```sh
 curl -X POST \

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-11-29"
+  years: 2015, 2023
+lastupdated: "2023-01-20"
 
 subcollection: text-to-speech
 
@@ -20,12 +20,12 @@ The service can be used in applications such as voice-automated chatbots, as wel
 ## Product versions
 {: #about-version}
 
-{{site.data.keyword.texttospeechshort}} can be deployed as a managed cloud service or can be installed on premises. This documentation describes how to use both versions of the product. Information that applies exclusively to one version is denoted by the appropriate icon:
+{{site.data.keyword.texttospeechshort}} can be deployed as a managed cloud service or can be installed on premises. This documentation describes how to use both versions of the product. Information such as topics, paragraphs, and examples that applies exclusively to one version is clearly denoted:
 
--   ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}** for managed instances of {{site.data.keyword.texttospeechshort}} that are hosted on {{site.data.keyword.cloud_notm}} or for instances that are hosted on [IBM Cloud Pak for Data as a Service](https://dataplatform.cloud.ibm.com/docs/content/wsj/landings/wtts.html){: external}.
+-   [IBM Cloud]{: tag-ibm-cloud} for managed instances of {{site.data.keyword.texttospeechshort}} that are hosted on {{site.data.keyword.cloud_notm}} or for instances that are hosted on [IBM Cloud Pak for Data as a Service](https://dataplatform.cloud.ibm.com/docs/content/wsj/landings/wtts.html){: external}.
     -   For information about all service updates, see the [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes).
-    -   For information about the latest service update, see [30 November 2022](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-30november2022) in the release notes.
--   ![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}** for installed or on-premises instances of {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}. For links to information about installing and managing {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}, see [Installing {{site.data.keyword.ibmwatson_notm}} {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-speech-install-data).
+    -   For information about the latest service update, see [20 January 2023](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-20january2023) in the release notes.
+-   [IBM Cloud Pak for Data]{: tag-cp4d} for installed or on-premises instances of {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}. For links to information about installing and managing {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}, see [Installing {{site.data.keyword.ibmwatson_notm}} {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-speech-install-data).
     -   For information about all service updates, see the [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes-data).
     -   For information about the latest service update, see [30 November 2022 (Version 4.6.0)](/docs/text-to-speech?topic=text-to-speech-release-notes-data#text-to-speech-data-30november2022) in the release notes.
 
@@ -95,6 +95,6 @@ Beta features might not provide the same level of performance or compatibility a
 ## Pricing
 {: #about-pricing}
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
+[IBM Cloud]{: tag-ibm-cloud}
 
 The service offers multiple pricing plans to suit your usage and application needs. For more information about the pricing plans or to purchase a plan, see the {{site.data.keyword.texttospeechshort}} service in the [{{site.data.keyword.cloud}} Catalog](https://{DomainName}/catalog/text-to-speech){: external}.

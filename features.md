@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-11-28"
+  years: 2015, 2023
+lastupdated: "2023-01-14"
 
 subcollection: text-to-speech
 
@@ -55,7 +55,7 @@ The interfaces accept the following maximum amounts of text with a single reques
 
 These limits include all characters of the input, including whitespace.
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** For billing purposes, whitespace characters are not counted. However, all other characters are counted, including those that are part of SSML elements.
+[IBM Cloud]{: tag-ibm-cloud} For billing purposes, whitespace characters are not counted. However, all other characters are counted, including those that are part of SSML elements.
 
 ## Using speech synthesis features
 {: #features-synthesis}
@@ -104,7 +104,7 @@ You can use the SSML `<mark>` element to identify specific locations, such as wo
 ## Using speech synthesis features with expressive neural voice
 {: #features-synthesis-expressive}
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
+[IBM Cloud]{: tag-ibm-cloud}
 
 With expressive neural voices, the service supports additional features that modify how the text that you pass is synthesized into audio.
 
@@ -126,8 +126,6 @@ The expressive voices use a conversational style that naturally applies the corr
 ## Customizing the service
 {: #features-customization}
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** You must have the Standard or Premium pricing plan to use customization. Users of the Lite plan cannot use the customization interface. For more information about pricing plans, see the {{site.data.keyword.texttospeechshort}} service in the [{{site.data.keyword.cloud}} Catalog](https://{DomainName}/catalog/text-to-speech){: external}.
-
 The service includes a customization interface that you can use to create custom models for use during speech synthesis. A custom model is a dictionary of words and their translations for a specific language. Each word/translation pair in a model tells the service how to pronounce a word when it occurs in input text.
 
 You can use custom models to create application-specific translations for unusual words for which the service's regular pronunciation rules might yield imperfect pronunciations. For example, your application might routinely encounter domain-specific terms, special terms with foreign origins, personal or geographic names, or abbreviations and acronyms. By using customization, you can define translations that tell the service how you want such terms to be pronounced.
@@ -137,10 +135,13 @@ You can define the custom entry for a word/translation pair based on other words
 -   For more information about customization, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
 -   For more information about using phonetic IPA and SPR symbols, see [Understanding phonetic symbols](/docs/text-to-speech?topic=text-to-speech-symbols).
 
+[IBM Cloud]{: tag-ibm-cloud} You must have the Standard or Premium pricing plan to use customization. Users of the Lite plan cannot use the customization interface. For more information about pricing plans, see the {{site.data.keyword.texttospeechshort}} service in the [{{site.data.keyword.cloud}} Catalog](https://{DomainName}/catalog/text-to-speech){: external}.
+{: note}
+
 ### Creating a custom voice
 {: #features-customization-voice}
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
+[IBM Cloud]{: tag-ibm-cloud}
 
 Premium customers can work with {{site.data.keyword.IBM_notm}} to train a new custom voice for their specific application needs. A custom voice is a unique voice that is based on audio training data that the customer provides. {{site.data.keyword.IBM_notm}} can train a custom voice with as little as one hour of training data.
 
@@ -171,8 +172,6 @@ SDKs are available for the {{site.data.keyword.texttospeechshort}} service to si
 ## Learning more about application development
 {: #features-learn}
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
-
 For more information about working with {{site.data.keyword.watson}} services and {{site.data.keyword.cloud_notm}}:
 
 -   For an introduction, see [Getting started with {{site.data.keyword.watson}} and {{site.data.keyword.cloud_notm}}](/docs/watson?topic=watson-about).
@@ -190,4 +189,4 @@ Explore the features introduced in this topic to gain a more in-depth understand
 -   [Customizing the service](#features-customization) describes the more advanced topic of customization, which you can use to create custom models that contain dictionaries of words and their translations for specific languages.
 -   [Using Tune by Example](#features-tune-by-example) introduces the Tune by Example feature that lets you create custom prompts. You can control the intonation, cadence, and stress of the synthesized text for your prompts.
 -   [Using software development kits](#features-sdks) provide links to the SDKs that are available to simplify application development in many programming languages.
--   ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** [Learning more about application development](#features-learn) provides links to help you get started with {{site.data.keyword.watson}} services and understand authentication.
+-   [Learning more about application development](#features-learn) provides links to help you get started with {{site.data.keyword.watson}} services and understand authentication.

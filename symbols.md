@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-10-27"
+  years: 2015, 2023
+lastupdated: "2023-01-16"
 
 subcollection: text-to-speech
 
@@ -138,12 +138,12 @@ Effective **31 March 2022**, all *neural voices* are deprecated. The deprecated 
 
 | Language | Availability | Supports IPA | Supports SPR |
 |----------|:------------:|:------------:|:------------:|
-| [Arabic symbols](/docs/text-to-speech?topic=text-to-speech-arSymbols) | {{site.data.keyword.cloud_notm}} only  \n Deprecated | Yes | No |
-| [Chinese (Mandarin) symbols](/docs/text-to-speech?topic=text-to-speech-zhSymbols) | {{site.data.keyword.cloud_notm}} only  \n Deprecated | Yes | No |
-| [Czech symbols](/docs/text-to-speech?topic=text-to-speech-csSymbols) | {{site.data.keyword.cloud_notm}} only  \n Deprecated | Yes | No |
-| [Dutch (Belgian) symbols](/docs/text-to-speech?topic=text-to-speech-beSymbols) | {{site.data.keyword.cloud_notm}} only  \n Deprecated | Yes | No |
-| [Dutch (Netherlands) symbols](/docs/text-to-speech?topic=text-to-speech-nlSymbols) | {{site.data.keyword.cloud_notm}} only  \n Deprecated | Yes | No |
-| [English (Australian) symbols](/docs/text-to-speech?topic=text-to-speech-auSymbols) | {{site.data.keyword.cloud_notm}} only  \n Deprecated | Yes | No |
+| [Arabic symbols](/docs/text-to-speech?topic=text-to-speech-arSymbols) | [IBM Cloud]{: tag-ibm-cloud}  \n Deprecated | Yes | No |
+| [Chinese (Mandarin) symbols](/docs/text-to-speech?topic=text-to-speech-zhSymbols) | [IBM Cloud]{: tag-ibm-cloud}  \n Deprecated | Yes | No |
+| [Czech symbols](/docs/text-to-speech?topic=text-to-speech-csSymbols) | [IBM Cloud]{: tag-ibm-cloud}  \n Deprecated | Yes | No |
+| [Dutch (Belgian) symbols](/docs/text-to-speech?topic=text-to-speech-beSymbols) | [IBM Cloud]{: tag-ibm-cloud}  \n Deprecated | Yes | No |
+| [Dutch (Netherlands) symbols](/docs/text-to-speech?topic=text-to-speech-nlSymbols) | [IBM Cloud]{: tag-ibm-cloud}  \n Deprecated | Yes | No |
+| [English (Australian) symbols](/docs/text-to-speech?topic=text-to-speech-auSymbols) | [IBM Cloud]{: tag-ibm-cloud}  \n Deprecated | Yes | No |
 | [English (United Kingdom) symbols](/docs/text-to-speech?topic=text-to-speech-gbSymbols) | All versions | Yes | Yes |
 | [English (United States) symbols](/docs/text-to-speech?topic=text-to-speech-usSymbols) | All versions | Yes | Yes |
 | [French (Canadian) symbols](/docs/text-to-speech?topic=text-to-speech-caSymbols) | All versions | Yes | Yes |
@@ -151,8 +151,8 @@ Effective **31 March 2022**, all *neural voices* are deprecated. The deprecated 
 | [German symbols](/docs/text-to-speech?topic=text-to-speech-deSymbols) | All versions | Yes | Yes |
 | [Italian symbols](/docs/text-to-speech?topic=text-to-speech-itSymbols) | All versions | Yes | Yes |
 | [Japanese symbols](/docs/text-to-speech?topic=text-to-speech-jaSymbols) | All versions | Yes | Yes |
-| [Korean symbols](/docs/text-to-speech?topic=text-to-speech-koSymbols) | {{site.data.keyword.cloud_notm}} only  \n Deprecated | Yes | No |
+| [Korean symbols](/docs/text-to-speech?topic=text-to-speech-koSymbols) | [IBM Cloud]{: tag-ibm-cloud}  \n Deprecated | Yes | No |
 | [Portuguese (Brazilian) symbols](/docs/text-to-speech?topic=text-to-speech-ptSymbols) | All versions | Yes | Yes |
 | [Spanish symbols](/docs/text-to-speech?topic=text-to-speech-esSymbols) | All versions | Yes | Yes |
-| [Swedish symbols](/docs/text-to-speech?topic=text-to-speech-svSymbols) | {{site.data.keyword.cloud_notm}} only  \n Deprecated | Yes | No |
+| [Swedish symbols](/docs/text-to-speech?topic=text-to-speech-svSymbols) | [IBM Cloud]{: tag-ibm-cloud}  \n Deprecated | Yes | No |
 {: caption="Table 3. Language support for IPA and SPR phonetic symbols"}

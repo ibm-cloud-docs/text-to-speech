@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-10-07"
+  years: 2015, 2023
+lastupdated: "2023-01-14"
 
 subcollection: text-to-speech
 
@@ -64,8 +64,8 @@ A WebSocket client calls the `/v1/synthesize` method with the following query pa
 `access_token` (*required* string)
 :   Pass a valid access token to authenticate with the service. You must use the access token before it expires.
 
-    -   ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** Pass an Identity and Access Management (IAM) access token to authenticate with the service. You pass an IAM access token instead of passing an API key with the call. For more information, see [Authenticating to {{site.data.keyword.cloud_notm}}](/docs/watson?topic=watson-iam#gs-credential-cloud).
-    -   ![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}} only.** Pass an access token as you would with the `Authorization` header of an HTTP request. For more information, see [Authenticating to {{site.data.keyword.icp4dfull_notm}}](/docs/watson?topic=watson-iam#gs-credential-cpd).
+    -   [IBM Cloud]{: tag-ibm-cloud} Pass an Identity and Access Management (IAM) access token to authenticate with the service. You pass an IAM access token instead of passing an API key with the call. For more information, see [Authenticating to {{site.data.keyword.cloud_notm}}](/docs/watson?topic=watson-iam#gs-credential-cloud).
+    -   [IBM Cloud Pak for Data]{: tag-cp4d} Pass an access token as you would with the `Authorization` header of an HTTP request. For more information, see [Authenticating to {{site.data.keyword.icp4dfull_notm}}](/docs/watson?topic=watson-iam#gs-credential-cpd).
 
 `voice` (*optional* string)
 :   Specifies the voice in which the text is to be spoken in the audio. Use the `/v1/voices` method to get the current list of supported voices. Omit the parameter to use the default voice. For more information, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices) and [Using the default voice](/docs/text-to-speech?topic=text-to-speech-voices-use#specify-voice-default).
@@ -74,19 +74,19 @@ A WebSocket client calls the `/v1/synthesize` method with the following query pa
 :   Specifies the globally unique identifier (GUID) for a custom model that is to be used for the synthesis. A specified custom model must match the language of the voice that is used for the synthesis. If you include a customization ID, you must make the request with credentials for the instance of the service that owns the custom model. Omit the parameter to use the specified voice with no customization. For more information, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
 
 `rate_percentage` (*optional* integer)
-:   ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** Specifies the global speaking rate for the entire synthesis request. The speaking rate is the speed at which the service speaks the text that it synthesizes into speech. A higher rate causes the text to be spoken more quickly; a lower rate causes the text to be spoken more slowly. The parameter changes the per-voice default rate for an entire request. For more information, see [Modifying the speaking rate](/docs/text-to-speech?topic=text-to-speech-synthesis-params#params-rate-percentage).
+:   [IBM Cloud]{: tag-ibm-cloud} Specifies the global speaking rate for the entire synthesis request. The speaking rate is the speed at which the service speaks the text that it synthesizes into speech. A higher rate causes the text to be spoken more quickly; a lower rate causes the text to be spoken more slowly. The parameter changes the per-voice default rate for an entire request. For more information, see [Modifying the speaking rate](/docs/text-to-speech?topic=text-to-speech-synthesis-params#params-rate-percentage).
 
 `pitch_percentage` (*optional* integer)
-:   ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** Specifies the global speaking pitch for the entire synthesis request. The speaking pitch represents the tone of the speech that the service synthesizes. It represents how high or low the tone of the voice is perceived by the listener. A higher pitch results in speech that is spoken at a higher tone; a lower pitch results in speech that is spoken in a lower tone. The parameter changes the per-voice default pitch for an entire request. For more information, see [Modifying the speaking pitch](/docs/text-to-speech?topic=text-to-speech-synthesis-params#params-pitch-percentage).
+:   [IBM Cloud]{: tag-ibm-cloud} Specifies the global speaking pitch for the entire synthesis request. The speaking pitch represents the tone of the speech that the service synthesizes. It represents how high or low the tone of the voice is perceived by the listener. A higher pitch results in speech that is spoken at a higher tone; a lower pitch results in speech that is spoken in a lower tone. The parameter changes the per-voice default pitch for an entire request. For more information, see [Modifying the speaking pitch](/docs/text-to-speech?topic=text-to-speech-synthesis-params#params-pitch-percentage).
 
 `spell_out_mode` (*optional* string)
-:   ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** *For German voices,* specifies how individual characters of a string are to be spelled out. By default, the service spells out individual characters at the same rate at which it synthesizes text for a language. You can use the parameter to direct the service to spell out individual characters more slowly, in groups of one (`singles`), two (`pairs`), or three (`triples`). For more information, see [Specifying how strings are spelled out](/docs/text-to-speech?topic=text-to-speech-synthesis-params#params-spell-out-mode).
+:   [IBM Cloud]{: tag-ibm-cloud} *For German voices,* specifies how individual characters of a string are to be spelled out. By default, the service spells out individual characters at the same rate at which it synthesizes text for a language. You can use the parameter to direct the service to spell out individual characters more slowly, in groups of one (`singles`), two (`pairs`), or three (`triples`). For more information, see [Specifying how strings are spelled out](/docs/text-to-speech?topic=text-to-speech-synthesis-params#params-spell-out-mode).
 
 `x-watson-metadata` (*optional* string)
 :   Associates a customer ID with data that is passed over the connection. The parameter accepts the argument `customer_id={id}`, where `id` is a random or generic string that is to be associated with the data. You must URL-encode the argument to the parameter, for example, `customer_id%3dmy_customer_ID`. By default, no customer ID is associated with the data. For more information, see [Information security](/docs/text-to-speech?topic=text-to-speech-information-security).
 
 `x-watson-learning-opt-out` (*optional* boolean)
-:   ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** Indicates whether the service logs requests and results that are sent over the connection. To prevent IBM from accessing your data for general service improvements, specify `true` for the parameter. Opting out directs IBM to write to disk *no* user data (text or audio) for your request. You can also opt out at the account level. For more information, see [Request logging](/docs/text-to-speech?topic=text-to-speech-data-security#data-security-request-logging).
+:   [IBM Cloud]{: tag-ibm-cloud} Indicates whether the service logs requests and results that are sent over the connection. To prevent IBM from accessing your data for general service improvements, specify `true` for the parameter. Opting out directs IBM to write to disk *no* user data (text or audio) for your request. You can also opt out at the account level. For more information, see [Request logging](/docs/text-to-speech?topic=text-to-speech-data-security#data-security-request-logging).
 
 The following snippet of JavaScript code opens a connection with the service. The call to the `/v1/synthesize` method passes the `voice` and `access_token` query parameters, the former to direct the service to use the US English Allison voice. Once the connection is established, the event listeners (`onOpen()`, `onClose()`, and so on) are defined to respond to events from the service.
 

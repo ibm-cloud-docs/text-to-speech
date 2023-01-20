@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-05-06"
+  years: 2021, 2023
+lastupdated: "2023-01-14"
 
 subcollection: text-to-speech
 
@@ -38,7 +38,7 @@ The following examples use the [HTTP interface](/docs/text-to-speech?topic=text-
 
 -   This example call the HTTP `POST /v1/synthesize` method to synthesize the prompt:
 
-    ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+    [IBM Cloud]{: tag-ibm-cloud}
 
     ```bash
     curl -X POST -u "apikey:{apikey}" \
@@ -49,7 +49,7 @@ The following examples use the [HTTP interface](/docs/text-to-speech?topic=text-
     ```
     {: pre}
 
-    ![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+    [IBM Cloud Pak for Data]{: tag-cp4d}
 
     ```bash
     curl -X POST \
@@ -63,7 +63,7 @@ The following examples use the [HTTP interface](/docs/text-to-speech?topic=text-
 
 -   This example calls the `GET /v1/synthesize` method to synthesize the prompt, which must be URL-encoded:
 
-    ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+    [IBM Cloud]{: tag-ibm-cloud}
 
     ```bash
     curl -X GET -u apikey:{apikey } \
@@ -72,7 +72,7 @@ The following examples use the [HTTP interface](/docs/text-to-speech?topic=text-
     ```
     {: pre}
 
-    ![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+    [IBM Cloud Pak for Data]{: tag-cp4d}
 
     ```bash
     curl -X GET \

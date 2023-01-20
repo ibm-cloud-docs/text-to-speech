@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-08-19"
+  years: 2015, 2023
+lastupdated: "2023-01-14"
 
 subcollection: text-to-speech
 
@@ -23,7 +23,7 @@ The `GET /v1/voices` method lists information about all available voices. It tak
 
 The following example lists all voices that are supported by the service:
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+[IBM Cloud]{: tag-ibm-cloud}
 
 ```bash
 curl -X GET -u "apikey:{apikey}" \
@@ -31,7 +31,7 @@ curl -X GET -u "apikey:{apikey}" \
 ```
 {: pre}
 
-![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+[IBM Cloud Pak for Data]{: tag-cp4d}
 
 ```bash
 curl -X GET \
@@ -111,7 +111,7 @@ If you omit the `customization_id` parameter, the method returns JSON output for
 
 The following example returns information about the `en-US_LisaV3Voice` and the specified custom model:
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+[IBM Cloud]{: tag-ibm-cloud}
 
 ```bash
 curl -X GET -u "apikey:{apikey}" \
@@ -119,7 +119,7 @@ curl -X GET -u "apikey:{apikey}" \
 ```
 {: pre}
 
-![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+[IBM Cloud Pak for Data]{: tag-cp4d}
 
 ```bash
 curl -X GET \

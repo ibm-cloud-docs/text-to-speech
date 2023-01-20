@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-05-14"
+  years: 2021, 2023
+lastupdated: "2023-01-14"
 
 subcollection: text-to-speech
 
@@ -44,7 +44,7 @@ When listing all prompts for a custom model, the `prompts` array is empty if the
 
 The following example lists all custom prompts that are included in the custom model that has the specified customization ID:
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+[IBM Cloud]{: tag-ibm-cloud}
 
 ```bash
 curl -X GET -u "apikey:{apikey}" \
@@ -52,7 +52,7 @@ curl -X GET -u "apikey:{apikey}" \
 ```
 {: pre}
 
-![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+[IBM Cloud Pak for Data]{: tag-cp4d}
 
 ```bash
 curl -X GET \
@@ -94,7 +94,7 @@ The model contains three custom prompts. The first two prompts are associated wi
 
 The following example returns information about just the first custom prompt from the previous listing:
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+[IBM Cloud]{: tag-ibm-cloud}
 
 ```bash
 curl -X GET -u "apikey:{apikey}" \
@@ -102,7 +102,7 @@ curl -X GET -u "apikey:{apikey}" \
 ```
 {: pre}
 
-![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+[IBM Cloud Pak for Data]{: tag-cp4d}
 
 ```bash
 curl -X GET \
@@ -133,7 +133,7 @@ To delete a custom prompt from a custom model, use the `DELETE /v1/customization
 
 The following example deletes the specified custom prompt from the custom model that has specified customization ID:
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+[IBM Cloud]{: tag-ibm-cloud}
 
 ```bash
 curl -X DELETE -u "apikey:{apikey}" \
@@ -141,7 +141,7 @@ curl -X DELETE -u "apikey:{apikey}" \
 ```
 {: pre}
 
-![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+[IBM Cloud Pak for Data]{: tag-cp4d}
 
 ```bash
 curl -X DELETE \

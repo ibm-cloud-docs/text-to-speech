@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-10-03"
+  years: 2015, 2023
+lastupdated: "2023-01-14"
 
 subcollection: text-to-speech
 
@@ -45,19 +45,19 @@ The two versions of the `/v1/synthesize` method have the following parameters in
 :   Specifies a globally unique identifier (GUID) for a custom model that is to be used for the synthesis. A specified custom model must match the language of the voice that is used for the synthesis. If you include a customization ID, you must make the request with credentials for the instance of the service that owns the custom model. Omit the parameter to use the specified voice with no customization. For more information, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
 
 `rate_percentage` (query parameter, *optional* integer)
-:   ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** Specifies the global speaking rate for the entire synthesis request. The speaking rate is the speed at which the service speaks the text that it synthesizes into speech. A higher rate causes the text to be spoken more quickly; a lower rate causes the text to be spoken more slowly. The parameter changes the per-voice default rate for an entire request. For more information, see [Modifying the speaking rate](/docs/text-to-speech?topic=text-to-speech-synthesis-params#params-rate-percentage).
+:   [IBM Cloud]{: tag-ibm-cloud} Specifies the global speaking rate for the entire synthesis request. The speaking rate is the speed at which the service speaks the text that it synthesizes into speech. A higher rate causes the text to be spoken more quickly; a lower rate causes the text to be spoken more slowly. The parameter changes the per-voice default rate for an entire request. For more information, see [Modifying the speaking rate](/docs/text-to-speech?topic=text-to-speech-synthesis-params#params-rate-percentage).
 
 `pitch_percentage` (query parameter, *optional* integer)
-:   ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** Specifies the global speaking pitch for the entire synthesis request. The speaking pitch represents the tone of the speech that the service synthesizes. It represents how high or low the tone of the voice is perceived by the listener. A higher pitch results in speech that is spoken at a higher tone; a lower pitch results in speech that is spoken in a lower tone. The parameter changes the per-voice default pitch for an entire request. For more information, see [Modifying the speaking pitch](/docs/text-to-speech?topic=text-to-speech-synthesis-params#params-pitch-percentage).
+:   [IBM Cloud]{: tag-ibm-cloud} Specifies the global speaking pitch for the entire synthesis request. The speaking pitch represents the tone of the speech that the service synthesizes. It represents how high or low the tone of the voice is perceived by the listener. A higher pitch results in speech that is spoken at a higher tone; a lower pitch results in speech that is spoken in a lower tone. The parameter changes the per-voice default pitch for an entire request. For more information, see [Modifying the speaking pitch](/docs/text-to-speech?topic=text-to-speech-synthesis-params#params-pitch-percentage).
 
 `spell_out_mode` (query parameter, *optional* string)
-:   ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** *For German voices,* specifies how individual characters of a string are to be spelled out. By default, the service spells out individual characters at the same rate at which it synthesizes text for a language. You can use the parameter to direct the service to spell out individual characters more slowly, in groups of one (`singles`), two (`pairs`), or three (`triples`). For more information, see [Specifying how strings are spelled out](/docs/text-to-speech?topic=text-to-speech-synthesis-params#params-spell-out-mode).
+:   [IBM Cloud]{: tag-ibm-cloud} *For German voices,* specifies how individual characters of a string are to be spelled out. By default, the service spells out individual characters at the same rate at which it synthesizes text for a language. You can use the parameter to direct the service to spell out individual characters more slowly, in groups of one (`singles`), two (`pairs`), or three (`triples`). For more information, see [Specifying how strings are spelled out](/docs/text-to-speech?topic=text-to-speech-synthesis-params#params-spell-out-mode).
 
 `X-Watson-Metadata` (request header, *optional* string)
 :   Associates a customer ID with data that is passed with a request. For more information, see [Information security](/docs/text-to-speech?topic=text-to-speech-information-security).
 
 `X-Watson-Learning-Opt-Out` (request header, *optional* boolean)
-:   ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** Indicates whether the service logs request and response data to improve the service for future users. To prevent IBM from accessing your data for general service improvements, specify `true` for the parameter. Opting out directs IBM to write to disk *no* user data (text or audio) for your request. You can also opt out at the account level. For more information, see [Request logging](/docs/text-to-speech?topic=text-to-speech-data-security#data-security-request-logging).
+:   [IBM Cloud]{: tag-ibm-cloud} Indicates whether the service logs request and response data to improve the service for future users. To prevent IBM from accessing your data for general service improvements, specify `true` for the parameter. Opting out directs IBM to write to disk *no* user data (text or audio) for your request. You can also opt out at the account level. For more information, see [Request logging](/docs/text-to-speech?topic=text-to-speech-data-security#data-security-request-logging).
 
 If you specify an invalid query parameter or JSON field as part of the input to the `/v1/synthesize` method, the service returns a `Warnings` response header that describes and lists each invalid argument. The request succeeds despite the warnings.
 
@@ -70,7 +70,7 @@ Both the `POST` and `GET /v1/synthesize` methods accept plain input text or text
 
 -   The `POST /v1/synthesize` method accepts input text in the body of the request. You specify the input with a simple JSON construct that includes plain text or SSML. You must also specify a value of `application/json` for the `Content-Type` header.
 
-    ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+    [IBM Cloud]{: tag-ibm-cloud}
 
     ```bash
     curl -X POST -u "apikey:{apikey}" \
@@ -82,7 +82,7 @@ Both the `POST` and `GET /v1/synthesize` methods accept plain input text or text
     ```
     {: pre}
 
-    ![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+    [IBM Cloud Pak for Data]{: tag-cp4d}
 
     ```bash
     curl -X POST \
@@ -97,7 +97,7 @@ Both the `POST` and `GET /v1/synthesize` methods accept plain input text or text
 
 -   The `GET /v1/synthesize` method accepts input text that is specified by the `text` query parameter. You specify the input as plain text or SSML, both of which must be URL-encoded.
 
-    ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+    [IBM Cloud]{: tag-ibm-cloud}
 
     ```bash
     curl -X GET -u "apikey:{apikey}" \
@@ -107,7 +107,7 @@ Both the `POST` and `GET /v1/synthesize` methods accept plain input text or text
     ```
     {: pre}
 
-    ![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+    [IBM Cloud Pak for Data]{: tag-cp4d}
 
     ```bash
     curl -X GET \

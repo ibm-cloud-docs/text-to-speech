@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-08-19"
+  years: 2015, 2023
+lastupdated: "2023-01-14"
 
 subcollection: text-to-speech
 
@@ -28,7 +28,7 @@ You can provide a translation by using the sounds-like or the phonetic method (o
 
 -   **Sounds-like:** For this example, the sounds-like method is the simplest approach:
 
-    ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+    [IBM Cloud]{: tag-ibm-cloud}
 
     ```bash
     curl -X PUT -u "apikey:{apikey}" \
@@ -38,7 +38,7 @@ You can provide a translation by using the sounds-like or the phonetic method (o
     ```
     {: pre}
 
-    ![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+    [IBM Cloud Pak for Data]{: tag-cp4d}
 
     ```bash
     curl -X PUT \
@@ -51,7 +51,7 @@ You can provide a translation by using the sounds-like or the phonetic method (o
 
 -   **Phonetic IPA:** IPA requires use of the `<phoneme>` element with the `alphabet` attribute set to `ipa` and the `ph` attribute defined in IPA format:
 
-    ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+    [IBM Cloud]{: tag-ibm-cloud}
 
     ```bash
     curl -X PUT -u "apikey:{apikey}" \
@@ -61,7 +61,7 @@ You can provide a translation by using the sounds-like or the phonetic method (o
     ```
     {: pre}
 
-    ![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+    [IBM Cloud Pak for Data]{: tag-cp4d}
 
     ```bash
     curl -X PUT \
@@ -74,7 +74,7 @@ You can provide a translation by using the sounds-like or the phonetic method (o
 
 -   **Phonetic {{site.data.keyword.IBM_notm}} SPR:** SPR uses the `<phoneme>` element with the `alphabet` attribute set to `ibm` and the `ph` attribute defined in SPR format:
 
-    ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+    [IBM Cloud]{: tag-ibm-cloud}
 
     ```bash
     curl -X PUT -u "apikey:{apikey}" \
@@ -84,7 +84,7 @@ You can provide a translation by using the sounds-like or the phonetic method (o
     ```
     {: pre}
 
-    ![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+    [IBM Cloud Pak for Data]{: tag-cp4d}
 
     ```bash
     curl -X PUT \
@@ -102,7 +102,7 @@ To add one or more words to a custom model at one time, use the `POST /v1/custom
 
 The following example adds common sounds-like translations for the words `NCAA` and `iPhone` to a custom model:
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+[IBM Cloud]{: tag-ibm-cloud}
 
 ```bash
 curl -X POST -u "apikey:{apikey}" \
@@ -112,7 +112,7 @@ curl -X POST -u "apikey:{apikey}" \
 ```
 {: pre}
 
-![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+[IBM Cloud Pak for Data]{: tag-cp4d}
 
 ```bash
 curl -X POST \
@@ -137,7 +137,7 @@ The JSON content sent in the request body equates to the following:
 
 As mentioned in [Updating a custom model](/docs/text-to-speech?topic=text-to-speech-customModels#cuModelsUpdate), you can also use the `POST /v1/customizations/{customization_id}` method to add words to a custom model. The following example uses this method to add the same two words as the previous example; it makes no changes to the model's metadata. With the exception of the URL, the two methods are identical.
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+[IBM Cloud]{: tag-ibm-cloud}
 
 ```bash
 curl -X POST -u "apikey:{apikey}" \
@@ -147,7 +147,7 @@ curl -X POST -u "apikey:{apikey}" \
 ```
 {: pre}
 
-![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+[IBM Cloud Pak for Data]{: tag-cp4d}
 
 ```bash
 curl -X POST \
@@ -193,7 +193,7 @@ The following examples of the `PUT /v1/customizations/{customization_id}/words/{
 
 -   **Sounds-like:**
 
-    ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+    [IBM Cloud]{: tag-ibm-cloud}
 
     ```bash
     curl -X PUT -u "apikey:{apikey}" \
@@ -203,7 +203,7 @@ The following examples of the `PUT /v1/customizations/{customization_id}/words/{
     ```
     {: pre}
 
-    ![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+    [IBM Cloud Pak for Data]{: tag-cp4d}
 
     ```bash
     curl -X PUT \
@@ -216,7 +216,7 @@ The following examples of the `PUT /v1/customizations/{customization_id}/words/{
 
 -   **Phonetic IPA:**
 
-    ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+    [IBM Cloud]{: tag-ibm-cloud}
 
     ```bash
     curl -X PUT -u "apikey:{apikey}" \
@@ -226,7 +226,7 @@ The following examples of the `PUT /v1/customizations/{customization_id}/words/{
     ```
     {: pre}
 
-    ![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+    [IBM Cloud Pak for Data]{: tag-cp4d}
 
     ```bash
     curl -X PUT \
@@ -239,7 +239,7 @@ The following examples of the `PUT /v1/customizations/{customization_id}/words/{
 
 -   **Phonetic {{site.data.keyword.IBM_notm}} SPR:**
 
-    ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+    [IBM Cloud]{: tag-ibm-cloud}
 
     ```bash
     curl -X PUT -u "apikey:{apikey}" \
@@ -249,7 +249,7 @@ The following examples of the `PUT /v1/customizations/{customization_id}/words/{
     ```
     {: pre}
 
-    ![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+    [IBM Cloud Pak for Data]{: tag-cp4d}
 
     ```bash
     curl -X PUT \
@@ -267,7 +267,7 @@ To query the translation of a single word from a custom model, use the `GET /v1/
 
 The following example queries a custom model for the translation of the word `IEEE`:
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+[IBM Cloud]{: tag-ibm-cloud}
 
 ```bash
 curl -X GET -u "apikey:{apikey}" \
@@ -275,7 +275,7 @@ curl -X GET -u "apikey:{apikey}" \
 ```
 {: pre}
 
-![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+[IBM Cloud Pak for Data]{: tag-cp4d}
 
 ```bash
 curl -X GET \
@@ -298,7 +298,7 @@ If the word has the sounds-like translation in the model, the example returns th
 
 To see the translations for all of the words defined in a custom model, use the `GET /v1/customizations/{customization_id}/words` method. The following example uses the method to list the entries from a custom model that contains sounds-like translations for three words:
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+[IBM Cloud]{: tag-ibm-cloud}
 
 ```bash
 curl -X GET -u "apikey:{apikey}" \
@@ -306,7 +306,7 @@ curl -X GET -u "apikey:{apikey}" \
 ```
 {: pre}
 
-![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+[IBM Cloud Pak for Data]{: tag-cp4d}
 
 ```bash
 curl -X GET \
@@ -339,7 +339,7 @@ The method returns a JSON array with the following data. For Japanese custom mod
 
 As described in [Querying a custom model](/docs/text-to-speech?topic=text-to-speech-customModels#cuModelsQuery), you can also use the `GET /v1/customizations/{customization_id}` method to see both the metadata and the words for a custom model:
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+[IBM Cloud]{: tag-ibm-cloud}
 
 ```bash
 curl -X GET -u "apikey:{apikey}" \
@@ -347,7 +347,7 @@ curl -X GET -u "apikey:{apikey}" \
 ```
 {: pre}
 
-![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+[IBM Cloud Pak for Data]{: tag-cp4d}
 
 ```bash
 curl -X GET \
@@ -399,7 +399,7 @@ This method is useful because it allows you to query a word from any language an
 
 The following example obtains the pronunciation for the word `IEEE` in the default IPA format:
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+[IBM Cloud]{: tag-ibm-cloud}
 
 ```bash
 curl -X GET -u "apikey:{apikey}" \
@@ -407,7 +407,7 @@ curl -X GET -u "apikey:{apikey}" \
 ```
 {: pre}
 
-![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+[IBM Cloud Pak for Data]{: tag-cp4d}
 
 ```bash
 curl -X GET \
@@ -427,7 +427,7 @@ The response shows the IPA symbols for the pronunciation:
 
 The following example enters a sounds-like translation for the word `IEEE` and obtains the phonetic equivalent in {{site.data.keyword.IBM_notm}} SPR format. Obtaining the phonetic pronunciation for a sounds-like translation is an especially interesting approach to composing a phonetic translation. The spaces of the word are URL-encoded in the example.
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+[IBM Cloud]{: tag-ibm-cloud}
 
 ```bash
 curl -X GET -u "apikey:{apikey}" \
@@ -435,7 +435,7 @@ curl -X GET -u "apikey:{apikey}" \
 ```
 {: pre}
 
-![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+[IBM Cloud Pak for Data]{: tag-cp4d}
 
 ```bash
 curl -X GET \
@@ -460,7 +460,7 @@ To delete a word from a custom model, use the `DELETE /v1/customizations/{custom
 
 The following example deletes the word `IEEE` from the specified custom model:
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+[IBM Cloud]{: tag-ibm-cloud}
 
 ```bash
 curl -X DELETE -u "apikey:{apikey}" \
@@ -468,7 +468,7 @@ curl -X DELETE -u "apikey:{apikey}" \
 ```
 {: pre}
 
-![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+[IBM Cloud Pak for Data]{: tag-cp4d}
 
 ```bash
 curl -X DELETE \

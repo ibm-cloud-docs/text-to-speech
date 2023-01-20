@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-12-09"
+  years: 2015, 2023
+lastupdated: "2023-01-14"
 
 keywords: text to speech,IBM cloud,getting started,tutorial,synthesize audio,speech synthesis
 
@@ -27,7 +27,7 @@ The {{site.data.keyword.texttospeechfull}} service converts written text to natu
 The tutorial uses the `curl` command-line utility to demonstrate REST API calls. For more information about `curl`, see [Using curl with Watson examples](/docs/watson?topic=watson-using-curl).
 {: note}
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** Watch the following video for a visual summary of getting started with the {{site.data.keyword.texttospeechshort}} service.
+[IBM Cloud]{: tag-ibm-cloud} Watch the following video for a visual summary of getting started with the {{site.data.keyword.texttospeechshort}} service.
 
 ![Getting started with the {{site.data.keyword.texttospeechshort}} service](https://video.ibm.com/embed/channel/23952663/video/text-to-speech-get-started){: video output="iframe" data-script="none" id="watsonmediaplayer" width="560" height="315" scrolling="no" allowfullscreen webkitallowfullscreen mozAllowFullScreen frameborder="0" style="border: 0 none transparent;"}
 
@@ -37,7 +37,7 @@ The tutorial uses the `curl` command-line utility to demonstrate REST API calls.
 ### {{site.data.keyword.cloud_notm}}
 {: #getting-started-before-you-begin-cloud}
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
+[IBM Cloud]{: tag-ibm-cloud}
 
 -   Create an instance of the service: {: hide-dashboard}
 
@@ -62,7 +62,7 @@ This tutorial uses an API key to authenticate. In production, use an IAM token. 
 ### {{site.data.keyword.icp4dfull_notm}}
 {: #getting-started-before-you-begin-icpd}
 
-![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}} only**
+[IBM Cloud Pak for Data]{: tag-cp4d}
 
 1.  Provision an instance of {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}. For more information about installing the service and provisioning a service instance, see [Installing and managing {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-speech-install-data).
 1.  From the {{site.data.keyword.icp4dfull_notm}} web client menu, choose **My Instances**.
@@ -83,7 +83,7 @@ You can use a browser or other tools to play the audio files that are produced b
 
 1.  Issue the following command to synthesize the string "hello world". The request produces a WAV file that is named `hello_world.wav`.
 
-    ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+    [IBM Cloud]{: tag-ibm-cloud}
 
     -   Replace `{apikey}` and `{url}` with your API key and URL. {: hide-dashboard}
 
@@ -97,10 +97,9 @@ You can use a browser or other tools to play the audio files that are produced b
     ```
     {: pre}
 
-    ![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+    [IBM Cloud Pak for Data]{: tag-cp4d}
 
-    -   Replace `{token}` with the access token for your service instance.
-    -   Replace `{url}` with the URL for your service instance.
+    -   Replace `{token}` and `{url}` with the access token and URL for your service instance.
 
     ```bash
     curl -X POST \
@@ -121,7 +120,7 @@ The following command again uses the `POST /v1/synthesize` method to synthesize 
 
 1.  Issue the following command to synthesize the string "hello world" but with a different voice. The request produces an Ogg file that is named `hello_world.ogg`.
 
-    ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+    [IBM Cloud]{: tag-ibm-cloud}
 
     -   Replace `{apikey}` and `{url}` with your API key and URL. {: hide-dashboard}
 
@@ -134,10 +133,9 @@ The following command again uses the `POST /v1/synthesize` method to synthesize 
     ```
     {: pre}
 
-    ![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+    [IBM Cloud Pak for Data]{: tag-cp4d}
 
-    -   Replace `{token}` with the access token for your service instance.
-    -   Replace `{url}` with the URL for your service instance.
+    -   Replace `{token}` and `{url}` with the access token and URL for your service instance.
 
     ```bash
     curl -X POST \
@@ -158,7 +156,7 @@ The following command uses the `GET /v1/synthesize` method to synthesize Spanish
 
 1.  Issue the following command to synthesize the string "hola mundo" and produce a WAV file that is named `hola_mundo.wav`.
 
-    ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+    [IBM Cloud]{: tag-ibm-cloud}
 
     -   Replace `{apikey}` and `{url}` with your API key and URL. {: hide-dashboard}
 
@@ -169,10 +167,9 @@ The following command uses the `GET /v1/synthesize` method to synthesize Spanish
     ```
     {: pre}
 
-    ![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+    [IBM Cloud Pak for Data]{: tag-cp4d}
 
-    -   Replace `{token}` with the access token for your service instance.
-    -   Replace `{url}` with the URL for your service instance.
+    -   Replace `{token}` and `{url}` with the access token and URL for your service instance.
 
     ```bash
     curl -X POST \

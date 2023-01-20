@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-05-14"
+  years: 2021, 2023
+lastupdated: "2023-01-14"
 
 subcollection: text-to-speech
 
@@ -34,7 +34,7 @@ The array is empty if no speaker models are defined for the service instance.
 
 The following example returns all of the available speaker models for the specified service credentials:
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+[IBM Cloud]{: tag-ibm-cloud}
 
 ```bash
 curl -X GET -u "apikey:{apikey}" \
@@ -42,7 +42,7 @@ curl -X GET -u "apikey:{apikey}" \
 ```
 {: pre}
 
-![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+[IBM Cloud Pak for Data]{: tag-cp4d}
 
 ```bash
 curl -X GET \
@@ -90,7 +90,7 @@ The `customizations` array is empty if the speaker model is not associated with 
 
 The following example returns all of the custom prompts with which the specified `speaker_id` is associated:
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+[IBM Cloud]{: tag-ibm-cloud}
 
 ```bash
 curl -X GET -u "apikey:{apikey}" \
@@ -98,7 +98,7 @@ curl -X GET -u "apikey:{apikey}" \
 ```
 {: pre}
 
-![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+[IBM Cloud Pak for Data]{: tag-cp4d}
 
 ```bash
 curl -X GET \
@@ -157,7 +157,7 @@ To delete a speaker model, use the `DELETE /v1/speakers/{speaker_id}` method. De
 
 The following example deletes the speaker model that has the specified speaker ID:
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+[IBM Cloud]{: tag-ibm-cloud}
 
 ```bash
 curl -X DELETE -u "apikey:{apikey}" \
@@ -165,7 +165,7 @@ curl -X DELETE -u "apikey:{apikey}" \
 ```
 {: pre}
 
-![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+[IBM Cloud Pak for Data]{: tag-cp4d}
 
 ```bash
 curl -X DELETE \

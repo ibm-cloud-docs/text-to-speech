@@ -1,7 +1,7 @@
 ---
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-12-15"
+  years: 2015, 2023
+lastupdated: "2023-01-20"
 
 keywords: text to speech release notes,text to speech for IBM cloud release notes
 
@@ -16,7 +16,7 @@ content-type: release-note
 # Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}}
 {: #release-notes}
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
+[IBM Cloud]{: tag-ibm-cloud}
 
 The following features and changes were included for each release and update of managed instances of {{site.data.keyword.texttospeechfull}} that are hosted on {{site.data.keyword.cloud_notm}} or for instances that are hosted on [IBM Cloud Pak for Data as a Service](https://dataplatform.cloud.ibm.com/docs/content/wsj/landings/wtts.html){: external}. Unless otherwise noted, all changes are compatible with earlier releases and are automatically and transparently available to all new and existing applications.
 {: shortdesc}
@@ -26,11 +26,26 @@ For information about known limitations of the service, see [Known limitations](
 For information about releases and updates of the service for {{site.data.keyword.icp4dfull_notm}}, see [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes-data).
 {: note}
 
+## 20 January 2023
+{: #text-to-speech-20january2023}
+{: release-note}
+
+Cloud Foundry deprecation and migration to resource groups
+:   {{site.data.keyword.IBM_notm}} announced the deprecation of IBM Cloud Foundry on 31 May 2022. As of 30 November 2022, new {{site.data.keyword.IBM_notm}} Cloud Foundry applications cannot be created and only existing users are able to deploy applications. {{site.data.keyword.IBM_notm}} Cloud Foundry reaches end of support on 1 June 2023. At that time, any {{site.data.keyword.IBM_notm}} Cloud Foundry application runtime instances running {{site.data.keyword.IBM_notm}} Cloud Foundry applications will be permanently disabled, deprovisioned, and deleted. For more information about the deprecation, see [Deprecation of {{site.data.keyword.IBM_notm}} Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-deprecation).
+
+    To continue to use your {{site.data.keyword.cloud_notm}} applications beyond 1 June 2023, you must migrate to resource groups before that date. Resource groups are conceptually similar to Cloud Foundry spaces. They include several extra benefits, such as finer-grained access control by using IBM Cloud Identity and Access Management (IAM), the ability to connect service instances to apps and service across different regions, and an easy way to view usage per group. For more information about migration, see [Migrating Cloud Foundry service instances and apps to a resource group](/docs/account?topic=account-migrate).
+
+Defect fix: Specifying large cardinal numbers with the `<say-as>` element no longer causes errors for English voices
+:   **Defect fix:** You can now use the `<say-as>` element to pronounce large numbers as cardinal numbers. Previously, enclosing a large number in the `<say-as>` element with the attribute `interpret-as="cardinal"` could cause speech synthesis to fail for English voices. For example, `<say-as interpret-as="cardinal">3,200</say-as>` could cause the service to generate an error. For more information, see [cardinal](/docs/text-to-speech?topic=text-to-speech-elements#say-as-cardinal) in the topic *SSML elements*.
+
+Defect fix: Homonyms and other words are now pronounced correctly by English voices
+:   **Defect fix:** The service now pronounces homonyms and other words correctly based on their context in English text that is to be synthesized. Previously, words such as `advocate` and `wifi` could be pronounced incorrectly by English voices.
+
 ## 30 November 2022
 {: #text-to-speech-30november2022}
 {: release-note}
 
-Defect fix for custom model naming documentation
+Defect fix: Add rules for custom model naming documentation
 :   **Defect fix:** The documentation now provides detailed rules for naming custom models. For more information, see
     -   [Creating a custom model](/docs/text-to-speech?topic=text-to-speech-customModels#cuModelsCreate)
     -   [API & SDK reference](https://{DomainName}/apidocs/text-to-speech){: external}
@@ -62,7 +77,6 @@ New US English expressive neural voices
 
 New speaking styles with expressive neural voices
 :   The expressive neural voices determine the sentiment of the text from the context of its words and phrases. The speech that they produce, in addition to having a very conversational style, reflects the mood of the text. But you can embellish the voices' natural tendencies by indicating that all or some of the text is to emphasize one of the following speaking styles:
-
     -   **Cheerful** - Expresses happiness and good news.
     -   **Empathetic** - Expresses empathy or sympathy.
     -   **Neutral** - Expresses objectivity and evenness.
@@ -205,8 +219,8 @@ Change to word timing response for WebSocket interface
 {: #text-to-speech-26january2022}
 {: release-note}
 
-Defect fixes for SSML documentation
-:   **Defect fixes:** The SSML documentation was updated to correct the following errors:
+Defect fix: Improve SSML documentation
+:   **Defect fix:** The SSML documentation was updated to correct the following errors:
     -   The examples of the `<break>` element are now correct. The element is unary, as now shown in the examples. The previous examples included open and close tags with embedded text. The embedded text was not spoken by the service. For more information, see [The `<break>` element](/docs/text-to-speech?topic=text-to-speech-elements#break_element).
     -   The service supports SSML version 1.1. All references and examples now use the correct version. The documentation previously referred to version 1.0.
 
@@ -220,8 +234,8 @@ New Czech neural voice: `cs-CZ_AlenaVoice`
 New Belgian Dutch neural voice: `nl-BE_BramVoice`
 :   A new male Belgian Dutch (Flemish) voice, `nl-BE_BramVoice`, is now available. The voice is a neural voice. For more information about the IPA symbols for the language, see [Dutch (Belgian) symbols](/docs/text-to-speech?topic=text-to-speech-beSymbols).
 
-Defect fixes for SSML and speech synthesis
-:   **Defect fixes:**  The following defects for the Speech Synthesis Markup Language (SSML) and speech synthesis were fixed with this release:
+Defect fix: Improve SSML and speech synthesis
+:   **Defect fix:**  The following defects for the Speech Synthesis Markup Language (SSML) and speech synthesis were fixed with this release:
 
     -   The `pitch` attribute of the `<prosody>` element is now applied to all specified text. Previously, the pitch change was not always applied to the first word of the affected text. Also, the documentation now includes additional guidance about specifying a `pitch` value. For more information, see [The `pitch` attribute](/docs/text-to-speech?topic=text-to-speech-elements#prosody-pitch).
     -   Speech synthesis of Japanese text now speaks the audio more slowly. Previously, the synthesized speech was being spoken too quickly. If you find that synthesis of Japanese text is still spoken too quickly for your application, use the `rate` attribute of the SSML `<prosody>` element to control the rate of speech. For more information, see [The `rate` attribute](/docs/text-to-speech?topic=text-to-speech-elements#prosody-rate).
@@ -247,14 +261,14 @@ New Swedish neural voice: `sv-SE_IngridVoice`
 New US HIPAA support for Premium plans in Dallas location
 :   US Health Insurance Portability and Accountability Act (HIPAA) support is now available for Premium plans that are hosted in the Dallas (`us-south`) location. For more information, see [Health Insurance Portability and Accountability Act (HIPAA)](/docs/text-to-speech?topic=text-to-speech-information-security#hipaa).
 
-Defect fix for Latin American Spanish enhanced neural voice
+Defect fix: Improve Latin American Spanish enhanced neural voice
 :   **Defect fix:** For the Latin American Spanish voice (`es-LA_SofiaV3Voice`), questions of all types now use the correct intonation.
 
 ## 16 September 2021
 {: #text-to-speech-16september2021}
 {: release-note}
 
-Defect fix for Castilian Spanish and North American Spanish enhanced neural voices
+Defect fix: Improve Castilian Spanish and North American Spanish enhanced neural voices
 :   **Defect fix:** For the Castilian Spanish (`es-ES_EnriqueV3Voice` and `es-ES_LauraV3Voice`) and North American Spanish (`es-US_SofiaV3Voice`) voices, questions of all types now use the correct intonation. For the Latin American Spanish voice (`es-LA_SofiaV3Voice`), some questions do not use the correct intonation and sound instead like statements. The Latin American Spanish voice will be fixed soon.
 
 ## 16 July 2021
@@ -420,7 +434,7 @@ New support for Cross-Origin Resource Sharing
 {: #text-to-speech-10september2020}
 {: release-note}
 
-Defect fix for Japanese voice
+Defect fix: Improve Japanese voice
 :   **Defect fix:** For the `ja-JP_EmiV3Voice` voice, the service now correctly parses SSML input text that includes a prosody rate specification. Previously, the following use of the `<prosody>` element worked properly:
 
     ```xml
@@ -574,8 +588,8 @@ New US HIPAA support for Premium plans in Washington, DC, location
 {: #text-to-speech-22august2019}
 {: release-note}
 
-Defect fixes and improvements
-:   **Defect fixes:** The service was updated for small defect fixes and improvements.
+Defect fix: Multiple small improvements
+:   **Defect fix:** The service was updated for small defect fixes and improvements.
 
 ## 30 July 2019
 {: #text-to-speech-30july2019}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2021-10-20"
+  years: 2015, 2023
+lastupdated: "2023-01-14"
 
 subcollection: text-to-speech
 
@@ -23,7 +23,7 @@ The first two examples generate a custom pronunciation for `IEEE` that is based 
 
 -   The HTTP `GET /v1/synthesize` method:
 
-    ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+    [IBM Cloud]{: tag-ibm-cloud}
 
     ```bash
     curl -X GET -u "apikey:{apikey}" \
@@ -33,7 +33,7 @@ The first two examples generate a custom pronunciation for `IEEE` that is based 
     ```
     {: pre}
 
-    ![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+    [IBM Cloud Pak for Data]{: tag-cp4d}
 
     ```bash
     curl -X GET \
@@ -46,7 +46,7 @@ The first two examples generate a custom pronunciation for `IEEE` that is based 
 
 -   The HTTP `POST /v1/synthesize` method:
 
-    ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+    [IBM Cloud]{: tag-ibm-cloud}
 
     ```bash
     curl -X POST -u "apikey:{apikey}" \
@@ -58,7 +58,7 @@ The first two examples generate a custom pronunciation for `IEEE` that is based 
     ```
     {: pre}
 
-    ![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+    [IBM Cloud Pak for Data]{: tag-cp4d}
 
     ```bash
     curl -X POST \

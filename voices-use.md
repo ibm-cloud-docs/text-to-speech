@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-08-19"
+  years: 2015, 2023
+lastupdated: "2023-01-14"
 
 subcollection: text-to-speech
 
@@ -23,7 +23,7 @@ Be sure to specify a voice that matches the language of the input text. For exam
 
 The following example HTTP `POST` request uses the voice `en-US_AllisonV3Voice` for speech synthesis:
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+[IBM Cloud]{: tag-ibm-cloud}
 
 ```bash
 curl -X POST -u "apikey:{apikey}" \
@@ -35,7 +35,7 @@ curl -X POST -u "apikey:{apikey}" \
 ```
 {: pre}
 
-![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+[IBM Cloud Pak for Data]{: tag-cp4d}
 
 ```bash
 curl -X POST \
@@ -50,7 +50,7 @@ curl -X POST \
 
 The following example shows an equivalent HTTP `GET` request for speech synthesis:
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+[IBM Cloud]{: tag-ibm-cloud}
 
 ```bash
 curl -X GET -u "apikey:{apikey}" \
@@ -59,7 +59,7 @@ curl -X GET -u "apikey:{apikey}" \
 ```
 {: pre}
 
-![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+[IBM Cloud Pak for Data]{: tag-cp4d}
 
 ```bash
 curl -X POST \
@@ -74,7 +74,7 @@ curl -X POST \
 
 If you omit the `voice` parameter from a request, the service uses the US English `en-US_MichaelV3Voice` by default. This default applies to all speech synthesis requests and to the  `GET /v1/pronunciation` method.
 
-![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}} only** If you do not install the `en-US_MichaelV3Voice`, it cannot serve as the default voice. In this case, you must either
+[IBM Cloud Pak for Data]{: tag-cp4d} If you do not install the `en-US_MichaelV3Voice`, it cannot serve as the default voice. In this case, you must either
 
 -   Use the `voice` parameter to pass the voice that is to be used with each request.
 -   Specify a new default voice for your installation of {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} by using the `defaultTTSVoice` property in the Speech services custom resource. For more information, see  [Installing {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.0?topic=speech-installing-watson-text){: external}.

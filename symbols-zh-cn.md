@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2022
-lastupdated: "2022-10-27"
+  years: 2019, 2023
+lastupdated: "2023-01-14"
 
 subcollection: text-to-speech
 
@@ -13,7 +13,7 @@ subcollection: text-to-speech
 # Chinese (Mandarin) symbols
 {: #zhSymbols}
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
+[IBM Cloud]{: tag-ibm-cloud}
 
 The service supports the following symbols for Mandarin (Simplified) Chinese. Chinese symbols are described by using [Pinyin](https://en.wikipedia.org/wiki/Pinyin){: external}, which is a system that uses Latin characters to express how Chinese characters sound.
 
