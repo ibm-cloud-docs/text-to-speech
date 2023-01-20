@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-05-07"
+  years: 2021, 2023
+lastupdated: "2023-01-14"
 
 subcollection: text-to-speech
 
@@ -34,7 +34,7 @@ The following status and support information applies to Tune by Example:
 
 -   Tune by Example is beta functionality that is available only for US English. You can add prompts only to custom models whose language is `en-US`. You can use a custom prompt only with with US English voices.
 -   Custom models, custom prompts, and speaker models are owned by the instance of the service whose credentials are used to create them. Request logging and data privacy are supported for all customization components. For more information about these topics, see [Usage notes for customization](/docs/text-to-speech?topic=text-to-speech-customModels#customGuidelines).
--   ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** You must have the Standard or Premium pricing plan to use Tune by Example. The feature is part of customization, which is restricted to these plans. For more information, see the {{site.data.keyword.texttospeechshort}} service in the [{{site.data.keyword.cloud}} Catalog](https://{DomainName}/catalog/text-to-speech){: external}.
+-   [IBM Cloud]{: tag-ibm-cloud} You must have the Standard or Premium pricing plan to use Tune by Example. The feature is part of customization, which is restricted to these plans. For more information, see the {{site.data.keyword.texttospeechshort}} service in the [{{site.data.keyword.cloud}} Catalog](https://{DomainName}/catalog/text-to-speech){: external}.
 
 ## How Tune by Example works
 {: #tbe-intro-how}

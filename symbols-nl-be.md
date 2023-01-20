@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2022
-lastupdated: "2022-10-27"
+  years: 2021, 2023
+lastupdated: "2023-01-14"
 
 subcollection: text-to-speech
 
@@ -13,7 +13,7 @@ subcollection: text-to-speech
 # Dutch (Belgian) symbols
 {: #beSymbols}
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
+[IBM Cloud]{: tag-ibm-cloud}
 
 The service supports the following symbols for Belgian Dutch (Flemish).
 

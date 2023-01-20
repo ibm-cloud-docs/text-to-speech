@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-11-28"
+  years: 2022, 2023
+lastupdated: "2023-01-14"
 
 subcollection: text-to-speech
 
@@ -55,7 +55,7 @@ If you use the `rate_percentage` parameter and also use the `rate` attribute of 
 
 The following HTTP `POST /v1/synthesize` method uses the `rate_percentage` query parameter with a value of `-5`. The resulting audio is spoken at a rate that is five percent slower than it is by default. The example uses the US English voice `en-US_AllisonV3Voice`.
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+[IBM Cloud]{: tag-ibm-cloud}
 
 ```sh
 curl -X POST -u "apikey:{apikey}" \
@@ -67,7 +67,7 @@ curl -X POST -u "apikey:{apikey}" \
 ```
 {: pre}
 
-![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+[IBM Cloud Pak for Data]{: tag-cp4d}
 
 ```sh
 curl -X POST \
@@ -129,7 +129,7 @@ If you use the `pitch_percentage` parameter and also use the `pitch` attribute o
 
 The following HTTP `POST /v1/synthesize` method uses the `pitch_percentage` query parameter with a value of `5`. The resulting audio is spoken with a pitch that is five percent higher than it is by default. The example uses the US English voice `en-US_AllisonV3Voice`.
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+[IBM Cloud]{: tag-ibm-cloud}
 
 ```sh
 curl -X POST -u "apikey:{apikey}" \
@@ -141,7 +141,7 @@ curl -X POST -u "apikey:{apikey}" \
 ```
 {: pre}
 
-![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+[IBM Cloud Pak for Data]{: tag-cp4d}
 
 ```sh
 curl -X POST \
@@ -210,7 +210,7 @@ Alphanumeric strings that mix letters and digits can yield different groupings o
 
 The following HTTP `POST /v1/synthesize` method uses the `spell_out_mode` query parameter with a value of `singles`. The example uses the German voice `de-DE_ErikaV3Voice`. The alphanumeric text to be synthesized is a hexadecimal string that is wrapped in a `<say-as>` element and interpreted as `digits`.
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+[IBM Cloud]{: tag-ibm-cloud}
 
 ```sh
 curl -X POST -u "apikey:{apikey}" \
@@ -222,7 +222,7 @@ curl -X POST -u "apikey:{apikey}" \
 ```
 {: pre}
 
-![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+[IBM Cloud Pak for Data]{: tag-cp4d}
 
 ```sh
 curl -X POST \

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2022
-lastupdated: "2022-10-27"
+  years: 2020, 2023
+lastupdated: "2023-01-16"
 
 keywords: faqs,frequently asked questions,question,Text to Speech
 
@@ -122,7 +122,9 @@ Review the guidelines for working with the customization interface before you be
 {: #faq-custom-create-voice}
 {: faq}
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** As a premium customer, you can work with {{site.data.keyword.IBM_notm}} to train a new custom voice for your specific use case and target market. Creating a custom voice is different from customizing one of the service's existing voices. A custom voice is a unique new voice that is based on audio training data that the customer provides. {{site.data.keyword.IBM_notm}} can train a custom voice with as little as one hour of training data.
+[IBM Cloud]{: tag-ibm-cloud}
+
+As a premium customer, you can work with {{site.data.keyword.IBM_notm}} to train a new custom voice for your specific use case and target market. Creating a custom voice is different from customizing one of the service's existing voices. A custom voice is a unique new voice that is based on audio training data that the customer provides. {{site.data.keyword.IBM_notm}} can train a custom voice with as little as one hour of training data.
 
 To request a custom voice or for more information, complete and submit this [{{site.data.keyword.IBM_notm}} Request Form](https://form.asana.com/?k=CBuXK1uwlAf5ek6FwB6mcg&d=8612789739828){: external}.
 
@@ -153,4 +155,6 @@ For more information, see [Rules for creating custom entries](/docs/text-to-spee
 {: #faq-cost}
 {: faq}
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only.** The {{site.data.keyword.texttospeechshort}} service offers multiple pricing plans. For more information about pricing, see the {{site.data.keyword.texttospeechshort}} service in the [IBM Cloud Catalog](https://cloud.ibm.com/catalog/text-to-speech).
+[IBM Cloud]{: tag-ibm-cloud}
+
+The {{site.data.keyword.texttospeechshort}} service offers multiple pricing plans. For more information about pricing, see the {{site.data.keyword.texttospeechshort}} service in the [IBM Cloud Catalog](https://cloud.ibm.com/catalog/text-to-speech).

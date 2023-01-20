@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2022
-lastupdated: "2022-12-01"
+  years: 2019, 2023
+lastupdated: "2023-01-14"
 
 keywords: text to speech release notes,text to speech for IBM cloud pak for data release notes
 
@@ -15,7 +15,7 @@ subcollection: text-to-speech
 # Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}
 {: #release-notes-data}
 
-![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}} only**
+[IBM Cloud Pak for Data]{: tag-cp4d}
 
 The following features and changes were included for each release and update of installed or on-premises instances of {{site.data.keyword.texttospeechfull}} for {{site.data.keyword.icp4dfull_notm}}. Unless otherwise noted, all changes are compatible with earlier releases and are automatically and transparently available to all new and existing applications.
 {: shortdesc}
@@ -89,7 +89,7 @@ Security vulnerabilities addressed
 :   The following security vulnerabilities have been fixed:
     -   [Security Bulletin: IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data is vulnerable to a cross-configuration attack against OpenPGP (CVE-2021-40528)](https://www.ibm.com/support/pages/node/6843867){: external}
     -   [Security Bulletin: IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data is vulnerable to arbitrary code execution in PCRE2 (CVE-2022-1586)](https://www.ibm.com/support/pages/node/6843869){: external}
-    -   [ Security Bulletin: IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data is vulnerable to a heap-based buffer overflow in Vim (CVE-2022-1621)](https://www.ibm.com/support/pages/node/6843871){: external}
+    -   [Security Bulletin: IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data is vulnerable to a heap-based buffer overflow in Vim (CVE-2022-1621)](https://www.ibm.com/support/pages/node/6843871){: external}
     -   [Security Bulletin: IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data is vulnerable to a buffer overflow in Vim (CVE-2022-1629)](https://www.ibm.com/support/pages/node/6843873){: external}
     -   [Security Bulletin: IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data is vulnerable to arbitrary code execution in Vim (CVE-2022-1785, CVE-2022-1897, CVE-2022-1927)](https://www.ibm.com/support/pages/node/6843875){: external}
     -   [Security Bulletin: IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data is vulnerable to a security restrictions bypass in cURL libcurl (CVE-2022-22576)](https://www.ibm.com/support/pages/node/6843877){: external}
@@ -666,13 +666,10 @@ Installing voices
     For more information about using the custom resource to install voices, see [Installing {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.0?topic=speech-installing-watson-text){: external}.
 
 Specifying a voice for speech synthesis
-:   Both the HTTP `POST` and `GET /v1/synthesize` methods, as well as the WebSocket `/v1/synthesize` method, accept an optional `voice` query parameter that you use to specify the voice that is to be used for speech synthesis. If you omit the `voice` parameter, the service uses a default voice, which depends on the version of the service that you are using:
+:   Both the HTTP `POST` and `GET /v1/synthesize` methods, as well as the WebSocket `/v1/synthesize` method, accept an optional `voice` query parameter that you use to specify the voice that is to be used for speech synthesis. If you omit the `voice` parameter, the service uses a default voice. The default voice depends on the voices that you installed:
 
-    -   ![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}** The service always uses the US English `en-US_MichaelV3Voice` by default.
-    -   ![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}** The default voice depends on the voices that you installed:
-
-        -   *If you installed the enhanced neural voices,* the service uses the US English `en-US_MichaelV3Voice` by default. If that voice is not installed, you must specify a voice.
-        -   *If you installed the neural voices,* the service always uses the Australian English `en-AU_MadisonVoice` by default.
+    -   *If you installed the enhanced neural voices,* the service uses the US English `en-US_MichaelV3Voice` by default. If that voice is not installed, you must specify a voice.
+    -   *If you installed the neural voices,* the service always uses the Australian English `en-AU_MadisonVoice` by default.
 
     For more information, see [Using a voice for speech synthesis](/docs/text-to-speech?topic=text-to-speech-voices-use).
 

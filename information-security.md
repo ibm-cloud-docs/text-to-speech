@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2021-10-03"
+  years: 2015, 2023
+lastupdated: "2023-01-14"
 
 subcollection: text-to-speech
 
@@ -36,7 +36,7 @@ Learn more about {{site.data.keyword.IBM_notm}}'s own GDPR readiness journey and
 ## Health Insurance Portability and Accountability Act (HIPAA)
 {: #hipaa}
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
+[IBM Cloud]{: tag-ibm-cloud}
 
 US Health Insurance Portability and Accountability Act (HIPAA) support is available for Premium plans that are hosted in the Washington, DC, (`us-east`) and Dallas (`us-south`) locations. For more information, see [Enabling EU and HIPAA supported settings](https://cloud.ibm.com/docs/account?topic=account-eu-hipaa-supported#eu-hipaa-supported){: external}.
 
@@ -60,7 +60,7 @@ Experimental and beta features are not intended for use with a production enviro
 
 To associate a customer ID with data, include the `X-Watson-Metadata` header with the request that passes the information. You pass the string `customer_id={id}` as the argument of the header. The following example associates the customer ID `my_customer_ID` with the data passed with a `POST /v1/synthesize` request:
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+[IBM Cloud]{: tag-ibm-cloud}
 
 ```bash
 curl -X POST -u "apikey:{apikey}" \
@@ -73,7 +73,7 @@ curl -X POST -u "apikey:{apikey}" \
 ```
 {: pre}
 
-![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+[IBM Cloud Pak for Data]{: tag-cp4d}
 
 ```bash
 curl -X POST \
@@ -114,7 +114,7 @@ Use the `X-Watson-Metadata` header with the following methods:
 
 To delete all data that is associated with a customer ID, use the `DELETE /v1/user_data` method. You pass the string `customer_id={id}` as a query parameter with the request. The following example deletes all data for the customer ID `my_customer_ID`:
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}}**
+[IBM Cloud]{: tag-ibm-cloud}
 
 ```bash
 curl -X DELETE -u "apikey:{apikey}" \
@@ -122,7 +122,7 @@ curl -X DELETE -u "apikey:{apikey}" \
 ```
 {: pre}
 
-![Cloud Pak for Data only](images/cloud-pak.png) **{{site.data.keyword.icp4dfull}}**
+[IBM Cloud Pak for Data]{: tag-cp4d}
 
 ```bash
 curl -X DELETE \
@@ -136,7 +136,7 @@ The `/v1/user_data` method deletes all data that is associated with the specifie
 ## Deletion of all data for a {{site.data.keyword.texttospeechshort}} service instance
 {: #gdpr-text-to-speech-instance}
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud}} only**
+[IBM Cloud]{: tag-ibm-cloud}
 
 If you delete an instance of the {{site.data.keyword.texttospeechshort}} service from the {{site.data.keyword.cloud_notm}} console, all data associated with that service instance is automatically deleted. This includes all custom models and word/translation pairs, and all data related to speech synthesis requests.
 
