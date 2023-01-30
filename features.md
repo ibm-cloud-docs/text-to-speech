@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-01-14"
+lastupdated: "2023-01-17"
 
 subcollection: text-to-speech
 
@@ -103,8 +103,6 @@ You can use the SSML `<mark>` element to identify specific locations, such as wo
 
 ## Using speech synthesis features with expressive neural voice
 {: #features-synthesis-expressive}
-
-[IBM Cloud]{: tag-ibm-cloud}
 
 With expressive neural voices, the service supports additional features that modify how the text that you pass is synthesized into audio.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-01-16"
+lastupdated: "2023-01-17"
 
 subcollection: text-to-speech
 
@@ -23,7 +23,7 @@ All of the service's voices use neural voice technology. Neural voice technology
 
 The service offers three types of voices with different qualities and capabilities:
 
--   [IBM Cloud]{: tag-ibm-cloud} *Expressive neural voices*. Expressive neural voices offer natural-sounding speech that is exceptionally clear and crisp. Their pronunciation and inflections are natural and conversational, and the resulting speech offers extremely smooth transitions between words. The voices determine sentiment from context and automatically use the proper intonation to suit the text.
+-   *Expressive neural voices*. Expressive neural voices offer natural-sounding speech that is exceptionally clear and crisp. Their pronunciation and inflections are natural and conversational, and the resulting speech offers extremely smooth transitions between words. The voices determine sentiment from context and automatically use the proper intonation to suit the text.
 
     Expressive neural voices support the use of both standard International Phonetic Alphabet (IPA) and {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR) phonetic symbols. They also support the use of additional features that are not available with the other types of voices. Expressive voices are available for US English only.
     -   For additional information and a complete list of all expressive voices, see [Expressive neural voices](/docs/text-to-speech?topic=text-to-speech-voices#language-voices-expressive).
@@ -68,9 +68,7 @@ Table 1 shows the service's support for languages by type of voice. The followin
 ### Expressive neural voices
 {: #language-voices-expressive}
 
-[IBM Cloud]{: tag-ibm-cloud}
-
-Table 2 lists and provides audio samples for all available expressive neural voices. All expressive voices are generally available (GA) for production use with the *{{site.data.keyword.cloud_notm}}* version of the service only.
+Table 2 lists and provides audio samples for all available expressive neural voices. All expressive voices are generally available (GA) for production use.
 
 Expressive neural voices support additional features that are not available with other types of voices. These features include additional speaking styles, automatic emphasis of interjections, and emphasis of specified words. For more information, see [Modifying speech synthesis with expressive neural voices](/docs/text-to-speech?topic=text-to-speech-synthesis-expressive).
 

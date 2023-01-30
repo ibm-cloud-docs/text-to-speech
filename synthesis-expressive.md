@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-01-14"
+lastupdated: "2023-01-17"
 
 subcollection: text-to-speech
 
@@ -20,8 +20,6 @@ The features involve the use of elements of the Speech Synthesis Markup Language
 
 ## Using speaking styles
 {: #syntheses-expressive-styles}
-
-[IBM Cloud]{: tag-ibm-cloud}
 
 The expressive neural voices determine the sentiment of the text from the context of its words and phrases. The speech that they produce, in addition to having a very conversational style, reflects the mood of the text. The expressive voices naturally express gratitude, thankfulness, happiness, empathy, confusion, and other sentiments by default, with no explicit additional tagging.
 
@@ -65,7 +63,6 @@ curl -X POST -u "apikey:{apikey}" \
 ```
 {: pre}
 
-<!--
 [IBM Cloud Pak for Data]{: tag-cp4d}
 
 ```sh
@@ -78,7 +75,6 @@ curl -X POST \
 "{url}/v1/synthesize?voice=en-US_EmmaExpressive"
 ```
 {: pre}
--->
 
 The following example HTTP request uses the `cheerful` style for the first sentence of the request only. The second sentence is spoken with the default voice. The example again uses the `en-US_EmmaExpressive` voice.
 
@@ -94,7 +90,6 @@ curl -X POST -u "apikey:{apikey}" \
 ```
 {: pre}
 
-<!--
 [IBM Cloud Pak for Data]{: tag-cp4d}
 
 ```sh
@@ -107,12 +102,9 @@ curl -X POST \
 "{url}/v1/synthesize?voice=en-US_EmmaExpressive"
 ```
 {: pre}
--->
 
 ## Emphasizing interjections
 {: #syntheses-expressive-interjections}
-
-[IBM Cloud]{: tag-ibm-cloud}
 
 When you use expressive neural voices, the service automatically detects a number of common interjections based on context. In the resulting audio, it gives them the natural emphasis that a human would use in normal conversation.
 
@@ -148,7 +140,6 @@ curl -X POST -u "apikey:{apikey}" \
 ```
 {: pre}
 
-<!--
 [IBM Cloud Pak for Data]{: tag-cp4d}
 
 ```sh
@@ -161,7 +152,6 @@ curl -X POST \
 "{url}/v1/synthesize?voice=en-US_AllisonExpesssive"
 ```
 {: pre}
--->
 
 ### Usage notes for interjections
 {: #syntheses-expressive-interjections-notes}
@@ -175,8 +165,6 @@ Keep the following in mind when using interjections:
 
 ## Emphasizing words
 {: #syntheses-expressive-word-emphasis}
-
-[IBM Cloud]{: tag-ibm-cloud}
 
 The expressive voices use a conversational style that naturally applies the correct intonation from context. But you can use the SSML `<emphasis>` element to indicate that one or more words are to be given more or less emphasis in the synthesized audio. The change in stress can be indicated by an increase or decrease in pitch, timing, volume, or other acoustic attributes.
 
@@ -215,7 +203,6 @@ curl -X POST -u "apikey:{apikey}" \
 ```
 {: pre}
 
-<!--
 [IBM Cloud Pak for Data]{: tag-cp4d}
 
 ```sh
@@ -228,4 +215,3 @@ curl -X POST \
 "{url}/v1/synthesize?voice=en-US_MichaelExpesssive"
 ```
 {: pre}
--->
