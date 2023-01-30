@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-01-14"
+lastupdated: "2023-01-30"
 
 keywords: text to speech release notes,text to speech for IBM cloud pak for data release notes
 
@@ -24,6 +24,63 @@ For information about known limitations of the service, see [Known limitations](
 
 For information about releases and updates of the service for {{site.data.keyword.cloud_notm}}, see [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes).
 {: note}
+
+## 30 January 2023 (Version 4.6.2)
+{: #text-to-speech-data-30january2023}
+
+Version 4.6.2 is now available
+:   {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} version 4.6.2 is now available. This version supports {{site.data.keyword.icp4dfull_notm}} version 4.6.x and Red Hat OpenShift versions 4.8 and 4.10. For more information, see [{{site.data.keyword.watson}} Speech services on {{site.data.keyword.icp4dfull_notm}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.6.x?topic=services-watson-speech){: external}.
+
+The custom resource now includes a new `fileStorageClass` property
+:   The custom resource for the Watson Speech services now includes a `fileStorageClass` property in addition to the existing `blockStorageClass` property. You specify both block and file storage classes when you install or upgrade a service. During upgrade from a previous version, the new property is added automatically to the custom resource by the `--file_storage_class` option on `cli manage apply-cr` command.
+
+    For more information about the available block and file storage classes you use with each of the supported storage solutions, see the table of *Storage requirements* under *Information you need to complete this task* on the page "Installing Watson Speech services" in [{{site.data.keyword.watson}} Speech services on {{site.data.keyword.icp4dfull_notm}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.6.x?topic=services-watson-speech){: external}.
+
+Additional information about provisioning a service instance
+:   The documentation now includes information about creating a service instance programmatically. It also includes examples of listing service instances and deleting a service instance. For more information, see *Provisioning a Watson Speech services instance* in the *Post-installation setup* documentation in [{{site.data.keyword.watson}} Speech services on {{site.data.keyword.icp4dfull_notm}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.6.x?topic=services-watson-speech){: external}.
+
+Server-side encryption is enabled for the MinIO datastore
+:   The Speech services have now enabled server-side encryption for object storage in the MinIO datastore. No action is required on your part.
+
+Change to audit webhooks
+:  The Speech services have now removed the audit webhook dependency. The services now write audit events directly to the server. After upgrading to version 4.6.2, some webhook resources might remain until all services can remove the dependency. The remaining resources will be removed in a future release. No action is required on your part.
+
+New US English expressive neural voices
+:   The service offers four new expressive neural voices for US English:
+    -   `en-US_AllisonExpressive`
+    -   `en-US_EmmaExpressive`
+    -   `en-US_LisaExpressive`
+    -   `en-US_MichaelExpressive`
+
+    Expressive neural voices offer natural-sounding speech that is exceptionally clear, crisp, and fluid. The new voices are generally available (GA) for production use. They support the use of both standard International Phonetic Alphabet (IPA) and {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR) phonetic symbols. For more information, see
+    -   [Supported languages and voices](/docs/text-to-speech?topic=text-to-speech-voices#language-voices-expressive)
+    -   [Expressive neural voices](/docs/text-to-speech?topic=text-to-speech-voices#language-voices-expressive)
+
+New speaking styles with expressive neural voices
+:   The expressive neural voices determine the sentiment of the text from the context of its words and phrases. The speech that they produce, in addition to having a very conversational style, reflects the mood of the text. But you can embellish the voices' natural tendencies by indicating that all or some of the text is to emphasize one of the following speaking styles:
+    -   **Cheerful** - Expresses happiness and good news.
+    -   **Empathetic** - Expresses empathy or sympathy.
+    -   **Neutral** - Expresses objectivity and evenness.
+    -   **Uncertain** - Expresses confusion or uncertainty.
+
+    For more information, see [Using speaking styles](/docs/text-to-speech?topic=text-to-speech-synthesis-expressive#syntheses-expressive-styles).
+
+New interjection emphasis with expressive neural voices
+:   With expressive neural voices, the service automatically detects a set of common interjections based on context. When it synthesizes these interjections, it gives them the natural emphasis that a human would use in normal conversation. For some of the interjections, you can use SSML to enable or disable their emphasis. For more information, see [Emphasizing interjections](/docs/text-to-speech?topic=text-to-speech-synthesis-expressive#emphasizing-interjections).
+
+New word emphais with expressive neural voices
+:   The expressive voices use a conversational style that naturally applies the correct intonation from context. But you can indicate that one or more words are to be given more or less emphasis. The change in stress can be indicated by an increase or decrease in pitch, timing, volume, or other acoustic attributes. For more information, see [Emphasizing words](/docs/text-to-speech?topic=text-to-speech-synthesis-expressive#emphasizing-words).
+
+The service now enforces stricter SSML validation
+:   The service now enforces stricter validation of input text that includes Speech Synthesis Markup Language (SSML) elements. Required elements of attributes must be specified with valid values. Otherwise, the request fails with a 400 error code. For more information about SSML validation and the requirements that marked-up text must meet, see [SSML validation](/docs/text-to-speech?topic=text-to-speech-ssml#ssml-errors).
+
+Defect fix: The gender listed for the `en-US_MichaelExpressive` voice is now correct
+:   **Defect fix:** When you list information about the available voices, the `gender` of the `en-US_MichaelExpressive` voice is now `male`. Previously, the voice's gender was mistakenly described as `female`. For more information, see [Listing information about voices](/docs/text-to-speech?topic=text-to-speech-voices-list).
+
+<!--
+Security vulnerabilities addressed
+:   The following security vulnerabilities have been fixed:
+-->
 
 ## 30 November 2022 (Version 4.6.0)
 {: #text-to-speech-data-30november2022}
@@ -80,7 +137,7 @@ Defect fix: French synthesis of dates is now consistent
 Defect fix: Japanese synthesis is improved to handle long strings of input text
 :   **Defect fix:** The service now correctly synthesizes Japanese requests that include long strings of characters. Previously, the service failed to properly synthesize very long strings of Japanese text.
 
-Defect fix for custom model naming documentation
+Defect fix: Add rules for custom model naming documentation
 :   **Defect fix:** The documentation now provides detailed rules for naming custom models. For more information, see
     -   [Creating a custom model](/docs/text-to-speech?topic=text-to-speech-customModels#cuModelsCreate)
     -   [API & SDK reference](https://{DomainName}/apidocs/text-to-speech){: external}
@@ -525,8 +582,8 @@ New Belgian Dutch and Czech neural voices
     -   For more information about using the custom resource to install voices, see [Installing {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.0?topic=speech-installing-watson-text){: external}.
     -   For more information about all available languages and voices, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
 
-Defect fixes for SSML documentation
-:   **Defect fixes:** The SSML documentation was updated to correct the following errors:
+Defect fix: Update SSML documentation
+:   **Defect fix:** The SSML documentation was updated to correct the following errors:
     -   The examples of the `<break>` element are now correct. The element is unary, as now shown in the examples. The previous examples included open and close tags with embedded text. The embedded text was not spoken by the service. For more information, see [The `<break>` element](/docs/text-to-speech?topic=text-to-speech-elements#break_element).
     -   The service supports Speech Synthesis Markup Language (SSML) version 1.1. All references and examples now use the correct version. The documentation previously referred to version 1.0.
 
@@ -588,15 +645,15 @@ New support for IBM Spectrum Scale Container Native storage class
 Interaction of Speech services with MinIO datastore during installation
 :   The Speech services runtime components, `sttRuntime` and `ttsRuntime`, cannot start until the models and voices for the services are fully uploaded into the MinIO datastore. During installation, the services might fail and automatically restart themselves one or more times until upload of the models and voices is complete. They then start properly. No user action is required.
 
-Defect fix for upgrade documentation
+Defect fix: Improve upgrade documentation
 :   **Defect fix:** Documentation for upgrading the Speech services to new versions of {{site.data.keyword.icp4dfull_notm}} version 4.0.x included incorrect references in some commands. These references are now correct:
     -   The strings `watsonSpeechToTextStatus` and `watsonTextToSpeechStatus` have been changed to `speechStatus` in both cases.
     -   The strings `status.watsonSpeechToTextVersion` and `status.watsonTextToSpeechVersion` have been changed to `.spec.version` in both cases.
 
     For more information, see [Upgrading {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.0?topic=speech-upgrading-watson-text){: external}.
 
-Defect fixes for SSML and speech synthesis
-:   **Defect fixes:** The following defects for the Speech Synthesis Markup Language (SSML) and speech synthesis were fixed with this release:
+Defect fix: Improve SSML and speech synthesis
+:   **Defect fix:** The following defects for the Speech Synthesis Markup Language (SSML) and speech synthesis were fixed with this release:
 
     -   The `pitch` attribute of the `<prosody>` element is now applied to all specified text. Previously, the pitch change was not always applied to the first word of the affected text. Also, the documentation now includes additional guidance about specifying a `pitch` value. For more information, see [The `pitch` attribute](/docs/text-to-speech?topic=text-to-speech-elements#prosody-pitch).
     -   Speech synthesis of Japanese text now speaks the audio more slowly. Previously, the synthesized speech was being spoken too quickly. If you find that synthesis of Japanese text is still spoken too quickly for your application, use the `rate` attribute of the SSML `<prosody>` element to control the rate of speech. For more information, see [The `rate` attribute](/docs/text-to-speech?topic=text-to-speech-elements#prosody-rate).
@@ -681,11 +738,11 @@ Specifying a language for a custom model
 
     For more information about specifying a language when you create a custom model, see [Creating a custom model](/docs/text-to-speech?topic=text-to-speech-customModels#cuModelsCreate).
 
-Defect fix for Spanish enhanced neural voices
+Defect fix: Correct intonation for Spanish enhanced neural voices
 :   **Defect fix:** For the Castilian Spanish (`es-ES_EnriqueV3Voice` and `es-ES_LauraV3Voice`), Latin American Spanish (`es-LA_SofiaV3Voice`), and North American Spanish (`es-US_SofiaV3Voice`) voices, questions of all types now use the correct intonation. The voices previously did not use the correct intonation for some questions, instead pronouncing them like statements.
 
-Defect fix for multitenancy documentation
-:   The {{site.data.keyword.icp4dfull_notm}} topic [Multitenancy support](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.0?topic=planning-multitenancy-support){: external} incorrectly stated that the Speech services do not support multitenancy. The topic has been updated to state that the Speech services support the following operations:
+Defect fix: Correct multitenancy documentation
+:   **Defect fix:** The {{site.data.keyword.icp4dfull_notm}} topic [Multitenancy support](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.0?topic=planning-multitenancy-support){: external} incorrectly stated that the Speech services do not support multitenancy. The topic has been updated to state that the Speech services support the following operations:
 
     -   Install the service in separate projects
     -   Install the service multiple times in the same project
@@ -843,7 +900,7 @@ New voices
 
     The service also offers an improved version of the existing UK voice, `en-KateV3Voice`. For more information about all supported languages and voices, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
 
-Defect fix for `<prosody>` element for Japanese
+Defect fix: Fix `<prosody>` element for Japanese
 :   **Defect fix:** For the `ja-JP_EmiV3Voice` voice, the service now correctly parses SSML input text that includes a prosody rate specification. Previously, the following use of the `<prosody>` element worked properly:
 
     ```xml

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-01-14"
+lastupdated: "2023-01-17"
 
 subcollection: text-to-speech
 
@@ -82,8 +82,6 @@ The `<desc>` element can occur only within an `<audio>` element. Because the `<a
 ## The `<emphasis>` element
 {: #emphasis_element}
 
-[IBM Cloud]{: tag-ibm-cloud}
-
 The `<emphasis>` element is supported for use only with the expressive neural voices.
 {: note}
 
@@ -105,8 +103,6 @@ For more information, see [Emphasizing words](/docs/text-to-speech?topic=text-to
 
 ## The `<express-as>` element
 {: #express-as_element}
-
-[IBM Cloud]{: tag-ibm-cloud}
 
 The `<express-as>` element is an SSML extension specific to the {{site.data.keyword.texttospeechshort}} service. It is supported for use only with the expressive neural voices.
 {: note}
@@ -380,8 +376,6 @@ The `digits` value speaks the digits in the number within the element. (The valu
 
 #### `interjection`
 {: #say-as-interjection}
-
-[IBM Cloud]{: tag-ibm-cloud}
 
 The `interjection` attribute is an SSML extension specific to the {{site.data.keyword.texttospeechshort}} service. It is supported for use only with the expressive neural voices.
 {: note}
