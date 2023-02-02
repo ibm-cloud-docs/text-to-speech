@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-01-30"
+lastupdated: "2023-02-02"
 
 keywords: text to speech release notes,text to speech for IBM cloud pak for data release notes
 
@@ -77,10 +77,19 @@ The service now enforces stricter SSML validation
 Defect fix: The gender listed for the `en-US_MichaelExpressive` voice is now correct
 :   **Defect fix:** When you list information about the available voices, the `gender` of the `en-US_MichaelExpressive` voice is now `male`. Previously, the voice's gender was mistakenly described as `female`. For more information, see [Listing information about voices](/docs/text-to-speech?topic=text-to-speech-voices-list).
 
-<!--
 Security vulnerabilities addressed
 :   The following security vulnerabilities have been fixed:
--->
+    -   [Security Bulletin: IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data is vulnerable to issues in OpenSSL (CVE-2022-1434, CVE-2022-1343, CVE-2022-1292, CVE-2022-1473)](https://www.ibm.com/support/pages/node/6890819){: external}
+    -   [Security Bulletin: IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data is vulnerable to arbitrary command execution in OpenSSL (CVE-2022-2068)](https://www.ibm.com/support/pages/node/6890831){: external}
+    -   [Security Bulletin: IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data is vulnerable to a denial of service in protobuf (CVE-2022-1941)](https://www.ibm.com/support/pages/node/6890835){: external}
+    -   [Security Bulletin: IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data is vulnerable to a buffer overflow in GNU glibc (CVE-2021-3999)](https://www.ibm.com/support/pages/node/6890837){: external}
+    -   [Security Bulletin: IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data is vulnerable to a security bypass in GNU gzip (CVE-2022-1271)](https://www.ibm.com/support/pages/node/6890841){: external}
+    -   [Security Bulletin: IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data is vulnerable to a denial of service in Golang Go (CVE-2022-27664)](https://www.ibm.com/support/pages/node/6890843){: external}
+    -   [Security Bulletin: IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data is vulnerable to a denial of service in Golang Go (CVE-2022-2879)](https://www.ibm.com/support/pages/node/6909749){: external}
+    -   [Security Bulletin: IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data is vulnerable to query parameter smuggling in Golang Go (CVE-2022-2880)](https://www.ibm.com/support/pages/node/6890847){: external}
+    -   [Security Bulletin: IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data is vulnerable to a denial of service in Golang Go (CVE-2022-32189)](https://www.ibm.com/support/pages/node/6890849){: external}
+    -   [Security Bulletin: IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data is vulnerable to a denial of service in Golang Go (CVE-2022-41715)](https://www.ibm.com/support/pages/node/6890851){: external}
+    -   [Security Bulletin: IBM Watson Speech Services Cartridge for IBM Cloud Pak for Data is vulnerable to information exposure in OpenSSL (CVE-2022-2097)](https://www.ibm.com/support/pages/node/6890853){: external}
 
 ## 30 November 2022 (Version 4.6.0)
 {: #text-to-speech-data-30november2022}
