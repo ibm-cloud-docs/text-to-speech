@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-01-14"
+lastupdated: "2023-02-16"
 
 subcollection: text-to-speech
 
@@ -26,7 +26,7 @@ Effective **31 March 2022**, all *neural voices* are deprecated. The deprecated 
 | IPA symbol | IPA Unicode | Example words |
 |:----------:|:-----------:|:-------------:|
 | &#593; | 0251 | b**a**d |
-| &#603; | 0258 | b**e**d |
+| &#603; | 025B | b**e**d |
 | &#618; | 026A | v**i**s |
 | &#596; | 0254 | p**o**t |
 | &#655; | 028F | h**u**t |

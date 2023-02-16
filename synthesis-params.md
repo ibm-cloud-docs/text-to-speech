@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-01-14"
+lastupdated: "2023-02-06"
 
 subcollection: text-to-speech
 
@@ -177,7 +177,7 @@ The service's default pronunciation of alphabetic, numeric, and alphanumeric str
 
 The best means of controlling how a specific string is pronounced is to use the `<say-as>` element of the SSML. The element allows you to specify exactly how a string is synthesized. You use the `interpret-as` attribute of the `<say-as>` element to indicate that a string of characters is to be pronounced as `letters`, `digits`, or in some other way. The available values differ by language.
 
-If you use the `letters` or `digits` attributes, all letters and numbers of the string are pronounced individually. This is especially useful for spelling out the alphanumeric characters of a hexadecimal string or an identification or account number. For more information, see [The `say-as` element](/docs/text-to-speech?topic=text-to-speech-elements#say-as_element).
+If you use the `letters` or `digits` attributes, all letters and numbers of the string are pronounced individually. This is especially useful for spelling out the alphanumeric characters of a hexadecimal string or an identification or account number. For more information, including language-specific differences, see [The `say-as` element](/docs/text-to-speech?topic=text-to-speech-elements#say-as_element).
 
 ### Specifying the pace at which strings are spelled out
 {: #params-spell-out-mode-rate}

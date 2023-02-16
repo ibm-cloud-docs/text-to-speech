@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-01-17"
+lastupdated: "2023-02-06"
 
 subcollection: text-to-speech
 
@@ -313,7 +313,7 @@ The service supports the `<say-as>` element with the following languages:
 
 -   The service fully supports the `<say-as>` element for US English.
 -   For most other languages, the service supports only the `digits` and `letters` attributes of the element.
--   For Japanese, the service supports only the `digits` attribute.
+-   For Japanese, the service supports only the `digits` attribute. The service ignores non-numeric characters that are included in the string of digits.
 
 The service's default pronunciation of alphabetic, numeric, and alphanumeric strings varies by language, with each language having its own rules. You can use the `<say-as>` element to control how strings are pronounced, including whether they are to be spelled out as individual characters with the `letters` and `digits` elements.
 
