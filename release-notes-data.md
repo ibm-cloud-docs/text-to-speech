@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-02-02"
+lastupdated: "2023-02-24"
 
 keywords: text to speech release notes,text to speech for IBM cloud pak for data release notes
 
@@ -25,6 +25,60 @@ For information about known limitations of the service, see [Known limitations](
 For information about releases and updates of the service for {{site.data.keyword.cloud_notm}}, see [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes).
 {: note}
 
+## 23 February 2023 (Version 4.6.3)
+{: #text-to-speech-data-23february2023}
+
+Version 4.6.3 is now available
+:   {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} version 4.6.3 is now available. This version supports {{site.data.keyword.icp4dfull_notm}} version 4.6.x and Red Hat OpenShift version 4.10. Red Hat OpenShift version 4.8 is no longer supported. For more information, see [{{site.data.keyword.watson}} Speech services on {{site.data.keyword.icp4dfull_notm}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.6.x?topic=services-watson-speech){: external}.
+
+Known issue: You cannot change the installed models and voices with the advanced installation options
+:   **Known issue:** You currently cannot specify different models or voices with the advanced installation options. The service always installs the defaults models and voices. For information about changing the models after installation, see *Updating models and voices for your Watson Speech services* in the *Administration* topic of [{{site.data.keyword.watson}} Speech services on {{site.data.keyword.icp4dfull_notm}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.6.x?topic=services-watson-speech){: external}.
+
+Known issue: Upgrade to version 4.6.3 can fail to complete
+:   **Known issue:**  When upgrading to version 4.6.3, the MinIO backup job can fail to be deleted upon completion. If this happens, the solution is to delete the job, after which the upgrade proceeds normally. Perform the following steps to resolve the problem.
+
+    1.  To determine whether the MinIO backup job remains undeleted, issue the following command:
+
+        ```sh
+        oc get job --namespace {${PROJECT_CPD_INSTANCE} | grep speech-cr-ibm-minio-backup
+        ```
+        {: pre}
+
+        The MinIO job that is not deleted is identified by an entry of the following form:
+
+        ```text
+        speech-cr-ibm-minio-backup   1/1   3m25s   1d
+        ```
+        {: codeblock}
+
+    1.  To delete the MinIO backup job, issue the following command:
+
+        ```sh
+        oc delete job speech-cr-ibm-minio-backup --namespace ${PROJECT_CPD_INSTANCE}
+        ```
+        {: pre}
+
+    Once the backup job is deleted, upgrade continues and completes.
+
+Defect fix: The beta Tune by Example is now available
+:   **Defect fix:** The beta Tune by example feature is now available for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}. Previously, it was not possible to create speaker models. For more information about the feature, which is available for U.S. English voices only, see [Understanding Tune by Example](/docs/text-to-speech?topic=text-to-speech-tbe-intro).
+
+Defect fix: Specifying large cardinal numbers with the `<say-as>` element no longer causes errors for English voices
+:   **Defect fix:** You can now use the `<say-as>` element to pronounce large numbers as cardinal numbers. Previously, enclosing a large number in the `<say-as>` element with the attribute `interpret-as="cardinal"` could cause speech synthesis to fail for English voices. For example, `<say-as interpret-as="cardinal">3,200</say-as>` could cause the service to generate an error. For more information, see [cardinal](/docs/text-to-speech?topic=text-to-speech-elements#say-as-cardinal) in the topic *SSML elements*.
+
+Defect fix: Homonyms and other words are now pronounced correctly by English voices
+:   **Defect fix:** The service now pronounces homonyms and other words correctly based on their context in English text that is to be synthesized. Previously, words such as `advocate` and `wifi` could be pronounced incorrectly by English voices.
+
+Additional information about working with service instances
+:   The documentation now includes information about creating a service instance with the command-line interface (`cpl-cli`) and about managing service instances. For more information, see the following topics of [{{site.data.keyword.watson}} Speech services on {{site.data.keyword.icp4dfull_notm}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.6.x?topic=services-watson-speech){: external}:
+    -   *Creating a Watson Speech services instance* under *Post-installation setup*
+    -   *Managing your Watson Speech services instances* under *Administering*
+
+<!--
+Security vulnerabilities addressed
+:   The following security vulnerabilities have been fixed:
+-->
+
 ## 30 January 2023 (Version 4.6.2)
 {: #text-to-speech-data-30january2023}
 
@@ -37,7 +91,7 @@ The custom resource now includes a new `fileStorageClass` property
     For more information about the available block and file storage classes you use with each of the supported storage solutions, see the table of *Storage requirements* under *Information you need to complete this task* on the page "Installing Watson Speech services" in [{{site.data.keyword.watson}} Speech services on {{site.data.keyword.icp4dfull_notm}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.6.x?topic=services-watson-speech){: external}.
 
 Additional information about provisioning a service instance
-:   The documentation now includes information about creating a service instance programmatically. It also includes examples of listing service instances and deleting a service instance. For more information, see *Provisioning a Watson Speech services instance* in the *Post-installation setup* documentation in [{{site.data.keyword.watson}} Speech services on {{site.data.keyword.icp4dfull_notm}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.6.x?topic=services-watson-speech){: external}.
+:   The documentation now includes information about creating a service instance programmatically. It also includes examples of listing service instances and deleting a service instance. For more information, see *Creating a Watson Speech services instance* in the *Post-installation setup* documentation in [{{site.data.keyword.watson}} Speech services on {{site.data.keyword.icp4dfull_notm}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.6.x?topic=services-watson-speech){: external}.
 
 Server-side encryption is enabled for the MinIO datastore
 :   The Speech services have now enabled server-side encryption for object storage in the MinIO datastore. No action is required on your part.
@@ -584,8 +638,8 @@ RabbitMQ datastore is now used only by the `sttAysnc` component
 
 New Belgian Dutch and Czech neural voices
 :   Two new neural voices are now available:
-    -   *Belgian Dutch:* A new male Belgian Dutch (Flemish) voice, `nl-BE_BramVoice`. For more information about the IPA symbols for the language, see [Dutch (Belgian) symbols](/docs/text-to-speech?topic=text-to-speech-beSymbols).
-    -   *Czech:* A new language, Czech, with a new female voice, `cs-CZ_AlenaVoice`. For more information about the IPA symbols for the language, see [Czech symbols](/docs/text-to-speech?topic=text-to-speech-csSymbols).
+    -   *Belgian Dutch:* A new male Belgian Dutch (Flemish) voice, `nl-BE_BramVoice`. For more information about the IPA symbols for the language, see [Dutch (Belgian) symbols (deprecated)](/docs/text-to-speech?topic=text-to-speech-beSymbols).
+    -   *Czech:* A new language, Czech, with a new female voice, `cs-CZ_AlenaVoice`. For more information about the IPA symbols for the language, see [Czech symbols (deprecated)](/docs/text-to-speech?topic=text-to-speech-csSymbols).
 
     You can install the new voices along with all neural voices by setting the `voiceType` property of the custom resource to `neuralVoices`.
     -   For more information about using the custom resource to install voices, see [Installing {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.0?topic=speech-installing-watson-text){: external}.
