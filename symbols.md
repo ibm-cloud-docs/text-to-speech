@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-01-16"
+lastupdated: "2023-02-20"
 
 subcollection: text-to-speech
 
@@ -120,7 +120,6 @@ Table 2 lists language-specific considerations that apply to specifying syllable
 | French and  \n Canadian French  | IPA | All syllable stress symbols are ignored. |
 | Italian | SPR and IPA | You can specify only `1` (primary stress). An error occurs if you specify secondary or no stress. |
 | Japanese | SPR and IPA | You can specify only `1` (primary stress) and `0` (no stress). An error occurs if you specify secondary stress. |
-| Korean | IPA | All syllable stress symbols are ignored, but including the symbols may produce undesired results. |
 | Spanish | SPR and IPA | You can specify only `1` (primary stress). An error occurs if you specify secondary or no stress. |
 {: caption="Table 2. Language-specific rules for using syllable stress"}
 
@@ -138,12 +137,13 @@ Effective **31 March 2022**, all *neural voices* are deprecated. The deprecated 
 
 | Language | Availability | Supports IPA | Supports SPR |
 |----------|:------------:|:------------:|:------------:|
-| [Arabic symbols](/docs/text-to-speech?topic=text-to-speech-arSymbols) | [IBM Cloud]{: tag-ibm-cloud}  \n Deprecated | Yes | No |
-| [Chinese (Mandarin) symbols](/docs/text-to-speech?topic=text-to-speech-zhSymbols) | [IBM Cloud]{: tag-ibm-cloud}  \n Deprecated | Yes | No |
-| [Czech symbols](/docs/text-to-speech?topic=text-to-speech-csSymbols) | [IBM Cloud]{: tag-ibm-cloud}  \n Deprecated | Yes | No |
-| [Dutch (Belgian) symbols](/docs/text-to-speech?topic=text-to-speech-beSymbols) | [IBM Cloud]{: tag-ibm-cloud}  \n Deprecated | Yes | No |
-| [Dutch (Netherlands) symbols](/docs/text-to-speech?topic=text-to-speech-nlSymbols) | [IBM Cloud]{: tag-ibm-cloud}  \n Deprecated | Yes | No |
-| [English (Australian) symbols](/docs/text-to-speech?topic=text-to-speech-auSymbols) | [IBM Cloud]{: tag-ibm-cloud}  \n Deprecated | Yes | No |
+| [Arabic symbols (deprecated)](/docs/text-to-speech?topic=text-to-speech-arSymbols) | [IBM Cloud]{: tag-ibm-cloud} | Yes | No |
+| [Chinese (Mandarin) symbols (deprecated)](/docs/text-to-speech?topic=text-to-speech-zhSymbols) | [IBM Cloud]{: tag-ibm-cloud} | Yes | No |
+| [Czech symbols (deprecated)](/docs/text-to-speech?topic=text-to-speech-csSymbols) | [IBM Cloud]{: tag-ibm-cloud} | Yes | No |
+| [Dutch (Belgian) symbols (deprecated)](/docs/text-to-speech?topic=text-to-speech-beSymbols) | [IBM Cloud]{: tag-ibm-cloud} | Yes | No |
+| [Dutch (Netherlands) symbols (deprecated)](/docs/text-to-speech?topic=text-to-speech-nlSymbols) | [IBM Cloud]{: tag-ibm-cloud} | Yes | No |
+| [English (Australian) symbols (deprecated)](/docs/text-to-speech?topic=text-to-speech-auSymbols) | [IBM Cloud]{: tag-ibm-cloud} | Yes | No |
+| [English (Australian) symbols](/docs/text-to-speech?topic=text-to-speech-auSymbols-new) | [IBM Cloud]{: tag-ibm-cloud} | Yes | Yes |
 | [English (United Kingdom) symbols](/docs/text-to-speech?topic=text-to-speech-gbSymbols) | All versions | Yes | Yes |
 | [English (United States) symbols](/docs/text-to-speech?topic=text-to-speech-usSymbols) | All versions | Yes | Yes |
 | [French (Canadian) symbols](/docs/text-to-speech?topic=text-to-speech-caSymbols) | All versions | Yes | Yes |
@@ -151,8 +151,9 @@ Effective **31 March 2022**, all *neural voices* are deprecated. The deprecated 
 | [German symbols](/docs/text-to-speech?topic=text-to-speech-deSymbols) | All versions | Yes | Yes |
 | [Italian symbols](/docs/text-to-speech?topic=text-to-speech-itSymbols) | All versions | Yes | Yes |
 | [Japanese symbols](/docs/text-to-speech?topic=text-to-speech-jaSymbols) | All versions | Yes | Yes |
-| [Korean symbols](/docs/text-to-speech?topic=text-to-speech-koSymbols) | [IBM Cloud]{: tag-ibm-cloud}  \n Deprecated | Yes | No |
+| [Korean symbols (deprecated)](/docs/text-to-speech?topic=text-to-speech-koSymbols) | [IBM Cloud]{: tag-ibm-cloud} | Yes | No |
+| [Korean symbols](/docs/text-to-speech?topic=text-to-speech-koSymbols-new) | [IBM Cloud]{: tag-ibm-cloud} | Yes | Yes |
 | [Portuguese (Brazilian) symbols](/docs/text-to-speech?topic=text-to-speech-ptSymbols) | All versions | Yes | Yes |
 | [Spanish symbols](/docs/text-to-speech?topic=text-to-speech-esSymbols) | All versions | Yes | Yes |
-| [Swedish symbols](/docs/text-to-speech?topic=text-to-speech-svSymbols) | [IBM Cloud]{: tag-ibm-cloud}  \n Deprecated | Yes | No |
+| [Swedish symbols (deprecated)](/docs/text-to-speech?topic=text-to-speech-svSymbols) | [IBM Cloud]{: tag-ibm-cloud} | Yes | No |
 {: caption="Table 3. Language support for IPA and SPR phonetic symbols"}

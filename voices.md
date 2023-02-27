@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-01-17"
+lastupdated: "2023-02-23"
 
 subcollection: text-to-speech
 
@@ -25,11 +25,11 @@ The service offers three types of voices with different qualities and capabiliti
 
 -   *Expressive neural voices*. Expressive neural voices offer natural-sounding speech that is exceptionally clear and crisp. Their pronunciation and inflections are natural and conversational, and the resulting speech offers extremely smooth transitions between words. The voices determine sentiment from context and automatically use the proper intonation to suit the text.
 
-    Expressive neural voices support the use of both standard International Phonetic Alphabet (IPA) and {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR) phonetic symbols. They also support the use of additional features that are not available with the other types of voices. Expressive voices are available for US English only.
+    Expressive neural voices support the use of both standard International Phonetic Alphabet (IPA) and {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR) phonetic symbols. They also support the use of additional features that are not available with the other types of voices.
     -   For additional information and a complete list of all expressive voices, see [Expressive neural voices](/docs/text-to-speech?topic=text-to-speech-voices#language-voices-expressive).
     -   For a blog that introduces the expressive voices, see [Is your conversational AI setting the right tone?](https://www.ibm.com/blogs/journey-to-ai/2022/09/is-your-conversational-ai-setting-the-right-tone/){: external}.
 
--   [IBM Cloud]{: tag-ibm-cloud} *Enhanced neural voices*. Enhanced neural voices achieve a slightly higher degree of natural-sounding speech and support more service features. Enhanced neural voices support both IPA and SPR symbols for word customization. For a complete list of all enhanced neural voices and their languages, see [Enhanced neural voices](/docs/text-to-speech?topic=text-to-speech-voices#language-voices-enhanced-neural).
+-   *Enhanced neural voices*. Enhanced neural voices achieve a slightly higher degree of natural-sounding speech and support more service features. Enhanced neural voices support both IPA and SPR symbols for word customization. For a complete list of all enhanced neural voices and their languages, see [Enhanced neural voices](/docs/text-to-speech?topic=text-to-speech-voices#language-voices-enhanced-neural).
 -   *Neural voices*. Neural voices produce natural-sounding speech but do not support all of the service's features. Neural voices support only IPA symbols for word customization. For a complete list of all neural voices and their languages, see [Neural voices](/docs/text-to-speech?topic=text-to-speech-voices#language-voices-neural).
 
     Effective **31 March 2022**, all *neural voices* are deprecated. The deprecated voices remain available to existing users until 31 March 2023, when they will be removed from the service and the documentation. *No enhanced neural voices or expressive neural voices are deprecated.* For more information, see the [31 March 2022 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-31march2022) in the release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}}.
@@ -50,14 +50,14 @@ Table 1 shows the service's support for languages by type of voice. The followin
 | Dutch  \n (Belgian) | | | &#10004; |
 | Dutch  \n (Netherlands) | | | &#10004; |
 | English  \n (United Kingdom) | | &#10004; | |
-| English  \n (Australian) | | | &#10004; |
+| English  \n (Australian) | &#10004; | | &#10004; |
 | English  \n (United States) | &#10004; | &#10004; | |
 | French  \n (Canadian) | | &#10004; | |
 | French  \n (France) | | &#10004; | |
 | German | | &#10004; | |
 | Italian | | &#10004; | |
 | Japanese | | &#10004; | |
-| Korean | | | &#10004; |
+| Korean | | &#10004; | &#10004; |
 | Portuguese  \n (Brazilian) | | &#10004; | |
 | Spanish  \n (Castilian) | | &#10004; | |
 | Spanish  \n (Latin American) | | &#10004; | |
@@ -70,23 +70,23 @@ Table 1 shows the service's support for languages by type of voice. The followin
 
 Table 2 lists and provides audio samples for all available expressive neural voices. All expressive voices are generally available (GA) for production use.
 
-Expressive neural voices support additional features that are not available with other types of voices. These features include additional speaking styles, automatic emphasis of interjections, and emphasis of specified words. For more information, see [Modifying speech synthesis with expressive neural voices](/docs/text-to-speech?topic=text-to-speech-synthesis-expressive).
-
 To produce the most natural-sounding prosody, expressive neural voices need to consider the context of all words and phrases of a sentence. Expressive voices therefore are more compute-intensive and have slightly higher latency than other types of voices. The initial response for a synthesis request that uses an expressive voice might take a fraction of a second longer (for example, a few hundred milliseconds) to arrive. The total response time for the request to complete will also be longer.
 
 To minimize the latency and response time for an expressive voice, use shorter sentences wherever possible.
 {: tip}
 
+-   Expressive neural voices support additional features that are not available with other types of voices. These features include additional speaking styles, automatic emphasis of interjections, and emphasis of specified words. For more information, see [Modifying speech synthesis with expressive neural voices](/docs/text-to-speech?topic=text-to-speech-synthesis-expressive).
+-   When used with the SSML `<prosody>` element, expressive voices support only percentage values for the `rate` and `pitch` attributes. For more information, see [The `<prosody>` element](/docs/text-to-speech?topic=text-to-speech-elements#prosody_element).
+
 | Language | Availability        | Voice / Gender | Audio sample |
 |----------|:-------------------:|:--------------:|:------------:|
+| English  \n (Australian) | GA  \n [IBM Cloud]{: tag-ibm-cloud} | `en-AU_HeidiExpressive`  \n Female | ![en-AU_HeidiExpressive sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-AU_HeidiExpressive.wav){: audio controls} |
+| | GA  \n [IBM Cloud]{: tag-ibm-cloud} | `en-AU_JackExpressive`  \n Male | ![en-AU_JackExpressive sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-AU_JackExpressive.wav){: audio controls} |
 | English  \n (United States) | GA | `en-US_AllisonExpressive`  \n Female | ![en-US_AllisonExpressive sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_AllisonExpressive.wav){: audio controls} |
 | | GA | `en-US_EmmaExpressive`  \n Female | ![en-US_EmmaExpressive sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_EmmaExpressive.wav){: audio controls} |
 | | GA | `en-US_LisaExpressive`  \n Female | ![en-US_LisaExpressive sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_LisaExpressive.wav){: audio controls} |
 | | GA | `en-US_MichaelExpressive`  \n Male | ![en-US_MichaelExpressive sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_MichaelExpressive.wav){: audio controls} |
 {: caption="Table 2. Expressive neural languages and voices"}
-
-When used with the SSML `<prosody>` element, expressive voices support only percentage values for the `rate` and `pitch` attributes. For more information, see [The `<prosody>` element](/docs/text-to-speech?topic=text-to-speech-elements#prosody_element).
-{: note}
 
 ### Enhanced neural voices
 {: #language-voices-enhanced-neural}
@@ -113,6 +113,7 @@ Table 3 lists and provides audio samples for all available enhanced neural voice
 | | GA | `de-DE_ErikaV3Voice`  \n Female | ![de-DE_ErikaV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/de-DE_ErikaV3Voice.wav){: audio controls} |
 | Italian | GA | `it-IT_FrancescaV3Voice`  \n Female | ![it-IT_FrancescaV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/it-IT_FrancescaV3Voice.wav){: audio controls} |
 | Japanese | GA | `ja-JP_EmiV3Voice`  \n Female | ![ja-JP_EmiV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/ja-JP_EmiV3Voice.wav){: audio controls} |
+| Korean | GA  \n [IBM Cloud]{: tag-ibm-cloud} | `ko-KR_JinV3Voice`  \n Female | ![ko-KR_JinV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/ko-KR_JinV3Voice.wav){: audio controls} |
 | Portuguese  \n (Brazilian) | GA | `pt-BR_IsabelaV3Voice`  \n Female | ![pt-BR_IsabelaV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/pt-BR_IsabelaV3Voice.wav){: audio controls} |
 | Spanish  \n (Castilian) | GA | `es-ES_EnriqueV3Voice`  \n Male | ![es-ES_EnriqueV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/es-ES_EnriqueV3Voice.wav){: audio controls} |
 | | GA | `es-ES_LauraV3Voice`  \n Female | ![es-ES_LauraV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/es-ES_LauraV3Voice.wav){: audio controls} |
@@ -135,23 +136,23 @@ Table 4 lists and provides audio samples for all available neural voices. All ne
 
 | Language | Availability        | Voice / Gender | Audio sample |
 |----------|:-------------------:|:--------------:|:------------:|
-| Arabic | GA | `ar-MS_OmarVoice`  \n Male | ![ar-MS_OmarVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/ar-MS_OmarVoice.wav){: audio controls} |
-| Chinese  \n (Mandarin) | GA | `zh-CN_LiNaVoice`  \n Female | ![zh-CN_LiNaVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/zh-CN_LiNaVoice.wav){: audio controls} |
-| | GA | `zh-CN_WangWeiVoice`  \n Male | ![zh-CN_WangWeiVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/zh-CN_WangWeiVoice.wav){: audio controls} |
-| | GA | `zh-CN_ZhangJingVoice`  \n Female | ![zh-CN_ZhangJingVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/zh-CN_ZhangJingVoice.wav){: audio controls} |
-| Czech | GA | `cs-CZ_AlenaVoice`  \n Female | ![cs-CZ_AlenaVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/cs-CZ_AlenaVoice.wav){: audio controls} |
-| Dutch  \n (Belgian) | GA | `nl-BE_AdeleVoice`  \n Female | ![nl-BE_AdeleVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/nl-BE_AdeleVoice.wav){: audio controls} |
-| | GA | `nl-BE_BramVoice`  \n Male | ![nl-BE_BramVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/nl-BE_BramVoice.wav){: audio controls} |
-| Dutch  \n (Netherlands) | GA | `nl-NL_EmmaVoice`  \n Female | ![nl-NL_EmmaVoive sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/nl-NL_EmmaVoice.wav){: audio controls} |
-| | GA | `nl-NL_LiamVoice`  \n Male | ![nl-NL_LiamVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/nl-NL_LiamVoice.wav){: audio controls} |
-| English  \n (Australian) | GA | `en-AU_CraigVoice`  \n Male | ![en-AU_CraigVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-AU_CraigVoice.wav){: audio controls} |
-| | GA | `en-AU_MadisonVoice`  \n Female | ![en-AU_MadisonVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-AU_MadisonVoice.wav){: audio controls} |
-| | GA | `en-AU_SteveVoice`  \n Male | ![en-AU_SteveVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-AU_SteveVoice.wav){: audio controls} |
-| Korean | GA | `ko-KR_HyunjunVoice`  \n Male | ![ko-KR_HyunjunVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/ko-KR_HyunjunVoice.wav){: audio controls} |
-| | GA | `ko-KR_SiWooVoice`  \n Male | ![ko-KR_SiWooVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/ko-KR_SiWooVoice.wav){: audio controls} |
-| | GA | `ko-KR_YoungmiVoice`  \n Female | ![ko-KR_YoungmiVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/ko-KR_YoungmiVoice.wav){: audio controls} |
-| | GA | `ko-KR_YunaVoice`  \n Female | ![ko-KR_YunaVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/ko-KR_YunaVoice.wav){: audio controls} |
-| Swedish | GA | `sv-SE_IngridVoice`  \n Female | ![sv-SE_IngridVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/sv-SE_IngridVoice.wav){: audio controls} |
+| Arabic | GA  \n [IBM Cloud]{: tag-ibm-cloud} | `ar-MS_OmarVoice`  \n Male | ![ar-MS_OmarVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/ar-MS_OmarVoice.wav){: audio controls} |
+| Chinese  \n (Mandarin) | GA  \n [IBM Cloud]{: tag-ibm-cloud} | `zh-CN_LiNaVoice`  \n Female | ![zh-CN_LiNaVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/zh-CN_LiNaVoice.wav){: audio controls} |
+| | GA  \n [IBM Cloud]{: tag-ibm-cloud} | `zh-CN_WangWeiVoice`  \n Male | ![zh-CN_WangWeiVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/zh-CN_WangWeiVoice.wav){: audio controls} |
+| | GA  \n [IBM Cloud]{: tag-ibm-cloud} | `zh-CN_ZhangJingVoice`  \n Female | ![zh-CN_ZhangJingVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/zh-CN_ZhangJingVoice.wav){: audio controls} |
+| Czech | GA  \n [IBM Cloud]{: tag-ibm-cloud} | `cs-CZ_AlenaVoice`  \n Female | ![cs-CZ_AlenaVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/cs-CZ_AlenaVoice.wav){: audio controls} |
+| Dutch  \n (Belgian) | GA  \n [IBM Cloud]{: tag-ibm-cloud} | `nl-BE_AdeleVoice`  \n Female | ![nl-BE_AdeleVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/nl-BE_AdeleVoice.wav){: audio controls} |
+| | GA  \n [IBM Cloud]{: tag-ibm-cloud} | `nl-BE_BramVoice`  \n Male | ![nl-BE_BramVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/nl-BE_BramVoice.wav){: audio controls} |
+| Dutch  \n (Netherlands) | GA  \n [IBM Cloud]{: tag-ibm-cloud} | `nl-NL_EmmaVoice`  \n Female | ![nl-NL_EmmaVoive sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/nl-NL_EmmaVoice.wav){: audio controls} |
+| | GA  \n [IBM Cloud]{: tag-ibm-cloud} | `nl-NL_LiamVoice`  \n Male | ![nl-NL_LiamVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/nl-NL_LiamVoice.wav){: audio controls} |
+| English  \n (Australian) | GA  \n [IBM Cloud]{: tag-ibm-cloud} | `en-AU_CraigVoice`  \n Male | ![en-AU_CraigVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-AU_CraigVoice.wav){: audio controls} |
+| | GA  \n [IBM Cloud]{: tag-ibm-cloud} | `en-AU_MadisonVoice`  \n Female | ![en-AU_MadisonVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-AU_MadisonVoice.wav){: audio controls} |
+| | GA  \n [IBM Cloud]{: tag-ibm-cloud} | `en-AU_SteveVoice`  \n Male | ![en-AU_SteveVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-AU_SteveVoice.wav){: audio controls} |
+| Korean | GA  \n [IBM Cloud]{: tag-ibm-cloud} | `ko-KR_HyunjunVoice`  \n Male | ![ko-KR_HyunjunVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/ko-KR_HyunjunVoice.wav){: audio controls} |
+| | GA  \n [IBM Cloud]{: tag-ibm-cloud} | `ko-KR_SiWooVoice`  \n Male | ![ko-KR_SiWooVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/ko-KR_SiWooVoice.wav){: audio controls} |
+| | GA  \n [IBM Cloud]{: tag-ibm-cloud} | `ko-KR_YoungmiVoice`  \n Female | ![ko-KR_YoungmiVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/ko-KR_YoungmiVoice.wav){: audio controls} |
+| | GA  \n [IBM Cloud]{: tag-ibm-cloud} | `ko-KR_YunaVoice`  \n Female | ![ko-KR_YunaVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/ko-KR_YunaVoice.wav){: audio controls} |
+| Swedish | GA  \n [IBM Cloud]{: tag-ibm-cloud} | `sv-SE_IngridVoice`  \n Female | ![sv-SE_IngridVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/sv-SE_IngridVoice.wav){: audio controls} |
 {: caption="Table 4. Neural languages and voices"}
 
 ## Creating a custom model

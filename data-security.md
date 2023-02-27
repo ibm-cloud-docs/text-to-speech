@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-01-22"
+lastupdated: "2023-02-23"
 
 subcollection: text-to-speech
 
@@ -95,6 +95,11 @@ Virtual private endpoints are supported only for paid plans. Check the plan info
 The service supports Cross-Origin Resource Sharing (CORS). By using CORS, web pages can request resources directly from a foreign domain. CORS circumvents the same-origin security policy, which otherwise prevents such requests. Because the service supports CORS, a web page can communicate directly with the service without passing the request through the web server that hosts the page.
 
 For instance, a web page that is loaded from a server in {{site.data.keyword.cloud_notm}} can call the customization API directly, bypassing the {{site.data.keyword.cloud_notm}} server. For more information, see [enable-cors.org](https://enable-cors.org/){: external}.
+
+## Signed URLs
+{: #data-security-signed-urls}
+
+Signed URLs provide authentication information as a query string. Although signed URLs provide access for a limited time and with limited permissions, they allow any user with such a URL to access the service, regardless of whether that user has an account. The {{site.data.keyword.texttospeechshort}} service does not support signed URLs.
 
 ## FISMA support
 {: #data-security-fisma}

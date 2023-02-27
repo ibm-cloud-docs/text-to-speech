@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-01-17"
+lastupdated: "2023-02-20"
 
 subcollection: text-to-speech
 
@@ -13,7 +13,7 @@ subcollection: text-to-speech
 # Modifying speech synthesis with expressive neural voices
 {: #synthesis-expressive}
 
-The expressive neural voices that are available with the {{site.data.keyword.texttospeechfull}} service offer some additional features that are not available with other types of voices: *using speaking styles*, *emphasizing interjections*, and *emphasizing words*.  These features are available for both the HTTP and WebSocket interfaces. Like the expressive voices themselves, they are available only for US English.
+The expressive neural voices that are available with the {{site.data.keyword.texttospeechfull}} service offer some additional features that are not available with other types of voices: *using speaking styles*, *emphasizing interjections*, and *emphasizing words*.  These features are available for both the HTTP and WebSocket interfaces.
 {: shortdesc}
 
 The features involve the use of elements of the Speech Synthesis Markup Language (SSML). The descriptions of the features provide information about how they interact with related SSML elements and attributes.
