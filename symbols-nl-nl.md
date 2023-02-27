@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-02-16"
+lastupdated: "2023-02-20"
 
 subcollection: text-to-speech
 
@@ -10,7 +10,7 @@ subcollection: text-to-speech
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Dutch (Netherlands) symbols
+# Dutch (Netherlands) symbols (deprecated)
 {: #nlSymbols}
 
 [IBM Cloud]{: tag-ibm-cloud}

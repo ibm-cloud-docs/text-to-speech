@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-01-14"
+lastupdated: "2023-02-20"
 
 subcollection: text-to-speech
 
@@ -10,7 +10,7 @@ subcollection: text-to-speech
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Chinese (Mandarin) symbols
+# Chinese (Mandarin) symbols (deprecated)
 {: #zhSymbols}
 
 [IBM Cloud]{: tag-ibm-cloud}

@@ -49,6 +49,7 @@ toc:
           label: Using languages and voices
           topics:
           - voices.md
+          - voices-migrate.md
           - voices-use.md
           - voices-list.md
       - audio-formats.md
@@ -92,6 +93,7 @@ toc:
           - symbols-nl-be.md
           - symbols-nl-nl.md
           - symbols-en-au.md
+          - symbols-en-au-new.md
           - symbols-en-gb.md
           - symbols-en-us.md
           - symbols-fr-ca.md
@@ -100,6 +102,7 @@ toc:
           - symbols-it-it.md
           - symbols-ja-jp.md
           - symbols-ko-kr.md
+          - symbols-ko-kr-new.md
           - symbols-pt-br.md
           - symbols-es-es.md
           - symbols-sv-se.md

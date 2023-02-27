@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-02-24"
+lastupdated: "2023-02-27"
 
 subcollection: text-to-speech
 
@@ -24,10 +24,10 @@ The service can be used in applications such as voice-automated chatbots, as wel
 
 -   [IBM Cloud]{: tag-ibm-cloud} for managed instances of {{site.data.keyword.texttospeechshort}} that are hosted on {{site.data.keyword.cloud_notm}} or for instances that are hosted on [IBM Cloud Pak for Data as a Service](https://dataplatform.cloud.ibm.com/docs/content/wsj/landings/wtts.html){: external}.
     -   For information about all service updates, see the [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes).
-    -   For information about the latest service update, see [20 January 2023](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-20january2023) in the release notes.
+    -   For information about the latest service update, see the [27 February 2023](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-27february2023) service update in the release notes.
 -   [IBM Cloud Pak for Data]{: tag-cp4d} for installed or on-premises instances of {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}. For links to information about installing and managing {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}, see [Installing {{site.data.keyword.ibmwatson_notm}} {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-speech-install-data).
     -   For information about all service updates, see the [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes-data).
-    -   For information about the latest service update, see [23 February 2023 (Version 4.6.3)](/docs/text-to-speech?topic=text-to-speech-release-notes-data#text-to-speech-data-23february2023) in the release notes.
+    -   For information about the latest service update, see the [23 February 2023 (Version 4.6.3)](/docs/text-to-speech?topic=text-to-speech-release-notes-data#text-to-speech-data-23february2023) service update in the release notes.
 
 ## Speech synthesis
 {: #about-synthesis}
