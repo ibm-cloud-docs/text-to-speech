@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2015, 2023
-lastupdated: "2023-02-27"
+lastupdated: "2023-03-01"
 
 keywords: text to speech release notes,text to speech for IBM cloud release notes
 
@@ -25,6 +25,29 @@ For information about known limitations of the service, see [Known limitations](
 
 For information about releases and updates of the service for {{site.data.keyword.icp4dfull_notm}}, see [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes-data).
 {: note}
+
+## 1 March 2023
+{: #text-to-speech-1march2023}
+{: release-note}
+
+Important: Pending end of service for all neural voices
+:   **Important:** Effective **31 March 2023**, all neural voices reach their end of service date and will be removed from the service and the documentation. The neural voices have been deprecated since 31 March 2022. *No enhanced neural or expressive neural voices are effected.*
+
+    The following neural voices will be removed:
+    -   Arabic: `ar-MS_OmarVoice`
+    -   Chinese (Mandarin): `zh-CN_LiNaVoice`, `zh-CN_WangWeiVoice`, and `zh-CN_ZhangJingVoice`
+    -   Czech: `cs-CZ_AlenaVoice`
+    -   Dutch (Belgian): `nl-BE_AdeleVoice` and `nl-BE_BramVoice`
+    -   Dutch (Netherlands): `nl-NL_EmmaVoice` and `nl-NL_LiamVoice`
+    -   English (Australian): `en-AU_CraigVoice`, `en-AU_MadisonVoice`, and `en-AU_SteveVoice`
+    -   Korean: `ko-KR_HyunjunVoice`, `ko-KR_SiWooVoice`, `ko-KR_YoungmiVoice`, and `ko-KR_YunaVoice`
+    -   Swedish: `sv-SE_IngridVoice`
+
+    New enhanced neural and expressive neural voices are already available for the Australian English and Korean languages. In the coming weeks, new enhanced neural voices will be available for the Netherlands Dutch language. *You must migrate to one of the new voices for Australian English, Korean, and Netherlands Dutch before 31 March 2023.*
+
+    For more information, see
+    -   [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices)
+    -   [Migrating from neural voices](/docs/text-to-speech?topic=text-to-speech-voices-migrate)
 
 ## 27 February 2023
 {: #text-to-speech-27february2023}
