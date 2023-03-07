@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-01-14"
+lastupdated: "2023-03-07"
 
 subcollection: text-to-speech
 
@@ -30,7 +30,7 @@ The following status and support information applies to customization:
 -   [IBM Cloud]{: tag-ibm-cloud} You must have the Standard or Premium pricing plan to use customization. Users of the Lite plan cannot use the customization interface. For more information, see the {{site.data.keyword.texttospeechshort}} service in the [{{site.data.keyword.cloud}} Catalog](https://{DomainName}/catalog/text-to-speech){: external}.
 -   [IBM Cloud]{: tag-ibm-cloud} Premium customers can work with {{site.data.keyword.IBM_notm}} to train a new custom voice for their specific application needs. To request a custom voice or for more information, complete and submit this [{{site.data.keyword.IBM_notm}} Request Form](https://form.asana.com/?k=CBuXK1uwlAf5ek6FwB6mcg&d=8612789739828){: external}.
 
-Effective **31 March 2022**, all *neural voices* are deprecated. The deprecated voices remain available to existing users until 31 March 2023, when they will be removed from the service and the documentation. *No enhanced neural voices or expressive neural voices are deprecated.* For more information, see the [31 March 2022 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-31march2022) in the release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}}.
+Effective **31 March 2022**, all *neural voices* are deprecated. The deprecated voices remain available to existing users until 31 March 2023, when they will be removed from the service and the documentation. *No enhanced neural voices or expressive neural voices are deprecated.* For more information, see the [1 March 2023 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-1march2023) in the release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}}.
 {: deprecated}
 
 ## How customization works

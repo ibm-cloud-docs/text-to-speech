@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-01-17"
+lastupdated: "2023-03-07"
 
 subcollection: text-to-speech
 
@@ -23,7 +23,7 @@ The service supports speech synthesis with voices for the many languages listed 
 
 The service three types of voices: *expressive neural*, *enhanced neural*, and *neural*. All voices use neural voice technology, which produces more natural-sounding speech. The different types of voices have different qualities and support the use of different phonetic symbols. For information about the different types of voices and about the supported languages and voices for each type, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
 
-Effective **31 March 2022**, all *neural voices* are deprecated. The deprecated voices remain available to existing users until 31 March 2023, when they will be removed from the service and the documentation. *No enhanced neural voices or expressive neural voices are deprecated.* For more information, see the [31 March 2022 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-31march2022) in the release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}}.
+Effective **31 March 2022**, all *neural voices* are deprecated. The deprecated voices remain available to existing users until 31 March 2023, when they will be removed from the service and the documentation. *No enhanced neural voices or expressive neural voices are deprecated.* For more information, see the [1 March 2023 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-1march2023) in the release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}}.
 {: deprecated}
 
 ## Using audio formats
