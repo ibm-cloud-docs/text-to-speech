@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-02-23"
+lastupdated: "2023-03-07"
 
 subcollection: text-to-speech
 
@@ -32,7 +32,7 @@ The service offers three types of voices with different qualities and capabiliti
 -   *Enhanced neural voices*. Enhanced neural voices achieve a slightly higher degree of natural-sounding speech and support more service features. Enhanced neural voices support both IPA and SPR symbols for word customization. For a complete list of all enhanced neural voices and their languages, see [Enhanced neural voices](/docs/text-to-speech?topic=text-to-speech-voices#language-voices-enhanced-neural).
 -   *Neural voices*. Neural voices produce natural-sounding speech but do not support all of the service's features. Neural voices support only IPA symbols for word customization. For a complete list of all neural voices and their languages, see [Neural voices](/docs/text-to-speech?topic=text-to-speech-voices#language-voices-neural).
 
-    Effective **31 March 2022**, all *neural voices* are deprecated. The deprecated voices remain available to existing users until 31 March 2023, when they will be removed from the service and the documentation. *No enhanced neural voices or expressive neural voices are deprecated.* For more information, see the [31 March 2022 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-31march2022) in the release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}}.
+    Effective **31 March 2022**, all *neural voices* are deprecated. The deprecated voices remain available to existing users until 31 March 2023, when they will be removed from the service and the documentation. *No enhanced neural voices or expressive neural voices are deprecated.* For more information, see the [1 March 2023 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-1march2023) in the release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}}.
     {: deprecated}
 
 For more information about the service's neural voice technology, see [The science behind the service](/docs/text-to-speech?topic=text-to-speech-science).
@@ -129,7 +129,7 @@ The Spanish Latin American and North American `Sofia` voices are essentially the
 
 [IBM Cloud]{: tag-ibm-cloud}
 
-Effective **31 March 2022**, all *neural voices* are deprecated. The deprecated voices remain available to existing users until 31 March 2023, when they will be removed from the service and the documentation. *No enhanced neural voices or expressive neural voices are deprecated.* For more information, see the [31 March 2022 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-31march2022) in the release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}}.
+Effective **31 March 2022**, all *neural voices* are deprecated. The deprecated voices remain available to existing users until 31 March 2023, when they will be removed from the service and the documentation. *No enhanced neural voices or expressive neural voices are deprecated.* For more information, see the [1 March 2023 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-1march2023) in the release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}}.
 {: deprecated}
 
 Table 4 lists and provides audio samples for all available neural voices. All neural voices are generally available (GA) for production use with the *{{site.data.keyword.cloud_notm}}* version of the service only. (Neural voices do *not* include the string `V3` in their names.)

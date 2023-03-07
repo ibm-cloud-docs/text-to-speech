@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-02-10"
+lastupdated: "2023-03-07"
 
 keywords: text to speech,IBM cloud,getting started,tutorial,synthesize audio,speech synthesis
 
@@ -64,13 +64,13 @@ This tutorial uses an API key to authenticate. In production, use an IAM token. 
 
 [IBM Cloud Pak for Data]{: tag-cp4d}
 
-1.  Create an instance of {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}. For more information about installing the service and provisioning a service instance, see [Installing and managing {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-speech-install-data).
-1.  From the {{site.data.keyword.icp4dfull_notm}} web client menu, choose **My Instances**.
-1.  Click the {{site.data.keyword.texttospeechshort}} instance to open the overview page.
-1.  Copy the `{token}` and `{URL}` values.
+1.  Install {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}. For more information about installing the service, see
 
-This tutorial uses a Bearer token to authenticate. For more information see [Authenticating to IBM Cloud Pak for Data](/docs/watson?topic=watson-iam#gs-credential-cpd).
-{: tip}
+    -   [Preparing to install Watson Speech services](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.6.x?topic=services-preparing-install){: external}
+    -   [Installing Watson Speech services](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.6.x?topic=services-installing){: external}
+
+1.  Create an instance of the service by using the web client, the API, or the command-line interface. For more information about creating a service instance, see [Creating a Watson Speech services instance](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.6.x?topic=setup-creating-service-instance){: external}.
+1.  Follow the instructions in *Creating a Watson Speech services instance* to obtain a Bearer token. This tutorial uses a Bearer token to authenticate to the service.
 
 ## Synthesize text in US English
 {: #getting-started-synthesize-english}
