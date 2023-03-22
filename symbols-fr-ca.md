@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2022
-lastupdated: "2022-10-03"
+  years: 2021, 2023
+lastupdated: "2023-03-21"
 
 subcollection: text-to-speech
 
@@ -47,28 +47,28 @@ The service supports the following symbols for Canadian French.
 | SPR symbol | IPA symbol | IPA Unicode | Example words |
 |:----------:|:----------:|:-----------:|---------------|
 | b | b | 0062 | **b**é**b**é, **b**alle, ro**b**e |
-| p | p | 0070 | **p**orte, **p**rêt, guê**p**e |
 | d | d | 0064 | **d**ort, **d**olmen |
-| t | t | 0074 | **t**on, pa**tt**e, théâ**t**re |
-| g | g  \n   \n &#609; | 0067  \n   \n 0261 | **gu**erre, ba**gu**e, **g**arer |
-| k | k | 006B | **k**ilo, **c**aler, **qu**ai |
-| v | v | 0076 | la**v**er, **w**agon, **v**isiter |
-| f | f | 0066 | che**f**, **f**aim, **ph**are |
 | D | &#100;&#122;  \n   \n &#675; | 0064+007A  \n   \n 02A3 | **d**uque, **d**ire |
-| T | &#116;&#115;  \n   \n &#678; | 0074+0073  \n   \n 02A6 | pe**t**it, **t**uque |
-| z | z | 007A | ja**s**er, ré**s**eau, **z**ig**z**aguer |
-| s | s | 0073 | **s**ans, ambi**t**ion, fa**ç**on |
-| Z | &#658; | 0292 | ra**g**e, **g**îte, **j**ouer |
-| S | &#643; | 0283 | **ch**eval, lâ**ch**e, **sch**éma |
+| f | f | 0066 | che**f**, **f**aim, **ph**are |
+| g | g  \n   \n &#609; | 0067  \n   \n 0261 | **gu**erre, ba**gu**e, **g**arer |
+| H | &#613; | 0265 | s**u**is, l**u**i |
+| j | j  \n   \n &#654; | 006A  \n   \n 028E | h**i**érarchie, pa**ill**e, **y**oga |
+| k | k | 006B | **k**ilo, **c**aler, **qu**ai |
+| l | l | 006C | **l**itre, i**ll**isible, pâ**l**e |
 | m | m | 006D | **m**a**m**an, fe**mm**e, **m**iser |
 | n | n | 006E | A**nn**e, **n**i, ma**n**iaque |
-| 'nj' | &#626; | 0272 | a**gn**eau, campa**gn**e |
 | 'ng' | &#331; | 014B | parki**ng**, campi**ng** |
+| 'nj' | &#626; | 0272 | a**gn**eau, campa**gn**e |
+| p | p | 0070 | **p**orte, **p**rêt, guê**p**e |
 | r | r  \n   \n &#633;  \n   \n &#640;  \n   \n &#641; | 0072  \n   \n 0279  \n   \n 0280  \n   \n 0281 | pa**r**er, **r**a**r**e, ca**rr**eau |
-| l | l | 006C | **l**itre, i**ll**isible, pâ**l**e |
-| j | j  \n   \n &#654; | 006A  \n   \n 028E | h**i**érarchie, pa**ill**e, **y**oga |
+| s | s | 0073 | **s**ans, ambi**t**ion, fa**ç**on |
+| S | &#643; | 0283 | **ch**eval, lâ**ch**e, **sch**éma |
+| t | t | 0074 | **t**on, pa**tt**e, théâ**t**re |
+| T | &#116;&#115;  \n   \n &#678; | 0074+0073  \n   \n 02A6 | pe**t**it, **t**uque |
+| v | v | 0076 | la**v**er, **w**agon, **v**isiter |
 | w | w | 0077 | **ou**i, **w**att |
-| H | &#613; | 0265 | s**u**is, l**u**i |
+| z | z | 007A | ja**s**er, ré**s**eau, **z**ig**z**aguer |
+| Z | &#658; | 0292 | ra**g**e, **g**îte, **j**ouer |
 {: caption="Table 2. Consonants (Canadian French)"}
 
 ## Liaison

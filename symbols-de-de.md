@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-08-07"
+  years: 2015, 2023
+lastupdated: "2023-03-21"
 
 subcollection: text-to-speech
 
@@ -74,34 +74,33 @@ Nasalized vowels in German occur mostly in foreign loan words.
 | SPR symbol | IPA symbol | IPA Unicode | Example words |
 |:----------:|:----------:|:-----------:|---------------|
 | b | b | 0062 | **B**oden, **B**ett, o**b**en |
-| p | p | 0070 | **P**apier, Li**pp**e, Gra**b** |
-| d | d  \n   \n &#240; [**1**] | 0064  \n   \n 00F0 | **d**unkel, kin**d**isch, Hel**d**en |
-| t | t | 0074 | **T**ag, bi**tt**e, Ra**d** |
-| g | g  \n   \n &#609;  \n   \n &#611; | 0067  \n   \n 0261  \n   \n 0263 | **g**eben, **g**rau, Ta**g**e |
-| k | k | 006B | **K**atze, E**ck**e, S**k**ulptur, la**g**, **q**uitt |
-| v | v | 0076 | **W**agen, **v**iskös, **V**olum, o**v**al |
-| f | f | 0066 | **f**ast, ho**ff**en, **V**ater |
-| z | z | 007A | **S**ee, **S**atz, le**s**en |
-| s | s | 0073 | Ma**ß**, la**ss**en, La**s**t, H**au**s |
-| Z | &#658; | 0292 | Gara**g**e, **G**enie |
-| S | &#643; | 0283 | **sch**on, **s**pielen, **S**til, wä**sch**t |
-| X | &#231; | 00E7 | i**ch**, **Ch**emie, Kel**ch**, man**ch**er |
-| x | x  \n   \n &#967; | 0078  \n   \n 03C7 | Bu**ch**, Ba**ch**, Wo**ch**en |
-| P | &#112;&#102; | 0070+0066 | **Pf**lanze, Stum**pf**en |
-| R | &#592;  \n   \n &#652;  \n   \n &#602;  \n   \n &#605; | 0250  \n   \n 028C  \n   \n 025A  \n   \n 025D | Wied**er**, üb**er** |
-| T | &#116;&#115;  \n   \n &#678;  \n   \n &#952; [**2**] | 0074+0073  \n   \n 02A6  \n   \n 03B8 | **Z**auber, Poli**z**ei, Glan**z** |
-| J | &#100;&#658;  \n   \n &#676; | 0064+0292  \n   \n 02A4 | **J**ob, **Dsch**ungel |
 | C | &#116;&#643;  \n   \n &#116;&#643; | 0074+0283  \n   \n 02A7 | deuts**ch**, **Ch**ile, **C**ello |
+| d | d  \n   \n &#240; [**1**] | 0064  \n   \n 00F0 | **d**unkel, kin**d**isch, Hel**d**en |
+| f | f | 0066 | **f**ast, ho**ff**en, **V**ater |
+| g | g  \n   \n &#609;  \n   \n &#611; | 0067  \n   \n 0261  \n   \n 0263 | **g**eben, **g**rau, Ta**g**e |
+| G | &#331; | 014B | Fi**ng**er, lä**ng**s, Anfa**ng** |
+| h | h  \n   \n &#614; | 0068  \n   \n 0266 | **h**och, **H**and, A**h**orn |
+| j | j  \n   \n &#669; | 006A  \n   \n 029D | **J**unge, **j**a, **J**ahr, Minister**i**um |
+| J | &#100;&#658;  \n   \n &#676; | 0064+0292  \n   \n 02A4 | **J**ob, **Dsch**ungel |
+| k | k | 006B | **K**atze, E**ck**e, S**k**ulptur, la**g**, **q**uitt |
+| l | l | 006C | **l**esen, fa**ll**en, Pu**l**t |
 | m | m | 006D | **M**ann, ko**mm**en, Ate**m** |
 | n | n | 006E | **N**acht, kö**nn**en, Ki**n**d |
-| G | &#331; | 014B | Fi**ng**er, lä**ng**s, Anfa**ng** |
-| l | l | 006C | **l**esen, fa**ll**en, Pu**l**t |
+| p | p | 0070 | **P**apier, Li**pp**e, Gra**b** |
+| P | &#112;&#102; | 0070+0066 | **Pf**lanze, Stum**pf**en |
 | r | r  \n   \n &#633;  \n   \n &#640;  \n   \n &#641;  \n   \n &#638; | 0072  \n   \n 0279  \n   \n 0280  \n   \n 0281  \n   \n 027E | **R**ad, füh**r**en |
-| j | j  \n   \n &#669; | 006A  \n   \n 029D | **J**unge, **j**a, **J**ahr, Minister**i**um |
+| R | &#592;  \n   \n &#652;  \n   \n &#602;  \n   \n &#605; | 0250  \n   \n 028C  \n   \n 025A  \n   \n 025D | Wied**er**, üb**er** |
+| s | s | 0073 | Ma**ß**, la**ss**en, La**s**t, H**au**s |
+| S | &#643; | 0283 | **sch**on, **s**pielen, **S**til, wä**sch**t |
+| t | t | 0074 | **T**ag, bi**tt**e, Ra**d** |
+| T | &#116;&#115;  \n   \n &#678;  \n   \n &#952; [**2**] | 0074+0073  \n   \n 02A6  \n   \n 03B8 | **Z**auber, Poli**z**ei, Glan**z** |
+| v | v | 0076 | **W**agen, **v**iskös, **V**olum, o**v**al |
 | w | w  \n   \n &#651; | 0077  \n   \n 028B | Ed**u**ard, akt**u**ell, Jan**u**ar |
-| h | h  \n   \n &#614; | 0068  \n   \n 0266 | **h**och, **H**and, A**h**orn |
-| ? (glottal stop) | &#660; | 0294 | **e**r**o**bern (IPA `ʔɛɐˈʔoːbɐn`) |
-| | | | **e**rinnern (IPA `ʔɛɐˈʁɪnɐn`) |
+| x | x  \n   \n &#967; | 0078  \n   \n 03C7 | Bu**ch**, Ba**ch**, Wo**ch**en |
+| X | &#231; | 00E7 | i**ch**, **Ch**emie, Kel**ch**, man**ch**er |
+| z | z | 007A | **S**ee, **S**atz, le**s**en |
+| Z | &#658; | 0292 | Gara**g**e, **G**enie |
+| ? (glottal stop) | &#660; | 0294 | **e**r**o**bern (IPA `ʔɛɐˈʔoːbɐn`)  \n **e**rinnern (IPA `ʔɛɐˈʁɪnɐn`) |
 {: caption="Table 5. Consonants (German)"}
 
 **Notes:**

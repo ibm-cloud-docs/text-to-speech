@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2021-11-08"
+  years: 2015, 2023
+lastupdated: "2023-03-21"
 
 subcollection: text-to-speech
 
@@ -60,28 +60,28 @@ The service supports the following symbols for United Kingdom (UK) English.
 | SPR symbol | IPA symbol | IPA Unicode | Example words |
 |:----------:|:----------:|:-----------:|---------------|
 | b | b | 0062 | **b**ad, so**b** |
-| p | p | 0070 | **p**it, ri**p** |
-| d | d | 0064 | **d**ip, ha**d** |
-| t | t | 0074 | **t**ip, pe**t** |
-| g | g  \n   \n &#609; | 0067  \n   \n 0261 | **g**ood, bu**g** |
-| k | k | 006B | **k**ill, ma**k**e, ba**ck** |
-| D | &#240; | 00F0 | **th**is, brea**th**e |
-| T | &#952; | 03B8 | **th**ing, Be**th** |
-| v | v | 0076 | **v**ase, sa**v**e |
-| f | f | 0066 | **f**ield, i**f**, gra**ph** |
-| z | z | 007A | **z**ip, pha**s**e |
-| s | s | 0073 | **s**eal, mi**ss**, **c**eiling |
-| Z | &#658; | 0292 | trea**s**ure, gara**g**e |
-| S | &#643; | 0283 | **sh**ip, wi**sh** |
-| J | &#100;&#658;  \n   \n &#676; | 0064+0292  \n   \n 02A4 | **J**ane, hu**g**e |
 | C | &#116;&#643;  \n   \n &#679; | 0074+0283  \n   \n 02A7 | **ch**ip, wit**ch**, na**t**ure |
-| h | h  \n   \n x  \n   \n &#967;  \n   \n &#614; | 0068  \n   \n 0078  \n   \n 03C7  \n   \n 0266 | **h**ot, **h**ero |
-| m | m | 006D | **m**an, hu**m**, su**mm**er |
-| n | n | 006E | **n**ever, su**n**, wi**nn**er |
+| d | d | 0064 | **d**ip, ha**d** |
+| D | &#240; | 00F0 | **th**is, brea**th**e |
+| f | f | 0066 | **f**ield, i**f**, gra**ph** |
+| g | g  \n   \n &#609; | 0067  \n   \n 0261 | **g**ood, bu**g** |
 | G | &#331; | 014B | si**ng**, fi**ng**er |
-| r | r  \n   \n &#633;  \n   \n &#638; | 0072  \n   \n 0279  \n   \n 027E | bo**rr**ow, **r**ake |
+| h | h  \n   \n x  \n   \n &#967;  \n   \n &#614; | 0068  \n   \n 0078  \n   \n 03C7  \n   \n 0266 | **h**ot, **h**ero |
+| J | &#100;&#658;  \n   \n &#676; | 0064+0292  \n   \n 02A4 | **J**ane, hu**g**e |
+| k | k | 006B | **k**ill, ma**k**e, ba**ck** |
 | l | l | 006C | **l**ow, ha**ll** |
 | L | &#108;&#809; | 006C+0329 | cand**l**e |
+| m | m | 006D | **m**an, hu**m**, su**mm**er |
+| n | n | 006E | **n**ever, su**n**, wi**nn**er |
+| p | p | 0070 | **p**it, ri**p** |
+| r | r  \n   \n &#633;  \n   \n &#638; | 0072  \n   \n 0279  \n   \n 027E | bo**rr**ow, **r**ake |
+| s | s | 0073 | **s**eal, mi**ss**, **c**eiling |
+| S | &#643; | 0283 | **sh**ip, wi**sh** |
+| t | t | 0074 | **t**ip, pe**t** |
+| T | &#952; | 03B8 | **th**ing, Be**th** |
+| v | v | 0076 | **v**ase, sa**v**e |
 | w | w | 0077 | **w**ear, q**u**ick |
 | y | j | 006A | **y**es, Virgin**i**a |
+| z | z | 007A | **z**ip, pha**s**e |
+| Z | &#658; | 0292 | trea**s**ure, gara**g**e |
 {: caption="Table 4. Consonants (UK English)"}

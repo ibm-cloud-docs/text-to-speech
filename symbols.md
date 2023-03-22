@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-03-07"
+lastupdated: "2023-03-20"
 
 subcollection: text-to-speech
 
@@ -54,7 +54,8 @@ In the definitions, the letters represent specific sounds of US English speech. 
 Each language uses its own inventory of SPR symbols to represent the speech sounds of that language. The following rules apply to specifying an SPR symbol:
 
 -   Letters are case-sensitive, so `e` and `E`, for example, represent two different sounds.
--   Two- and three-character symbols must be contained in single quotes. For example, the symbol `aj` in the German word *heim* is specified as `"h'aj'm"`.
+-   Two- and three-character symbols must be enclosed in single quotes when indicated in the symbol tables. The single quotes indicate that the multiple characters are actually a single symbol. For example, the symbol `'aj'` in the German word *heim* is specified as `"h'aj'm"`.
+-   Some three-character symbols include single quotes around only two of the characters. The single quotes indicate that the two characters are a single symbol. So the SPR consists of two symbols. For example, the symbol `'a:'n` in the Netherlands Dutch word **dependances** contains two symbols, `'a:'` and `n`, and is specified as `d'e:'.pEn.1d'a:'n.s@s`.
 
 Also consider the following when defining a word's pronunciation in SPR format:
 
@@ -142,6 +143,7 @@ Effective **31 March 2022**, all *neural voices* are deprecated. The deprecated 
 | [Czech symbols (deprecated)](/docs/text-to-speech?topic=text-to-speech-csSymbols) | [IBM Cloud]{: tag-ibm-cloud} | Yes | No |
 | [Dutch (Belgian) symbols (deprecated)](/docs/text-to-speech?topic=text-to-speech-beSymbols) | [IBM Cloud]{: tag-ibm-cloud} | Yes | No |
 | [Dutch (Netherlands) symbols (deprecated)](/docs/text-to-speech?topic=text-to-speech-nlSymbols) | [IBM Cloud]{: tag-ibm-cloud} | Yes | No |
+| [Dutch (Netherlands) symbols](/docs/text-to-speech?topic=text-to-speech-nlSymbols-new) | [IBM Cloud]{: tag-ibm-cloud} | Yes | Yes |
 | [English (Australian) symbols (deprecated)](/docs/text-to-speech?topic=text-to-speech-auSymbols) | [IBM Cloud]{: tag-ibm-cloud} | Yes | No |
 | [English (Australian) symbols](/docs/text-to-speech?topic=text-to-speech-auSymbols-new) | [IBM Cloud]{: tag-ibm-cloud} | Yes | Yes |
 | [English (United Kingdom) symbols](/docs/text-to-speech?topic=text-to-speech-gbSymbols) | All versions | Yes | Yes |
