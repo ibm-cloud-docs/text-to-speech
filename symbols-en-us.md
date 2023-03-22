@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2021-11-17"
+  years: 2015, 2023
+lastupdated: "2023-03-21"
 
 subcollection: text-to-speech
 
@@ -59,31 +59,31 @@ The service supports the following symbols for United States (US) English.
 | SPR symbol | IPA symbol | IPA Unicode | Example words |
 |:----------:|:----------:|:-----------:|---------------|
 | b | b | 0062 | **b**ad, so**b** |
-| p | p | 0070 | **p**it, ri**p** |
+| C | &#116;&#643;  \n   \n &#679; | 0074+0283  \n   \n 02A7 | **ch**ip, wit**ch**, na**t**ure |
 | d | d | 0064 | **d**ip, ha**d** |
-| t | t | 0074 | **t**ip, pe**t** |
-| g | g  \n   \n &#609; | 0067  \n   \n 0261 | **g**ood, bu**g** |
-| k | k | 006B | **k**ill, **c**at, ma**k**e, ba**ck** |
 | D | &#240; | 00F0 | **th**is, brea**th**e |
+| f | f | 0066 | **f**ield, i**f**, gra**ph** |
+| F (flap) | &#638; | 027E | wri**t**er, fi**dd**le, li**tt**le |
+| g | g  \n   \n &#609; | 0067  \n   \n 0261 | **g**ood, bu**g** |
+| G | &#331; | 014B | si**ng**, fi**ng**er |
+| h | h  \n   \n &#614;  \n   \n x  \n   \n &#967; | 0068  \n   \n 0266  \n   \n 0078  \n   \n 03C7 | **h**ot, **h**ero, **ch**allah |
+| J | &#100;&#658;  \n   \n &#676; | 0064+0292  \n   \n 02A4 | **J**ane, hu**g**e |
+| k | k | 006B | **k**ill, **c**at, ma**k**e, ba**ck** |
+| l | l | 006C | **l**ow, ha**ll** |
+| m | m | 006D | **m**an, hu**m**, su**mm**er |
+| M | &#109;&#809; | 006D+0329 | h**mmm** |
+| n | n | 006E | **n**ever, su**n**, wi**nn**er |
+| N (syllabic nasal) | &#110;&#809; | 006E+0329 | butt**on**, sat**in**, eat**en**, burd**en** |
+| p | p | 0070 | **p**it, ri**p** |
+| r | r  \n   \n &#633; | 0072  \n   \n 0279 | bo**rr**ow, **r**ake |
+| s | s | 0073 | **s**eal, mi**ss**, **c**eiling |
+| S | &#643; | 0283 | **sh**ip, wi**sh** |
+| t | t | 0074 | **t**ip, pe**t** |
 | T | &#952; | 03B8 | **th**ing, Be**th** |
 | v | v | 0076 | **v**ase, sa**v**e |
-| f | f | 0066 | **f**ield, i**f**, gra**ph** |
-| z | z | 007A | **z**ip, pha**s**e |
-| s | s | 0073 | **s**eal, mi**ss**, **c**eiling |
-| Z | &#658; | 0292 | trea**s**ure, gara**g**e |
-| S | &#643; | 0283 | **sh**ip, wi**sh** |
-| J | &#100;&#658;  \n   \n &#676; | 0064+0292  \n   \n 02A4 | **J**ane, hu**g**e |
-| C | &#116;&#643;  \n   \n &#679; | 0074+0283  \n   \n 02A7 | **ch**ip, wit**ch**, na**t**ure |
-| h | h  \n   \n &#614;  \n   \n x  \n   \n &#967; | 0068  \n   \n 0266  \n   \n 0078  \n   \n 03C7 | **h**ot, **h**ero, **ch**allah |
-| m | m | 006D | **m**an, hu**m**, su**mm**er |
-| n | n | 006E | **n**ever, su**n**, wi**nn**er |
-| G | &#331; | 014B | si**ng**, fi**ng**er |
-| r | r  \n   \n &#633; | 0072  \n   \n 0279 | bo**rr**ow, **r**ake |
-| l | l | 006C | **l**ow, ha**ll** |
 | w | w  \n   \n &#653; | 0077  \n   \n 028D | **w**ear, q**ui**ck |
 | y | j | 006A | **y**es, Virgin**i**a |
-| M | &#109;&#809; | 006D+0329 | h**mmm** |
+| z | z | 007A | **z**ip, pha**s**e |
+| Z | &#658; | 0292 | trea**s**ure, gara**g**e |
 | ? (glottal stop) | &#660; | 0294 | ki**tt**en, La**t**in |
-| F (flap) | &#638; | 027E | wri**t**er, fi**dd**le, li**tt**le |
-| N (syllabic nasal) | &#110;&#809; | 006E+0329 | butt**on**, sat**in**, eat**en**, burd**en** |
 {: caption="Table 4. Consonants (US English)"}

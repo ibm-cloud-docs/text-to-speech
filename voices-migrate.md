@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-02-23"
+lastupdated: "2023-03-15"
 
 subcollection: text-to-speech
 
@@ -18,7 +18,7 @@ subcollection: text-to-speech
 The {{site.data.keyword.texttospeechfull}} service offers neural, enhanced neural, and expressive neural voices. All *neural voices* were deprecated on 31 March 2022. All neural voices reach their end of service date on **31 March 2023**, when they will be removed from the service and the documentation. No enhanced neural voices or expressive neural voices are effected by the deprecation.
 {: shortdesc}
 
-New enhanced neural and expressive neural voices are available for deprecated Australian English and Korean voices. You must migrate your use of any deprecated voices to the new voices by the 31 March 2023 end of service date. This topic describes the steps that you need to take to migrate from deprecated neural voices to enhanced or expressive neural voices.
+New enhanced neural and expressive neural voices are available for deprecated Australian English, Dutch Netherlands, and Korean voices. You must migrate your use of any deprecated voices to the new voices by the 31 March 2023 end of service date. This topic describes the steps that you need to take to migrate from deprecated neural voices to enhanced or expressive neural voices.
 
 ## Step 1: Identify the new voices to which you can migrate
 {: #voices-migrate-identify}
@@ -27,7 +27,8 @@ Identify the new voices that you can use in place of the deprecated neural voice
 
 | Language | Deprecated neural voices | New enhanced and expressive neural voices |
 |----------|:------------------------:|:-----------------------------------------:|
-| Australian English | `en-AU_CraigVoice`  \n `en-AU_MadisonVoice`  \n `en-AU_SteveVoice` | `en-AU_HeidiExpressive` (expressive neural)  \n `en-AU_JackExpressive` (expressive neural) |
+| Australian English   | `en-AU_CraigVoice`  \n `en-AU_MadisonVoice`  \n `en-AU_SteveVoice` | `en-AU_HeidiExpressive` (expressive neural)  \n `en-AU_JackExpressive` (expressive neural) |
+| Dutch Netherlands    | `nl-NL_EmmaVoice`  \n `nl-NL_LiamVoice` | `nl-NL_MerelV3Voice` (enhanced neural) |
 | Korean             | `ko-KR_HyunjunVoice`  \n `ko-KR_SiWooVoice`  \n `ko-KR_YoungmiVoice`  \n `ko-KR_YunaVoice` | `ko-KR_JinV3Voice` (enhanced neural) |
 {: caption="Table 1. Voices to which you can migrate from neural voices"}
 
@@ -68,6 +69,7 @@ If you used custom models to create a dictionary of custom words for your applic
 | Language | Phonetic symbols for deprecated voices | Phonetic symbols for new voices |
 |----------|:--------------------------------------:|:-------------------------------:|
 | Australian English | [English (Australian) symbols (deprecated)](/docs/text-to-speech?topic=text-to-speech-auSymbols) | [English (Australian) symbols](/docs/text-to-speech?topic=text-to-speech-auSymbols-new) |
+| Dutch Netherlands  | [Dutch (Netherlands) symbols (deprecated)](/docs/text-to-speech?topic=text-to-speech-nlSymbols) | [Dutch (Netherlands) symbols](/docs/text-to-speech?topic=text-to-speech-nlSymbols-new) |
 | Korean             | [Korean symbols (deprecated)](/docs/text-to-speech?topic=text-to-speech-koSymbols) | [Korean symbols](/docs/text-to-speech?topic=text-to-speech-koSymbols-new) |
 {: caption="Table 2. Phonetic symbols for deprecated and new voices"}
 

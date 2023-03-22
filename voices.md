@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-03-07"
+lastupdated: "2023-03-15"
 
 subcollection: text-to-speech
 
@@ -48,7 +48,7 @@ Table 1 shows the service's support for languages by type of voice. The followin
 | Chinese (Mandarin) | | | &#10004; |
 | Czech | | | &#10004; |
 | Dutch  \n (Belgian) | | | &#10004; |
-| Dutch  \n (Netherlands) | | | &#10004; |
+| Dutch  \n (Netherlands) | | &#10004; | &#10004; |
 | English  \n (United Kingdom) | | &#10004; | |
 | English  \n (Australian) | &#10004; | | &#10004; |
 | English  \n (United States) | &#10004; | &#10004; | |
@@ -95,6 +95,7 @@ Table 3 lists and provides audio samples for all available enhanced neural voice
 
 | Language | Availability        | Voice / Gender | Audio sample |
 |----------|:-------------------:|:--------------:|:------------:|
+| Dutch  \n (Netherlands) | Beta  \n [IBM Cloud]{: tag-ibm-cloud} | `nl-NL_MerelV3Voice`  \n Female | ![nl-NL_MerelV3Voive sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/nl-NL_MerelV3Voice.wav){: audio controls} |
 | English  \n (United Kingdom) | GA | `en-GB_CharlotteV3Voice`  \n Female | ![en-GB_CharlotteV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-GB_CharlotteV3Voice.wav){: audio controls} |
 | | GA | `en-GB_JamesV3Voice`  \n Male | ![en-GB_JamesV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-GB_JamesV3Voice.wav){: audio controls} |
 | | GA | `en-GB_KateV3Voice`  \n Female | ![en-GB_KateV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-GB_KateV3Voice.wav){: audio controls} |

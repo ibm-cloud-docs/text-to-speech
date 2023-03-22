@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-03-01"
+lastupdated: "2023-03-22"
 
 keywords: text to speech release notes,text to speech for IBM cloud release notes
 
@@ -27,6 +27,30 @@ For information about known limitations of the service, see [Known limitations](
 For information about releases and updates of the service for {{site.data.keyword.icp4dfull_notm}}, see [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes-data).
 {: note}
 
+## 22 March 2023
+{: #text-to-speech-22march2023}
+{: release-note}
+
+New beta Netherlands Dutch enhanced neural voice
+:   The service now supports a new enhanced neural female voice for Netherlands Dutch: `nl-NL_MerelV3Voice`. It supports the use of both standard International Phonetic Alphabet (IPA) and {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR) phonetic symbols.
+
+    The new voice is beta functionality pending completion of support for SSML. At its initial release, the voice does not support use of the following SSML-related functionality:
+    -   The `<prosody>` element with any speech synthesis request
+    -   The `rate_percentage` and `pitch_percentage` parameters with any speech synthesis request
+    -   The `<mark>` element with a WebSocket speech synthesis request
+    -   The `timings` parameter of the JSON text message with a WebSocket speech synthesis request
+
+    For more information about the new voice, its support for IPA and SPR symbols, and migrating to the new voice from the deprecated Netherlands Dutch neural voices, see
+    -   [Enhanced neural voices](/docs/text-to-speech?topic=text-to-speech-voices#language-voices-enhanced-neural)
+    -   [Dutch (Netherlands) symbols](/docs/text-to-speech?topic=text-to-speech-nlSymbols-new)
+    -   [Migrating from neural voices](/docs/text-to-speech?topic=text-to-speech-voices-migrate)
+
+Defect fix: Update Korean phonetic symbols in documentation
+:   **Defect fix:** In the documentation for Korean SPR symbols, two-character symbols for consonants are now enclosed in single quotes, making them a single symbol. Previously, they were shown as two separate symbols, without enclosing quotes. For more information, see [Consonants (Korean)](/docs/text-to-speech?topic=text-to-speech-koSymbols-new#koConsonants-new).
+
+Documentation updates for IBM SPR symbols
+:   The overview documentation for IBM SPR symbols has been updated to clarify the use of multi-character symbols. For more information, see [Speech sound symbols](/docs/text-to-speech?topic=text-to-speech-symbols#intro-SPRs-symbols)).
+
 ## 1 March 2023
 {: #text-to-speech-1march2023}
 {: release-note}
@@ -44,7 +68,7 @@ Important: Pending end of service for all neural voices
     -   Korean: `ko-KR_HyunjunVoice`, `ko-KR_SiWooVoice`, `ko-KR_YoungmiVoice`, and `ko-KR_YunaVoice`
     -   Swedish: `sv-SE_IngridVoice`
 
-    New enhanced neural and expressive neural voices are already available for the Australian English and Korean languages. In the coming weeks, new enhanced neural voices will be available for the Netherlands Dutch language. *You must migrate to one of the new voices for Australian English, Korean, and Netherlands Dutch before 31 March 2023.*
+    New enhanced neural and expressive neural voices are already available for the Australian English and Korean languages. In the coming weeks, a new enhanced neural voice will be available for the Netherlands Dutch language. *You must migrate to one of the new voices for Australian English, Korean, or Netherlands Dutch before 31 March 2023.*
 
     For more information, see
     -   [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices)
@@ -55,7 +79,7 @@ Important: Pending end of service for all neural voices
 {: release-note}
 
 New Australian English expressive neural voices
-:   The service now supports two new expressive neural voices for Australian English:
+:   The service now supports two new expressive neural voices, male and female, for Australian English:
     -   `en-AU_HeidiExpressive`
     -   `en-AU_JackExpressive`
 
@@ -67,7 +91,7 @@ New Australian English expressive neural voices
     -   [Migrating from neural voices](/docs/text-to-speech?topic=text-to-speech-voices-migrate)
 
 New Korean enhanced neural voice
-:   The service now supports a new enhanced neural voice for Korean: `ko-KR_JinV3Voice`. The new voice is generally available (GA) for production use. It supports the use of both standard International Phonetic Alphabet (IPA) and {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR) phonetic symbols. For more information, see
+:   The service now supports a new enhanced neural female voice for Korean: `ko-KR_JinV3Voice`. The new voice is generally available (GA) for production use. It supports the use of both standard International Phonetic Alphabet (IPA) and {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR) phonetic symbols. For more information, see
     -   [Enhanced neural voices](/docs/text-to-speech?topic=text-to-speech-voices#language-voices-enhanced-neural)
     -   [Korean symbols](/docs/text-to-speech?topic=text-to-speech-koSymbols-new)
 

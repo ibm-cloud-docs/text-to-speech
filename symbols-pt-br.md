@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-08-07"
+  years: 2015, 2023
+lastupdated: "2023-03-22"
 
 subcollection: text-to-speech
 
@@ -55,24 +55,24 @@ The service supports the following symbols for Brazilian Portuguese.
 | SPR symbol | IPA symbol | IPA Unicode | Example words |
 |:----------:|:----------:|:-----------:|---------------|
 | b | b | 0062 | a**b**raço, **B**rasil |
-| p | p | 0070 | **p**luma, **p**rimo |
-| d | d | 0064 | **d**ar, **d**ente |
-| t | t | 0074 | **t**rono, por**t**a |
-| g | g | 0067  \n 0261 | **g**ato, **g**uarda |
-| k | k | 006B | **c**ama, **qu**eda |
-| v | v | 0076 | **v**ila, bre**v**e |
-| f | f | 0066 | **f**lauta, **f**aixa |
-| z | z | 007A | **z**ero, ca**s**o |
-| s | s | 0073 | **c**erto, avan**ç**ar, **s**ete |
-| Z | &#658; | 0292 | **g**eral, **j**ogo |
-| S | &#643; | 0283 | **ch**ave, bai**x**a |
-| J | &#100;&#658;  \n   \n &#676; | 0064+0292  \n   \n 02A4 | bo**d**e, **d**iz |
 | C | &#116;&#643;  \n   \n &#679; | 0074+0283  \n   \n 02A7 | se**t**e, bo**t**e |
+| d | d | 0064 | **d**ar, **d**ente |
+| f | f | 0066 | **f**lauta, **f**aixa |
+| g | g | 0067  \n 0261 | **g**ato, **g**uarda |
+| J | &#100;&#658;  \n   \n &#676; | 0064+0292  \n   \n 02A4 | bo**d**e, **d**iz |
+| k | k | 006B | **c**ama, **qu**eda |
+| l | l | 006C | **l**eite, cava**l**o |
+| 'ly' | &#654; | 028E | **lh**e, bagu**lh**o |
 | m | m | 006D | for**m**a, **m**acaco |
 | n | n | 006E | do**n**o, **n**ovo |
 | N | &#626; | 0272 | cu**nh**a, ni**nh**o |
+| p | p | 0070 | **p**luma, **p**rimo |
 | r | &#638; | 027E | ca**r**o, t**r**em |
 | R | &#641; | 0281 | ca**rr**o, **r**io |
-| l | l | 006C | **l**eite, cava**l**o |
-| 'ly' | &#654; | 028E | **lh**e, bagu**lh**o |
+| s | s | 0073 | **c**erto, avan**ç**ar, **s**ete |
+| S | &#643; | 0283 | **ch**ave, bai**x**a |
+| t | t | 0074 | **t**rono, por**t**a |
+| v | v | 0076 | **v**ila, bre**v**e |
+| z | z | 007A | **z**ero, ca**s**o |
+| Z | &#658; | 0292 | **g**eral, **j**ogo |
 {: caption="Table 3. Consonants (Brazilian Portuguese)"}
