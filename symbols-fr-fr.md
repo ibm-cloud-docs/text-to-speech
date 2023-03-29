@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-03-21"
+lastupdated: "2023-03-23"
 
 subcollection: text-to-speech
 
@@ -28,7 +28,7 @@ The service supports the following symbols for French.
 | c | &#596;  \n   \n &#594; | 0254  \n   \n 0252 | P**au**l, n**o**te, échal**o**tte |
 | u | u  \n   \n &#650; | 0075  \n   \n 028A | r**ou**e, **où**, t**ou**r |
 | y | &#121;  \n   \n &#655; | 0079  \n   \n 028F | **u**tile, p**u**re, Br**u**no |
-| x [**1**] | &#601; | 0259 | litr**e**s, marbr**e** |
+| x ^**1**^ | &#601; | 0259 | litr**e**s, marbr**e** |
 | 'eu' | &#248;  \n   \n &#629; | 00F8  \n   \n 0275 | m**eu**gle, p**eu**, joy**eu**x |
 | 'oe' | &#339;  \n   \n &#630; | 0153  \n   \n 0276 | p**eu**r, c**oeu**r, j**eu**ne |
 | 'a~' | &#97;&#771;  \n   \n &#593;&#771; | 0061+0303  \n   \n 0251+0303 | b**an**c, **en**, t**em**ps |

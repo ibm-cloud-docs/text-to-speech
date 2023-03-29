@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-09-09"
+  years: 2015, 2023
+lastupdated: "2023-03-28"
 
 ---
 
@@ -11,7 +11,7 @@ lastupdated: "2022-09-09"
 # Known limitations
 {: #known-limitations}
 
-The {{site.data.keyword.texttospeechshort}} service has the following known limitations.
+The {{site.data.keyword.texttospeechshort}} service has the following known limitations. These issues apply to service functionality that spans releases on all platforms. For information about known limitations specific to {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} version 4.6.x, see [Limitations and known issues in Watson Speech services](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.6.x?topic=issues-watson-speech-services){: external}.
 {: shortdesc}
 
 ## Issue: The Ogg audio format is not supported with the Safari browser

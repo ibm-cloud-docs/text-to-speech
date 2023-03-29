@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-03-21"
+lastupdated: "2023-03-23"
 
 subcollection: text-to-speech
 
@@ -78,8 +78,8 @@ If an allophone is not used in SPR, the {{site.data.keyword.texttospeechshort}} 
 
 | SPR symbol | IPA symbol | IPA Unicode | Example words |
 |:----------:|:----------:|:-----------:|---------------|
-| 'ng' [**1**] | &#331;g | 014B+0067  \n 014B+0261 | a**ng**olo, lu**ng**o |
-| 'nk' [**1**] | &#331;k | 014B+006B | a**nc**ora, bia**nc**o |
+| 'ng' ^**1**^ | &#331;g | 014B+0067  \n 014B+0261 | a**ng**olo, lu**ng**o |
+| 'nk' ^**1**^ | &#331;k | 014B+006B | a**nc**ora, bia**nc**o |
 {: caption="Table 4. Allophones (Italian)"}
 
 **Note:**
