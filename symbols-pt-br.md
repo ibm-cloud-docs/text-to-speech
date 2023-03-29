@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-03-22"
+lastupdated: "2023-03-23"
 
 subcollection: text-to-speech
 
@@ -20,7 +20,7 @@ The service supports the following symbols for Brazilian Portuguese.
 
 | SPR symbol | IPA symbol | IPA Unicode | Example words |
 |:----------:|:----------:|:-----------:|---------------|
-| a [**1**] | a  \n   \n &#592; | 0061  \n   \n 0250 | vir**ar**, m**a**r  \n   \n Terr**a**, muit**a** |
+| a ^**1**^ | a  \n   \n &#592; | 0061  \n   \n 0250 | vir**ar**, m**a**r  \n   \n Terr**a**, muit**a** |
 | e | e | 0065 | d**e**do, portugu**ê**s |
 | E | &#603; | 025B | **é**s, b**e**lo, **e**co |
 | i | i | 0069 | l**i**gar, bod**e** |

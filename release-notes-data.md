@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-02-24"
+lastupdated: "2023-03-29"
 
 keywords: text to speech release notes,text to speech for IBM cloud pak for data release notes
 
@@ -24,6 +24,66 @@ For information about known limitations of the service, see [Known limitations](
 
 For information about releases and updates of the service for {{site.data.keyword.cloud_notm}}, see [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes).
 {: note}
+
+<!-- Service-specific fixes deferred to 4.6.5
+## 26 April 2023 (Version 4.6.5)
+{: #text-to-speech-data-26april2023}
+
+Version 4.6.5 is now available
+:   {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} version 4.6.5 is now available. This version supports {{site.data.keyword.icp4dfull_notm}} version 4.6.x and Red Hat OpenShift versions 4.10 and 4.12. For more information, see [{{site.data.keyword.watson}} Speech services on {{site.data.keyword.icp4dfull_notm}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.6.x?topic=services-watson-speech){: external}.
+
+New Australian English expressive neural voices
+:   The service now supports two new expressive neural voices for Australian English:
+    -   `en-AU_HeidiExpressive`
+    -   `en-AU_JackExpressive`
+
+    Expressive neural voices offer natural-sounding speech that is exceptionally clear, crisp, and fluid. The new voices are generally available (GA) for production use. They support the use of both standard International Phonetic Alphabet (IPA) and {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR) phonetic symbols. For more information, see
+    -   [Expressive neural voices](/docs/text-to-speech?topic=text-to-speech-voices#language-voices-expressive)
+    -   [English (Australian) symbols](/docs/text-to-speech?topic=text-to-speech-auSymbols-new)
+
+    You can migrate from Australian English neural voices that are deprecated to the new expressive neural voices. For more information, see
+    -   [Migrating from neural voices](/docs/text-to-speech?topic=text-to-speech-voices-migrate)
+
+New Korean enhanced neural voice
+:   The service now supports a new enhanced neural voice for Korean: `ko-KR_JinV3Voice`. The new voice is generally available (GA) for production use. It supports the use of both standard International Phonetic Alphabet (IPA) and {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR) phonetic symbols. For more information, see
+    -   [Enhanced neural voices](/docs/text-to-speech?topic=text-to-speech-voices#language-voices-enhanced-neural)
+    -   [Korean symbols](/docs/text-to-speech?topic=text-to-speech-koSymbols-new)
+
+    You can migrate from Korean neural voices that are deprecated to the new enhanced neural voice. For more information, see
+    -   [Migrating from neural voices](/docs/text-to-speech?topic=text-to-speech-voices-migrate)
+
+Defect fix: French Canadian voice now handles numeric times properly
+:   **Defect fix:** The French Canadian voices now pronounce times like `19:41` correctly. Previously, the voices were omitting elements of the time in the synthesized audio.
+
+Defect fix: Japanese voice no longer inserts unexpected audio
+:   **Defect fix:** The Japanese voice no longer inserts unexpected audio in speech synthesis results. Previously, additional audio was inserted in certain cases.
+
+Security vulnerabilities addressed
+:   The following security vulnerabilities have been fixed:
+-->
+
+## 29 March 2023 (Version 4.6.4)
+{: #text-to-speech-data-29march2023}
+
+Version 4.6.4 is now available
+:   {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} version 4.6.4 is now available. This version supports {{site.data.keyword.icp4dfull_notm}} version 4.6.x and Red Hat OpenShift versions 4.10 and 4.12. For more information, see [{{site.data.keyword.watson}} Speech services on {{site.data.keyword.icp4dfull_notm}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.6.x?topic=services-watson-speech){: external}.
+
+Important: Back up your data before upgrading to version 4.6.3 or 4.6.4
+:   **Important:** Before upgrading to Watson Speech services version 4.6.3 or 4.6.4, you must make a backup of your data. Preserve the backup in a safe location. For more information about backing up your Watson Speech services data, see *Backing up and restoring Watson Speech services data* in [Administering Watson Speech services](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.6.x?topic=services-administering){: external}. That topic also includes information about restoring your data if that becomes necessary.
+
+Defect fix: You can now change the installed models and voices with the advanced installation options
+:   **Defect fix:** During installation, you can now specify different models or voices with the advanced installation options of the command-line interface. Previously, the service always installed the default models and voices. The limitation continues to apply for Watson Speech services versions 4.6.0, 4.6.2, and 4.6.3. For information about installing models and voices, see *Specifying additional installation options* in [Installing Watson Speech services](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.6.x?topic=services-installing){: external}.
+
+Setting load balancer timeouts
+:   Watson Speech services require that you change the load balancer timeout settings for both the server and client to 300 seconds. These settings ensure that long-running speech recognition requests, those with long or difficult audio, have sufficient time to complete. For more information, see *Information you need to complete this task* in [Installing Watson Speech services](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.6.x?topic=services-installing){: external}.
+
+Documentation updates for IBM SPR symbols
+:   The overview documentation for IBM SPR symbols has been updated to clarify the use of multi-character symbols. For more information, see [Speech sound symbols](/docs/text-to-speech?topic=text-to-speech-symbols#intro-SPRs-symbols).
+
+<!--
+Security vulnerabilities addressed
+:   The following security vulnerabilities have been fixed:
+-->
 
 ## 23 February 2023 (Version 4.6.3)
 {: #text-to-speech-data-23february2023}
@@ -60,6 +120,11 @@ Known issue: Upgrade to version 4.6.3 can fail to complete
 
     Once the backup job is deleted, upgrade continues and completes.
 
+Additional information about working with service instances
+:   The documentation now includes information about creating a service instance with the command-line interface (`cpl-cli`) and about managing service instances. For more information, see the following topics of [{{site.data.keyword.watson}} Speech services on {{site.data.keyword.icp4dfull_notm}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.6.x?topic=services-watson-speech){: external}:
+    -   *Creating a Watson Speech services instance* under *Post-installation setup*
+    -   *Managing your Watson Speech services instances* under *Administering*
+
 Defect fix: The beta Tune by Example is now available
 :   **Defect fix:** The beta Tune by example feature is now available for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}. Previously, it was not possible to create speaker models. For more information about the feature, which is available for U.S. English voices only, see [Understanding Tune by Example](/docs/text-to-speech?topic=text-to-speech-tbe-intro).
 
@@ -68,11 +133,6 @@ Defect fix: Specifying large cardinal numbers with the `<say-as>` element no lon
 
 Defect fix: Homonyms and other words are now pronounced correctly by English voices
 :   **Defect fix:** The service now pronounces homonyms and other words correctly based on their context in English text that is to be synthesized. Previously, words such as `advocate` and `wifi` could be pronounced incorrectly by English voices.
-
-Additional information about working with service instances
-:   The documentation now includes information about creating a service instance with the command-line interface (`cpl-cli`) and about managing service instances. For more information, see the following topics of [{{site.data.keyword.watson}} Speech services on {{site.data.keyword.icp4dfull_notm}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.6.x?topic=services-watson-speech){: external}:
-    -   *Creating a Watson Speech services instance* under *Post-installation setup*
-    -   *Managing your Watson Speech services instances* under *Administering*
 
 Security vulnerability addressed
 :   The following security vulnerability has been fixed:

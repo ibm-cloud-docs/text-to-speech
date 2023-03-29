@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-03-22"
+lastupdated: "2023-03-24"
 
 subcollection: text-to-speech
 
@@ -27,7 +27,7 @@ The service can be used in applications such as voice-automated chatbots, as wel
     -   For information about the latest service update, see the [22 March 2023](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-22march2023) service update in the release notes.
 -   [IBM Cloud Pak for Data]{: tag-cp4d} for installed or on-premises instances of {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}. For links to information about installing and managing {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}, see [Installing {{site.data.keyword.ibmwatson_notm}} {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-speech-install-data).
     -   For information about all service updates, see the [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes-data).
-    -   For information about the latest service update, see the [23 February 2023 (Version 4.6.3)](/docs/text-to-speech?topic=text-to-speech-release-notes-data#text-to-speech-data-23february2023) service update in the release notes.
+    -   For information about the latest service update, see the [29 March2023 (Version 4.6.4)](/docs/text-to-speech?topic=text-to-speech-release-notes-data#text-to-speech-data-29march2023) service update in the release notes.
 
 ## Speech synthesis
 {: #about-synthesis}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-03-21"
+lastupdated: "2023-03-23"
 
 subcollection: text-to-speech
 
@@ -50,7 +50,7 @@ The service supports the following symbols for Netherlands Dutch.
 ## Nasalized vowels
 {: #nlNasalizedVowels-new}
 
-| SPR symbol [**1**] | IPA symbol | IPA Unicode | Example words |
+| SPR symbol ^**1**^ | IPA symbol | IPA Unicode | Example words |
 |:----------:|:----------:|:-----------:|:-------------:|
 | 'a:'n | aːn | 0061+02D0+006E | depend**an**ces |
 | 'e:'n | eːn | 0065+02D0+006E | Chop**in** |

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-03-21"
+lastupdated: "2023-03-23"
 
 subcollection: text-to-speech
 
@@ -75,7 +75,7 @@ Nasalized vowels in German occur mostly in foreign loan words.
 |:----------:|:----------:|:-----------:|---------------|
 | b | b | 0062 | **B**oden, **B**ett, o**b**en |
 | C | &#116;&#643;  \n   \n &#116;&#643; | 0074+0283  \n   \n 02A7 | deuts**ch**, **Ch**ile, **C**ello |
-| d | d  \n   \n &#240; [**1**] | 0064  \n   \n 00F0 | **d**unkel, kin**d**isch, Hel**d**en |
+| d | d  \n   \n &#240; ^**1**^ | 0064  \n   \n 00F0 | **d**unkel, kin**d**isch, Hel**d**en |
 | f | f | 0066 | **f**ast, ho**ff**en, **V**ater |
 | g | g  \n   \n &#609;  \n   \n &#611; | 0067  \n   \n 0261  \n   \n 0263 | **g**eben, **g**rau, Ta**g**e |
 | G | &#331; | 014B | Fi**ng**er, lä**ng**s, Anfa**ng** |
@@ -93,7 +93,7 @@ Nasalized vowels in German occur mostly in foreign loan words.
 | s | s | 0073 | Ma**ß**, la**ss**en, La**s**t, H**au**s |
 | S | &#643; | 0283 | **sch**on, **s**pielen, **S**til, wä**sch**t |
 | t | t | 0074 | **T**ag, bi**tt**e, Ra**d** |
-| T | &#116;&#115;  \n   \n &#678;  \n   \n &#952; [**2**] | 0074+0073  \n   \n 02A6  \n   \n 03B8 | **Z**auber, Poli**z**ei, Glan**z** |
+| T | &#116;&#115;  \n   \n &#678;  \n   \n &#952; ^**2**^ | 0074+0073  \n   \n 02A6  \n   \n 03B8 | **Z**auber, Poli**z**ei, Glan**z** |
 | v | v | 0076 | **W**agen, **v**iskös, **V**olum, o**v**al |
 | w | w  \n   \n &#651; | 0077  \n   \n 028B | Ed**u**ard, akt**u**ell, Jan**u**ar |
 | x | x  \n   \n &#967; | 0078  \n   \n 03C7 | Bu**ch**, Ba**ch**, Wo**ch**en |
