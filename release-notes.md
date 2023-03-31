@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-03-30"
+lastupdated: "2023-03-31"
 
 keywords: text to speech release notes,text to speech for IBM cloud release notes
 
@@ -32,7 +32,7 @@ For information about releases and updates of the service for {{site.data.keywor
 {: release-note}
 
 Important: End of service for all neural voices
-:   **Important:** All neural voices have reached their end of service date and have been removed from the service and the documentation. For complete list of all obsolete neural voices, see the [1 March 2023 service updates](#text-to-speech-1march2023). *No enhanced neural or expressive neural voices are effected.*
+:   **Important:** All neural voices have reached their end of service date and have been removed from the service and the documentation. *No enhanced neural or expressive neural voices are effected.* For complete list of all obsolete neural voices, see the [1 March 2023 service updates](#text-to-speech-1march2023). An attempt to use an obsolete voice returns the HTTP response code 404 with the message `Model '{voice}' not found`.
 
     New enhanced neural and expressive neural voices are available for the Australian English, Korean, and Netherlands Dutch languages. *You must migrate to one of the new voices for Australian English, Korean, or Netherlands Dutch to continue using the obsolete languages.*
 
