@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-03-07"
+lastupdated: "2023-03-30"
 
 subcollection: text-to-speech
 
@@ -29,9 +29,6 @@ The following status and support information applies to customization:
 -   Customization is available for all languages.
 -   [IBM Cloud]{: tag-ibm-cloud} You must have the Standard or Premium pricing plan to use customization. Users of the Lite plan cannot use the customization interface. For more information, see the {{site.data.keyword.texttospeechshort}} service in the [{{site.data.keyword.cloud}} Catalog](https://{DomainName}/catalog/text-to-speech){: external}.
 -   [IBM Cloud]{: tag-ibm-cloud} Premium customers can work with {{site.data.keyword.IBM_notm}} to train a new custom voice for their specific application needs. To request a custom voice or for more information, complete and submit this [{{site.data.keyword.IBM_notm}} Request Form](https://form.asana.com/?k=CBuXK1uwlAf5ek6FwB6mcg&d=8612789739828){: external}.
-
-Effective **31 March 2022**, all *neural voices* are deprecated. The deprecated voices remain available to existing users until 31 March 2023, when they will be removed from the service and the documentation. *No enhanced neural voices or expressive neural voices are deprecated.* For more information, see the [1 March 2023 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-1march2023) in the release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}}.
-{: deprecated}
 
 ## How customization works
 {: #ciHow}
@@ -81,7 +78,7 @@ For example, consider the word `trinitroglycerin`. The service's regular pronunc
 
 In these examples, the phonetic translation string is composed of phoneme symbols and a single primary stress mark. The primary stress mark is represented by `ˈ` in IPA and by `1` in SPR. It is placed just before the symbol for the stressed vowel in both cases. Although the examples do not show it, you can also specify syllable boundaries and secondary stress positions in a phonetic translation. These elements are not required and normally are not needed to achieve a pronunciation. As with sounds-like translations, you can compose a phonetic translation from multiple strings that are delimited by spaces.
 
-You can also specify IPA translations as IPA Unicode values. For more information, see [Understanding phonetic symbols](/docs/text-to-speech?topic=text-to-speech-symbols) and the language-specific tables on the pages that are referred to in [Language support for IPA and SPR](/docs/text-to-speech?topic=text-to-speech-symbols#supportedLanguages). For an example translation that uses IPA Unicode values, see [The phoneme element](/docs/text-to-speech?topic=text-to-speech-elements#phoneme_element).
+You can also specify IPA translations as IPA Unicode values. For more information, see [Understanding phonetic symbols](/docs/text-to-speech?topic=text-to-speech-symbols) and the language-specific tables on the pages that are referred to from [Phonetic symbols for supported languages](/docs/text-to-speech?topic=text-to-speech-symbols#supportedLanguages). For an example translation that uses IPA Unicode values, see [The phoneme element](/docs/text-to-speech?topic=text-to-speech-elements#phoneme_element).
 {: note}
 
 ### Working with an existing phonetic translation

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-03-07"
+lastupdated: "2023-03-30"
 
 keywords: faqs,frequently asked questions,question,Text to Speech
 
@@ -37,12 +37,8 @@ Once you have your service credentials, see the following topics for information
 {: support}
 
 The {{site.data.keyword.texttospeechshort}} service supports male and female voices in various spoken languages:
--   The service offers *expressive* voices for US English.
--   The services offers *enhanced neural* voices for the following languages: English (United Kingdom and United States), French, German, Italian, Japanese, Portuguese (Brazilian), and Spanish (Castilian, Latin American, and North American).
--   The service offers *neural* voices for the following languages: Arabic, Chinese (Mandarin), Czech, Dutch (Belgian and Netherlands), English (Australian), Korean, and Swedish.
-
-    Effective **31 March 2022**, all *neural voices* are deprecated. The deprecated voices remain available to existing users until 31 March 2023, when they will be removed from the service and the documentation. *No enhanced neural voices or expressive neural voices are deprecated.* For more information, see the [1 March 2023 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-1march2023) in the release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}}.
-    {: deprecated}
+-   The service offers *expressive neural voices* for English (Australian and United States).
+-   The services offers *enhanced neural voices* for Dutch Netherlands, English (United Kingdom and United States), French (Canadian and France), German, Italian, Japanese, Korean, Portuguese (Brazilian), and Spanish (Castilian, Latin American, and North American).
 
 Some languages and voices are available only for {{site.data.keyword.cloud}}, not for {{site.data.keyword.icp4dfull}}. For more information about the available voices for all languages, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
 

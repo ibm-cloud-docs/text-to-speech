@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-02-06"
+lastupdated: "2023-03-29"
 
 subcollection: text-to-speech
 
@@ -21,7 +21,7 @@ Each of these parameters interacts with elements of the Speech Synthesis Markup 
 ## Modifying the speaking rate
 {: #params-rate-percentage}
 
-The `rate_percentage` parameter is beta functionality that is supported only for expressive and enhanced neural voices.
+The `rate_percentage` parameter is beta functionality.
 {: beta}
 
 The speaking rate is the speed at which the service speaks the text that it synthesizes into speech. A higher rate causes the text to be spoken more quickly; a lower rate causes the text to be spoken more slowly.
@@ -95,7 +95,7 @@ var websocket = new WebSocket(wsURI);
 ## Modifying the speaking pitch
 {: #params-pitch-percentage}
 
-The `pitch_percentage` parameter is beta functionality that is supported only for expressive and enhanced neural voices.
+The `pitch_percentage` parameter is beta functionality.
 {: beta}
 
 The speaking pitch represents the pitch, or tone, of the speech that the service synthesizes, which also affects the intonation. It represents how high or low the tone of the voice is perceived by the listener. A higher pitch results in speech that is spoken at a higher tone and is perceived as a higher voice; a lower pitch results in speech that is spoken in a lower tone and is perceived as a lower, deeper voice.

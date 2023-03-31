@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-02-06"
+lastupdated: "2023-03-30"
 
 subcollection: text-to-speech
 
@@ -169,10 +169,10 @@ The only valid attribute for either element is `xml:lang`, which allows for lang
 The `<phoneme>` element provides a phonetic pronunciation for the enclosed text. The phonetic spelling represents the sounds of a word, how the sounds are divided into syllables, and which syllables receive stress. The element has two attributes:
 
 -   `alphabet` is an optional attribute that specifies the phonology to be used. The supported alphabets are
-    -   *The standard International Phonetic Alphabet (IPA):* `alphabet="ipa"`. All voices support IPA.
-    -   *The {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR):* `alphabet="ibm"`. Only expressive and enhanced neural voices support SPR in addition to IPA.
+    -   *The standard International Phonetic Alphabet (IPA):* `alphabet="ipa"`.
+    -   *The {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR):* `alphabet="ibm"`.
 
-    If no alphabet is specified, the service uses {{site.data.keyword.IBM_notm}} SPR by default. For more information, see [Language support for IPA and SPR](/docs/text-to-speech?topic=text-to-speech-symbols#supportedLanguages).
+    If no alphabet is specified, the service uses {{site.data.keyword.IBM_notm}} SPR by default. For more information, see [Understanding phonetic symbols](/docs/text-to-speech?topic=text-to-speech-symbols).
 -   `ph` is a required attribute that provides the pronunciation in the indicated alphabet. The following examples show the pronunciation for the word *tomato* in both formats:
 
     -   IPA format:

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-03-22"
+lastupdated: "2023-03-30"
 
 keywords: text to speech release notes,text to speech for IBM cloud release notes
 
@@ -26,6 +26,19 @@ For information about known limitations of the service, see [Known limitations](
 
 For information about releases and updates of the service for {{site.data.keyword.icp4dfull_notm}}, see [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes-data).
 {: note}
+
+## 31 March 2023
+{: #text-to-speech-31march2023}
+{: release-note}
+
+Important: End of service for all neural voices
+:   **Important:** All neural voices have reached their end of service date and have been removed from the service and the documentation. For complete list of all obsolete neural voices, see the [1 March 2023 service updates](#text-to-speech-1march2023). *No enhanced neural or expressive neural voices are effected.*
+
+    New enhanced neural and expressive neural voices are available for the Australian English, Korean, and Netherlands Dutch languages. *You must migrate to one of the new voices for Australian English, Korean, or Netherlands Dutch to continue using the obsolete languages.*
+
+    For more information, see
+    -   [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices)
+    -   [Migrating from neural voices](/docs/text-to-speech?topic=text-to-speech-voices-migrate)
 
 ## 22 March 2023
 {: #text-to-speech-22march2023}
@@ -307,10 +320,10 @@ Defect fix: Improve SSML documentation
 {: release-note}
 
 New Czech neural voice: `cs-CZ_AlenaVoice`
-:   A new language, Czech, with a new female voice, `cs-CZ_AlenaVoice`, is now available. The voice is a neural voice. For more information about the IPA symbols for the language, see [Czech symbols (deprecated)](/docs/text-to-speech?topic=text-to-speech-csSymbols).
+:   A new language, Czech, with a new female voice, `cs-CZ_AlenaVoice`, is now available. The voice is a neural voice.
 
 New Belgian Dutch neural voice: `nl-BE_BramVoice`
-:   A new male Belgian Dutch (Flemish) voice, `nl-BE_BramVoice`, is now available. The voice is a neural voice. For more information about the IPA symbols for the language, see [Dutch (Belgian) symbols (deprecated)](/docs/text-to-speech?topic=text-to-speech-beSymbols).
+:   A new male Belgian Dutch (Flemish) voice, `nl-BE_BramVoice`, is now available. The voice is a neural voice.
 
 Defect fix: Improve SSML and speech synthesis
 :   **Defect fix:**  The following defects for the Speech Synthesis Markup Language (SSML) and speech synthesis were fixed with this release:
@@ -327,10 +340,10 @@ Multiple neural voice improvements
 :   The existing neural voices for Chinese, Dutch (Belgian and Netherlands), Australian English, and Korean have been updated for improved speech synthesis and enhanced audio results. For more information about all available voices, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
 
 New Australian English neural voice: `en-AU_SteveVoice`
-:   A new male Australian English voice, `en-AU_SteveVoice`, is now available. The voice is a neural voice. For more information about the IPA symbols for the language, see [English (Australian) symbols (deprecated)](/docs/text-to-speech?topic=text-to-speech-auSymbols).
+:   A new male Australian English voice, `en-AU_SteveVoice`, is now available. The voice is a neural voice.
 
 New Swedish neural voice: `sv-SE_IngridVoice`
-:   A new language, Swedish, with a new female voice, `sv-SE_IngridVoice`, is now available. The voice is a neural voice. For more information about the IPA symbols for the language, see [Swedish symbols (deprecated)](/docs/text-to-speech?topic=text-to-speech-svSymbols).
+:   A new language, Swedish, with a new female voice, `sv-SE_IngridVoice`, is now available. The voice is a neural voice.
 
 ## 6 October 2021
 {: #text-to-speech-6october2021}
@@ -355,8 +368,6 @@ Defect fix: Improve Castilian Spanish and North American Spanish enhanced neural
 
 New Belgian Dutch neural voice: `nl-BE_AdeleVoice`
 :   The service now supports Belgian Dutch (Flemish) with the neural voice `nl-BE_AdeleVoice`. The Belgian Dutch voice supports customization and is generally available (GA) for production use.
-    -   To hear a sample of the new voice, see [Supported languages and voices](/docs/text-to-speech?topic=text-to-speech-voices#language-voices).
-    -   For more information about the phonetic symbols and Unicode values that are available for the Belgian Dutch language, see [Dutch (Belgian) symbols (deprecated)](/docs/text-to-speech?topic=text-to-speech-beSymbols).
 
 ## 12 April 2021
 {: #text-to-speech-12april2021}
@@ -443,8 +454,8 @@ New neural and enhanced neural voices
 New Australian English and Korean neural voices
 :   The following Australian English and Korean voices are new:
 
-    -   The service now supports Australian English with the following two neural voices: `en-AU_CraigVoice` and `en-AU_MadisonVoice`. For about the IPA symbols and Unicode values that are now available for the Australian language, see [English (Australian) symbols (deprecated)](/docs/text-to-speech?topic=text-to-speech-auSymbols).
-    -   The service now supports two new Korean neural voices: `ko-KR_HyunjunVoice` and `ko-KR_SiWooVoice`. For information about the IPA symbols and Unicode values for the Korean language, see [Korean symbols (deprecated)](/docs/text-to-speech?topic=text-to-speech-koSymbols).
+    -   The service now supports Australian English with the following two neural voices: `en-AU_CraigVoice` and `en-AU_MadisonVoice`.
+    -   The service now supports two new Korean neural voices: `ko-KR_HyunjunVoice` and `ko-KR_SiWooVoice`.
 
 Improved neural voices
 :   The voices for the existing Arabic, Chinese, Netherlands Dutch, and Korean languages, all of which were concatenative, are now neural:
@@ -462,12 +473,10 @@ Improved neural voices
 
     -   The Arabic voice is now named `ar-MS_OmarVoice`. The former name, `ar-AR_OmarVoice`, is deprecated. It will continue to function for at least one year but might be removed at a future date. You are encouraged to migrate to the new name at your earliest convenience.
     -   The Arabic language now supports the use of IPA symbols and Unicode values with the SSML `<phoneme>` element. To create a custom model for Arabic, you must use the language identifier `ar-MS`. The identifier `ar-AR` is not supported for customization.
-    -   The IPA symbols for the Arabic language are new. The previously documented symbols have been completely replaced. For more information about the supported IPA symbols and Unicode values, see [Arabic symbols (deprecated)](/docs/text-to-speech?topic=text-to-speech-arSymbols).
+    -   The IPA symbols for the Arabic language are new. The previously documented symbols have been completely replaced.
     -   The IPA symbols for the Netherlands Dutch language have been changed as follows:
         -   Netherlands Dutch no longer supports the following IPA symbols: `tʲ` (`0074+02B2`), `ɲ` (`0272`), `ʦ` (`02A6`), and `ʔ` (`0294`).
         -   Netherlands Dutch now supports the following IPA symbol: `ɣ` (`0263`).
-
-        For more information about the supported IPA symbols and Unicode values, see [Dutch (Netherlands) symbols (deprecated)](/docs/text-to-speech?topic=text-to-speech-nlSymbols).
 
 Deprecated standard voices
 :   The following standard concatenative voices are now deprecated:

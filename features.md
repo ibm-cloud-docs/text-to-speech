@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-03-07"
+lastupdated: "2023-03-30"
 
 subcollection: text-to-speech
 
@@ -19,12 +19,9 @@ You can access the speech synthesis capabilities of the {{site.data.keyword.text
 ## Using languages and voices
 {: #features-languages-voices}
 
-The service supports speech synthesis with voices for the many languages listed in [Language support](/docs/speech-to-text?topic=speech-to-text-about#about-languages). For different languages, the service offers female voices, male voices, or both. Some languages and voices are supported for {{site.data.keyword.cloud}} only.
+The service supports speech synthesis with voices for the languages listed in [Language support](/docs/speech-to-text?topic=speech-to-text-about#about-languages). For different languages, the service offers female voices, male voices, or both. Some languages and voices might be supported for {{site.data.keyword.cloud}} only.
 
-The service three types of voices: *expressive neural*, *enhanced neural*, and *neural*. All voices use neural voice technology, which produces more natural-sounding speech. The different types of voices have different qualities and support the use of different phonetic symbols. For information about the different types of voices and about the supported languages and voices for each type, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
-
-Effective **31 March 2022**, all *neural voices* are deprecated. The deprecated voices remain available to existing users until 31 March 2023, when they will be removed from the service and the documentation. *No enhanced neural voices or expressive neural voices are deprecated.* For more information, see the [1 March 2023 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-1march2023) in the release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}}.
-{: deprecated}
+All of the service's voices use neural voice technology, which produces more natural-sounding speech. The service offers two types of voices, *expressive neural* and *enhanced neural*, which have different qualities and features. For information about the types of voices and about the supported languages and voices for each type, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
 
 ## Using audio formats
 {: #features-audio-formats}

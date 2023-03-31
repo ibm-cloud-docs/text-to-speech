@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-03-07"
+lastupdated: "2023-03-30"
 
 subcollection: text-to-speech
 
@@ -10,15 +10,12 @@ subcollection: text-to-speech
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Dutch (Netherlands) symbols (deprecated)
+# Dutch (Netherlands) symbols (obsolete)
 {: #nlSymbols}
 
 [IBM Cloud]{: tag-ibm-cloud}
 
-The service supports the following symbols for Netherlands Dutch.
-
-Effective **31 March 2022**, all *neural voices* are deprecated. The deprecated voices remain available to existing users until 31 March 2023, when they will be removed from the service and the documentation. *No enhanced neural voices or expressive neural voices are deprecated.* For more information, see the [1 March 2023 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-1march2023) in the release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}}.
-{: deprecated}
+The service supported the following symbols for the obsolete neural voices for Netherlands Dutch. These voices were replaced with an alternative enhanced neural voice and removed from the service on 31 March 2023. The symbols are available to help users migrate from the obsolete Netherlands Dutch neural voices to the new Netherlands Dutch enhanced neural voice.
 
 ## Regular vowels
 {: #nlRegularVowels}

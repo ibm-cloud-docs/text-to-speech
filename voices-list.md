@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-01-14"
+lastupdated: "2023-03-31"
 
 subcollection: text-to-speech
 
@@ -96,7 +96,7 @@ The fields of the voice objects provide the following information:
 -   `description` provides a brief description of the voice.
 -   `customizable` is a boolean value that indicates whether the voice can be customized with the service's customization interface. (This field, which provides the same information as the `custom_pronunciation` field, is maintained for backward compatibility.)
 -   `supported_features` describes the additional service features that are supported by the voice:
-    -   `voice_transformation` is a boolean value that indicates whether the voice can be transformed by using the SSML `<voice-transformation>` element. The feature was available only for now-deprecated standard US English voices. You cannot use voice transformation with neural voices.
+    -   `voice_transformation` is a boolean value that indicates whether the voice supported the SSML `<voice-transformation>` element. The feature was available only for obsolete standard US English voices. You cannot use the `<voice-transformation>` element with any supported voice.
     -   `custom_pronunciation` is a boolean value that indicates whether the voice can be customized with the service's customization interface.
 
 ## Listing a specific voice

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-03-28"
+lastupdated: "2023-03-30"
 
 ---
 
@@ -21,11 +21,6 @@ The {{site.data.keyword.texttospeechshort}} service has the following known limi
 
 -   For more information about the available formats, see [Supported audio formats](/docs/text-to-speech?topic=text-to-speech-audio-formats#formats-supported).
 -   For more information about specifying a format, see [Specifying an audio format](/docs/text-to-speech?topic=text-to-speech-audio-formats#formats-specify).
-
-## Issue: CORS is not supported for neural voices in the Firefox browser
-{: #limitation-cors}
-
-**2 December 2020:** Cross-Origin Resource Sharing (CORS) support is not available from the Mozilla Firefox™ browser for neural voices in the following languages: Arabic, Australian English, Chinese, Dutch (Belgian and Netherlands), Korean, and Swedish.
 
 ## Issue: Sampling rate for ogg format with opus codec is always 48 kHz
 {: #limitation-opus-rate}

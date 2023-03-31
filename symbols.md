@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-03-20"
+lastupdated: "2023-03-30"
 
 subcollection: text-to-speech
 
@@ -13,7 +13,7 @@ subcollection: text-to-speech
 # Understanding phonetic symbols
 {: #symbols}
 
-The {{site.data.keyword.texttospeechfull}} service supports both the standard International Phonetic Alphabet (IPA) and {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR) notations to represent the sounds of words. Both notations provide phonetic coding that represents the pronunciation of a word, the sounds that make up the word, how the sounds are divided into syllables, and which syllables are stressed. [Language support for IPA and SPR](#supportedLanguages) provides links to pages that document the allowable phonetic symbols for each language.
+All languages and voices of the {{site.data.keyword.texttospeechfull}} service support both the standard International Phonetic Alphabet (IPA) and {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR) notations to represent the sounds of words. Both notations provide phonetic encoding that represents the pronunciation of a word, the sounds that make up the word, how the sounds are divided into syllables, and which syllables are stressed. [Phonetic symbols for supported languages](#supportedLanguages) provides links to topics that document the phonetic symbols for each language.
 {: shortdesc}
 
 ## Defining a word pronunciation
@@ -38,7 +38,7 @@ For more information, see
 ## Working with IBM SPR
 {: #intro-SPRs}
 
-IBM SPR is an alternative representation to standard IPA. Here are examples of valid SPR notations for the words *through* and *shocking* in US English:
+IBM SPR is an alternative representation to standard IPA. The following examples of valid SPR notations define the words *through* and *shocking* in US English:
 
 ```xml
 <phoneme alphabet="ibm" ph=".1Tru">through</phoneme>
@@ -46,7 +46,7 @@ IBM SPR is an alternative representation to standard IPA. Here are examples of v
 ```
 {: codeblock}
 
-In the definitions, the letters represent specific sounds of US English speech. A `.` (period, IPA Unicode `002E`) signals the beginning of a new syllable, and the digits `1` and `0` indicate syllable stress. For more information, see [Specifying syllables](#syllables).
+In the definitions, the letters represent specific sounds of US English speech. A `.` signals the beginning of a new syllable, and the digits `1` and `0` indicate syllable stress. For more information, see [Specifying syllables](#syllables).
 
 ### Speech sound symbols
 {: #intro-SPRs-symbols}
@@ -86,7 +86,7 @@ You can specify syllable boundaries and stress in both SPR and IPA.
 ### Syllable boundaries
 {: #syllables-boundaries}
 
-You can use a `.` (period, IPA Unicode `002E`) to mark the beginning of each syllable in SPR or IPA. However, to preserve the valid phonetics of a language, the service can elect not to honor periods in some cases (for example, if a syllable boundary is placed at an illegal or unnatural position for a language). In general, in cases where the user can indicate a valid preference for a syllable boundary or other aspect of a word's pronunciation, the service honors such requests.
+You can use a `.` (period, IPA Unicode `002E`) to mark the beginning of each syllable in SPR or IPA. However, to preserve the valid phonetics of a language, the service can elect not to honor periods in some cases (for example, if a syllable boundary is placed at an illegal or unnatural position for a language). In general, in cases where you can indicate a valid preference for a syllable boundary or other aspect of a word's pronunciation, the service honors such requests.
 
 ### Syllable stress
 {: #syllables-stress}
@@ -100,7 +100,7 @@ Table 1 identifies the symbols that you can use to indicate syllable stress for 
 | No stress | `0` | No symbol | No value |
 {: caption="Table 1. Syllable stress"}
 
-You must place a syllable stress marker within a syllable boundary but always to the left of the syllable's vowel. You can place a marker anywhere to the left of the stressed vowel. For example, each of the following SPR examples places the primary stress on the correct vowel of the word *construction*:
+You must place a syllable stress marker within a syllable boundary but always to the left of the syllable's vowel. You can place a marker anywhere to the left of the stressed vowel. For example, each of the following SPR examples places the primary stress (`1`) on the correct vowel of the word *construction*:
 
 ```xml
 <phoneme alphabet="ibm" ph="kXn1strHkSXn">construction</phoneme>
@@ -124,38 +124,27 @@ Table 2 lists language-specific considerations that apply to specifying syllable
 | Spanish | SPR and IPA | You can specify only `1` (primary stress). An error occurs if you specify secondary or no stress. |
 {: caption="Table 2. Language-specific rules for using syllable stress"}
 
-## Language support for IPA and SPR
+## Phonetic symbols for supported languages
 {: #supportedLanguages}
 {: help}
 {: support}
 
-Table 3 shows the service's language support for IPA and SPR symbols. All voices support IPA; expressive and enhanced neural voices also support SPR. For more information, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
+Table 3 lists the languages that the service supports and provides links to topics that describe their SPR symbols, IPA symbols, and IPA Unicode values. The topics provide examples of each symbol in words from the language. Because of dialectal differences, the examples might not always match your pronunciation.
 
-The table indicates which languages are available with with version of the service and which versions support IPA, SPR, or both. The table provides links to pages that document the supported SPR symbols, IPA symbols, and equivalent IPA Unicode values that can be used with all voices for each language. The pages provide examples of each symbol in words from the language. Because of dialectal differences, the examples might not always match your pronunciation.
+The *Availability* column indicates whether each voice is available for *{{site.data.keyword.cloud_notm}}*, *{{site.data.keyword.icp4dfull_notm}}*, or both (no product version is cited). For more information about the supported voices, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
 
-Effective **31 March 2022**, all *neural voices* are deprecated. The deprecated voices remain available to existing users until 31 March 2023, when they will be removed from the service and the documentation. *No enhanced neural voices or expressive neural voices are deprecated.* For more information, see the [1 March 2023 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-1march2023) in the release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}}.
-{: deprecated}
-
-| Language | Availability | Supports IPA | Supports SPR |
-|----------|:------------:|:------------:|:------------:|
-| [Arabic symbols (deprecated)](/docs/text-to-speech?topic=text-to-speech-arSymbols) | [IBM Cloud]{: tag-ibm-cloud} | Yes | No |
-| [Chinese (Mandarin) symbols (deprecated)](/docs/text-to-speech?topic=text-to-speech-zhSymbols) | [IBM Cloud]{: tag-ibm-cloud} | Yes | No |
-| [Czech symbols (deprecated)](/docs/text-to-speech?topic=text-to-speech-csSymbols) | [IBM Cloud]{: tag-ibm-cloud} | Yes | No |
-| [Dutch (Belgian) symbols (deprecated)](/docs/text-to-speech?topic=text-to-speech-beSymbols) | [IBM Cloud]{: tag-ibm-cloud} | Yes | No |
-| [Dutch (Netherlands) symbols (deprecated)](/docs/text-to-speech?topic=text-to-speech-nlSymbols) | [IBM Cloud]{: tag-ibm-cloud} | Yes | No |
-| [Dutch (Netherlands) symbols](/docs/text-to-speech?topic=text-to-speech-nlSymbols-new) | [IBM Cloud]{: tag-ibm-cloud} | Yes | Yes |
-| [English (Australian) symbols (deprecated)](/docs/text-to-speech?topic=text-to-speech-auSymbols) | [IBM Cloud]{: tag-ibm-cloud} | Yes | No |
-| [English (Australian) symbols](/docs/text-to-speech?topic=text-to-speech-auSymbols-new) | [IBM Cloud]{: tag-ibm-cloud} | Yes | Yes |
-| [English (United Kingdom) symbols](/docs/text-to-speech?topic=text-to-speech-gbSymbols) | All versions | Yes | Yes |
-| [English (United States) symbols](/docs/text-to-speech?topic=text-to-speech-usSymbols) | All versions | Yes | Yes |
-| [French (Canadian) symbols](/docs/text-to-speech?topic=text-to-speech-caSymbols) | All versions | Yes | Yes |
-| [French (France) symbols](/docs/text-to-speech?topic=text-to-speech-frSymbols) | All versions | Yes | Yes |
-| [German symbols](/docs/text-to-speech?topic=text-to-speech-deSymbols) | All versions | Yes | Yes |
-| [Italian symbols](/docs/text-to-speech?topic=text-to-speech-itSymbols) | All versions | Yes | Yes |
-| [Japanese symbols](/docs/text-to-speech?topic=text-to-speech-jaSymbols) | All versions | Yes | Yes |
-| [Korean symbols (deprecated)](/docs/text-to-speech?topic=text-to-speech-koSymbols) | [IBM Cloud]{: tag-ibm-cloud} | Yes | No |
-| [Korean symbols](/docs/text-to-speech?topic=text-to-speech-koSymbols-new) | [IBM Cloud]{: tag-ibm-cloud} | Yes | Yes |
-| [Portuguese (Brazilian) symbols](/docs/text-to-speech?topic=text-to-speech-ptSymbols) | All versions | Yes | Yes |
-| [Spanish symbols](/docs/text-to-speech?topic=text-to-speech-esSymbols) | All versions | Yes | Yes |
-| [Swedish symbols (deprecated)](/docs/text-to-speech?topic=text-to-speech-svSymbols) | [IBM Cloud]{: tag-ibm-cloud} | Yes | No |
-{: caption="Table 3. Language support for IPA and SPR phonetic symbols"}
+| Language | Availability |
+|----------|:------------:|
+| [Dutch (Netherlands) symbols](/docs/text-to-speech?topic=text-to-speech-nlSymbols-new) | [IBM Cloud]{: tag-ibm-cloud} |
+| [English (Australian) symbols](/docs/text-to-speech?topic=text-to-speech-auSymbols-new) | [IBM Cloud]{: tag-ibm-cloud} |
+| [English (United Kingdom) symbols](/docs/text-to-speech?topic=text-to-speech-gbSymbols) | All versions |
+| [English (United States) symbols](/docs/text-to-speech?topic=text-to-speech-usSymbols) | All versions |
+| [French (Canadian) symbols](/docs/text-to-speech?topic=text-to-speech-caSymbols) | All versions |
+| [French (France) symbols](/docs/text-to-speech?topic=text-to-speech-frSymbols) | All versions |
+| [German symbols](/docs/text-to-speech?topic=text-to-speech-deSymbols) | All versions |
+| [Italian symbols](/docs/text-to-speech?topic=text-to-speech-itSymbols) | All versions |
+| [Japanese symbols](/docs/text-to-speech?topic=text-to-speech-jaSymbols) | All versions |
+| [Korean symbols](/docs/text-to-speech?topic=text-to-speech-koSymbols-new) | [IBM Cloud]{: tag-ibm-cloud} |
+| [Portuguese (Brazilian) symbols](/docs/text-to-speech?topic=text-to-speech-ptSymbols) | All versions |
+| [Spanish symbols](/docs/text-to-speech?topic=text-to-speech-esSymbols) | All versions |
+{: caption="Table 3. Phonetic symbols for supported languages"}

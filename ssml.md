@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-10-06"
+  years: 2015, 2023
+lastupdated: "2023-03-30"
 
 subcollection: text-to-speech
 
@@ -64,10 +64,10 @@ For more information about using SSML and related features with the service, see
 -   The service implements most of the W3C specification and supports SSML fragments.
     -   For complete information about the service's level of support for all SSML elements, see [SSML elements](/docs/text-to-speech?topic=text-to-speech-elements).
     -   For examples of using SSML elements with the `text` of a speech synthesis request, see [Examples of input text](/docs/text-to-speech?topic=text-to-speech-usingHTTP#httpExamples).
--   The service supports additional synthesis features for enhanced neural and expressive neural voices. For more information, see
+-   The service supports additional synthesis features for enhanced neural and expressive neural voices:
     -   [Modifying the speaking rate](/docs/text-to-speech?topic=text-to-speech-synthesis-params#params-rate-percentage)
     -   [Modifying the speaking pitch](/docs/text-to-speech?topic=text-to-speech-synthesis-params#params-pitch-percentage)
--   The service supports additional synthesis features for expressive neural voices. For more information, see
+-   The service supports additional synthesis features for expressive neural voices:
     -   [Using speaking styles](/docs/text-to-speech?topic=text-to-speech-synthesis-expressive#syntheses-expressive-styles)
     -   [Emphasizing interjections](/docs/text-to-speech?topic=text-to-speech-synthesis-expressive#syntheses-expressive-interjections)
     -   [Emphasizing words](/docs/text-to-speech?topic=text-to-speech-synthesis-expressive#emphasizing-words)

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-01-14"
+lastupdated: "2023-03-30"
 
 subcollection: text-to-speech
 
@@ -13,7 +13,7 @@ subcollection: text-to-speech
 # The science behind the service
 {: #science}
 
-The {{site.data.keyword.texttospeechfull}} service offers only voices that rely on [neural voice technology](#science-neural): *expressive*, *enhanced neural*, and *neural* voices. A brief overview of neural voice technology follows. But the topic of synthesizing text to speech is inherently complex. For more information about the scientific research behind the service's speech technology, see the documents that are listed in [Research references](/docs/text-to-speech?topic=text-to-speech-references).
+The {{site.data.keyword.texttospeechfull}} service offers only voices that rely on [neural voice technology](#science-neural): *expressive neural* and *enhanced neural* voices. A brief overview of neural voice technology follows. But the topic of synthesizing text to speech is inherently complex. For more information about the scientific research behind the service's speech technology, see the documents that are listed in [Research references](/docs/text-to-speech?topic=text-to-speech-references).
 {: shortdesc}
 
 ## Neural voice technology
@@ -41,8 +41,6 @@ Neural voices produce speech that is crisp and clear, with a very natural-soundi
 
 ## Concatenative synthesis
 {: #science-concatenative}
-
-[IBM Cloud]{: tag-ibm-cloud}
 
 All concatenative voices, also referred to as standard voices, were deprecated as of 2 December 2020. The following information is maintained for general information purposes only. For more information about the deprecation of the concatenative voices, see the [2 December 2020 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-2december2020) in the release notes for {{site.data.keyword.cloud_notm}}.
 {: note}

@@ -87,13 +87,7 @@ toc:
           label: Using phonetic symbols
           topics:
           - symbols.md
-          - symbols-ar-ms.md
-          - symbols-zh-cn.md
-          - symbols-cs-cz.md
-          - symbols-nl-be.md
-          - symbols-nl-nl.md
           - symbols-nl-nl-new.md
-          - symbols-en-au.md
           - symbols-en-au-new.md
           - symbols-en-gb.md
           - symbols-en-us.md
@@ -102,11 +96,15 @@ toc:
           - symbols-de-de.md
           - symbols-it-it.md
           - symbols-ja-jp.md
-          - symbols-ko-kr.md
           - symbols-ko-kr-new.md
           - symbols-pt-br.md
           - symbols-es-es.md
-          - symbols-sv-se.md
+          - topicgroup:
+              label: Obsolete phonetic symbols
+              topics:
+              - symbols-nl-nl.md
+              - symbols-en-au.md
+              - symbols-ko-kr.md
       - topicgroup:
           label: Security topics
           topics:
