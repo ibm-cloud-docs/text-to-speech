@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-03-15"
+lastupdated: "2023-03-30"
 
 subcollection: text-to-speech
 
@@ -21,62 +21,51 @@ All of the service's voices use neural voice technology. Neural voice technology
 ## Supported languages and voices
 {: #language-voices}
 
-The service offers three types of voices with different qualities and capabilities:
+The service offers two types of voices with different qualities and capabilities:
 
--   *Expressive neural voices*. Expressive neural voices offer natural-sounding speech that is exceptionally clear and crisp. Their pronunciation and inflections are natural and conversational, and the resulting speech offers extremely smooth transitions between words. The voices determine sentiment from context and automatically use the proper intonation to suit the text.
+-   *Expressive neural voices* offer natural-sounding speech that is exceptionally clear and crisp. Their pronunciation and inflections are natural and conversational, and the resulting speech offers extremely smooth transitions between words. They also support the use of additional features that are not available with enhanced neural voices. For a list of all expressive voices, see [Expressive neural voices](/docs/text-to-speech?topic=text-to-speech-voices#language-voices-expressive).
+-   *Enhanced neural voices* achieve a high degree of natural-sounding speech and support most service features. For a list of all enhanced neural voices, see [Enhanced neural voices](/docs/text-to-speech?topic=text-to-speech-voices#language-voices-enhanced-neural).
 
-    Expressive neural voices support the use of both standard International Phonetic Alphabet (IPA) and {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR) phonetic symbols. They also support the use of additional features that are not available with the other types of voices.
-    -   For additional information and a complete list of all expressive voices, see [Expressive neural voices](/docs/text-to-speech?topic=text-to-speech-voices#language-voices-expressive).
-    -   For a blog that introduces the expressive voices, see [Is your conversational AI setting the right tone?](https://www.ibm.com/blogs/journey-to-ai/2022/09/is-your-conversational-ai-setting-the-right-tone/){: external}.
+The following pages provide more information about the voices and their technology:
 
--   *Enhanced neural voices*. Enhanced neural voices achieve a slightly higher degree of natural-sounding speech and support more service features. Enhanced neural voices support both IPA and SPR symbols for word customization. For a complete list of all enhanced neural voices and their languages, see [Enhanced neural voices](/docs/text-to-speech?topic=text-to-speech-voices#language-voices-enhanced-neural).
--   *Neural voices*. Neural voices produce natural-sounding speech but do not support all of the service's features. Neural voices support only IPA symbols for word customization. For a complete list of all neural voices and their languages, see [Neural voices](/docs/text-to-speech?topic=text-to-speech-voices#language-voices-neural).
-
-    Effective **31 March 2022**, all *neural voices* are deprecated. The deprecated voices remain available to existing users until 31 March 2023, when they will be removed from the service and the documentation. *No enhanced neural voices or expressive neural voices are deprecated.* For more information, see the [1 March 2023 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-1march2023) in the release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}}.
-    {: deprecated}
-
-For more information about the service's neural voice technology, see [The science behind the service](/docs/text-to-speech?topic=text-to-speech-science).
+-   For a blog that introduces the expressive voices, see [Is your conversational AI setting the right tone?](https://www.ibm.com/blogs/journey-to-ai/2022/09/is-your-conversational-ai-setting-the-right-tone/){: external}.
+-   For more information about the service's neural voice technology, see [The science behind the service](/docs/text-to-speech?topic=text-to-speech-science).
 
 ### Language support by type of voice
 {: #language-voices-by type}
 
 Table 1 shows the service's support for languages by type of voice. The following topics list the available languages and voices for each voice type.
 
-| Language | Expressive neural voices | Enhanced neural voices | Neural voices (deprecated) |
-|----------|:------------------------:|:-----------------------:|:--------------------------:|
-| Arabic | | | &#10004; |
-| Chinese (Mandarin) | | | &#10004; |
-| Czech | | | &#10004; |
-| Dutch  \n (Belgian) | | | &#10004; |
-| Dutch  \n (Netherlands) | | &#10004; | &#10004; |
-| English  \n (United Kingdom) | | &#10004; | |
-| English  \n (Australian) | &#10004; | | &#10004; |
-| English  \n (United States) | &#10004; | &#10004; | |
-| French  \n (Canadian) | | &#10004; | |
-| French  \n (France) | | &#10004; | |
-| German | | &#10004; | |
-| Italian | | &#10004; | |
-| Japanese | | &#10004; | |
-| Korean | | &#10004; | &#10004; |
-| Portuguese  \n (Brazilian) | | &#10004; | |
-| Spanish  \n (Castilian) | | &#10004; | |
-| Spanish  \n (Latin American) | | &#10004; | |
-| Spanish  \n (South American) | | &#10004; | |
-| Swedish | | | &#10004; |
+| Language | Expressive neural voices | Enhanced neural voices |
+|----------|:------------------------:|:-----------------------:|
+| Dutch  \n (Netherlands) | | &#10004; |
+| English  \n (United Kingdom) | | &#10004; |
+| English  \n (Australian) | &#10004; | |
+| English  \n (United States) | &#10004; | &#10004; |
+| French  \n (Canadian) | | &#10004; |
+| French  \n (France) | | &#10004; |
+| German | | &#10004; |
+| Italian | | &#10004; |
+| Japanese | | &#10004; |
+| Korean | | &#10004; | &#10004;
+| Portuguese  \n (Brazilian) | | &#10004; |
+| Spanish  \n (Castilian) | | &#10004; |
+| Spanish  \n (Latin American) | | &#10004; |
+| Spanish  \n (South American) | | &#10004; |
 {: caption="Table 1. Language support by type of voice"}
 
 ### Expressive neural voices
 {: #language-voices-expressive}
 
-Table 2 lists and provides audio samples for all available expressive neural voices. All expressive voices are generally available (GA) for production use.
-
-To produce the most natural-sounding prosody, expressive neural voices need to consider the context of all words and phrases of a sentence. Expressive voices therefore are more compute-intensive and have slightly higher latency than other types of voices. The initial response for a synthesis request that uses an expressive voice might take a fraction of a second longer (for example, a few hundred milliseconds) to arrive. The total response time for the request to complete will also be longer.
-
-To minimize the latency and response time for an expressive voice, use shorter sentences wherever possible.
-{: tip}
+Table 2 lists and provides audio samples for all available expressive neural voices. The *Availability* column indicates whether each voice is generally available (GA) for production use or beta. The column also indicates whether each voice is available for *{{site.data.keyword.cloud_notm}}*, *{{site.data.keyword.icp4dfull_notm}}*, or both (no product version is cited).
 
 -   Expressive neural voices support additional features that are not available with other types of voices. These features include additional speaking styles, automatic emphasis of interjections, and emphasis of specified words. For more information, see [Modifying speech synthesis with expressive neural voices](/docs/text-to-speech?topic=text-to-speech-synthesis-expressive).
 -   When used with the SSML `<prosody>` element, expressive voices support only percentage values for the `rate` and `pitch` attributes. For more information, see [The `<prosody>` element](/docs/text-to-speech?topic=text-to-speech-elements#prosody_element).
+
+Expressive neural voices determine sentiment from context and automatically use the proper intonation to suit the text. To produce the most natural-sounding prosody, expressive neural voices need to consider the context of all words and phrases of a sentence. Expressive voices are therefore more compute-intensive and have slightly higher latency than other types of voices. The initial response for a synthesis request that uses an expressive voice might take a fraction of a second longer (for example, a few hundred milliseconds) to arrive. The total response time for the request to complete is also longer.
+
+To minimize the latency and response time for an expressive voice, use shorter sentences wherever possible.
+{: tip}
 
 | Language | Availability        | Voice / Gender | Audio sample |
 |----------|:-------------------:|:--------------:|:------------:|
@@ -91,7 +80,7 @@ To minimize the latency and response time for an expressive voice, use shorter s
 ### Enhanced neural voices
 {: #language-voices-enhanced-neural}
 
-Table 3 lists and provides audio samples for all available enhanced neural voices. All enhanced neural voices are generally available (GA) for production use with both versions of the service, *{{site.data.keyword.cloud_notm}}* and *{{site.data.keyword.icp4dfull_notm}}*. All enhanced neural voices include the string `V3` in their names.
+Table 3 lists and provides audio samples for all available enhanced neural voices. The *Availability* column indicates whether each voice is generally available (GA) for production use or beta. The column also indicates whether each voice is available for *{{site.data.keyword.cloud_notm}}*, *{{site.data.keyword.icp4dfull_notm}}*, or both (no product version is cited).
 
 | Language | Availability        | Voice / Gender | Audio sample |
 |----------|:-------------------:|:--------------:|:------------:|
@@ -125,37 +114,6 @@ Table 3 lists and provides audio samples for all available enhanced neural voice
 The Spanish Latin American and North American `Sofia` voices are essentially the same voice. The most significant difference concerns how the two voices interpret a $ (dollar sign). The Latin American version uses the term *pesos*; the North American version uses the term *dólares*. Other minor differences might also exist between the two voices.
 {: note}
 
-### Neural voices
-{: #language-voices-neural}
-
-[IBM Cloud]{: tag-ibm-cloud}
-
-Effective **31 March 2022**, all *neural voices* are deprecated. The deprecated voices remain available to existing users until 31 March 2023, when they will be removed from the service and the documentation. *No enhanced neural voices or expressive neural voices are deprecated.* For more information, see the [1 March 2023 service update](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-1march2023) in the release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}}.
-{: deprecated}
-
-Table 4 lists and provides audio samples for all available neural voices. All neural voices are generally available (GA) for production use with the *{{site.data.keyword.cloud_notm}}* version of the service only. (Neural voices do *not* include the string `V3` in their names.)
-
-| Language | Availability        | Voice / Gender | Audio sample |
-|----------|:-------------------:|:--------------:|:------------:|
-| Arabic | GA  \n [IBM Cloud]{: tag-ibm-cloud} | `ar-MS_OmarVoice`  \n Male | ![ar-MS_OmarVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/ar-MS_OmarVoice.wav){: audio controls} |
-| Chinese  \n (Mandarin) | GA  \n [IBM Cloud]{: tag-ibm-cloud} | `zh-CN_LiNaVoice`  \n Female | ![zh-CN_LiNaVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/zh-CN_LiNaVoice.wav){: audio controls} |
-| | GA  \n [IBM Cloud]{: tag-ibm-cloud} | `zh-CN_WangWeiVoice`  \n Male | ![zh-CN_WangWeiVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/zh-CN_WangWeiVoice.wav){: audio controls} |
-| | GA  \n [IBM Cloud]{: tag-ibm-cloud} | `zh-CN_ZhangJingVoice`  \n Female | ![zh-CN_ZhangJingVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/zh-CN_ZhangJingVoice.wav){: audio controls} |
-| Czech | GA  \n [IBM Cloud]{: tag-ibm-cloud} | `cs-CZ_AlenaVoice`  \n Female | ![cs-CZ_AlenaVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/cs-CZ_AlenaVoice.wav){: audio controls} |
-| Dutch  \n (Belgian) | GA  \n [IBM Cloud]{: tag-ibm-cloud} | `nl-BE_AdeleVoice`  \n Female | ![nl-BE_AdeleVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/nl-BE_AdeleVoice.wav){: audio controls} |
-| | GA  \n [IBM Cloud]{: tag-ibm-cloud} | `nl-BE_BramVoice`  \n Male | ![nl-BE_BramVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/nl-BE_BramVoice.wav){: audio controls} |
-| Dutch  \n (Netherlands) | GA  \n [IBM Cloud]{: tag-ibm-cloud} | `nl-NL_EmmaVoice`  \n Female | ![nl-NL_EmmaVoive sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/nl-NL_EmmaVoice.wav){: audio controls} |
-| | GA  \n [IBM Cloud]{: tag-ibm-cloud} | `nl-NL_LiamVoice`  \n Male | ![nl-NL_LiamVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/nl-NL_LiamVoice.wav){: audio controls} |
-| English  \n (Australian) | GA  \n [IBM Cloud]{: tag-ibm-cloud} | `en-AU_CraigVoice`  \n Male | ![en-AU_CraigVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-AU_CraigVoice.wav){: audio controls} |
-| | GA  \n [IBM Cloud]{: tag-ibm-cloud} | `en-AU_MadisonVoice`  \n Female | ![en-AU_MadisonVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-AU_MadisonVoice.wav){: audio controls} |
-| | GA  \n [IBM Cloud]{: tag-ibm-cloud} | `en-AU_SteveVoice`  \n Male | ![en-AU_SteveVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-AU_SteveVoice.wav){: audio controls} |
-| Korean | GA  \n [IBM Cloud]{: tag-ibm-cloud} | `ko-KR_HyunjunVoice`  \n Male | ![ko-KR_HyunjunVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/ko-KR_HyunjunVoice.wav){: audio controls} |
-| | GA  \n [IBM Cloud]{: tag-ibm-cloud} | `ko-KR_SiWooVoice`  \n Male | ![ko-KR_SiWooVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/ko-KR_SiWooVoice.wav){: audio controls} |
-| | GA  \n [IBM Cloud]{: tag-ibm-cloud} | `ko-KR_YoungmiVoice`  \n Female | ![ko-KR_YoungmiVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/ko-KR_YoungmiVoice.wav){: audio controls} |
-| | GA  \n [IBM Cloud]{: tag-ibm-cloud} | `ko-KR_YunaVoice`  \n Female | ![ko-KR_YunaVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/ko-KR_YunaVoice.wav){: audio controls} |
-| Swedish | GA  \n [IBM Cloud]{: tag-ibm-cloud} | `sv-SE_IngridVoice`  \n Female | ![sv-SE_IngridVoice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/sv-SE_IngridVoice.wav){: audio controls} |
-{: caption="Table 4. Neural languages and voices"}
-
 ## Creating a custom model
 {: #customize-model}
 
@@ -163,7 +121,7 @@ When you synthesize text, the service applies language-dependent pronunciation r
 
 A custom model is a dictionary of words and their translations. You create a custom model for a specific language, not for a specific voice. So a custom model can be used with any voice for its specified language. For example, a custom model that you create for the `en-US` language can be used with any US English voice. It cannot, however, be used with an `en-GB` or `en-AU` voice.
 
-Customization is available for all languages. For more information, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
+Customization is available for all languages. All voices support the use of both standard International Phonetic Alphabet (IPA) and {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR) phonetic symbols for word customization. For more information, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
 
 ## Creating a custom voice
 {: #customize-voice}

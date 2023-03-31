@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-03-29"
+lastupdated: "2023-03-30"
 
 keywords: text to speech release notes,text to speech for IBM cloud pak for data release notes
 
@@ -697,8 +697,8 @@ RabbitMQ datastore is now used only by the `sttAysnc` component
 
 New Belgian Dutch and Czech neural voices
 :   Two new neural voices are now available:
-    -   *Belgian Dutch:* A new male Belgian Dutch (Flemish) voice, `nl-BE_BramVoice`. For more information about the IPA symbols for the language, see [Dutch (Belgian) symbols (deprecated)](/docs/text-to-speech?topic=text-to-speech-beSymbols).
-    -   *Czech:* A new language, Czech, with a new female voice, `cs-CZ_AlenaVoice`. For more information about the IPA symbols for the language, see [Czech symbols (deprecated)](/docs/text-to-speech?topic=text-to-speech-csSymbols).
+    -   *Belgian Dutch:* A new male Belgian Dutch (Flemish) voice, `nl-BE_BramVoice`.
+    -   *Czech:* A new language, Czech, with a new female voice, `cs-CZ_AlenaVoice`.
 
     You can install the new voices along with all neural voices by setting the `voiceType` property of the custom resource to `neuralVoices`.
     -   For more information about using the custom resource to install voices, see [Installing {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.0?topic=speech-installing-watson-text){: external}.

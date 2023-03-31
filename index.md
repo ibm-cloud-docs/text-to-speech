@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-03-24"
+lastupdated: "2023-03-29"
 
 subcollection: text-to-speech
 
@@ -24,7 +24,7 @@ The service can be used in applications such as voice-automated chatbots, as wel
 
 -   [IBM Cloud]{: tag-ibm-cloud} for managed instances of {{site.data.keyword.texttospeechshort}} that are hosted on {{site.data.keyword.cloud_notm}} or for instances that are hosted on [IBM Cloud Pak for Data as a Service](https://dataplatform.cloud.ibm.com/docs/content/wsj/landings/wtts.html){: external}.
     -   For information about all service updates, see the [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes).
-    -   For information about the latest service update, see the [22 March 2023](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-22march2023) service update in the release notes.
+    -   For information about the latest service update, see the [31 March 2023](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-31march2023) service update in the release notes.
 -   [IBM Cloud Pak for Data]{: tag-cp4d} for installed or on-premises instances of {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}. For links to information about installing and managing {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}, see [Installing {{site.data.keyword.ibmwatson_notm}} {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-speech-install-data).
     -   For information about all service updates, see the [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes-data).
     -   For information about the latest service update, see the [29 March2023 (Version 4.6.4)](/docs/text-to-speech?topic=text-to-speech-release-notes-data#text-to-speech-data-29march2023) service update in the release notes.
@@ -51,10 +51,7 @@ With the Tune by Example feature, you can also add custom prompts to your custom
 
 The service offers neural voices to synthesize text to speech in many languages and dialects:
 
--   Arabic
--   Chinese (Mandarin)
--   Czech
--   Dutch (Belgian and Netherlands dialects)
+-   Dutch (Netherlands)
 -   English (Australian, United Kingdom, and United States dialects)
 -   French (Canadian and France dialects)
 -   German
@@ -63,7 +60,6 @@ The service offers neural voices to synthesize text to speech in many languages 
 -   Korean
 -   Portuguese (Brazilian)
 -   Spanish (Castilian, Latin American, and North American dialects)
--   Swedish
 
 For different languages, the service offers female voices, male voices, or both. For more information about the supported languages and voices, the types of voices that the service provides for each language, and their status for both versions of the service, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
 
