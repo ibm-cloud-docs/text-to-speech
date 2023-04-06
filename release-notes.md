@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-03-31"
+lastupdated: "2023-04-06"
 
 keywords: text to speech release notes,text to speech for IBM cloud release notes
 
@@ -26,6 +26,13 @@ For information about known limitations of the service, see [Known limitations](
 
 For information about releases and updates of the service for {{site.data.keyword.icp4dfull_notm}}, see [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes-data).
 {: note}
+
+## 6 April 2023
+{: #text-to-speech-6april2023}
+{: release-note}
+
+Updates to beta Netherlands Dutch enhanced neural voice
+:   **Defect fix:** The beta Netherlands Dutch `nl-NL_MerelV3Voice` was updated for internal fixes and improvements. The limitations described for the initial release of the voice in the [31 March 2023 service update](#text-to-speech-31march2023) still apply.
 
 ## 31 March 2023
 {: #text-to-speech-31march2023}
