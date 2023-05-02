@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-03-30"
+lastupdated: "2023-04-29"
 
 subcollection: text-to-speech
 
@@ -131,12 +131,12 @@ Table 2 lists language-specific considerations that apply to specifying syllable
 
 Table 3 lists the languages that the service supports and provides links to topics that describe their SPR symbols, IPA symbols, and IPA Unicode values. The topics provide examples of each symbol in words from the language. Because of dialectal differences, the examples might not always match your pronunciation.
 
-The *Availability* column indicates whether each voice is available for *{{site.data.keyword.cloud_notm}}*, *{{site.data.keyword.icp4dfull_notm}}*, or both (no product version is cited). For more information about the supported voices, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
+The *Availability* column indicates whether each voice is available for [IBM Cloud]{: tag-ibm-cloud}, [IBM Cloud Pak for Data]{: tag-cp4d}, or both (*All versions*). For more information about the supported voices, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
 
 | Language | Availability |
 |----------|:------------:|
-| [Dutch (Netherlands) symbols](/docs/text-to-speech?topic=text-to-speech-nlSymbols-new) | [IBM Cloud]{: tag-ibm-cloud} |
-| [English (Australian) symbols](/docs/text-to-speech?topic=text-to-speech-auSymbols-new) | [IBM Cloud]{: tag-ibm-cloud} |
+| [Dutch (Netherlands) symbols](/docs/text-to-speech?topic=text-to-speech-nlSymbols-new) | All versions |
+| [English (Australian) symbols](/docs/text-to-speech?topic=text-to-speech-auSymbols-new) | All versions |
 | [English (United Kingdom) symbols](/docs/text-to-speech?topic=text-to-speech-gbSymbols) | All versions |
 | [English (United States) symbols](/docs/text-to-speech?topic=text-to-speech-usSymbols) | All versions |
 | [French (Canadian) symbols](/docs/text-to-speech?topic=text-to-speech-caSymbols) | All versions |
@@ -144,7 +144,7 @@ The *Availability* column indicates whether each voice is available for *{{site.
 | [German symbols](/docs/text-to-speech?topic=text-to-speech-deSymbols) | All versions |
 | [Italian symbols](/docs/text-to-speech?topic=text-to-speech-itSymbols) | All versions |
 | [Japanese symbols](/docs/text-to-speech?topic=text-to-speech-jaSymbols) | All versions |
-| [Korean symbols](/docs/text-to-speech?topic=text-to-speech-koSymbols-new) | [IBM Cloud]{: tag-ibm-cloud} |
+| [Korean symbols](/docs/text-to-speech?topic=text-to-speech-koSymbols-new) | All versions |
 | [Portuguese (Brazilian) symbols](/docs/text-to-speech?topic=text-to-speech-ptSymbols) | All versions |
 | [Spanish symbols](/docs/text-to-speech?topic=text-to-speech-esSymbols) | All versions |
 {: caption="Table 3. Phonetic symbols for supported languages"}

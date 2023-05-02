@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-04-06"
+lastupdated: "2023-05-02"
 
 keywords: text to speech release notes,text to speech for IBM cloud pak for data release notes
 
@@ -25,9 +25,8 @@ For information about known limitations of the service, see [Known limitations](
 For information about releases and updates of the service for {{site.data.keyword.cloud_notm}}, see [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes).
 {: note}
 
-<!-- Service-specific fixes deferred to 4.6.5
-## 26 April 2023 (Version 4.6.5)
-{: #text-to-speech-data-26april2023}
+## 2 May 2023 (Version 4.6.5)
+{: #text-to-speech-data-2may2023}
 
 Version 4.6.5 is now available
 :   {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} version 4.6.5 is now available. This version supports {{site.data.keyword.icp4dfull_notm}} version 4.6.x and Red Hat OpenShift versions 4.10 and 4.12. For more information, see [{{site.data.keyword.watson}} Speech services on {{site.data.keyword.icp4dfull_notm}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.6.x?topic=services-watson-speech){: external}.
@@ -41,16 +40,26 @@ New Australian English expressive neural voices
     -   [Expressive neural voices](/docs/text-to-speech?topic=text-to-speech-voices#language-voices-expressive)
     -   [English (Australian) symbols](/docs/text-to-speech?topic=text-to-speech-auSymbols-new)
 
-    You can migrate from Australian English neural voices that are deprecated to the new expressive neural voices. For more information, see
-    -   [Migrating from neural voices](/docs/text-to-speech?topic=text-to-speech-voices-migrate)
-
 New Korean enhanced neural voice
 :   The service now supports a new enhanced neural voice for Korean: `ko-KR_JinV3Voice`. The new voice is generally available (GA) for production use. It supports the use of both standard International Phonetic Alphabet (IPA) and {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR) phonetic symbols. For more information, see
     -   [Enhanced neural voices](/docs/text-to-speech?topic=text-to-speech-voices#language-voices-enhanced-neural)
     -   [Korean symbols](/docs/text-to-speech?topic=text-to-speech-koSymbols-new)
 
-    You can migrate from Korean neural voices that are deprecated to the new enhanced neural voice. For more information, see
-    -   [Migrating from neural voices](/docs/text-to-speech?topic=text-to-speech-voices-migrate)
+New beta Netherlands Dutch enhanced neural voice
+:   The service now supports a new enhanced neural female voice for Netherlands Dutch: `nl-NL_MerelV3Voice`. It supports the use of both standard International Phonetic Alphabet (IPA) and {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR) phonetic symbols.
+
+    The new voice is beta functionality pending completion of support for SSML. At its initial release, the voice does not support use of the following SSML-related functionality:
+    -   The `<prosody>` element with any speech synthesis request
+    -   The `rate_percentage` and `pitch_percentage` parameters with any speech synthesis request
+    -   The `<mark>` element with a WebSocket speech synthesis request
+    -   The `timings` parameter of the JSON text message with a WebSocket speech synthesis request
+
+    For more information about the new voice, its support for IPA and SPR symbols, and migrating to the new voice from the deprecated Netherlands Dutch neural voices, see
+    -   [Enhanced neural voices](/docs/text-to-speech?topic=text-to-speech-voices#language-voices-enhanced-neural)
+    -   [Dutch (Netherlands) symbols](/docs/text-to-speech?topic=text-to-speech-nlSymbols-new)
+
+New environment variable for Speech services custom resource
+:   The documentation now includes instructions to create an environment variable named `${CUSTOM_RESOURCE_SPEECH}`. You append the new variable to the `cpd_vars.sh` script, and source the script to use the variable in your environment. For more information, see *Information you need to complete this task* in [Installing Watson Speech services](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.6.x?topic=services-installing){: external}, or refer to any of the upgrade topics for the Speech services.
 
 Defect fix: French Canadian voice now handles numeric times properly
 :   **Defect fix:** The French Canadian voices now pronounce times like `19:41` correctly. Previously, the voices were omitting elements of the time in the synthesized audio.
@@ -58,6 +67,13 @@ Defect fix: French Canadian voice now handles numeric times properly
 Defect fix: Japanese voice no longer inserts unexpected audio
 :   **Defect fix:** The Japanese voice no longer inserts unexpected audio in speech synthesis results. Previously, additional audio was inserted in certain cases.
 
+Defect fix: Update Korean phonetic symbols in documentation
+:   **Defect fix:** In the documentation for Korean SPR symbols, two-character symbols for consonants are now enclosed in single quotes, making them a single symbol. Previously, they were shown as two separate symbols, without enclosing quotes. For more information, see [Consonants (Korean)](/docs/text-to-speech?topic=text-to-speech-koSymbols-new#koConsonants-new).
+
+Documentation updates for IBM SPR symbols
+:   The overview documentation for IBM SPR symbols has been updated to clarify the use of multi-character symbols. For more information, see [Speech sound symbols](/docs/text-to-speech?topic=text-to-speech-symbols#intro-SPRs-symbols)).
+
+<!--
 Security vulnerabilities addressed
 :   The following security vulnerabilities have been fixed:
 -->

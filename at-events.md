@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-01-14"
+lastupdated: "2023-04-10"
 
 keywords: IBM,activity tracker,event,security,text to speech
 
@@ -65,7 +65,7 @@ The names of the actions for the customization events have changed. The old name
 | Action | Description |
 |--------|-------------|
 | `text-to-speech.custom-model.delete` | Delete a custom model (`DELETE /v1/customizations/{customization_id}`).                          |
-| `text-top-speech.custom-model-word.delete` | Delete a word from a custom model (`DELETE /v1/customizations/{customization_id}/words/{word}`). |
+| `text-to-speech.custom-model-word.delete` | Delete a word from a custom model (`DELETE /v1/customizations/{customization_id}/words/{word}`). |
 {: caption="Table 4. Customization .delete actions that generate events"}
 
 ## Tune by Example events
