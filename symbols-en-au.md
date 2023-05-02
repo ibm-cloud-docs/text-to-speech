@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-03-30"
+lastupdated: "2023-04-19"
 
 subcollection: text-to-speech
 
@@ -12,8 +12,6 @@ subcollection: text-to-speech
 
 # English (Australian) symbols (obsolete)
 {: #auSymbols}
-
-[IBM Cloud]{: tag-ibm-cloud}
 
 The service supported the following symbols for the obsolete neural voices for Australian English. These voices were replaced with alternative expressive neural voices and removed from the service on 31 March 2023. The symbols are available to help users migrate from the obsolete Australian English neural voices to the new Australian English expressive neural voices.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-03-30"
+lastupdated: "2023-04-19"
 
 subcollection: text-to-speech
 
@@ -12,8 +12,6 @@ subcollection: text-to-speech
 
 # Korean symbols (obsolete)
 {: #koSymbols}
-
-[IBM Cloud]{: tag-ibm-cloud}
 
 The service supported the following symbols for the obsolete neural voices for Korean. These voices were replaced with an alternative enhanced neural voice and removed from the service on 31 March 2023. The symbols are available to help users migrate from the obsolete Korean neural voices to the new Korean enhanced neural voice.
 
