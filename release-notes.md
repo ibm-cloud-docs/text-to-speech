@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-04-06"
+lastupdated: "2023-05-18"
 
 keywords: text to speech release notes,text to speech for IBM cloud release notes
 
@@ -26,6 +26,16 @@ For information about known limitations of the service, see [Known limitations](
 
 For information about releases and updates of the service for {{site.data.keyword.icp4dfull_notm}}, see [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes-data).
 {: note}
+
+## 18 May 2023
+{: #text-to-speech-18may2023}
+{: release-note}
+
+Defect fix: Added support for missing SSML features on the Dutch voice
+:   **Defect fix:** When using the Dutch voice, all supported SSML features now work as designed. Previously, when using the Dutch voice, some SSML features were not working.
+
+Defect fix: Commas are now respected when using phoneme tags
+:   **Defect fix:** When using phoneme tags in SSML, commas (pauses) are now working as expected. Previously, when commas were preceding or following text with phoneme tags, the pause was ignored.
 
 ## 6 April 2023
 {: #text-to-speech-6april2023}
