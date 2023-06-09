@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-05-18"
+lastupdated: "2023-06-09"
 
 keywords: text to speech release notes,text to speech for IBM cloud release notes
 
@@ -26,6 +26,13 @@ For information about known limitations of the service, see [Known limitations](
 
 For information about releases and updates of the service for {{site.data.keyword.icp4dfull_notm}}, see [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes-data).
 {: note}
+
+## 9 June 2023
+{: #text-to-speech-19may2023}
+{: release-note}
+
+Defect fix: TTS no longer fails due to error message “[Errno 2] No such file or directory“
+:   **Defect fix:** When using TTS with websockets, it no longer fails due to error message “[Errno 2] No such file or directory“.
 
 ## 18 May 2023
 {: #text-to-speech-18may2023}
