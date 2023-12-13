@@ -27,6 +27,16 @@ For information about known limitations of the service, see [Known limitations](
 For information about releases and updates of the service for {{site.data.keyword.icp4dfull_notm}}, see [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes-data).
 {: note}
 
+## 30 Nov 2023
+{: #text-to-speech-30nov2023}
+{: release-note}
+
+Improved Text to Speech synthesis engine for version 3 voices 
+:   The Text to Speech engine is improved for delivering faster synthesis with lower latency for version 3 voices.
+
+Improved Text to Speech voice en-AU_HeidiExpressive
+:   The Text to Speech voice en-AU_HeidiExpressive is improved that can adjust the pitch and synthesis.  
+
 ## 9 June 2023
 {: #text-to-speech-19may2023}
 {: release-note}
