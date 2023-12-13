@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-06-09"
+lastupdated: "2023-12-13"
 
 keywords: text to speech release notes,text to speech for IBM cloud release notes
 
