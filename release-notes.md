@@ -27,6 +27,16 @@ For information about known limitations of the service, see [Known limitations](
 For information about releases and updates of the service for {{site.data.keyword.icp4dfull_notm}}, see [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes-data).
 {: note}
 
+## 16 Jan 2024
+{: #text-to-speech-16jan2024}
+{: release-note}
+
+Text to Speech improvements for US English Expressive voices 
+:   When you use US English Expressive voices, the synthesis is faster with lower latency.
+
+Defect fix: Inflection issue when using the question mark (?) in short utterance
+:   **Defect fix:** When some short utterances were ended with a question mark (?), the inflection was ignored. This issue is now fixed.
+
 ## 30 Nov 2023
 {: #text-to-speech-30nov2023}
 {: release-note}
