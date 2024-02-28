@@ -140,7 +140,7 @@ You can define the custom entry for a word/translation pair based on other words
 
 Premium customers can work with {{site.data.keyword.IBM_notm}} to train a new custom voice for their specific application needs. A custom voice is a unique voice that is based on audio training data that the customer provides. {{site.data.keyword.IBM_notm}} can train a custom voice with as little as one hour of training data.
 
-To request a custom voice or for more information, complete and submit this [{{site.data.keyword.IBM_notm}} Request Form](https://form.asana.com/?k=CBuXK1uwlAf5ek6FwB6mcg&d=8612789739828){: external}.
+To request a custom voice or for more information, complete and submit this [{{site.data.keyword.IBM_notm}} Request Form](https://forms.monday.com/forms/5fd92c54536a18f9afab8a47404bf828?r=use1){: external}.
 
 ## Using Tune by Example
 {: #features-tune-by-example}
