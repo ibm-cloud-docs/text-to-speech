@@ -50,7 +50,7 @@ Table 1 shows the service's support for languages by type of voice. The followin
 | Korean | | &#10004; | &#10004;
 | Portuguese  \n (Brazilian) | | &#10004; |
 | Spanish  \n (Castilian) | | &#10004; |
-| Spanish  \n (Latin American) | | &#10004; |
+| Spanish  \n (Latin American) | &#10004; | &#10004; |
 | Spanish  \n (South American) | | &#10004; |
 {: caption="Table 1. Language support by type of voice"}
 
@@ -75,6 +75,7 @@ To minimize the latency and response time for an expressive voice, use shorter s
 | | GA | `en-US_EmmaExpressive`  \n Female | ![en-US_EmmaExpressive sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_EmmaExpressive.wav){: audio controls} |
 | | GA | `en-US_LisaExpressive`  \n Female | ![en-US_LisaExpressive sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_LisaExpressive.wav){: audio controls} |
 | | GA | `en-US_MichaelExpressive`  \n Male | ![en-US_MichaelExpressive sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_MichaelExpressive.wav){: audio controls} |
+| Spanish  \n (Latin American) | GA | `es-LA_DanielaExpressive`  \n Female | ![es-LA_DanielaExpressive sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/es-LA_DanielaExpressive.wav){: audio controls} |
 {: caption="Table 2. Expressive neural languages and voices"}
 
 ### Enhanced neural voices
