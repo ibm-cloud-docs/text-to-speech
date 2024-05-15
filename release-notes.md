@@ -27,6 +27,19 @@ For information about known limitations of the service, see [Known limitations](
 For information about releases and updates of the service for {{site.data.keyword.icp4dfull_notm}}, see [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes-data).
 {: note}
 
+## 15 May 2024
+{: #text-to-speech-15may2024}
+{: release-note}
+
+Supporting Latin American Spanish female expressive neural voices
+:   The service now supports a new female expressive neural voice for Latin American Spanish
+    - es-LA_DanielaExpressive.
+
+    Expressive neural voices offer natural-sounding speech that is clear, crisp, and fluid. The new voice is generally available (GA) for production use. It supports the use of both the standard International Phonetic Alphabet (IPA) and IBM Symbolic Phonetic Representation (SPR) phonetic symbols. For more information, see
+    - [Expressive neural voices](/docs/text-to-speech?topic=text-to-speech-voices#language-voices-expressive).
+    - [Spanish expressive voices](/docs/text-to-speech?topic=text-to-speech-expressive-spanish).
+    - [Spanish symbols](/docs/text-to-speech?topic=text-to-speech-esSymbols).
+
 ## 16 Jan 2024
 {: #text-to-speech-16jan2024}
 {: release-note}
