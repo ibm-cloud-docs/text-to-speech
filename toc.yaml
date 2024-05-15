@@ -59,7 +59,12 @@ toc:
           - http.md
           - websockets.md
           - synthesis-params.md
-          - synthesis-expressive.md
+          - topicgroup:
+            label: Modifying speech synthesis with expressive neural voices
+            topics:
+            - synthesis-expressive.md
+            - expressive-en.md
+            - expressive-es.md
           - word-timing.md
       - topicgroup:
           label: Customizing the service
