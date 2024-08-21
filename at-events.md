@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2024-08-14"
+lastupdated: "2024-08-21"
 
 keywords: IBM,activity tracker,event,security,text to speech
 
@@ -59,6 +59,9 @@ As a security officer, auditor, or manager, you can use the Activity Tracker ser
 {: caption="Regions where activity tracking events are sent in Europe locations" caption-side="top"}
 {: #at-table-3}  
 {: tab-title="Europe"}
+{: tab-group="at"} 
+{: class="simple-tab-table"} 
+{: row-headers}
 
 ## Customization events
 {: #at-events-custom}
