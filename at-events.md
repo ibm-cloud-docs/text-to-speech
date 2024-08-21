@@ -49,6 +49,9 @@ As a security officer, auditor, or manager, you can use the Activity Tracker ser
 {: caption="Regions where activity tracking events are sent in Asia Pacific locations" caption-side="top"} 
 {: #at-table-2} 
 {: tab-title="Asia Pacific"}
+{: tab-group="at"}
+{: class="simple-tab-table"}
+{: row-headers}
 
 | Frankfurt (eu-de)        | London (eu-gb)                 |  Madrid (eu-es)    | 
 |-------------------|-------------------------------------|------------------------------------|
