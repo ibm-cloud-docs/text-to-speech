@@ -39,6 +39,9 @@ As a security officer, auditor, or manager, you can use the Activity Tracker ser
 {: caption="Regions where activity tracking events are sent in Americas locations" caption-side="top"}
 {: #at-table-1} 
 {: tab-title="Americas"}
+{: tab-group="at"}
+{: class="simple-tab-table"} 
+{: row-headers}
 
 | Tokyo (jp-tok)           | Sydney (au-syd)                    |  Osaka (jp-osa)     | Chennai (in-che) |
 |-------------------|-------------------------------------|------------------------------------|------------------------------------|
