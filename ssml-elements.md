@@ -99,7 +99,7 @@ I am going to <emphasis level="moderate">give</emphasis> her the book.
 ```
 {: codeblock}
 
-For more information, see [Emphasizing words](/docs/text-to-speech?topic=text-to-speech-synthesis-expressive#emphasizing-words).
+For more information, see [Emphasizing words](/docs/text-to-speech?topic=text-to-speech-synthesis-expressive#syntheses-expressive-word-emphasis).
 
 ## The `<express-as>` element
 {: #express-as_element}
@@ -334,6 +334,7 @@ Acceptable values for the `interpret-as` attribute and examples of each value fo
 -   [`vxml:boolean`](#vxml-boolean)
 -   [`vxml:currency`](#vxml-currency)
 -   [`vxml:date`](#vxml-date)
+-   [`vxml:time`](#say-as-time)
 -   [`vxml:digits`](#vxml-digits)
 -   [`vxml:phone`](#vxml-phone)
 
@@ -469,6 +470,19 @@ The `vxml:date` value works like the `date` value, but the format is predefined 
 <say-as interpret-as="vxml:date">20050720</say-as>
 <say-as interpret-as="vxml:date">????0720</say-as>
 <say-as interpret-as="vxml:date">200507??</say-as>
+```
+{: codeblock}
+
+#### `vxml:time`
+{: #say-as-time}
+
+The 'vxml:time' value speaks the time within the element according to the format given in the associated format attribute. The format attribute is required for the time value. The format has to be four digits with either no suffix, "a", "p" or "h". The following examples speak the indicated time in the specified formats, where d, m, and y represent day, month, and year.
+
+```xml
+<say-as interpret-as="vxml:time">1230</say-as>
+<say-as interpret-as="vxml:time">1230a</say-as>
+<say-as interpret-as="vxml:time">1230p</say-as>
+<say-as interpret-as="vxml:time">0100h</say-as>
 ```
 {: codeblock}
 

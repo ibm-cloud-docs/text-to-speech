@@ -6,10 +6,9 @@ toc:
     category: ai
     audience: service
     href: /docs/text-to-speech
-    product-page: https://www.ibm.com/cloud/watson-text-to-speech
+    product-page: https://www.ibm.com/products/text-to-speech
     path: text-to-speech
     label: Text to Speech
-
   entries:
   - navgroup:
       id: learn
@@ -41,7 +40,6 @@ toc:
           - link:
               label: Webinars
               href: https://www.ibm.com/watson/webinars/
-
   - navgroup:
       id: howto
       topics:
@@ -60,11 +58,11 @@ toc:
           - websockets.md
           - synthesis-params.md
           - topicgroup:
-            label: Modifying speech synthesis with expressive neural voices
-            topics:
-            - synthesis-expressive.md
-            - expressive-en.md
-            - expressive-es.md
+              label: Modifying speech synthesis with expressive neural voices
+              topics:
+              - synthesis-expressive.md
+              - expressive-en.md
+              - expressive-es.md
           - word-timing.md
       - topicgroup:
           label: Customizing the service
@@ -122,7 +120,6 @@ toc:
           topics:
           - science.md
           - references.md
-
   - navgroup:
       id: reference
       topics:
@@ -135,7 +132,6 @@ toc:
       - link:
           label: Watson GitHub repos
           href: https://github.com/watson-developer-cloud/
-
   - navgroup:
       id: help
       topics:
@@ -146,6 +142,6 @@ toc:
           links:
           - link:
               label: StackOverflow
-              href: http://stackoverflow.com/questions/tagged/ibm-watson-cognitive+text-to-speech
+              href: https://stackoverflow.com/questions/tagged/ibm-watson+text-to-speech
       - include: ../overview/accessibility/accessibility_features.md
         navtitle: Accessibility

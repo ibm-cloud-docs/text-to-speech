@@ -25,7 +25,7 @@ The {{site.data.keyword.texttospeechfull}} service bases its support on SSML ver
 {: help}
 {: support}
 
-SSML operates by augmenting the plain text that is passed to a synthesizer with a predefined set of elements, or tags. An XML parser first separates the plain input text from the markup specifications. The specifications are then processed and sent as a set of instructions in a form that can be understood by the synthesizer to produce the desired effects. For the XML parser to carry out this job, the markup needs to be well formed; for example, elements must be closed and multiple elements must be properly nested. For an introduction to basic XML concepts, see [w3schools.com/xml/xml_whatis.asp](http://www.w3schools.com/xml/xml_whatis.asp){: external}.
+SSML operates by augmenting the plain text that is passed to a synthesizer with a predefined set of elements, or tags. An XML parser first separates the plain input text from the markup specifications. The specifications are then processed and sent as a set of instructions in a form that can be understood by the synthesizer to produce the desired effects. For the XML parser to carry out this job, the markup needs to be well formed; for example, elements must be closed and multiple elements must be properly nested. For an introduction to basic XML concepts, see [w3schools.com/xml/xml_whatis.asp](https://www.w3schools.com:443/xml/xml_whatis.asp){: external}.
 
 An SSML element is anything contained within, and including, an opening tag and its matching closing tag. As shown in the following example, an element can contain a combination of other elements (tags can be nested) and text. Additionally, elements can require or optionally accept attributes set to particular values.
 
@@ -41,10 +41,10 @@ An SSML element is anything contained within, and including, an opening tag and 
 A full legal SSML document consists of an XML prolog, which contains information such as encoding and the schema against which to validate the SSML document, followed by the root element, `<speak>`. Within the span of the `<speak>` element, you specify the text that is to be synthesized, augmented with additional elements.
 
 ```xml
-<!-- The XML Prolog -->
+
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- Root Element -->
+
 <speak version="1.1">
   ... the body that contains text to be synthesized plus markup ...
 </speak>
@@ -70,7 +70,7 @@ For more information about using SSML and related features with the service, see
 -   The service supports additional synthesis features for expressive neural voices:
     -   [Using speaking styles](/docs/text-to-speech?topic=text-to-speech-synthesis-expressive#syntheses-expressive-styles)
     -   [Emphasizing interjections](/docs/text-to-speech?topic=text-to-speech-synthesis-expressive#syntheses-expressive-interjections)
-    -   [Emphasizing words](/docs/text-to-speech?topic=text-to-speech-synthesis-expressive#emphasizing-words)
+    -   [Emphasizing words](/docs/text-to-speech?topic=text-to-speech-synthesis-expressive#syntheses-expressive-word-emphasis)
 -   The service supports a synthesis feature that lets you control how alphanumeric strings are spelled out for German voices. For more information, see [Specifying how strings are spelled out](/docs/text-to-speech?topic=text-to-speech-synthesis-params#params-spell-out-mode).
 -   The service supports the use of the SSML `<mark>` element with the WebSocket interface to obtain timing information for words of the resulting audio. The WebSocket interface also allows you to request information for all strings of the input text. For more information, see
     -   [Specifying an SSML mark](/docs/text-to-speech?topic=text-to-speech-timing#timing-mark)
