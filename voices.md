@@ -32,7 +32,7 @@ The following pages provide more information about the voices and their technolo
 -   For more information about the service's neural voice technology, see [The science behind the service](/docs/text-to-speech?topic=text-to-speech-science).
 
 ### Language support by type of voice
-{: #language-voices-by type}
+{: #language-voices-by-type}
 
 Table 1 shows the service's support for languages by type of voice. The following topics list the available languages and voices for each voice type.
 

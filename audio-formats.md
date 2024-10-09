@@ -142,10 +142,10 @@ For more information, see
 
 -   [xiph.org/ogg](https://www.xiph.org/ogg/){: external}
 -   [xiph.org/vorbis](https://xiph.org/vorbis/){: external}
--   [Vorbis](https://wikipedia.org/wiki/Vorbis){: external}
+-   [Vorbis](https://en.wikipedia.org/wiki/Vorbis){: external}
 -   [opus-codec.org](https://www.opus-codec.org/){: external}
 -   IETF [Request for Comments (RFC) 7845](https://datatracker.ietf.org/doc/html/rfc7845){: external}
--   [Opus (audio format)](https://wikipedia.org/wiki/Opus_%28audio_format%29){: external} (look especially at the *Containers* section)
+-   [Opus (audio format)](https://en.wikipedia.org/wiki/Opus_(audio_format)){: external} (look especially at the *Containers* section)
 
 ### audio/wav format
 {: #audio-wav}
@@ -155,7 +155,7 @@ For more information, see
 Due to the streaming nature of the returned audio, the WAV audio that is generated might not work in all audio players. Specifically, the attribute `numSamples` in the header of the audio stream is set to `0` regardless of the length of the audio.
 {: note}
 
-For more information, see [WAV](https://wikipedia.org/wiki/WAV){: external}.
+For more information, see [WAV](https://en.wikipedia.org/wiki/WAV){: external}.
 
 ### audio/webm format
 {: #audio-webm}
@@ -171,8 +171,8 @@ For more information, see
 
 -   [webmproject.org](https://www.webmproject.org/){: external}
 -   [opus-codec.org](https://www.opus-codec.org/){: external}
--   [Opus (audio format)](https://wikipedia.org/wiki/Opus_%28audio_format%29){: external} (look especially at the *Containers* section)
--   [Vorbis](https://wikipedia.org/wiki/Vorbis){: external}
+-   [Opus (audio format)](https://en.wikipedia.org/wiki/Opus_(audio_format)){: external} (look especially at the *Containers* section)
+-   [Vorbis](https://en.wikipedia.org/wiki/Vorbis){: external}
 
 ## Specifying an audio format
 {: #formats-specify}

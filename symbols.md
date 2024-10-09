@@ -75,8 +75,8 @@ You can define IPA pronunciations by using phonetic symbols or Unicode values. T
 
 IPA is an industry standard notation. For more information, see the following pages:
 
--   For more information about IPA, see [International Phonetic Alphabet](https://wikipedia.org/wiki/International_Phonetic_Alphabet){: external}.
--   For more information about phonetic symbols for Unicode, see [Phonetic symbols in Unicode](https://wikipedia.org/wiki/Phonetic_symbols_in_Unicode){: external}.
+-   For more information about IPA, see [International Phonetic Alphabet](https://en.wikipedia.org/wiki/International_Phonetic_Alphabet){: external}.
+-   For more information about phonetic symbols for Unicode, see [Phonetic symbols in Unicode](https://en.m.wikipedia.org/wiki/Phonetic_symbols_in_Unicode){: external}.
 
 ## Specifying syllables
 {: #syllables}
