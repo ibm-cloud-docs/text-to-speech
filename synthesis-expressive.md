@@ -147,7 +147,7 @@ Table 3 provides examples of each available `level` for the `emphasis` element. 
 | `moderate` | `"I am going to <emphasis level='moderate'>give</emphasis> her the book."` | ![Emphasis: moderate](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-emphasis/michael-emphasis-moderate.wav){: audio controls} |
 | `strong` | `"I am going to <emphasis level='strong'>give</emphasis> her the book."` | ![Emphasis: strong](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-emphasis/michael-emphasis-strong.wav){: audio controls} |
 | `reduced` | `"I <emphasis level='reduced'>am going to give</emphasis> her the book."` | ![Emphasis: reduced](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-emphasis/michael-emphasis-reduced.wav){: audio controls} |
-{: caption="Table 3. Emphasizing words"}
+{: caption="Emphasizing words"}
 
 ### Emphasizing a word with SSML
 {: #syntheses-expressive-word-emphasis-example}

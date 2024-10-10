@@ -39,7 +39,7 @@ The service supports the following symbols for Canadian French.
 | 'E~' | &#101;&#771;  \n   \n &#603;&#771; | 0065+0303  \n   \n 025B+0303 | f**in**, pl**ein**, f**aim** |
 | 'o~' | &#111;&#771;  \n   \n &#596;&#771; | 006F+0303  \n   \n 0254+0303 | b**on**, p**on**t, m**on** |
 | 'oe~' | &#339;&#771; | 0153+0303 | **un**, auc**un** |
-{: caption="Table 1. Vowels (Canadian French)"}
+{: caption="Vowels (Canadian French)"}
 
 ## Consonants
 {: #caConsonants}
@@ -69,7 +69,7 @@ The service supports the following symbols for Canadian French.
 | w | w | 0077 | **ou**i, **w**att |
 | z | z | 007A | ja**s**er, ré**s**eau, **z**ig**z**aguer |
 | Z | &#658; | 0292 | ra**g**e, **g**îte, **j**ouer |
-{: caption="Table 2. Consonants (Canadian French)"}
+{: caption="Consonants (Canadian French)"}
 
 ## Liaison
 {: #caLiaison}
@@ -79,7 +79,7 @@ In Canadian French, the `_` (underscore) can be used immediately following the f
 | SPR symbol | IPA symbol | IPA Unicode |
 |:----------:|:----------:|:-----------:|
 | _ | &#8255; | 203F |
-{: caption="Table 3. Liaison (Canadian French)"}
+{: caption="Liaison (Canadian French)"}
 
 Examples of words with and without the liaison symbol follow:
 

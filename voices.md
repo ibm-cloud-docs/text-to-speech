@@ -52,7 +52,7 @@ Table 1 shows the service's support for languages by type of voice. The followin
 | Spanish  \n (Castilian) | | &#10004; |
 | Spanish  \n (Latin American) | &#10004; | &#10004; |
 | Spanish  \n (South American) | | &#10004; |
-{: caption="Table 1. Language support by type of voice"}
+{: caption="Language support by type of voice"}
 
 ### Expressive neural voices
 {: #language-voices-expressive}
@@ -76,7 +76,7 @@ To minimize the latency and response time for an expressive voice, use shorter s
 | | GA | `en-US_LisaExpressive`  \n Female | ![en-US_LisaExpressive sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_LisaExpressive.wav){: audio controls} |
 | | GA | `en-US_MichaelExpressive`  \n Male | ![en-US_MichaelExpressive sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_MichaelExpressive.wav){: audio controls} |
 | Spanish  \n (Latin American) | GA | `es-LA_DanielaExpressive`  \n Female | ![es-LA_DanielaExpressive sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/es-LA_DanielaExpressive.wav){: audio controls} |
-{: caption="Table 2. Expressive neural languages and voices"}
+{: caption="Expressive neural languages and voices"}
 
 ### Enhanced neural voices
 {: #language-voices-enhanced-neural}
@@ -110,7 +110,7 @@ Table 3 lists and provides audio samples for all available enhanced neural voice
 | | GA | `es-ES_LauraV3Voice`  \n Female | ![es-ES_LauraV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/es-ES_LauraV3Voice.wav){: audio controls} |
 | Spanish  \n (Latin American) | GA | `es-LA_SofiaV3Voice`  \n Female | ![es-LA_SofiaV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/es-LA_SofiaV3Voice.wav){: audio controls} |
 | Spanish  \n (North American) | GA | `es-US_SofiaV3Voice`  \n Female | ![es-US_SofiaV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/es-US_SofiaV3Voice.wav){: audio controls} |
-{: caption="Table 3. Enhanced neural languages and voices"}
+{: caption="Enhanced neural languages and voices"}
 
 The Spanish Latin American and North American `Sofia` voices are essentially the same voice. The most significant difference concerns how the two voices interpret a $ (dollar sign). The Latin American version uses the term *pesos*; the North American version uses the term *dólares*. Other minor differences might also exist between the two voices.
 {: note}

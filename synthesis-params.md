@@ -41,7 +41,7 @@ Table 1 provides examples of how the service changes the speaking rate with diff
 | `rate_percentage=0`  \n The service uses the default speaking rate. You can also omit the parameter to get the default behavior. | ![rate_percentage=0](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-rate-percentage/allison-rate-default.wav){: audio controls} |
 | `rate_percentage=-20`  \n The service uses a speaking rate that is 20 percent slower. | ![rate_percentage=-20](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-rate-percentage/allison-rate-slow.wav){: audio controls} |
 | `rate_percentage=20`  \n The service uses a speaking rate that is 20 percent faster. | ![rate_percentage=20](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-rate-percentage/allison-rate-fast.wav){: audio controls} |
-{: caption="Table 1. Using the rate_percentage parameter"}
+{: caption="Using the rate_percentage parameter"}
 
 ### Interaction with SSML `<prosody>` element
 {: #params-rate-percentage-ssml}
@@ -115,7 +115,7 @@ Table 2 provides examples of how the service changes the speaking pitch with dif
 | `pitch_percentage=0`  \n The service uses the default speaking pitch. You can also omit the parameter to get the default behavior. | ![pitch_percentage=0](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-pitch-percentage/allison-pitch-default.wav){: audio controls} |
 | `pitch_percentage=-20`  \n The service uses a speaking pitch that is 20 percent lower. | ![pitch_percentage=-20](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-pitch-percentage/allison-pitch-low.wav){: audio controls} |
 | `pitch-percentage=20`  \n The service uses a speaking pitch that is 20 percent higher. | ![pitch_percentage=20](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-pitch-percentage/allison-pitch-high.wav){: audio controls} |
-{: caption="Table 2. Using the pitch_percentage parameter"}
+{: caption="Using the pitch_percentage parameter"}
 
 ### Interaction with SSML `<prosody>` element
 {: #params-pitch-percentage-ssml}
@@ -200,7 +200,7 @@ Die Nummer ist <say-as interpret-as=‘digits’>AB7234987FFA</say-as>.
 | `spell_out_mode=singles`  \n The service reads the characters one at a time, with a brief pause between each character. | ![spell_out_mode=singles](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-spell-out/spell-out-singles.wav){: audio controls} |
 | `spell_out_mode=pairs`  \n The service reads the characters two at a time, with a brief pause between each pair. | ![spell_out_mode=pairs](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-spell-out/spell-out-pairs.wav){: audio controls} |
 | `spell_out_mode=triplets`  \n The service reads the characters three at a time, with a brief pause between each triplet. | ![spell_out_mode=triplets](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-spell-out/spell-out-triplets.wav){: audio controls} |
-{: caption="Table 3. Using the spell_out_mode parameter for German"}
+{: caption="Using the spell_out_mode parameter for German"}
 
 Alphanumeric strings that mix letters and digits can yield different groupings of characters. If you do not use the `<say-as>` element, groups of letters and digits can be pronounced in ways that do not necessarily conform to the requested mode.
 {: note}

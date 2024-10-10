@@ -31,7 +31,7 @@ The service supports the following symbols for Netherlands Dutch.
 | u | u | 0075 | d**ou**che, k**oe**n |
 | y | y | 0079 | **uu**r, d**uu**r |
 | Y | ʏ | 028F | dr**u**gs, dr**u**k, h**u**t
-{: caption="Table 1. Regular vowels (Netherlands Dutch)"}
+{: caption="Regular vowels (Netherlands Dutch)"}
 
 ## Long vowels
 {: #nlLongVowels-new}
@@ -45,7 +45,7 @@ The service supports the following symbols for Netherlands Dutch.
 | '9:' | œː | 0153+02D0 | fr**eu**letjes |
 | 'o:' | oː | 006F+02D0 | n**o**dig, R**o**me |
 | 'Q:' | ɒː | 0252+02D0 | amaz**o**ne |
-{: caption="Table 2. Long vowels (Netherlands Dutch)"}
+{: caption="Long vowels (Netherlands Dutch)"}
 
 ## Nasalized vowels
 {: #nlNasalizedVowels-new}
@@ -55,7 +55,7 @@ The service supports the following symbols for Netherlands Dutch.
 | 'a:'n | aːn | 0061+02D0+006E | depend**an**ces |
 | 'e:'n | eːn | 0065+02D0+006E | Chop**in** |
 | 'o:'n | oːn | 006F+02D0+006E | **en**quête, g**en**re |
-{: caption="Table 3. Nasalized vowels (Netherlands Dutch)"}
+{: caption="Nasalized vowels (Netherlands Dutch)"}
 
 **Note:**
 
@@ -75,7 +75,7 @@ The service supports the following symbols for Netherlands Dutch.
 | 'o:'i | oː | 006F+02D0 | g**oo**it, f**oo**i, **oe**i |
 | ui | ui | 0075+0069 | gr**oei**t |
 | yu | yu | 0079+0075 | d**uw**en |
-{: caption="Table 4. Diphthongs (Netherlands Dutch)"}
+{: caption="Diphthongs (Netherlands Dutch)"}
 
 ## Consonants
 {: #nlConsonants-new}
@@ -105,4 +105,4 @@ The service supports the following symbols for Netherlands Dutch.
 | x | x | 0078 | **g**aan, to**ch** |
 | z | z | 007A | **z**at |
 | Z | ʒ | 0292 | **j**ury |
-{: caption="Table 5. Consonants (Netherlands Dutch)"}
+{: caption="Consonants (Netherlands Dutch)"}

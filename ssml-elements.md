@@ -45,7 +45,7 @@ The following sections provide descriptions of each element or attribute, includ
 | [`<phoneme>` element](#phoneme_element) | Full | [`<speak>` element](#speak_element) | Full |
 | | | [`<sub>` element](#sub_element) | Full |
 | | | [`<voice>` element](#voice_element) | None |
-{: caption="Table 1. SSML elements and attributes"}
+{: caption="SSML elements and attributes"}
 
 ## The `<audio>` element
 {: #audio_element}

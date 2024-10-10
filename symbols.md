@@ -98,7 +98,7 @@ Table 1 identifies the symbols that you can use to indicate syllable stress for 
 | Primary stress | `1` | `ˈ` | `02C8` |
 | Secondary stress | `2` | `ˌ` | `02CC` |
 | No stress | `0` | No symbol | No value |
-{: caption="Table 1. Syllable stress"}
+{: caption="Syllable stress"}
 
 You must place a syllable stress marker within a syllable boundary but always to the left of the syllable's vowel. You can place a marker anywhere to the left of the stressed vowel. For example, each of the following SPR examples places the primary stress (`1`) on the correct vowel of the word *construction*:
 
@@ -122,7 +122,7 @@ Table 2 lists language-specific considerations that apply to specifying syllable
 | Italian | SPR and IPA | You can specify only `1` (primary stress). An error occurs if you specify secondary or no stress. |
 | Japanese | SPR and IPA | You can specify only `1` (primary stress) and `0` (no stress). An error occurs if you specify secondary stress. |
 | Spanish | SPR and IPA | You can specify only `1` (primary stress). An error occurs if you specify secondary or no stress. |
-{: caption="Table 2. Language-specific rules for using syllable stress"}
+{: caption="Language-specific rules for using syllable stress"}
 
 ## Phonetic symbols for supported languages
 {: #supportedLanguages}
@@ -147,4 +147,4 @@ The *Availability* column indicates whether each voice is available for [IBM Clo
 | [Korean symbols](/docs/text-to-speech?topic=text-to-speech-koSymbols-new) | All versions |
 | [Portuguese (Brazilian) symbols](/docs/text-to-speech?topic=text-to-speech-ptSymbols) | All versions |
 | [Spanish symbols](/docs/text-to-speech?topic=text-to-speech-esSymbols) | All versions |
-{: caption="Table 3. Phonetic symbols for supported languages"}
+{: caption="Phonetic symbols for supported languages"}

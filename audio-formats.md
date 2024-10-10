@@ -63,7 +63,7 @@ As shown in the *Audio formats* column for those formats that accept a `codecs` 
 | [audio/wav](#audio-wav) | 22,050 Hz | None | `rate={integer}` |
 | [audio/webm](#audio-webm)  \n [audio/webm;codecs=opus](#audio-webm) | 48,000 Hz | None | None |
 | [audio/webm;codecs=vorbis](#audio-webm) | 22,050 Hz | None | `rate={integer}` |
-{: caption="Table 1. Summary of supported audio formats"}
+{: caption="Summary of supported audio formats"}
 
 ### audio/alaw format
 {: #audio-alaw}

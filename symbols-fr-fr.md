@@ -35,7 +35,7 @@ The service supports the following symbols for French.
 | 'E~' | &#101;&#771;  \n   \n &#603;&#771;  \n   \n &#230;&#771; | 0065+0303  \n   \n 025B+0303  \n   \n 00E6+0303 | f**i**n, pl**e**in, f**ai**m |
 | 'o~' | &#111;&#771;  \n   \n &#596;&#771; | 006F+0303  \n   \n 0254+0303 | b**on**, p**on**t, m**on** |
 | 'oe~' | &#339;&#771; | 0153+0303 | **un**, auc**un**, br**un** |
-{: caption="Table 1. Vowels (French)"}
+{: caption="Vowels (French)"}
 
 **Note:**
 
@@ -67,7 +67,7 @@ The service supports the following symbols for French.
 | w | w | 0077 | **ou**i, b**ou**ée, **w**att |
 | z | z | 007A | ja**s**er, ré**s**eau, **z**ig**z**aguer |
 | Z | &#658; | 0292 | ra**g**e, **g**îte, **j**ouer |
-{: caption="Table 2. Consonants (French)"}
+{: caption="Consonants (French)"}
 
 ## Liaison
 {: #frLiaison}
@@ -77,7 +77,7 @@ In French, the `_` (underscore) can be used immediately following the final cons
 | SPR symbol | IPA symbol | IPA Unicode |
 |:----------:|:----------:|:-----------:|
 | _ | &#8255; | 203F |
-{: caption="Table 3. Liaison (French)"}
+{: caption="Liaison (French)"}
 
 Examples of words with and without the liaison symbol follow:
 

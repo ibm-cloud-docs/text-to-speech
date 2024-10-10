@@ -149,7 +149,7 @@ Because you can submit input text that includes XML-based SSML annotations, the 
 | `<`  \n (left angle bracket) | `&lt;` | `&#60;` |
 | `>`  \n (right angle bracket) | `&gt;` | `&#62;` |
 | `/`  \n (forward slash) | None | `&#47;` |
-{: caption="Table 1. Escaping XML control characters"}
+{: caption="Escaping XML control characters"}
 
 For more information about how the service validates input text, see [SSML validation](/docs/text-to-speech?topic=text-to-speech-ssml#ssml-errors).
 

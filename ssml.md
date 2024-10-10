@@ -128,4 +128,4 @@ Table 1 describes many common SSML validation errors. In each case, the request 
 | Japanese `:` symbol does not precede a vowel | In the `ph` attribute of a `<phoneme>` element in Japanese, a `:` character does not occur before a vowel (possibly with other symbols, such as syllable boundary, in between). |
 | Invalid use of the SSML `<prosody>` element | You cannot use the `contour`, `duration`, `range`, and `volume` attributes of the `<prosody>` element with any voice. |
 | Invalid use of the SSML `<express-as>` element | You can use the `<express-as>` element only with expressive neural voices. |
-{: caption="Table 1. SSML validation errors"}
+{: caption="SSML validation errors"}

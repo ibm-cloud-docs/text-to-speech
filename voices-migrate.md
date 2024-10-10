@@ -28,7 +28,7 @@ Identify the new voices that you can use in place of the obsolete neural voices.
 | Australian English   | `en-AU_CraigVoice`  \n `en-AU_MadisonVoice`  \n `en-AU_SteveVoice` | `en-AU_HeidiExpressive` (expressive neural)  \n `en-AU_JackExpressive` (expressive neural) |
 | Dutch Netherlands    | `nl-NL_EmmaVoice`  \n `nl-NL_LiamVoice` | `nl-NL_MerelV3Voice` (enhanced neural) |
 | Korean             | `ko-KR_HyunjunVoice`  \n `ko-KR_SiWooVoice`  \n `ko-KR_YoungmiVoice`  \n `ko-KR_YunaVoice` | `ko-KR_JinV3Voice` (enhanced neural) |
-{: caption="Table 1. Voices to which you can migrate from neural voices"}
+{: caption="Voices to which you can migrate from neural voices"}
 
 ## Step 2: Use the new voices in speech synthesis
 {: #voices-migrate-use}
@@ -69,7 +69,7 @@ If you used custom models to create a dictionary of custom words for your neural
 | Australian English | [English (Australian) symbols (obsolete)](/docs/text-to-speech?topic=text-to-speech-auSymbols) | [English (Australian) symbols](/docs/text-to-speech?topic=text-to-speech-auSymbols-new) |
 | Dutch Netherlands  | [Dutch (Netherlands) symbols (obsolete)](/docs/text-to-speech?topic=text-to-speech-nlSymbols) | [Dutch (Netherlands) symbols](/docs/text-to-speech?topic=text-to-speech-nlSymbols-new) |
 | Korean             | [Korean symbols (obsolete)](/docs/text-to-speech?topic=text-to-speech-koSymbols) | [Korean symbols](/docs/text-to-speech?topic=text-to-speech-koSymbols-new) |
-{: caption="Table 2. Phonetic symbols for obsolete neural voices and for enhanced neural and expressive neural voices"}
+{: caption="Phonetic symbols for obsolete neural voices and for enhanced neural and expressive neural voices"}
 
 You need to be aware of the following information when validating your custom words:
 

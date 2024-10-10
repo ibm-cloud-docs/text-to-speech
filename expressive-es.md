@@ -26,7 +26,7 @@ Table 1 provides examples of each available `style` for the `<express-as>` eleme
 |  | `"<express-as style="neutral"> Durante el otoño, el clima es ventoso. </express-as>"` | ![Speaking style: neutral](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-styles/daniela-neutral.wav){: audio controls} |
 | `uncertain` | `"Disculpe, pero ¿le importaría repetir lo que me decía? No logré oirlo bien."` | ![Speaking style: default uncertain](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-styles/daniela-uncertain-default.wav){: audio controls} |
 |  | `"<express-as style="uncertain"> Disculpe, pero ¿le importaría repetir lo que me decía? No logré oirlo bien. </express-as>"` | ![Speaking style: uncertain](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-styles/daniela-uncertain.wav){: audio controls} |
-{: caption="Table 1. Speaking styles"}
+{: caption="Speaking styles"}
 
 ## Emphasizing interjections
 {: #syntheses-expressive-interjections-es}
@@ -42,7 +42,7 @@ Table 2 lists the interjections that the service recognizes and provides example
 | `eh` | `"Eh, no sé si podremos enviar un técnico a su residencia antes del miércoles."` | ![Interjection: Eh](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-interjections/daniela-interjection-eh.wav){: audio controls} |
 | `oh` | `"Oh, claro que podemos guardar su equipaje en consigna hasta la hora de su salida. No hay problemas."` | ![Interjection: Oh](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-interjections/daniela-interjection-oh.wav){: audio controls} |
 | `uf` | `"Uf, no creo que pueda concertarle una cita hasta que recibamos sus documentos."` | ![Interjection: Uf](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-interjections/daniela-interjection-uf.wav){: audio controls} |
-{: caption="Table 2. Interjections that are emphasized"}
+{: caption="Interjections that are emphasized"}
 
 ### Enabling or disabling interjections with SSML
 {: #syntheses-expressive-interjections-ssml-es}

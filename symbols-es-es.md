@@ -25,7 +25,7 @@ The service supports the following symbols for Spanish. The information applies 
 | i | i | 0069 | **i**gual, h**i**jo |
 | o | o | 006F | **o**s**o**, cant**o** |
 | u | u | 0075 | **u**va, l**u**gar |
-{: caption="Table 1. Regular vowels (Spanish)"}
+{: caption="Regular vowels (Spanish)"}
 
 ## Consonants
 {: #esConsonants}
@@ -53,7 +53,7 @@ The service supports the following symbols for Spanish. The information applies 
 | w | w | 0077 | f**u**era, de**u**da |
 | y | j | 006A | med**i**o, o**i**go |
 | Y | &#669; ^**6**^ | 029D | **y**egua, pla**y**a |
-{: caption="Table 2. Consonants (Spanish)"}
+{: caption="Consonants (Spanish)"}
 
 **Notes:**
 
@@ -77,7 +77,7 @@ Each allophone is a variation of the phoneme indicated in parentheses. If an all
 | z (s) | z | 007A | mi**s**mo, de**s**de |
 | 'ng' ^**1**^ | &#331;g | 014B+0067 | ta**n**go, e**n**gaño |
 | 'nk' ^**1**^ | &#331;k | 014B+006B | a**n**cla, ci**n**co |
-{: caption="Table 3. Allophones (Spanish)"}
+{: caption="Allophones (Spanish)"}
 
 **Note:**
 
