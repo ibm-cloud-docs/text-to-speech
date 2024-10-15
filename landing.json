@@ -1,0 +1,41 @@
+{
+  "version": 2,
+  "title": "IBM Watson Text to Speech service",
+  "introduction": "Use the IBM Watson Text to Speech service to synthesize written text to natural-sounding speech. The synthesized audio uses appropriate cadence and intonation for its language and dialect. The documentation describes the Text to Speech service for IBM Cloud, IBM Cloud Pak for Data, and IBM Cloud Pak for Data as a Service.",
+  "product_page": "https://www.ibm.com/products/text-to-speech",
+  "console_page": "/catalog/services/text-to-speech",
+  "section_topics": {
+    "links": [
+      {
+        "title": "Getting started with Text to Speech",
+        "href": "/docs/text-to-speech?topic=text-to-speech-gettingStarted"
+      },
+      {
+        "title": "Using languages and voices",
+        "href": "/docs/text-to-speech?topic=text-to-speech-voices"
+      },
+      {
+        "title": "Tracking events for Text to Speech",
+        "href": "/docs/text-to-speech?topic=text-to-speech-at-events"
+      },
+      {
+        "title": "Usage FAQs",
+        "href": "/docs/text-to-speech?topic=text-to-speech-faq-usage"
+      }
+    ]
+  },
+  "section_highlights": [
+    {
+      "title": "Medium.com blogs",
+      "description": "Watson Text to Speech blogs on Mediuim",
+      "href": "https://medium.com/search?q=Watson+Text+to+Speech",
+      "type": "blog"
+    }
+  ],
+  "section_devtools": {
+    "api": "/apidocs/text-to-speech"
+  },
+  "section_updates": {
+    "view_more": "/docs/text-to-speech?topic=text-to-speech-release-notes"
+  }
+}
