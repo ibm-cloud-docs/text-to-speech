@@ -33,7 +33,7 @@ The service supports the following symbols for United Kingdom (UK) English.
 | U | &#650; | 028A | t**oo**k, p**u**t |
 | H | &#652; | 028C | b**u**t, m**u**g, s**o**n |
 | R | &#604;  \n   \n &#604;&#720;  \n   \n &#602;  \n   \n &#605; | 025C  \n   \n 025C+02D0  \n   \n 025A  \n   \n 025D | butt**er**, h**u**rt |
-{: caption="Table 1. Regular vowels (UK English)"}
+{: caption="Regular vowels (UK English)"}
 
 ## Diphthongs
 {: #gbDiphthongs}
@@ -43,7 +43,7 @@ The service supports the following symbols for United Kingdom (UK) English.
 | O | &#596;&#618; | 0254+026A | t**oi**l, b**oy** |
 | W | &#97;&#650; | 0061+028A | **ou**t, c**ow** |
 | Y | &#97;&#618; | 0061+026A | l**i**fe, f**i**ne |
-{: caption="Table 2. Diphthongs (UK English)"}
+{: caption="Diphthongs (UK English)"}
 
 ## Reduced vowels
 {: #gbReducedVowels}
@@ -52,7 +52,7 @@ The service supports the following symbols for United Kingdom (UK) English.
 |:----------:|:----------:|:-----------:|---------------|
 | x | &#601; | 0259 | sof**a**, **a**lone, s**u**ppose, **A**meric**a** |
 | X | i  \n   \n &#616; | 0069  \n   \n 0268 | ros**e**s, hint**e**d |
-{: caption="Table 3. Reduced vowels (UK English)"}
+{: caption="Reduced vowels (UK English)"}
 
 ## Consonants
 {: #gbConsonants}
@@ -84,4 +84,4 @@ The service supports the following symbols for United Kingdom (UK) English.
 | y | j | 006A | **y**es, Virgin**i**a |
 | z | z | 007A | **z**ip, pha**s**e |
 | Z | &#658; | 0292 | trea**s**ure, gara**g**e |
-{: caption="Table 4. Consonants (UK English)"}
+{: caption="Consonants (UK English)"}

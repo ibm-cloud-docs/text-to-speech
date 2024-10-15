@@ -32,7 +32,7 @@ The service supports the following symbols for Brazilian Portuguese.
 | 'i~' | &#105;&#771; | 0069+0303  \n 0129 | ass**im**, **in**censo |
 | 'o~' | &#111;&#771; | 006F+0303  \n 00F5 | c**ôn**sul, t**om** |
 | 'u~' | &#117;&#771; | 0075+0303  \n 0169 | alg**un**s, **um** |
-{: caption="Table 1. Regular vowels (Brazilian Portuguese)"}
+{: caption="Regular vowels (Brazilian Portuguese)"}
 
 **Note:**
 
@@ -47,7 +47,7 @@ The service supports the following symbols for Brazilian Portuguese.
 | Y | j&#771; | 006A+0303 | mã**e**, mu**i**to |
 | w | w | 0077 | me**u**, q**u**arto |
 | W | w&#771; | 0077+0303 | capitã**o**, Sã**o** |
-{: caption="Table 2. Semi-vowels (Brazilian Portuguese)"}
+{: caption="Semi-vowels (Brazilian Portuguese)"}
 
 ## Consonants
 {: #ptConsonants}
@@ -75,4 +75,4 @@ The service supports the following symbols for Brazilian Portuguese.
 | v | v | 0076 | **v**ila, bre**v**e |
 | z | z | 007A | **z**ero, ca**s**o |
 | Z | &#658; | 0292 | **g**eral, **j**ogo |
-{: caption="Table 3. Consonants (Brazilian Portuguese)"}
+{: caption="Consonants (Brazilian Portuguese)"}

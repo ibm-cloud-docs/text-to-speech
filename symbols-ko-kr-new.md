@@ -30,7 +30,7 @@ The service supports the following symbols for Korean.
 | o | o  \n ɒ  \n ɔ  \n ɤ | 006F  \n 0252  \n 0254  \n 0264 | 사고 /saɡ**o**/ |
 | u | u  \n ɷ  \n ʉ  \n ʊ | 0075  \n 0277  \n 0289  \n 028A | 수 /s**u**/ |
 | U | ɯ | 026F | 그 /k**ɯ**/ |
-{: caption="Table 1. Monophthongs (Korean)"}
+{: caption="Monophthongs (Korean)"}
 
 ## Diphthongs
 {: #koDiphthongs-new}
@@ -49,7 +49,7 @@ The service supports the following symbols for Korean.
 | we | we | 0077+0065 | 외부 /**we**bu/ |
 | wi | wi  \n ɥi  \n y | 0077+0069  \n 0265+0069  \n 0079 | 행위 /hɛŋ**wi**/ |
 | I | ɰi  \n ɯi | 0270+0069  \n 026F+0069 | 의사 /**ɰi**sa/ |
-{: caption="Table 2. Diphthongs (Korean)"}
+{: caption="Diphthongs (Korean)"}
 
 ## Consonants
 {: #koConsonants-new}
@@ -78,4 +78,4 @@ The service supports the following symbols for Korean.
 | 'tt' | t˭  \n t͈ | 0074+02ED  \n 0074+0348 | 때 /**t͈**ɛ/ |
 | w | w | 0077 | 왜 /**w**ɛ/ |
 | y | j | 006A | 야 /**j**a/ |
-{: caption="Table 3. Consonants (Korean)"}
+{: caption="Consonants (Korean)"}

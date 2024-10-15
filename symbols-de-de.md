@@ -35,7 +35,7 @@ The service supports the following symbols for German.
 | Y | &#655; | 028F | f**ü**nf, f**ü**llen, K**ü**nstler |
 | 'oe' | &#248;  \n   \n &#248;&#720; | 00F8  \n   \n 00F8+02D0 | L**ö**we, h**ö**ren, S**öh**ne |
 | 'OE' | &#339;  \n   \n &#630; | 0153  \n   \n 0276 | k**ö**nnen, h**ö**lzern, **ö**stlich |
-{: caption="Table 1. Regular vowels (German)"}
+{: caption="Regular vowels (German)"}
 
 ## Diphthongs
 {: #deDiphthongs}
@@ -45,7 +45,7 @@ The service supports the following symbols for German.
 | 'aj' | &#97;&#105;  \n   \n &#97;&#618; | 0061+0069  \n   \n 0061+026A | h**ei**m, W**ai**se, M**ai** |
 | 'aw' | &#97;&#117;  \n   \n &#97;&#650; | 0061+0075  \n   \n 0061+028A | H**au**s, M**au**l, Fr**au** |
 | 'oj' | &#596;&#105;  \n   \n &#596;&#121;  \n   \n &#596;&#618;  \n   \n &#596;&#655; | 0254+0069  \n   \n 0254+0079  \n   \n 0254+026A  \n   \n 0254+028F | h**eu**te, Geb**äu**de, H**äu**ser |
-{: caption="Table 2. Diphthongs (German)"}
+{: caption="Diphthongs (German)"}
 
 ## Nasalized vowels
 {: #deNasalizedVowels}
@@ -58,7 +58,7 @@ Nasalized vowels in German occur mostly in foreign loan words.
 | 'E~' | &#101;&#771;  \n   \n &#603;&#771; | 0065+0303  \n   \n 025B+0303 | T**ein**t |
 | 'o~' | &#111;&#771;  \n   \n &#596;&#771; | 006F+0303  \n   \n 0254+0303 | Pard**on** |
 | 'oe~' | &#248;&#771;  \n   \n &#339;&#771; | 00F8+0303  \n   \n 0153+0303 | Parf**um** |
-{: caption="Table 3. Nasalized vowels (German)"}
+{: caption="Nasalized vowels (German)"}
 
 ## Reduced vowels
 {: #deReducedVowels}
@@ -66,7 +66,7 @@ Nasalized vowels in German occur mostly in foreign loan words.
 | SPR symbol | IPA symbol | IPA Unicode | Example words |
 |:----------:|:----------:|:-----------:|---------------|
 | @ | &#601;  \n   \n &#629;  \n   \n &#600; | 0259  \n   \n 0275  \n   \n 0258 | bitt**e**, Kam**e**ra, Bod**e**n |
-{: caption="Table 4. Reduced vowels (German)"}
+{: caption="Reduced vowels (German)"}
 
 ## Consonants
 {: #deConsonants}
@@ -101,7 +101,7 @@ Nasalized vowels in German occur mostly in foreign loan words.
 | z | z | 007A | **S**ee, **S**atz, le**s**en |
 | Z | &#658; | 0292 | Gara**g**e, **G**enie |
 | ? (glottal stop) | &#660; | 0294 | **e**r**o**bern (IPA `ʔɛɐˈʔoːbɐn`)  \n **e**rinnern (IPA `ʔɛɐˈʁɪnɐn`) |
-{: caption="Table 5. Consonants (German)"}
+{: caption="Consonants (German)"}
 
 **Notes:**
 

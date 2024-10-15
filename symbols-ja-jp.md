@@ -28,7 +28,7 @@ The service supports the following symbols for Japanese. The significant symbols
 | : ^**1**^ | &#720; | 02D0 | &#12524;**&#12540;**&#12473; |
 | ^ | &#42780;  \n   \n ^ | A71C  \n   \n 005E | &#12467;&#12464;**&#42780;**&#12491;&#12486;&#12451;&#12502; |
 | '_n' | &#628;  \n   \n &#331; | 0274  \n   \n 014B | &#28288;&#26376;(&#12510;**&#12531;**&#12466;&#12484;) |
-{: caption="Table 1. Vowels and marks (Japanese)"}
+{: caption="Vowels and marks (Japanese)"}
 
 **Note:**
 
@@ -83,4 +83,4 @@ The service supports the following symbols for Japanese. The significant symbols
 | w | w  \n   \n &#624; | 0077  \n   \n 0270 | &#24746;&#12384;&#12367;&#12415;(**&#12527;**&#12523;&#12480;&#12463;&#12511;) |
 | y | j | 006A | &#38525;&#27671;(**&#12520;**&#12454;&#12461;) |
 | z | &#675;  \n   \n z | 02A3  \n   \n 007A | &#20840;&#37096;(**&#12476;**&#12531;&#12502;) |
-{: caption="Table 2. Consonants (Japanese)"}
+{: caption="Consonants (Japanese)"}

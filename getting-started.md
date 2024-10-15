@@ -29,7 +29,7 @@ The tutorial uses the `curl` command-line utility to demonstrate REST API calls.
 
 [IBM Cloud]{: tag-ibm-cloud} Watch the following video for a visual summary of getting started with the {{site.data.keyword.texttospeechshort}} service.
 
-![Getting started with the {{site.data.keyword.texttospeechshort}} service](https://video.ibm.com/embed/channel/23952663/video/text-to-speech-get-started){: video output="iframe" data-script="none" id="watsonmediaplayer" width="560" height="315" scrolling="no" allowfullscreen webkitallowfullscreen mozAllowFullScreen frameborder="0" style="border: 0 none transparent;"}
+![Getting started with the {{site.data.keyword.texttospeechshort}} service](https://video.ibm.com/embed/recorded/129353226){: video output="iframe" data-script="none" id="watsonmediaplayer" width="560" height="315" scrolling="no" allowfullscreen webkitallowfullscreen mozAllowFullScreen frameborder="0" style="border: 0 none transparent;"}
 
 ## Before you begin
 {: #getting-started-before-you-begin}
@@ -110,7 +110,7 @@ You can use a browser or other tools to play the audio files that are produced b
     {: pre}
 
 ## Use a different voice and audio format
-{: #getting-started-different audio}
+{: #getting-started-different-audio}
 {: step}
 
 The following command again uses the `POST /v1/synthesize` method to synthesize the same US English input to audio. But this request uses the voice `en-US_AllisonV3Voice` and explicitly requests audio in the default Ogg format.

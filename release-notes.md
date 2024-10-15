@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-12-13"
+  years: 2015, 2024
+lastupdated: "2024-01-14"
 
 keywords: text to speech release notes,text to speech for IBM cloud release notes
 
@@ -47,7 +47,7 @@ Supporting Latin American Spanish female expressive neural voices
 Text to Speech improvements for US English Expressive voices 
 :   When you use US English Expressive voices, the synthesis is faster with lower latency.
 
-Defect fix: Inflection issue when using the question mark (?) in short utterance
+Defect fix: Inflection issue when using the question mark (?) in a short utterance
 :   **Defect fix:** When some short utterances were ended with a question mark (?), the inflection was ignored. This issue is now fixed.
 
 ## 30 Nov 2023
@@ -64,11 +64,11 @@ Improved Text to Speech voice en-AU_HeidiExpressive
 {: #text-to-speech-19may2023}
 {: release-note}
 
-Defect fix: TTS no longer fails due to error message “[Errno 2] No such file or directory“
-:   **Defect fix:** When using TTS with websockets, it no longer fails due to error message “[Errno 2] No such file or directory“.
+Defect fix: TTS no longer fails due to the error message “[Errno 2] No such file or directory“
+:   **Defect fix:** When using TTS with websockets, it no longer fails due to the error message “[Errno 2] No such file or directory“ 
 
 ## 18 May 2023
-{: #text-to-speech-18may2023}
+{: #text-to-speech-19may2023}
 {: release-note}
 
 Defect fix: Added support for missing SSML features on the Dutch voice
@@ -82,16 +82,16 @@ Defect fix: Commas are now respected when using phoneme tags
 {: release-note}
 
 Updates to beta Netherlands Dutch enhanced neural voice
-:   **Defect fix:** The beta Netherlands Dutch `nl-NL_MerelV3Voice` was updated for internal fixes and improvements. The limitations described for the initial release of the voice in the [31 March 2023 service update](#text-to-speech-31march2023) still apply.
+:   **Defect fix:** The beta Netherlands Dutch `nl-NL_MerelV3Voice` was updated for internal fixes and improvements. The limitations that are described for the initial release of the voice in the [31 March 2023 service update](#text-to-speech-31march2023) still apply.
 
 ## 31 March 2023
 {: #text-to-speech-31march2023}
 {: release-note}
 
 Important: End of service for all neural voices
-:   **Important:** All neural voices have reached their end of service date and have been removed from the service and the documentation. *No enhanced neural or expressive neural voices are effected.* For complete list of all obsolete neural voices, see the [1 March 2023 service updates](#text-to-speech-1march2023). An attempt to use an obsolete voice returns the HTTP response code 404 with the message `Model '{voice}' not found`.
+:   **Important:** All neural voices have reached their end of service date and have been removed from the service and the documentation. *No enhanced neural or expressive neural voices are affected.* For a complete list of all obsolete neural voices, see the [1 March 2023 service updates](#text-to-speech-1march2023). An attempt to use an obsolete voice returns the HTTP response code 404 with the message `Model '{voice}' not found`.
 
-    New enhanced neural and expressive neural voices are available for the Australian English, Korean, and Netherlands Dutch languages. *You must migrate to one of the new voices for Australian English, Korean, or Netherlands Dutch to continue using the obsolete languages.*
+    New enhanced neural and expressive neural voices are available for the Australian English, Korean, and Netherlands Dutch languages. *You must migrate to one of the new voices for Australian English, Korean, or Netherlands Dutch to continue by using the obsolete languages.*
 
     For more information, see
     -   [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices)
@@ -102,9 +102,9 @@ Important: End of service for all neural voices
 {: release-note}
 
 New beta Netherlands Dutch enhanced neural voice
-:   The service now supports a new enhanced neural female voice for Netherlands Dutch: `nl-NL_MerelV3Voice`. It supports the use of both standard International Phonetic Alphabet (IPA) and {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR) phonetic symbols.
+:   The service now supports a new enhanced neural female voice for Netherlands Dutch: `nl-NL_MerelV3Voice`. It supports the use of both the standard International Phonetic Alphabet (IPA) and {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR) phonetic symbols.
 
-    The new voice is beta functionality pending completion of support for SSML. At its initial release, the voice does not support use of the following SSML-related functionality:
+    The new voice is beta functions pending completion of support for SSML. At its initial release, the voice does not support use of the following SSML-related functions:
     -   The `<prosody>` element with any speech synthesis request
     -   The `rate_percentage` and `pitch_percentage` parameters with any speech synthesis request
     -   The `<mark>` element with a WebSocket speech synthesis request
@@ -116,7 +116,7 @@ New beta Netherlands Dutch enhanced neural voice
     -   [Migrating from neural voices](/docs/text-to-speech?topic=text-to-speech-voices-migrate)
 
 Defect fix: Update Korean phonetic symbols in documentation
-:   **Defect fix:** In the documentation for Korean SPR symbols, two-character symbols for consonants are now enclosed in single quotes, making them a single symbol. Previously, they were shown as two separate symbols, without enclosing quotes. For more information, see [Consonants (Korean)](/docs/text-to-speech?topic=text-to-speech-koSymbols-new#koConsonants-new).
+:   **Defect fix:** In the documentation for Korean SPR symbols, two-character symbols for consonants are now enclosed in single quotation marks, making them a single symbol. Previously, they were shown as two separate symbols, without enclosing quotation marks. For more information, see [Consonants (Korean)](/docs/text-to-speech?topic=text-to-speech-koSymbols-new#koConsonants-new).
 
 Documentation updates for IBM SPR symbols
 :   The overview documentation for IBM SPR symbols has been updated to clarify the use of multi-character symbols. For more information, see [Speech sound symbols](/docs/text-to-speech?topic=text-to-speech-symbols#intro-SPRs-symbols)).
@@ -128,7 +128,7 @@ Documentation updates for IBM SPR symbols
 Important: Pending end of service for all neural voices
 :   **Important:** Effective **31 March 2023**, all neural voices reach their end of service date and will be removed from the service and the documentation. The neural voices have been deprecated since 31 March 2022. *No enhanced neural or expressive neural voices are effected.*
 
-    The following neural voices will be removed:
+    The following neural voices are removed:
     -   Arabic: `ar-MS_OmarVoice`
     -   Chinese (Mandarin): `zh-CN_LiNaVoice`, `zh-CN_WangWeiVoice`, and `zh-CN_ZhangJingVoice`
     -   Czech: `cs-CZ_AlenaVoice`
@@ -138,7 +138,7 @@ Important: Pending end of service for all neural voices
     -   Korean: `ko-KR_HyunjunVoice`, `ko-KR_SiWooVoice`, `ko-KR_YoungmiVoice`, and `ko-KR_YunaVoice`
     -   Swedish: `sv-SE_IngridVoice`
 
-    New enhanced neural and expressive neural voices are already available for the Australian English and Korean languages. In the coming weeks, a new enhanced neural voice will be available for the Netherlands Dutch language. *You must migrate to one of the new voices for Australian English, Korean, or Netherlands Dutch before 31 March 2023.*
+    New enhanced neural and expressive neural voices are already available for the Australian English and Korean languages. In the coming weeks, a new enhanced neural voice is available for the Netherlands Dutch language. *You must migrate to one of the new voices for Australian English, Korean, or Netherlands Dutch before 31 March 2023.*
 
     For more information, see
     -   [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices)
@@ -153,7 +153,7 @@ New Australian English expressive neural voices
     -   `en-AU_HeidiExpressive`
     -   `en-AU_JackExpressive`
 
-    Expressive neural voices offer natural-sounding speech that is exceptionally clear, crisp, and fluid. The new voices are generally available (GA) for production use. They support the use of both standard International Phonetic Alphabet (IPA) and {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR) phonetic symbols. For more information, see
+    Expressive neural voices offer natural-sounding speech that is exceptionally clear, crisp, and fluid. The new voices are generally available (GA) for production use. They support the use of both the standard International Phonetic Alphabet (IPA) and {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR) phonetic symbols. For more information, see
     -   [Expressive neural voices](/docs/text-to-speech?topic=text-to-speech-voices#language-voices-expressive)
     -   [English (Australian) symbols](/docs/text-to-speech?topic=text-to-speech-auSymbols-new)
 
@@ -161,7 +161,7 @@ New Australian English expressive neural voices
     -   [Migrating from neural voices](/docs/text-to-speech?topic=text-to-speech-voices-migrate)
 
 New Korean enhanced neural voice
-:   The service now supports a new enhanced neural female voice for Korean: `ko-KR_JinV3Voice`. The new voice is generally available (GA) for production use. It supports the use of both standard International Phonetic Alphabet (IPA) and {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR) phonetic symbols. For more information, see
+:   The service now supports a new enhanced neural female voice for Korean: `ko-KR_JinV3Voice`. The new voice is generally available (GA) for production use. It supports the use of both the standard International Phonetic Alphabet (IPA) and {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR) phonetic symbols. For more information, see
     -   [Enhanced neural voices](/docs/text-to-speech?topic=text-to-speech-voices#language-voices-enhanced-neural)
     -   [Korean symbols](/docs/text-to-speech?topic=text-to-speech-koSymbols-new)
 
@@ -169,25 +169,25 @@ New Korean enhanced neural voice
     -   [Migrating from neural voices](/docs/text-to-speech?topic=text-to-speech-voices-migrate)
 
 Defect fix: French Canadian voice now handles numeric times properly
-:   **Defect fix:** The French Canadian voices now pronounce times like `19:41` correctly. Previously, the voices were omitting elements of the time in the synthesized audio.
+:   **Defect fix:** The French and Canadian voices now pronounce times like `19:41` correctly. Previously, the voices were omitting elements of the time in the synthesized audio.
 
 Defect fix: Japanese voice no longer inserts unexpected audio
-:   **Defect fix:** The Japanese voice no longer inserts unexpected audio in speech synthesis results. Previously, additional audio was inserted in certain cases.
+:   **Defect fix:** The Japanese voice no longer inserts unexpected audio in speech synthesis results. Previously, other audio was inserted in certain cases.
 
 ## 20 January 2023
 {: #text-to-speech-20january2023}
 {: release-note}
 
 Cloud Foundry deprecation and migration to resource groups
-:   {{site.data.keyword.IBM_notm}} announced the deprecation of IBM Cloud Foundry on 31 May 2022. As of 30 November 2022, new {{site.data.keyword.IBM_notm}} Cloud Foundry applications cannot be created and only existing users are able to deploy applications. {{site.data.keyword.IBM_notm}} Cloud Foundry reaches end of support on 1 June 2023. At that time, any {{site.data.keyword.IBM_notm}} Cloud Foundry application runtime instances running {{site.data.keyword.IBM_notm}} Cloud Foundry applications will be permanently disabled, deprovisioned, and deleted. For more information about the deprecation, see [Deprecation of {{site.data.keyword.IBM_notm}} Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-deprecation).
+:   {{site.data.keyword.IBM_notm}} announced the deprecation of IBM Cloud Foundry on 31 May 2022. As of 30 November 2022, new {{site.data.keyword.IBM_notm}} Cloud Foundry applications cannot be created and only existing users are able to deploy applications. {{site.data.keyword.IBM_notm}} Cloud Foundry reaches end of support on 1 June 2023. Then, any {{site.data.keyword.IBM_notm}} Cloud Foundry application runtime instances running {{site.data.keyword.IBM_notm}} Cloud Foundry applications will be permanently disabled, deprovisioned, and deleted. For more information about the deprecation, see [Deprecation of {{site.data.keyword.IBM_notm}} Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-deprecation).
 
-    To continue to use your {{site.data.keyword.cloud_notm}} applications beyond 1 June 2023, you must migrate to resource groups before that date. Resource groups are conceptually similar to Cloud Foundry spaces. They include several extra benefits, such as finer-grained access control by using IBM Cloud Identity and Access Management (IAM), the ability to connect service instances to apps and service across different regions, and an easy way to view usage per group. For more information about migration, see [Migrating Cloud Foundry service instances and apps to a resource group](/docs/account?topic=account-migrate).
+    To continue to use your {{site.data.keyword.cloud_notm}} applications beyond 1 June 2023, you must migrate to resource groups before that date. Resource groups are conceptually similar to Cloud Foundry spaces. They include several extra benefits, such as finer-grained access control by using IBM Cloud Identity and Access Management (IAM), the ability to connect service instances to apps and services across different regions, and an easy way to view usage per group. For more information about migration, see [Migrating Cloud Foundry service instances and apps to a resource group](/docs/account?topic=account-migrate).
 
 Defect fix: Specifying large cardinal numbers with the `<say-as>` element no longer causes errors for English voices
-:   **Defect fix:** You can now use the `<say-as>` element to pronounce large numbers as cardinal numbers. Previously, enclosing a large number in the `<say-as>` element with the attribute `interpret-as="cardinal"` could cause speech synthesis to fail for English voices. For example, `<say-as interpret-as="cardinal">3,200</say-as>` could cause the service to generate an error. For more information, see [cardinal](/docs/text-to-speech?topic=text-to-speech-elements#say-as-cardinal) in the topic *SSML elements*.
+:   **Defect fix:** You can now use the `<say-as>` element to pronounce large numbers as cardinal numbers. Previously, enclosing a large number in the `<say-as>` element with the attribute `interpret-as="cardinal"` might cause speech synthesis to fail for English voices. For example, `<say-as interpret-as="cardinal">3,200</say-as>` might cause the service to generate an error. For more information, see [cardinal](/docs/text-to-speech?topic=text-to-speech-elements#say-as-cardinal) in the topic *SSML elements*.
 
 Defect fix: Homonyms and other words are now pronounced correctly by English voices
-:   **Defect fix:** The service now pronounces homonyms and other words correctly based on their context in English text that is to be synthesized. Previously, words such as `advocate` and `wifi` could be pronounced incorrectly by English voices.
+:   **Defect fix:** The service now pronounces homonyms and other words correctly based on their context in English text that is to be synthesized. Previously, words such as `advocate` and `wifi` might be pronounced incorrectly by English voices.
 
 ## 30 November 2022
 {: #text-to-speech-30november2022}
@@ -196,7 +196,7 @@ Defect fix: Homonyms and other words are now pronounced correctly by English voi
 Defect fix: Add rules for custom model naming documentation
 :   **Defect fix:** The documentation now provides detailed rules for naming custom models. For more information, see
     -   [Creating a custom model](/docs/text-to-speech?topic=text-to-speech-customModels#cuModelsCreate)
-    -   [API & SDK reference](https://{DomainName}/apidocs/text-to-speech){: external}
+    -   [API and SDK reference](https://{DomainName}/apidocs/text-to-speech){: external}
 
 ## 7 October 2022
 {: #text-to-speech-7october2022}
@@ -205,7 +205,7 @@ Defect fix: Add rules for custom model naming documentation
 The service now enforces stricter SSML validation
 :   The service now enforces stricter validation of input text that includes Speech Synthesis Markup Language (SSML) elements. Required elements of attributes must be specified with valid values. Otherwise, the request fails with a 400 error code. For more information about SSML validation and the requirements that marked-up text must meet, see [SSML validation](/docs/text-to-speech?topic=text-to-speech-ssml#ssml-errors).
 
-Defect fix: The gender listed for the `en-US_MichaelExpressive` voice is now correct
+Defect fix: The gender that is listed for the `en-US_MichaelExpressive` voice is now correct
 :   **Defect fix:** When you list information about the available voices, the `gender` of the `en-US_MichaelExpressive` voice is now `male`. Previously, the voice's gender was mistakenly described as `female`. For more information, see [Listing information about voices](/docs/text-to-speech?topic=text-to-speech-voices-list).
 
 ## 23 September 2022
@@ -219,12 +219,12 @@ New US English expressive neural voices
     -   `en-US_LisaExpressive`
     -   `en-US_MichaelExpressive`
 
-    Expressive neural voices offer natural-sounding speech that is exceptionally clear, crisp, and fluid. The new voices are generally available (GA) for production use. They support the use of both standard International Phonetic Alphabet (IPA) and {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR) phonetic symbols. For more information, see
+    Expressive neural voices offer natural-sounding speech that is exceptionally clear, crisp, and fluid. The new voices are generally available (GA) for production use. They support the use of both the standard International Phonetic Alphabet (IPA) and {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR) phonetic symbols. For more information, see
     -   [Expressive neural voices](/docs/text-to-speech?topic=text-to-speech-voices#language-voices-expressive)
     -   [English (United States) symbols](/docs/text-to-speech?topic=text-to-speech-usSymbols)
 
 New speaking styles for expressive neural voices
-:   The expressive neural voices determine the sentiment of the text from the context of its words and phrases. The speech that they produce, in addition to having a very conversational style, reflects the mood of the text. But you can embellish the voices' natural tendencies by indicating that all or some of the text is to emphasize one of the following speaking styles:
+:   The expressive neural voices determine the sentiment of the text from the context of its words and phrases. The speech that they produce, in addition to having a conversational style, reflects the mood of the text. But you can embellish the voices' natural tendencies by indicating that all or some of the text is to emphasize one of the following speaking styles:
     -   **Cheerful** - Expresses happiness and good news.
     -   **Empathetic** - Expresses empathy or sympathy.
     -   **Neutral** - Expresses objectivity and evenness.
@@ -233,10 +233,10 @@ New speaking styles for expressive neural voices
     For more information, see [Using speaking styles](/docs/text-to-speech?topic=text-to-speech-synthesis-expressive#syntheses-expressive-styles).
 
 New interjection emphasis with expressive neural voices
-:   With expressive neural voices, the service automatically detects a set of common interjections based on context. When it synthesizes these interjections, it gives them the natural emphasis that a human would use in normal conversation. For some of the interjections, you can use SSML to enable or disable their emphasis. For more information, see [Emphasizing interjections](/docs/text-to-speech?topic=text-to-speech-synthesis-expressive#emphasizing-interjections).
+:   With expressive neural voices, the service automatically detects a set of common interjections based on context. When it synthesizes these interjections, it gives them the natural emphasis that a human would use in normal conversation. For some of the interjections, you can use SSML to enable or disable their emphasis. For more information, see [Emphasizing interjections](/docs/text-to-speech?topic=text-to-speech-synthesis-expressive#syntheses-expressive-interjections).
 
-New word emphais with expressive neural voices
-:   The expressive voices use a conversational style that naturally applies the correct intonation from context. But you can indicate that one or more words are to be given more or less emphasis. The change in stress can be indicated by an increase or decrease in pitch, timing, volume, or other acoustic attributes. For more information, see [Emphasizing words](/docs/text-to-speech?topic=text-to-speech-synthesis-expressive#emphasizing-words).
+New word emphasis with expressive neural voices
+:   The expressive voices use a conversational style that naturally applies the correct intonation from context. But you can indicate that one or more words are to be given more or less emphasis. The change in stress can be indicated by an increase or decrease in pitch, timing, volume, or other acoustic attributes. For more information, see [Emphasizing words](/docs/text-to-speech?topic=text-to-speech-synthesis-expressive#syntheses-expressive-word-emphasis).
 
 ## 21 September 2022
 {: #text-to-speech-21september2022}
@@ -246,13 +246,13 @@ New Activity Tracker event for GDPR deletion of user information
 :   The service now returns an Activity Tracker event when you use the `DELETE /v1/user_data` method to delete all information about a user. The event is named `text-to-speech.gdpr-user-data.delete`. For more information, see [Activity Tracker events](/docs/text-to-speech?topic=text-to-speech-at-events).
 
 Defect fix: Custom word translations now accept commas in all cases
-:   **Defect fix:** Word translations added to custom models now accept commas in all cases. Previously, a comma in a translation could occasionally cause the translation to fail to generate valid audio when used for speech syntheses. This problem was identified in US English custom models.
+:   **Defect fix:** Word translations added to custom models now accept commas in all cases. Previously, a comma in a translation might occasionally cause the translation to fail to generate valid audio when used for speech syntheses. This problem was identified in US English custom models.
 
 Defect fix: French synthesis of dates is now consistent
 :   **Defect fix:** French synthesis no longer includes the article "le" before dates of the form "the *ordinal* of *month*." Previously, the article was included only for the first day of the month for French (for example, "the first of September," "le premier septembre").
 
-Known limitation with using the Ogg audio format with the Safari browser
-:   By default, the service returns audio in the Ogg audio format with the Opus codec (`audio/ogg;codecs=opus`). However, the Ogg audio format is not supported with the Safari browser. If you are using the the {{site.data.keyword.texttospeechshort}} service with the Safari browser, you must specify a different format in which you want the service to return the audio.
+Known limitations with using the Ogg audio format with the Safari browser
+:   By default, the service returns audio in the Ogg audio format with the Opus codec (`audio/ogg;codecs=opus`). However, the Ogg audio format is not supported by the Safari browser. If you are using the {{site.data.keyword.texttospeechshort}} service with the Safari browser, you must specify a different format in which you want the service to return the audio.
     -   For more information about the available formats, see [Supported audio formats](/docs/text-to-speech?topic=text-to-speech-audio-formats#formats-supported).
     -   For more information about specifying a format, see [Specifying an audio format](/docs/text-to-speech?topic=text-to-speech-audio-formats#formats-specify).
 
@@ -267,7 +267,7 @@ New beta `pitch_percentage` query parameter for controlling the global speaking 
 :   The service offers a new `pitch_percentage` query parameter to modify the speaking pitch for a synthesis request. The speaking pitch represents the tone of the speech that the service synthesizes. It represents how high or low the tone of the voice is perceived by the listener. A higher pitch results in speech that is spoken at a higher tone and is perceived as a higher voice; a lower pitch results in speech that is spoken in a lower tone and is perceived as a lower voice. The parameter changes the per-voice default pitch for an entire request. For more information, see [Modifying the speaking pitch](/docs/text-to-speech?topic=text-to-speech-synthesis-params#params-pitch-percentage).
 
 Defect fix: Japanese synthesis is improved to handle long strings of input text
-:   **Defect fix:** The service now correctly synthesizes Japanese requests that include long strings of characters. Previously, the service failed to properly synthesize very long strings of Japanese text.
+:   **Defect fix:** The service now correctly synthesizes Japanese requests that include long strings of characters. Previously, the service failed to properly synthesize long strings of Japanese text.
 
 Documentation updates for the SSML `<prosody>` element
 :   The documentation for the SSML `<prosody>` element and its `pitch` and `rate` parameters has been improved and clarified. It also now includes a description of the differences between the service and the latest version of the SSML specification. For more information, see [The `<prosody>` element](/docs/text-to-speech?topic=text-to-speech-elements#prosody_element).
@@ -277,7 +277,7 @@ Documentation updates for the SSML `<prosody>` element
 {: release-note}
 
 The service does not support multilingual speech synthesis
-:   The service does not support multilingual speech synthesis at this time. However, you can use customization to approximate the pronunciation of words from other languages. For more information, see [Multilingual speech synthesis](/docs/text-to-speech?topic=text-to-speech-voices-use#synthesis-multilingual).
+:   The service does not support multilingual speech synthesis currently. However, you can use customization to approximate the pronunciation of words from other languages. For more information, see [Multilingual speech synthesis](/docs/text-to-speech?topic=text-to-speech-voices-use#synthesis-multilingual).
 
 ## 27 July 2022
 {: #text-to-speech-27july2022}
@@ -318,15 +318,15 @@ Important: Deprecation of all neural voices
     -   Swedish: `sv-SE_IngridVoice`
 
     The deprecated neural voices continue to be available to existing users but are no longer available to new users:
-    -   *Existing users:* Instances of the service created before *31 March 2022* can continue to use the deprecated voices for speech synthesis. The instances can also be used create and work with custom models that are based on the deprecated voices. And they can continue to list and query the voices with the `GET /v1/voices` and `GET /v1/voices/{voice}` methods.
-    -   *New users:* Instances of the service created on or after *31 March 2022* cannot use the deprecated voices for speech synthesis. The instances also cannot be used create custom models that are based on the deprecated voices. And they cannot list or query the voices with the `GET /v1/voices` and `GET /v1/voices/{voice}` methods. Any API call that includes one of the deprecated voices returns an HTTP error code of 400 or 404, depending on the call.
+    -   *Existing users:* Instances of the service created before *31 March 2022* can continue to use the deprecated voices for speech synthesis. The instances can also be used to create and work with custom models that are based on the deprecated voices. And they can continue to list and query the voices with the `GET /v1/voices` and `GET /v1/voices/{voice}` methods.
+    -   *New users:* Instances of the service that is created on or after *31 March 2022* cannot use the deprecated voices for speech synthesis. The instances also cannot be used to create custom models that are based on the deprecated voices. And they cannot list or query the voices with the `GET /v1/voices` and `GET /v1/voices/{voice}` methods. Any API call that includes one of the deprecated voices returns an HTTP error code of 400 or 404, depending on the call.
 
     New voices for Australian English, Dutch, and Korean will be released by 15 February 2023. If you are using Australian English, Dutch, or Korean voices, your API calls will automatically redirect to the new voices in that language. Voices in Arabic, Chinese, Czech, Swedish, and Flemish will be removed from service.
 
     For more information about all available languages and voices, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
 
 Deprecated standard voices are removed from the documentation
-:   The standard concatenative voices were deprecated on [2 December 2020](#text-to-speech-2december2020). These standard voices have now been removed from the API reference. The topic *Migrating from standard to neural voices* has also been removed from the page [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
+:   The standard concatenating voices were deprecated on [2 December 2020](#text-to-speech-2december2020). These standard voices have now been removed from the API reference. The topic *Migrating from standard to neural voices* has also been removed from the page [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
 
     Similarly, the former name of the Arabic voice, `ar-AR_OmarVoice`, was deprecated at the same time. It too has been removed from the documentation. Use the voice `ar-MS_OmarVoice` instead.
 
@@ -335,7 +335,7 @@ Deprecated standard voices are removed from the documentation
 {: release-note}
 
 Change to word timing response for WebSocket interface
-:   The response object that the service sends when you request word timings with the WebSocket interface has changed. The service now sends word timing results in a single array that includes a string followed by two floats:
+:   The response object that the service sends when you request word timings with the WebSocket interface have changed. The service now sends word timing results in a single array that includes a string followed by two floats:
 
     ```json
     {
@@ -361,7 +361,7 @@ Change to word timing response for WebSocket interface
 
     Also, the level of precision for word timings and marks is now reduced to three decimal places. For more information about the new responses, see [Generating word timings](/docs/text-to-speech?topic=text-to-speech-timing).
 
-    **Note:** Results for enhanced neural and neural voices were different previously. These inconsistencies could cause errors for the {{site.data.keyword.watson}} SDKs. The results for all voices are now consistent.
+    **Note:** Results for enhanced neural and neural voices were different previously. These inconsistencies might cause errors for the {{site.data.keyword.watson}} SDKs. The results for all voices are now consistent.
 
 ## 26 January 2022
 {: #text-to-speech-26january2022}
@@ -385,7 +385,7 @@ New Belgian Dutch neural voice: `nl-BE_BramVoice`
 Defect fix: Improve SSML and speech synthesis
 :   **Defect fix:**  The following defects for the Speech Synthesis Markup Language (SSML) and speech synthesis were fixed with this release:
 
-    -   The `pitch` attribute of the `<prosody>` element is now applied to all specified text. Previously, the pitch change was not always applied to the first word of the affected text. Also, the documentation now includes additional guidance about specifying a `pitch` value. For more information, see [The `pitch` attribute](/docs/text-to-speech?topic=text-to-speech-elements#prosody-pitch).
+    -   The `pitch` attribute of the `<prosody>` element is now applied to all specified text. Previously, the pitch change was not always applied to the first word of the affected text. Also, the documentation now includes more guidance about specifying a `pitch` value. For more information, see [The `pitch` attribute](/docs/text-to-speech?topic=text-to-speech-elements#prosody-pitch).
     -   Speech synthesis of Japanese text now speaks the audio more slowly. Previously, the synthesized speech was being spoken too quickly. If you find that synthesis of Japanese text is still spoken too quickly for your application, use the `rate` attribute of the SSML `<prosody>` element to control the rate of speech. For more information, see [The `rate` attribute](/docs/text-to-speech?topic=text-to-speech-elements#prosody-rate).
     -   Neural voices now parse the escaped apostrophe character (`&apos;`) properly. Previously, some neural voices were not interpreting the character properly.
 
@@ -417,7 +417,7 @@ Defect fix: Improve Latin American Spanish enhanced neural voice
 {: release-note}
 
 Defect fix: Improve Castilian Spanish and North American Spanish enhanced neural voices
-:   **Defect fix:** For the Castilian Spanish (`es-ES_EnriqueV3Voice` and `es-ES_LauraV3Voice`) and North American Spanish (`es-US_SofiaV3Voice`) voices, questions of all types now use the correct intonation. For the Latin American Spanish voice (`es-LA_SofiaV3Voice`), some questions do not use the correct intonation and sound instead like statements. The Latin American Spanish voice will be fixed soon.
+:   **Defect fix:** For the Castilian Spanish (`es-ES_EnriqueV3Voice` and `es-ES_LauraV3Voice`) and North American Spanish (`es-US_SofiaV3Voice`) voices, questions of all types now use the correct intonation. For the Latin American Spanish voice (`es-LA_SofiaV3Voice`), some questions do not use the correct intonation and sound instead like statements. The Latin American Spanish voice is fixed soon.
 
 ## 16 July 2021
 {: #text-to-speech-16july2021}
@@ -436,7 +436,7 @@ New Canadian French enhanced neural voice: `fr-CA_LouiseV3Voice`
     -   For more information about the phonetic symbols and Unicode values that are available for the Canadian French language, see [French (Canadian) symbols](/docs/text-to-speech?topic=text-to-speech-caSymbols).
 
 New Tune by Example feature
-:   The new Tune by Example feature lets you control how specified text is spoken by the service. The feature is beta functionality that is supported only for US English custom models and voices. It has two components:
+:   The new Tune by Example feature lets you control how specified text is spoken by the service. The feature is beta functions that is supported only for US English custom models and voices. It has two components:
     -   *Custom prompts* include the written text that is to be spoken and recorded audio that speaks the text as you want to hear it. The audio specifies the intonation, cadence, and stress of the synthesized text. The prompt can emphasize different syllables or words, introduce pauses, and generally make the synthesized audio sound more natural and appropriate for its context.
     -   *Speaker models* provide enrollment audio for a user who speaks one or more prompts. A speaker model provides an audio sample of a user's voice. The service trains itself on the voice, which can help it to produce higher-quality prompts for that speaker.
 
@@ -452,7 +452,7 @@ New Tune by Example feature
     -   [Managing speaker models](/docs/text-to-speech?topic=text-to-speech-tbe-speaker-models)
 
 New Tune be Example methods
-:   The service includes eight new methods for working with the Tune by Example feature. The descriptions of the new methods that follow provide links to their entries in the API & SDK reference. You might need to select the `Curl` tab of the reference to see the new methods.
+:   The service includes eight new methods for working with the Tune by Example feature. The descriptions of the new methods that follow provide links to their entries in the API and SDK reference. You might need to select the `Curl` tab of the reference to see the new methods.
 
     -   The service includes four methods for working with custom prompts:
 
@@ -496,15 +496,15 @@ Updates to Activity Tracker actions for customization
 {: release-note}
 
 Multiple voice improvements
-:   The voices offered by the service have undergone significant change. The service supports new languages and voices, has improved the quality of many voices, and has deprecated many older voices. In addition, all of the service's voices are now customizable and generally available (GA) for production use.
+:   The voices that are offered by the service have undergone significant change. The service supports new languages and voices, has improved the quality of many voices, and has deprecated many older voices. In addition, all of the services voices are now customizable and generally available (GA) for production use.
 
 New neural and enhanced neural voices
 :   To optimize the overall quality of voice synthesis, all available voices are now based on neural technology. The service offers two types of voices that are based on neural technology:
 
     -   *Neural voices*, which do *not* include the string `V3` in their names, are now available for Arabic, Australian English, Chinese, Netherlands Dutch, and Korean. Neural voices support the use of the International Phonetic Alphabet (IPA) with the Speech Synthesis Markup Language (SSML) `<phoneme>` element.
-    -   *Enhanced neural voices*, which include the string `V3` in their names, are now available for Brazilian Portuguese, United Kingdom and United States English, French, German, Italian, Japanese, and Spanish (all dialects). Enhanced neural voices support the use of both IPA and {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR) with the SSML `<phoneme>` element. Enhanced neural voices also achieve a slightly higher degree of natural-sounding speech. And further customization capabilities will be exposed for enhanced neural voices in the coming months.
+    -   *Enhanced neural voices*, which include the string `V3` in their names, are now available for Brazilian Portuguese, United Kingdom and United States English, French, German, Italian, Japanese, and Spanish (all dialects). Enhanced neural voices support the use of both IPA and {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR) with the SSML `<phoneme>` element. Enhanced neural voices also achieve a slightly higher degree of natural-sounding speech. And further customization capabilities are exposed for enhanced neural voices in the coming months.
 
-    The service no longer offers standard voices for any language. Standard voices used concatenative synthesis to assemble segments of recorded speech to generate the requested audio.
+    The service no longer offers standard voices for any language. Standard voices used concatenating synthesis to assemble segments of recorded speech to generate the requested audio.
 
     For more information, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
 
@@ -515,7 +515,7 @@ New Australian English and Korean neural voices
     -   The service now supports two new Korean neural voices: `ko-KR_HyunjunVoice` and `ko-KR_SiWooVoice`.
 
 Improved neural voices
-:   The voices for the existing Arabic, Chinese, Netherlands Dutch, and Korean languages, all of which were concatenative, are now neural:
+:   The voices for the existing Arabic, Chinese, Netherlands Dutch, and Korean languages, all of which were concatenating, are now neural:
 
     -   `ar-MS_OmarVoice`
     -   `ko-KR_YoungmiVoice`
@@ -526,17 +526,17 @@ Improved neural voices
     -   `zh-CN_WangWeiVoice`
     -   `zh-CN_ZhangJingVoice`
 
-    The following additional changes have also been made:
+    The following other changes have also been made:
 
     -   The Arabic voice is now named `ar-MS_OmarVoice`. The former name, `ar-AR_OmarVoice`, is deprecated. It will continue to function for at least one year but might be removed at a future date. You are encouraged to migrate to the new name at your earliest convenience.
     -   The Arabic language now supports the use of IPA symbols and Unicode values with the SSML `<phoneme>` element. To create a custom model for Arabic, you must use the language identifier `ar-MS`. The identifier `ar-AR` is not supported for customization.
-    -   The IPA symbols for the Arabic language are new. The previously documented symbols have been completely replaced.
+    -   The IPA symbols for the Arabic language are new. The previously documented symbols have been replaced.
     -   The IPA symbols for the Netherlands Dutch language have been changed as follows:
         -   Netherlands Dutch no longer supports the following IPA symbols: `tʲ` (`0074+02B2`), `ɲ` (`0272`), `ʦ` (`02A6`), and `ʔ` (`0294`).
         -   Netherlands Dutch now supports the following IPA symbol: `ɣ` (`0263`).
 
 Deprecated standard voices
-:   The following standard concatenative voices are now deprecated:
+:   The following standard concatenating voices are now deprecated:
 
     -   `de-DE_BirgitVoice`
     -   `de-DE_DieterVoice`
@@ -560,7 +560,7 @@ Deprecated standard voices
     If you omit the optional `voice` parameter from a speech synthesis request, the service uses `en-US_MichaelV3Voice` by default. This neural voice replaces the now-deprecated `en-US_MichaelVoice` standard voice that was the previous default.
 
 Deprecated features
-:   The following features were available only for standard concatenative voices. They are deprecated and have been removed from the published documentation. They will continue to function for at least one year but might be removed at a future date. You are encouraged to remove these features from your applications and to migrate to neural voices at your earliest convenience.
+:   The following features were available only for standard concatenating voices. They are deprecated and have been removed from the published documentation. They will continue to function for at least one year but might be removed at a future date. You are encouraged to remove these features from your applications and to migrate to neural voices at your earliest convenience.
 
     -   *Expressive SSML.* This was an IBM extension to SSML that was supported only for the `en-US_AllisonVoice` voice.
     -   *Voice transformation SSML.* This was an IBM extension to SSML that was supported only for the `en-US_AllisonVoice`, `en-US_LisaVoice`, and `en-US_MichaelVoice` voices.
@@ -569,7 +569,7 @@ Deprecated features
     Including these SSML elements with a synthesis request for a neural voice generates an HTTP 400 response code because the request fails SSML validation. For more information about SSML validation, see [SSML validation](/docs/text-to-speech?topic=text-to-speech-ssml#ssml-errors).
 
 New support for Cross-Origin Resource Sharing
-:   Cross-Origin Resource Sharing (CORS) support is now available for all voices from the Google Chrome™ and Apple® Safari browsers. It is *not* available from the Mozilla Firefox™ browser for voices in the following languages: Arabic, Australian English, Chinese, Netherlands Dutch, and Korean. For more information, see [Leveraging CORS support](/docs/text-to-speech?topic=text-to-speech-service-features#features-cors).
+:   Cross-Origin Resource Sharing (CORS) support is now available for all voices from the Google Chrome™ and Apple® Safari browsers. It is *not* available from the Mozilla Firefox™ browser for voices in the following languages: Arabic, Australian English, Chinese, Netherlands Dutch, and Korean. For more information, see [using CORS support](/docs/text-to-speech?topic=text-to-speech-data-security#data-security-cors).
 
 ## 10 September 2020
 {: #text-to-speech-10september2020}
@@ -598,8 +598,8 @@ Defect fix: Improve Japanese voice
 {: #text-to-speech-4september2020}
 {: release-note}
 
-Customization interface is now generally available
-:   The customization interface is now generally available (GA). Customization is no longer beta functionality. You can use the customization interface to specify how the service pronounces unusual words that occur in your input text by creating language-specific custom dictionaries. It can be used with all generally available and beta voices. For more information, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
+A customization interface is now generally available
+:   The customization interface is now generally available (GA). Customization is no longer beta functions. You can use the customization interface to specify how the service pronounces unusual words that occur in your input text by creating language-specific custom dictionaries. It can be used with all generally available and beta voices. For more information, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
 
 ## 24 June 2020
 {: #text-to-speech-24june2020}
@@ -621,7 +621,7 @@ Support for SSML `digits` attribute of `<say-as>` element for Japanese
 
 New Korean standard voices: `ko-KR_YoungmiVoice` and `ko-KR_YunaVoice`
 :   The service now supports two standard female Korean voices: `ko-KR_YoungmiVoice` and `ko-KR_YunaVoice`. The following information applies to both Korean voices:
-    -   The voices are beta functionality. They might not be ready for production use and are subject to change. They are initial offerings that are expected to improve in quality with time and usage.
+    -   The voices are beta functions. They might not be ready for production use and are subject to change. They are initial offerings that are expected to improve in quality with time and usage.
     -   The voices support customization and the `/v1/pronunciation` method.
     -   The voices support the `<mark>` element and the `timings` parameter that are available with the WebSocket interface.
     -   The voices support all Speech Synthesis Markup Language (SSML) elements except for expressive SSML and voice transformation SSML.
@@ -673,7 +673,7 @@ New standard Arabic, Chinese, and Netherlands Dutch voices
 
     The following information applies to these new standard voices:
 
-    -   The new voices are beta functionality. The voices might not be ready for production use and are subject to change. They are initial offerings that are expected to improve in quality with time and usage.
+    -   The new voices are beta functions. The voices might not be ready for production use and are subject to change. They are initial offerings that are expected to improve in quality with time and usage.
     -   The voices do not support the `<mark>` element and `timings` parameter that are available with the WebSocket interface.
     -   The voices do not support customization or the `/v1/pronunciation` method.
     -   The voices do not support expressive SSML or voice transformation SSML.
@@ -698,7 +698,7 @@ Full support for {{site.data.keyword.cloud_notm}} IAM
 
         `wss://api.us-south.text-to-speech.watson.cloud.ibm.com/instances/6bbda3b3-d572-45e1-8c54-22d6ed9e52c2`
 
-    For more information about the URLs, see the [API & SDK reference](https://{DomainName}/apidocs/text-to-speech/text-to-speech#service-endpoint){: external}.
+    For more information about the URLs, see the [API and SDK reference](https://{DomainName}/apidocs/text-to-speech/text-to-speech#service-endpoint){: external}.
 
     These URLs do not constitute a breaking change. The new URLs work for both your existing service instances and for new instances. The original URLs continue to work on your existing service instances for at least one year, until December 2020.
 
@@ -723,7 +723,7 @@ New Seoul location now available
 {: release-note}
 
 New US HIPAA support for Premium plans in Washington, DC, location
-:   US HIPAA support is available for Premium plans that are hosted in the Washington, DC, location and are created on or after 1 April 2019. For more information, see [US Health Insurance Portability and Accountability Act (HIPAA)](/docs/text-to-speech?topic=text-to-speech-information-security#hipaa).
+:   US HIPAA support is available for Premium plans that are hosted in the Washington, DC, location, and are created on or after 1 April 2019. For more information, see [US Health Insurance Portability and Accountability Act (HIPAA)](/docs/text-to-speech?topic=text-to-speech-information-security#hipaa).
 
 ## 22 August 2019
 {: #text-to-speech-22august2019}
@@ -745,7 +745,7 @@ New Japanese neural voice: `ja-JP_EmiV3Voice`
 
 New support for standard and neural voices
 :   The service now offers two versions of most of its available voices:
-    -   *Standard voices* that use concatenative synthesis to assemble segments of recorded speech to generate audio. Standard voices do not include a version string in their name (for example, `en-US_AllisonVoice`).
+    -   *Standard voices* that use concatenating synthesis to assemble segments of recorded speech to generate audio. Standard voices do not include a version string in their name (for example, `en-US_AllisonVoice`).
     -   *Neural voices* that use Deep Neural Networks (DNNs) to predict the acoustic (spectral) features of the speech. Neural voices include a version string (`V3`) in their name (for example, `en-US_AllisonV3Voice`).
 
     Neural versions are available for all standard voices except for the `ja-JP_EmiVoice` voice, which is pending and will be available soon. You cannot use the SSML `<express-as>` and `<voice-transformation>` elements with the neural voices, and you cannot use the `volume` attribute of the `<prosody>` element with the neural voices. For more information about all available voices, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
@@ -868,7 +868,7 @@ New features for applications hosted in Sydney location
 {: release-note}
 
 Changes to `audio/l16` audio format
-:   For the `audio/l16` format, you can now optionally specify the endianness of the audio that is returned. (You must already specify the sampling rate.) Examples are `audio/l16;rate=22050;endianness=big-endian` and `audio/l16;rate=22050;endianness=little-endian`; the default is big endian. For more information, see [Using audio formats](/docs/text-to-speech?topic=text-to-speech-audio-formats).
+:   For the `audio/l16` format, you can now optionally specify the endianness of the audio that is returned. (You must already specify the sampling rate.) Examples are `audio/l16;rate=22050;endianness=big-endian` and `audio/l16;rate=22050;endianness=little-endian`; the default is significant endian. For more information, see [Using audio formats](/docs/text-to-speech?topic=text-to-speech-audio-formats).
 
 ## 14 July 2017
 {: #text-to-speech-14july2017}
@@ -885,7 +885,7 @@ New support for Web Media (WebM) audio format
 :   The service now supports the Web Media (WebM) audio format with the Opus or Vorbis codec. The service now also supports the Ogg audio format with the Vorbis codec in addition to the Opus codec. For more information about supported audio formats, see [Using audio formats](/docs/text-to-speech?topic=text-to-speech-audio-formats).
 
 New support for Cross-Origin Resource Sharing
-:   The service now supports Cross-Origin Resource Sharing (CORS) to allow browser-based clients to call the service directly. For more information, see [Leveraging CORS support](/docs/text-to-speech?topic=text-to-speech-service-features#features-cors).
+:   The service now supports Cross-Origin Resource Sharing (CORS) to allow browser-based clients to call the service directly. For more information, see [using CORS support](/docs/text-to-speech?topic=text-to-speech-data-security#data-security-cors).
 
 Changes to successful HTTP response codes
 :   The HTTP response codes for successful completion of some methods of the customization interface changed:
@@ -929,7 +929,7 @@ Changes to customization for Japanese
 {: #text-to-speech-22september2016}
 {: release-note}
 
-Customization now available for all languages
+Customization is now available for all languages
 :   The customization interface, which includes the customization and `GET /v1/pronunciation` methods, is now available for all languages that are supported by the service. The interface remains a beta release. For more information, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro).
 
 New Japanese support for SSML
@@ -942,7 +942,7 @@ Word timings now available with WebSocket interface
 :   The service can now return word timing information for all strings of the input text that you pass to the WebSocket interface. To receive the start and end time of every string in the input, specify an array that includes the string `words` for the optional `timings` parameter of the JSON object that you pass to the service. The feature is not currently available for Japanese input text. For more information, see [Generating word timings](/docs/text-to-speech?topic=text-to-speech-timing).
 
 New support for SSML validation
-:   The service now validates all SSML elements that you submit in any context. If it finds an invalid tag, the service reports an HTTP 400 response code with a descriptive message, and the method fails. In previous releases, the service handled errors inconsistently; specifying an invalid word pronunciation, for example, could lead to unpredictable or inconsistent behavior. For more information, see [SSML validation](/docs/text-to-speech?topic=text-to-speech-ssml#ssml-errors).
+:   The service now validates all SSML elements that you submit in any context. If it finds an invalid tag, the service reports an HTTP 400 response code with a descriptive message, and the method fails. In previous releases, the service handled errors inconsistently; specifying an invalid word pronunciation, for example, might lead to unpredictable or inconsistent behavior. For more information, see [SSML validation](/docs/text-to-speech?topic=text-to-speech-ssml#ssml-errors).
 
 IBM SPR format now specified with `ibm` instead of `spr`
 :   The use of `spr` is deprecated as an argument to the `format` option of the `GET /v1/pronunciation` method and for use with the `alphabet` attribute of an SSML `<phoneme>` element. To use {{site.data.keyword.IBM_notm}} SPR notation, use the `ibm` argument instead of `spr` in all cases.
@@ -975,7 +975,7 @@ Voices updated for improved speech synthesis
     -   `fr-FR_ReneeVoice`
 
 New customization ID parameter for word pronunciation
-:   The `GET /v1/pronunciation` method now accepts an optional `customization_id` query parameter. The parameter obtains a word translation from a specified custom model. If the custom model does not contain the word, the method returns the word's default pronunciation. For more information, see the [API & SDK reference](https://{DomainName}/apidocs/text-to-speech){: external}.
+:   The `GET /v1/pronunciation` method now accepts an optional `customization_id` query parameter. The parameter obtains a word translation from a specified custom model. If the custom model does not contain the word, the method returns the word's default pronunciation. For more information, see the [API and SDK reference](https://{DomainName}/apidocs/text-to-speech){: external}.
 
     When using the `GET /v1/pronunciation` method without a customization ID and for a language other than US English, you can request a word's pronunciation only in {{site.data.keyword.IBM_notm}} SPR notation. For a language other than US English, you must specify `spr` with the method's `format` option.
 
@@ -1013,13 +1013,13 @@ New expressive SSML feature
 {: release-note}
 
 New beta customization interface
-:   The service offers a new customization interface that you can use to specify how it pronounces unusual words that occur in your input. The interface includes a number of new methods that you can use to create and manage custom models and the word/translation pairs that they contain. You can then use your custom models when synthesizing text to audio.
+:   The service offers a new customization interface that you can use to specify how it pronounces unusual words that occur in your input. The interface includes some new methods that you can use to create and manage custom models and the word/translation pairs that they contain. You can then use your custom models when synthesizing text to audio.
 
     The service supports sounds-like translations and phonetic translations. Phonetic translations can use either the standard International Phonetic Alphabet (IPA) representation or the proprietary {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR). You use SSML to specify phonetic translations.
 
     The customization interface includes a collection of new HTTP methods that have the names `POST /v1/customizations`, `POST /v1/customizations/{customization_id}`, `POST /v1/customizations/{customization_id}/words`, and `PUT /v1/customizations/{customization_id}/words/{word}`. The service also provides a new `GET /v1/pronunciation` method that returns the pronunciation for any word and a new `GET /v1/voices/{voice}` method that returns detailed information about a specific voice. In addition, existing methods of the service's interface now accept custom model parameters as needed.
 
-    For more information about customization and its interface, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro) and the [API & SDK reference](https://{DomainName}/apidocs/text-to-speech){: external}.
+    For more information about customization and its interface, see [Understanding customization](/docs/text-to-speech?topic=text-to-speech-customIntro) and the [API and SDK reference](https://{DomainName}/apidocs/text-to-speech){: external}.
 
     The customization interface is a beta release that currently supports US English only. All customization methods and the `GET /v1/pronunciation` method can currently be used to create and manipulate custom models and word translations only in US English.
 
@@ -1035,7 +1035,7 @@ New mobile SDKs available
     -   The *{{site.data.keyword.watson}} Swift SDK* is available from the [swift-sdk repository](https://github.com/watson-developer-cloud/swift-sdk){: external} in the `watson-developer-cloud` namespace on GitHub.
     -   The *{{site.data.keyword.watson}} Speech Android™ SDK* is available from the [speech-android-sdk repository](https://github.com/watson-developer-cloud/speech-android-sdk){: external} in the `watson-developer-cloud` namespace on GitHub.
 
-    Both SDKs support authenticating with the speech services by using either your {{site.data.keyword.cloud_notm}} service credentials or an authentication token. Because the SDKs are beta functionality, they are subject to change in the future.
+    Both SDKs support authenticating with the speech services by using either your {{site.data.keyword.cloud_notm}} service credentials or an authentication token. Because the SDKs are beta functions, they are subject to change in the future.
 
 New Japanese voice: `ja-JP_EmiVoice`
 :   The service supports a new language, Japanese. The voice `ja-JP_EmiVoice` is a Japanese female voice.
@@ -1045,7 +1045,7 @@ New Japanese voice: `ja-JP_EmiVoice`
 {: release-note}
 
 The {{site.data.keyword.texttospeechshort}} service is now generally available
-:   The service moved from beta to general availability (GA) on 1 July 2015. The following differences existed between the beta and GA versions of the {{site.data.keyword.texttospeechshort}} API. The GA release requires that users upgrade to the new version of the service.
+:   The service moved from beta to general availability (GA) on 1 July 2015. The following differences that are existed between the beta and GA versions of the {{site.data.keyword.texttospeechshort}} API. The GA release requires that users upgrade to the new version of the service.
 
 New token-based programming model
 :   A new programming model supports direct interaction between a client and the service. By using this model, a client can obtain an authentication token for communicating directly with the service. By using the token, the client can bypass the need for a server-side proxy application in {{site.data.keyword.cloud_notm}} to call the service on its behalf. Tokens are the preferred means for clients to interact with the service.
@@ -1058,7 +1058,7 @@ New support for the Speech Synthesis Markup Language
     The service initially supports the use of SSML only for the UK and US English, French, and German languages. The service does not support SSML for use with Italian and Spanish. When you use SSML, make sure that you do not select a voice for the audio in one of the unsupported languages. Results in this case are not meaningful.
 
 Changes to available voices
-:   The voices that are supported for synthesized speech changed and expanded. The service now supports a number of additional voices, languages, and dialects with the `/v1/synthesize` methods. For more information about supported voices, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
+:   The voices that are supported for synthesized speech that is changed and expanded. The service now supports several other voices, languages, and dialects with the `/v1/synthesize` methods. For more information about supported voices, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
 
     The three voices that were available at beta are renamed for GA:
     -   `VoiceEnUsMichael` is now `en-US_MichaelVoice`

@@ -29,7 +29,7 @@ The WebSocket interface accepts identical input and produces identical results a
 -   For more information about obtaining word timings, see [Generating word timings](/docs/text-to-speech?topic=text-to-speech-timing).
 -   For more information about the WebSocket interface and its parameters, see the [API & SDK reference](https://{DomainName}/apidocs/text-to-speech){: external}.
 
-The snippets of example code that follow are written in JavaScript and are based on the HTML5 WebSocket API. For more information about the WebSocket protocol, see the Internet Engineering Task Force (IETF) [Request for Comment (RFC) 6455](https://tools.ietf.org/html/rfc6455){: external}.
+The snippets of example code that follow are written in JavaScript and are based on the HTML5 WebSocket API. For more information about the WebSocket protocol, see the Internet Engineering Task Force (IETF) [Request for Comment (RFC) 6455](https://datatracker.ietf.org/doc/html/rfc6455){: external}.
 {: note}
 
 ## Open a connection
@@ -197,7 +197,7 @@ The service can send the following return codes to the client over the WebSocket
 -   `1009` indicates that the frame size exceeded the 4 MB limit.
 -   `1011` indicates that the service is terminating the connection because it encountered an unexpected condition that prevents it from fulfilling the request, such as an invalid argument. The return code can also indicate that the input text was too large.
 
-If the socket closes with an error, the service sends the client an informative message of the form `{"error": "Specific error message"}` before closing. The service can also send non-fatal warning messages for unknown parameters. For more information about WebSocket return codes, see the Internet Engineering Task Force (IETF) [Request for Comments (RFC) 6455](https://tools.ietf.org/html/rfc6455){: external}.
+If the socket closes with an error, the service sends the client an informative message of the form `{"error": "Specific error message"}` before closing. The service can also send non-fatal warning messages for unknown parameters. For more information about WebSocket return codes, see the Internet Engineering Task Force (IETF) [Request for Comments (RFC) 6455](https://datatracker.ietf.org/doc/html/rfc6455){: external}.
 
 The WebSocket implementations of the SDKs can return different or additional response codes.
 {: note}

@@ -18,7 +18,7 @@ The expressive neural voices that are available with the {{site.data.keyword.tex
 
 The features involve the use of elements of the Speech Synthesis Markup Language (SSML). The descriptions of the features provide information about how they interact with related SSML elements and attributes.
 
-### Using speaking styles
+## Using speaking styles
 {: #syntheses-expressive-styles}
 
 The expressive neural voices determine the sentiment of the text from the context of its words and phrases. The speech that they produce, in addition to having a very conversational style, reflects the mood of the text. The expressive voices naturally express gratitude, thankfulness, happiness, empathy, confusion, and other sentiments by default, with no explicit additional tagging.
@@ -89,7 +89,7 @@ curl -X POST \
 ```
 {: pre}
 
-### Emphasizing interjections
+## Emphasizing interjections
 {: #syntheses-expressive-interjections}
 
 When you use expressive neural voices, the service automatically detects a number of common interjections based on context. In the resulting audio, it gives them the natural emphasis that a human would use in normal conversation. Expressive voices support a different set of interjections based on language. Please refer to the language specific pages for more details on which interjections are supported.
@@ -147,7 +147,7 @@ Table 3 provides examples of each available `level` for the `emphasis` element. 
 | `moderate` | `"I am going to <emphasis level='moderate'>give</emphasis> her the book."` | ![Emphasis: moderate](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-emphasis/michael-emphasis-moderate.wav){: audio controls} |
 | `strong` | `"I am going to <emphasis level='strong'>give</emphasis> her the book."` | ![Emphasis: strong](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-emphasis/michael-emphasis-strong.wav){: audio controls} |
 | `reduced` | `"I <emphasis level='reduced'>am going to give</emphasis> her the book."` | ![Emphasis: reduced](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-emphasis/michael-emphasis-reduced.wav){: audio controls} |
-{: caption="Table 3. Emphasizing words"}
+{: caption="Emphasizing words"}
 
 ### Emphasizing a word with SSML
 {: #syntheses-expressive-word-emphasis-example}

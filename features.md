@@ -111,12 +111,12 @@ The expressive neural voices determine the sentiment of the text from the contex
 ### Emphasizing interjections
 {: #features-synthesis-expressive-interjections}
 
-When you use expressive neural voices, the service automatically detects a collection of common interjections based on context. When it synthesizes these interjections, it gives them the natural emphasis that a human would use in normal conversation. For some of the interjections, you can use SSML to enable or disable their emphasis. For more information, see [Emphasizing interjections](/docs/text-to-speech?topic=text-to-speech-synthesis-expressive#emphasizing-interjections).
+When you use expressive neural voices, the service automatically detects a collection of common interjections based on context. When it synthesizes these interjections, it gives them the natural emphasis that a human would use in normal conversation. For some of the interjections, you can use SSML to enable or disable their emphasis. For more information, see [Emphasizing interjections](/docs/text-to-speech?topic=text-to-speech-synthesis-expressive#syntheses-expressive-interjections).
 
 ### Emphasizing words
 {: #features-synthesis-expressive-words}
 
-The expressive voices use a conversational style that naturally applies the correct intonation from context. But you can indicate that one or more words are to be given more or less emphasis. The change in stress can be indicated by an increase or decrease in pitch, timing, volume, or other acoustic attributes. For more information, see [Emphasizing words](/docs/text-to-speech?topic=text-to-speech-synthesis-expressive#emphasizing-words).
+The expressive voices use a conversational style that naturally applies the correct intonation from context. But you can indicate that one or more words are to be given more or less emphasis. The change in stress can be indicated by an increase or decrease in pitch, timing, volume, or other acoustic attributes. For more information, see [Emphasizing words](/docs/text-to-speech?topic=text-to-speech-synthesis-expressive#syntheses-expressive-word-emphasis).
 
 ## Customizing the service
 {: #features-customization}

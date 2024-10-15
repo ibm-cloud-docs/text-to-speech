@@ -79,7 +79,7 @@ The names of the actions for the customization events have changed. The old name
 | `text-to-speech.custom-model.create` | Create a custom model (`POST /v1/customizations`).                                           |
 | `text-to-speech.custom-model-word-list.create` | Create a word list for a custom model (`POST /v1/customizations/{customization_id}/words`).  |
 | `text-to-speech.custom-model-word.create` | Create a word for a custom model (`PUT /v1/customizations/{customization_id}/words/{word}`). |
-{: caption="Table 1. Customization .create actions that generate events"}
+{: caption="Customization .create actions that generate events"}
 
 ### Read events
 {: #at-events-custom-read}
@@ -90,7 +90,7 @@ The names of the actions for the customization events have changed. The old name
 | `text-to-speech.custom-model.read` | Read a custom model (`GET /v1/customizations/{customization_id}`).                         |
 | `text-to-speech.custom-model-word-list.read` | Read a word list for a custom model (`GET /v1/customizations/{customization_id}/words`). |
 | `text-to-speech.custom-model-word.read` | Read a word for a custom model (`GET /v1/customizations/{customization_id}/words/{word}`). |
-{: caption="Table 2. Customization .read actions that generate events"}
+{: caption="Customization .read actions that generate events"}
 
 ### Update event
 {: #at-events-custom-update}
@@ -98,7 +98,7 @@ The names of the actions for the customization events have changed. The old name
 | Action | Description |
 |--------|-------------|
 | `text-to-speech.custom-model.update` | Update a custom model (`POST /v1/customizations/{customization_id}`). |
-{: caption="Table 3. Customization .update action that generates an event"}
+{: caption="Customization .update action that generates an event"}
 
 ### Delete events
 {: #at-events-custom-delete}
@@ -107,7 +107,7 @@ The names of the actions for the customization events have changed. The old name
 |--------|-------------|
 | `text-to-speech.custom-model.delete` | Delete a custom model (`DELETE /v1/customizations/{customization_id}`).                          |
 | `text-to-speech.custom-model-word.delete` | Delete a word from a custom model (`DELETE /v1/customizations/{customization_id}/words/{word}`). |
-{: caption="Table 4. Customization .delete actions that generate events"}
+{: caption="Customization .delete actions that generate events"}
 
 ## Tune by Example events
 {: #at-events-tbe}
@@ -121,7 +121,7 @@ The following tables list the {{site.data.keyword.texttospeechshort}} actions fo
 |--------|-------------|
 | `text-to-speech.speaker.create` | Create a speaker (`POST /v1/speakers/{speaker_name}`). |
 | `text-to-speech.custom-model-prompt.create` | Create a prompt for a custom model (`POST /v1/customizations/{customization_id}/prompts/{prompt_id}`). |
-{: caption="Table 5. Tune by Example .create actions that generate events"}
+{: caption="Tune by Example .create actions that generate events"}
 
 ### Read events
 {: #at-events-tbe-read}
@@ -132,7 +132,7 @@ The following tables list the {{site.data.keyword.texttospeechshort}} actions fo
 | `text-to-speech.speaker-prompt-list.read` | Read a list of prompts for a speaker (`GET /v1/speakers/{speaker_id}`). |
 | `text-to-speech.custom-model-prompt-list.read` | Read a list of prompts for a custom model (`GET /v1/customizations/{customization_id}/prompts`). |
 | `text-to-speech.custom-model-prompt.read` | Read a prompt for a custom model (`GET /v1/customizations/{customization_id}/prompts/{prompt_id}`). |
-{: caption="Table 6. Tune by Example .read actions that generate events"}
+{: caption="Tune by Example .read actions that generate events"}
 
 ### Delete events
 {: #at-events-tbe-delete}
@@ -141,7 +141,7 @@ The following tables list the {{site.data.keyword.texttospeechshort}} actions fo
 |--------|-------------|
 | `text-to-speech.speaker.delete` | Delete a speaker (`DELETE /v1/speakers/{speaker_id}`). |
 | `text-to-speech.custom-model-prompt.delete` | Delete a prompt from a custom model (`DELETE /v1/customizations/{customization_id}/prompts/{prompt_id}`). |
-{: caption="Table 7. Tune by Example .delete actions that generate events"}
+{: caption="Tune by Example .delete actions that generate events"}
 
 ## GDPR event
 {: #at-events-gdpr}
@@ -151,7 +151,7 @@ The following table lists the {{site.data.keyword.texttospeechshort}} action for
 | Action | Description |
 |--------|-------------|
 | `text-to-speech.gdpr-user-data.delete` | Delete information for a user (`DELETE /v1/user_data`). |
-{: caption="Table 8. GDPR .delete action that generates an event"}
+{: caption="GDPR .delete action that generates an event"}
 
 ## Where to view events
 {: #at-ui}

@@ -29,7 +29,7 @@ The service supported the following symbols for the obsolete neural voices for K
 | &#248; | 00F8 | **&#50808;**&#44397; |
 | &#652; | 028C | **&#50612;**&#47672;&#45768; |
 | &#623; | 026F | **&#46300;**&#46356;&#50612; |
-{: caption="Table 1. Monophthongs (Korean)"}
+{: caption="Monophthongs (Korean)"}
 
 ## Diphthongs
 {: #koDiphthongs}
@@ -48,7 +48,7 @@ The service supported the following symbols for the obsolete neural voices for K
 | w&#603; | 0077+025B | **&#50780;** |
 | w&#652; | 0077+028C | **&#50892;**&#45229; |
 | &#623;i | 026F+0069 | **&#51032;**&#49324; |
-{: caption="Table 2. Diphthongs (Korean)"}
+{: caption="Diphthongs (Korean)"}
 
 ## Onset consonants
 {: #koOnsetConsonants}
@@ -74,7 +74,7 @@ The service supported the following symbols for the obsolete neural voices for K
 | n | 006E | **&#45208;**&#47924; |
 | l | 006C | **&#46972;**&#47732; |
 | r | 0072 | &#44256;**&#47532;** |
-{: caption="Table 3. Onset consonants (Korean)"}
+{: caption="Onset consonants (Korean)"}
 
 ## Double onset consonants
 {: #koDoubleOnsetConsonants}
@@ -86,7 +86,7 @@ The service supported the following symbols for the obsolete neural voices for K
 | &#680;&#680; | 02AB+02AB | **&#52040;**&#44984;&#48120; |
 | gg | 0067+0067 | **&#44844;**&#47560; |
 | ss | 0073+0073 | **&#49912;**&#50880; |
-{: caption="Table 4. Double onset consonants (Korean)"}
+{: caption="Double onset consonants (Korean)"}
 
 ## Coda consonants
 {: #koCodaConsonants}
@@ -100,4 +100,4 @@ The service supported the following symbols for the obsolete neural voices for K
 | n | 006E | **&#49552;** |
 | &#331; | 014B | **&#51109;**&#44592; |
 | l | 006C | **&#45216;**&#44060; |
-{: caption="Table 5. Coda consonants (Korean)"}
+{: caption="Coda consonants (Korean)"}

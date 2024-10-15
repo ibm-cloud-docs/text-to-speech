@@ -33,7 +33,7 @@ The service supports the following symbols for Australian (AU) English.
 | U | &#650; | 028A | t**oo**k, p**u**t |
 | H | &#652; | 028C | b**u**t, m**u**g, s**o**n |
 | R | &#604;  \n   \n &#604;&#720;  \n   \n &#602;  \n   \n &#605; | 025C  \n   \n 025C+02D0  \n   \n 025A  \n   \n 025D | butt**er**, h**u**rt |
-{: caption="Table 1. Regular vowels (AU English)"}
+{: caption="Regular vowels (AU English)"}
 
 ## Diphthongs
 {: #auDiphthongs-new}
@@ -46,7 +46,7 @@ The service supports the following symbols for Australian (AU) English.
 | Ex | eɪ  \n  \n æɪ | 0065+026A  \n  \n 00E6+026A | sq**ua**re, b**a**red |
 | Ix | ɪə | 026A+0259 | n**ea**r, h**e**re |
 | Ux | ʊə | 028A+0259 | t**ou**r, l**u**red |
-{: caption="Table 2. Diphthongs (AU English)"}
+{: caption="Diphthongs (AU English)"}
 
 ## Reduced vowels
 {: #auReducedVowels-new}
@@ -55,7 +55,7 @@ The service supports the following symbols for Australian (AU) English.
 |:----------:|:----------:|:-----------:|---------------|
 | x | &#601; | 0259 | sof**a**, **a**lone, s**u**ppose, **A**meric**a** |
 | X | i  \n   \n &#616; | 0069  \n   \n 0268 | ros**e**s, hint**e**d |
-{: caption="Table 3. Reduced vowels (AU English)"}
+{: caption="Reduced vowels (AU English)"}
 
 ## Consonants
 {: #auConsonants-new}
@@ -87,4 +87,4 @@ The service supports the following symbols for Australian (AU) English.
 | y | j | 006A | **y**es, Virgin**i**a |
 | z | z | 007A | **z**ip, pha**s**e |
 | Z | &#658; | 0292 | trea**s**ure, gara**g**e |
-{: caption="Table 4. Consonants (AU English)"}
+{: caption="Consonants (AU English)"}

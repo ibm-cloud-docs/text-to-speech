@@ -27,7 +27,7 @@ The service supports the following symbols for Italian.
 | o | o | 006F | padr**o**ne, att**o**re |
 | c | &#596; | 0254 | c**o**sta, m**o**sse |
 | u | u | 0075 | l**u**na, **u**fficio |
-{: caption="Table 1. Regular vowels (Italian)"}
+{: caption="Regular vowels (Italian)"}
 
 ## Consonants
 {: #itConsonants}
@@ -58,7 +58,7 @@ The service supports the following symbols for Italian.
 | w | w | 0077 | n**u**ovo, q**u**ando |
 | y | j | 006A | **i**eri, raso**i**o |
 | z | z | 007A | pae**s**e, **s**baglio |
-{: caption="Table 2. Consonants (Italian)"}
+{: caption="Consonants (Italian)"}
 
 ## Geminates
 {: #itGeminates}
@@ -69,7 +69,7 @@ The service supports the following symbols for Italian.
 | DD | d&#675;  \n   \n ddz | 0064+02A3  \n   \n 0064+0064+007A | a**zz**urro, me**zz**o |
 | JJ | dd&#658;  \n   \n d&#676; | 0064+0064+0292  \n   \n 0064+02A4 | Chio**gg**ia, ma**gg**io |
 | TT | tts  \n   \n t&#678; | 0074+0074+0073  \n   \n 0074+02A6 | ta**zz**a, chia**zz**a |
-{: caption="Table 3. Geminates (Italian)"}
+{: caption="Geminates (Italian)"}
 
 ## Allophones
 {: #itAllophones}
@@ -80,7 +80,7 @@ If an allophone is not used in SPR, the {{site.data.keyword.texttospeechshort}} 
 |:----------:|:----------:|:-----------:|---------------|
 | 'ng' ^**1**^ | &#331;g | 014B+0067  \n 014B+0261 | a**ng**olo, lu**ng**o |
 | 'nk' ^**1**^ | &#331;k | 014B+006B | a**nc**ora, bia**nc**o |
-{: caption="Table 4. Allophones (Italian)"}
+{: caption="Allophones (Italian)"}
 
 **Note:**
 

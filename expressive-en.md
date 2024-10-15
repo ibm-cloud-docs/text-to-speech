@@ -26,7 +26,7 @@ Table 1 provides examples of each available `style` for the `<express-as>` eleme
 |  | `"<express-as style='neutral'>A five-alarm fire early this morning claimed the lives of more than a dozen residents.</express-as>"` | ![Speaking style: neutral](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-styles/emma-neutral.wav){: audio controls} |
 | `uncertain` | `"That&apos;s strange. Hmm, I don&apos;t know if I&apos;ve seen this before."` | ![Speaking style: default uncertain](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-styles/emma-uncertain-default.wav){: audio controls} |
 |  | `"<express-as style='uncertain'>That&apos;s strange. Hmm, I don&apos;t know if I&apos;ve seen this before.</express-as>"` | ![Speaking style: uncertain](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-styles/emma-uncertain.wav){: audio controls} |
-{: caption="Table 1. Speaking styles"}
+{: caption="Speaking styles"}
 
 ## Emphasizing interjections
 {: #syntheses-expressive-interjections-en}
@@ -44,7 +44,7 @@ Table 2 lists the interjections that the service recognizes and provides example
 | `uh` | `"Uh, let me check."` | ![Interjection: Uh](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-interjections/allison-interjection-uh.wav){: audio controls} |
 | `uh-huh` | `"Uh-huh, that&apos;s right."` | ![Interjection: Uh-huh](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-interjections/allison-interjection-uh-huh.wav){: audio controls} |
 | `um` | `"That&apos;s, um, not quite right."` | ![Interjection: Um](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-interjections/allison-interjection-um.wav){: audio controls} |
-{: caption="Table 2. Interjections that are emphasized"}
+{: caption="Interjections that are emphasized"}
 
 ### Enabling or disabling interjections with SSML
 {: #syntheses-expressive-interjections-ssml-en}

@@ -32,7 +32,7 @@ The service supports the following symbols for United States (US) English.
 | U | &#650;  \n   \n &#623; | 028A  \n   \n 026F | t**oo**k, p**u**t |
 | H | &#652; | 028C | b**u**t, m**u**g, s**o**n |
 | R | &#601;&#734;  \n   \n &#602;  \n   \n &#604;&#720;  \n   \n &#605; | 0259+02DE  \n   \n 025A  \n   \n 025C+02D0  \n   \n 025D | butt**er**, h**ur**t |
-{: caption="Table 1. Regular vowels (US English)"}
+{: caption="Regular vowels (US English)"}
 
 ## Diphthongs
 {: #usDiphthongs}
@@ -42,7 +42,7 @@ The service supports the following symbols for United States (US) English.
 | O | &#596;&#618; | 0254+026A | t**oi**l, b**oy** |
 | W | &#97;&#650; | 0061+028A | **ou**t, c**ow** |
 | Y | &#97;&#618; | 0061+026A | l**i**fe, f**i**ne |
-{: caption="Table 2. Diphthongs (US English)"}
+{: caption="Diphthongs (US English)"}
 
 ## Reduced vowels
 {: #usReducedVowels}
@@ -51,7 +51,7 @@ The service supports the following symbols for United States (US) English.
 |:----------:|:----------:|:-----------:|---------------|
 | x | &#601; | 0259 | sof**a**, **a**lone, s**u**ppose, tedi**ou**s, **A**meric**a** |
 | X | &#616;  \n   \n &#305; | 0268  \n   \n 0131 | ros**e**s, c**o**nnect, mel**o**dy, symph**o**ny, hint**e**d |
-{: caption="Table 3. Reduced vowels (US English)"}
+{: caption="Reduced vowels (US English)"}
 
 ## Consonants
 {: #usConsonants}
@@ -86,4 +86,4 @@ The service supports the following symbols for United States (US) English.
 | z | z | 007A | **z**ip, pha**s**e |
 | Z | &#658; | 0292 | trea**s**ure, gara**g**e |
 | ? (glottal stop) | &#660; | 0294 | ki**tt**en, La**t**in |
-{: caption="Table 4. Consonants (US English)"}
+{: caption="Consonants (US English)"}

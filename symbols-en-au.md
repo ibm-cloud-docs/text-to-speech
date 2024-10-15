@@ -29,7 +29,7 @@ The service supported the following symbols for the obsolete neural voices for A
 | u | 0075 | infl**u**enza |
 | &#652; | 028C | r**u**n |
 | &#601; | 0259 | **a**bout |
-{: caption="Table 1. Monophthongs (Australian English)"}
+{: caption="Monophthongs (Australian English)"}
 
 ## Diphthongs
 {: #auDiphthongs}
@@ -44,7 +44,7 @@ The service supported the following symbols for the obsolete neural voices for A
 | e&#601;  \n   \n &#603;&#601; | 0065+0259  \n   \n Not available | st**ai**rs |
 | I&#601; | 026A+0259 | f**ea**r |
 | &#650;&#601; | 028A+0259 | c**u**re |
-{: caption="Table 2. Diphthongs (Australian English)"}
+{: caption="Diphthongs (Australian English)"}
 
 ## Long vowels
 {: #auLongVowels}
@@ -56,7 +56,7 @@ The service supported the following symbols for the obsolete neural voices for A
 | &#596;: | 0254+02D0 | l**aw** |
 | u: | 0075+02D0 | s**oo**n |
 | &#604;: | 025C+02D0 | b**ir**d |
-{: caption="Table 3. Long vowels (Australian English)"}
+{: caption="Long vowels (Australian English)"}
 
 ## Consonants
 {: #auConsonants}
@@ -92,4 +92,4 @@ The service supported the following symbols for the obsolete neural voices for A
 | &#633;  \n   \n &#635;  \n   \n r | 0279  \n   \n Not available  \n   \n Not available | **wr**ong |
 | j | 006A | **y**es |
 | w | 0077 | **w**e |
-{: caption="Table 4. Consonants (Australian English)"}
+{: caption="Consonants (Australian English)"}

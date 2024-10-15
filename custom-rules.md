@@ -166,4 +166,4 @@ The following table lists the parts of speech that are supported for Japanese cu
 | `Stto` | *Settoji* | Prefix |
 | `Stzo` | *Setsuzokushi* | Conjunction |
 | `Suji` | *Suuji* | Numeral |
-{: caption="Table 1. Japanese parts of speech"}
+{: caption="Japanese parts of speech"}
