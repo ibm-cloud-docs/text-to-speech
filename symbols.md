@@ -65,18 +65,13 @@ Also consider the following when defining a word's pronunciation in SPR format:
 ## Working with IPA
 {: #intro-ipa}
 
-You can define IPA pronunciations by using phonetic symbols or Unicode values. The following are examples of valid IPA notations for the word *tomato* in phonetic symbols and Unicode:
+You can define IPA pronunciations by using phonetic symbols or Unicode values. IPA is an industry standard notation. The following are examples of valid IPA notations for the word *tomato* in phonetic symbols and Unicode:
 
 ```xml
 <phoneme alphabet="ipa" ph="təˈmeɪ.ɾoʊ">tomato</phoneme>
 <phoneme alphabet="ipa" ph="t&#x0259;&#x02C8;me&#x026A;.&#x027E;o&#x028A;">tomato</phoneme>
 ```
 {: codeblock}
-
-IPA is an industry standard notation. For more information, see the following pages:
-
--   For more information about IPA, see [International Phonetic Alphabet](https://en.wikipedia.org/wiki/International_Phonetic_Alphabet){: external}.
--   For more information about phonetic symbols for Unicode, see [Phonetic symbols in Unicode](https://en.m.wikipedia.org/wiki/Phonetic_symbols_in_Unicode){: external}.
 
 ## Specifying syllables
 {: #syllables}
