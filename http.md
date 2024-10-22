@@ -38,7 +38,7 @@ The two versions of the `/v1/synthesize` method have the following parameters in
     The Ogg audio format is not supported with the Safari browser. If you are using the the {{site.data.keyword.texttospeechshort}} service with the Safari browser, you must specify a different format in which you want the service to return the audio.
     {: important}
 
-`voice` (query parameter, *optional* string
+`voice` (query parameter, *optional* string)
 :   Specifies the voice in which the text is to be spoken in the audio. Use the `/v1/voices` method to get the current list of supported voices. Omit the parameter to use the default voice. For more information, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices) and [Using the default voice](/docs/text-to-speech?topic=text-to-speech-voices-use#specify-voice-default).
 
 `customization_id` (query parameter, *optional* string)

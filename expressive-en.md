@@ -14,6 +14,8 @@ subcollection: text-to-speech
 {: #expressive-english}
 
 ## Speaking styles
+{: #speaking-styles-en}
+
 Table 1 provides examples of each available `style` for the `<express-as>` element. To demonstrate the effect of the styles, the table provides two samples for each example. The first sample speaks the text with the default `en-US_EmmaExpressive` voice. The second sample speaks the same text with the same voice but with the indicated style. A request that uses the `<express-as>` element fails if the `style` is not one of the supported values or is omitted from the element.
 
 | Style | Example input text | Audio sample |
@@ -48,6 +50,7 @@ Table 2 lists the interjections that the service recognizes and provides example
 
 ### Enabling or disabling interjections with SSML
 {: #syntheses-expressive-interjections-ssml-en}
+
 For English, it is possible to enable/disable the following interjections using SSML - `aha` and `oh`.
 
 ### Usage notes for interjections

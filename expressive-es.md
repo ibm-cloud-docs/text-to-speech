@@ -14,6 +14,8 @@ subcollection: text-to-speech
 {: #expressive-spanish}
 
 ## Speaking styles
+{: #speaking-styles-spanish}
+
 Table 1 provides examples of each available `style` for the `<express-as>` element for Spanish. To demonstrate the effect of the styles, the table provides two samples for each example. The first sample speaks the text with the default `es-LA_DanielaExpressive` voice. The second sample speaks the same text with the same voice but with the indicated style. A request that uses the `<express-as>` element fails if the `style` is not one of the supported values or is omitted from the element.
 
 | Style | Example input text | Audio sample |
@@ -46,6 +48,7 @@ Table 2 lists the interjections that the service recognizes and provides example
 
 ### Enabling or disabling interjections with SSML
 {: #syntheses-expressive-interjections-ssml-es}
+
 For Spanish, all interjections are enabled by default, and it is not possible to enable/disable these interjections.
 
 ### Usage notes for interjections

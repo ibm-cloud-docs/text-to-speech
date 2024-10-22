@@ -21,7 +21,7 @@ To make the best use of the service, you need to understand the sampling rate of
 ## Sampling rate
 {: #formats-rate}
 
-The sampling rate (or sampling frequency) is the number of samples that are generated per second for the audio. Sampling rate is measured in Hertz (Hz) or kilohertz (kHz). For example, a rate of 16,000 samples per second is equal to 16,000 Hz (or 16 kHz). For more information about sampling rates, see [Sampling (signal processing)](https://en.wikipedia.org/wiki/Sampling_(signal_processing)){: external}.
+The sampling rate (or sampling frequency) is the number of samples that are generated per second for the audio. Sampling rate is measured in Hertz (Hz) or kilohertz (kHz). For example, a rate of 16,000 samples per second is equal to 16,000 Hz (or 16 kHz).
 
 Internally, the service always synthesizes audio with a sampling rate of 22,050 Hz. For many formats, the service also returns audio with this sampling rate. For other formats, the service returns audio with a different sampling rate.
 
@@ -73,8 +73,6 @@ As shown in the *Audio formats* column for those formats that accept a `codecs` 
 Due to the streaming nature of the returned audio, the A-law audio that is generated might not work in all audio players. Specifically, the attribute `numSamples` in the header of the audio stream is set to `0` regardless of the length of the audio.
 {: note}
 
-For more information, see [A-law algorithm](https://en.m.wikipedia.org/wiki/A-law_algorithm){: external}.
-
 ### audio/basic format
 {: #audio-basic}
 
@@ -90,8 +88,6 @@ For more information, see
 
 *Free Lossless Audio Codec (FLAC)* (`.flac`) is a lossless compressed audio coding format. You can optionally specify a sampling rate other than the default 22,050 Hz.
 
-For more information, see [FLAC](https://en.m.wikipedia.org/wiki/FLAC){: external}.
-
 ### audio/l16 format
 {: #audio-l16}
 
@@ -104,25 +100,17 @@ You can optionally specify the endianness for the audio by using the `endianness
 
 For example, specify `audio/l16;rate=16000;endianness=big-endian` to obtain audio that is sampled at 16 kHz and returned in big-endian order. If you omit the endianness, the default is little-endian. (Specifying the endianness is an issue only for the `audio/l16` format, which does not include a header. Endianness is not a concern for the other formats.)
 
-For more information, see
-
--   IETF [Request for Comment (RFC) 2586](https://datatracker.ietf.org/doc/html/rfc2586){: external}
--   [Pulse-code modulation](https://en.m.wikipedia.org/wiki/Pulse-code_modulation){: external}
--   [Endianness](https://en.m.wikipedia.org/wiki/Endianness){: external}
+For more information, see IETF [Request for Comment (RFC) 2586](https://datatracker.ietf.org/doc/html/rfc2586){: external}.
 
 ### audio/mp3 and audio/mpeg formats
 {: #audio-mp3}
 
 *MP3* or *Motion Picture Experts Group (MPEG)* is a lossy data compression format (MP3 and MPEG refer to the same format). You can optionally specify a sampling rate other than the default 22,050 Hz.
 
-For more information, see [MP3](https://en.wikipedia.org/wiki/MP3){: external}.
-
 ### audio/mulaw format
 {: #audio-mulaw}
 
 *8-bit mu-law (or u-law) audio* is a single-channel, lossy audio format that is encoded by using 8-bit mu-law data. You must specify the sampling rate with this audio format. For example, specify `audio/mulaw;rate=16000` for audio that is sampled at 16 kHz.
-
-For more information, see [M-law algorithm](https://en.wikipedia.org/wiki/M-law_algorithm){: external}.
 
 ### audio/ogg format
 {: #audio-ogg}
@@ -142,10 +130,8 @@ For more information, see
 
 -   [xiph.org/ogg](https://www.xiph.org/ogg/){: external}
 -   [xiph.org/vorbis](https://xiph.org/vorbis/){: external}
--   [Vorbis](https://en.wikipedia.org/wiki/Vorbis){: external}
 -   [opus-codec.org](https://www.opus-codec.org/){: external}
 -   IETF [Request for Comments (RFC) 7845](https://datatracker.ietf.org/doc/html/rfc7845){: external}
--   [Opus (audio format)](https://en.wikipedia.org/wiki/Opus_(audio_format)){: external} (look especially at the *Containers* section)
 
 ### audio/wav format
 {: #audio-wav}
@@ -154,8 +140,6 @@ For more information, see
 
 Due to the streaming nature of the returned audio, the WAV audio that is generated might not work in all audio players. Specifically, the attribute `numSamples` in the header of the audio stream is set to `0` regardless of the length of the audio.
 {: note}
-
-For more information, see [WAV](https://en.wikipedia.org/wiki/WAV){: external}.
 
 ### audio/webm format
 {: #audio-webm}
@@ -171,8 +155,6 @@ For more information, see
 
 -   [webmproject.org](https://www.webmproject.org/){: external}
 -   [opus-codec.org](https://www.opus-codec.org/){: external}
--   [Opus (audio format)](https://en.wikipedia.org/wiki/Opus_(audio_format)){: external} (look especially at the *Containers* section)
--   [Vorbis](https://en.wikipedia.org/wiki/Vorbis){: external}
 
 ## Specifying an audio format
 {: #formats-specify}

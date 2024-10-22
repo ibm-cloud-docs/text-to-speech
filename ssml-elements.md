@@ -244,10 +244,10 @@ For more information about the features supported by SSML version 1.1, refer to 
 
 The `pitch` attribute modifies the baseline pitch, or tone, for the text within the element. Accepted values are
 
--   _A number followed by the `Hz` (Hertz) designation:_ The baseline pitch is transposed (up or down) to the specified value. For example, `150Hz`.
--   _A relative change in percent:_ A number that causes a relative shift from the default baseline. The number is preceded by `+` (an increase) or `-` (a decrease) and followed by a `%` (percent sign). An unsigned number that is followed by a `%` is interpreted as a positive increase. For example, `+10%` or `10%`. The default pitch for a voice is equivalent to passing a value of `0%`.
--   _A relative change in semitones:_ A number that causes an absolute shift from the default baseline. The number is preceded by `+` (an increase) or `-` (a decrease) and followed by `st` (semitones). An unsigned number followed by `st` is interpreted as a positive increase. For example, `+5st` or `5st`.
--   _A keyword:_ One of the following six keywords, which modify the pitch to the corresponding predefined values:
+-   *A number followed by the `Hz` (Hertz) designation:* The baseline pitch is transposed (up or down) to the specified value. For example, `150Hz`.
+-   *A relative change in percent:* A number that causes a relative shift from the default baseline. The number is preceded by `+` (an increase) or `-` (a decrease) and followed by a `%` (percent sign). An unsigned number that is followed by a `%` is interpreted as a positive increase. For example, `+10%` or `10%`. The default pitch for a voice is equivalent to passing a value of `0%`.
+-   *A relative change in semitones:* A number that causes an absolute shift from the default baseline. The number is preceded by `+` (an increase) or `-` (a decrease) and followed by `st` (semitones). An unsigned number followed by `st` is interpreted as a positive increase. For example, `+5st` or `5st`.
+-   *A keyword:* One of the following six keywords, which modify the pitch to the corresponding predefined values:
     -   `default` uses the service's default baseline pitch.
     -   `x-low` shifts the pitch baseline down by 12 semitones.
     -   `low` shifts the pitch baseline down by six semitones.
@@ -277,9 +277,9 @@ The best way to determine what works for your application is to make adjustments
 
 The `rate` attribute indicates a change in the speaking rate for the text within the element. Accepted values are
 
--   _A number with no unit designation:_ The rate is changed to the specified number of words per minute. For example, a value of `50` indicates a speaking rate of 50 words per minute. The number is absolute; you cannot specify a relative increase or decrease in words per minute.
--   _A relative change in percent:_ A number that causes a relative shift from the default speaking rate. The number is preceded by `+` (an increase) or `-` (a decrease) and followed by a `%` (percent sign). An unsigned number that is followed by a `%` is interpreted as a positive increase. For example, `+10%` or `10%`. The default speaking rate for a voice is equivalent to passing a value of `0%`.
--   _A keyword:_ One of the following six keywords, which modify the speaking rate to the corresponding predefined values:
+-   *A number with no unit designation:* The rate is changed to the specified number of words per minute. For example, a value of `50` indicates a speaking rate of 50 words per minute. The number is absolute; you cannot specify a relative increase or decrease in words per minute.
+-   *A relative change in percent:* A number that causes a relative shift from the default speaking rate. The number is preceded by `+` (an increase) or `-` (a decrease) and followed by a `%` (percent sign). An unsigned number that is followed by a `%` is interpreted as a positive increase. For example, `+10%` or `10%`. The default speaking rate for a voice is equivalent to passing a value of `0%`.
+-   *A keyword:* One of the following six keywords, which modify the speaking rate to the corresponding predefined values:
     -   `default` uses the service's default speaking rate.
     -   `x-slow` decreases the rate by 50 percent.
     -   `slow` decreases the rate by 25 percent.
