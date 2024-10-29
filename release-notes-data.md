@@ -724,7 +724,7 @@ Version 4.0.5 is now available
 :   {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} version 4.0.5 is now available. This version supports {{site.data.keyword.icp4dfull_notm}} version 4.x and Red Hat OpenShift versions 4.6 and 4.8. For more information about installing and managing the service, see [Installing {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.0?topic=speech-installing-watson-text){: external}.
 
 Important: Additional step for performing a mirrored installation of Minio datastore
-:   **Important:** These steps are no longer needed if you install case package 4.0.6. For more information, see [28 January 2022 (Version 4.0.5)](#text-to-speech-data-28january2022).
+:   **Important:** These steps are no longer needed if you install case package 4.0.6. For more information, see [31 January 2022 (Version 4.0.5)](#text-to-speech-data-31january2022).
 
     If you are performing a mirrored installation (for example, in an air-gapped environment), you need to perform an additional step *before* completing either of the following steps:
 

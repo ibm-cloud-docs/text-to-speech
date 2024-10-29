@@ -27,7 +27,7 @@ A custom model can also include custom prompts that you define for the Tune by E
 The following status and support information applies to customization:
 
 -   Customization is available for all languages.
--   [IBM Cloud]{: tag-ibm-cloud} You must have the Standard or Premium pricing plan to use customization. Users of the Lite plan cannot use the customization interface. For more information, see the {{site.data.keyword.texttospeechshort}} service in the [{{site.data.keyword.cloud}} Catalog](https://{DomainName}/catalog/text-to-speech){: external}.
+-   [IBM Cloud]{: tag-ibm-cloud} You must have the Standard or Premium pricing plan to use customization. Users of the Lite plan cannot use the customization interface. For more information, see the {{site.data.keyword.texttospeechshort}} service in the [{{site.data.keyword.cloud}} Catalog](https://{DomainName}/catalog/services/text-to-speech){: external}.
 -   [IBM Cloud]{: tag-ibm-cloud} Premium customers can work with {{site.data.keyword.IBM_notm}} to train a new custom voice for their specific application needs. To request a custom voice or for more information, complete and submit this [{{site.data.keyword.IBM_notm}} Request Form](https://forms.monday.com/forms/5fd92c54536a18f9afab8a47404bf828?r=use1){: external}.
 
 ## How customization works
