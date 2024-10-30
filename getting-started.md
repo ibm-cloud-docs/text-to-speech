@@ -41,7 +41,7 @@ The tutorial uses the `curl` command-line utility to demonstrate REST API calls.
 
 -   Create an instance of the service: {: hide-dashboard}
 
-    1.  Go to the [{{site.data.keyword.texttospeechshort}}](https://{DomainName}/catalog/text-to-speech){: external} page in the {{site.data.keyword.cloud_notm}} catalog.
+    1.  Go to the [{{site.data.keyword.texttospeechshort}}](https://{DomainName}/catalog/services/text-to-speech){: external} page in the {{site.data.keyword.cloud_notm}} catalog.
     1.  Sign up for a free {{site.data.keyword.cloud_notm}} account or log in.
     1.  Read and agree to the terms of the license agreement.
     1.  Click **Create**.
@@ -179,6 +179,6 @@ The following command uses the `GET /v1/synthesize` method to synthesize Spanish
 ## Next steps
 {: #getting-started-next-steps}
 
--   To try an example application that accepts text and generates speech with different voices, see the [{{site.data.keyword.texttospeechshort}} demo](https://www.ibm.com/demos/live/tts-demo/self-service/home){: external}.
+-   To try an example application that accepts text and generates speech with different voices, see the [{{site.data.keyword.texttospeechshort}} demo](https://www.ibm.com/products){: external}.
 -   For more information about the service's interfaces and features, see [Service features](/docs/text-to-speech?topic=text-to-speech-service-features).
 -   For more information about all methods of the service's interfaces, see the [API & SDK reference](/apidocs/text-to-speech){: external}.

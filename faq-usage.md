@@ -66,7 +66,7 @@ By default, the {{site.data.keyword.texttospeechshort}} service returns audio in
 
 To submit text to the service for synthesized audio output, you make an HTTP or WebSocket request. You can use the API directly or use one of the Watson SDKs. [Getting started](/docs/text-to-speech?topic=text-to-speech-gettingStarted) offers examples of both the HTTP `POST /v1/synthesize` and `GET /v1/synthesize` methods. The [API & SDK reference](/apidocs/text-to-speech){: external} shows examples of all interfaces and methods.
 
-There is no graphical user interface for submitting text. See the [Text to Speech demo](https://www.ibm.com/demos/live/tts-demo/self-service/home){: external} to try an example of the service in action. The demo accepts a small amount of your text as input to generate speech with different voices.
+There is no graphical user interface for submitting text. See the [Text to Speech demo](https://www.ibm.com/products){: external} to try an example of the service in action. The demo accepts a small amount of your text as input to generate speech with different voices.
 
 ## Can I change how the service interprets input text and produces synthesized audio?
 {: #faq-change-synthesis}
@@ -86,7 +86,7 @@ You can use the Speech Synthesis Markup Language (SSML) to control aspects of th
 
 The service supports SDKs in many popular programming languages and platforms.
 
--   For more information about the SDKs and links to them on GitHub, see [{{site.data.keyword.watson}} SDKs](/docs/text-to-speech?topic=watson-using-sdks).
+-   For more information about the SDKs and links to them on GitHub, see [{{site.data.keyword.watson}} SDKs](/docs/watson?topic=watson-using-sdks).
 -   For more information about all methods of the SDKs for the {{site.data.keyword.texttospeechshort}} service, see the [API & SDK reference](/apidocs/text-to-speech){: external}.
 
 ## What is the maximum amount of text that I can submit for synthesis?
@@ -153,4 +153,4 @@ For more information, see [Rules for creating custom entries](/docs/text-to-spee
 
 [IBM Cloud]{: tag-ibm-cloud}
 
-The {{site.data.keyword.texttospeechshort}} service offers multiple pricing plans. For more information about pricing, see the {{site.data.keyword.texttospeechshort}} service in the [IBM Cloud Catalog](https://cloud.ibm.com/catalog/text-to-speech).
+The {{site.data.keyword.texttospeechshort}} service offers multiple pricing plans. For more information about pricing, see the {{site.data.keyword.texttospeechshort}} service in the [IBM Cloud Catalog](https://{DomainName}/catalog/services/text-to-speech).
