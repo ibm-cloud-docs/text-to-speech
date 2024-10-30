@@ -78,7 +78,7 @@ Users of Premium plans can also integrate with {{site.data.keyword.keymanagement
 
 {{site.data.keyword.cloud_notm}} supports both public and private network endpoints with certain plans. Connections to private network endpoints do not require public internet access. Private network endpoints support routing services over the {{site.data.keyword.cloud_notm}} private network instead of the public network. A private network endpoint provides a unique IP address that is accessible to you without a VPN connection.
 
-Private network endpoints are supported only for paid plans. Check the plan information for your service to learn about the plans that support private network endpoints. For more information, see [Public and private network endpoints](/docs/watson?topic=watson-public-private-endpoints).
+Private network endpoints are supported only for paid plans. Check the plan information for your service to learn about the plans that support private network endpoints. For more information, see [Public and private network endpoints](/docs/text-to-speech?topic=text-to-speech-public-private-endpoints).
 
 ## Virtual private endpoints
 {: #data-security-virtual-endpoints}
@@ -87,7 +87,7 @@ Private network endpoints are supported only for paid plans. Check the plan info
 
 {{site.data.keyword.cloud}} Virtual Private Endpoints for Virtual Private Cloud (VPC) are available with certain plans. Virtual private endpoints enable you to connect to supported {{site.data.keyword.cloud_notm}} services from your VPC network by using the IP addresses of your choosing, allocated from a subnet within your VPC. Virtual private endpoints are an evolution of the private connectivity to {{site.data.keyword.cloud_notm}} services. They are virtual IP interfaces that are bound to an endpoint gateway created on a per service or service instance basis.
 
-Virtual private endpoints are supported only for paid plans. Check the plan information for your service to learn about the plans that support virtual private endpoints. For more information, see [Virtual Private Endpoints](/docs/watson?topic=watson-virtual-private-endpoints).
+Virtual private endpoints are supported only for paid plans. Check the plan information for your service to learn about the plans that support virtual private endpoints. For more information, see [Virtual Private Endpoints](/docs/text-to-speech?topic=text-to-speech-virtual-private-endpoints).
 
 ## CORS support
 {: #data-security-cors}

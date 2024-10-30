@@ -61,7 +61,7 @@ Improved Text to Speech voice en-AU_HeidiExpressive
 :   The Text to Speech voice en-AU_HeidiExpressive is improved that can adjust the pitch and synthesis.  
 
 ## 9 June 2023
-{: #text-to-speech-19may2023}
+{: #text-to-speech-9jun2023}
 {: release-note}
 
 Defect fix: TTS no longer fails due to the error message “[Errno 2] No such file or directory“
@@ -706,10 +706,10 @@ New network and data security features
 :   Support for the following new network and data security features is now available:
     -   *Support for private network endpoints*
 
-        Users of Premium plans can create private network endpoints to connect to the {{site.data.keyword.texttospeechshort}} service over a private network. Connections to private network endpoints do not require public internet access. For more information, see [Public and private network endpoints](/docs/watson?topic=watson-public-private-endpoints).
+        Users of Premium plans can create private network endpoints to connect to the {{site.data.keyword.texttospeechshort}} service over a private network. Connections to private network endpoints do not require public internet access. For more information, see [Public and private network endpoints](/docs/text-to-speech?topic=text-to-speech-public-private-endpoints).
     -   *Support for data encryption with customer-managed keys*
 
-        Users of new Premium and Dedicated instances can integrate {{site.data.keyword.keymanagementservicefull}} with the {{site.data.keyword.texttospeechshort}} service to encrypt your data and manage encryption keys. For more information, see [Protecting sensitive information in your {{site.data.keyword.watson}} service](/docs/watson-knowledge-studio?topic=watson-keyservice).
+        Users of new Premium and Dedicated instances can integrate {{site.data.keyword.keymanagementservicefull}} with the {{site.data.keyword.texttospeechshort}} service to encrypt your data and manage encryption keys. For more information, see [Protecting sensitive information in your {{site.data.keyword.watson}} service](/docs/text-to-speech?topic=text-to-speech-keyservice).
 
 ## 12 November 2019
 {: #text-to-speech-12november2019}
