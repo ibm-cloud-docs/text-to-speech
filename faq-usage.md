@@ -86,7 +86,7 @@ You can use the Speech Synthesis Markup Language (SSML) to control aspects of th
 
 The service supports SDKs in many popular programming languages and platforms.
 
--   For more information about the SDKs and links to them on GitHub, see [{{site.data.keyword.watson}} SDKs](/docs/watson?topic=watson-using-sdks).
+-   For more information about the SDKs and links to them on GitHub, see [{{site.data.keyword.watson}} SDKs](/docs/text-to-speech?topic=text-to-speech-using-sdks).
 -   For more information about all methods of the SDKs for the {{site.data.keyword.texttospeechshort}} service, see the [API & SDK reference](/apidocs/text-to-speech){: external}.
 
 ## What is the maximum amount of text that I can submit for synthesis?
