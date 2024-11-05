@@ -558,7 +558,7 @@ Security vulnerabilities addressed
 {: #text-to-speech-data-1may2022}
 
 Important: End of service for {{site.data.keyword.texttospeechshort}} version 1.2.x on {{site.data.keyword.icp4dfull_notm}} version 3.5
-:   **Important:** {{site.data.keyword.texttospeechshort}} version 1.2.x on {{site.data.keyword.icp4dfull_notm}} version 3.5 is out of service as of 1 May 2022. {{site.data.keyword.texttospeechshort}} version 1.2.x is no longer supported, available, or documented. For more information about End of Service for {{site.data.keyword.texttospeechshort}}, which is part of the {{site.data.keyword.watson}} API Kit, see [Software support discontinuance: IBM Watson API Kit for IBM Cloud Pak for Data 1.2.x](https://www.ibm.com/common/ssi/cgi-bin/ssialias?subtype=ca&infotype=an&appname=iSource&supplier=897&letternum=ENUS922-038).
+:   **Important:** {{site.data.keyword.texttospeechshort}} version 1.2.x on {{site.data.keyword.icp4dfull_notm}} version 3.5 is out of service as of 1 May 2022. {{site.data.keyword.texttospeechshort}} version 1.2.x is no longer supported, available, or documented. For more information about End of Service for {{site.data.keyword.texttospeechshort}}, which is part of the {{site.data.keyword.watson}} API Kit, see [Software support discontinuance: IBM Watson API Kit for IBM Cloud Pak for Data 1.2.x](https://www.ibm.com/us-en).
 
 ## 27 April 2022 (Version 4.0.8)
 {: #text-to-speech-data-27april2022}
@@ -931,7 +931,7 @@ Defect fix: Correct multitenancy documentation
 {: #text-to-speech-data-1october2021}
 
 Version 1.1.x is out of service
-:   {{site.data.keyword.texttospeechshort}} and {{site.data.keyword.speechtotextshort}} for {{site.data.keyword.icp4dfull_notm}} version 1.1.x went out of service on 30 September 2021. As of 1 October 2021, the documentation for version 1.1.x is no longer available. For more information, see [Software withdrawal and support discontinuance](https://www.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_ca/9/899/ENUSLP21-0099/index.html&request_locale=en){: external}.
+:   {{site.data.keyword.texttospeechshort}} and {{site.data.keyword.speechtotextshort}} for {{site.data.keyword.icp4dfull_notm}} version 1.1.x went out of service on 30 September 2021. As of 1 October 2021, the documentation for version 1.1.x is no longer available. For more information, see [Software withdrawal and support discontinuance](https://www.ibm.com/us-en){: external}.
 
 ## 29 July 2021 (Version 4.0.0)
 {: #text-to-speech-data-29july2021}
@@ -971,17 +971,17 @@ New Tune by Example feature
 
     -   The service includes four methods for working with custom prompts:
 
-        -   [Add a custom prompt](https://{DomainName}/apidocs/text-to-speech/text-to-speech#addcustomprompt){: external}: `POST /v1/customizations/{customization_id}/prompts/{prompt_id}`
-        -   [List custom prompts](https://{DomainName}/apidocs/text-to-speech/text-to-speech#listcustomprompts){: external}: `GET /v1/customizations/{customization_id}/prompts`
-        -   [Get a custom prompt](https://{DomainName}/apidocs/text-to-speech/text-to-speech#getcustomprompt){: external}: `GET /v1/customizations/{customization_id}/prompts/{prompt_id}`
-        -   [Delete a custom prompt](https://{DomainName}/apidocs/text-to-speech/text-to-speech#deletecustomprompt){: external}: `DELETE /v1/customizations/{customization_id}/prompts/{prompt_id}`
+        -   [Add a custom prompt](https://{DomainName}/apidocs/text-to-speech#addcustomprompt){: external}: `POST /v1/customizations/{customization_id}/prompts/{prompt_id}`
+        -   [List custom prompts](https://{DomainName}/apidocs/text-to-speech#listcustomprompts){: external}: `GET /v1/customizations/{customization_id}/prompts`
+        -   [Get a custom prompt](https://{DomainName}/apidocs/text-to-speech#getcustomprompt){: external}: `GET /v1/customizations/{customization_id}/prompts/{prompt_id}`
+        -   [Delete a custom prompt](https://{DomainName}/apidocs/text-to-speech#deletecustomprompt){: external}: `DELETE /v1/customizations/{customization_id}/prompts/{prompt_id}`
 
     -   The service includes four methods for working with speaker models:
 
-        -   [Create a speaker model](https://{DomainName}/apidocs/text-to-speech/text-to-speech#createspeakermodel){: external}: `POST /v1/speakers`
-        -   [List speaker models](https://{DomainName}/apidocs/text-to-speech/text-to-speech#listspeakermodels){: external}: `GET /v1/speakers`
-        -   [Get a speaker model](https://{DomainName}/apidocs/text-to-speech/text-to-speech#getspeakermodel){: external}: `GET /v1/speakers/{speaker_id}`
-        -   [Delete a speaker model](https://{DomainName}/apidocs/text-to-speech/text-to-speech#deletespeakermodel){: external}: `DELETE /v1/speakers/{speaker_id}`
+        -   [Create a speaker model](https://{DomainName}/apidocs/text-to-speech#createspeakermodel){: external}: `POST /v1/speakers`
+        -   [List speaker models](https://{DomainName}/apidocs/text-to-speech#listspeakermodels){: external}: `GET /v1/speakers`
+        -   [Get a speaker model](https://{DomainName}/apidocs/text-to-speech#getspeakermodel){: external}: `GET /v1/speakers/{speaker_id}`
+        -   [Delete a speaker model](https://{DomainName}/apidocs/text-to-speech#deletespeakermodel){: external}: `DELETE /v1/speakers/{speaker_id}`
 
 Unified {{site.data.keyword.texttospeechshort}} documentation
 :   The documentation for {{site.data.keyword.ibmwatson_notm}} {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} is now combined with the documentation for managed instances of the {{site.data.keyword.texttospeechshort}} service that are hosted on {{site.data.keyword.cloud_notm}}. This is true of both the guide and reference documentation for the two forms of the service. Links to the formerly separate version of the {{site.data.keyword.icp4dfull_notm}} documentation for the service redirect to the unified documentation.
@@ -1112,7 +1112,7 @@ Red Hat OpenShift version 4.3 is going out of service
 {: #text-to-speech-data-19june2020}
 
 Version 1.1.4 is available
-:   {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} version 1.1.4 is now available. Installation and administration of the service include many changes. This version supports {{site.data.keyword.icp4dfull_notm}} versions 2.5 and 3.0.1, and Red Hat OpenShift versions 3.11 and 4.3. For more information about installing and managing the service, see [Installing {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}} version 1.1.4](/docs/text-to-speech?topic=text-to-speech-speech-install).
+:   {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} version 1.1.4 is now available. Installation and administration of the service include many changes. This version supports {{site.data.keyword.icp4dfull_notm}} versions 2.5 and 3.0.1, and Red Hat OpenShift versions 3.11 and 4.3. For more information about installing and managing the service, see [Installing and managing {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-speech-install-data).
 
 New neural voices
 :   The service now supports five new neural voices:
@@ -1126,7 +1126,7 @@ Support for SSML `digits` attribute of `<say-as>` element for Japanese
 :   The service now supports the `digits` attribute of the SSML `<say-as>` element with its Japanese voice.  For more information, see [The `<say-as>` element](/docs/text-to-speech?topic=text-to-speech-elements#say-as_element).
 
 Simplified backup and restore procedures
-:   The backup and restore procedures are greatly simplified. They now back up data from the datastores, so you no longer need to re-create the operations you have run. For more information, see [Backing up and restoring your data](/docs/text-to-speech?topic=text-to-speech-speech-backup).
+:   The backup and restore procedures are greatly simplified. They now back up data from the datastores, so you no longer need to re-create the operations you have run. For more information, see [Backing up and restoring {{site.data.keyword.watson}} Speech services data](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.6.x?topic=administering-backing-up-restoring-data){: external}.
 
 ## 28 February 2020 (Version 1.1.3)
 {: #text-to-speech-data-28february2020}
