@@ -179,9 +179,9 @@ Defect fix: Japanese voice no longer inserts unexpected audio
 {: release-note}
 
 Cloud Foundry deprecation and migration to resource groups
-:   {{site.data.keyword.IBM_notm}} announced the deprecation of IBM Cloud Foundry on 31 May 2022. As of 30 November 2022, new {{site.data.keyword.IBM_notm}} Cloud Foundry applications cannot be created and only existing users are able to deploy applications. {{site.data.keyword.IBM_notm}} Cloud Foundry reaches end of support on 1 June 2023. Then, any {{site.data.keyword.IBM_notm}} Cloud Foundry application runtime instances running {{site.data.keyword.IBM_notm}} Cloud Foundry applications will be permanently disabled, deprovisioned, and deleted. For more information about the deprecation, see [Deprecation of {{site.data.keyword.IBM_notm}} Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-deprecation).
+:   {{site.data.keyword.IBM_notm}} announced the deprecation of IBM Cloud Foundry on 31 May 2022. As of 30 November 2022, new {{site.data.keyword.IBM_notm}} Cloud Foundry applications cannot be created and only existing users are able to deploy applications. {{site.data.keyword.IBM_notm}} Cloud Foundry reaches end of support on 1 June 2023. Then, any {{site.data.keyword.IBM_notm}} Cloud Foundry application runtime instances running {{site.data.keyword.IBM_notm}} Cloud Foundry applications will be permanently disabled, deprovisioned, and deleted. 
 
-    To continue to use your {{site.data.keyword.cloud_notm}} applications beyond 1 June 2023, you must migrate to resource groups before that date. Resource groups are conceptually similar to Cloud Foundry spaces. They include several extra benefits, such as finer-grained access control by using IBM Cloud Identity and Access Management (IAM), the ability to connect service instances to apps and services across different regions, and an easy way to view usage per group. For more information about migration, see [Migrating Cloud Foundry service instances and apps to a resource group](/docs/account?topic=account-migrate).
+    To continue to use your {{site.data.keyword.cloud_notm}} applications beyond 1 June 2023, you must migrate to resource groups before that date. Resource groups are conceptually similar to Cloud Foundry spaces. They include several extra benefits, such as finer-grained access control by using IBM Cloud Identity and Access Management (IAM), the ability to connect service instances to apps and services across different regions, and an easy way to view usage per group. 
 
 Defect fix: Specifying large cardinal numbers with the `<say-as>` element no longer causes errors for English voices
 :   **Defect fix:** You can now use the `<say-as>` element to pronounce large numbers as cardinal numbers. Previously, enclosing a large number in the `<say-as>` element with the attribute `interpret-as="cardinal"` might cause speech synthesis to fail for English voices. For example, `<say-as interpret-as="cardinal">3,200</say-as>` might cause the service to generate an error. For more information, see [cardinal](/docs/text-to-speech?topic=text-to-speech-elements#say-as-cardinal) in the topic *SSML elements*.
@@ -456,17 +456,17 @@ New Tune be Example methods
 
     -   The service includes four methods for working with custom prompts:
 
-        -   [Add a custom prompt](https://{DomainName}/apidocs/text-to-speech/text-to-speech#addcustomprompt){: external}: `POST /v1/customizations/{customization_id}/prompts/{prompt_id}`
-        -   [List custom prompts](https://{DomainName}/apidocs/text-to-speech/text-to-speech#listcustomprompts){: external}: `GET /v1/customizations/{customization_id}/prompts`
-        -   [Get a custom prompt](https://{DomainName}/apidocs/text-to-speech/text-to-speech#getcustomprompt){: external}: `GET /v1/customizations/{customization_id}/prompts/{prompt_id}`
-        -   [Delete a custom prompt](https://{DomainName}/apidocs/text-to-speech/text-to-speech#deletecustomprompt){: external}: `DELETE /v1/customizations/{customization_id}/prompts/{prompt_id}`
+        -   [Add a custom prompt](https://{DomainName}/apidocs/text-to-speech#addcustomprompt){: external}: `POST /v1/customizations/{customization_id}/prompts/{prompt_id}`
+        -   [List custom prompts](https://{DomainName}/apidocs/text-to-speech#listcustomprompts){: external}: `GET /v1/customizations/{customization_id}/prompts`
+        -   [Get a custom prompt](https://{DomainName}/apidocs/text-to-speech#getcustomprompt){: external}: `GET /v1/customizations/{customization_id}/prompts/{prompt_id}`
+        -   [Delete a custom prompt](https://{DomainName}/apidocs/text-to-speech#deletecustomprompt){: external}: `DELETE /v1/customizations/{customization_id}/prompts/{prompt_id}`
 
     -   The service includes four methods for working with speaker models:
 
-        -   [Create a speaker model](https://{DomainName}/apidocs/text-to-speech/text-to-speech#createspeakermodel){: external}: `POST /v1/speakers`
-        -   [List speaker models](https://{DomainName}/apidocs/text-to-speech/text-to-speech#listspeakermodels){: external}: `GET /v1/speakers`
-        -   [Get a speaker model](https://{DomainName}/apidocs/text-to-speech/text-to-speech#getspeakermodel){: external}: `GET /v1/speakers/{speaker_id}`
-        -   [Delete a speaker model](https://{DomainName}/apidocs/text-to-speech/text-to-speech#deletespeakermodel){: external}: `DELETE /v1/speakers/{speaker_id}`
+        -   [Create a speaker model](https://{DomainName}/apidocs/text-to-speech#createspeakermodel){: external}: `POST /v1/speakers`
+        -   [List speaker models](https://{DomainName}/apidocs/text-to-speech#listspeakermodels){: external}: `GET /v1/speakers`
+        -   [Get a speaker model](https://{DomainName}/apidocs/text-to-speech#getspeakermodel){: external}: `GET /v1/speakers/{speaker_id}`
+        -   [Delete a speaker model](https://{DomainName}/apidocs/text-to-speech#deletespeakermodel){: external}: `DELETE /v1/speakers/{speaker_id}`
 
     Activity Tracker actions are available for all new Tune by Example events. For more information, see [Tune by Example events](/docs/text-to-speech?topic=text-to-speech-at-events#at-events-tbe).
 
@@ -698,7 +698,7 @@ Full support for {{site.data.keyword.cloud_notm}} IAM
 
         `wss://api.us-south.text-to-speech.watson.cloud.ibm.com/instances/6bbda3b3-d572-45e1-8c54-22d6ed9e52c2`
 
-    For more information about the URLs, see the [API and SDK reference](https://{DomainName}/apidocs/text-to-speech/text-to-speech#service-endpoint){: external}.
+    For more information about the URLs, see the [API and SDK reference](https://{DomainName}/apidocs/text-to-speech#service-endpoint){: external}.
 
     These URLs do not constitute a breaking change. The new URLs work for both your existing service instances and for new instances. The original URLs continue to work on your existing service instances for at least one year, until December 2020.
 
