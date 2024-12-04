@@ -24,6 +24,7 @@ The following limits apply to all custom models and entries:
 -   A translation in a custom entry can contain a maximum of 499 characters.
 -   A custom model can include a maximum of 20,000 custom entries.
 -   A custom model can include a maximum of 1000 custom prompts.
+-   Do not use backslashes, slashes, colons, equal signs, ampersands, or question marks in the name.
 
 ## Character encoding
 {: #rulesCharEncoding}
