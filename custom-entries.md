@@ -19,6 +19,9 @@ Once a custom model exists, the next step is to add custom entries in the form o
 For more information about the rules and limits that apply to custom entries, see [Rules for creating custom entries](/docs/text-to-speech?topic=text-to-speech-rules).
 {: note}
 
+Do not use characters that need to be URL-encoded. For example, do not use spaces, slashes, backslashes, colons, ampersands, double quotes, plus signs, equals signs, question marks, etc. in the name. The service does not prevent the use of these characters, but because they must be URL-encoded wherever used, it is strongly discouraged.
+{: important}
+
 ## Adding a single word to a custom model
 {: #cuWordAdd}
 
