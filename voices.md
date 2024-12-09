@@ -39,7 +39,7 @@ Table 1 shows the service's support for languages by type of voice. The followin
 | Language | Expressive neural voices | Enhanced neural voices |
 |----------|:------------------------:|:-----------------------:|
 | Dutch  \n (Netherlands) | | &#10004; |
-| English  \n (United Kingdom) | | &#10004; |
+| English  \n (United Kingdom) | &#10004; | &#10004; |
 | English  \n (Australian) | &#10004; | |
 | English  \n (United States) | &#10004; | &#10004; |
 | French  \n (Canadian) | | &#10004; |
@@ -75,6 +75,7 @@ To minimize the latency and response time for an expressive voice, use shorter s
 | | GA | `en-US_EmmaExpressive`  \n Female | ![en-US_EmmaExpressive sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_EmmaExpressive.wav){: audio controls} |
 | | GA | `en-US_LisaExpressive`  \n Female | ![en-US_LisaExpressive sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_LisaExpressive.wav){: audio controls} |
 | | GA | `en-US_MichaelExpressive`  \n Male | ![en-US_MichaelExpressive sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_MichaelExpressive.wav){: audio controls} |
+| English  \n (United Kingdom) | GA | `en-GB_GeorgeExpressive`  \n Male | ![en-GB_GeorgeExpressive sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-GB_GeorgeExpressive.wav){: audio controls} |
 | Spanish  \n (Latin American) | GA | `es-LA_DanielaExpressive`  \n Female | ![es-LA_DanielaExpressive sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/es-LA_DanielaExpressive.wav){: audio controls} |
 {: caption="Expressive neural languages and voices"}
 
