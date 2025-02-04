@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-03-30"
+  years: 2015, 2025
+lastupdated: "2025-02-04"
 
 subcollection: text-to-speech
 
@@ -13,7 +13,7 @@ subcollection: text-to-speech
 # The science behind the service
 {: #science}
 
-The {{site.data.keyword.texttospeechfull}} service offers only voices that rely on [neural voice technology](#science-neural): *expressive neural* and *enhanced neural* voices. A brief overview of neural voice technology follows. But the topic of synthesizing text to speech is inherently complex. For more information about the scientific research behind the service's speech technology, see the documents that are listed in [Research references](/docs/text-to-speech?topic=text-to-speech-references).
+The {{site.data.keyword.texttospeechfull}} service offers only voices that rely on [neural voice technology](#science-neural): *expressive neural* and *enhanced neural* voices. A brief overview of neural voice technology follows. But the topic of synthesizing text to speech is inherently complex. 
 {: shortdesc}
 
 ## Neural voice technology
