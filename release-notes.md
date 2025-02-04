@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2024
-lastupdated: "2024-01-14"
+  years: 2015, 2025
+lastupdated: "2025-02-04"
 
 keywords: text to speech release notes,text to speech for IBM cloud release notes
 
@@ -719,9 +719,6 @@ New network and data security features
     -   *Support for private network endpoints*
 
         Users of Premium plans can create private network endpoints to connect to the {{site.data.keyword.texttospeechshort}} service over a private network. Connections to private network endpoints do not require public internet access. For more information, see [Public and private network endpoints](/docs/text-to-speech?topic=text-to-speech-public-private-endpoints).
-    -   *Support for data encryption with customer-managed keys*
-
-        Users of new Premium and Dedicated instances can integrate {{site.data.keyword.keymanagementservicefull}} with the {{site.data.keyword.texttospeechshort}} service to encrypt your data and manage encryption keys. For more information, see [Protecting sensitive information in your {{site.data.keyword.watson}} service](/docs/text-to-speech?topic=text-to-speech-keyservice).
 
 ## 12 November 2019
 {: #text-to-speech-12november2019}
