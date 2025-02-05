@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2025
-lastupdated: "2025-01-17"
+lastupdated: "2025-02-05"
 
 keywords: IBM,activity tracker,event,security,text to speech
 
@@ -12,7 +12,7 @@ subcollection: text-to-speech
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Activity Tracker events
+# Activity Tracking events for {{site.data.keyword.texttospeechshort}}
 {: #at-events}
 
 [IBM Cloud]{: tag-ibm-cloud}

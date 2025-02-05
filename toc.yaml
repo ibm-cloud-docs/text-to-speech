@@ -117,7 +117,7 @@ toc:
               - symbols-en-au.md
               - symbols-ko-kr.md
       - topicgroup:
-          label: Security topics
+          label: IBM Cloud security
           topics:
           - information-security.md
           - include: ../watson/service-endpoints.md
