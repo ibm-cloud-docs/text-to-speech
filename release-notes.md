@@ -37,7 +37,8 @@ New Brazilian Portuguese male expressive neural voice
 
     Expressive neural voices offer natural-sounding speech that is clear, crisp, and fluid. The new voice is generally available (GA) for production use. It supports the use of both the standard International Phonetic Alphabet (IPA) and {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR) phonetic symbols. For more information, see
     -   [Expressive neural voices](/docs/text-to-speech?topic=text-to-speech-voices#language-voices-expressive)
-    -   [English (United Kingdom) symbols](/docs/text-to-speech?topic=text-to-speech-ptSymbols)
+    -   [Portuguese (Brazilian) symbols](/docs/text-to-speech?topic=text-to-speech-ptSymbols)
+    -   [Portuguese expressive voices] (/docs/text-to-speech?topic=text-to-speech-expressive-portuguese)
 
 ## 09 December 2024
 {: #text-to-speech-09december2024}
