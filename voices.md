@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-04-29"
+  years: 2015, 2025
+lastupdated: "2025-02-17"
 
 subcollection: text-to-speech
 
@@ -48,7 +48,7 @@ Table 1 shows the service's support for languages by type of voice. The followin
 | Italian | | &#10004; |
 | Japanese | | &#10004; |
 | Korean | | &#10004; | &#10004;
-| Portuguese  \n (Brazilian) | | &#10004; |
+| Portuguese  \n (Brazilian) | &#10004; | &#10004; |
 | Spanish  \n (Castilian) | | &#10004; |
 | Spanish  \n (Latin American) | &#10004; | &#10004; |
 | Spanish  \n (South American) | | &#10004; |
@@ -76,6 +76,7 @@ To minimize the latency and response time for an expressive voice, use shorter s
 | | GA | `en-US_LisaExpressive`  \n Female | ![en-US_LisaExpressive sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_LisaExpressive.wav){: audio controls} |
 | | GA | `en-US_MichaelExpressive`  \n Male | ![en-US_MichaelExpressive sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_MichaelExpressive.wav){: audio controls} |
 | English  \n (United Kingdom) | GA | `en-GB_GeorgeExpressive`  \n Male | ![en-GB_GeorgeExpressive sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-GB_GeorgeExpressive.wav){: audio controls} |
+| Portuguese  \n (Brazilian) | GA | `pt-BR_LucasExpressive`  \n Male | ![pt-BR_LucasExpressive sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/pt-BR_LucasExpressive.wav){: audio controls} |
 | Spanish  \n (Latin American) | GA | `es-LA_DanielaExpressive`  \n Female | ![es-LA_DanielaExpressive sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/es-LA_DanielaExpressive.wav){: audio controls} |
 {: caption="Expressive neural languages and voices"}
 
