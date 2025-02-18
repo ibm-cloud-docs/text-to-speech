@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-01-14"
+  years: 2015, 2025
+lastupdated: "2025-02-18"
 
 subcollection: text-to-speech
 
@@ -33,7 +33,7 @@ The first two examples generate a custom pronunciation for `IEEE` that is based 
     ```
     {: pre}
 
-    [IBM Cloud Pak for Data]{: tag-cp4d}
+    [IBM Cloud Pak for Data]{: tag-cp4d} [IBM Software Hub]{: tag-teal}
 
     ```bash
     curl -X GET \
@@ -58,7 +58,7 @@ The first two examples generate a custom pronunciation for `IEEE` that is based 
     ```
     {: pre}
 
-    [IBM Cloud Pak for Data]{: tag-cp4d}
+    [IBM Cloud Pak for Data]{: tag-cp4d} [IBM Software Hub]{: tag-teal}
 
     ```bash
     curl -X POST \

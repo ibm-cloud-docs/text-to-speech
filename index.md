@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-05-02"
+  years: 2015, 2025
+lastupdated: "2025-02-18"
 
 subcollection: text-to-speech
 
@@ -22,12 +22,8 @@ The service can be used in applications such as voice-automated chatbots, as wel
 
 {{site.data.keyword.texttospeechshort}} can be deployed as a managed cloud service or can be installed on premises. This documentation describes how to use both versions of the product. Information such as topics, paragraphs, and examples that applies exclusively to one version is clearly denoted:
 
--   [IBM Cloud]{: tag-ibm-cloud} for managed instances of {{site.data.keyword.texttospeechshort}} that are hosted on {{site.data.keyword.cloud_notm}} or for instances that are hosted on [IBM Cloud Pak for Data as a Service](https://dataplatform.cloud.ibm.com/docs/content/svc-welcome/wtts.html){: external}.
-    -   For information about all service updates, see the [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes).
-    -   For information about the latest service update, see the [6 April 2023](/docs/text-to-speech?topic=text-to-speech-release-notes#text-to-speech-6april2023) service update in the release notes.
--   [IBM Cloud Pak for Data]{: tag-cp4d} for installed or on-premises instances of {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}. For links to information about installing and managing {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}, see [Installing {{site.data.keyword.ibmwatson_notm}} {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-speech-install-data).
-    -   For information about all service updates, see the [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes-data).
-    -   For information about the latest service update, see the [2 May 2023 (Version 4.6.5)](/docs/text-to-speech?topic=text-to-speech-release-notes-data#text-to-speech-data-2may2023) service update in the release notes.
+-   [IBM Cloud]{: tag-ibm-cloud} for managed instances of {{site.data.keyword.texttospeechshort}} that are hosted on {{site.data.keyword.cloud_notm}} or for instances that are hosted on [IBM Cloud Pak for Data as a Service](https://dataplatform.cloud.ibm.com/docs/content/svc-welcome/wtts.html){: external}. For information about all service updates, see the [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.cloud_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes).
+-   [IBM Cloud Pak for Data]{: tag-cp4d} [IBM Software Hub]{: tag-teal} for installed or on-premises instances of {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}. For more information about installing and managing {{site.data.keyword.watson}} Speech services, see [Installation overview](/docs/text-to-speech?topic=text-to-speech-speech-install-data). For information about all service updates, see the [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes-data) and [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.IBM_notm}} Software Hub](/docs/text-to-speech?topic=text-to-speech-release-notes-hub).
 
 ## Speech synthesis
 {: #about-synthesis}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-02-17"
+lastupdated: "2025-02-18"
 
 subcollection: text-to-speech
 
@@ -57,7 +57,7 @@ Table 1 shows the service's support for languages by type of voice. The followin
 ### Expressive neural voices
 {: #language-voices-expressive}
 
-Table 2 lists and provides audio samples for all available expressive neural voices. The *Availability* column indicates whether each voice is generally available (GA) for production use or beta. The column also indicates whether each voice is available for [IBM Cloud]{: tag-ibm-cloud}, [IBM Cloud Pak for Data]{: tag-cp4d}, or both (no product version is cited).
+Table 2 lists and provides audio samples for all available expressive neural voices. The *Availability* column indicates whether each voice is generally available (GA) for production use or beta. The column also indicates whether each voice is available for [IBM Cloud]{: tag-ibm-cloud}, [IBM Cloud Pak for Data]{: tag-cp4d}, [IBM Software Hub]{: tag-teal}, or all 3 of them (no product version is cited).
 
 -   Expressive neural voices support additional features that are not available with other types of voices. These features include additional speaking styles, automatic emphasis of interjections, and emphasis of specified words. For more information, see [Modifying speech synthesis with expressive neural voices](/docs/text-to-speech?topic=text-to-speech-synthesis-expressive).
 -   When used with the SSML `<prosody>` element, expressive voices support only percentage values for the `rate` and `pitch` attributes. For more information, see [The `<prosody>` element](/docs/text-to-speech?topic=text-to-speech-elements#prosody_element).
@@ -83,7 +83,7 @@ To minimize the latency and response time for an expressive voice, use shorter s
 ### Enhanced neural voices
 {: #language-voices-enhanced-neural}
 
-Table 3 lists and provides audio samples for all available enhanced neural voices. The *Availability* column indicates whether each voice is generally available (GA) for production use or beta. The column also indicates whether each voice is available for [IBM Cloud]{: tag-ibm-cloud}, [IBM Cloud Pak for Data]{: tag-cp4d}, or both (no product version is cited).
+Table 3 lists and provides audio samples for all available enhanced neural voices. The *Availability* column indicates whether each voice is generally available (GA) for production use or beta. The column also indicates whether each voice is available for [IBM Cloud]{: tag-ibm-cloud}, [IBM Cloud Pak for Data]{: tag-cp4d}, [IBM Software Hub]{: tag-teal} or all 3 of them (no product version is cited).
 
 | Language | Availability        | Voice / Gender | Audio sample |
 |----------|:-------------------:|:--------------:|:------------:|
