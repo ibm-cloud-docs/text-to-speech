@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-01-17"
+  years: 2015, 2025
+lastupdated: "2025-02-18"
 
 subcollection: text-to-speech
 
@@ -65,7 +65,7 @@ A WebSocket client calls the `/v1/synthesize` method with the following query pa
 :   Pass a valid access token to authenticate with the service. You must use the access token before it expires.
 
     -   [IBM Cloud]{: tag-ibm-cloud} Pass an Identity and Access Management (IAM) access token to authenticate with the service. You pass an IAM access token instead of passing an API key with the call. For more information, see [Authenticating to {{site.data.keyword.cloud_notm}}](/docs/watson?topic=watson-iam#gs-credential-cloud).
-    -   [IBM Cloud Pak for Data]{: tag-cp4d} Pass an access token as you would with the `Authorization` header of an HTTP request. For more information, see [Authenticating to {{site.data.keyword.icp4dfull_notm}}](/docs/watson?topic=watson-iam#gs-credential-cpd).
+    -   [IBM Cloud Pak for Data]{: tag-cp4d} [IBM Software Hub]{: tag-teal} Pass an access token as you would with the `Authorization` header of an HTTP request. For more information, see [Authenticating to {{site.data.keyword.icp4dfull_notm}}](/docs/watson?topic=watson-iam#gs-credential-cpd).
 
 `voice` (*optional* string)
 :   Specifies the voice in which the text is to be spoken in the audio. Use the `/v1/voices` method to get the current list of supported voices. Omit the parameter to use the default voice. For more information, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices) and [Using the default voice](/docs/text-to-speech?topic=text-to-speech-voices-use#specify-voice-default).

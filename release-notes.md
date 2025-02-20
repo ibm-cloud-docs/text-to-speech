@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-02-04"
+lastupdated: "2025-02-17"
 
 keywords: text to speech release notes,text to speech for IBM cloud release notes
 
@@ -26,6 +26,19 @@ For information about known limitations of the service, see [Known limitations](
 
 For information about releases and updates of the service for {{site.data.keyword.icp4dfull_notm}}, see [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes-data).
 {: note}
+
+## 17 February 2025
+{: #text-to-speech-17february2025}
+{: release-note}
+
+New Brazilian Portuguese male expressive neural voice
+:   The service now supports a new male expressive neural voice for Brazilian Portuguese:
+    -   `pt-BR_LucasExpressive`
+
+    Expressive neural voices offer natural-sounding speech that is clear, crisp, and fluid. The new voice is generally available (GA) for production use. It supports the use of both the standard International Phonetic Alphabet (IPA) and {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR) phonetic symbols. For more information, see
+    -   [Expressive neural voices](/docs/text-to-speech?topic=text-to-speech-voices#language-voices-expressive)
+    -   [Portuguese (Brazilian) symbols](/docs/text-to-speech?topic=text-to-speech-ptSymbols)
+    -   [Portuguese expressive voices](/docs/text-to-speech?topic=text-to-speech-expressive-portuguese)
 
 ## 09 December 2024
 {: #text-to-speech-09december2024}

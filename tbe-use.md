@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2023
-lastupdated: "2023-01-14"
+  years: 2021, 2025
+lastupdated: "2025-02-18"
 
 subcollection: text-to-speech
 
@@ -49,7 +49,7 @@ The following examples use the [HTTP interface](/docs/text-to-speech?topic=text-
     ```
     {: pre}
 
-    [IBM Cloud Pak for Data]{: tag-cp4d}
+    [IBM Cloud Pak for Data]{: tag-cp4d} [IBM Software Hub]{: tag-teal}
 
     ```bash
     curl -X POST \
@@ -72,7 +72,7 @@ The following examples use the [HTTP interface](/docs/text-to-speech?topic=text-
     ```
     {: pre}
 
-    [IBM Cloud Pak for Data]{: tag-cp4d}
+    [IBM Cloud Pak for Data]{: tag-cp4d} [IBM Software Hub]{: tag-teal}
 
     ```bash
     curl -X GET \

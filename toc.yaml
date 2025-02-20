@@ -71,6 +71,7 @@ toc:
               - synthesis-expressive.md
               - expressive-en.md
               - expressive-es.md
+              - expressive-pt.md
           - word-timing.md
       - topicgroup:
           label: Customizing the service
