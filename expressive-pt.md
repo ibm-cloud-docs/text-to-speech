@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-02-17"
+lastupdated: "2025-02-20"
 
 subcollection: text-to-speech
 
@@ -50,7 +50,7 @@ Table 2 lists the interjections that the service recognizes and provides example
 ### Enabling or disabling interjections with SSML
 {: #syntheses-expressive-interjections-ssml-pt}
 
-For Spanish, all interjections are enabled by default, and it is not possible to enable/disable these interjections.
+For Portuguese, all interjections are enabled by default, and it is not possible to enable/disable these interjections.
 
 ### Usage notes for interjections
 {: #syntheses-expressive-interjections-notes-pt}
