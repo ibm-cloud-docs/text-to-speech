@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-02-18"
+lastupdated: "2025-03-19"
 
 subcollection: text-to-speech
 
@@ -28,7 +28,7 @@ The service offers two types of voices with different qualities and capabilities
 
 The following pages provide more information about the voices and their technology:
 
--   For a blog that introduces the expressive voices, see [Is your conversational AI setting the right tone?](https://www.ibm.com/blogs/journey-to-ai/2022/09/is-your-conversational-ai-setting-the-right-tone/){: external}.
+-   For a blog that introduces the expressive voices, see [Is your conversational AI setting the right tone?](https://www.ibm.com/think/insights/is-your-conversational-ai-setting-the-right-tone){: external}.
 -   For more information about the service's neural voice technology, see [The science behind the service](/docs/text-to-speech?topic=text-to-speech-science).
 
 ### Language support by type of voice
