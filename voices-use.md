@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-02-18"
+lastupdated: "2025-04-04"
 
 subcollection: text-to-speech
 
@@ -77,7 +77,7 @@ If you omit the `voice` parameter from a request, the service uses the US Englis
 [IBM Cloud Pak for Data]{: tag-cp4d} [IBM Software Hub]{: tag-teal} If you do not install the `en-US_MichaelV3Voice`, it cannot serve as the default voice. In this case, you must either
 
 -   Use the `voice` parameter to pass the voice that is to be used with each request.
--   Specify a new default voice for your installation of {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} by using the `defaultTTSVoice` property in the Speech services custom resource. For more information, see  [Installing {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.0?topic=speech-installing-watson-text){: external}.
+-   Specify a new default voice for your installation of {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} by using the `defaultTTSVoice` property in the Speech services custom resource. For more information, see  [Installing {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}}](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.0.0?topic=speech-installing-watson-text){: external}.
 
 ## Multilingual speech synthesis
 {: #synthesis-multilingual}
