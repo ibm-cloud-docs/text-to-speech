@@ -121,6 +121,7 @@ toc:
           label: IBM Cloud security
           topics:
           - information-security.md
+          - at-events.md
           - include: ../watson/service-endpoints.md
           - include: ../watson/virtual-endpoints.md
       - topicgroup:
@@ -134,7 +135,6 @@ toc:
           label: API & SDK reference
           href: https://{DomainName}/apidocs/text-to-speech
       - ha-dr.md
-      - at-events.md
       - include: ../watson/getting-started-sdks.md
       - link:
           label: Watson GitHub repos
