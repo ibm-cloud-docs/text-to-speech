@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-02-17"
+lastupdated: "2025-05-05"
 
 keywords: text to speech release notes,text to speech for IBM cloud release notes
 
@@ -268,7 +268,7 @@ New word emphasis with expressive neural voices
 {: release-note}
 
 New Activity Tracker event for GDPR deletion of user information
-:   The service now returns an Activity Tracker event when you use the `DELETE /v1/user_data` method to delete all information about a user. The event is named `text-to-speech.gdpr-user-data.delete`. For more information, see [Activity Tracker events](/docs/text-to-speech?topic=text-to-speech-at-events).
+:   The service now returns an Activity Tracker event when you use the `DELETE /v1/user_data` method to delete all information about a user. The event is named `text-to-speech.gdpr-user-data.delete`. For more information, see [Activity Tracker events](/docs/text-to-speech?topic=text-to-speech-at_events).
 
 Defect fix: Custom word translations now accept commas in all cases
 :   **Defect fix:** Word translations added to custom models now accept commas in all cases. Previously, a comma in a translation might occasionally cause the translation to fail to generate valid audio when used for speech syntheses. This problem was identified in US English custom models.
@@ -493,10 +493,10 @@ New Tune be Example methods
         -   [Get a speaker model](https://{DomainName}/apidocs/text-to-speech#getspeakermodel){: external}: `GET /v1/speakers/{speaker_id}`
         -   [Delete a speaker model](https://{DomainName}/apidocs/text-to-speech#deletespeakermodel){: external}: `DELETE /v1/speakers/{speaker_id}`
 
-    Activity Tracker actions are available for all new Tune by Example events. For more information, see [Tune by Example events](/docs/text-to-speech?topic=text-to-speech-at-events#at-events-tbe).
+    Activity Tracker actions are available for all new Tune by Example events. For more information, see [Tune by Example events](/docs/text-to-speech?topic=text-to-speech-at_events#at-events-tbe).
 
 Updates to Activity Tracker actions for customization
-:   The names of the actions for the Activity Tracker events for the customization methods have changed. The actions now include the string `custom-model` instead of `custom-voice`. The old names of the actions are deprecated. The old names are still available for use but will be removed at a future date. Migrate to the new names that are listed in [Customization events](/docs/text-to-speech?topic=text-to-speech-at-events#at-events-custom) at your earliest convenience.
+:   The names of the actions for the Activity Tracker events for the customization methods have changed. The actions now include the string `custom-model` instead of `custom-voice`. The old names of the actions are deprecated. The old names are still available for use but will be removed at a future date. Migrate to the new names that are listed in [Customization events](/docs/text-to-speech?topic=text-to-speech-at_events#at-events-custom) at your earliest convenience.
 
     **Create events** *Deprecated action name* -> *New action name*
     -   `text-to-speech.custom-voice.create` -> `text-to-speech.custom-model.create`
@@ -683,7 +683,7 @@ New US English and German neural voices
     For more information about these and all available voices, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
 
 New support for Activity Tracker
-:   The service now supports the use of Activity Tracker events for all customization operations. {{site.data.keyword.at_full_notm}} records user-initiated activities that change the state of a service in {{site.data.keyword.cloud_notm}}. You can use this service to investigate abnormal activity and critical actions and to comply with regulatory audit requirements. In addition, you can be alerted about actions as they happen. For more information, see [Activity Tracker events](/docs/text-to-speech?topic=text-to-speech-at-events).
+:   The service now supports the use of Activity Tracker events for all customization operations. {{site.data.keyword.at_full_notm}} records user-initiated activities that change the state of a service in {{site.data.keyword.cloud_notm}}. You can use this service to investigate abnormal activity and critical actions and to comply with regulatory audit requirements. In addition, you can be alerted about actions as they happen. For more information, see [Activity Tracker events](/docs/text-to-speech?topic=text-to-speech-at_events).
 
 ## 18 December 2019
 {: #text-to-speech-18december2019}
