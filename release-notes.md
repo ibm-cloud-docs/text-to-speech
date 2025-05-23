@@ -36,8 +36,7 @@ New generation of voices - Natural voices
     -   `en-US_EllieNatural`
 
     Natural Voices provide advanced performance in terms of naturalness and expressiveness. These voices use various techniques to provide an edge over Expressive voices.
-    For more information, see
-    -   [Natural voices](/docs/text-to-speech?topic=text-to-speech-voices#language-voices-natural)
+    For more information, see [Natural voices](/docs/text-to-speech?topic=text-to-speech-voices#language-voices-natural).
 
 ## 17 February 2025
 {: #text-to-speech-17february2025}
