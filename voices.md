@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-03-19"
+lastupdated: "2025-05-23"
 
 subcollection: text-to-speech
 
@@ -21,8 +21,9 @@ All of the service's voices use neural voice technology. Neural voice technology
 ## Supported languages and voices
 {: #language-voices}
 
-The service offers two types of voices with different qualities and capabilities:
+The service offers three types of voices with different qualities and capabilities:
 
+-   *Natural voices* provide advanced performance in terms of naturalness and expressiveness. These voices use various techniques to provide an edge over Expressive voices. For a list of all natural voices, see [Natural voices](/docs/text-to-speech?topic=text-to-speech-voices#language-voices-natural).
 -   *Expressive neural voices* offer natural-sounding speech that is exceptionally clear and crisp. Their pronunciation and inflections are natural and conversational, and the resulting speech offers extremely smooth transitions between words. They also support the use of additional features that are not available with enhanced neural voices. For a list of all expressive voices, see [Expressive neural voices](/docs/text-to-speech?topic=text-to-speech-voices#language-voices-expressive).
 -   *Enhanced neural voices* achieve a high degree of natural-sounding speech and support most service features. For a list of all enhanced neural voices, see [Enhanced neural voices](/docs/text-to-speech?topic=text-to-speech-voices#language-voices-enhanced-neural).
 
@@ -36,28 +37,38 @@ The following pages provide more information about the voices and their technolo
 
 Table 1 shows the service's support for languages by type of voice. The following topics list the available languages and voices for each voice type.
 
-| Language | Expressive neural voices | Enhanced neural voices |
-|----------|:------------------------:|:-----------------------:|
-| Dutch  \n (Netherlands) | | &#10004; |
-| English  \n (United Kingdom) | &#10004; | &#10004; |
-| English  \n (Australian) | &#10004; | |
-| English  \n (United States) | &#10004; | &#10004; |
-| French  \n (Canadian) | | &#10004; |
-| French  \n (France) | | &#10004; |
-| German | | &#10004; |
-| Italian | | &#10004; |
-| Japanese | | &#10004; |
-| Korean | | &#10004; | &#10004;
-| Portuguese  \n (Brazilian) | &#10004; | &#10004; |
-| Spanish  \n (Castilian) | | &#10004; |
-| Spanish  \n (Latin American) | &#10004; | &#10004; |
-| Spanish  \n (South American) | | &#10004; |
+| Language | Natural voices | Expressive neural voices | Enhanced neural voices |
+|----------|:---------------:|:-----------------------:|:-----------------------|
+| Dutch  \n (Netherlands) | | | &#10004; |
+| English  \n (United Kingdom) | | &#10004; | &#10004; |
+| English  \n (Australian) | | &#10004; | |
+| English  \n (United States) | &#10004; | &#10004; | &#10004; |
+| French  \n (Canadian) | | | &#10004; |
+| French  \n (France) | | | &#10004; |
+| German | | | &#10004; |
+| Italian | | | &#10004; |
+| Japanese | | | &#10004; |
+| Korean | | | &#10004; |
+| Portuguese  \n (Brazilian) | | &#10004; | &#10004; |
+| Spanish  \n (Castilian) | | | &#10004; |
+| Spanish  \n (Latin American) | | &#10004; | &#10004; |
+| Spanish  \n (South American) | | | &#10004; |
 {: caption="Language support by type of voice"}
+
+### Natural voices
+{: #language-voices-natural}
+
+Table 2 lists and provides audio samples for all available expressive neural voices. The *Availability* column indicates whether each voice is generally available (GA) for production use or beta. The column also indicates whether each voice is available for [IBM Cloud]{: tag-ibm-cloud}, [IBM Cloud Pak for Data]{: tag-cp4d}, [IBM Software Hub]{: tag-teal}, or all 3 of them (no product version is cited).
+
+| Language | Availability        | Voice / Gender | Audio sample |
+|----------|:-------------------:|:--------------:|:------------:|
+| English  \n (United States) | GA | `en-US_EllieNatural`  \n Female | ![en-US_EllieNatural sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_EllieNatural.wav){: audio controls} |
+{: caption="Expressive neural languages and voices"}
 
 ### Expressive neural voices
 {: #language-voices-expressive}
 
-Table 2 lists and provides audio samples for all available expressive neural voices. The *Availability* column indicates whether each voice is generally available (GA) for production use or beta. The column also indicates whether each voice is available for [IBM Cloud]{: tag-ibm-cloud}, [IBM Cloud Pak for Data]{: tag-cp4d}, [IBM Software Hub]{: tag-teal}, or all 3 of them (no product version is cited).
+Table 3 lists and provides audio samples for all available expressive neural voices. The *Availability* column indicates whether each voice is generally available (GA) for production use or beta. The column also indicates whether each voice is available for [IBM Cloud]{: tag-ibm-cloud}, [IBM Cloud Pak for Data]{: tag-cp4d}, [IBM Software Hub]{: tag-teal}, or all 3 of them (no product version is cited).
 
 -   Expressive neural voices support additional features that are not available with other types of voices. These features include additional speaking styles, automatic emphasis of interjections, and emphasis of specified words. For more information, see [Modifying speech synthesis with expressive neural voices](/docs/text-to-speech?topic=text-to-speech-synthesis-expressive).
 -   When used with the SSML `<prosody>` element, expressive voices support only percentage values for the `rate` and `pitch` attributes. For more information, see [The `<prosody>` element](/docs/text-to-speech?topic=text-to-speech-elements#prosody_element).
@@ -83,7 +94,7 @@ To minimize the latency and response time for an expressive voice, use shorter s
 ### Enhanced neural voices
 {: #language-voices-enhanced-neural}
 
-Table 3 lists and provides audio samples for all available enhanced neural voices. The *Availability* column indicates whether each voice is generally available (GA) for production use or beta. The column also indicates whether each voice is available for [IBM Cloud]{: tag-ibm-cloud}, [IBM Cloud Pak for Data]{: tag-cp4d}, [IBM Software Hub]{: tag-teal} or all 3 of them (no product version is cited).
+Table 4 lists and provides audio samples for all available enhanced neural voices. The *Availability* column indicates whether each voice is generally available (GA) for production use or beta. The column also indicates whether each voice is available for [IBM Cloud]{: tag-ibm-cloud}, [IBM Cloud Pak for Data]{: tag-cp4d}, [IBM Software Hub]{: tag-teal} or all 3 of them (no product version is cited).
 
 | Language | Availability        | Voice / Gender | Audio sample |
 |----------|:-------------------:|:--------------:|:------------:|

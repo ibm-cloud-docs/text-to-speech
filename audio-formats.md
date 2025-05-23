@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-09-08"
+  years: 2015, 2025
+lastupdated: "2025-05-23"
 
 subcollection: text-to-speech
 
@@ -105,7 +105,7 @@ For more information, see IETF [Request for Comment (RFC) 2586](https://datatrac
 ### audio/mp3 and audio/mpeg formats
 {: #audio-mp3}
 
-*MP3* or *Motion Picture Experts Group (MPEG)* is a lossy data compression format (MP3 and MPEG refer to the same format). You can optionally specify a sampling rate other than the default 22,050 Hz.
+*MP3* or *Motion Picture Experts Group (MPEG)* is a lossy data compression format (MP3 and MPEG refer to the same format). You can optionally specify a sampling rate other than the default value. The default sampling rate is 22,050 Hz for Enhanced Neural and Expressive voices, and 24,000 Hz for Natural voices. 
 
 ### audio/mulaw format
 {: #audio-mulaw}

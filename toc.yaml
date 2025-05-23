@@ -55,7 +55,6 @@ toc:
           label: Using languages and voices
           topics:
           - voices.md
-          - voices-migrate.md
           - voices-use.md
           - voices-list.md
       - audio-formats.md

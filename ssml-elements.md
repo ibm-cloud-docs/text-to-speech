@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-03-30"
+  years: 2015, 2025
+lastupdated: "2025-05-23"
 
 subcollection: text-to-speech
 
@@ -74,6 +74,9 @@ Break size <break time="1500ms"/> 1500-millisecond pause
 ```
 {: codeblock}
 
+The `<break>` element is beta functionality for Natural voices.
+{: beta}
+
 ## The `<desc>` element
 {: #desc_element}
 
@@ -134,6 +137,9 @@ You can use the service's customization interface to define a dictionary of cust
 {: #mark_element}
 
 The `<mark>` element is supported only by the service's WebSocket interface, not by its HTTP interface, which ignores the element. For more information, see [Specifying an SSML mark](/docs/text-to-speech?topic=text-to-speech-timing#timing-mark).
+{: note}
+
+The `<mark>` element is not supported for Natural voices.
 {: note}
 
 The `<mark>` element is an empty element that places a marker into the text to be synthesized. The client is notified when all of the text that precedes the `<mark>` element has been synthesized. The element accepts a single `name` attribute that specifies a string that uniquely identifies the mark; the name must begin with an alphanumeric character. The name is returned along with the time at which the mark occurs in the synthesized audio.
@@ -219,6 +225,9 @@ The service also supports query parameters that let you adjust the rate and pitc
 
 -   [Modifying the speaking rate](/docs/text-to-speech?topic=text-to-speech-synthesis-params#params-rate-percentage)
 -   [Modifying the speaking pitch](/docs/text-to-speech?topic=text-to-speech-synthesis-params#params-pitch-percentage)
+
+The `<prosody>` element is not supported for Natural voices.
+{: note}
 
 ### Differences from the SSML version 1.1 specification
 {: #prosody-differences}
@@ -401,6 +410,21 @@ The `letters` value spells out the characters in the word within the element. (T
 <say-as interpret-as="letters">Hello</say-as>
 ```
 {: codeblock}
+
+You can also specify the value `group` or `single` with the `format` attribute. These attributes help improve legibility of alphanumeric strings like confirmation of numbers and ID. The `single` format adds more silence while spelling-out characters one-by-one. For example:
+
+```xml
+<say-as interpret-as="letters" format=“single”>112A567B</say-as>
+```
+{: codeblock}
+
+The `group` format adds a longer silence when we switch from digits to letters and vice-versa, and after reading every 3 or 4 same type of characters. For example:
+
+```xml
+<say-as interpret-as="letters" format=“group”> 3174A2W486</say-as>
+```
+{: codeblock}
+
 
 #### `number`
 {: #say-as-number}
