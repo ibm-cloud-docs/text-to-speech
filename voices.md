@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-05-23"
+lastupdated: "2025-05-27"
 
 subcollection: text-to-speech
 
@@ -63,7 +63,7 @@ Table 2 lists and provides audio samples for all available expressive neural voi
 | Language | Availability        | Voice / Gender | Audio sample |
 |----------|:-------------------:|:--------------:|:------------:|
 | English  \n (United States) | GA | `en-US_EllieNatural`  \n Female | ![en-US_EllieNatural sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_EllieNatural.wav){: audio controls} |
-{: caption="Expressive neural languages and voices"}
+{: caption="Natural languages and voices"}
 
 ### Expressive neural voices
 {: #language-voices-expressive}
