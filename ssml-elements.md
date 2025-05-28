@@ -411,7 +411,7 @@ The `letters` value spells out the characters in the word within the element. (T
 ```
 {: codeblock}
 
-You can also specify the value `group` or `single` with the `format` attribute. These attributes help improve legibility of alphanumeric strings like confirmation of numbers and ID. The `single` format adds more silence while spelling-out characters one-by-one. The `group` format adds a longer silence when we switch from digits to letters and vice-versa, and after reading every 3 or 4 same type of characters.
+You can also specify the value `group` or `single` with the optional `format` attribute. These attributes help improve legibility of alphanumeric strings like confirmation of numbers and ID. The `single` format adds more silence while spelling-out characters one-by-one. The `group` format adds a longer silence when we switch from digits to letters and vice-versa, and after reading every 3 or 4 same type of characters.
 
 ```xml
 <say-as interpret-as="letters" format=“single”>112A567B</say-as>
