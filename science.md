@@ -13,7 +13,7 @@ subcollection: text-to-speech
 # The science behind the service
 {: #science}
 
-The {{site.data.keyword.texttospeechfull}} service offers voices that rely on [natural voices](#science-natural), [expressive voices](#science-expressive) and [neural voices](#science-neural). A brief overview of each of these voices follows. 
+The {{site.data.keyword.texttospeechfull}} service offers voices that rely on [natural voices](#science-natural), [expressive voices](#science-expressive) and [enhanced neural voices](#science-neural). A brief overview of each of these voices follows. 
 {: shortdesc}
 
 ## Natural voices
