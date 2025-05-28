@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-05-27"
+lastupdated: "2025-05-28"
 
 subcollection: text-to-speech
 
@@ -58,7 +58,7 @@ Table 1 shows the service's support for languages by type of voice. The followin
 ### Natural voices
 {: #language-voices-natural}
 
-Table 2 lists and provides audio samples for all available expressive neural voices. The *Availability* column indicates whether each voice is generally available (GA) for production use or beta. The column also indicates whether each voice is available for [IBM Cloud]{: tag-ibm-cloud}, [IBM Cloud Pak for Data]{: tag-cp4d}, [IBM Software Hub]{: tag-teal}, or all 3 of them (no product version is cited).
+Table 2 lists and provides audio samples for all available Natural voices. The *Availability* column indicates whether each voice is generally available (GA) for production use or beta. The column also indicates whether each voice is available for [IBM Cloud]{: tag-ibm-cloud}, [IBM Cloud Pak for Data]{: tag-cp4d}, [IBM Software Hub]{: tag-teal}, or all 3 of them (no product version is cited).
 
 | Language | Availability        | Voice / Gender | Audio sample |
 |----------|:-------------------:|:--------------:|:------------:|
