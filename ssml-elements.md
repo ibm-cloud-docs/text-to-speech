@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-05-28"
+lastupdated: "2025-05-29"
 
 subcollection: text-to-speech
 
@@ -415,10 +415,6 @@ You can also specify the value `group` or `single` with the optional `format` at
 
 ```xml
 <say-as interpret-as="letters" format=“single”>112A567B</say-as>
-```
-{: codeblock}
-
-```xml
 <say-as interpret-as="letters" format=“group”>3174A2W486</say-as>
 ```
 {: codeblock}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-05-23"
+lastupdated: "2025-05-29"
 
 keywords: text to speech release notes,text to speech for IBM cloud release notes
 
@@ -32,11 +32,9 @@ For information about releases and updates of the service for {{site.data.keywor
 {: release-note}
 
 New generation of voices - Natural voices
-:   The service now supports a new generation of voices called the Natural Voices, with a new voice for US English:
-    -   `en-US_EllieNatural`
+:   The service now supports a new generation of voices called the Natural Voices, with a new voice for US English: `en-US_EllieNatural`. It supports an additional optional attribute for `<say-as interpret-as="letters">` SSML tag. You can now specify the value `group` or `single` with the optional `format` attribute. These attributes help improve the legibility of alphanumeric strings like confirmation of numbers and ID.
 
-    Natural Voices provide advanced performance in terms of naturalness and expressiveness. These voices use various techniques to provide an edge over Expressive voices.
-    For more information, see [Natural voices](/docs/text-to-speech?topic=text-to-speech-voices#language-voices-natural).
+    Natural Voices provide advanced performance in terms of naturalness and expressiveness. These voices use various techniques to provide an edge over Expressive voices. For more information, see [Natural voices](/docs/text-to-speech?topic=text-to-speech-voices#language-voices-natural).
 
 ## 17 February 2025
 {: #text-to-speech-17february2025}
