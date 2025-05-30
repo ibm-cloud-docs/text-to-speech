@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-03-30"
+  years: 2015, 2025
+lastupdated: "2025-05-23"
 
 subcollection: text-to-speech
 
@@ -21,7 +21,7 @@ You can access the speech synthesis capabilities of the {{site.data.keyword.text
 
 The service supports speech synthesis with voices for the languages listed in [Language support](/docs/speech-to-text?topic=speech-to-text-about#about-languages). For different languages, the service offers female voices, male voices, or both. Some languages and voices might be supported for {{site.data.keyword.cloud}} only.
 
-All of the service's voices use neural voice technology, which produces more natural-sounding speech. The service offers two types of voices, *expressive neural* and *enhanced neural*, which have different qualities and features. For information about the types of voices and about the supported languages and voices for each type, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
+All of the service's voices use neural voice technology, which produces more natural-sounding speech. The service offers three types of voices, *natural*, *expressive neural*, and *enhanced neural*, which have different qualities and features. For information about the types of voices and about the supported languages and voices for each type, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
 
 ## Using audio formats
 {: #features-audio-formats}
@@ -78,7 +78,7 @@ The `rate_percentage` parameter is beta functionality.
 ### Modifying the speaking pitch
 {: #features-pitch}
 
-To modify the global pitch of speech synthesis for a request, you can use the `rate_pitch` query parameter. The speaking pitch represents the tone of the speech that the service synthesizes. It represents how high or low the tone of the voice is perceived by the listener. A higher pitch results in speech that is spoken at a higher tone and is perceived as a higher voice; a lower pitch results in speech that is spoken in a lower tone and is perceived as a lower voice. The parameter changes the per-voice default pitch for an entire request. For more information, see [Modifying the speaking pitch](/docs/text-to-speech?topic=text-to-speech-synthesis-params#params-pitch-percentage).
+To modify the global pitch of speech synthesis for a request, you can use the `pitch_percentage` query parameter. The speaking pitch represents the tone of the speech that the service synthesizes. It represents how high or low the tone of the voice is perceived by the listener. A higher pitch results in speech that is spoken at a higher tone and is perceived as a higher voice; a lower pitch results in speech that is spoken in a lower tone and is perceived as a lower voice. The parameter changes the per-voice default pitch for an entire request. For more information, see [Modifying the speaking pitch](/docs/text-to-speech?topic=text-to-speech-synthesis-params#params-pitch-percentage).
 
 The `pitch_percentage` parameter is beta functionality.
 {: beta}
@@ -97,6 +97,9 @@ The `spell_out_mode` parameter is beta functionality that is supported only for 
 With the WebSocket interface, you can obtain timing information about the location of words in the audio that the service returns. Timing information is useful for synchronizing the input text and the audio.
 
 You can use the SSML `<mark>` element to identify specific locations, such as word boundaries, in the audio. For languages other than Japanese, you can also request word timing information for all words of the input text. For more information, see [Generating word timings](/docs/text-to-speech?topic=text-to-speech-timing).
+
+Word timings are not supported for Natural voices. 
+{: note}
 
 ## Using speech synthesis features with expressive neural voice
 {: #features-synthesis-expressive}
