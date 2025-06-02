@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-05-30"
+lastupdated: "2025-06-02"
 
 keywords: text to speech release notes,text to speech for IBM cloud release notes
 
@@ -131,9 +131,7 @@ Important: End of service for all neural voices
 
     New enhanced neural and expressive neural voices are available for the Australian English, Korean, and Netherlands Dutch languages. *You must migrate to one of the new voices for Australian English, Korean, or Netherlands Dutch to continue by using the obsolete languages.*
 
-    For more information, see
-    -   [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices)
-    -   [Migrating from neural voices](/docs/text-to-speech?topic=text-to-speech-voices-migrate)
+    For more information, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
 
 ## 22 March 2023
 {: #text-to-speech-22march2023}
@@ -151,7 +149,6 @@ New beta Netherlands Dutch enhanced neural voice
     For more information about the new voice, its support for IPA and SPR symbols, and migrating to the new voice from the deprecated Netherlands Dutch neural voices, see
     -   [Enhanced neural voices](/docs/text-to-speech?topic=text-to-speech-voices#language-voices-enhanced-neural)
     -   [Dutch (Netherlands) symbols](/docs/text-to-speech?topic=text-to-speech-nlSymbols-new)
-    -   [Migrating from neural voices](/docs/text-to-speech?topic=text-to-speech-voices-migrate)
 
 Defect fix: Update Korean phonetic symbols in documentation
 :   **Defect fix:** In the documentation for Korean SPR symbols, two-character symbols for consonants are now enclosed in single quotation marks, making them a single symbol. Previously, they were shown as two separate symbols, without enclosing quotation marks. For more information, see [Consonants (Korean)](/docs/text-to-speech?topic=text-to-speech-koSymbols-new#koConsonants-new).
@@ -178,9 +175,7 @@ Important: Pending end of service for all neural voices
 
     New enhanced neural and expressive neural voices are already available for the Australian English and Korean languages. In the coming weeks, a new enhanced neural voice is available for the Netherlands Dutch language. *You must migrate to one of the new voices for Australian English, Korean, or Netherlands Dutch before 31 March 2023.*
 
-    For more information, see
-    -   [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices)
-    -   [Migrating from neural voices](/docs/text-to-speech?topic=text-to-speech-voices-migrate)
+    For more information, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
 
 ## 27 February 2023
 {: #text-to-speech-27february2023}
@@ -195,16 +190,14 @@ New Australian English expressive neural voices
     -   [Expressive neural voices](/docs/text-to-speech?topic=text-to-speech-voices#language-voices-expressive)
     -   [English (Australian) symbols](/docs/text-to-speech?topic=text-to-speech-auSymbols-new)
 
-    You can migrate from Australian English neural voices that are deprecated to the new expressive neural voices. For more information, see
-    -   [Migrating from neural voices](/docs/text-to-speech?topic=text-to-speech-voices-migrate)
+    You can migrate from Australian English neural voices that are deprecated to the new expressive neural voices. 
 
 New Korean enhanced neural voice
 :   The service now supports a new enhanced neural female voice for Korean: `ko-KR_JinV3Voice`. The new voice is generally available (GA) for production use. It supports the use of both the standard International Phonetic Alphabet (IPA) and {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR) phonetic symbols. For more information, see
     -   [Enhanced neural voices](/docs/text-to-speech?topic=text-to-speech-voices#language-voices-enhanced-neural)
     -   [Korean symbols](/docs/text-to-speech?topic=text-to-speech-koSymbols-new)
 
-    You can migrate from Korean neural voices that are deprecated to the new enhanced neural voice. For more information, see
-    -   [Migrating from neural voices](/docs/text-to-speech?topic=text-to-speech-voices-migrate)
+    You can migrate from Korean neural voices that are deprecated to the new enhanced neural voice. 
 
 Defect fix: French Canadian voice now handles numeric times properly
 :   **Defect fix:** The French and Canadian voices now pronounce times like `19:41` correctly. Previously, the voices were omitting elements of the time in the synthesized audio.
