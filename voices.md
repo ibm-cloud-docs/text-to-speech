@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-05-28"
+lastupdated: "2025-06-30"
 
 subcollection: text-to-speech
 
@@ -100,7 +100,6 @@ Table 4 lists and provides audio samples for all available enhanced neural voice
 |----------|:-------------------:|:--------------:|:------------:|
 | Dutch  \n (Netherlands) | Beta | `nl-NL_MerelV3Voice`  \n Female | ![nl-NL_MerelV3Voive sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/nl-NL_MerelV3Voice.wav){: audio controls} |
 | English  \n (United Kingdom) | GA | `en-GB_CharlotteV3Voice`  \n Female | ![en-GB_CharlotteV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-GB_CharlotteV3Voice.wav){: audio controls} |
-| | GA | `en-GB_JamesV3Voice`  \n Male | ![en-GB_JamesV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-GB_JamesV3Voice.wav){: audio controls} |
 | | GA | `en-GB_KateV3Voice`  \n Female | ![en-GB_KateV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-GB_KateV3Voice.wav){: audio controls} |
 | English  \n (United States) | GA | `en-US_AllisonV3Voice`  \n Female | ![en-US_AllisonV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_AllisonV3Voice.wav){: audio controls} |
 | | GA | `en-US_EmilyV3Voice`  \n Female | ![en-US_EmilyV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_EmilyV3Voice.wav){: audio controls} |

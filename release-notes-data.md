@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-05-05"
+lastupdated: "2025-06-30"
 
 keywords: text to speech release notes,text to speech for IBM cloud pak for data release notes
 
@@ -1155,8 +1155,8 @@ Version 1.2 is available
 :   {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} version 1.2 is now available. Installation and administration of the service include many changes. This version supports {{site.data.keyword.icp4dfull_notm}} versions 3.5 and 3.0.1, and Red Hat OpenShift versions 4.5 and 3.11.
 
 New voices
-:   The service now offers three new voices:
-    -   UK English: `en-GB_CharlotteV3Voice` and `en-GB_JamesV3Voice`
+:   The service now offers two new voices:
+    -   UK English: `en-GB_CharlotteV3Voice`
     -   French: `fr-FR_NicolasV3Voice`
 
     The service also offers an improved version of the existing UK voice, `en-KateV3Voice`. For more information about all supported languages and voices, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
