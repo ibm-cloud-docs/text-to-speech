@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-06-03"
+lastupdated: "2025-06-30"
 
 keywords: text to speech release notes,text to speech for IBM cloud release notes
 
@@ -637,8 +637,8 @@ A customization interface is now generally available
 {: release-note}
 
 New UK English and French neural voices
-:   The service now offers three new neural voices:
-    -   UK English: `en-GB_CharlotteV3Voice` and `en-GB_JamesV3Voice`
+:   The service now offers two new neural voices:
+    -   UK English: `en-GB_CharlotteV3Voice`
     -   French: `fr-FR_NicolasV3Voice`
 
     It also offers an improved version of the existing UK neural voice, `en-GB_KateV3Voice`. For more information about all available voices, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices).
