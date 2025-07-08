@@ -32,7 +32,7 @@ For information about releases and updates of the service for {{site.data.keywor
 {: release-note}
 
 Deprecation of V1 voices
-:   **Important:** Effective **06 September 2025**, all V1 voices will be deprecated from the service. *All the V1 voices that are deprecated will be automatically updated to the same V3 voices.* 
+:   Effective **06 September 2025**, all V1 voices will be deprecated from the service. All the V1 voices that are deprecated will be automatically updated to the same V3 voices.
 
 ## 19 May 2025
 {: #text-to-speech-19may2025}
