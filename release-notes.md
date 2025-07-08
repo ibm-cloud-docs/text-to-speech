@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-06-30"
+lastupdated: "2025-07-08"
 
 keywords: text to speech release notes,text to speech for IBM cloud release notes
 
@@ -26,6 +26,13 @@ For information about known limitations of the service, see [Known limitations](
 
 For information about releases and updates of the service for {{site.data.keyword.icp4dfull_notm}}, see [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes-data).
 {: note}
+
+## 08 July 2025
+{: #text-to-speech-08july2025}
+{: release-note}
+
+Deprecation of V1 voices
+:   **Important:** Effective **06 September 2025**, all V1 voices will be deprecated from the service. *All the V1 voices that are deprecated will be automatically updated to the same V3 voices.* 
 
 ## 19 May 2025
 {: #text-to-speech-19may2025}
