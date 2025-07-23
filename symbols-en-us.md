@@ -10,7 +10,7 @@ subcollection: text-to-speech
 
 {{site.data.keyword.attribute-definition-list}}
 
-# English (United States) symbols
+# English (United States & Canada) symbols
 {: #usSymbols}
 
 The service supports the following symbols for English (United States & Canada).

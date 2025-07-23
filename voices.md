@@ -70,7 +70,7 @@ Table 2 lists and provides audio samples for all available Natural voices. The *
 | English  \n (United States) | GA | `en-US_EmmaNatural`  \n Female | ![en-US_EmmaNatural sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_EmmaNatural.wav){: audio controls} |
 | English  \n (United States) | GA | `en-US_EthanNatural`  \n Male | ![en-US_EthanNatural sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_EthanNatural.wav){: audio controls} |
 | English  \n (United States) | GA | `en-US_JacksonNatural`  \n Male | ![en-US_JacksonNatural sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_JacksonNatural.wav){: audio controls} |
-| English  \n (United States) | GA | `en-US_VictoriaNatural`  \n Female | ![en-US_VictoriaNatural sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_VictoriaNatural	.wav){: audio controls} |
+| English  \n (United States) | GA | `en-US_VictoriaNatural`  \n Female | ![en-US_VictoriaNatural sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_VictoriaNatural.wav){: audio controls} |
 {: caption="Natural languages and voices"}
 
 ### Expressive neural voices
