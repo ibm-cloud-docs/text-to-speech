@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-07-09"
+lastupdated: "2025-07-23"
 
 keywords: text to speech release notes,text to speech for IBM cloud release notes
 
@@ -26,6 +26,30 @@ For information about known limitations of the service, see [Known limitations](
 
 For information about releases and updates of the service for {{site.data.keyword.icp4dfull_notm}}, see [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes-data).
 {: note}
+
+## 24 July 2025
+{: #text-to-speech-24july2025}
+{: release-note}
+
+New English Natural Voices
+:   The service now supports four new Natural voices - two male and two female, for US English:
+    -   `en-US_EmmaNatural`
+    -   `en-US_EthanNatural`
+    -   `en-US_JacksonNatural`
+    -   `en-US_VictoriaNatural`
+
+    The service now supports two new Natural voices - male and female, for UK English:
+    -   `en-GB_ChloeNatural`
+    -   `en-GB_GeorgeNatural`
+
+    The service now supports a new female Natural voice for CA English:
+    -   `en-CA_HannahNatural`
+
+    Natural Voices provide advanced performance in terms of naturalness and expressiveness. These voices use various techniques to provide an edge over Expressive voices. For more information, see 
+    -   [Natural voices](/docs/text-to-speech?topic=text-to-speech-voices#language-voices-natural)
+    -   [English (United States & Canada) symbols](/docs/text-to-speech?topic=text-to-speech-usSymbols)
+    -   [English (United Kingdom) symbols](/docs/text-to-speech?topic=text-to-speech-gbSymbols)
+
 
 ## 09 July 2025
 {: #text-to-speech-08july2025}

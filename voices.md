@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-06-30"
+lastupdated: "2025-07-23"
 
 subcollection: text-to-speech
 
@@ -40,7 +40,8 @@ Table 1 shows the service's support for languages by type of voice. The followin
 | Language | Natural voices | Expressive neural voices | Enhanced neural voices |
 |----------|:---------------:|:-----------------------:|:-----------------------|
 | Dutch  \n (Netherlands) | | | &#10004; |
-| English  \n (United Kingdom) | | &#10004; | &#10004; |
+| English  \n (Canadian) | &#10004; | |  |
+| English  \n (United Kingdom) | &#10004; | &#10004; | &#10004; |
 | English  \n (Australian) | | &#10004; | |
 | English  \n (United States) | &#10004; | &#10004; | &#10004; |
 | French  \n (Canadian) | | | &#10004; |
@@ -62,7 +63,14 @@ Table 2 lists and provides audio samples for all available Natural voices. The *
 
 | Language | Availability        | Voice / Gender | Audio sample |
 |----------|:-------------------:|:--------------:|:------------:|
+| English  \n (Canadian) | GA | `en-CA_HannahNatural`  \n Female | ![en-CA_HannahNatural sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-CA_HannahNatural.wav){: audio controls} |
+| English  \n (United Kingdom) | GA | `en-GB_ChloeNatural`  \n Female | ![en-GB_ChloeNatural sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-GB_ChloeNatural.wav){: audio controls} |
+| English  \n (United Kingdom) | GA | `en-GB_GeorgeNatural`  \n Male | ![en-GB_GeorgeNatural sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-GB_GeorgeNatural.wav){: audio controls} |
 | English  \n (United States) | GA | `en-US_EllieNatural`  \n Female | ![en-US_EllieNatural sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_EllieNatural.wav){: audio controls} |
+| English  \n (United States) | GA | `en-US_EmmaNatural`  \n Female | ![en-US_EmmaNatural sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_EmmaNatural.wav){: audio controls} |
+| English  \n (United States) | GA | `en-US_EthanNatural`  \n Male | ![en-US_EthanNatural sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_EthanNatural.wav){: audio controls} |
+| English  \n (United States) | GA | `en-US_JacksonNatural`  \n Male | ![en-US_JacksonNatural sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_JacksonNatural.wav){: audio controls} |
+| English  \n (United States) | GA | `en-US_VictoriaNatural`  \n Female | ![en-US_VictoriaNatural sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_VictoriaNatural	.wav){: audio controls} |
 {: caption="Natural languages and voices"}
 
 ### Expressive neural voices
