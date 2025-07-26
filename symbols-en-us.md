@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-03-21"
+  years: 2015, 2025
+lastupdated: "2025-07-23"
 
 subcollection: text-to-speech
 
@@ -10,10 +10,10 @@ subcollection: text-to-speech
 
 {{site.data.keyword.attribute-definition-list}}
 
-# English (United States) symbols
+# English (United States & Canada) symbols
 {: #usSymbols}
 
-The service supports the following symbols for United States (US) English.
+The service supports the following symbols for English (United States & Canada).
 
 ## Regular vowels
 {: #usRegularVowels}

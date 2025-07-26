@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-05-29"
+lastupdated: "2025-07-23"
 
 subcollection: text-to-speech
 
@@ -76,6 +76,9 @@ Break size <break time="1500ms"/> 1500-millisecond pause
 
 The `<break>` element is beta functionality for Natural voices.
 {: beta}
+
+When used with the time attribute and Expressive or Natural voices, the `<break>` element introduces a pause of approximately the specified duration, though the exact timing may vary based on the voice and context.
+{: note}
 
 ## The `<desc>` element
 {: #desc_element}
