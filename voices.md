@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-07-23"
+lastupdated: "2025-10-30"
 
 subcollection: text-to-speech
 
@@ -50,7 +50,7 @@ Table 1 shows the service's support for languages by type of voice. The followin
 | Italian | | | &#10004; |
 | Japanese | | | &#10004; |
 | Korean | | | &#10004; |
-| Portuguese  \n (Brazilian) | | &#10004; | &#10004; |
+| Portuguese  \n (Brazilian) | &#10004; | &#10004; | &#10004; |
 | Spanish  \n (Castilian) | | | &#10004; |
 | Spanish  \n (Latin American) | | &#10004; | &#10004; |
 | Spanish  \n (South American) | | | &#10004; |
@@ -71,6 +71,8 @@ Table 2 lists and provides audio samples for all available Natural voices. The *
 | English  \n (United States) | GA | `en-US_EthanNatural`  \n Male | ![en-US_EthanNatural sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_EthanNatural.wav){: audio controls} |
 | English  \n (United States) | GA | `en-US_JacksonNatural`  \n Male | ![en-US_JacksonNatural sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_JacksonNatural.wav){: audio controls} |
 | English  \n (United States) | GA | `en-US_VictoriaNatural`  \n Female | ![en-US_VictoriaNatural sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_VictoriaNatural.wav){: audio controls} |
+| Portuguese  \n (Brazilian) | GA | `pt-BR_LucasNatural`  \n Male | ![pt-BR_LucasNatural sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/pt-BR_LucasNatural.wav){: audio controls} |
+| Portuguese  \n (Brazilian) | GA | `pt-BR_CamilaNatural`  \n Female | ![pt-BR_CamilaNatural sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/pt-BR_CamilaNatural.wav){: audio controls} |
 {: caption="Natural languages and voices"}
 
 ### Expressive neural voices
