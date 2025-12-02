@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-10-30"
+lastupdated: "2025-12-02"
 
 keywords: text to speech release notes,text to speech for IBM cloud release notes
 
@@ -26,6 +26,19 @@ For information about known limitations of the service, see [Known limitations](
 
 For information about releases and updates of the service for {{site.data.keyword.icp4dfull_notm}}, see [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes-data).
 {: note}
+
+## 04 December 2025
+{: #text-to-speech-04dec2025}
+{: release-note}
+
+New Latin American Spanish Natural Voices
+:   The service now supports two new Natural voices - one male and one female, for Latin American Spanish:
+    -   `es-LA_AlejandroNatural`
+    -   `es-LA_DanielaNatural`
+
+    Natural Voices provide advanced performance in terms of naturalness and expressiveness. These voices use various techniques to provide an edge over Expressive voices. For more information, see 
+    -   [Natural voices](/docs/text-to-speech?topic=text-to-speech-voices#language-voices-natural)
+    -   [Spanish symbols](/docs/text-to-speech?topic=text-to-speech-esSymbols)
 
 ## 31 October 2025
 {: #text-to-speech-31oct2025}
