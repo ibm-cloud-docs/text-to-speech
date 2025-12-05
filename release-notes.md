@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-12-02"
+lastupdated: "2025-12-05"
 
 keywords: text to speech release notes,text to speech for IBM cloud release notes
 
@@ -27,8 +27,8 @@ For information about known limitations of the service, see [Known limitations](
 For information about releases and updates of the service for {{site.data.keyword.icp4dfull_notm}}, see [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes-data).
 {: note}
 
-## 04 December 2025
-{: #text-to-speech-04dec2025}
+## 05 December 2025
+{: #text-to-speech-05dec2025}
 {: release-note}
 
 New Latin American Spanish Natural Voices
