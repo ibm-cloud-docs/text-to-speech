@@ -32,7 +32,7 @@ For information about releases and updates of the service for {{site.data.keywor
 {: release-note}
 
 New English Natural Voices
-:   The service now supports two new Natural voices - one male and one female, for AU Spanish:
+:   The service now supports two new Natural voices - one male and one female, for AU English:
     -   `en-AU_JackNatural`
     -   `en-AU_HeidiNatural`
 
