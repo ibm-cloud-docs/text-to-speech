@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2025
-lastupdated: "2025-12-02"
+  years: 2015, 2026
+lastupdated: "2026-01-07"
 
 subcollection: text-to-speech
 
@@ -42,7 +42,7 @@ Table 1 shows the service's support for languages by type of voice. The followin
 | Dutch  \n (Netherlands) | | | &#10004; |
 | English  \n (Canadian) | &#10004; | |  |
 | English  \n (United Kingdom) | &#10004; | &#10004; | &#10004; |
-| English  \n (Australian) | | &#10004; | |
+| English  \n (Australian) | &#10004; | &#10004; | |
 | English  \n (United States) | &#10004; | &#10004; | &#10004; |
 | French  \n (Canadian) | | | &#10004; |
 | French  \n (France) | | | &#10004; |
@@ -63,6 +63,8 @@ Table 2 lists and provides audio samples for all available Natural voices. The *
 
 | Language | Availability        | Voice / Gender | Audio sample |
 |----------|:-------------------:|:--------------:|:------------:|
+| English  \n (Australian) | GA | `en-AU_HeidiNatural`  \n Female | ![en-AU_HeidiNatural sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-AU_HeidiNatural.wav){: audio controls} |
+| English  \n (Australian) | GA | `en-AU_JackNatural`  \n Female | ![en-AU_JackNatural sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-AU_JackNatural.wav){: audio controls} |
 | English  \n (Canadian) | GA | `en-CA_HannahNatural`  \n Female | ![en-CA_HannahNatural sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-CA_HannahNatural.wav){: audio controls} |
 | English  \n (United Kingdom) | GA | `en-GB_ChloeNatural`  \n Female | ![en-GB_ChloeNatural sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-GB_ChloeNatural.wav){: audio controls} |
 | English  \n (United Kingdom) | GA | `en-GB_GeorgeNatural`  \n Male | ![en-GB_GeorgeNatural sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-GB_GeorgeNatural.wav){: audio controls} |

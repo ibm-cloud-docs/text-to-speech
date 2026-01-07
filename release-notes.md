@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2025
-lastupdated: "2025-12-05"
+  years: 2015, 2026
+lastupdated: "2026-01-07"
 
 keywords: text to speech release notes,text to speech for IBM cloud release notes
 
@@ -26,6 +26,19 @@ For information about known limitations of the service, see [Known limitations](
 
 For information about releases and updates of the service for {{site.data.keyword.icp4dfull_notm}}, see [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes-data).
 {: note}
+
+## 08 January 2026
+{: #text-to-speech-08jan2026}
+{: release-note}
+
+New English Natural Voices
+:   The service now supports two new Natural voices - one male and one female, for AU Spanish:
+    -   `en-AU_JackNatural`
+    -   `en-AU_HeidiNatural`
+
+    Natural Voices provide advanced performance in terms of naturalness and expressiveness. These voices use various techniques to provide an edge over Expressive voices. For more information, see 
+    -   [Natural voices](/docs/text-to-speech?topic=text-to-speech-voices#language-voices-natural)
+    -   [English (Australian) symbols](/docs/text-to-speech?topic=text-to-speech-auSymbols-new)
 
 ## 05 December 2025
 {: #text-to-speech-05dec2025}
