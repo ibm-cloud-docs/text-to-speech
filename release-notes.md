@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2026
-lastupdated: "2026-01-07"
+lastupdated: "2026-01-13"
 
 keywords: text to speech release notes,text to speech for IBM cloud release notes
 
@@ -27,8 +27,8 @@ For information about known limitations of the service, see [Known limitations](
 For information about releases and updates of the service for {{site.data.keyword.icp4dfull_notm}}, see [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes-data).
 {: note}
 
-## 08 January 2026
-{: #text-to-speech-08jan2026}
+## 13 January 2026
+{: #text-to-speech-13jan2026}
 {: release-note}
 
 New English Natural Voices
