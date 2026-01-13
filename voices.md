@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2025
-lastupdated: "2025-12-02"
+  years: 2015, 2026
+lastupdated: "2026-01-08"
 
 subcollection: text-to-speech
 
@@ -42,7 +42,7 @@ Table 1 shows the service's support for languages by type of voice. The followin
 | Dutch  \n (Netherlands) | | | &#10004; |
 | English  \n (Canadian) | &#10004; | |  |
 | English  \n (United Kingdom) | &#10004; | &#10004; | &#10004; |
-| English  \n (Australian) | | &#10004; | |
+| English  \n (Australian) | &#10004; | &#10004; | |
 | English  \n (United States) | &#10004; | &#10004; | &#10004; |
 | French  \n (Canadian) | | | &#10004; |
 | French  \n (France) | | | &#10004; |
@@ -63,6 +63,8 @@ Table 2 lists and provides audio samples for all available Natural voices. The *
 
 | Language | Availability        | Voice / Gender | Audio sample |
 |----------|:-------------------:|:--------------:|:------------:|
+| English  \n (Australian) | GA | `en-AU_HeidiNatural`  \n Female | ![en-AU_HeidiNatural sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-AU_HeidiNatural.wav){: audio controls} |
+| English  \n (Australian) | GA | `en-AU_JackNatural`  \n Male | ![en-AU_JackNatural sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-AU_JackNatural.wav){: audio controls} |
 | English  \n (Canadian) | GA | `en-CA_HannahNatural`  \n Female | ![en-CA_HannahNatural sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-CA_HannahNatural.wav){: audio controls} |
 | English  \n (United Kingdom) | GA | `en-GB_ChloeNatural`  \n Female | ![en-GB_ChloeNatural sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-GB_ChloeNatural.wav){: audio controls} |
 | English  \n (United Kingdom) | GA | `en-GB_GeorgeNatural`  \n Male | ![en-GB_GeorgeNatural sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-GB_GeorgeNatural.wav){: audio controls} |
@@ -93,11 +95,11 @@ To minimize the latency and response time for an expressive voice, use shorter s
 | Language | Availability        | Voice / Gender | Audio sample |
 |----------|:-------------------:|:--------------:|:------------:|
 | English  \n (Australian) | GA | `en-AU_HeidiExpressive`  \n Female | ![en-AU_HeidiExpressive sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-AU_HeidiExpressive.wav){: audio controls} |
-| | GA | `en-AU_JackExpressive`  \n Male | ![en-AU_JackExpressive sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-AU_JackExpressive.wav){: audio controls} |
+| English  \n (Australian) | GA | `en-AU_JackExpressive`  \n Male | ![en-AU_JackExpressive sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-AU_JackExpressive.wav){: audio controls} |
 | English  \n (United States) | GA | `en-US_AllisonExpressive`  \n Female | ![en-US_AllisonExpressive sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_AllisonExpressive.wav){: audio controls} |
-| | GA | `en-US_EmmaExpressive`  \n Female | ![en-US_EmmaExpressive sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_EmmaExpressive.wav){: audio controls} |
-| | GA | `en-US_LisaExpressive`  \n Female | ![en-US_LisaExpressive sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_LisaExpressive.wav){: audio controls} |
-| | GA | `en-US_MichaelExpressive`  \n Male | ![en-US_MichaelExpressive sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_MichaelExpressive.wav){: audio controls} |
+| English  \n (United States) | GA | `en-US_EmmaExpressive`  \n Female | ![en-US_EmmaExpressive sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_EmmaExpressive.wav){: audio controls} |
+| English  \n (United States) | GA | `en-US_LisaExpressive`  \n Female | ![en-US_LisaExpressive sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_LisaExpressive.wav){: audio controls} |
+| English  \n (United States) | GA | `en-US_MichaelExpressive`  \n Male | ![en-US_MichaelExpressive sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_MichaelExpressive.wav){: audio controls} |
 | English  \n (United Kingdom) | GA | `en-GB_GeorgeExpressive`  \n Male | ![en-GB_GeorgeExpressive sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-GB_GeorgeExpressive.wav){: audio controls} |
 | Portuguese  \n (Brazilian) | GA | `pt-BR_LucasExpressive`  \n Male | ![pt-BR_LucasExpressive sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/pt-BR_LucasExpressive.wav){: audio controls} |
 | Spanish  \n (Latin American) | GA | `es-LA_DanielaExpressive`  \n Female | ![es-LA_DanielaExpressive sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/es-LA_DanielaExpressive.wav){: audio controls} |
@@ -112,26 +114,26 @@ Table 4 lists and provides audio samples for all available enhanced neural voice
 |----------|:-------------------:|:--------------:|:------------:|
 | Dutch  \n (Netherlands) | Beta | `nl-NL_MerelV3Voice`  \n Female | ![nl-NL_MerelV3Voive sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/nl-NL_MerelV3Voice.wav){: audio controls} |
 | English  \n (United Kingdom) | GA | `en-GB_CharlotteV3Voice`  \n Female | ![en-GB_CharlotteV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-GB_CharlotteV3Voice.wav){: audio controls} |
-| | GA | `en-GB_KateV3Voice`  \n Female | ![en-GB_KateV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-GB_KateV3Voice.wav){: audio controls} |
+| English  \n (United Kingdom) | GA | `en-GB_KateV3Voice`  \n Female | ![en-GB_KateV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-GB_KateV3Voice.wav){: audio controls} |
 | English  \n (United States) | GA | `en-US_AllisonV3Voice`  \n Female | ![en-US_AllisonV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_AllisonV3Voice.wav){: audio controls} |
-| | GA | `en-US_EmilyV3Voice`  \n Female | ![en-US_EmilyV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_EmilyV3Voice.wav){: audio controls} |
-| | GA | `en-US_HenryV3Voice`  \n Male | ![en-US_HenryV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_HenryV3Voice.wav){: audio controls} |
-| | GA | `en-US_KevinV3Voice`  \n Male | ![en-US_KevinV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_KevinV3Voice.wav){: audio controls} |
-| | GA | `en-US_LisaV3Voice`  \n Female | ![en-US_LisaV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_LisaV3Voice.wav){: audio controls} |
-| | GA | `en-US_MichaelV3Voice`  \n Male | ![en-US_MichaelV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_MichaelV3Voice.wav){: audio controls} |
-| | GA | `en-US_OliviaV3Voice`  \n Female | ![en-US_OliviaV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_OliviaV3Voice.wav){: audio controls} |
+| English  \n (United States) | GA | `en-US_EmilyV3Voice`  \n Female | ![en-US_EmilyV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_EmilyV3Voice.wav){: audio controls} |
+| English  \n (United States) | GA | `en-US_HenryV3Voice`  \n Male | ![en-US_HenryV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_HenryV3Voice.wav){: audio controls} |
+| English  \n (United States) | GA | `en-US_KevinV3Voice`  \n Male | ![en-US_KevinV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_KevinV3Voice.wav){: audio controls} |
+| English  \n (United States) | GA | `en-US_LisaV3Voice`  \n Female | ![en-US_LisaV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_LisaV3Voice.wav){: audio controls} |
+| English  \n (United States) | GA | `en-US_MichaelV3Voice`  \n Male | ![en-US_MichaelV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_MichaelV3Voice.wav){: audio controls} |
+| English  \n (United States) | GA | `en-US_OliviaV3Voice`  \n Female | ![en-US_OliviaV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_OliviaV3Voice.wav){: audio controls} |
 | French  \n (Canadian) | GA | `fr-CA_LouiseV3Voice`  \n Female | ![fr-Ca_LouiseV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/fr-CA_LouiseV3Voice.wav){: audio controls} |
 | French  \n (France) | GA | `fr-FR_NicolasV3Voice`  \n Male | ![fr-FR_NicolasV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/fr-FR_NicolasV3Voice.wav){: audio controls} |
-| | GA | `fr-FR_ReneeV3Voice`  \n Female | ![fr-FR_ReneeV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/fr-FR_ReneeV3Voice.wav){: audio controls} |
+| French  \n (France) | GA | `fr-FR_ReneeV3Voice`  \n Female | ![fr-FR_ReneeV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/fr-FR_ReneeV3Voice.wav){: audio controls} |
 | German | GA | `de-DE_BirgitV3Voice`  \n Female | ![de-DE_BirgitV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/de-DE_BirgitV3Voice.wav){: audio controls} |
-| | GA | `de-DE_DieterV3Voice`  \n Male | ![de-DE_DieterV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/de-DE_DieterV3Voice.wav){: audio controls} |
-| | GA | `de-DE_ErikaV3Voice`  \n Female | ![de-DE_ErikaV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/de-DE_ErikaV3Voice.wav){: audio controls} |
+| German | GA | `de-DE_DieterV3Voice`  \n Male | ![de-DE_DieterV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/de-DE_DieterV3Voice.wav){: audio controls} |
+| German | GA | `de-DE_ErikaV3Voice`  \n Female | ![de-DE_ErikaV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/de-DE_ErikaV3Voice.wav){: audio controls} |
 | Italian | GA | `it-IT_FrancescaV3Voice`  \n Female | ![it-IT_FrancescaV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/it-IT_FrancescaV3Voice.wav){: audio controls} |
 | Japanese | GA | `ja-JP_EmiV3Voice`  \n Female | ![ja-JP_EmiV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/ja-JP_EmiV3Voice.wav){: audio controls} |
 | Korean | GA | `ko-KR_JinV3Voice`  \n Female | ![ko-KR_JinV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/ko-KR_JinV3Voice.wav){: audio controls} |
 | Portuguese  \n (Brazilian) | GA | `pt-BR_IsabelaV3Voice`  \n Female | ![pt-BR_IsabelaV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/pt-BR_IsabelaV3Voice.wav){: audio controls} |
 | Spanish  \n (Castilian) | GA | `es-ES_EnriqueV3Voice`  \n Male | ![es-ES_EnriqueV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/es-ES_EnriqueV3Voice.wav){: audio controls} |
-| | GA | `es-ES_LauraV3Voice`  \n Female | ![es-ES_LauraV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/es-ES_LauraV3Voice.wav){: audio controls} |
+| Spanish  \n (Castilian) | GA | `es-ES_LauraV3Voice`  \n Female | ![es-ES_LauraV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/es-ES_LauraV3Voice.wav){: audio controls} |
 | Spanish  \n (Latin American) | GA | `es-LA_SofiaV3Voice`  \n Female | ![es-LA_SofiaV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/es-LA_SofiaV3Voice.wav){: audio controls} |
 | Spanish  \n (North American) | GA | `es-US_SofiaV3Voice`  \n Female | ![es-US_SofiaV3Voice sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/es-US_SofiaV3Voice.wav){: audio controls} |
 {: caption="Enhanced neural languages and voices"}
