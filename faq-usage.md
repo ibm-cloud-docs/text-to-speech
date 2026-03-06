@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2023
-lastupdated: "2023-03-30"
+  years: 2020, 2026
+lastupdated: "2026-03-06"
 
 keywords: faqs,frequently asked questions,question,Text to Speech
 
@@ -73,11 +73,10 @@ There is no graphical user interface for submitting text. See the [Text to Speec
 {: faq}
 {: support}
 
-You can use the Speech Synthesis Markup Language (SSML) to control aspects of the synthesis process such as pronunciation, volume, pitch, speed, and other attributes. You can also use the Tune by Example feature to tailor the prosody, intonation, and cadence of custom prompts to better suit your application needs.
+You can use the Speech Synthesis Markup Language (SSML) to control aspects of the synthesis process such as pronunciation, volume, pitch, speed, and other attributes.
 
 -   For general information about SSML, see [Understanding SSML](/docs/text-to-speech?topic=text-to-speech-ssml).
 -   For information about the supported SSML elements, see [SSML elements](/docs/text-to-speech?topic=text-to-speech-elements).
--   For information about the Tune by Example feature, see [Understanding Tune by Example](/docs/text-to-speech?topic=text-to-speech-tbe-intro).
 
 ## What programming languages can I use?
 {: #faq-sdks}
@@ -124,16 +123,6 @@ As a premium customer, you can work with {{site.data.keyword.IBM_notm}} to train
 
 To request a custom voice or for more information, complete and submit this [{{site.data.keyword.IBM_notm}} Request Form](https://forms.monday.com/forms/5fd92c54536a18f9afab8a47404bf828?r=use1){: external}.
 
-## How do I use the Tune by Example feature?
-{: #faq-tune-by-example}
-{: faq}
-
-Tune by Example lets you control exactly how specified text is spoken by the service. You provide text and spoken audio to add a custom prompt to a custom model. The spoken audio can stress different syllables or words, introduce pauses, and generally make the synthesized audio sound more natural and appropriate for its context. When you synthesize the prompt, the service duplicates the qualities of the recorded speech with its voices.
-
-You can further enhance the quality of a prompt by creating an optional speaker model that contains a sample of a speaker's voice. The service leverages the sample audio to train itself on the voice, which can help it produce higher-quality prompts for that speaker.
-
-For more information, see [Understanding Tune by Example](/docs/text-to-speech?topic=text-to-speech-tbe-intro).
-
 ## What limits exist for a custom model?
 {: #faq-custom-limits}
 {: faq}
@@ -143,7 +132,6 @@ The following limits apply to all custom models:
 -   A word in a custom entry can contain a maximum of 49 characters.
 -   A translation in a custom entry can contain a maximum of 499 characters.
 -   A custom model can include a maximum of 20,000 custom entries.
--   A custom model can include a maximum of 1000 custom prompts.
 
 For more information, see [Rules for creating custom entries](/docs/text-to-speech?topic=text-to-speech-rules).
 

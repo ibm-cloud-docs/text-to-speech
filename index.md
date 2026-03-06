@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2025
-lastupdated: "2025-02-18"
+  years: 2015, 2026
+lastupdated: "2026-03-06"
 
 subcollection: text-to-speech
 
@@ -37,8 +37,6 @@ The {{site.data.keyword.texttospeechshort}} service supports both HTTP and WebSo
 {: #about-customization}
 
 The service provides a customization interface that you can use to specify how the service pronounces unusual words that occur in your input text. You can define custom models to include dictionaries of words for your application's lexicon. For more information, see [Customizing the service](/docs/text-to-speech?topic=text-to-speech-service-features#features-customization) in the service features.
-
-With the Tune by Example feature, you can also add custom prompts to your custom models. Custom prompts let you dictate the prosody with which the service speaks user-specified prompts. For more information, see [Using Tune by Example](/docs/text-to-speech?topic=text-to-speech-service-features#features-tune-by-example) in the service features.
 
 ## Language support
 {: #about-languages}
