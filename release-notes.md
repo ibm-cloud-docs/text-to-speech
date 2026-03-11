@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2026
-lastupdated: "2026-03-06"
+lastupdated: "2026-03-11"
 
 keywords: text to speech release notes,text to speech for IBM cloud release notes
 
@@ -27,8 +27,8 @@ For information about known limitations of the service, see [Known limitations](
 For information about releases and updates of the service for {{site.data.keyword.icp4dfull_notm}}, see [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes-data).
 {: note}
 
-## 09 March 2026
-{: #text-to-speech-09mar2026}
+## 11 March 2026
+{: #text-to-speech-11mar2026}
 {: release-note}
 
 Important: Deprecation of the Beta feature Tune by Example
