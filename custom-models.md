@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2025
-lastupdated: "2025-02-18"
+  years: 2015, 2026
+lastupdated: "2026-03-06"
 
 subcollection: text-to-speech
 
@@ -15,9 +15,6 @@ subcollection: text-to-speech
 
 The first step in working with any custom model is to create it.  Once it exists, you can manage the model by querying or updating its metadata and entries, and by deleting it if it is no longer needed. Before getting started, review the following general usage information about custom models.
 {: shortdesc}
-
-A custom model can also include custom prompts that you define for the Tune by Example feature. For more information about Tune by Example, custom prompts, and speaker models, see [Understanding Tune by Example](/docs/text-to-speech?topic=text-to-speech-tbe-intro).
-{: note}
 
 ## Usage notes for customization
 {: #customGuidelines}

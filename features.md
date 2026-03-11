@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2025
-lastupdated: "2025-05-23"
+  years: 2015, 2026
+lastupdated: "2026-03-06"
 
 subcollection: text-to-speech
 
@@ -145,20 +145,6 @@ Premium customers can work with {{site.data.keyword.IBM_notm}} to train a new cu
 
 To request a custom voice or for more information, complete and submit this [{{site.data.keyword.IBM_notm}} Request Form](https://forms.monday.com/forms/5fd92c54536a18f9afab8a47404bf828?r=use1){: external}.
 
-## Using Tune by Example
-{: #features-tune-by-example}
-
-The Tune by Example feature lets you control how specified text is spoken by the service. The feature lets you dictate the intonation, cadence, and stress of the synthesized text. You create a custom prompt by providing a sample recording that speaks the text as you want to hear it. The service then duplicates the qualities of the recorded speech with its voices when you synthesize the prompt.
-
-The feature provides a simpler mechanism than standard SSML for modifying how speech is synthesized. Tune by Example eliminates the need for complex SSML by letting you record text as you want it to be spoken rather than requiring you to emulate the intended prosody with SSML.
-
-You can increase the quality of custom prompts by associating speaker models with those users who speak the prompts. You create a speaker model by providing an audio sample of a user's voice. The service trains itself on the voice to help it produce higher-quality prompts for that speaker.
-
-For more information about Tune by Example, custom prompts, and speaker models, see [Understanding Tune by Example](/docs/text-to-speech?topic=text-to-speech-tbe-intro).
-
-The Tune by Example feature is beta functionality that is supported only for US English custom models and voices.
-{: beta}
-
 ## Using software development kits
 {: #features-sdks}
 
@@ -185,6 +171,5 @@ Explore the features introduced in this topic to gain a more in-depth understand
 -   [Using speech synthesis features](#features-synthesis) briefly describes the features that are available for speech synthesis and provides links for more information. Use the features to tailor the text that you send and the audio that you receive.
 -   [Using speech synthesis features with expressive neural voice](#features-synthesis-expressive) introduces three additional features that are available for speech synthesis with expressive neural voices.
 -   [Customizing the service](#features-customization) describes the more advanced topic of customization, which you can use to create custom models that contain dictionaries of words and their translations for specific languages.
--   [Using Tune by Example](#features-tune-by-example) introduces the Tune by Example feature that lets you create custom prompts. You can control the intonation, cadence, and stress of the synthesized text for your prompts.
 -   [Using software development kits](#features-sdks) provide links to the SDKs that are available to simplify application development in many programming languages.
 -   [Learning more about application development](#features-learn) provides links to help you get started with {{site.data.keyword.watson}} services and understand authentication.

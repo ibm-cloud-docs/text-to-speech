@@ -81,15 +81,6 @@ toc:
           - custom-entries.md
           - custom-using.md
       - topicgroup:
-          label: Using Tune by Example
-          topics:
-          - tbe-intro.md
-          - tbe-rules.md
-          - tbe-create.md
-          - tbe-use.md
-          - tbe-prompts.md
-          - tbe-speakers.md
-      - topicgroup:
           label: Using SSML
           topics:
           - ssml.md
