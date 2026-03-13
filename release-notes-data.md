@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2025
-lastupdated: "2025-06-30"
+  years: 2019, 2026
+lastupdated: "2026-03-13"
 
 keywords: text to speech release notes,text to speech for IBM cloud pak for data release notes
 
@@ -265,7 +265,7 @@ Additional information about working with service instances
     -   *Managing your Watson Speech services instances* under *Administering*
 
 Defect fix: The beta Tune by Example is now available
-:   **Defect fix:** The beta Tune by example feature is now available for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}. Previously, it was not possible to create speaker models. For more information about the feature, which is available for U.S. English voices only, see [Understanding Tune by Example](/docs/text-to-speech?topic=text-to-speech-tbe-intro).
+:   **Defect fix:** The beta Tune by example feature is now available for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}. Previously, it was not possible to create speaker models. 
 
 Defect fix: Specifying large cardinal numbers with the `<say-as>` element no longer causes errors for English voices
 :   **Defect fix:** You can now use the `<say-as>` element to pronounce large numbers as cardinal numbers. Previously, enclosing a large number in the `<say-as>` element with the attribute `interpret-as="cardinal"` could cause speech synthesis to fail for English voices. For example, `<say-as interpret-as="cardinal">3,200</say-as>` could cause the service to generate an error. For more information, see [cardinal](/docs/text-to-speech?topic=text-to-speech-elements#say-as-cardinal) in the topic *SSML elements*.
@@ -1042,27 +1042,16 @@ New Tune by Example feature
 
     You specify a custom prompt with a speech synthesis request to indicate how the service's voice is to pronounce the text. To specify a prompt, you use the SSML extension `<ibm:prompt id="{prompt_id}"/>`. The synthesized audio duplicates the prosody of the prompt.
 
-    For more information about using the Tune by Example feature, see the following topics:
-
-    -   [Understanding Tune by Example](/docs/text-to-speech?topic=text-to-speech-tbe-intro)
-    -   [Rules for creating custom prompts and speaker models](/docs/text-to-speech?topic=text-to-speech-tbe-rules)
-    -   [Creating a custom prompt](/docs/text-to-speech?topic=text-to-speech-tbe-create)
-    -   [Using a custom prompt for speech synthesis](/docs/text-to-speech?topic=text-to-speech-tbe-use)
-    -   [Managing custom prompts](/docs/text-to-speech?topic=text-to-speech-tbe-custom-prompts)
-    -   [Managing speaker models](/docs/text-to-speech?topic=text-to-speech-tbe-speaker-models)
-
     The service includes eight new methods for working with the Tune by Example feature. The descriptions of the new methods that follow provide links to their entries in the API & SDK reference.
 
     -   The service includes four methods for working with custom prompts:
 
-        -   [Add a custom prompt](https://{DomainName}/apidocs/text-to-speech#addcustomprompt){: external}: `POST /v1/customizations/{customization_id}/prompts/{prompt_id}`
         -   [List custom prompts](https://{DomainName}/apidocs/text-to-speech#listcustomprompts){: external}: `GET /v1/customizations/{customization_id}/prompts`
         -   [Get a custom prompt](https://{DomainName}/apidocs/text-to-speech#getcustomprompt){: external}: `GET /v1/customizations/{customization_id}/prompts/{prompt_id}`
         -   [Delete a custom prompt](https://{DomainName}/apidocs/text-to-speech#deletecustomprompt){: external}: `DELETE /v1/customizations/{customization_id}/prompts/{prompt_id}`
 
     -   The service includes four methods for working with speaker models:
 
-        -   [Create a speaker model](https://{DomainName}/apidocs/text-to-speech#createspeakermodel){: external}: `POST /v1/speakers`
         -   [List speaker models](https://{DomainName}/apidocs/text-to-speech#listspeakermodels){: external}: `GET /v1/speakers`
         -   [Get a speaker model](https://{DomainName}/apidocs/text-to-speech#getspeakermodel){: external}: `GET /v1/speakers/{speaker_id}`
         -   [Delete a speaker model](https://{DomainName}/apidocs/text-to-speech#deletespeakermodel){: external}: `DELETE /v1/speakers/{speaker_id}`
