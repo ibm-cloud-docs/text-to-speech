@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2026
-lastupdated: "2026-03-11"
+lastupdated: "2026-03-13"
 
 keywords: text to speech release notes,text to speech for IBM cloud release notes
 
@@ -554,33 +554,20 @@ New Tune by Example feature
 
     You specify a custom prompt with a speech synthesis request to indicate how the service's voice is to pronounce the text. To specify a prompt, you use the SSML extension `<ibm:prompt id="{prompt_id}"/>`. The synthesized audio duplicates the prosody of the prompt.
 
-    For more information about using the Tune by Example feature, see the following topics:
-
-    -   [Understanding Tune by Example](/docs/text-to-speech?topic=text-to-speech-tbe-intro)
-    -   [Rules for creating custom prompts and speaker models](/docs/text-to-speech?topic=text-to-speech-tbe-rules)
-    -   [Creating a custom prompt](/docs/text-to-speech?topic=text-to-speech-tbe-create)
-    -   [Using a custom prompt for speech synthesis](/docs/text-to-speech?topic=text-to-speech-tbe-use)
-    -   [Managing custom prompts](/docs/text-to-speech?topic=text-to-speech-tbe-custom-prompts)
-    -   [Managing speaker models](/docs/text-to-speech?topic=text-to-speech-tbe-speaker-models)
-
 New Tune be Example methods
 :   The service includes eight new methods for working with the Tune by Example feature. The descriptions of the new methods that follow provide links to their entries in the API and SDK reference. You might need to select the `Curl` tab of the reference to see the new methods.
 
     -   The service includes four methods for working with custom prompts:
 
-        -   [Add a custom prompt](https://{DomainName}/apidocs/text-to-speech#addcustomprompt){: external}: `POST /v1/customizations/{customization_id}/prompts/{prompt_id}`
         -   [List custom prompts](https://{DomainName}/apidocs/text-to-speech#listcustomprompts){: external}: `GET /v1/customizations/{customization_id}/prompts`
         -   [Get a custom prompt](https://{DomainName}/apidocs/text-to-speech#getcustomprompt){: external}: `GET /v1/customizations/{customization_id}/prompts/{prompt_id}`
         -   [Delete a custom prompt](https://{DomainName}/apidocs/text-to-speech#deletecustomprompt){: external}: `DELETE /v1/customizations/{customization_id}/prompts/{prompt_id}`
 
     -   The service includes four methods for working with speaker models:
 
-        -   [Create a speaker model](https://{DomainName}/apidocs/text-to-speech#createspeakermodel){: external}: `POST /v1/speakers`
         -   [List speaker models](https://{DomainName}/apidocs/text-to-speech#listspeakermodels){: external}: `GET /v1/speakers`
         -   [Get a speaker model](https://{DomainName}/apidocs/text-to-speech#getspeakermodel){: external}: `GET /v1/speakers/{speaker_id}`
         -   [Delete a speaker model](https://{DomainName}/apidocs/text-to-speech#deletespeakermodel){: external}: `DELETE /v1/speakers/{speaker_id}`
-
-    Activity Tracker actions are available for all new Tune by Example events. For more information, see [Tune by Example events](/docs/text-to-speech?topic=text-to-speech-at_events#at-events-tbe).
 
 Updates to Activity Tracker actions for customization
 :   The names of the actions for the Activity Tracker events for the customization methods have changed. The actions now include the string `custom-model` instead of `custom-voice`. The old names of the actions are deprecated. The old names are still available for use but will be removed at a future date. Migrate to the new names that are listed in [Customization events](/docs/text-to-speech?topic=text-to-speech-at_events#at-events-custom) at your earliest convenience.

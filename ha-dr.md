@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2023
-lastupdated: "2023-01-14"
+  years: 2019, 2026
+lastupdated: "2026-03-13"
 
 subcollection: text-to-speech
 
@@ -47,12 +47,6 @@ Preserve the following information about your custom models, custom entries, spe
 -   Information about all custom entries (word/translation pairs) in your custom models:
     -   Use the `GET /v1/customizations/{customization_id}/words` method to list information about all word/translation pairs from a custom model. For more information, see [Querying all words from a custom model](/docs/text-to-speech?topic=text-to-speech-customWords#cuWordsQueryModel).
     -   Use the `GET /v1/customizations/{customization_id}/words/{word}` method to list information about a specified word/translation pair from a custom model. For more information, see [Querying a single word from a custom model](/docs/text-to-speech?topic=text-to-speech-customWords#cuWordQueryModel).
--   A list of all of your speaker models and their definitions. To list information about your speaker models:
-    -   Use the `GET /v1/speakers` method to list information about all of your speaker models. For more information, see [Listing all speaker models](/docs/text-to-speech?topic=text-to-speech-tbe-speaker-models#tbe-speaker-models-list).
-    -   Use the `GET /v1/speakers/{speaker_id}` method to list information about a specified speaker model and the custom prompts that are associated with that speaker model. For more information, see [Listing the custom prompts for a speaker model](/docs/text-to-speech?topic=text-to-speech-tbe-speaker-models#tbe-speaker-models-list).
--   Information about all custom prompts in your custom models:
-    -   Use the `GET /v1/customizations/{customization_id}/prompts` method to list information about all custom prompts from a custom model. For more information, see [Listing custom prompts](/docs/text-to-speech?topic=text-to-speech-tbe-custom-prompts#tbe-custom-prompts-list).
-    -   Use the `GET /v1/customizations/{customization_id}/prompts/{prompt_id}` method to list information about a specified custom prompt from a custom model. For more information, see [Listing custom prompts](/docs/text-to-speech?topic=text-to-speech-tbe-custom-prompts#tbe-custom-prompts-list).
 
 It is a best practice to preserve this information in a format that you can use to re-create your customized resources in the event of a failure. Actively maintaining the information, and preparing the calls listed in the following section ahead of time, can enable you to recover as quickly as possible.
 
@@ -64,7 +58,5 @@ If you need to recover from a disaster, you can use your backup information to r
 1.  To re-create your custom models, use the `POST /v1/customizations` method. For more information, see [Creating a custom model](/docs/text-to-speech?topic=text-to-speech-customModels#cuModelsCreate).
 1.  To add multiple word/translation pairs to a custom model, use the `POST /v1/customizations/{customization_id}/words` method. For more information, see [Adding multiple words to a custom model](/docs/text-to-speech?topic=text-to-speech-customWords#cuWordsAdd).
 1.  To add a single word/translation pair to a custom model, use the `POST /v1/customizations/{customization_id}/words/{word}` method. For more information, see [Adding a single word to a custom model](/docs/text-to-speech?topic=text-to-speech-customWords#cuWordAdd).
-1.  To add a speaker model, use the `POST /v1/speakers` method. For more information, see [Create a speaker model](/docs/text-to-speech?topic=text-to-speech-tbe-create#tbe-create-speaker-model).
-1.  To add a custom prompt to a custom model, use the `POST /v1/customizations/{customization_id}/prompts/{prompt_id}` method. For more information, see [Add a custom prompt](/docs/text-to-speech?topic=text-to-speech-tbe-create#tbe-create-add-prompt).
 
 You need to re-create your custom models, speaker models, and custom prompts individually. You can add all of your custom entries to a custom model at once, in groups, or one at a time.
