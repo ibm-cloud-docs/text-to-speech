@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2026
-lastupdated: "2026-03-13"
+lastupdated: "2026-03-26"
 
 keywords: text to speech release notes,text to speech for IBM cloud release notes
 
@@ -26,6 +26,30 @@ For information about known limitations of the service, see [Known limitations](
 
 For information about releases and updates of the service for {{site.data.keyword.icp4dfull_notm}}, see [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes-data).
 {: note}
+
+## 26 March 2026
+{: #text-to-speech-26mar2026}
+{: release-note}
+
+Deprecated v1 to v3 voice transition
+:   Previously deprecated standard concatenating (v1) voices are now replaced by their neural (v3) equivalents during synthesis. When a request specifies one of these v1 voices, the corresponding v3 voice is used instead.
+
+    - `de-DE_BirgitVoice`      ->   `de-DE_BirgitV3Voice`
+    - `de-DE_DieterVoice`      ->   `de-DE_DieterV3Voice`
+    - `en-GB_KateVoice`        ->   `en-GB_KateV3Voice`
+    - `en-US_AllisonVoice`     ->   `en-US_AllisonV3Voice`
+    - `en-US_LisaVoice`        ->   `en-US_LisaV3Voice`
+    - `en-US_MichaelVoice`     ->   `en-US_MichaelV3Voice`
+    - `es-ES_EnriqueVoice`     ->   `es-ES_EnriqueV3Voice`
+    - `es-ES_LauraVoice`       ->   `es-ES_LauraV3Voice`
+    - `es-LA_SofiaVoice`       ->   `es-LA_SofiaV3Voice`
+    - `es-US_SofiaVoice`       ->   `es-US_SofiaV3Voice`
+    - `fr-FR_ReneeVoice`       ->   `fr-FR_ReneeV3Voice`
+    - `it-IT_FrancescaVoice`   ->   `it-IT_FrancescaV3Voice`
+    - `ja-JP_EmiVoice`         ->   `ja-JP_EmiV3Voice`
+    - `pt-BR_IsabelaVoice`     ->   `pt-BR_IsabelaV3Voice`
+
+    If you omit the optional `voice` parameter from a speech synthesis request, the service now uses `en-US_MichaelV3Voice` by default. This neural voice (v3) replaces the previous default standard concatenating (v1) voice, `en-US_MichaelVoice`.
 
 ## 11 March 2026
 {: #text-to-speech-11mar2026}
@@ -106,7 +130,7 @@ New English Natural Voices
 {: release-note}
 
 Deprecation of V1 voices
-:   Effective **07 September 2025**, all V1 voices will be deprecated from the service. All the V1 voices that are deprecated will be automatically updated to the same V3 voices.
+:   Effective **07 September 2025**, all V1 voices will be deprecated from the service. All deprecated v1 voices will automatically change to their corresponding v3 voices within the next 12 months. 
 
 ## 19 May 2025
 {: #text-to-speech-19may2025}
