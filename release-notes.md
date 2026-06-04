@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2026
-lastupdated: "2026-03-26"
+lastupdated: "2026-06-04"
 
 keywords: text to speech release notes,text to speech for IBM cloud release notes
 
@@ -26,6 +26,18 @@ For information about known limitations of the service, see [Known limitations](
 
 For information about releases and updates of the service for {{site.data.keyword.icp4dfull_notm}}, see [Release notes for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}](/docs/text-to-speech?topic=text-to-speech-release-notes-data).
 {: note}
+
+## 05 June 2026
+{: #text-to-speech-05june2026}
+{: release-note}
+
+New Brazilian Portuguese Female Natural Voice
+:   The service now supports a new Female Natural voice for Brazilian Portuguese:
+    -   `pt-BR_IsabelaNatural`
+
+    Natural Voices provide advanced performance in terms of naturalness and expressiveness. These voices use various techniques to provide an edge over Expressive voices. For more information, see 
+    -   [Natural voices](/docs/text-to-speech?topic=text-to-speech-voices#language-voices-natural)
+    -   [Portuguese (Brazilian) symbols](/docs/text-to-speech?topic=text-to-speech-ptSymbols)
 
 ## 26 March 2026
 {: #text-to-speech-26mar2026}
