@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2026
-lastupdated: "2026-01-08"
+lastupdated: "2026-06-04"
 
 subcollection: text-to-speech
 
@@ -73,8 +73,9 @@ Table 2 lists and provides audio samples for all available Natural voices. The *
 | English  \n (United States) | GA | `en-US_EthanNatural`  \n Male | ![en-US_EthanNatural sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_EthanNatural.wav){: audio controls} |
 | English  \n (United States) | GA | `en-US_JacksonNatural`  \n Male | ![en-US_JacksonNatural sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_JacksonNatural.wav){: audio controls} |
 | English  \n (United States) | GA | `en-US_VictoriaNatural`  \n Female | ![en-US_VictoriaNatural sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/en-US_VictoriaNatural.wav){: audio controls} |
-| Portuguese  \n (Brazilian) | GA | `pt-BR_LucasNatural`  \n Male | ![pt-BR_LucasNatural sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/pt-BR_LucasNatural.wav){: audio controls} |
 | Portuguese  \n (Brazilian) | GA | `pt-BR_CamilaNatural`  \n Female | ![pt-BR_CamilaNatural sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/pt-BR_CamilaNatural.wav){: audio controls} |
+| Portuguese  \n (Brazilian) | GA | `pt-BR_IsabelaNatural`  \n Female | ![pt-BR_IsabelaNatural sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/pt-BR_IsabelaNatural.wav){: audio controls} |
+| Portuguese  \n (Brazilian) | GA | `pt-BR_LucasNatural`  \n Male | ![pt-BR_LucasNatural sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/pt-BR_LucasNatural.wav){: audio controls} |
 | Spanish  \n (Latin American) | GA | `es-LA_AlejandroNatural`  \n Male | ![es-LA_AlejandroNatural sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/es-LA_AlejandroNatural.wav){: audio controls} |
 | Spanish  \n (Latin American) | GA | `es-LA_DanielaNatural`  \n Female | ![es-LA_DanielaNatural sample](https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-latest/es-LA_DanielaNatural.wav){: audio controls} |
 {: caption="Natural languages and voices"}
